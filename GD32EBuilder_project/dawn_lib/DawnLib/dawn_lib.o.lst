@@ -1,0 +1,1377 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"dawn_lib.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	BLDCYaw
+  16              		.section	.data.BLDCYaw,"aw"
+  17              		.align	2
+  20              	BLDCYaw:
+  21 0000 02       		.byte	2
+  22 0001 04       		.byte	4
+  23 0002 00000000 		.space	4
+  24 0006 D804     		.short	1240
+  25 0008 D804     		.short	1240
+  26 000a D804     		.short	1240
+  27 000c D804     		.short	1240
+  28 000e D804     		.short	1240
+  29 0010 D804     		.short	1240
+  30 0012 0000     		.space	2
+  31 0014 0000803F 		.word	1065353216
+  32 0018 00       		.byte	0
+  33 0019 00000000 		.space	35
+  33      00000000 
+  33      00000000 
+  33      00000000 
+  33      00000000 
+  34 003c 01       		.byte	1
+  35 003d 000000   		.space	3
+  36 0040 00401C46 		.word	1176256512
+  37 0044 00803BC6 		.word	-969179136
+  38 0048 00000000 		.space	4
+  39 004c 64000000 		.word	100
+  40 0050 0000C843 		.word	1137180672
+  41 0054 00       		.byte	0
+  42 0055 00       		.byte	0
+  43 0056 00       		.byte	0
+  44 0057 00       		.space	1
+  45 0058 00004040 		.word	1077936128
+  46 005c 0000003F 		.word	1056964608
+  47 0060 378DA73F 		.word	1067945271
+  48 0064 920A86C0 		.word	-1064957294
+  49 0068 00000000 		.space	40
+  49      00000000 
+  49      00000000 
+  49      00000000 
+  49      00000000 
+  50 0090 CDCCAC40 		.word	1085066445
+  51 0094 00000000 		.space	4
+  52 0098 6F12033A 		.word	973279855
+  53 009c ACC52737 		.word	925353388
+  54 00a0 00000000 		.word	0
+  55 00a4 00000000 		.space	8
+  55      00000000 
+  56              		.global	BLDCRoll
+  57              		.section	.data.BLDCRoll,"aw"
+  58              		.align	2
+  61              	BLDCRoll:
+  62 0000 01       		.byte	1
+  63 0001 04       		.byte	4
+  64 0002 00000000 		.space	4
+  65 0006 D804     		.short	1240
+  66 0008 D804     		.short	1240
+  67 000a D804     		.short	1240
+  68 000c D804     		.short	1240
+  69 000e D804     		.short	1240
+  70 0010 D804     		.short	1240
+  71 0012 0000     		.space	2
+  72 0014 0000803F 		.word	1065353216
+  73 0018 00       		.byte	0
+  74 0019 00000000 		.space	35
+  74      00000000 
+  74      00000000 
+  74      00000000 
+  74      00000000 
+  75 003c 01       		.byte	1
+  76 003d 000000   		.space	3
+  77 0040 0000FA45 		.word	1174011904
+  78 0044 00409CC6 		.word	-962838528
+  79 0048 00000000 		.space	4
+  80 004c 64000000 		.word	100
+  81 0050 0000C843 		.word	1137180672
+  82 0054 00       		.byte	0
+  83 0055 00       		.byte	0
+  84 0056 00       		.byte	0
+  85 0057 00       		.space	1
+  86 0058 00004040 		.word	1077936128
+  87 005c 0000003F 		.word	1056964608
+  88 0060 F3665F3F 		.word	1063216883
+  89 0064 F3665FBF 		.word	-1084266765
+  90 0068 00000000 		.space	40
+  90      00000000 
+  90      00000000 
+  90      00000000 
+  90      00000000 
+  91 0090 66669640 		.word	1083598438
+  92 0094 00000000 		.space	4
+  93 0098 6F12033A 		.word	973279855
+  94 009c ACC52737 		.word	925353388
+  95 00a0 00000000 		.word	0
+  96 00a4 00000000 		.space	8
+  96      00000000 
+  97              		.global	BLDCPitch
+  98              		.section	.data.BLDCPitch,"aw"
+  99              		.align	2
+ 102              	BLDCPitch:
+ 103 0000 00       		.byte	0
+ 104 0001 04       		.byte	4
+ 105 0002 00000000 		.space	4
+ 106 0006 D804     		.short	1240
+ 107 0008 D804     		.short	1240
+ 108 000a D804     		.short	1240
+ 109 000c D804     		.short	1240
+ 110 000e D804     		.short	1240
+ 111 0010 D804     		.short	1240
+ 112 0012 0000     		.space	2
+ 113 0014 0000803F 		.word	1065353216
+ 114 0018 00       		.byte	0
+ 115 0019 00000000 		.space	35
+ 115      00000000 
+ 115      00000000 
+ 115      00000000 
+ 115      00000000 
+ 116 003c 01       		.byte	1
+ 117 003d 000000   		.space	3
+ 118 0040 00409C45 		.word	1167867904
+ 119 0044 00204BC6 		.word	-968155136
+ 120 0048 00000000 		.space	4
+ 121 004c 64000000 		.word	100
+ 122 0050 0000C843 		.word	1137180672
+ 123 0054 00       		.byte	0
+ 124 0055 00       		.byte	0
+ 125 0056 00       		.byte	0
+ 126 0057 00       		.space	1
+ 127 0058 00004040 		.word	1077936128
+ 128 005c 0000003F 		.word	1056964608
+ 129 0060 DB0F493F 		.word	1061752795
+ 130 0064 920A06C0 		.word	-1073345902
+ 131 0068 00000000 		.space	40
+ 131      00000000 
+ 131      00000000 
+ 131      00000000 
+ 131      00000000 
+ 132 0090 00006040 		.word	1080033280
+ 133 0094 00000000 		.space	4
+ 134 0098 6F12033A 		.word	973279855
+ 135 009c ACC52737 		.word	925353388
+ 136 00a0 00000000 		.word	0
+ 137 00a4 00000000 		.space	8
+ 137      00000000 
+ 138              		.global	__aeabi_fmul
+ 139              		.global	__aeabi_fsub
+ 140              		.global	__aeabi_fadd
+ 141              		.global	__aeabi_i2f
+ 142              		.global	__aeabi_fdiv
+ 143              		.global	__aeabi_fcmplt
+ 144              		.section	.text.BLDCEAngle,"ax",%progbits
+ 145              		.align	1
+ 146              		.global	BLDCEAngle
+ 147              		.arch armv7e-m
+ 148              		.syntax unified
+ 149              		.thumb
+ 150              		.thumb_func
+ 151              		.fpu softvfp
+ 153              	BLDCEAngle:
+ 154              	.LFB156:
+ 155              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib/dawn_lib.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** #include "includes.h"
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** BLDCStruct BLDCYaw =
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     {
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BLDCId = BLDC_ID_YAW,
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .PoleDouble = 4,
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StateCheck = 0,
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallOffsetX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallOffsetY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMinX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMaxX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMinY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMaxY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallDir = 1.0f,
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .DynamicHoming = TRUE,
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HomingCwQuad = 10000.0f,
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HomingCCwQuad = -12000.0f,
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallWaitTime = 100,
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallSpeed = 400.0f,
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallFlag = FALSE,
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangHomingAddCOE = 3.0f,
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangHomingCOE = 0.5f,
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangCwFlag = FALSE,
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangCCwFlag = FALSE,
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ArmCwRad = 75.0f * PI / 180.0f,
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ArmCCwRad = -240.0f * PI / 180.0f,
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ERadOffset = 5.4f,
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesP = 0.0005f,
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesI = 0.00001f,
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesIntegral = 0.0f,
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** };
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** BLDCStruct BLDCRoll =
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     {
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BLDCId = BLDC_ID_ROLL,
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .PoleDouble = 4,
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StateCheck = 0,
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallOffsetX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallOffsetY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMinX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMaxX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMinY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMaxY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallDir = 1.0f,
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .DynamicHoming = TRUE,
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HomingCwQuad = 8000.0f,
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HomingCCwQuad = -20000.0f,
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallWaitTime = 100,
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallSpeed = 400.0f,
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallFlag = FALSE,
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangHomingAddCOE = 3.0f,
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangHomingCOE = 0.5f,
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangCwFlag = FALSE,
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangCCwFlag = FALSE,
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ArmCwRad = 50.0f * PI / 180.0f,
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ArmCCwRad = -50.0f * PI / 180.0f,
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ERadOffset = 4.7f,
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesP = 0.0005f,
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesI = 0.00001f,
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesIntegral = 0.0f,
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** };
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** BLDCStruct BLDCPitch =
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     {
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BLDCId = BLDC_ID_PITCH,
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .PoleDouble = 4,
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StateCheck = 0,
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallOffsetX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallOffsetY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMinX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMaxX = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMinY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallAdcMaxY = HALL_ADC_VALUE_OFFSET_DEFAULT,
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HallDir = 1.0f,
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .DynamicHoming = TRUE,
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HomingCwQuad = 5000.0f,
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .HomingCCwQuad = -13000.0f,
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallWaitTime = 100,
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallSpeed = 400.0f,
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .StallFlag = FALSE,
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangHomingAddCOE = 3.0f,
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangHomingCOE = 0.5f,
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangCwFlag = FALSE,
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .BangCCwFlag = FALSE,
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ArmCwRad = 45.0f * PI / 180.0f,
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ArmCCwRad = -120.0f * PI / 180.0f,
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .ERadOffset = 3.5f, 
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesP = 0.0005f,
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesI = 0.00001f,
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         .CalcAnglesIntegral = 0.0f,
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** };
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** void BLDCEAngle(BLDCStruct *BLDCStruct)
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** {
+ 156              		.loc 1 99 1
+ 157              		.cfi_startproc
+ 158              		@ args = 0, pretend = 0, frame = 40
+ 159              		@ frame_needed = 1, uses_anonymous_args = 0
+ 160 0000 B0B5     		push	{r4, r5, r7, lr}
+ 161              		.cfi_def_cfa_offset 16
+ 162              		.cfi_offset 4, -16
+ 163              		.cfi_offset 5, -12
+ 164              		.cfi_offset 7, -8
+ 165              		.cfi_offset 14, -4
+ 166 0002 8AB0     		sub	sp, sp, #40
+ 167              		.cfi_def_cfa_offset 56
+ 168 0004 00AF     		add	r7, sp, #0
+ 169              		.cfi_def_cfa_register 7
+ 170 0006 7860     		str	r0, [r7, #4]
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     float IntermediateError, TempProportionalTerm, TempIntegralTerm, TempCalcAnglesRadRes,
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         TempBLDCRac, TempERad, TempSpeed;
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     IntermediateError = -(BLDCStruct->ParkStruct.A) * cosf(BLDCStruct->CalcAnglesRadRes) -
+ 171              		.loc 1 105 49
+ 172 0008 7B68     		ldr	r3, [r7, #4]
+ 173 000a 5B6A     		ldr	r3, [r3, #36]	@ float
+ 174              		.loc 1 105 25
+ 175 000c 83F00044 		eor	r4, r3, #-2147483648
+ 176              		.loc 1 105 55
+ 177 0010 7B68     		ldr	r3, [r7, #4]
+ 178 0012 D3F8A430 		ldr	r3, [r3, #164]	@ float
+ 179 0016 1846     		mov	r0, r3
+ 180 0018 FFF7FEFF 		bl	cosf
+ 181 001c 0346     		mov	r3, r0
+ 182              		.loc 1 105 53
+ 183 001e 1946     		mov	r1, r3
+ 184 0020 2046     		mov	r0, r4
+ 185 0022 FFF7FEFF 		bl	__aeabi_fmul
+ 186              	.LVL0:
+ 187 0026 0346     		mov	r3, r0
+ 188 0028 1D46     		mov	r5, r3
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****                          (BLDCStruct->ParkStruct.B) * sinf(BLDCStruct->CalcAnglesRadRes);
+ 189              		.loc 1 106 49
+ 190 002a 7B68     		ldr	r3, [r7, #4]
+ 191 002c 9C6A     		ldr	r4, [r3, #40]	@ float
+ 192              		.loc 1 106 55
+ 193 002e 7B68     		ldr	r3, [r7, #4]
+ 194 0030 D3F8A430 		ldr	r3, [r3, #164]	@ float
+ 195 0034 1846     		mov	r0, r3
+ 196 0036 FFF7FEFF 		bl	sinf
+ 197 003a 0346     		mov	r3, r0
+ 198              		.loc 1 106 53
+ 199 003c 1946     		mov	r1, r3
+ 200 003e 2046     		mov	r0, r4
+ 201 0040 FFF7FEFF 		bl	__aeabi_fmul
+ 202              	.LVL1:
+ 203 0044 0346     		mov	r3, r0
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****                          (BLDCStruct->ParkStruct.B) * sinf(BLDCStruct->CalcAnglesRadRes);
+ 204              		.loc 1 105 23
+ 205 0046 1946     		mov	r1, r3
+ 206 0048 2846     		mov	r0, r5
+ 207 004a FFF7FEFF 		bl	__aeabi_fsub
+ 208              	.LVL2:
+ 209 004e 0346     		mov	r3, r0
+ 210 0050 3B62     		str	r3, [r7, #32]	@ float
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     TempProportionalTerm = BLDCStruct->CalcAnglesP * IntermediateError;
+ 211              		.loc 1 109 38
+ 212 0052 7B68     		ldr	r3, [r7, #4]
+ 213 0054 D3F89830 		ldr	r3, [r3, #152]	@ float
+ 214              		.loc 1 109 26
+ 215 0058 1946     		mov	r1, r3
+ 216 005a 386A     		ldr	r0, [r7, #32]	@ float
+ 217 005c FFF7FEFF 		bl	__aeabi_fmul
+ 218              	.LVL3:
+ 219 0060 0346     		mov	r3, r0
+ 220 0062 FB61     		str	r3, [r7, #28]	@ float
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     TempIntegralTerm = BLDCStruct->CalcAnglesI * IntermediateError;
+ 221              		.loc 1 110 34
+ 222 0064 7B68     		ldr	r3, [r7, #4]
+ 223 0066 D3F89C30 		ldr	r3, [r3, #156]	@ float
+ 224              		.loc 1 110 22
+ 225 006a 1946     		mov	r1, r3
+ 226 006c 386A     		ldr	r0, [r7, #32]	@ float
+ 227 006e FFF7FEFF 		bl	__aeabi_fmul
+ 228              	.LVL4:
+ 229 0072 0346     		mov	r3, r0
+ 230 0074 BB61     		str	r3, [r7, #24]	@ float
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     BLDCStruct->CalcAnglesIntegral += TempIntegralTerm;
+ 231              		.loc 1 113 36
+ 232 0076 7B68     		ldr	r3, [r7, #4]
+ 233 0078 D3F8A030 		ldr	r3, [r3, #160]	@ float
+ 234 007c B969     		ldr	r1, [r7, #24]	@ float
+ 235 007e 1846     		mov	r0, r3
+ 236 0080 FFF7FEFF 		bl	__aeabi_fadd
+ 237              	.LVL5:
+ 238 0084 0346     		mov	r3, r0
+ 239 0086 1A46     		mov	r2, r3
+ 240 0088 7B68     		ldr	r3, [r7, #4]
+ 241 008a C3F8A020 		str	r2, [r3, #160]	@ float
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     BLDCStruct->CalcAnglesSpeedAccRes = TempProportionalTerm + BLDCStruct->CalcAnglesIntegral;
+ 242              		.loc 1 116 74
+ 243 008e 7B68     		ldr	r3, [r7, #4]
+ 244 0090 D3F8A030 		ldr	r3, [r3, #160]	@ float
+ 245              		.loc 1 116 62
+ 246 0094 F969     		ldr	r1, [r7, #28]	@ float
+ 247 0096 1846     		mov	r0, r3
+ 248 0098 FFF7FEFF 		bl	__aeabi_fadd
+ 249              	.LVL6:
+ 250 009c 0346     		mov	r3, r0
+ 251 009e 1A46     		mov	r2, r3
+ 252              		.loc 1 116 39
+ 253 00a0 7B68     		ldr	r3, [r7, #4]
+ 254 00a2 C3F8A820 		str	r2, [r3, #168]	@ float
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     TempCalcAnglesRadRes = BLDCStruct->CalcAnglesRadRes + BLDCStruct->CalcAnglesSpeedAccRes;
+ 255              		.loc 1 117 38
+ 256 00a6 7B68     		ldr	r3, [r7, #4]
+ 257 00a8 D3F8A420 		ldr	r2, [r3, #164]	@ float
+ 258              		.loc 1 117 69
+ 259 00ac 7B68     		ldr	r3, [r7, #4]
+ 260 00ae D3F8A830 		ldr	r3, [r3, #168]	@ float
+ 261              		.loc 1 117 26
+ 262 00b2 1946     		mov	r1, r3
+ 263 00b4 1046     		mov	r0, r2
+ 264 00b6 FFF7FEFF 		bl	__aeabi_fadd
+ 265              	.LVL7:
+ 266 00ba 0346     		mov	r3, r0
+ 267 00bc 7B61     		str	r3, [r7, #20]	@ float
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     TempBLDCRac = TempCalcAnglesRadRes / BLDCStruct->PoleDouble - BLDCStruct->BLDCRacOffset;
+ 268              		.loc 1 120 52
+ 269 00be 7B68     		ldr	r3, [r7, #4]
+ 270 00c0 5B78     		ldrb	r3, [r3, #1]	@ zero_extendqisi2
+ 271              		.loc 1 120 40
+ 272 00c2 1846     		mov	r0, r3
+ 273 00c4 FFF7FEFF 		bl	__aeabi_i2f
+ 274              	.LVL8:
+ 275 00c8 0346     		mov	r3, r0
+ 276 00ca 1946     		mov	r1, r3
+ 277 00cc 7869     		ldr	r0, [r7, #20]	@ float
+ 278 00ce FFF7FEFF 		bl	__aeabi_fdiv
+ 279              	.LVL9:
+ 280 00d2 0346     		mov	r3, r0
+ 281 00d4 1A46     		mov	r2, r3
+ 282              		.loc 1 120 77
+ 283 00d6 7B68     		ldr	r3, [r7, #4]
+ 284 00d8 D3F88430 		ldr	r3, [r3, #132]	@ float
+ 285              		.loc 1 120 17
+ 286 00dc 1946     		mov	r1, r3
+ 287 00de 1046     		mov	r0, r2
+ 288 00e0 FFF7FEFF 		bl	__aeabi_fsub
+ 289              	.LVL10:
+ 290 00e4 0346     		mov	r3, r0
+ 291 00e6 3B61     		str	r3, [r7, #16]	@ float
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     TempERad = fmodf(TempCalcAnglesRadRes - BLDCStruct->ERadOffset, 2.0f * PI);
+ 292              		.loc 1 123 55
+ 293 00e8 7B68     		ldr	r3, [r7, #4]
+ 294 00ea D3F89030 		ldr	r3, [r3, #144]	@ float
+ 295              		.loc 1 123 16
+ 296 00ee 1946     		mov	r1, r3
+ 297 00f0 7869     		ldr	r0, [r7, #20]	@ float
+ 298 00f2 FFF7FEFF 		bl	__aeabi_fsub
+ 299              	.LVL11:
+ 300 00f6 0346     		mov	r3, r0
+ 301 00f8 1A49     		ldr	r1, .L5
+ 302 00fa 1846     		mov	r0, r3
+ 303 00fc FFF7FEFF 		bl	fmodf
+ 304 0100 7862     		str	r0, [r7, #36]	@ float
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     if (TempERad < 0.0f)
+ 305              		.loc 1 124 8
+ 306 0102 4FF00001 		mov	r1, #0
+ 307 0106 786A     		ldr	r0, [r7, #36]	@ float
+ 308 0108 FFF7FEFF 		bl	__aeabi_fcmplt
+ 309              	.LVL12:
+ 310 010c 0346     		mov	r3, r0
+ 311 010e 002B     		cmp	r3, #0
+ 312 0110 05D0     		beq	.L2
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     {
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         TempERad += 2.0f * PI;
+ 313              		.loc 1 126 18
+ 314 0112 1449     		ldr	r1, .L5
+ 315 0114 786A     		ldr	r0, [r7, #36]	@ float
+ 316 0116 FFF7FEFF 		bl	__aeabi_fadd
+ 317              	.LVL13:
+ 318 011a 0346     		mov	r3, r0
+ 319 011c 7B62     		str	r3, [r7, #36]	@ float
+ 320              	.L2:
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     }
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     TempSpeed = BLDCStruct->CalcAnglesSpeedAccRes * CLOSELOOP_EXECUTE_FREQ * 0.01f;
+ 321              		.loc 1 130 27
+ 322 011e 7B68     		ldr	r3, [r7, #4]
+ 323 0120 D3F8A830 		ldr	r3, [r3, #168]	@ float
+ 324              		.loc 1 130 51
+ 325 0124 1049     		ldr	r1, .L5+4
+ 326 0126 1846     		mov	r0, r3
+ 327 0128 FFF7FEFF 		bl	__aeabi_fmul
+ 328              	.LVL14:
+ 329 012c 0346     		mov	r3, r0
+ 330              		.loc 1 130 15
+ 331 012e 0F49     		ldr	r1, .L5+8
+ 332 0130 1846     		mov	r0, r3
+ 333 0132 FFF7FEFF 		bl	__aeabi_fmul
+ 334              	.LVL15:
+ 335 0136 0346     		mov	r3, r0
+ 336 0138 FB60     		str	r3, [r7, #12]	@ float
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     BLDCStruct->BLDCRac = TempBLDCRac;
+ 337              		.loc 1 133 25
+ 338 013a 7B68     		ldr	r3, [r7, #4]
+ 339 013c 3A69     		ldr	r2, [r7, #16]	@ float
+ 340 013e C3F88020 		str	r2, [r3, #128]	@ float
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     BLDCStruct->ERad = TempERad;
+ 341              		.loc 1 134 22
+ 342 0142 7B68     		ldr	r3, [r7, #4]
+ 343 0144 7A6A     		ldr	r2, [r7, #36]	@ float
+ 344 0146 C3F89420 		str	r2, [r3, #148]	@ float
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     BLDCStruct->CalcAnglesRadRes = TempCalcAnglesRadRes;
+ 345              		.loc 1 135 34
+ 346 014a 7B68     		ldr	r3, [r7, #4]
+ 347 014c 7A69     		ldr	r2, [r7, #20]	@ float
+ 348 014e C3F8A420 		str	r2, [r3, #164]	@ float
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     BLDCStruct->Speed = TempSpeed;
+ 349              		.loc 1 136 23
+ 350 0152 7B68     		ldr	r3, [r7, #4]
+ 351 0154 FA68     		ldr	r2, [r7, #12]	@ float
+ 352 0156 C3F88C20 		str	r2, [r3, #140]	@ float
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** }
+ 353              		.loc 1 137 1
+ 354 015a 00BF     		nop
+ 355 015c 2837     		adds	r7, r7, #40
+ 356              		.cfi_def_cfa_offset 16
+ 357 015e BD46     		mov	sp, r7
+ 358              		.cfi_def_cfa_register 13
+ 359              		@ sp needed
+ 360 0160 B0BD     		pop	{r4, r5, r7, pc}
+ 361              	.L6:
+ 362 0162 00BF     		.align	2
+ 363              	.L5:
+ 364 0164 DB0FC940 		.word	1086918619
+ 365 0168 00007A45 		.word	1165623296
+ 366 016c 0AD7233C 		.word	1008981770
+ 367              		.cfi_endproc
+ 368              	.LFE156:
+ 370              		.global	__aeabi_fcmpeq
+ 371              		.section	.text.AttitudeCali,"ax",%progbits
+ 372              		.align	1
+ 373              		.global	AttitudeCali
+ 374              		.syntax unified
+ 375              		.thumb
+ 376              		.thumb_func
+ 377              		.fpu softvfp
+ 379              	AttitudeCali:
+ 380              	.LFB157:
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** void AttitudeCali(void)
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** {
+ 381              		.loc 1 140 1
+ 382              		.cfi_startproc
+ 383              		@ args = 0, pretend = 0, frame = 40
+ 384              		@ frame_needed = 1, uses_anonymous_args = 0
+ 385 0000 90B5     		push	{r4, r7, lr}
+ 386              		.cfi_def_cfa_offset 12
+ 387              		.cfi_offset 4, -12
+ 388              		.cfi_offset 7, -8
+ 389              		.cfi_offset 14, -4
+ 390 0002 8BB0     		sub	sp, sp, #44
+ 391              		.cfi_def_cfa_offset 56
+ 392 0004 00AF     		add	r7, sp, #0
+ 393              		.cfi_def_cfa_register 7
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     float NormDiv = 0.0f;
+ 394              		.loc 1 141 11
+ 395 0006 4FF00003 		mov	r3, #0
+ 396 000a 7B62     		str	r3, [r7, #36]	@ float
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     float ACCNormX = 0.0f, ACCNormY = 0.0f, ACCNormZ = 0.0f;
+ 397              		.loc 1 142 11
+ 398 000c 4FF00003 		mov	r3, #0
+ 399 0010 3B62     		str	r3, [r7, #32]	@ float
+ 400              		.loc 1 142 28
+ 401 0012 4FF00003 		mov	r3, #0
+ 402 0016 FB61     		str	r3, [r7, #28]	@ float
+ 403              		.loc 1 142 45
+ 404 0018 4FF00003 		mov	r3, #0
+ 405 001c BB61     		str	r3, [r7, #24]	@ float
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     float ACCNormVX = 0.0f, ACCNormVY = 0.0f, ACCNormVZ = 0.0f;
+ 406              		.loc 1 143 11
+ 407 001e 4FF00003 		mov	r3, #0
+ 408 0022 7B61     		str	r3, [r7, #20]	@ float
+ 409              		.loc 1 143 29
+ 410 0024 4FF00003 		mov	r3, #0
+ 411 0028 3B61     		str	r3, [r7, #16]	@ float
+ 412              		.loc 1 143 47
+ 413 002a 4FF00003 		mov	r3, #0
+ 414 002e FB60     		str	r3, [r7, #12]	@ float
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     float dt = 1.0f / CLOSELOOP_EXECUTE_FREQ;
+ 415              		.loc 1 144 11
+ 416 0030 954B     		ldr	r3, .L20
+ 417 0032 BB60     		str	r3, [r7, #8]	@ float
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     float delta_acc = 0.0f;
+ 418              		.loc 1 145 11
+ 419 0034 4FF00003 		mov	r3, #0
+ 420 0038 7B60     		str	r3, [r7, #4]	@ float
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAccMod = sqrtf((GimbalSystem.PlaneACC.Data.X) * (GimbalSystem.PlaneACC.Data.X
+ 421              		.loc 1 148 65
+ 422 003a 944B     		ldr	r3, .L20+4
+ 423 003c D3F8F430 		ldr	r3, [r3, #244]	@ float
+ 424              		.loc 1 148 98
+ 425 0040 924A     		ldr	r2, .L20+4
+ 426 0042 D2F8F420 		ldr	r2, [r2, #244]	@ float
+ 427              		.loc 1 148 69
+ 428 0046 1146     		mov	r1, r2
+ 429 0048 1846     		mov	r0, r3
+ 430 004a FFF7FEFF 		bl	__aeabi_fmul
+ 431              	.LVL16:
+ 432 004e 0346     		mov	r3, r0
+ 433 0050 1C46     		mov	r4, r3
+ 434              		.loc 1 148 131
+ 435 0052 8E4B     		ldr	r3, .L20+4
+ 436 0054 D3F8F830 		ldr	r3, [r3, #248]	@ float
+ 437              		.loc 1 148 164
+ 438 0058 8C4A     		ldr	r2, .L20+4
+ 439 005a D2F8F820 		ldr	r2, [r2, #248]	@ float
+ 440              		.loc 1 148 135
+ 441 005e 1146     		mov	r1, r2
+ 442 0060 1846     		mov	r0, r3
+ 443 0062 FFF7FEFF 		bl	__aeabi_fmul
+ 444              	.LVL17:
+ 445 0066 0346     		mov	r3, r0
+ 446              		.loc 1 148 102
+ 447 0068 1946     		mov	r1, r3
+ 448 006a 2046     		mov	r0, r4
+ 449 006c FFF7FEFF 		bl	__aeabi_fadd
+ 450              	.LVL18:
+ 451 0070 0346     		mov	r3, r0
+ 452 0072 1C46     		mov	r4, r3
+ 453              		.loc 1 148 197
+ 454 0074 854B     		ldr	r3, .L20+4
+ 455 0076 D3F8FC30 		ldr	r3, [r3, #252]	@ float
+ 456              		.loc 1 148 230
+ 457 007a 844A     		ldr	r2, .L20+4
+ 458 007c D2F8FC20 		ldr	r2, [r2, #252]	@ float
+ 459              		.loc 1 148 201
+ 460 0080 1146     		mov	r1, r2
+ 461 0082 1846     		mov	r0, r3
+ 462 0084 FFF7FEFF 		bl	__aeabi_fmul
+ 463              	.LVL19:
+ 464 0088 0346     		mov	r3, r0
+ 465              		.loc 1 148 32
+ 466 008a 1946     		mov	r1, r3
+ 467 008c 2046     		mov	r0, r4
+ 468 008e FFF7FEFF 		bl	__aeabi_fadd
+ 469              	.LVL20:
+ 470 0092 0346     		mov	r3, r0
+ 471 0094 1846     		mov	r0, r3
+ 472 0096 FFF7FEFF 		bl	sqrtf
+ 473 009a 0346     		mov	r3, r0
+ 474              		.loc 1 148 30
+ 475 009c 7B4A     		ldr	r2, .L20+4
+ 476 009e 9361     		str	r3, [r2, #24]	@ float
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     if ((GimbalSystem.PlaneAccMod) == 0.0f)
+ 477              		.loc 1 149 22
+ 478 00a0 7A4B     		ldr	r3, .L20+4
+ 479 00a2 9B69     		ldr	r3, [r3, #24]	@ float
+ 480              		.loc 1 149 8
+ 481 00a4 4FF00001 		mov	r1, #0
+ 482 00a8 1846     		mov	r0, r3
+ 483 00aa FFF7FEFF 		bl	__aeabi_fcmpeq
+ 484              	.LVL21:
+ 485 00ae 0346     		mov	r3, r0
+ 486 00b0 002B     		cmp	r3, #0
+ 487 00b2 03D0     		beq	.L8
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     {
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         GimbalSystem.PlaneAccMod = 1.0f;
+ 488              		.loc 1 151 34
+ 489 00b4 754B     		ldr	r3, .L20+4
+ 490 00b6 4FF07E52 		mov	r2, #1065353216
+ 491 00ba 9A61     		str	r2, [r3, #24]	@ float
+ 492              	.L8:
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     }
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     NormDiv = 1.0f / (GimbalSystem.PlaneAccMod);
+ 493              		.loc 1 153 35
+ 494 00bc 734B     		ldr	r3, .L20+4
+ 495 00be 9B69     		ldr	r3, [r3, #24]	@ float
+ 496              		.loc 1 153 13
+ 497 00c0 1946     		mov	r1, r3
+ 498 00c2 4FF07E50 		mov	r0, #1065353216
+ 499 00c6 FFF7FEFF 		bl	__aeabi_fdiv
+ 500              	.LVL22:
+ 501 00ca 0346     		mov	r3, r0
+ 502 00cc 7B62     		str	r3, [r7, #36]	@ float
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     ACCNormX = (GimbalSystem.PlaneACC.Data.X) * NormDiv;
+ 503              		.loc 1 154 43
+ 504 00ce 6F4B     		ldr	r3, .L20+4
+ 505 00d0 D3F8F430 		ldr	r3, [r3, #244]	@ float
+ 506              		.loc 1 154 14
+ 507 00d4 1946     		mov	r1, r3
+ 508 00d6 786A     		ldr	r0, [r7, #36]	@ float
+ 509 00d8 FFF7FEFF 		bl	__aeabi_fmul
+ 510              	.LVL23:
+ 511 00dc 0346     		mov	r3, r0
+ 512 00de 3B62     		str	r3, [r7, #32]	@ float
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     ACCNormY = (GimbalSystem.PlaneACC.Data.Y) * NormDiv;
+ 513              		.loc 1 155 43
+ 514 00e0 6A4B     		ldr	r3, .L20+4
+ 515 00e2 D3F8F830 		ldr	r3, [r3, #248]	@ float
+ 516              		.loc 1 155 14
+ 517 00e6 1946     		mov	r1, r3
+ 518 00e8 786A     		ldr	r0, [r7, #36]	@ float
+ 519 00ea FFF7FEFF 		bl	__aeabi_fmul
+ 520              	.LVL24:
+ 521 00ee 0346     		mov	r3, r0
+ 522 00f0 FB61     		str	r3, [r7, #28]	@ float
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     ACCNormZ = (GimbalSystem.PlaneACC.Data.Z) * NormDiv;
+ 523              		.loc 1 156 43
+ 524 00f2 664B     		ldr	r3, .L20+4
+ 525 00f4 D3F8FC30 		ldr	r3, [r3, #252]	@ float
+ 526              		.loc 1 156 14
+ 527 00f8 1946     		mov	r1, r3
+ 528 00fa 786A     		ldr	r0, [r7, #36]	@ float
+ 529 00fc FFF7FEFF 		bl	__aeabi_fmul
+ 530              	.LVL25:
+ 531 0100 0346     		mov	r3, r0
+ 532 0102 BB61     		str	r3, [r7, #24]	@ float
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     ACCNormVX = 2.0f * ((GimbalSystem.QuaternionPlane.q1) * (GimbalSystem.QuaternionPlane.q3) - (Gi
+ 533              		.loc 1 159 54
+ 534 0104 614B     		ldr	r3, .L20+4
+ 535 0106 D3F8C430 		ldr	r3, [r3, #196]	@ float
+ 536              		.loc 1 159 90
+ 537 010a 604A     		ldr	r2, .L20+4
+ 538 010c D2F8CC20 		ldr	r2, [r2, #204]	@ float
+ 539              		.loc 1 159 59
+ 540 0110 1146     		mov	r1, r2
+ 541 0112 1846     		mov	r0, r3
+ 542 0114 FFF7FEFF 		bl	__aeabi_fmul
+ 543              	.LVL26:
+ 544 0118 0346     		mov	r3, r0
+ 545 011a 1C46     		mov	r4, r3
+ 546              		.loc 1 159 126
+ 547 011c 5B4B     		ldr	r3, .L20+4
+ 548 011e D3F8C030 		ldr	r3, [r3, #192]	@ float
+ 549              		.loc 1 159 162
+ 550 0122 5A4A     		ldr	r2, .L20+4
+ 551 0124 D2F8C820 		ldr	r2, [r2, #200]	@ float
+ 552              		.loc 1 159 131
+ 553 0128 1146     		mov	r1, r2
+ 554 012a 1846     		mov	r0, r3
+ 555 012c FFF7FEFF 		bl	__aeabi_fmul
+ 556              	.LVL27:
+ 557 0130 0346     		mov	r3, r0
+ 558              		.loc 1 159 95
+ 559 0132 1946     		mov	r1, r3
+ 560 0134 2046     		mov	r0, r4
+ 561 0136 FFF7FEFF 		bl	__aeabi_fsub
+ 562              	.LVL28:
+ 563 013a 0346     		mov	r3, r0
+ 564              		.loc 1 159 15
+ 565 013c 1946     		mov	r1, r3
+ 566 013e 1846     		mov	r0, r3
+ 567 0140 FFF7FEFF 		bl	__aeabi_fadd
+ 568              	.LVL29:
+ 569 0144 0346     		mov	r3, r0
+ 570 0146 7B61     		str	r3, [r7, #20]	@ float
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     ACCNormVY = 2.0f * ((GimbalSystem.QuaternionPlane.q2) * (GimbalSystem.QuaternionPlane.q3) + (Gi
+ 571              		.loc 1 160 54
+ 572 0148 504B     		ldr	r3, .L20+4
+ 573 014a D3F8C830 		ldr	r3, [r3, #200]	@ float
+ 574              		.loc 1 160 90
+ 575 014e 4F4A     		ldr	r2, .L20+4
+ 576 0150 D2F8CC20 		ldr	r2, [r2, #204]	@ float
+ 577              		.loc 1 160 59
+ 578 0154 1146     		mov	r1, r2
+ 579 0156 1846     		mov	r0, r3
+ 580 0158 FFF7FEFF 		bl	__aeabi_fmul
+ 581              	.LVL30:
+ 582 015c 0346     		mov	r3, r0
+ 583 015e 1C46     		mov	r4, r3
+ 584              		.loc 1 160 126
+ 585 0160 4A4B     		ldr	r3, .L20+4
+ 586 0162 D3F8C030 		ldr	r3, [r3, #192]	@ float
+ 587              		.loc 1 160 162
+ 588 0166 494A     		ldr	r2, .L20+4
+ 589 0168 D2F8C420 		ldr	r2, [r2, #196]	@ float
+ 590              		.loc 1 160 131
+ 591 016c 1146     		mov	r1, r2
+ 592 016e 1846     		mov	r0, r3
+ 593 0170 FFF7FEFF 		bl	__aeabi_fmul
+ 594              	.LVL31:
+ 595 0174 0346     		mov	r3, r0
+ 596              		.loc 1 160 95
+ 597 0176 1946     		mov	r1, r3
+ 598 0178 2046     		mov	r0, r4
+ 599 017a FFF7FEFF 		bl	__aeabi_fadd
+ 600              	.LVL32:
+ 601 017e 0346     		mov	r3, r0
+ 602              		.loc 1 160 15
+ 603 0180 1946     		mov	r1, r3
+ 604 0182 1846     		mov	r0, r3
+ 605 0184 FFF7FEFF 		bl	__aeabi_fadd
+ 606              	.LVL33:
+ 607 0188 0346     		mov	r3, r0
+ 608 018a 3B61     		str	r3, [r7, #16]	@ float
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     ACCNormVZ = 1.0f - 2.0f * ((GimbalSystem.QuaternionPlane.q1) * (GimbalSystem.QuaternionPlane.q1
+ 609              		.loc 1 161 61
+ 610 018c 3F4B     		ldr	r3, .L20+4
+ 611 018e D3F8C430 		ldr	r3, [r3, #196]	@ float
+ 612              		.loc 1 161 97
+ 613 0192 3E4A     		ldr	r2, .L20+4
+ 614 0194 D2F8C420 		ldr	r2, [r2, #196]	@ float
+ 615              		.loc 1 161 66
+ 616 0198 1146     		mov	r1, r2
+ 617 019a 1846     		mov	r0, r3
+ 618 019c FFF7FEFF 		bl	__aeabi_fmul
+ 619              	.LVL34:
+ 620 01a0 0346     		mov	r3, r0
+ 621 01a2 1C46     		mov	r4, r3
+ 622              		.loc 1 161 133
+ 623 01a4 394B     		ldr	r3, .L20+4
+ 624 01a6 D3F8C830 		ldr	r3, [r3, #200]	@ float
+ 625              		.loc 1 161 169
+ 626 01aa 384A     		ldr	r2, .L20+4
+ 627 01ac D2F8C820 		ldr	r2, [r2, #200]	@ float
+ 628              		.loc 1 161 138
+ 629 01b0 1146     		mov	r1, r2
+ 630 01b2 1846     		mov	r0, r3
+ 631 01b4 FFF7FEFF 		bl	__aeabi_fmul
+ 632              	.LVL35:
+ 633 01b8 0346     		mov	r3, r0
+ 634              		.loc 1 161 102
+ 635 01ba 1946     		mov	r1, r3
+ 636 01bc 2046     		mov	r0, r4
+ 637 01be FFF7FEFF 		bl	__aeabi_fadd
+ 638              	.LVL36:
+ 639 01c2 0346     		mov	r3, r0
+ 640              		.loc 1 161 29
+ 641 01c4 1946     		mov	r1, r3
+ 642 01c6 1846     		mov	r0, r3
+ 643 01c8 FFF7FEFF 		bl	__aeabi_fadd
+ 644              	.LVL37:
+ 645 01cc 0346     		mov	r3, r0
+ 646              		.loc 1 161 15
+ 647 01ce 1946     		mov	r1, r3
+ 648 01d0 4FF07E50 		mov	r0, #1065353216
+ 649 01d4 FFF7FEFF 		bl	__aeabi_fsub
+ 650              	.LVL38:
+ 651 01d8 0346     		mov	r3, r0
+ 652 01da FB60     		str	r3, [r7, #12]	@ float
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.ErrX = (ACCNormY) * (ACCNormVZ) - (ACCNormZ) * (ACCNormVY);
+ 653              		.loc 1 164 53
+ 654 01dc F968     		ldr	r1, [r7, #12]	@ float
+ 655 01de F869     		ldr	r0, [r7, #28]	@ float
+ 656 01e0 FFF7FEFF 		bl	__aeabi_fmul
+ 657              	.LVL39:
+ 658 01e4 0346     		mov	r3, r0
+ 659 01e6 1C46     		mov	r4, r3
+ 660              		.loc 1 164 80
+ 661 01e8 3969     		ldr	r1, [r7, #16]	@ float
+ 662 01ea B869     		ldr	r0, [r7, #24]	@ float
+ 663 01ec FFF7FEFF 		bl	__aeabi_fmul
+ 664              	.LVL40:
+ 665 01f0 0346     		mov	r3, r0
+ 666              		.loc 1 164 67
+ 667 01f2 1946     		mov	r1, r3
+ 668 01f4 2046     		mov	r0, r4
+ 669 01f6 FFF7FEFF 		bl	__aeabi_fsub
+ 670              	.LVL41:
+ 671 01fa 0346     		mov	r3, r0
+ 672 01fc 1A46     		mov	r2, r3
+ 673              		.loc 1 164 40
+ 674 01fe 234B     		ldr	r3, .L20+4
+ 675 0200 9A63     		str	r2, [r3, #56]	@ float
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.ErrY = (ACCNormZ) * (ACCNormVX) - (ACCNormX) * (ACCNormVZ);
+ 676              		.loc 1 165 53
+ 677 0202 7969     		ldr	r1, [r7, #20]	@ float
+ 678 0204 B869     		ldr	r0, [r7, #24]	@ float
+ 679 0206 FFF7FEFF 		bl	__aeabi_fmul
+ 680              	.LVL42:
+ 681 020a 0346     		mov	r3, r0
+ 682 020c 1C46     		mov	r4, r3
+ 683              		.loc 1 165 80
+ 684 020e F968     		ldr	r1, [r7, #12]	@ float
+ 685 0210 386A     		ldr	r0, [r7, #32]	@ float
+ 686 0212 FFF7FEFF 		bl	__aeabi_fmul
+ 687              	.LVL43:
+ 688 0216 0346     		mov	r3, r0
+ 689              		.loc 1 165 67
+ 690 0218 1946     		mov	r1, r3
+ 691 021a 2046     		mov	r0, r4
+ 692 021c FFF7FEFF 		bl	__aeabi_fsub
+ 693              	.LVL44:
+ 694 0220 0346     		mov	r3, r0
+ 695 0222 1A46     		mov	r2, r3
+ 696              		.loc 1 165 40
+ 697 0224 194B     		ldr	r3, .L20+4
+ 698 0226 DA63     		str	r2, [r3, #60]	@ float
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.ErrZ = (ACCNormX) * (ACCNormVY) - (ACCNormY) * (ACCNormVX);
+ 699              		.loc 1 166 53
+ 700 0228 3969     		ldr	r1, [r7, #16]	@ float
+ 701 022a 386A     		ldr	r0, [r7, #32]	@ float
+ 702 022c FFF7FEFF 		bl	__aeabi_fmul
+ 703              	.LVL45:
+ 704 0230 0346     		mov	r3, r0
+ 705 0232 1C46     		mov	r4, r3
+ 706              		.loc 1 166 80
+ 707 0234 7969     		ldr	r1, [r7, #20]	@ float
+ 708 0236 F869     		ldr	r0, [r7, #28]	@ float
+ 709 0238 FFF7FEFF 		bl	__aeabi_fmul
+ 710              	.LVL46:
+ 711 023c 0346     		mov	r3, r0
+ 712              		.loc 1 166 67
+ 713 023e 1946     		mov	r1, r3
+ 714 0240 2046     		mov	r0, r4
+ 715 0242 FFF7FEFF 		bl	__aeabi_fsub
+ 716              	.LVL47:
+ 717 0246 0346     		mov	r3, r0
+ 718 0248 1A46     		mov	r2, r3
+ 719              		.loc 1 166 40
+ 720 024a 104B     		ldr	r3, .L20+4
+ 721 024c 1A64     		str	r2, [r3, #64]	@ float
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     delta_acc = fabs((GimbalSystem.PlaneAccMod) - 1.0f);
+ 722              		.loc 1 168 35
+ 723 024e 0F4B     		ldr	r3, .L20+4
+ 724 0250 9B69     		ldr	r3, [r3, #24]	@ float
+ 725              		.loc 1 168 49
+ 726 0252 4FF07E51 		mov	r1, #1065353216
+ 727 0256 1846     		mov	r0, r3
+ 728 0258 FFF7FEFF 		bl	__aeabi_fsub
+ 729              	.LVL48:
+ 730 025c 0346     		mov	r3, r0
+ 731              		.loc 1 168 15
+ 732 025e 23F00043 		bic	r3, r3, #-2147483648
+ 733 0262 7B60     		str	r3, [r7, #4]	@ float
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     if (delta_acc < (GimbalSystem.PlaneAttitudePID.AccThresholdCoeA))
+ 734              		.loc 1 169 51
+ 735 0264 094B     		ldr	r3, .L20+4
+ 736 0266 9B6A     		ldr	r3, [r3, #40]	@ float
+ 737              		.loc 1 169 8
+ 738 0268 1946     		mov	r1, r3
+ 739 026a 7868     		ldr	r0, [r7, #4]	@ float
+ 740 026c FFF7FEFF 		bl	__aeabi_fcmplt
+ 741              	.LVL49:
+ 742 0270 0346     		mov	r3, r0
+ 743 0272 002B     		cmp	r3, #0
+ 744 0274 0CD0     		beq	.L18
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     {
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         GimbalSystem.PlaneAttitudePID.Kp = GimbalSystem.PlaneAttitudePID.PlaneKpValue;
+ 745              		.loc 1 171 73
+ 746 0276 054B     		ldr	r3, .L20+4
+ 747 0278 1B6A     		ldr	r3, [r3, #32]	@ float
+ 748              		.loc 1 171 42
+ 749 027a 044A     		ldr	r2, .L20+4
+ 750 027c 1363     		str	r3, [r2, #48]	@ float
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         GimbalSystem.PlaneAttitudePID.Ki = GimbalSystem.PlaneAttitudePID.PlaneKiValue;
+ 751              		.loc 1 172 73
+ 752 027e 034B     		ldr	r3, .L20+4
+ 753 0280 5B6A     		ldr	r3, [r3, #36]	@ float
+ 754              		.loc 1 172 42
+ 755 0282 024A     		ldr	r2, .L20+4
+ 756 0284 5363     		str	r3, [r2, #52]	@ float
+ 757 0286 43E0     		b	.L12
+ 758              	.L21:
+ 759              		.align	2
+ 760              	.L20:
+ 761 0288 6F128339 		.word	964891247
+ 762 028c 00000000 		.word	GimbalSystem
+ 763              	.L18:
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     }
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     else if (delta_acc < (GimbalSystem.PlaneAttitudePID.AccThresholdCoeB))
+ 764              		.loc 1 174 56
+ 765 0290 6B4B     		ldr	r3, .L22
+ 766 0292 DB6A     		ldr	r3, [r3, #44]	@ float
+ 767              		.loc 1 174 13
+ 768 0294 1946     		mov	r1, r3
+ 769 0296 7868     		ldr	r0, [r7, #4]	@ float
+ 770 0298 FFF7FEFF 		bl	__aeabi_fcmplt
+ 771              	.LVL50:
+ 772 029c 0346     		mov	r3, r0
+ 773 029e 002B     		cmp	r3, #0
+ 774 02a0 2ED0     		beq	.L19
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     {
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         GimbalSystem.PlaneAttitudePID.Kp = GimbalSystem.PlaneAttitudePID.PlaneKpValue * (1.0f - del
+ 775              		.loc 1 176 73
+ 776 02a2 674B     		ldr	r3, .L22
+ 777 02a4 1C6A     		ldr	r4, [r3, #32]	@ float
+ 778              		.loc 1 176 139
+ 779 02a6 664B     		ldr	r3, .L22
+ 780 02a8 DB6A     		ldr	r3, [r3, #44]	@ float
+ 781              		.loc 1 176 107
+ 782 02aa 1946     		mov	r1, r3
+ 783 02ac 7868     		ldr	r0, [r7, #4]	@ float
+ 784 02ae FFF7FEFF 		bl	__aeabi_fdiv
+ 785              	.LVL51:
+ 786 02b2 0346     		mov	r3, r0
+ 787              		.loc 1 176 95
+ 788 02b4 1946     		mov	r1, r3
+ 789 02b6 4FF07E50 		mov	r0, #1065353216
+ 790 02ba FFF7FEFF 		bl	__aeabi_fsub
+ 791              	.LVL52:
+ 792 02be 0346     		mov	r3, r0
+ 793              		.loc 1 176 87
+ 794 02c0 1946     		mov	r1, r3
+ 795 02c2 2046     		mov	r0, r4
+ 796 02c4 FFF7FEFF 		bl	__aeabi_fmul
+ 797              	.LVL53:
+ 798 02c8 0346     		mov	r3, r0
+ 799 02ca 1A46     		mov	r2, r3
+ 800              		.loc 1 176 42
+ 801 02cc 5C4B     		ldr	r3, .L22
+ 802 02ce 1A63     		str	r2, [r3, #48]	@ float
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         GimbalSystem.PlaneAttitudePID.Ki = (GimbalSystem.PlaneAttitudePID.Kp) * (GimbalSystem.Plane
+ 803              		.loc 1 177 74
+ 804 02d0 5B4B     		ldr	r3, .L22
+ 805 02d2 1B6B     		ldr	r3, [r3, #48]	@ float
+ 806              		.loc 1 177 111
+ 807 02d4 5A4A     		ldr	r2, .L22
+ 808 02d6 126B     		ldr	r2, [r2, #48]	@ float
+ 809              		.loc 1 177 79
+ 810 02d8 1146     		mov	r1, r2
+ 811 02da 1846     		mov	r0, r3
+ 812 02dc FFF7FEFF 		bl	__aeabi_fmul
+ 813              	.LVL54:
+ 814 02e0 0346     		mov	r3, r0
+ 815              		.loc 1 177 116
+ 816 02e2 4FF07C51 		mov	r1, #1056964608
+ 817 02e6 1846     		mov	r0, r3
+ 818 02e8 FFF7FEFF 		bl	__aeabi_fmul
+ 819              	.LVL55:
+ 820 02ec 0346     		mov	r3, r0
+ 821              		.loc 1 177 123
+ 822 02ee 5549     		ldr	r1, .L22+4
+ 823 02f0 1846     		mov	r0, r3
+ 824 02f2 FFF7FEFF 		bl	__aeabi_fdiv
+ 825              	.LVL56:
+ 826 02f6 0346     		mov	r3, r0
+ 827 02f8 1A46     		mov	r2, r3
+ 828              		.loc 1 177 42
+ 829 02fa 514B     		ldr	r3, .L22
+ 830 02fc 5A63     		str	r2, [r3, #52]	@ float
+ 831 02fe 07E0     		b	.L12
+ 832              	.L19:
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     }
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     else
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     {
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         GimbalSystem.PlaneAttitudePID.Kp = 0.0f;
+ 833              		.loc 1 181 42
+ 834 0300 4F4B     		ldr	r3, .L22
+ 835 0302 4FF00002 		mov	r2, #0
+ 836 0306 1A63     		str	r2, [r3, #48]	@ float
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****         GimbalSystem.PlaneAttitudePID.Ki = 0.0f;
+ 837              		.loc 1 182 42
+ 838 0308 4D4B     		ldr	r3, .L22
+ 839 030a 4FF00002 		mov	r2, #0
+ 840 030e 5A63     		str	r2, [r3, #52]	@ float
+ 841              	.L12:
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     }
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.IntegralX += (GimbalSystem.PlaneAttitudePID.Ki) * (GimbalSystem.P
+ 842              		.loc 1 186 45
+ 843 0310 4B4B     		ldr	r3, .L22
+ 844 0312 5C6C     		ldr	r4, [r3, #68]	@ float
+ 845              		.loc 1 186 78
+ 846 0314 4A4B     		ldr	r3, .L22
+ 847 0316 5B6B     		ldr	r3, [r3, #52]	@ float
+ 848              		.loc 1 186 115
+ 849 0318 494A     		ldr	r2, .L22
+ 850 031a 926B     		ldr	r2, [r2, #56]	@ float
+ 851              		.loc 1 186 83
+ 852 031c 1146     		mov	r1, r2
+ 853 031e 1846     		mov	r0, r3
+ 854 0320 FFF7FEFF 		bl	__aeabi_fmul
+ 855              	.LVL57:
+ 856 0324 0346     		mov	r3, r0
+ 857              		.loc 1 186 45
+ 858 0326 1946     		mov	r1, r3
+ 859 0328 2046     		mov	r0, r4
+ 860 032a FFF7FEFF 		bl	__aeabi_fadd
+ 861              	.LVL58:
+ 862 032e 0346     		mov	r3, r0
+ 863 0330 1A46     		mov	r2, r3
+ 864 0332 434B     		ldr	r3, .L22
+ 865 0334 5A64     		str	r2, [r3, #68]	@ float
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.IntegralY += (GimbalSystem.PlaneAttitudePID.Ki) * (GimbalSystem.P
+ 866              		.loc 1 187 45
+ 867 0336 424B     		ldr	r3, .L22
+ 868 0338 9C6C     		ldr	r4, [r3, #72]	@ float
+ 869              		.loc 1 187 78
+ 870 033a 414B     		ldr	r3, .L22
+ 871 033c 5B6B     		ldr	r3, [r3, #52]	@ float
+ 872              		.loc 1 187 115
+ 873 033e 404A     		ldr	r2, .L22
+ 874 0340 D26B     		ldr	r2, [r2, #60]	@ float
+ 875              		.loc 1 187 83
+ 876 0342 1146     		mov	r1, r2
+ 877 0344 1846     		mov	r0, r3
+ 878 0346 FFF7FEFF 		bl	__aeabi_fmul
+ 879              	.LVL59:
+ 880 034a 0346     		mov	r3, r0
+ 881              		.loc 1 187 45
+ 882 034c 1946     		mov	r1, r3
+ 883 034e 2046     		mov	r0, r4
+ 884 0350 FFF7FEFF 		bl	__aeabi_fadd
+ 885              	.LVL60:
+ 886 0354 0346     		mov	r3, r0
+ 887 0356 1A46     		mov	r2, r3
+ 888 0358 394B     		ldr	r3, .L22
+ 889 035a 9A64     		str	r2, [r3, #72]	@ float
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.IntegralZ += (GimbalSystem.PlaneAttitudePID.Ki) * (GimbalSystem.P
+ 890              		.loc 1 188 45
+ 891 035c 384B     		ldr	r3, .L22
+ 892 035e DC6C     		ldr	r4, [r3, #76]	@ float
+ 893              		.loc 1 188 78
+ 894 0360 374B     		ldr	r3, .L22
+ 895 0362 5B6B     		ldr	r3, [r3, #52]	@ float
+ 896              		.loc 1 188 115
+ 897 0364 364A     		ldr	r2, .L22
+ 898 0366 126C     		ldr	r2, [r2, #64]	@ float
+ 899              		.loc 1 188 83
+ 900 0368 1146     		mov	r1, r2
+ 901 036a 1846     		mov	r0, r3
+ 902 036c FFF7FEFF 		bl	__aeabi_fmul
+ 903              	.LVL61:
+ 904 0370 0346     		mov	r3, r0
+ 905              		.loc 1 188 45
+ 906 0372 1946     		mov	r1, r3
+ 907 0374 2046     		mov	r0, r4
+ 908 0376 FFF7FEFF 		bl	__aeabi_fadd
+ 909              	.LVL62:
+ 910 037a 0346     		mov	r3, r0
+ 911 037c 1A46     		mov	r2, r3
+ 912 037e 304B     		ldr	r3, .L22
+ 913 0380 DA64     		str	r2, [r3, #76]	@ float
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.OutX = (GimbalSystem.PlaneAttitudePID.IntegralX) + (GimbalSystem.
+ 914              		.loc 1 189 72
+ 915 0382 2F4B     		ldr	r3, .L22
+ 916 0384 5C6C     		ldr	r4, [r3, #68]	@ float
+ 917              		.loc 1 189 116
+ 918 0386 2E4B     		ldr	r3, .L22
+ 919 0388 1B6B     		ldr	r3, [r3, #48]	@ float
+ 920              		.loc 1 189 153
+ 921 038a 2D4A     		ldr	r2, .L22
+ 922 038c 926B     		ldr	r2, [r2, #56]	@ float
+ 923              		.loc 1 189 121
+ 924 038e 1146     		mov	r1, r2
+ 925 0390 1846     		mov	r0, r3
+ 926 0392 FFF7FEFF 		bl	__aeabi_fmul
+ 927              	.LVL63:
+ 928 0396 0346     		mov	r3, r0
+ 929              		.loc 1 189 84
+ 930 0398 1946     		mov	r1, r3
+ 931 039a 2046     		mov	r0, r4
+ 932 039c FFF7FEFF 		bl	__aeabi_fadd
+ 933              	.LVL64:
+ 934 03a0 0346     		mov	r3, r0
+ 935 03a2 1A46     		mov	r2, r3
+ 936              		.loc 1 189 40
+ 937 03a4 264B     		ldr	r3, .L22
+ 938 03a6 1A65     		str	r2, [r3, #80]	@ float
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.OutY = (GimbalSystem.PlaneAttitudePID.IntegralY) + (GimbalSystem.
+ 939              		.loc 1 190 72
+ 940 03a8 254B     		ldr	r3, .L22
+ 941 03aa 9C6C     		ldr	r4, [r3, #72]	@ float
+ 942              		.loc 1 190 116
+ 943 03ac 244B     		ldr	r3, .L22
+ 944 03ae 1B6B     		ldr	r3, [r3, #48]	@ float
+ 945              		.loc 1 190 153
+ 946 03b0 234A     		ldr	r2, .L22
+ 947 03b2 D26B     		ldr	r2, [r2, #60]	@ float
+ 948              		.loc 1 190 121
+ 949 03b4 1146     		mov	r1, r2
+ 950 03b6 1846     		mov	r0, r3
+ 951 03b8 FFF7FEFF 		bl	__aeabi_fmul
+ 952              	.LVL65:
+ 953 03bc 0346     		mov	r3, r0
+ 954              		.loc 1 190 84
+ 955 03be 1946     		mov	r1, r3
+ 956 03c0 2046     		mov	r0, r4
+ 957 03c2 FFF7FEFF 		bl	__aeabi_fadd
+ 958              	.LVL66:
+ 959 03c6 0346     		mov	r3, r0
+ 960 03c8 1A46     		mov	r2, r3
+ 961              		.loc 1 190 40
+ 962 03ca 1D4B     		ldr	r3, .L22
+ 963 03cc 5A65     		str	r2, [r3, #84]	@ float
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneAttitudePID.OutZ = (GimbalSystem.PlaneAttitudePID.IntegralZ) + (GimbalSystem.
+ 964              		.loc 1 191 72
+ 965 03ce 1C4B     		ldr	r3, .L22
+ 966 03d0 DC6C     		ldr	r4, [r3, #76]	@ float
+ 967              		.loc 1 191 116
+ 968 03d2 1B4B     		ldr	r3, .L22
+ 969 03d4 1B6B     		ldr	r3, [r3, #48]	@ float
+ 970              		.loc 1 191 153
+ 971 03d6 1A4A     		ldr	r2, .L22
+ 972 03d8 126C     		ldr	r2, [r2, #64]	@ float
+ 973              		.loc 1 191 121
+ 974 03da 1146     		mov	r1, r2
+ 975 03dc 1846     		mov	r0, r3
+ 976 03de FFF7FEFF 		bl	__aeabi_fmul
+ 977              	.LVL67:
+ 978 03e2 0346     		mov	r3, r0
+ 979              		.loc 1 191 84
+ 980 03e4 1946     		mov	r1, r3
+ 981 03e6 2046     		mov	r0, r4
+ 982 03e8 FFF7FEFF 		bl	__aeabi_fadd
+ 983              	.LVL68:
+ 984 03ec 0346     		mov	r3, r0
+ 985 03ee 1A46     		mov	r2, r3
+ 986              		.loc 1 191 40
+ 987 03f0 134B     		ldr	r3, .L22
+ 988 03f2 9A65     		str	r2, [r3, #88]	@ float
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneRadsCali.Data.X = (GimbalSystem.PlaneRads.Data.X) + (GimbalSystem.PlaneAttitu
+ 989              		.loc 1 194 69
+ 990 03f4 124B     		ldr	r3, .L22
+ 991 03f6 D3F82431 		ldr	r3, [r3, #292]	@ float
+ 992              		.loc 1 194 105
+ 993 03fa 114A     		ldr	r2, .L22
+ 994 03fc 126D     		ldr	r2, [r2, #80]	@ float
+ 995              		.loc 1 194 73
+ 996 03fe 1146     		mov	r1, r2
+ 997 0400 1846     		mov	r0, r3
+ 998 0402 FFF7FEFF 		bl	__aeabi_fadd
+ 999              	.LVL69:
+ 1000 0406 0346     		mov	r3, r0
+ 1001 0408 1A46     		mov	r2, r3
+ 1002              		.loc 1 194 39
+ 1003 040a 0D4B     		ldr	r3, .L22
+ 1004 040c C3F83021 		str	r2, [r3, #304]	@ float
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneRadsCali.Data.Y = (GimbalSystem.PlaneRads.Data.Y) + (GimbalSystem.PlaneAttitu
+ 1005              		.loc 1 195 69
+ 1006 0410 0B4B     		ldr	r3, .L22
+ 1007 0412 D3F82831 		ldr	r3, [r3, #296]	@ float
+ 1008              		.loc 1 195 105
+ 1009 0416 0A4A     		ldr	r2, .L22
+ 1010 0418 526D     		ldr	r2, [r2, #84]	@ float
+ 1011              		.loc 1 195 73
+ 1012 041a 1146     		mov	r1, r2
+ 1013 041c 1846     		mov	r0, r3
+ 1014 041e FFF7FEFF 		bl	__aeabi_fadd
+ 1015              	.LVL70:
+ 1016 0422 0346     		mov	r3, r0
+ 1017 0424 1A46     		mov	r2, r3
+ 1018              		.loc 1 195 39
+ 1019 0426 064B     		ldr	r3, .L22
+ 1020 0428 C3F83421 		str	r2, [r3, #308]	@ float
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c ****     GimbalSystem.PlaneRadsCali.Data.Z = GimbalSystem.PlaneRads.Data.Z;
+ 1021              		.loc 1 196 68
+ 1022 042c 044B     		ldr	r3, .L22
+ 1023 042e D3F82C31 		ldr	r3, [r3, #300]	@ float
+ 1024              		.loc 1 196 39
+ 1025 0432 034A     		ldr	r2, .L22
+ 1026 0434 C2F83831 		str	r3, [r2, #312]	@ float
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** 
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnLib\dawn_lib.c **** }
+ 1027              		.loc 1 198 1
+ 1028 0438 00BF     		nop
+ 1029 043a 2C37     		adds	r7, r7, #44
+ 1030              		.cfi_def_cfa_offset 12
+ 1031 043c BD46     		mov	sp, r7
+ 1032              		.cfi_def_cfa_register 13
+ 1033              		@ sp needed
+ 1034 043e 90BD     		pop	{r4, r7, pc}
+ 1035              	.L23:
+ 1036              		.align	2
+ 1037              	.L22:
+ 1038 0440 00000000 		.word	GimbalSystem
+ 1039 0444 00007A45 		.word	1165623296
+ 1040              		.cfi_endproc
+ 1041              	.LFE157:
+ 1043              		.text
+ 1044              	.Letext0:
+ 1045              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1046              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1047              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1048              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1049              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1050              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1051              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1052              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1053              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 1054              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 1055              		.file 12 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 1056              		.file 13 "../../Dawn/DawnLib/dawn_lib.h"
+ 1057              		.file 14 "../../Dawn/DawnBsp/timebase.h"
+ 1058              		.file 15 "../../CMSIS/gd32f4xx.h"
+ 1059              		.file 16 "../../Dawn/DawnCom/unpack.h"
+ 1060              		.file 17 "../../Dawn/DawnDevice/icm206xx.h"
+ 1061              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 1062              		.file 19 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 1063              		.file 20 "../../Dawn/DawnMain/dawn_function.h"
+ 1064              		.file 21 "../../Dawn/DawnBLDC/dawn_bldc.h"
+ 1065              		.file 22 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 dawn_lib.c
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:20     .data.BLDCYaw:00000000 BLDCYaw
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:17     .data.BLDCYaw:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:61     .data.BLDCRoll:00000000 BLDCRoll
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:58     .data.BLDCRoll:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:102    .data.BLDCPitch:00000000 BLDCPitch
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:99     .data.BLDCPitch:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:145    .text.BLDCEAngle:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:153    .text.BLDCEAngle:00000000 BLDCEAngle
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:364    .text.BLDCEAngle:00000164 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:372    .text.AttitudeCali:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:379    .text.AttitudeCali:00000000 AttitudeCali
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:761    .text.AttitudeCali:00000288 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:765    .text.AttitudeCali:00000290 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnwLHcl.s:1038   .text.AttitudeCali:00000440 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.2.2148fd5d7903f11848035f6016d60626
+                           .group:00000000 wm4.usart.h.2.e199d837a79a66290b00031f845f4f16
+                           .group:00000000 wm4.timebase.h.2.6e3c409f28bee325395f1181b1ffdd6c
+                           .group:00000000 wm4.unpack.h.2.3e63a774bf54902f9b142a60cd2f7024
+                           .group:00000000 wm4.icm206xx.h.2.5f9f6b162394271948eab43bc13bc548
+                           .group:00000000 wm4.dawn_gimbal_system.h.7.b4f5a8de53fa23db83e4bcbba62f3cc1
+                           .group:00000000 wm4.dawn_bldc.h.6.a4a2ed223b29b44109a7d2bbfc854494
+                           .group:00000000 wm4.gpio.h.2.5ab304ff82514325631601de6b90f22b
+                           .group:00000000 wm4.flash.h.2.c992b153592dd5cbee12fb6519c78072
+
+UNDEFINED SYMBOLS
+__aeabi_fmul
+__aeabi_fsub
+__aeabi_fadd
+__aeabi_i2f
+__aeabi_fdiv
+__aeabi_fcmplt
+cosf
+sinf
+fmodf
+__aeabi_fcmpeq
+sqrtf
+GimbalSystem

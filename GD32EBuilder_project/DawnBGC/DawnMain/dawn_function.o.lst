@@ -1,0 +1,475 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"dawn_function.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	customer_operation
+  16              		.section	.data.customer_operation,"aw"
+  17              		.align	2
+  20              	customer_operation:
+  21 0000 00000000 		.space	4
+  22 0004 0000803F 		.word	1065353216
+  23 0008 0000803F 		.word	1065353216
+  24 000c 00000000 		.word	0
+  25 0010 00       		.byte	0
+  26 0011 000000   		.space	3
+  27 0014 00000000 		.word	0
+  28 0018 00000000 		.word	0
+  29 001c 00000000 		.word	0
+  30 0020 00000000 		.space	4
+  31              		.section	.text.gimbal_business,"ax",%progbits
+  32              		.align	1
+  33              		.global	gimbal_business
+  34              		.arch armv7e-m
+  35              		.syntax unified
+  36              		.thumb
+  37              		.thumb_func
+  38              		.fpu softvfp
+  40              	gimbal_business:
+  41              	.LFB156:
+  42              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** customer_operation_struct customer_operation =
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     {
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Pitch = ATTITUDE_MODE,
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Roll = ATTITUDE_MODE,
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Yaw = ANGLE_MODE,
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         .GeoEulerTraget =
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             {
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****                 .Order = EULER_ORDER_ZXY,
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****                 .Pitch = 0.0f,
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****                 .Roll = 0.0f,
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****                 .Yaw = 0.0f,
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             },
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** };
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** void gimbal_business(void)
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** {
+  43              		.loc 1 41 1
+  44              		.cfi_startproc
+  45              		@ args = 0, pretend = 0, frame = 0
+  46              		@ frame_needed = 1, uses_anonymous_args = 0
+  47 0000 80B5     		push	{r7, lr}
+  48              		.cfi_def_cfa_offset 8
+  49              		.cfi_offset 7, -8
+  50              		.cfi_offset 14, -4
+  51 0002 00AF     		add	r7, sp, #0
+  52              		.cfi_def_cfa_register 7
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     if (GimbalSystem.GimbalState == SYSTEM_STATUS)
+  53              		.loc 1 43 21
+  54 0004 034B     		ldr	r3, .L4
+  55 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  56              		.loc 1 43 8
+  57 0008 032B     		cmp	r3, #3
+  58 000a 01D1     		bne	.L3
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     {
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         motor_stall_process();
+  59              		.loc 1 45 9
+  60 000c FFF7FEFF 		bl	motor_stall_process
+  61              	.L3:
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     }
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** }
+  62              		.loc 1 47 1
+  63 0010 00BF     		nop
+  64 0012 80BD     		pop	{r7, pc}
+  65              	.L5:
+  66              		.align	2
+  67              	.L4:
+  68 0014 00000000 		.word	GimbalSystem
+  69              		.cfi_endproc
+  70              	.LFE156:
+  72              		.global	__aeabi_fadd
+  73              		.global	__aeabi_fcmplt
+  74              		.global	__aeabi_fsub
+  75              		.global	__aeabi_fcmpgt
+  76              		.global	__aeabi_ui2f
+  77              		.section	.text.motor_stall_process,"ax",%progbits
+  78              		.align	1
+  79              		.global	motor_stall_process
+  80              		.syntax unified
+  81              		.thumb
+  82              		.thumb_func
+  83              		.fpu softvfp
+  85              	motor_stall_process:
+  86              	.LFB157:
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** void motor_stall_process(void)
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** {
+  87              		.loc 1 49 1
+  88              		.cfi_startproc
+  89              		@ args = 0, pretend = 0, frame = 0
+  90              		@ frame_needed = 1, uses_anonymous_args = 0
+  91 0000 98B5     		push	{r3, r4, r7, lr}
+  92              		.cfi_def_cfa_offset 16
+  93              		.cfi_offset 3, -16
+  94              		.cfi_offset 4, -12
+  95              		.cfi_offset 7, -8
+  96              		.cfi_offset 14, -4
+  97 0002 00AF     		add	r7, sp, #0
+  98              		.cfi_def_cfa_register 7
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     static uint32_t StallTime = 0;
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     static uint8_t StallTimes = 0;
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     if (
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 
+  99              		.loc 1 55 40
+ 100 0004 4B4B     		ldr	r3, .L15
+ 101 0006 D3F8E841 		ldr	r4, [r3, #488]	@ float
+ 102              		.loc 1 55 85
+ 103 000a 4A4B     		ldr	r3, .L15
+ 104 000c D3F85833 		ldr	r3, [r3, #856]	@ float
+ 105              		.loc 1 55 98
+ 106 0010 4949     		ldr	r1, .L15+4
+ 107 0012 1846     		mov	r0, r3
+ 108 0014 FFF7FEFF 		bl	__aeabi_fadd
+ 109              	.LVL0:
+ 110 0018 0346     		mov	r3, r0
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 
+ 111              		.loc 1 54 8
+ 112 001a 1946     		mov	r1, r3
+ 113 001c 2046     		mov	r0, r4
+ 114 001e FFF7FEFF 		bl	__aeabi_fcmplt
+ 115              	.LVL1:
+ 116 0022 0346     		mov	r3, r0
+ 117 0024 002B     		cmp	r3, #0
+ 118 0026 59D1     		bne	.L7
+ 119              		.loc 1 55 141
+ 120 0028 424B     		ldr	r3, .L15
+ 121 002a D3F8E841 		ldr	r4, [r3, #488]	@ float
+ 122              		.loc 1 55 186
+ 123 002e 414B     		ldr	r3, .L15
+ 124 0030 D3F85C33 		ldr	r3, [r3, #860]	@ float
+ 125              		.loc 1 55 199
+ 126 0034 4049     		ldr	r1, .L15+4
+ 127 0036 1846     		mov	r0, r3
+ 128 0038 FFF7FEFF 		bl	__aeabi_fsub
+ 129              	.LVL2:
+ 130 003c 0346     		mov	r3, r0
+ 131              		.loc 1 55 107
+ 132 003e 1946     		mov	r1, r3
+ 133 0040 2046     		mov	r0, r4
+ 134 0042 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 135              	.LVL3:
+ 136 0046 0346     		mov	r3, r0
+ 137 0048 002B     		cmp	r3, #0
+ 138 004a 47D1     		bne	.L7
+ 139              		.loc 1 55 243 discriminator 1
+ 140 004c 394B     		ldr	r3, .L15
+ 141 004e D3F8E441 		ldr	r4, [r3, #484]	@ float
+ 142              		.loc 1 55 290 discriminator 1
+ 143 0052 384B     		ldr	r3, .L15
+ 144 0054 D3F83033 		ldr	r3, [r3, #816]	@ float
+ 145              		.loc 1 55 303 discriminator 1
+ 146 0058 3749     		ldr	r1, .L15+4
+ 147 005a 1846     		mov	r0, r3
+ 148 005c FFF7FEFF 		bl	__aeabi_fadd
+ 149              	.LVL4:
+ 150 0060 0346     		mov	r3, r0
+ 151              		.loc 1 55 209 discriminator 1
+ 152 0062 1946     		mov	r1, r3
+ 153 0064 2046     		mov	r0, r4
+ 154 0066 FFF7FEFF 		bl	__aeabi_fcmplt
+ 155              	.LVL5:
+ 156 006a 0346     		mov	r3, r0
+ 157 006c 002B     		cmp	r3, #0
+ 158 006e 35D1     		bne	.L7
+ 159              		.loc 1 55 347 discriminator 2
+ 160 0070 304B     		ldr	r3, .L15
+ 161 0072 D3F8E441 		ldr	r4, [r3, #484]	@ float
+ 162              		.loc 1 55 394 discriminator 2
+ 163 0076 2F4B     		ldr	r3, .L15
+ 164 0078 D3F83433 		ldr	r3, [r3, #820]	@ float
+ 165              		.loc 1 55 407 discriminator 2
+ 166 007c 2E49     		ldr	r1, .L15+4
+ 167 007e 1846     		mov	r0, r3
+ 168 0080 FFF7FEFF 		bl	__aeabi_fsub
+ 169              	.LVL6:
+ 170 0084 0346     		mov	r3, r0
+ 171              		.loc 1 55 313 discriminator 2
+ 172 0086 1946     		mov	r1, r3
+ 173 0088 2046     		mov	r0, r4
+ 174 008a FFF7FEFF 		bl	__aeabi_fcmpgt
+ 175              	.LVL7:
+ 176 008e 0346     		mov	r3, r0
+ 177 0090 002B     		cmp	r3, #0
+ 178 0092 23D1     		bne	.L7
+ 179              		.loc 1 55 451 discriminator 3
+ 180 0094 274B     		ldr	r3, .L15
+ 181 0096 D3F8EC41 		ldr	r4, [r3, #492]	@ float
+ 182              		.loc 1 55 496 discriminator 3
+ 183 009a 264B     		ldr	r3, .L15
+ 184 009c D3F88033 		ldr	r3, [r3, #896]	@ float
+ 185              		.loc 1 55 509 discriminator 3
+ 186 00a0 2549     		ldr	r1, .L15+4
+ 187 00a2 1846     		mov	r0, r3
+ 188 00a4 FFF7FEFF 		bl	__aeabi_fadd
+ 189              	.LVL8:
+ 190 00a8 0346     		mov	r3, r0
+ 191              		.loc 1 55 417 discriminator 3
+ 192 00aa 1946     		mov	r1, r3
+ 193 00ac 2046     		mov	r0, r4
+ 194 00ae FFF7FEFF 		bl	__aeabi_fcmplt
+ 195              	.LVL9:
+ 196 00b2 0346     		mov	r3, r0
+ 197 00b4 002B     		cmp	r3, #0
+ 198 00b6 11D1     		bne	.L7
+ 199              		.loc 1 55 553 discriminator 4
+ 200 00b8 1E4B     		ldr	r3, .L15
+ 201 00ba D3F8EC41 		ldr	r4, [r3, #492]	@ float
+ 202              		.loc 1 55 598 discriminator 4
+ 203 00be 1D4B     		ldr	r3, .L15
+ 204 00c0 D3F88433 		ldr	r3, [r3, #900]	@ float
+ 205              		.loc 1 55 611 discriminator 4
+ 206 00c4 1C49     		ldr	r1, .L15+4
+ 207 00c6 1846     		mov	r0, r3
+ 208 00c8 FFF7FEFF 		bl	__aeabi_fsub
+ 209              	.LVL10:
+ 210 00cc 0346     		mov	r3, r0
+ 211              		.loc 1 55 519 discriminator 4
+ 212 00ce 1946     		mov	r1, r3
+ 213 00d0 2046     		mov	r0, r4
+ 214 00d2 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 215              	.LVL11:
+ 216 00d6 0346     		mov	r3, r0
+ 217 00d8 002B     		cmp	r3, #0
+ 218 00da 24D0     		beq	.L14
+ 219              	.L7:
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     {
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         StallTime++;
+ 220              		.loc 1 57 18
+ 221 00dc 174B     		ldr	r3, .L15+8
+ 222 00de 1B68     		ldr	r3, [r3]
+ 223 00e0 0133     		adds	r3, r3, #1
+ 224 00e2 164A     		ldr	r2, .L15+8
+ 225 00e4 1360     		str	r3, [r2]
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         if (StallTime > (5.0f * CLOSELOOP_EXECUTE_FREQ))
+ 226              		.loc 1 58 23
+ 227 00e6 154B     		ldr	r3, .L15+8
+ 228 00e8 1B68     		ldr	r3, [r3]
+ 229 00ea 1846     		mov	r0, r3
+ 230 00ec FFF7FEFF 		bl	__aeabi_ui2f
+ 231              	.LVL12:
+ 232 00f0 0346     		mov	r3, r0
+ 233              		.loc 1 58 12
+ 234 00f2 1349     		ldr	r1, .L15+12
+ 235 00f4 1846     		mov	r0, r3
+ 236 00f6 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 237              	.LVL13:
+ 238 00fa 0346     		mov	r3, r0
+ 239 00fc 002B     		cmp	r3, #0
+ 240 00fe 16D0     		beq	.L12
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         {
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             StallTime = 0;
+ 241              		.loc 1 61 23
+ 242 0100 0E4B     		ldr	r3, .L15+8
+ 243 0102 0022     		movs	r2, #0
+ 244 0104 1A60     		str	r2, [r3]
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             StallTimes++;
+ 245              		.loc 1 63 23
+ 246 0106 0F4B     		ldr	r3, .L15+16
+ 247 0108 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 248 010a 0133     		adds	r3, r3, #1
+ 249 010c DAB2     		uxtb	r2, r3
+ 250 010e 0D4B     		ldr	r3, .L15+16
+ 251 0110 1A70     		strb	r2, [r3]
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCYaw);
+ 252              		.loc 1 65 13
+ 253 0112 0D48     		ldr	r0, .L15+20
+ 254 0114 FFF7FEFF 		bl	ShutOffPWM
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCRoll);
+ 255              		.loc 1 66 13
+ 256 0118 0C48     		ldr	r0, .L15+24
+ 257 011a FFF7FEFF 		bl	ShutOffPWM
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCPitch);
+ 258              		.loc 1 67 13
+ 259 011e 0C48     		ldr	r0, .L15+28
+ 260 0120 FFF7FEFF 		bl	ShutOffPWM
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         {
+ 261              		.loc 1 58 12
+ 262 0124 03E0     		b	.L12
+ 263              	.L14:
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         }
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     }
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     else
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         StallTime = 0;
+ 264              		.loc 1 71 19
+ 265 0126 054B     		ldr	r3, .L15+8
+ 266 0128 0022     		movs	r2, #0
+ 267 012a 1A60     		str	r2, [r3]
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** }
+ 268              		.loc 1 72 1
+ 269 012c 00BF     		nop
+ 270              	.L12:
+ 271 012e 00BF     		nop
+ 272 0130 98BD     		pop	{r3, r4, r7, pc}
+ 273              	.L16:
+ 274 0132 00BF     		.align	2
+ 275              	.L15:
+ 276 0134 00000000 		.word	GimbalSystem
+ 277 0138 0000C842 		.word	1120403456
+ 278 013c 00000000 		.word	StallTime.11219
+ 279 0140 00409C46 		.word	1184645120
+ 280 0144 00000000 		.word	StallTimes.11220
+ 281 0148 00000000 		.word	BLDCYaw
+ 282 014c 00000000 		.word	BLDCRoll
+ 283 0150 00000000 		.word	BLDCPitch
+ 284              		.cfi_endproc
+ 285              	.LFE157:
+ 287              		.section	.bss.StallTime.11219,"aw",%nobits
+ 288              		.align	2
+ 291              	StallTime.11219:
+ 292 0000 00000000 		.space	4
+ 293              		.section	.bss.StallTimes.11220,"aw",%nobits
+ 296              	StallTimes.11220:
+ 297 0000 00       		.space	1
+ 298              		.text
+ 299              	.Letext0:
+ 300              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 301              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 302              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 303              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 304              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 305              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 306              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 307              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 308              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 309              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 310              		.file 12 "../../CMSIS/gd32f4xx.h"
+ 311              		.file 13 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 312              		.file 14 "../../Dawn/DawnLib/dawn_lib.h"
+ 313              		.file 15 "../../Dawn/DawnBsp/timebase.h"
+ 314              		.file 16 "../../Dawn/DawnCom/unpack.h"
+ 315              		.file 17 "../../Dawn/DawnDevice/icm206xx.h"
+ 316              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 317              		.file 19 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 318              		.file 20 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.h"
+ 319              		.file 21 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 dawn_function.c
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:20     .data.customer_operation:00000000 customer_operation
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:17     .data.customer_operation:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:32     .text.gimbal_business:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:40     .text.gimbal_business:00000000 gimbal_business
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:85     .text.motor_stall_process:00000000 motor_stall_process
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:68     .text.gimbal_business:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:78     .text.motor_stall_process:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:276    .text.motor_stall_process:00000134 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:291    .bss.StallTime.11219:00000000 StallTime.11219
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:296    .bss.StallTimes.11220:00000000 StallTimes.11220
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:288    .bss.StallTime.11219:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:297    .bss.StallTimes.11220:00000000 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+UNDEFINED SYMBOLS
+GimbalSystem
+__aeabi_fadd
+__aeabi_fcmplt
+__aeabi_fsub
+__aeabi_fcmpgt
+__aeabi_ui2f
+ShutOffPWM
+BLDCYaw
+BLDCRoll
+BLDCPitch

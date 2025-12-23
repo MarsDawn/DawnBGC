@@ -1,0 +1,16 @@
+buildtools.path=.\\Tools\\Build Tools\\2.10-20180103-1919\\bin
+eclipse.preferences.version=1
+ldfile.code.location=FLASH
+ldfile.flash.Origin=0x08000000
+ldfile.flash.length=512
+ldfile.ram.Origin=0x20000000
+ldfile.ram.length=128
+ldfile.src.path=C\:/Users/leonardo/Desktop/GD32EmbeddedBuilder_v1.5.5_Rel/GD32EmbeddedBuilder/plugins/com.gigadevice.templatefwlib.arm.gd32f4xx_1.0.0.202511101636/Firmware\\gd32f4xx_flash.ld
+ldfile.stack.Origin=0x20001000
+ldfile.stack.length=1
+ldfile.target.path=C\:\\Users\\leonardo\\Desktop\\Code\\Github\\DawnGBC\\GD32EBuilder_project\\ldscripts\\gd32f4xx_flash.ld
+mcu.target=GD32F405RET6
+mcu.target.svd=GD32F4xx.svd
+toolchain.name=GNU Tools for ARM Embedded Processors
+toolchain.path.1287942917=.\\Tools\\GNU Tools ARM Embedded\\xpack-arm-none-eabi-gcc\\9.2.1-1.1\\bin
+toolchain.prefix=arm-none-eabi-

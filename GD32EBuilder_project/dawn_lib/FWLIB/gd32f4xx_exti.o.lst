@@ -1,0 +1,1096 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_exti.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.exti_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	exti_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	exti_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_exti.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \file  gd32f4xx_exti.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief EXTI driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** #include "gd32f4xx_exti.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      deinitialize the EXTI
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+  27              		.loc 1 21 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 80B4     		push	{r7}
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 7, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     /* reset the value of all the EXTI registers */
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_INTEN = (uint32_t)0x00000000U;
+  37              		.loc 1 23 5
+  38 0004 094B     		ldr	r3, .L2
+  39              		.loc 1 23 16
+  40 0006 0022     		movs	r2, #0
+  41 0008 1A60     		str	r2, [r3]
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_EVEN  = (uint32_t)0x00000000U;
+  42              		.loc 1 24 5
+  43 000a 094B     		ldr	r3, .L2+4
+  44              		.loc 1 24 16
+  45 000c 0022     		movs	r2, #0
+  46 000e 1A60     		str	r2, [r3]
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_RTEN  = (uint32_t)0x00000000U;
+  47              		.loc 1 25 5
+  48 0010 084B     		ldr	r3, .L2+8
+  49              		.loc 1 25 16
+  50 0012 0022     		movs	r2, #0
+  51 0014 1A60     		str	r2, [r3]
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_FTEN  = (uint32_t)0x00000000U;
+  52              		.loc 1 26 5
+  53 0016 084B     		ldr	r3, .L2+12
+  54              		.loc 1 26 16
+  55 0018 0022     		movs	r2, #0
+  56 001a 1A60     		str	r2, [r3]
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_SWIEV = (uint32_t)0x00000000U;
+  57              		.loc 1 27 5
+  58 001c 074B     		ldr	r3, .L2+16
+  59              		.loc 1 27 16
+  60 001e 0022     		movs	r2, #0
+  61 0020 1A60     		str	r2, [r3]
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+  62              		.loc 1 28 1
+  63 0022 00BF     		nop
+  64 0024 BD46     		mov	sp, r7
+  65              		.cfi_def_cfa_register 13
+  66              		@ sp needed
+  67 0026 80BC     		pop	{r7}
+  68              		.cfi_restore 7
+  69              		.cfi_def_cfa_offset 0
+  70 0028 7047     		bx	lr
+  71              	.L3:
+  72 002a 00BF     		.align	2
+  73              	.L2:
+  74 002c 003C0140 		.word	1073822720
+  75 0030 043C0140 		.word	1073822724
+  76 0034 083C0140 		.word	1073822728
+  77 0038 0C3C0140 		.word	1073822732
+  78 003c 103C0140 		.word	1073822736
+  79              		.cfi_endproc
+  80              	.LFE123:
+  82              		.section	.text.exti_init,"ax",%progbits
+  83              		.align	1
+  84              		.global	exti_init
+  85              		.syntax unified
+  86              		.thumb
+  87              		.thumb_func
+  88              		.fpu softvfp
+  90              	exti_init:
+  91              	.LFB124:
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      initialize the EXTI
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  mode: interrupt or event mode, refer to exti_mode_enum
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_INTERRUPT: interrupt mode
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_EVENT: event mode
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  trig_type: interrupt trigger type, refer to exti_trig_type_enum
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_TRIG_RISING: rising edge trigger
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_TRIG_FALLING: falling trigger
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_TRIG_BOTH: rising and falling trigger
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_init(exti_line_enum linex, \
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 exti_mode_enum mode, \
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 exti_trig_type_enum trig_type)
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+  92              		.loc 1 50 1
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 8
+  95              		@ frame_needed = 1, uses_anonymous_args = 0
+  96              		@ link register save eliminated.
+  97 0000 80B4     		push	{r7}
+  98              		.cfi_def_cfa_offset 4
+  99              		.cfi_offset 7, -4
+ 100 0002 83B0     		sub	sp, sp, #12
+ 101              		.cfi_def_cfa_offset 16
+ 102 0004 00AF     		add	r7, sp, #0
+ 103              		.cfi_def_cfa_register 7
+ 104 0006 7860     		str	r0, [r7, #4]
+ 105 0008 0B46     		mov	r3, r1
+ 106 000a FB70     		strb	r3, [r7, #3]
+ 107 000c 1346     		mov	r3, r2
+ 108 000e BB70     		strb	r3, [r7, #2]
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     /* reset the EXTI line x */
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_INTEN &= ~(uint32_t)linex;
+ 109              		.loc 1 52 16
+ 110 0010 344B     		ldr	r3, .L15
+ 111 0012 1A68     		ldr	r2, [r3]
+ 112              		.loc 1 52 19
+ 113 0014 7B68     		ldr	r3, [r7, #4]
+ 114 0016 DB43     		mvns	r3, r3
+ 115              		.loc 1 52 16
+ 116 0018 3249     		ldr	r1, .L15
+ 117 001a 1340     		ands	r3, r3, r2
+ 118 001c 0B60     		str	r3, [r1]
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_EVEN &= ~(uint32_t)linex;
+ 119              		.loc 1 53 15
+ 120 001e 324B     		ldr	r3, .L15+4
+ 121 0020 1A68     		ldr	r2, [r3]
+ 122              		.loc 1 53 18
+ 123 0022 7B68     		ldr	r3, [r7, #4]
+ 124 0024 DB43     		mvns	r3, r3
+ 125              		.loc 1 53 15
+ 126 0026 3049     		ldr	r1, .L15+4
+ 127 0028 1340     		ands	r3, r3, r2
+ 128 002a 0B60     		str	r3, [r1]
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_RTEN &= ~(uint32_t)linex;
+ 129              		.loc 1 54 15
+ 130 002c 2F4B     		ldr	r3, .L15+8
+ 131 002e 1A68     		ldr	r2, [r3]
+ 132              		.loc 1 54 18
+ 133 0030 7B68     		ldr	r3, [r7, #4]
+ 134 0032 DB43     		mvns	r3, r3
+ 135              		.loc 1 54 15
+ 136 0034 2D49     		ldr	r1, .L15+8
+ 137 0036 1340     		ands	r3, r3, r2
+ 138 0038 0B60     		str	r3, [r1]
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_FTEN &= ~(uint32_t)linex;
+ 139              		.loc 1 55 15
+ 140 003a 2D4B     		ldr	r3, .L15+12
+ 141 003c 1A68     		ldr	r2, [r3]
+ 142              		.loc 1 55 18
+ 143 003e 7B68     		ldr	r3, [r7, #4]
+ 144 0040 DB43     		mvns	r3, r3
+ 145              		.loc 1 55 15
+ 146 0042 2B49     		ldr	r1, .L15+12
+ 147 0044 1340     		ands	r3, r3, r2
+ 148 0046 0B60     		str	r3, [r1]
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     /* set the EXTI mode and enable the interrupts or events from EXTI line x */
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     switch(mode){
+ 149              		.loc 1 58 5
+ 150 0048 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 151 004a 002B     		cmp	r3, #0
+ 152 004c 02D0     		beq	.L5
+ 153 004e 012B     		cmp	r3, #1
+ 154 0050 07D0     		beq	.L6
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     case EXTI_INTERRUPT:
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_INTEN |= (uint32_t)linex;
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     case EXTI_EVENT:
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_EVEN |= (uint32_t)linex;
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     default:
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 155              		.loc 1 66 9
+ 156 0052 0DE0     		b	.L8
+ 157              	.L5:
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 158              		.loc 1 60 20
+ 159 0054 234B     		ldr	r3, .L15
+ 160 0056 1A68     		ldr	r2, [r3]
+ 161 0058 2249     		ldr	r1, .L15
+ 162 005a 7B68     		ldr	r3, [r7, #4]
+ 163 005c 1343     		orrs	r3, r3, r2
+ 164 005e 0B60     		str	r3, [r1]
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     case EXTI_EVENT:
+ 165              		.loc 1 61 9
+ 166 0060 06E0     		b	.L8
+ 167              	.L6:
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 168              		.loc 1 63 19
+ 169 0062 214B     		ldr	r3, .L15+4
+ 170 0064 1A68     		ldr	r2, [r3]
+ 171 0066 2049     		ldr	r1, .L15+4
+ 172 0068 7B68     		ldr	r3, [r7, #4]
+ 173 006a 1343     		orrs	r3, r3, r2
+ 174 006c 0B60     		str	r3, [r1]
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     default:
+ 175              		.loc 1 64 9
+ 176 006e 00BF     		nop
+ 177              	.L8:
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     }
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     /* set the EXTI trigger type */
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     switch(trig_type){
+ 178              		.loc 1 70 5
+ 179 0070 BB78     		ldrb	r3, [r7, #2]	@ zero_extendqisi2
+ 180 0072 022B     		cmp	r3, #2
+ 181 0074 22D0     		beq	.L9
+ 182 0076 022B     		cmp	r3, #2
+ 183 0078 2DDC     		bgt	.L14
+ 184 007a 002B     		cmp	r3, #0
+ 185 007c 02D0     		beq	.L11
+ 186 007e 012B     		cmp	r3, #1
+ 187 0080 0ED0     		beq	.L12
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     case EXTI_TRIG_RISING:
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_RTEN |= (uint32_t)linex;
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_FTEN &= ~(uint32_t)linex;
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     case EXTI_TRIG_FALLING:
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_RTEN &= ~(uint32_t)linex;
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_FTEN |= (uint32_t)linex;
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     case EXTI_TRIG_BOTH:
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_RTEN |= (uint32_t)linex;
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_FTEN |= (uint32_t)linex;
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     default:
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 188              		.loc 1 84 9
+ 189 0082 28E0     		b	.L14
+ 190              	.L11:
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_FTEN &= ~(uint32_t)linex;
+ 191              		.loc 1 72 19
+ 192 0084 194B     		ldr	r3, .L15+8
+ 193 0086 1A68     		ldr	r2, [r3]
+ 194 0088 1849     		ldr	r1, .L15+8
+ 195 008a 7B68     		ldr	r3, [r7, #4]
+ 196 008c 1343     		orrs	r3, r3, r2
+ 197 008e 0B60     		str	r3, [r1]
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 198              		.loc 1 73 19
+ 199 0090 174B     		ldr	r3, .L15+12
+ 200 0092 1A68     		ldr	r2, [r3]
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 201              		.loc 1 73 22
+ 202 0094 7B68     		ldr	r3, [r7, #4]
+ 203 0096 DB43     		mvns	r3, r3
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 204              		.loc 1 73 19
+ 205 0098 1549     		ldr	r1, .L15+12
+ 206 009a 1340     		ands	r3, r3, r2
+ 207 009c 0B60     		str	r3, [r1]
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     case EXTI_TRIG_FALLING:
+ 208              		.loc 1 74 9
+ 209 009e 1BE0     		b	.L13
+ 210              	.L12:
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_FTEN |= (uint32_t)linex;
+ 211              		.loc 1 76 19
+ 212 00a0 124B     		ldr	r3, .L15+8
+ 213 00a2 1A68     		ldr	r2, [r3]
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_FTEN |= (uint32_t)linex;
+ 214              		.loc 1 76 22
+ 215 00a4 7B68     		ldr	r3, [r7, #4]
+ 216 00a6 DB43     		mvns	r3, r3
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_FTEN |= (uint32_t)linex;
+ 217              		.loc 1 76 19
+ 218 00a8 1049     		ldr	r1, .L15+8
+ 219 00aa 1340     		ands	r3, r3, r2
+ 220 00ac 0B60     		str	r3, [r1]
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 221              		.loc 1 77 19
+ 222 00ae 104B     		ldr	r3, .L15+12
+ 223 00b0 1A68     		ldr	r2, [r3]
+ 224 00b2 0F49     		ldr	r1, .L15+12
+ 225 00b4 7B68     		ldr	r3, [r7, #4]
+ 226 00b6 1343     		orrs	r3, r3, r2
+ 227 00b8 0B60     		str	r3, [r1]
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     case EXTI_TRIG_BOTH:
+ 228              		.loc 1 78 9
+ 229 00ba 0DE0     		b	.L13
+ 230              	.L9:
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         EXTI_FTEN |= (uint32_t)linex;
+ 231              		.loc 1 80 19
+ 232 00bc 0B4B     		ldr	r3, .L15+8
+ 233 00be 1A68     		ldr	r2, [r3]
+ 234 00c0 0A49     		ldr	r1, .L15+8
+ 235 00c2 7B68     		ldr	r3, [r7, #4]
+ 236 00c4 1343     		orrs	r3, r3, r2
+ 237 00c6 0B60     		str	r3, [r1]
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         break;
+ 238              		.loc 1 81 19
+ 239 00c8 094B     		ldr	r3, .L15+12
+ 240 00ca 1A68     		ldr	r2, [r3]
+ 241 00cc 0849     		ldr	r1, .L15+12
+ 242 00ce 7B68     		ldr	r3, [r7, #4]
+ 243 00d0 1343     		orrs	r3, r3, r2
+ 244 00d2 0B60     		str	r3, [r1]
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     default:
+ 245              		.loc 1 82 9
+ 246 00d4 00E0     		b	.L13
+ 247              	.L14:
+ 248              		.loc 1 84 9
+ 249 00d6 00BF     		nop
+ 250              	.L13:
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     }
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 251              		.loc 1 86 1
+ 252 00d8 00BF     		nop
+ 253 00da 0C37     		adds	r7, r7, #12
+ 254              		.cfi_def_cfa_offset 4
+ 255 00dc BD46     		mov	sp, r7
+ 256              		.cfi_def_cfa_register 13
+ 257              		@ sp needed
+ 258 00de 80BC     		pop	{r7}
+ 259              		.cfi_restore 7
+ 260              		.cfi_def_cfa_offset 0
+ 261 00e0 7047     		bx	lr
+ 262              	.L16:
+ 263 00e2 00BF     		.align	2
+ 264              	.L15:
+ 265 00e4 003C0140 		.word	1073822720
+ 266 00e8 043C0140 		.word	1073822724
+ 267 00ec 083C0140 		.word	1073822728
+ 268 00f0 0C3C0140 		.word	1073822732
+ 269              		.cfi_endproc
+ 270              	.LFE124:
+ 272              		.section	.text.exti_interrupt_enable,"ax",%progbits
+ 273              		.align	1
+ 274              		.global	exti_interrupt_enable
+ 275              		.syntax unified
+ 276              		.thumb
+ 277              		.thumb_func
+ 278              		.fpu softvfp
+ 280              	exti_interrupt_enable:
+ 281              	.LFB125:
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      enable the interrupts from EXTI line x
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_interrupt_enable(exti_line_enum linex)
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 282              		.loc 1 97 1
+ 283              		.cfi_startproc
+ 284              		@ args = 0, pretend = 0, frame = 8
+ 285              		@ frame_needed = 1, uses_anonymous_args = 0
+ 286              		@ link register save eliminated.
+ 287 0000 80B4     		push	{r7}
+ 288              		.cfi_def_cfa_offset 4
+ 289              		.cfi_offset 7, -4
+ 290 0002 83B0     		sub	sp, sp, #12
+ 291              		.cfi_def_cfa_offset 16
+ 292 0004 00AF     		add	r7, sp, #0
+ 293              		.cfi_def_cfa_register 7
+ 294 0006 7860     		str	r0, [r7, #4]
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_INTEN |= (uint32_t)linex;
+ 295              		.loc 1 98 16
+ 296 0008 054B     		ldr	r3, .L18
+ 297 000a 1A68     		ldr	r2, [r3]
+ 298 000c 0449     		ldr	r1, .L18
+ 299 000e 7B68     		ldr	r3, [r7, #4]
+ 300 0010 1343     		orrs	r3, r3, r2
+ 301 0012 0B60     		str	r3, [r1]
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 302              		.loc 1 99 1
+ 303 0014 00BF     		nop
+ 304 0016 0C37     		adds	r7, r7, #12
+ 305              		.cfi_def_cfa_offset 4
+ 306 0018 BD46     		mov	sp, r7
+ 307              		.cfi_def_cfa_register 13
+ 308              		@ sp needed
+ 309 001a 80BC     		pop	{r7}
+ 310              		.cfi_restore 7
+ 311              		.cfi_def_cfa_offset 0
+ 312 001c 7047     		bx	lr
+ 313              	.L19:
+ 314 001e 00BF     		.align	2
+ 315              	.L18:
+ 316 0020 003C0140 		.word	1073822720
+ 317              		.cfi_endproc
+ 318              	.LFE125:
+ 320              		.section	.text.exti_event_enable,"ax",%progbits
+ 321              		.align	1
+ 322              		.global	exti_event_enable
+ 323              		.syntax unified
+ 324              		.thumb
+ 325              		.thumb_func
+ 326              		.fpu softvfp
+ 328              	exti_event_enable:
+ 329              	.LFB126:
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      enable the events from EXTI line x
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_event_enable(exti_line_enum linex)
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 330              		.loc 1 110 1
+ 331              		.cfi_startproc
+ 332              		@ args = 0, pretend = 0, frame = 8
+ 333              		@ frame_needed = 1, uses_anonymous_args = 0
+ 334              		@ link register save eliminated.
+ 335 0000 80B4     		push	{r7}
+ 336              		.cfi_def_cfa_offset 4
+ 337              		.cfi_offset 7, -4
+ 338 0002 83B0     		sub	sp, sp, #12
+ 339              		.cfi_def_cfa_offset 16
+ 340 0004 00AF     		add	r7, sp, #0
+ 341              		.cfi_def_cfa_register 7
+ 342 0006 7860     		str	r0, [r7, #4]
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_EVEN |= (uint32_t)linex;
+ 343              		.loc 1 111 15
+ 344 0008 054B     		ldr	r3, .L21
+ 345 000a 1A68     		ldr	r2, [r3]
+ 346 000c 0449     		ldr	r1, .L21
+ 347 000e 7B68     		ldr	r3, [r7, #4]
+ 348 0010 1343     		orrs	r3, r3, r2
+ 349 0012 0B60     		str	r3, [r1]
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 350              		.loc 1 112 1
+ 351 0014 00BF     		nop
+ 352 0016 0C37     		adds	r7, r7, #12
+ 353              		.cfi_def_cfa_offset 4
+ 354 0018 BD46     		mov	sp, r7
+ 355              		.cfi_def_cfa_register 13
+ 356              		@ sp needed
+ 357 001a 80BC     		pop	{r7}
+ 358              		.cfi_restore 7
+ 359              		.cfi_def_cfa_offset 0
+ 360 001c 7047     		bx	lr
+ 361              	.L22:
+ 362 001e 00BF     		.align	2
+ 363              	.L21:
+ 364 0020 043C0140 		.word	1073822724
+ 365              		.cfi_endproc
+ 366              	.LFE126:
+ 368              		.section	.text.exti_interrupt_disable,"ax",%progbits
+ 369              		.align	1
+ 370              		.global	exti_interrupt_disable
+ 371              		.syntax unified
+ 372              		.thumb
+ 373              		.thumb_func
+ 374              		.fpu softvfp
+ 376              	exti_interrupt_disable:
+ 377              	.LFB127:
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      disable the interrupt from EXTI line x
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_interrupt_disable(exti_line_enum linex)
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 378              		.loc 1 123 1
+ 379              		.cfi_startproc
+ 380              		@ args = 0, pretend = 0, frame = 8
+ 381              		@ frame_needed = 1, uses_anonymous_args = 0
+ 382              		@ link register save eliminated.
+ 383 0000 80B4     		push	{r7}
+ 384              		.cfi_def_cfa_offset 4
+ 385              		.cfi_offset 7, -4
+ 386 0002 83B0     		sub	sp, sp, #12
+ 387              		.cfi_def_cfa_offset 16
+ 388 0004 00AF     		add	r7, sp, #0
+ 389              		.cfi_def_cfa_register 7
+ 390 0006 7860     		str	r0, [r7, #4]
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_INTEN &= ~(uint32_t)linex;
+ 391              		.loc 1 124 16
+ 392 0008 054B     		ldr	r3, .L24
+ 393 000a 1A68     		ldr	r2, [r3]
+ 394              		.loc 1 124 19
+ 395 000c 7B68     		ldr	r3, [r7, #4]
+ 396 000e DB43     		mvns	r3, r3
+ 397              		.loc 1 124 16
+ 398 0010 0349     		ldr	r1, .L24
+ 399 0012 1340     		ands	r3, r3, r2
+ 400 0014 0B60     		str	r3, [r1]
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 401              		.loc 1 125 1
+ 402 0016 00BF     		nop
+ 403 0018 0C37     		adds	r7, r7, #12
+ 404              		.cfi_def_cfa_offset 4
+ 405 001a BD46     		mov	sp, r7
+ 406              		.cfi_def_cfa_register 13
+ 407              		@ sp needed
+ 408 001c 80BC     		pop	{r7}
+ 409              		.cfi_restore 7
+ 410              		.cfi_def_cfa_offset 0
+ 411 001e 7047     		bx	lr
+ 412              	.L25:
+ 413              		.align	2
+ 414              	.L24:
+ 415 0020 003C0140 		.word	1073822720
+ 416              		.cfi_endproc
+ 417              	.LFE127:
+ 419              		.section	.text.exti_event_disable,"ax",%progbits
+ 420              		.align	1
+ 421              		.global	exti_event_disable
+ 422              		.syntax unified
+ 423              		.thumb
+ 424              		.thumb_func
+ 425              		.fpu softvfp
+ 427              	exti_event_disable:
+ 428              	.LFB128:
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      disable the events from EXTI line x
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_event_disable(exti_line_enum linex)
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 429              		.loc 1 136 1
+ 430              		.cfi_startproc
+ 431              		@ args = 0, pretend = 0, frame = 8
+ 432              		@ frame_needed = 1, uses_anonymous_args = 0
+ 433              		@ link register save eliminated.
+ 434 0000 80B4     		push	{r7}
+ 435              		.cfi_def_cfa_offset 4
+ 436              		.cfi_offset 7, -4
+ 437 0002 83B0     		sub	sp, sp, #12
+ 438              		.cfi_def_cfa_offset 16
+ 439 0004 00AF     		add	r7, sp, #0
+ 440              		.cfi_def_cfa_register 7
+ 441 0006 7860     		str	r0, [r7, #4]
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_EVEN &= ~(uint32_t)linex;
+ 442              		.loc 1 137 15
+ 443 0008 054B     		ldr	r3, .L27
+ 444 000a 1A68     		ldr	r2, [r3]
+ 445              		.loc 1 137 18
+ 446 000c 7B68     		ldr	r3, [r7, #4]
+ 447 000e DB43     		mvns	r3, r3
+ 448              		.loc 1 137 15
+ 449 0010 0349     		ldr	r1, .L27
+ 450 0012 1340     		ands	r3, r3, r2
+ 451 0014 0B60     		str	r3, [r1]
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 452              		.loc 1 138 1
+ 453 0016 00BF     		nop
+ 454 0018 0C37     		adds	r7, r7, #12
+ 455              		.cfi_def_cfa_offset 4
+ 456 001a BD46     		mov	sp, r7
+ 457              		.cfi_def_cfa_register 13
+ 458              		@ sp needed
+ 459 001c 80BC     		pop	{r7}
+ 460              		.cfi_restore 7
+ 461              		.cfi_def_cfa_offset 0
+ 462 001e 7047     		bx	lr
+ 463              	.L28:
+ 464              		.align	2
+ 465              	.L27:
+ 466 0020 043C0140 		.word	1073822724
+ 467              		.cfi_endproc
+ 468              	.LFE128:
+ 470              		.section	.text.exti_flag_get,"ax",%progbits
+ 471              		.align	1
+ 472              		.global	exti_flag_get
+ 473              		.syntax unified
+ 474              		.thumb
+ 475              		.thumb_func
+ 476              		.fpu softvfp
+ 478              	exti_flag_get:
+ 479              	.LFB129:
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      get EXTI lines flag
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     FlagStatus: status of flag (RESET or SET)
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** FlagStatus exti_flag_get(exti_line_enum linex)
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 480              		.loc 1 149 1
+ 481              		.cfi_startproc
+ 482              		@ args = 0, pretend = 0, frame = 8
+ 483              		@ frame_needed = 1, uses_anonymous_args = 0
+ 484              		@ link register save eliminated.
+ 485 0000 80B4     		push	{r7}
+ 486              		.cfi_def_cfa_offset 4
+ 487              		.cfi_offset 7, -4
+ 488 0002 83B0     		sub	sp, sp, #12
+ 489              		.cfi_def_cfa_offset 16
+ 490 0004 00AF     		add	r7, sp, #0
+ 491              		.cfi_def_cfa_register 7
+ 492 0006 7860     		str	r0, [r7, #4]
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     if(RESET != (EXTI_PD & (uint32_t)linex)){
+ 493              		.loc 1 150 18
+ 494 0008 064B     		ldr	r3, .L32
+ 495 000a 1A68     		ldr	r2, [r3]
+ 496              		.loc 1 150 26
+ 497 000c 7B68     		ldr	r3, [r7, #4]
+ 498 000e 1340     		ands	r3, r3, r2
+ 499              		.loc 1 150 7
+ 500 0010 002B     		cmp	r3, #0
+ 501 0012 01D0     		beq	.L30
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         return SET;
+ 502              		.loc 1 151 16
+ 503 0014 0123     		movs	r3, #1
+ 504 0016 00E0     		b	.L31
+ 505              	.L30:
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     }else{
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         return RESET;
+ 506              		.loc 1 153 16
+ 507 0018 0023     		movs	r3, #0
+ 508              	.L31:
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     } 
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 509              		.loc 1 155 1
+ 510 001a 1846     		mov	r0, r3
+ 511 001c 0C37     		adds	r7, r7, #12
+ 512              		.cfi_def_cfa_offset 4
+ 513 001e BD46     		mov	sp, r7
+ 514              		.cfi_def_cfa_register 13
+ 515              		@ sp needed
+ 516 0020 80BC     		pop	{r7}
+ 517              		.cfi_restore 7
+ 518              		.cfi_def_cfa_offset 0
+ 519 0022 7047     		bx	lr
+ 520              	.L33:
+ 521              		.align	2
+ 522              	.L32:
+ 523 0024 143C0140 		.word	1073822740
+ 524              		.cfi_endproc
+ 525              	.LFE129:
+ 527              		.section	.text.exti_flag_clear,"ax",%progbits
+ 528              		.align	1
+ 529              		.global	exti_flag_clear
+ 530              		.syntax unified
+ 531              		.thumb
+ 532              		.thumb_func
+ 533              		.fpu softvfp
+ 535              	exti_flag_clear:
+ 536              	.LFB130:
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      clear EXTI lines pending flag
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_flag_clear(exti_line_enum linex)
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 537              		.loc 1 166 1
+ 538              		.cfi_startproc
+ 539              		@ args = 0, pretend = 0, frame = 8
+ 540              		@ frame_needed = 1, uses_anonymous_args = 0
+ 541              		@ link register save eliminated.
+ 542 0000 80B4     		push	{r7}
+ 543              		.cfi_def_cfa_offset 4
+ 544              		.cfi_offset 7, -4
+ 545 0002 83B0     		sub	sp, sp, #12
+ 546              		.cfi_def_cfa_offset 16
+ 547 0004 00AF     		add	r7, sp, #0
+ 548              		.cfi_def_cfa_register 7
+ 549 0006 7860     		str	r0, [r7, #4]
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_PD = (uint32_t)linex;
+ 550              		.loc 1 167 5
+ 551 0008 034A     		ldr	r2, .L35
+ 552              		.loc 1 167 13
+ 553 000a 7B68     		ldr	r3, [r7, #4]
+ 554 000c 1360     		str	r3, [r2]
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 555              		.loc 1 168 1
+ 556 000e 00BF     		nop
+ 557 0010 0C37     		adds	r7, r7, #12
+ 558              		.cfi_def_cfa_offset 4
+ 559 0012 BD46     		mov	sp, r7
+ 560              		.cfi_def_cfa_register 13
+ 561              		@ sp needed
+ 562 0014 80BC     		pop	{r7}
+ 563              		.cfi_restore 7
+ 564              		.cfi_def_cfa_offset 0
+ 565 0016 7047     		bx	lr
+ 566              	.L36:
+ 567              		.align	2
+ 568              	.L35:
+ 569 0018 143C0140 		.word	1073822740
+ 570              		.cfi_endproc
+ 571              	.LFE130:
+ 573              		.section	.text.exti_interrupt_flag_get,"ax",%progbits
+ 574              		.align	1
+ 575              		.global	exti_interrupt_flag_get
+ 576              		.syntax unified
+ 577              		.thumb
+ 578              		.thumb_func
+ 579              		.fpu softvfp
+ 581              	exti_interrupt_flag_get:
+ 582              	.LFB131:
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      get EXTI lines flag when the interrupt flag is set
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     FlagStatus: status of flag (RESET or SET)
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** FlagStatus exti_interrupt_flag_get(exti_line_enum linex)
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 583              		.loc 1 179 1
+ 584              		.cfi_startproc
+ 585              		@ args = 0, pretend = 0, frame = 16
+ 586              		@ frame_needed = 1, uses_anonymous_args = 0
+ 587              		@ link register save eliminated.
+ 588 0000 80B4     		push	{r7}
+ 589              		.cfi_def_cfa_offset 4
+ 590              		.cfi_offset 7, -4
+ 591 0002 85B0     		sub	sp, sp, #20
+ 592              		.cfi_def_cfa_offset 24
+ 593 0004 00AF     		add	r7, sp, #0
+ 594              		.cfi_def_cfa_register 7
+ 595 0006 7860     		str	r0, [r7, #4]
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     uint32_t flag_left, flag_right;
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     flag_left = EXTI_PD & (uint32_t)linex;
+ 596              		.loc 1 182 17
+ 597 0008 0B4B     		ldr	r3, .L40
+ 598 000a 1B68     		ldr	r3, [r3]
+ 599              		.loc 1 182 15
+ 600 000c 7A68     		ldr	r2, [r7, #4]
+ 601 000e 1340     		ands	r3, r3, r2
+ 602 0010 FB60     		str	r3, [r7, #12]
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     flag_right = EXTI_INTEN & (uint32_t)linex;
+ 603              		.loc 1 183 18
+ 604 0012 0A4B     		ldr	r3, .L40+4
+ 605 0014 1B68     		ldr	r3, [r3]
+ 606              		.loc 1 183 16
+ 607 0016 7A68     		ldr	r2, [r7, #4]
+ 608 0018 1340     		ands	r3, r3, r2
+ 609 001a BB60     		str	r3, [r7, #8]
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     if((RESET != flag_left) && (RESET != flag_right)){
+ 610              		.loc 1 185 7
+ 611 001c FB68     		ldr	r3, [r7, #12]
+ 612 001e 002B     		cmp	r3, #0
+ 613 0020 04D0     		beq	.L38
+ 614              		.loc 1 185 29 discriminator 1
+ 615 0022 BB68     		ldr	r3, [r7, #8]
+ 616 0024 002B     		cmp	r3, #0
+ 617 0026 01D0     		beq	.L38
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         return SET;
+ 618              		.loc 1 186 16
+ 619 0028 0123     		movs	r3, #1
+ 620 002a 00E0     		b	.L39
+ 621              	.L38:
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     }else{
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****         return RESET;
+ 622              		.loc 1 188 16
+ 623 002c 0023     		movs	r3, #0
+ 624              	.L39:
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     }
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 625              		.loc 1 190 1
+ 626 002e 1846     		mov	r0, r3
+ 627 0030 1437     		adds	r7, r7, #20
+ 628              		.cfi_def_cfa_offset 4
+ 629 0032 BD46     		mov	sp, r7
+ 630              		.cfi_def_cfa_register 13
+ 631              		@ sp needed
+ 632 0034 80BC     		pop	{r7}
+ 633              		.cfi_restore 7
+ 634              		.cfi_def_cfa_offset 0
+ 635 0036 7047     		bx	lr
+ 636              	.L41:
+ 637              		.align	2
+ 638              	.L40:
+ 639 0038 143C0140 		.word	1073822740
+ 640 003c 003C0140 		.word	1073822720
+ 641              		.cfi_endproc
+ 642              	.LFE131:
+ 644              		.section	.text.exti_interrupt_flag_clear,"ax",%progbits
+ 645              		.align	1
+ 646              		.global	exti_interrupt_flag_clear
+ 647              		.syntax unified
+ 648              		.thumb
+ 649              		.thumb_func
+ 650              		.fpu softvfp
+ 652              	exti_interrupt_flag_clear:
+ 653              	.LFB132:
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      clear EXTI lines pending flag
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_interrupt_flag_clear(exti_line_enum linex)
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 654              		.loc 1 201 1
+ 655              		.cfi_startproc
+ 656              		@ args = 0, pretend = 0, frame = 8
+ 657              		@ frame_needed = 1, uses_anonymous_args = 0
+ 658              		@ link register save eliminated.
+ 659 0000 80B4     		push	{r7}
+ 660              		.cfi_def_cfa_offset 4
+ 661              		.cfi_offset 7, -4
+ 662 0002 83B0     		sub	sp, sp, #12
+ 663              		.cfi_def_cfa_offset 16
+ 664 0004 00AF     		add	r7, sp, #0
+ 665              		.cfi_def_cfa_register 7
+ 666 0006 7860     		str	r0, [r7, #4]
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_PD = (uint32_t)linex;
+ 667              		.loc 1 202 5
+ 668 0008 034A     		ldr	r2, .L43
+ 669              		.loc 1 202 13
+ 670 000a 7B68     		ldr	r3, [r7, #4]
+ 671 000c 1360     		str	r3, [r2]
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 672              		.loc 1 203 1
+ 673 000e 00BF     		nop
+ 674 0010 0C37     		adds	r7, r7, #12
+ 675              		.cfi_def_cfa_offset 4
+ 676 0012 BD46     		mov	sp, r7
+ 677              		.cfi_def_cfa_register 13
+ 678              		@ sp needed
+ 679 0014 80BC     		pop	{r7}
+ 680              		.cfi_restore 7
+ 681              		.cfi_def_cfa_offset 0
+ 682 0016 7047     		bx	lr
+ 683              	.L44:
+ 684              		.align	2
+ 685              	.L43:
+ 686 0018 143C0140 		.word	1073822740
+ 687              		.cfi_endproc
+ 688              	.LFE132:
+ 690              		.section	.text.exti_software_interrupt_enable,"ax",%progbits
+ 691              		.align	1
+ 692              		.global	exti_software_interrupt_enable
+ 693              		.syntax unified
+ 694              		.thumb
+ 695              		.thumb_func
+ 696              		.fpu softvfp
+ 698              	exti_software_interrupt_enable:
+ 699              	.LFB133:
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      enable EXTI software interrupt event
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_software_interrupt_enable(exti_line_enum linex)
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 700              		.loc 1 214 1
+ 701              		.cfi_startproc
+ 702              		@ args = 0, pretend = 0, frame = 8
+ 703              		@ frame_needed = 1, uses_anonymous_args = 0
+ 704              		@ link register save eliminated.
+ 705 0000 80B4     		push	{r7}
+ 706              		.cfi_def_cfa_offset 4
+ 707              		.cfi_offset 7, -4
+ 708 0002 83B0     		sub	sp, sp, #12
+ 709              		.cfi_def_cfa_offset 16
+ 710 0004 00AF     		add	r7, sp, #0
+ 711              		.cfi_def_cfa_register 7
+ 712 0006 7860     		str	r0, [r7, #4]
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_SWIEV |= (uint32_t)linex;
+ 713              		.loc 1 215 16
+ 714 0008 054B     		ldr	r3, .L46
+ 715 000a 1A68     		ldr	r2, [r3]
+ 716 000c 0449     		ldr	r1, .L46
+ 717 000e 7B68     		ldr	r3, [r7, #4]
+ 718 0010 1343     		orrs	r3, r3, r2
+ 719 0012 0B60     		str	r3, [r1]
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 720              		.loc 1 216 1
+ 721 0014 00BF     		nop
+ 722 0016 0C37     		adds	r7, r7, #12
+ 723              		.cfi_def_cfa_offset 4
+ 724 0018 BD46     		mov	sp, r7
+ 725              		.cfi_def_cfa_register 13
+ 726              		@ sp needed
+ 727 001a 80BC     		pop	{r7}
+ 728              		.cfi_restore 7
+ 729              		.cfi_def_cfa_offset 0
+ 730 001c 7047     		bx	lr
+ 731              	.L47:
+ 732 001e 00BF     		.align	2
+ 733              	.L46:
+ 734 0020 103C0140 		.word	1073822736
+ 735              		.cfi_endproc
+ 736              	.LFE133:
+ 738              		.section	.text.exti_software_interrupt_disable,"ax",%progbits
+ 739              		.align	1
+ 740              		.global	exti_software_interrupt_disable
+ 741              		.syntax unified
+ 742              		.thumb
+ 743              		.thumb_func
+ 744              		.fpu softvfp
+ 746              	exti_software_interrupt_disable:
+ 747              	.LFB134:
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** 
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** /*!
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \brief      disable EXTI software interrupt event
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[in]  linex: EXTI line number, refer to exti_line_enum
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****                 only one parameter can be selected which is shown as below:
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****       \arg        EXTI_x (x=0..22): EXTI line x
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \param[out] none
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     \retval     none
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** */
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** void exti_software_interrupt_disable(exti_line_enum linex)
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** {
+ 748              		.loc 1 227 1
+ 749              		.cfi_startproc
+ 750              		@ args = 0, pretend = 0, frame = 8
+ 751              		@ frame_needed = 1, uses_anonymous_args = 0
+ 752              		@ link register save eliminated.
+ 753 0000 80B4     		push	{r7}
+ 754              		.cfi_def_cfa_offset 4
+ 755              		.cfi_offset 7, -4
+ 756 0002 83B0     		sub	sp, sp, #12
+ 757              		.cfi_def_cfa_offset 16
+ 758 0004 00AF     		add	r7, sp, #0
+ 759              		.cfi_def_cfa_register 7
+ 760 0006 7860     		str	r0, [r7, #4]
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c ****     EXTI_SWIEV &= ~(uint32_t)linex;
+ 761              		.loc 1 228 16
+ 762 0008 054B     		ldr	r3, .L49
+ 763 000a 1A68     		ldr	r2, [r3]
+ 764              		.loc 1 228 19
+ 765 000c 7B68     		ldr	r3, [r7, #4]
+ 766 000e DB43     		mvns	r3, r3
+ 767              		.loc 1 228 16
+ 768 0010 0349     		ldr	r1, .L49
+ 769 0012 1340     		ands	r3, r3, r2
+ 770 0014 0B60     		str	r3, [r1]
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_exti.c **** }
+ 771              		.loc 1 229 1
+ 772 0016 00BF     		nop
+ 773 0018 0C37     		adds	r7, r7, #12
+ 774              		.cfi_def_cfa_offset 4
+ 775 001a BD46     		mov	sp, r7
+ 776              		.cfi_def_cfa_register 13
+ 777              		@ sp needed
+ 778 001c 80BC     		pop	{r7}
+ 779              		.cfi_restore 7
+ 780              		.cfi_def_cfa_offset 0
+ 781 001e 7047     		bx	lr
+ 782              	.L50:
+ 783              		.align	2
+ 784              	.L49:
+ 785 0020 103C0140 		.word	1073822736
+ 786              		.cfi_endproc
+ 787              	.LFE134:
+ 789              		.text
+ 790              	.Letext0:
+ 791              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 792              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 793              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 794              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 795              		.file 6 "../../CMSIS/gd32f4xx.h"
+ 796              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_exti.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_exti.c
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:16     .text.exti_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:24     .text.exti_deinit:00000000 exti_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:74     .text.exti_deinit:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:83     .text.exti_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:90     .text.exti_init:00000000 exti_init
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:265    .text.exti_init:000000e4 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:273    .text.exti_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:280    .text.exti_interrupt_enable:00000000 exti_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:316    .text.exti_interrupt_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:321    .text.exti_event_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:328    .text.exti_event_enable:00000000 exti_event_enable
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:364    .text.exti_event_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:369    .text.exti_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:376    .text.exti_interrupt_disable:00000000 exti_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:415    .text.exti_interrupt_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:420    .text.exti_event_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:427    .text.exti_event_disable:00000000 exti_event_disable
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:466    .text.exti_event_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:471    .text.exti_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:478    .text.exti_flag_get:00000000 exti_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:523    .text.exti_flag_get:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:528    .text.exti_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:535    .text.exti_flag_clear:00000000 exti_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:569    .text.exti_flag_clear:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:574    .text.exti_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:581    .text.exti_interrupt_flag_get:00000000 exti_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:639    .text.exti_interrupt_flag_get:00000038 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:645    .text.exti_interrupt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:652    .text.exti_interrupt_flag_clear:00000000 exti_interrupt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:686    .text.exti_interrupt_flag_clear:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:691    .text.exti_software_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:698    .text.exti_software_interrupt_enable:00000000 exti_software_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:734    .text.exti_software_interrupt_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:739    .text.exti_software_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:746    .text.exti_software_interrupt_disable:00000000 exti_software_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccpWJOt5.s:785    .text.exti_software_interrupt_disable:00000020 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_exti.h.18.af63b84b16854ecbfe1d6e8fdf8682ec
+
+NO UNDEFINED SYMBOLS

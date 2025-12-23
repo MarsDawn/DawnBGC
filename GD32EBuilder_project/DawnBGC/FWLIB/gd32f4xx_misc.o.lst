@@ -1,0 +1,730 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_misc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.nvic_priority_group_set,"ax",%progbits
+  16              		.align	1
+  17              		.global	nvic_priority_group_set
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	nvic_priority_group_set:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_misc.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \file  gd32f4xx_misc.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \brief MISC driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** #include "gd32f4xx_misc.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \brief      set the priority group
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  nvic_prigroup: the NVIC priority group
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        NVIC_PRIGROUP_PRE0_SUB4:0 bits for pre-emption priority 4 bits for subpriority
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        NVIC_PRIGROUP_PRE1_SUB3:1 bits for pre-emption priority 3 bits for subpriority
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        NVIC_PRIGROUP_PRE2_SUB2:2 bits for pre-emption priority 2 bits for subpriority
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        NVIC_PRIGROUP_PRE3_SUB1:3 bits for pre-emption priority 1 bits for subpriority
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        NVIC_PRIGROUP_PRE4_SUB0:4 bits for pre-emption priority 0 bits for subpriority
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[out] none
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \retval     none
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** void nvic_priority_group_set(uint32_t nvic_prigroup)
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** {
+  27              		.loc 1 26 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 80B4     		push	{r7}
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 7, -4
+  35 0002 83B0     		sub	sp, sp, #12
+  36              		.cfi_def_cfa_offset 16
+  37 0004 00AF     		add	r7, sp, #0
+  38              		.cfi_def_cfa_register 7
+  39 0006 7860     		str	r0, [r7, #4]
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     /* set the priority group value */
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     SCB->AIRCR = NVIC_AIRCR_VECTKEY_MASK | nvic_prigroup;
+  40              		.loc 1 28 8
+  41 0008 054A     		ldr	r2, .L2
+  42              		.loc 1 28 42
+  43 000a 7B68     		ldr	r3, [r7, #4]
+  44 000c 43F0BF63 		orr	r3, r3, #100139008
+  45 0010 43F40033 		orr	r3, r3, #131072
+  46              		.loc 1 28 16
+  47 0014 D360     		str	r3, [r2, #12]
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** }
+  48              		.loc 1 29 1
+  49 0016 00BF     		nop
+  50 0018 0C37     		adds	r7, r7, #12
+  51              		.cfi_def_cfa_offset 4
+  52 001a BD46     		mov	sp, r7
+  53              		.cfi_def_cfa_register 13
+  54              		@ sp needed
+  55 001c 80BC     		pop	{r7}
+  56              		.cfi_restore 7
+  57              		.cfi_def_cfa_offset 0
+  58 001e 7047     		bx	lr
+  59              	.L3:
+  60              		.align	2
+  61              	.L2:
+  62 0020 00ED00E0 		.word	-536810240
+  63              		.cfi_endproc
+  64              	.LFE123:
+  66              		.section	.text.nvic_irq_enable,"ax",%progbits
+  67              		.align	1
+  68              		.global	nvic_irq_enable
+  69              		.syntax unified
+  70              		.thumb
+  71              		.thumb_func
+  72              		.fpu softvfp
+  74              	nvic_irq_enable:
+  75              	.LFB124:
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*!
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \brief      enable NVIC request
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  nvic_irq: the NVIC interrupt request, detailed in IRQn_Type
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  nvic_irq_pre_priority: the pre-emption priority needed to set
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  nvic_irq_sub_priority: the subpriority needed to set
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[out] none
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \retval     none
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** void nvic_irq_enable(uint8_t nvic_irq, uint8_t nvic_irq_pre_priority, 
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****                      uint8_t nvic_irq_sub_priority)
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** {
+  76              		.loc 1 41 1
+  77              		.cfi_startproc
+  78              		@ args = 0, pretend = 0, frame = 24
+  79              		@ frame_needed = 1, uses_anonymous_args = 0
+  80              		@ link register save eliminated.
+  81 0000 80B4     		push	{r7}
+  82              		.cfi_def_cfa_offset 4
+  83              		.cfi_offset 7, -4
+  84 0002 87B0     		sub	sp, sp, #28
+  85              		.cfi_def_cfa_offset 32
+  86 0004 00AF     		add	r7, sp, #0
+  87              		.cfi_def_cfa_register 7
+  88 0006 0346     		mov	r3, r0
+  89 0008 FB71     		strb	r3, [r7, #7]
+  90 000a 0B46     		mov	r3, r1
+  91 000c BB71     		strb	r3, [r7, #6]
+  92 000e 1346     		mov	r3, r2
+  93 0010 7B71     		strb	r3, [r7, #5]
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     uint32_t temp_priority = 0x00U, temp_pre = 0x00U, temp_sub = 0x00U;
+  94              		.loc 1 42 14
+  95 0012 0023     		movs	r3, #0
+  96 0014 FB60     		str	r3, [r7, #12]
+  97              		.loc 1 42 37
+  98 0016 0023     		movs	r3, #0
+  99 0018 7B61     		str	r3, [r7, #20]
+ 100              		.loc 1 42 55
+ 101 001a 0023     		movs	r3, #0
+ 102 001c 3B61     		str	r3, [r7, #16]
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     /* use the priority group value to get the temp_pre and the temp_sub */
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     if(((SCB->AIRCR) & (uint32_t)0x700U)==NVIC_PRIGROUP_PRE0_SUB4){
+ 103              		.loc 1 44 13
+ 104 001e 354B     		ldr	r3, .L10
+ 105 0020 DB68     		ldr	r3, [r3, #12]
+ 106              		.loc 1 44 22
+ 107 0022 03F4E063 		and	r3, r3, #1792
+ 108              		.loc 1 44 7
+ 109 0026 B3F5E06F 		cmp	r3, #1792
+ 110 002a 04D1     		bne	.L5
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_pre=0U;
+ 111              		.loc 1 45 17
+ 112 002c 0023     		movs	r3, #0
+ 113 002e 7B61     		str	r3, [r7, #20]
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_sub=0x4U;
+ 114              		.loc 1 46 17
+ 115 0030 0423     		movs	r3, #4
+ 116 0032 3B61     		str	r3, [r7, #16]
+ 117 0034 2EE0     		b	.L6
+ 118              	.L5:
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700U)==NVIC_PRIGROUP_PRE1_SUB3){
+ 119              		.loc 1 47 19
+ 120 0036 2F4B     		ldr	r3, .L10
+ 121 0038 DB68     		ldr	r3, [r3, #12]
+ 122              		.loc 1 47 28
+ 123 003a 03F4E063 		and	r3, r3, #1792
+ 124              		.loc 1 47 13
+ 125 003e B3F5C06F 		cmp	r3, #1536
+ 126 0042 04D1     		bne	.L7
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_pre=1U;
+ 127              		.loc 1 48 17
+ 128 0044 0123     		movs	r3, #1
+ 129 0046 7B61     		str	r3, [r7, #20]
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_sub=0x3U;
+ 130              		.loc 1 49 17
+ 131 0048 0323     		movs	r3, #3
+ 132 004a 3B61     		str	r3, [r7, #16]
+ 133 004c 22E0     		b	.L6
+ 134              	.L7:
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700U)==NVIC_PRIGROUP_PRE2_SUB2){
+ 135              		.loc 1 50 19
+ 136 004e 294B     		ldr	r3, .L10
+ 137 0050 DB68     		ldr	r3, [r3, #12]
+ 138              		.loc 1 50 28
+ 139 0052 03F4E063 		and	r3, r3, #1792
+ 140              		.loc 1 50 13
+ 141 0056 B3F5A06F 		cmp	r3, #1280
+ 142 005a 04D1     		bne	.L8
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_pre=2U;
+ 143              		.loc 1 51 17
+ 144 005c 0223     		movs	r3, #2
+ 145 005e 7B61     		str	r3, [r7, #20]
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_sub=0x2U;
+ 146              		.loc 1 52 17
+ 147 0060 0223     		movs	r3, #2
+ 148 0062 3B61     		str	r3, [r7, #16]
+ 149 0064 16E0     		b	.L6
+ 150              	.L8:
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700U)==NVIC_PRIGROUP_PRE3_SUB1){
+ 151              		.loc 1 53 19
+ 152 0066 234B     		ldr	r3, .L10
+ 153 0068 DB68     		ldr	r3, [r3, #12]
+ 154              		.loc 1 53 28
+ 155 006a 03F4E063 		and	r3, r3, #1792
+ 156              		.loc 1 53 13
+ 157 006e B3F5806F 		cmp	r3, #1024
+ 158 0072 04D1     		bne	.L9
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_pre=3U;
+ 159              		.loc 1 54 17
+ 160 0074 0323     		movs	r3, #3
+ 161 0076 7B61     		str	r3, [r7, #20]
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_sub=0x1U;
+ 162              		.loc 1 55 17
+ 163 0078 0123     		movs	r3, #1
+ 164 007a 3B61     		str	r3, [r7, #16]
+ 165 007c 0AE0     		b	.L6
+ 166              	.L9:
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }else if(((SCB->AIRCR) & (uint32_t)0x700U)==NVIC_PRIGROUP_PRE4_SUB0){
+ 167              		.loc 1 56 19
+ 168 007e 1D4B     		ldr	r3, .L10
+ 169 0080 DB68     		ldr	r3, [r3, #12]
+ 170              		.loc 1 56 28
+ 171 0082 03F4E063 		and	r3, r3, #1792
+ 172              		.loc 1 56 13
+ 173 0086 B3F5407F 		cmp	r3, #768
+ 174 008a 03D1     		bne	.L6
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_pre=4U;
+ 175              		.loc 1 57 17
+ 176 008c 0423     		movs	r3, #4
+ 177 008e 7B61     		str	r3, [r7, #20]
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         temp_sub=0x0U;
+ 178              		.loc 1 58 17
+ 179 0090 0023     		movs	r3, #0
+ 180 0092 3B61     		str	r3, [r7, #16]
+ 181              	.L6:
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }else{
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     /* get the temp_priority to fill the NVIC->IP register */
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     temp_priority = (uint32_t)nvic_irq_pre_priority << (0x4U - temp_pre);
+ 182              		.loc 1 62 21
+ 183 0094 BA79     		ldrb	r2, [r7, #6]	@ zero_extendqisi2
+ 184              		.loc 1 62 62
+ 185 0096 7B69     		ldr	r3, [r7, #20]
+ 186 0098 C3F10403 		rsb	r3, r3, #4
+ 187              		.loc 1 62 19
+ 188 009c 02FA03F3 		lsl	r3, r2, r3
+ 189 00a0 FB60     		str	r3, [r7, #12]
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     temp_priority |= nvic_irq_sub_priority &(0x0FU >> (0x4U - temp_sub));
+ 190              		.loc 1 63 44
+ 191 00a2 7A79     		ldrb	r2, [r7, #5]	@ zero_extendqisi2
+ 192              		.loc 1 63 61
+ 193 00a4 3B69     		ldr	r3, [r7, #16]
+ 194 00a6 C3F10403 		rsb	r3, r3, #4
+ 195              		.loc 1 63 52
+ 196 00aa 0F21     		movs	r1, #15
+ 197 00ac 21FA03F3 		lsr	r3, r1, r3
+ 198              		.loc 1 63 44
+ 199 00b0 1340     		ands	r3, r3, r2
+ 200              		.loc 1 63 19
+ 201 00b2 FA68     		ldr	r2, [r7, #12]
+ 202 00b4 1343     		orrs	r3, r3, r2
+ 203 00b6 FB60     		str	r3, [r7, #12]
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     temp_priority = temp_priority << 0x04U;
+ 204              		.loc 1 64 19
+ 205 00b8 FB68     		ldr	r3, [r7, #12]
+ 206 00ba 1B01     		lsls	r3, r3, #4
+ 207 00bc FB60     		str	r3, [r7, #12]
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     NVIC->IP[nvic_irq] = (uint8_t)temp_priority;
+ 208              		.loc 1 65 9
+ 209 00be 0E4A     		ldr	r2, .L10+4
+ 210              		.loc 1 65 13
+ 211 00c0 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 212              		.loc 1 65 26
+ 213 00c2 F968     		ldr	r1, [r7, #12]
+ 214 00c4 C9B2     		uxtb	r1, r1
+ 215              		.loc 1 65 24
+ 216 00c6 1344     		add	r3, r3, r2
+ 217 00c8 0A46     		mov	r2, r1
+ 218 00ca 83F80023 		strb	r2, [r3, #768]
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     /* enable the selected IRQ */
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     NVIC->ISER[nvic_irq >> 0x05U] = (uint32_t)0x01U << (nvic_irq & (uint8_t)0x1FU);
+ 219              		.loc 1 67 66
+ 220 00ce FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 221 00d0 03F01F03 		and	r3, r3, #31
+ 222              		.loc 1 67 9
+ 223 00d4 0849     		ldr	r1, .L10+4
+ 224              		.loc 1 67 25
+ 225 00d6 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 226 00d8 5209     		lsrs	r2, r2, #5
+ 227 00da D2B2     		uxtb	r2, r2
+ 228 00dc 1046     		mov	r0, r2
+ 229              		.loc 1 67 53
+ 230 00de 0122     		movs	r2, #1
+ 231 00e0 02FA03F3 		lsl	r3, r2, r3
+ 232              		.loc 1 67 35
+ 233 00e4 41F82030 		str	r3, [r1, r0, lsl #2]
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** }
+ 234              		.loc 1 68 1
+ 235 00e8 00BF     		nop
+ 236 00ea 1C37     		adds	r7, r7, #28
+ 237              		.cfi_def_cfa_offset 4
+ 238 00ec BD46     		mov	sp, r7
+ 239              		.cfi_def_cfa_register 13
+ 240              		@ sp needed
+ 241 00ee 80BC     		pop	{r7}
+ 242              		.cfi_restore 7
+ 243              		.cfi_def_cfa_offset 0
+ 244 00f0 7047     		bx	lr
+ 245              	.L11:
+ 246 00f2 00BF     		.align	2
+ 247              	.L10:
+ 248 00f4 00ED00E0 		.word	-536810240
+ 249 00f8 00E100E0 		.word	-536813312
+ 250              		.cfi_endproc
+ 251              	.LFE124:
+ 253              		.section	.text.nvic_irq_disable,"ax",%progbits
+ 254              		.align	1
+ 255              		.global	nvic_irq_disable
+ 256              		.syntax unified
+ 257              		.thumb
+ 258              		.thumb_func
+ 259              		.fpu softvfp
+ 261              	nvic_irq_disable:
+ 262              	.LFB125:
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*!
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \brief      disable NVIC request
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  nvic_irq: the NVIC interrupt request, detailed in IRQn_Type
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[out] none
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \retval     none
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** void nvic_irq_disable(uint8_t nvic_irq)
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** {
+ 263              		.loc 1 77 1
+ 264              		.cfi_startproc
+ 265              		@ args = 0, pretend = 0, frame = 8
+ 266              		@ frame_needed = 1, uses_anonymous_args = 0
+ 267              		@ link register save eliminated.
+ 268 0000 80B4     		push	{r7}
+ 269              		.cfi_def_cfa_offset 4
+ 270              		.cfi_offset 7, -4
+ 271 0002 83B0     		sub	sp, sp, #12
+ 272              		.cfi_def_cfa_offset 16
+ 273 0004 00AF     		add	r7, sp, #0
+ 274              		.cfi_def_cfa_register 7
+ 275 0006 0346     		mov	r3, r0
+ 276 0008 FB71     		strb	r3, [r7, #7]
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     /* disable the selected IRQ.*/
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     NVIC->ICER[nvic_irq >> 0x05] = (uint32_t)0x01 << (nvic_irq & (uint8_t)0x1F);
+ 277              		.loc 1 79 64
+ 278 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 279 000c 03F01F03 		and	r3, r3, #31
+ 280              		.loc 1 79 9
+ 281 0010 0749     		ldr	r1, .L13
+ 282              		.loc 1 79 25
+ 283 0012 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 284 0014 5209     		lsrs	r2, r2, #5
+ 285 0016 D2B2     		uxtb	r2, r2
+ 286 0018 1046     		mov	r0, r2
+ 287              		.loc 1 79 51
+ 288 001a 0122     		movs	r2, #1
+ 289 001c 9A40     		lsls	r2, r2, r3
+ 290              		.loc 1 79 34
+ 291 001e 00F12003 		add	r3, r0, #32
+ 292 0022 41F82320 		str	r2, [r1, r3, lsl #2]
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** }
+ 293              		.loc 1 80 1
+ 294 0026 00BF     		nop
+ 295 0028 0C37     		adds	r7, r7, #12
+ 296              		.cfi_def_cfa_offset 4
+ 297 002a BD46     		mov	sp, r7
+ 298              		.cfi_def_cfa_register 13
+ 299              		@ sp needed
+ 300 002c 80BC     		pop	{r7}
+ 301              		.cfi_restore 7
+ 302              		.cfi_def_cfa_offset 0
+ 303 002e 7047     		bx	lr
+ 304              	.L14:
+ 305              		.align	2
+ 306              	.L13:
+ 307 0030 00E100E0 		.word	-536813312
+ 308              		.cfi_endproc
+ 309              	.LFE125:
+ 311              		.section	.text.nvic_vector_table_set,"ax",%progbits
+ 312              		.align	1
+ 313              		.global	nvic_vector_table_set
+ 314              		.syntax unified
+ 315              		.thumb
+ 316              		.thumb_func
+ 317              		.fpu softvfp
+ 319              	nvic_vector_table_set:
+ 320              	.LFB126:
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*!
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \brief      set the NVIC vector table base address
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  nvic_vict_tab: the RAM or FLASH base address
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        NVIC_VECTTAB_RAM: RAM base address
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \are        NVIC_VECTTAB_FLASH: Flash base address
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  offset: Vector Table offset
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[out] none
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \retval     none
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** void nvic_vector_table_set(uint32_t nvic_vict_tab, uint32_t offset)
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** {
+ 321              		.loc 1 92 1
+ 322              		.cfi_startproc
+ 323              		@ args = 0, pretend = 0, frame = 8
+ 324              		@ frame_needed = 1, uses_anonymous_args = 0
+ 325              		@ link register save eliminated.
+ 326 0000 80B4     		push	{r7}
+ 327              		.cfi_def_cfa_offset 4
+ 328              		.cfi_offset 7, -4
+ 329 0002 83B0     		sub	sp, sp, #12
+ 330              		.cfi_def_cfa_offset 16
+ 331 0004 00AF     		add	r7, sp, #0
+ 332              		.cfi_def_cfa_register 7
+ 333 0006 7860     		str	r0, [r7, #4]
+ 334 0008 3960     		str	r1, [r7]
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     SCB->VTOR = nvic_vict_tab | (offset & NVIC_VECTTAB_OFFSET_MASK);
+ 335              		.loc 1 93 41
+ 336 000a 3B68     		ldr	r3, [r7]
+ 337 000c 23F06043 		bic	r3, r3, #-536870912
+ 338 0010 23F07F03 		bic	r3, r3, #127
+ 339              		.loc 1 93 8
+ 340 0014 0449     		ldr	r1, .L16
+ 341              		.loc 1 93 31
+ 342 0016 7A68     		ldr	r2, [r7, #4]
+ 343 0018 1343     		orrs	r3, r3, r2
+ 344              		.loc 1 93 15
+ 345 001a 8B60     		str	r3, [r1, #8]
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** }
+ 346              		.loc 1 94 1
+ 347 001c 00BF     		nop
+ 348 001e 0C37     		adds	r7, r7, #12
+ 349              		.cfi_def_cfa_offset 4
+ 350 0020 BD46     		mov	sp, r7
+ 351              		.cfi_def_cfa_register 13
+ 352              		@ sp needed
+ 353 0022 80BC     		pop	{r7}
+ 354              		.cfi_restore 7
+ 355              		.cfi_def_cfa_offset 0
+ 356 0024 7047     		bx	lr
+ 357              	.L17:
+ 358 0026 00BF     		.align	2
+ 359              	.L16:
+ 360 0028 00ED00E0 		.word	-536810240
+ 361              		.cfi_endproc
+ 362              	.LFE126:
+ 364              		.section	.text.system_lowpower_set,"ax",%progbits
+ 365              		.align	1
+ 366              		.global	system_lowpower_set
+ 367              		.syntax unified
+ 368              		.thumb
+ 369              		.thumb_func
+ 370              		.fpu softvfp
+ 372              	system_lowpower_set:
+ 373              	.LFB127:
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*!
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \brief      set the state of the low power mode
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  lowpower_mode: the low power mode state
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        SCB_LPM_SLEEP_EXIT_ISR: if chose this para, the system always enter low power 
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****                     mode by exiting from ISR
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        SCB_LPM_DEEPSLEEP: if chose this para, the system will enter the DEEPSLEEP mode
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        SCB_LPM_WAKE_BY_ALL_INT: if chose this para, the lowpower mode can be woke up 
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****                     by all the enable and disable interrupts
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[out] none
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \retval     none
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** void system_lowpower_set(uint8_t lowpower_mode)
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** {
+ 374              		.loc 1 108 1
+ 375              		.cfi_startproc
+ 376              		@ args = 0, pretend = 0, frame = 8
+ 377              		@ frame_needed = 1, uses_anonymous_args = 0
+ 378              		@ link register save eliminated.
+ 379 0000 80B4     		push	{r7}
+ 380              		.cfi_def_cfa_offset 4
+ 381              		.cfi_offset 7, -4
+ 382 0002 83B0     		sub	sp, sp, #12
+ 383              		.cfi_def_cfa_offset 16
+ 384 0004 00AF     		add	r7, sp, #0
+ 385              		.cfi_def_cfa_register 7
+ 386 0006 0346     		mov	r3, r0
+ 387 0008 FB71     		strb	r3, [r7, #7]
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     SCB->SCR |= (uint32_t)lowpower_mode;
+ 388              		.loc 1 109 14
+ 389 000a 054B     		ldr	r3, .L19
+ 390 000c 1A69     		ldr	r2, [r3, #16]
+ 391              		.loc 1 109 17
+ 392 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 393              		.loc 1 109 14
+ 394 0010 0349     		ldr	r1, .L19
+ 395 0012 1343     		orrs	r3, r3, r2
+ 396 0014 0B61     		str	r3, [r1, #16]
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** }
+ 397              		.loc 1 110 1
+ 398 0016 00BF     		nop
+ 399 0018 0C37     		adds	r7, r7, #12
+ 400              		.cfi_def_cfa_offset 4
+ 401 001a BD46     		mov	sp, r7
+ 402              		.cfi_def_cfa_register 13
+ 403              		@ sp needed
+ 404 001c 80BC     		pop	{r7}
+ 405              		.cfi_restore 7
+ 406              		.cfi_def_cfa_offset 0
+ 407 001e 7047     		bx	lr
+ 408              	.L20:
+ 409              		.align	2
+ 410              	.L19:
+ 411 0020 00ED00E0 		.word	-536810240
+ 412              		.cfi_endproc
+ 413              	.LFE127:
+ 415              		.section	.text.system_lowpower_reset,"ax",%progbits
+ 416              		.align	1
+ 417              		.global	system_lowpower_reset
+ 418              		.syntax unified
+ 419              		.thumb
+ 420              		.thumb_func
+ 421              		.fpu softvfp
+ 423              	system_lowpower_reset:
+ 424              	.LFB128:
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*!
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \brief      reset the state of the low power mode
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  lowpower_mode: the low power mode state
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        SCB_LPM_SLEEP_EXIT_ISR: if chose this para, the system will exit low power 
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****                     mode by exiting from ISR
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        SCB_LPM_DEEPSLEEP: if chose this para, the system will enter the SLEEP mode
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        SCB_LPM_WAKE_BY_ALL_INT: if chose this para, the lowpower mode only can be 
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****                     woke up by the enable interrupts
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[out] none
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \retval     none
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** void system_lowpower_reset(uint8_t lowpower_mode)
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** {
+ 425              		.loc 1 124 1
+ 426              		.cfi_startproc
+ 427              		@ args = 0, pretend = 0, frame = 8
+ 428              		@ frame_needed = 1, uses_anonymous_args = 0
+ 429              		@ link register save eliminated.
+ 430 0000 80B4     		push	{r7}
+ 431              		.cfi_def_cfa_offset 4
+ 432              		.cfi_offset 7, -4
+ 433 0002 83B0     		sub	sp, sp, #12
+ 434              		.cfi_def_cfa_offset 16
+ 435 0004 00AF     		add	r7, sp, #0
+ 436              		.cfi_def_cfa_register 7
+ 437 0006 0346     		mov	r3, r0
+ 438 0008 FB71     		strb	r3, [r7, #7]
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     SCB->SCR &= (~(uint32_t)lowpower_mode);
+ 439              		.loc 1 125 14
+ 440 000a 064B     		ldr	r3, .L22
+ 441 000c 1A69     		ldr	r2, [r3, #16]
+ 442              		.loc 1 125 19
+ 443 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 444              		.loc 1 125 18
+ 445 0010 DB43     		mvns	r3, r3
+ 446              		.loc 1 125 14
+ 447 0012 0449     		ldr	r1, .L22
+ 448 0014 1340     		ands	r3, r3, r2
+ 449 0016 0B61     		str	r3, [r1, #16]
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** }
+ 450              		.loc 1 126 1
+ 451 0018 00BF     		nop
+ 452 001a 0C37     		adds	r7, r7, #12
+ 453              		.cfi_def_cfa_offset 4
+ 454 001c BD46     		mov	sp, r7
+ 455              		.cfi_def_cfa_register 13
+ 456              		@ sp needed
+ 457 001e 80BC     		pop	{r7}
+ 458              		.cfi_restore 7
+ 459              		.cfi_def_cfa_offset 0
+ 460 0020 7047     		bx	lr
+ 461              	.L23:
+ 462 0022 00BF     		.align	2
+ 463              	.L22:
+ 464 0024 00ED00E0 		.word	-536810240
+ 465              		.cfi_endproc
+ 466              	.LFE128:
+ 468              		.section	.text.systick_clksource_set,"ax",%progbits
+ 469              		.align	1
+ 470              		.global	systick_clksource_set
+ 471              		.syntax unified
+ 472              		.thumb
+ 473              		.thumb_func
+ 474              		.fpu softvfp
+ 476              	systick_clksource_set:
+ 477              	.LFB129:
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** /*!
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \brief      set the systick clock source
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[in]  systick_clksource: the systick clock source needed to choose
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        SYSTICK_CLKSOURCE_HCLK: systick clock source is from HCLK
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****       \arg        SYSTICK_CLKSOURCE_HCLK_DIV8: systick clock source is from HCLK/8
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \param[out] none
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     \retval     none
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** */
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** 
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** void systick_clksource_set(uint32_t systick_clksource)
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** {
+ 478              		.loc 1 138 1
+ 479              		.cfi_startproc
+ 480              		@ args = 0, pretend = 0, frame = 8
+ 481              		@ frame_needed = 1, uses_anonymous_args = 0
+ 482              		@ link register save eliminated.
+ 483 0000 80B4     		push	{r7}
+ 484              		.cfi_def_cfa_offset 4
+ 485              		.cfi_offset 7, -4
+ 486 0002 83B0     		sub	sp, sp, #12
+ 487              		.cfi_def_cfa_offset 16
+ 488 0004 00AF     		add	r7, sp, #0
+ 489              		.cfi_def_cfa_register 7
+ 490 0006 7860     		str	r0, [r7, #4]
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     if(SYSTICK_CLKSOURCE_HCLK == systick_clksource ){
+ 491              		.loc 1 139 7
+ 492 0008 7B68     		ldr	r3, [r7, #4]
+ 493 000a 042B     		cmp	r3, #4
+ 494 000c 06D1     		bne	.L25
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         /* set the systick clock source from HCLK */
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         SysTick->CTRL |= SYSTICK_CLKSOURCE_HCLK;
+ 495              		.loc 1 141 23
+ 496 000e 094B     		ldr	r3, .L28
+ 497 0010 1B68     		ldr	r3, [r3]
+ 498 0012 084A     		ldr	r2, .L28
+ 499 0014 43F00403 		orr	r3, r3, #4
+ 500 0018 1360     		str	r3, [r2]
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }else{
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         /* set the systick clock source from HCLK/8 */
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****         SysTick->CTRL &= SYSTICK_CLKSOURCE_HCLK_DIV8;
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c **** }
+ 501              		.loc 1 146 1
+ 502 001a 05E0     		b	.L27
+ 503              	.L25:
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_misc.c ****     }
+ 504              		.loc 1 144 23
+ 505 001c 054B     		ldr	r3, .L28
+ 506 001e 1B68     		ldr	r3, [r3]
+ 507 0020 044A     		ldr	r2, .L28
+ 508 0022 23F00403 		bic	r3, r3, #4
+ 509 0026 1360     		str	r3, [r2]
+ 510              	.L27:
+ 511              		.loc 1 146 1
+ 512 0028 00BF     		nop
+ 513 002a 0C37     		adds	r7, r7, #12
+ 514              		.cfi_def_cfa_offset 4
+ 515 002c BD46     		mov	sp, r7
+ 516              		.cfi_def_cfa_register 13
+ 517              		@ sp needed
+ 518 002e 80BC     		pop	{r7}
+ 519              		.cfi_restore 7
+ 520              		.cfi_def_cfa_offset 0
+ 521 0030 7047     		bx	lr
+ 522              	.L29:
+ 523 0032 00BF     		.align	2
+ 524              	.L28:
+ 525 0034 10E000E0 		.word	-536813552
+ 526              		.cfi_endproc
+ 527              	.LFE129:
+ 529              		.text
+ 530              	.Letext0:
+ 531              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 532              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 533              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 534              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_misc.c
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:16     .text.nvic_priority_group_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:24     .text.nvic_priority_group_set:00000000 nvic_priority_group_set
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:62     .text.nvic_priority_group_set:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:67     .text.nvic_irq_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:74     .text.nvic_irq_enable:00000000 nvic_irq_enable
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:248    .text.nvic_irq_enable:000000f4 $d
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:254    .text.nvic_irq_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:261    .text.nvic_irq_disable:00000000 nvic_irq_disable
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:307    .text.nvic_irq_disable:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:312    .text.nvic_vector_table_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:319    .text.nvic_vector_table_set:00000000 nvic_vector_table_set
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:360    .text.nvic_vector_table_set:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:365    .text.system_lowpower_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:372    .text.system_lowpower_set:00000000 system_lowpower_set
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:411    .text.system_lowpower_set:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:416    .text.system_lowpower_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:423    .text.system_lowpower_reset:00000000 system_lowpower_reset
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:464    .text.system_lowpower_reset:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:469    .text.systick_clksource_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:476    .text.systick_clksource_set:00000000 systick_clksource_set
+C:\Users\leonardo\AppData\Local\Temp\cc7AoWcy.s:525    .text.systick_clksource_set:00000034 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.19.42152680e1284f5d6fbd8a6331e52ef7
+
+NO UNDEFINED SYMBOLS

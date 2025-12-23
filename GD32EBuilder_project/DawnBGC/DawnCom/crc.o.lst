@@ -1,0 +1,643 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"crc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	crc8_table
+  16              		.section	.data.crc8_table,"aw"
+  17              		.align	2
+  20              	crc8_table:
+  21 0000 00070E09 		.ascii	"\000\007\016\011\034\033\022\0258?61$#*-pw~ylkbeHOF"
+  21      1C1B1215 
+  21      383F3631 
+  21      24232A2D 
+  21      70777E79 
+  22 001b 4154535A 		.ascii	"ATSZ]\340\347\356\351\374\373\362\365\330\337\326\321"
+  22      5DE0E7EE 
+  22      E9FCFBF2 
+  22      F5D8DFD6 
+  22      D1
+  23 002c C4C3CACD 		.ascii	"\304\303\312\315\220\227\236\231\214\213\202\205\250"
+  23      90979E99 
+  23      8C8B8285 
+  23      A8
+  24 0039 AFA6A1B4 		.ascii	"\257\246\241\264\263\272\275\307\300\311\316\333\334"
+  24      B3BABDC7 
+  24      C0C9CEDB 
+  24      DC
+  25 0046 D5D2FFF8 		.ascii	"\325\322\377\370\361\366\343\344\355\352\267\260\271"
+  25      F1F6E3E4 
+  25      EDEAB7B0 
+  25      B9
+  26 0053 BEABACA5 		.ascii	"\276\253\254\245\242\217\210\201\206\223\224\235\232"
+  26      A28F8881 
+  26      8693949D 
+  26      9A
+  27 0060 2720292E 		.ascii	"' ).;<52\037\030\021\026\003\004\015\012WPY^KLEBoha"
+  27      3B3C3532 
+  27      1F181116 
+  27      03040D0A 
+  27      5750595E 
+  28 007b 6673747D 		.ascii	"fst}z\211\216\207\200\225\222\233\234\261\266\277\270"
+  28      7A898E87 
+  28      8095929B 
+  28      9CB1B6BF 
+  28      B8
+  29 008c ADAAA3A4 		.ascii	"\255\252\243\244\371\376\367\360\345\342\353\354\301"
+  29      F9FEF7F0 
+  29      E5E2EBEC 
+  29      C1
+  30 0099 C6CFC8DD 		.ascii	"\306\317\310\335\332\323\324ing`ur{|QV_XMJCD\031\036"
+  30      DAD3D469 
+  30      6E676075 
+  30      727B7C51 
+  30      565F584D 
+  31 00b2 17100502 		.ascii	"\027\020\005\002\013\014!&/(=:34NI@GRU\\[vqx\177jmd"
+  31      0B0C2126 
+  31      2F283D3A 
+  31      33344E49 
+  31      40475255 
+  32 00cf 633E3930 		.ascii	"c>907\"%,+\006\001\010\017\032\035\024\023\256\251\240"
+  32      3722252C 
+  32      2B060108 
+  32      0F1A1D14 
+  32      13AEA9A0 
+  33 00e3 A7B2B5BC 		.ascii	"\247\262\265\274\273\226\221\230\237\212\215\204\203"
+  33      BB969198 
+  33      9F8A8D84 
+  33      83
+  34 00f0 DED9D0D7 		.ascii	"\336\331\320\327\302\305\314\313\346\341\350\357\372"
+  34      C2C5CCCB 
+  34      E6E1E8EF 
+  34      FA
+  35 00fd FDF4F3   		.ascii	"\375\364\363"
+  36              		.global	crc16_high_table
+  37              		.section	.data.crc16_high_table,"aw"
+  38              		.align	2
+  41              	crc16_high_table:
+  42 0000 00C18140 		.ascii	"\000\301\201@\001\300\200A\001\300\200A\000\301\201"
+  42      01C08041 
+  42      01C08041 
+  42      00C181
+  43 000f 4001C080 		.ascii	"@\001\300\200A\000\301\201@\000\301\201@\001\300\200"
+  43      4100C181 
+  43      4000C181 
+  43      4001C080 
+  44 001f 4101C080 		.ascii	"A\001\300\200A\000\301\201@\000\301\201@\001\300\200"
+  44      4100C181 
+  44      4000C181 
+  44      4001C080 
+  45 002f 4100C181 		.ascii	"A\000\301\201@\001\300\200A\001\300\200A\000\301\201"
+  45      4001C080 
+  45      4101C080 
+  45      4100C181 
+  46 003f 4001C080 		.ascii	"@\001\300\200A\000\301\201@\000\301\201@\001\300\200"
+  46      4100C181 
+  46      4000C181 
+  46      4001C080 
+  47 004f 4100C181 		.ascii	"A\000\301\201@\001\300\200A\001\300\200A\000\301\201"
+  47      4001C080 
+  47      4101C080 
+  47      4100C181 
+  48 005f 4000C181 		.ascii	"@\000\301\201@\001\300\200A\001\300\200A\000\301\201"
+  48      4001C080 
+  48      4101C080 
+  48      4100C181 
+  49 006f 4001C080 		.ascii	"@\001\300\200A\000\301\201@\000\301\201@\001\300\200"
+  49      4100C181 
+  49      4000C181 
+  49      4001C080 
+  50 007f 4101C080 		.ascii	"A\001\300\200A\000\301\201@\000\301\201@\001\300\200"
+  50      4100C181 
+  50      4000C181 
+  50      4001C080 
+  51 008f 4100C181 		.ascii	"A\000\301\201@\001\300\200A\001\300\200A\000\301\201"
+  51      4001C080 
+  51      4101C080 
+  51      4100C181 
+  52 009f 4000C181 		.ascii	"@\000\301\201@\001\300\200A\001\300\200A\000\301\201"
+  52      4001C080 
+  52      4101C080 
+  52      4100C181 
+  53 00af 4001C080 		.ascii	"@\001\300\200A\000\301\201@\000\301\201@\001\300\200"
+  53      4100C181 
+  53      4000C181 
+  53      4001C080 
+  54 00bf 4100C181 		.ascii	"A\000\301\201@\001\300\200A\001\300\200A\000\301\201"
+  54      4001C080 
+  54      4101C080 
+  54      4100C181 
+  55 00cf 4001C080 		.ascii	"@\001\300\200A\000\301\201@\000\301\201@\001\300\200"
+  55      4100C181 
+  55      4000C181 
+  55      4001C080 
+  56 00df 4101C080 		.ascii	"A\001\300\200A\000\301\201@\000\301\201@\001\300\200"
+  56      4100C181 
+  56      4000C181 
+  56      4001C080 
+  57 00ef 4100C181 		.ascii	"A\000\301\201@\001\300\200A\001\300\200A\000\301\201"
+  57      4001C080 
+  57      4101C080 
+  57      4100C181 
+  58 00ff 40       		.ascii	"@"
+  59              		.global	crc16_low_table
+  60              		.section	.data.crc16_low_table,"aw"
+  61              		.align	2
+  64              	crc16_low_table:
+  65 0000 00C0C101 		.ascii	"\000\300\301\001\303\003\002\302\306\006\007\307\005"
+  65      C30302C2 
+  65      C60607C7 
+  65      05
+  66 000d C5C404CC 		.ascii	"\305\304\004\314\014\015\315\017\317\316\016\012\312"
+  66      0C0DCD0F 
+  66      CFCE0E0A 
+  66      CA
+  67 001a CB0BC909 		.ascii	"\313\013\311\011\010\310\330\030\031\331\033\333\332"
+  67      08C8D818 
+  67      19D91BDB 
+  67      DA
+  68 0027 1A1EDEDF 		.ascii	"\032\036\336\337\037\335\035\034\334\024\324\325\025"
+  68      1FDD1D1C 
+  68      DC14D4D5 
+  68      15
+  69 0034 D71716D6 		.ascii	"\327\027\026\326\322\022\023\323\021\321\320\020\360"
+  69      D21213D3 
+  69      11D1D010 
+  69      F0
+  70 0041 3031F133 		.ascii	"01\3613\363\36226\366\3677\36554\364<\374\375=\377?"
+  70      F3F23236 
+  70      F6F737F5 
+  70      3534F43C 
+  70      FCFD3DFF 
+  71 0056 3EFEFA3A 		.ascii	">\376\372:;\3739\371\3708(\350\351)\353+*\352\356./"
+  71      3BFB39F9 
+  71      F83828E8 
+  71      E929EB2B 
+  71      2AEAEE2E 
+  72 006b EF2DEDEC 		.ascii	"\357-\355\354,\344$%\345'\347\346&\"\342\343#\341! "
+  72      2CE42425 
+  72      E527E7E6 
+  72      2622E2E3 
+  72      23E12120 
+  73 007f E0A06061 		.ascii	"\340\240`a\241c\243\242bf\246\247g\245ed\244l\254\255"
+  73      A163A3A2 
+  73      6266A6A7 
+  73      67A56564 
+  73      A46CACAD 
+  74 0093 6DAF6F6E 		.ascii	"m\257on\256\252jk\253i\251\250hx\270\271y\273{z\272"
+  74      AEAA6A6B 
+  74      AB69A9A8 
+  74      6878B8B9 
+  74      79BB7B7A 
+  75 00a8 BE7E7FBF 		.ascii	"\276~\177\277}\275\274|\264tu\265w\267\266vr\262\263"
+  75      7DBDBC7C 
+  75      B47475B5 
+  75      77B7B676 
+  75      72B2B3
+  76 00bb 73B17170 		.ascii	"s\261qp\260P\220\221Q\223SR\222\226VW\227U\225\224T"
+  76      B0509091 
+  76      51935352 
+  76      92965657 
+  76      97559594 
+  77 00d0 9C5C5D9D 		.ascii	"\234\\]\235_\237\236^Z\232\233[\231YX\230\210HI\211"
+  77      5F9F9E5E 
+  77      5A9A9B5B 
+  77      99595898 
+  77      88484989 
+  78 00e4 4B8B8A4A 		.ascii	"K\213\212JN\216\217O\215ML\214D\204\205E\207GF\206\202"
+  78      4E8E8F4F 
+  78      8D4D4C8C 
+  78      44848545 
+  78      87474686 
+  79 00f9 42438341 		.ascii	"BC\203A\201\200@"
+  79      818040
+  80              		.section	.text.calc_crc8,"ax",%progbits
+  81              		.align	1
+  82              		.global	calc_crc8
+  83              		.arch armv7e-m
+  84              		.syntax unified
+  85              		.thumb
+  86              		.thumb_func
+  87              		.fpu softvfp
+  89              	calc_crc8:
+  90              	.LFB156:
+  91              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom/crc.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** uint8_t crc8_table[] =
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** {
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0x07, 0x0E, 0x09, 0x1C, 0x1B, 0x12, 0x15, 0x38, 0x3F,
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x36, 0x31, 0x24, 0x23, 0x2A, 0x2D, 0x70, 0x77, 0x7E, 0x79,
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x6C, 0x6B, 0x62, 0x65, 0x48, 0x4F, 0x46, 0x41, 0x54, 0x53,
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x5A, 0x5D, 0xE0, 0xE7, 0xEE, 0xE9, 0xFC, 0xFB, 0xF2, 0xF5,
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xD8, 0xDF, 0xD6, 0xD1, 0xC4, 0xC3, 0xCA, 0xCD, 0x90, 0x97,
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x9E, 0x99, 0x8C, 0x8B, 0x82, 0x85, 0xA8, 0xAF, 0xA6, 0xA1,
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xB4, 0xB3, 0xBA, 0xBD, 0xC7, 0xC0, 0xC9, 0xCE, 0xDB, 0xDC,
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xD5, 0xD2, 0xFF, 0xF8, 0xF1, 0xF6, 0xE3, 0xE4, 0xED, 0xEA,
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xB7, 0xB0, 0xB9, 0xBE, 0xAB, 0xAC, 0xA5, 0xA2, 0x8F, 0x88,
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x81, 0x86, 0x93, 0x94, 0x9D, 0x9A, 0x27, 0x20, 0x29, 0x2E,
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x3B, 0x3C, 0x35, 0x32, 0x1F, 0x18, 0x11, 0x16, 0x03, 0x04,
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x0D, 0x0A, 0x57, 0x50, 0x59, 0x5E, 0x4B, 0x4C, 0x45, 0x42,
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x6F, 0x68, 0x61, 0x66, 0x73, 0x74, 0x7D, 0x7A, 0x89, 0x8E,
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x87, 0x80, 0x95, 0x92, 0x9B, 0x9C, 0xB1, 0xB6, 0xBF, 0xB8,
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xAD, 0xAA, 0xA3, 0xA4, 0xF9, 0xFE, 0xF7, 0xF0, 0xE5, 0xE2,
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xEB, 0xEC, 0xC1, 0xC6, 0xCF, 0xC8, 0xDD, 0xDA, 0xD3, 0xD4,
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x69, 0x6E, 0x67, 0x60, 0x75, 0x72, 0x7B, 0x7C, 0x51, 0x56,
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x5F, 0x58, 0x4D, 0x4A, 0x43, 0x44, 0x19, 0x1E, 0x17, 0x10,
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x05, 0x02, 0x0B, 0x0C, 0x21, 0x26, 0x2F, 0x28, 0x3D, 0x3A,
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x33, 0x34, 0x4E, 0x49, 0x40, 0x47, 0x52, 0x55, 0x5C, 0x5B,
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x76, 0x71, 0x78, 0x7F, 0x6A, 0x6D, 0x64, 0x63, 0x3E, 0x39,
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x30, 0x37, 0x22, 0x25, 0x2C, 0x2B, 0x06, 0x01, 0x08, 0x0F,
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x1A, 0x1D, 0x14, 0x13, 0xAE, 0xA9, 0xA0, 0xA7, 0xB2, 0xB5,
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xBC, 0xBB, 0x96, 0x91, 0x98, 0x9F, 0x8A, 0x8D, 0x84, 0x83,
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xDE, 0xD9, 0xD0, 0xD7, 0xC2, 0xC5, 0xCC, 0xCB, 0xE6, 0xE1,
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xE8, 0xEF, 0xFA, 0xFD, 0xF4, 0xF3
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** };
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** uint8_t crc16_high_table[] =
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** {
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x80, 0x41, 0x00, 0xC1, 0x81, 0x40
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** };
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** uint8_t crc16_low_table[] =
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** {
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06,
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x07, 0xC7, 0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD,
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x0F, 0xCF, 0xCE, 0x0E, 0x0A, 0xCA, 0xCB, 0x0B, 0xC9, 0x09,
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x08, 0xC8, 0xD8, 0x18, 0x19, 0xD9, 0x1B, 0xDB, 0xDA, 0x1A,
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x1E, 0xDE, 0xDF, 0x1F, 0xDD, 0x1D, 0x1C, 0xDC, 0x14, 0xD4,
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xD5, 0x15, 0xD7, 0x17, 0x16, 0xD6, 0xD2, 0x12, 0x13, 0xD3,
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x11, 0xD1, 0xD0, 0x10, 0xF0, 0x30, 0x31, 0xF1, 0x33, 0xF3,
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xF2, 0x32, 0x36, 0xF6, 0xF7, 0x37, 0xF5, 0x35, 0x34, 0xF4,
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x3C, 0xFC, 0xFD, 0x3D, 0xFF, 0x3F, 0x3E, 0xFE, 0xFA, 0x3A,
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x3B, 0xFB, 0x39, 0xF9, 0xF8, 0x38, 0x28, 0xE8, 0xE9, 0x29,
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xEB, 0x2B, 0x2A, 0xEA, 0xEE, 0x2E, 0x2F, 0xEF, 0x2D, 0xED,
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xEC, 0x2C, 0xE4, 0x24, 0x25, 0xE5, 0x27, 0xE7, 0xE6, 0x26,
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x22, 0xE2, 0xE3, 0x23, 0xE1, 0x21, 0x20, 0xE0, 0xA0, 0x60,
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x61, 0xA1, 0x63, 0xA3, 0xA2, 0x62, 0x66, 0xA6, 0xA7, 0x67,
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0xA5, 0x65, 0x64, 0xA4, 0x6C, 0xAC, 0xAD, 0x6D, 0xAF, 0x6F,
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x6E, 0xAE, 0xAA, 0x6A, 0x6B, 0xAB, 0x69, 0xA9, 0xA8, 0x68,
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x78, 0xB8, 0xB9, 0x79, 0xBB, 0x7B, 0x7A, 0xBA, 0xBE, 0x7E,
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x7F, 0xBF, 0x7D, 0xBD, 0xBC, 0x7C, 0xB4, 0x74, 0x75, 0xB5,
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x77, 0xB7, 0xB6, 0x76, 0x72, 0xB2, 0xB3, 0x73, 0xB1, 0x71,
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x70, 0xB0, 0x50, 0x90, 0x91, 0x51, 0x93, 0x53, 0x52, 0x92,
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x96, 0x56, 0x57, 0x97, 0x55, 0x95, 0x94, 0x54, 0x9C, 0x5C,
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x5D, 0x9D, 0x5F, 0x9F, 0x9E, 0x5E, 0x5A, 0x9A, 0x9B, 0x5B,
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89, 0x4B, 0x8B,
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C,
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42,
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     0x43, 0x83, 0x41, 0x81, 0x80, 0x40
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** };
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** uint8_t calc_crc8(uint8_t *pbuf, uint16_t len)
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** {
+  92              		.loc 1 113 1
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 16
+  95              		@ frame_needed = 1, uses_anonymous_args = 0
+  96              		@ link register save eliminated.
+  97 0000 80B4     		push	{r7}
+  98              		.cfi_def_cfa_offset 4
+  99              		.cfi_offset 7, -4
+ 100 0002 85B0     		sub	sp, sp, #20
+ 101              		.cfi_def_cfa_offset 24
+ 102 0004 00AF     		add	r7, sp, #0
+ 103              		.cfi_def_cfa_register 7
+ 104 0006 7860     		str	r0, [r7, #4]
+ 105 0008 0B46     		mov	r3, r1
+ 106 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     uint8_t crc8 = 0x00;
+ 107              		.loc 1 114 13
+ 108 000c 0023     		movs	r3, #0
+ 109 000e FB73     		strb	r3, [r7, #15]
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     uint8_t index = 0;          
+ 110              		.loc 1 115 13
+ 111 0010 0023     		movs	r3, #0
+ 112 0012 BB73     		strb	r3, [r7, #14]
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** 
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     while(len--) 
+ 113              		.loc 1 117 10
+ 114 0014 0AE0     		b	.L2
+ 115              	.L3:
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     {
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****         index = crc8 ^ (*pbuf++); 
+ 116              		.loc 1 119 30
+ 117 0016 7B68     		ldr	r3, [r7, #4]
+ 118 0018 5A1C     		adds	r2, r3, #1
+ 119 001a 7A60     		str	r2, [r7, #4]
+ 120              		.loc 1 119 25
+ 121 001c 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 122              		.loc 1 119 15
+ 123 001e FB7B     		ldrb	r3, [r7, #15]
+ 124 0020 5340     		eors	r3, r3, r2
+ 125 0022 BB73     		strb	r3, [r7, #14]
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****         crc8 = crc8_table[index];
+ 126              		.loc 1 120 26
+ 127 0024 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 128              		.loc 1 120 14
+ 129 0026 074A     		ldr	r2, .L5
+ 130 0028 D35C     		ldrb	r3, [r2, r3]
+ 131 002a FB73     		strb	r3, [r7, #15]
+ 132              	.L2:
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     {
+ 133              		.loc 1 117 14
+ 134 002c 7B88     		ldrh	r3, [r7, #2]
+ 135 002e 5A1E     		subs	r2, r3, #1
+ 136 0030 7A80     		strh	r2, [r7, #2]	@ movhi
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     {
+ 137              		.loc 1 117 10
+ 138 0032 002B     		cmp	r3, #0
+ 139 0034 EFD1     		bne	.L3
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     }
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** 
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     return crc8;
+ 140              		.loc 1 123 12
+ 141 0036 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** }
+ 142              		.loc 1 124 1
+ 143 0038 1846     		mov	r0, r3
+ 144 003a 1437     		adds	r7, r7, #20
+ 145              		.cfi_def_cfa_offset 4
+ 146 003c BD46     		mov	sp, r7
+ 147              		.cfi_def_cfa_register 13
+ 148              		@ sp needed
+ 149 003e 80BC     		pop	{r7}
+ 150              		.cfi_restore 7
+ 151              		.cfi_def_cfa_offset 0
+ 152 0040 7047     		bx	lr
+ 153              	.L6:
+ 154 0042 00BF     		.align	2
+ 155              	.L5:
+ 156 0044 00000000 		.word	crc8_table
+ 157              		.cfi_endproc
+ 158              	.LFE156:
+ 160              		.section	.text.calc_crc16,"ax",%progbits
+ 161              		.align	1
+ 162              		.global	calc_crc16
+ 163              		.syntax unified
+ 164              		.thumb
+ 165              		.thumb_func
+ 166              		.fpu softvfp
+ 168              	calc_crc16:
+ 169              	.LFB157:
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** 
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** uint16_t calc_crc16(uint8_t *pbuf, uint16_t len)
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** {
+ 170              		.loc 1 127 1
+ 171              		.cfi_startproc
+ 172              		@ args = 0, pretend = 0, frame = 16
+ 173              		@ frame_needed = 1, uses_anonymous_args = 0
+ 174              		@ link register save eliminated.
+ 175 0000 80B4     		push	{r7}
+ 176              		.cfi_def_cfa_offset 4
+ 177              		.cfi_offset 7, -4
+ 178 0002 85B0     		sub	sp, sp, #20
+ 179              		.cfi_def_cfa_offset 24
+ 180 0004 00AF     		add	r7, sp, #0
+ 181              		.cfi_def_cfa_register 7
+ 182 0006 7860     		str	r0, [r7, #4]
+ 183 0008 0B46     		mov	r3, r1
+ 184 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     uint8_t crc16_high = 0xff;    
+ 185              		.loc 1 128 13
+ 186 000c FF23     		movs	r3, #255
+ 187 000e FB73     		strb	r3, [r7, #15]
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     uint8_t crc16_low = 0xff;     
+ 188              		.loc 1 129 13
+ 189 0010 FF23     		movs	r3, #255
+ 190 0012 BB73     		strb	r3, [r7, #14]
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     uint8_t index = 0;          
+ 191              		.loc 1 130 13
+ 192 0014 0023     		movs	r3, #0
+ 193 0016 7B73     		strb	r3, [r7, #13]
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** 
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     while(len--) 
+ 194              		.loc 1 132 10
+ 195 0018 10E0     		b	.L8
+ 196              	.L9:
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     {
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****         index = crc16_low ^ (*pbuf++); 
+ 197              		.loc 1 134 35
+ 198 001a 7B68     		ldr	r3, [r7, #4]
+ 199 001c 5A1C     		adds	r2, r3, #1
+ 200 001e 7A60     		str	r2, [r7, #4]
+ 201              		.loc 1 134 30
+ 202 0020 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 203              		.loc 1 134 15
+ 204 0022 BB7B     		ldrb	r3, [r7, #14]
+ 205 0024 5340     		eors	r3, r3, r2
+ 206 0026 7B73     		strb	r3, [r7, #13]
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****         crc16_low = crc16_high ^ crc16_high_table[index];
+ 207              		.loc 1 135 50
+ 208 0028 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 209 002a 0D4A     		ldr	r2, .L11
+ 210 002c D25C     		ldrb	r2, [r2, r3]	@ zero_extendqisi2
+ 211              		.loc 1 135 19
+ 212 002e FB7B     		ldrb	r3, [r7, #15]
+ 213 0030 5340     		eors	r3, r3, r2
+ 214 0032 BB73     		strb	r3, [r7, #14]
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****         crc16_high = crc16_low_table[index];
+ 215              		.loc 1 136 37
+ 216 0034 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
+ 217              		.loc 1 136 20
+ 218 0036 0B4A     		ldr	r2, .L11+4
+ 219 0038 D35C     		ldrb	r3, [r2, r3]
+ 220 003a FB73     		strb	r3, [r7, #15]
+ 221              	.L8:
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     {
+ 222              		.loc 1 132 14
+ 223 003c 7B88     		ldrh	r3, [r7, #2]
+ 224 003e 5A1E     		subs	r2, r3, #1
+ 225 0040 7A80     		strh	r2, [r7, #2]	@ movhi
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     {
+ 226              		.loc 1 132 10
+ 227 0042 002B     		cmp	r3, #0
+ 228 0044 E9D1     		bne	.L9
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     }
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** 
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c ****     return (crc16_high << 8 | crc16_low);
+ 229              		.loc 1 139 24
+ 230 0046 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 231 0048 1B02     		lsls	r3, r3, #8
+ 232              		.loc 1 139 29
+ 233 004a 1AB2     		sxth	r2, r3
+ 234 004c BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
+ 235 004e 1BB2     		sxth	r3, r3
+ 236 0050 1343     		orrs	r3, r3, r2
+ 237 0052 1BB2     		sxth	r3, r3
+ 238 0054 9BB2     		uxth	r3, r3
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnCom\crc.c **** }
+ 239              		.loc 1 140 1
+ 240 0056 1846     		mov	r0, r3
+ 241 0058 1437     		adds	r7, r7, #20
+ 242              		.cfi_def_cfa_offset 4
+ 243 005a BD46     		mov	sp, r7
+ 244              		.cfi_def_cfa_register 13
+ 245              		@ sp needed
+ 246 005c 80BC     		pop	{r7}
+ 247              		.cfi_restore 7
+ 248              		.cfi_def_cfa_offset 0
+ 249 005e 7047     		bx	lr
+ 250              	.L12:
+ 251              		.align	2
+ 252              	.L11:
+ 253 0060 00000000 		.word	crc16_high_table
+ 254 0064 00000000 		.word	crc16_low_table
+ 255              		.cfi_endproc
+ 256              	.LFE157:
+ 258              		.text
+ 259              	.Letext0:
+ 260              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 261              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 262              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 263              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 264              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 265              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 266              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 267              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 268              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 269              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 270              		.file 12 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 271              		.file 13 "../../Dawn/DawnLib/dawn_lib.h"
+ 272              		.file 14 "../../Dawn/DawnBsp/timebase.h"
+ 273              		.file 15 "../../Dawn/DawnCom/unpack.h"
+ 274              		.file 16 "../../Dawn/DawnDevice/icm206xx.h"
+ 275              		.file 17 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 276              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 277              		.file 19 "../../Dawn/DawnMain/dawn_function.h"
+ 278              		.file 20 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 crc.c
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:20     .data.crc8_table:00000000 crc8_table
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:17     .data.crc8_table:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:41     .data.crc16_high_table:00000000 crc16_high_table
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:38     .data.crc16_high_table:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:64     .data.crc16_low_table:00000000 crc16_low_table
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:61     .data.crc16_low_table:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:81     .text.calc_crc8:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:89     .text.calc_crc8:00000000 calc_crc8
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:156    .text.calc_crc8:00000044 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:161    .text.calc_crc16:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:168    .text.calc_crc16:00000000 calc_crc16
+C:\Users\leonardo\AppData\Local\Temp\ccnbxKZy.s:253    .text.calc_crc16:00000060 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,3095 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_sdio.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.sdio_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	sdio_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	sdio_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_sdio.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \file  gd32f4xx_sdio.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief SDIO driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     2016-08-15, V1.0.1, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** #include "gd32f4xx_sdio.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      deinitialize the SDIO
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+  27              		.loc 1 21 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     rcu_periph_reset_enable(RCU_SDIORST);
+  37              		.loc 1 22 5
+  38 0004 40F60B10 		movw	r0, #2315
+  39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     rcu_periph_reset_disable(RCU_SDIORST);
+  40              		.loc 1 23 5
+  41 000c 40F60B10 		movw	r0, #2315
+  42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+  43              		.loc 1 24 1
+  44 0014 00BF     		nop
+  45 0016 80BD     		pop	{r7, pc}
+  46              		.cfi_endproc
+  47              	.LFE123:
+  49              		.section	.text.sdio_clock_config,"ax",%progbits
+  50              		.align	1
+  51              		.global	sdio_clock_config
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	sdio_clock_config:
+  58              	.LFB124:
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      configure the SDIO clock
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  clock_edge: SDIO_CLK clock edge
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_SDIOCLKEDGE_RISING: select the rising edge of the SDIOCLK to generate SDIO_C
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_SDIOCLKEDGE_FALLING: select the falling edge of the SDIOCLK to generate SDIO
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  clock_bypass: clock bypass
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_CLOCKBYPASS_ENABLE: clock bypass
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_CLOCKBYPASS_DISABLE: no bypass
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  clock_powersave: SDIO_CLK clock dynamic switch on/off for power saving
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_CLOCKPWRSAVE_ENABLE: SDIO_CLK closed when bus is idle
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_CLOCKPWRSAVE_DISABLE: SDIO_CLK clock is always on
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  clock_division: clock division, less than 512
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_clock_config(uint32_t clock_edge, uint32_t clock_bypass, uint32_t clock_powersave, uint16
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+  59              		.loc 1 42 1
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 24
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 80B4     		push	{r7}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 7, -4
+  67 0002 87B0     		sub	sp, sp, #28
+  68              		.cfi_def_cfa_offset 32
+  69 0004 00AF     		add	r7, sp, #0
+  70              		.cfi_def_cfa_register 7
+  71 0006 F860     		str	r0, [r7, #12]
+  72 0008 B960     		str	r1, [r7, #8]
+  73 000a 7A60     		str	r2, [r7, #4]
+  74 000c 7B80     		strh	r3, [r7, #2]	@ movhi
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     uint32_t clock_config = 0U;
+  75              		.loc 1 43 14
+  76 000e 0023     		movs	r3, #0
+  77 0010 7B61     		str	r3, [r7, #20]
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     clock_config = SDIO_CLKCTL;
+  78              		.loc 1 44 20
+  79 0012 124B     		ldr	r3, .L4
+  80              		.loc 1 44 18
+  81 0014 1B68     		ldr	r3, [r3]
+  82 0016 7B61     		str	r3, [r7, #20]
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* reset the CLKEDGE, CLKBYP, CLKPWRSAV, DIV */
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     clock_config &= ~(SDIO_CLKCTL_CLKEDGE | SDIO_CLKCTL_CLKBYP | SDIO_CLKCTL_CLKPWRSAV | SDIO_CLKCT
+  83              		.loc 1 46 18
+  84 0018 7A69     		ldr	r2, [r7, #20]
+  85 001a 114B     		ldr	r3, .L4+4
+  86 001c 1340     		ands	r3, r3, r2
+  87 001e 7B61     		str	r3, [r7, #20]
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* if the clock division is greater or equal to 256, set the DIV[8] */
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     if(clock_division >= 256U){
+  88              		.loc 1 48 7
+  89 0020 7B88     		ldrh	r3, [r7, #2]
+  90 0022 FF2B     		cmp	r3, #255
+  91 0024 07D9     		bls	.L3
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         clock_config |= SDIO_CLKCTL_DIV8;
+  92              		.loc 1 49 22
+  93 0026 7B69     		ldr	r3, [r7, #20]
+  94 0028 43F00043 		orr	r3, r3, #-2147483648
+  95 002c 7B61     		str	r3, [r7, #20]
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         clock_division -= 256U;
+  96              		.loc 1 50 24
+  97 002e 7B88     		ldrh	r3, [r7, #2]	@ movhi
+  98 0030 A3F58073 		sub	r3, r3, #256
+  99 0034 7B80     		strh	r3, [r7, #2]	@ movhi
+ 100              	.L3:
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     }
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* configure the SDIO_CLKCTL according to the parameters */
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     clock_config |= (clock_edge | clock_bypass | clock_powersave | clock_division);
+ 101              		.loc 1 53 33
+ 102 0036 FA68     		ldr	r2, [r7, #12]
+ 103 0038 BB68     		ldr	r3, [r7, #8]
+ 104 003a 1A43     		orrs	r2, r2, r3
+ 105              		.loc 1 53 48
+ 106 003c 7B68     		ldr	r3, [r7, #4]
+ 107 003e 1A43     		orrs	r2, r2, r3
+ 108              		.loc 1 53 66
+ 109 0040 7B88     		ldrh	r3, [r7, #2]
+ 110 0042 1343     		orrs	r3, r3, r2
+ 111              		.loc 1 53 18
+ 112 0044 7A69     		ldr	r2, [r7, #20]
+ 113 0046 1343     		orrs	r3, r3, r2
+ 114 0048 7B61     		str	r3, [r7, #20]
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CLKCTL = clock_config;
+ 115              		.loc 1 54 5
+ 116 004a 044A     		ldr	r2, .L4
+ 117              		.loc 1 54 17
+ 118 004c 7B69     		ldr	r3, [r7, #20]
+ 119 004e 1360     		str	r3, [r2]
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 120              		.loc 1 55 1
+ 121 0050 00BF     		nop
+ 122 0052 1C37     		adds	r7, r7, #28
+ 123              		.cfi_def_cfa_offset 4
+ 124 0054 BD46     		mov	sp, r7
+ 125              		.cfi_def_cfa_register 13
+ 126              		@ sp needed
+ 127 0056 80BC     		pop	{r7}
+ 128              		.cfi_restore 7
+ 129              		.cfi_def_cfa_offset 0
+ 130 0058 7047     		bx	lr
+ 131              	.L5:
+ 132 005a 00BF     		.align	2
+ 133              	.L4:
+ 134 005c 042C0140 		.word	1073818628
+ 135 0060 00D9FF7F 		.word	2147473664
+ 136              		.cfi_endproc
+ 137              	.LFE124:
+ 139              		.section	.text.sdio_hardware_clock_enable,"ax",%progbits
+ 140              		.align	1
+ 141              		.global	sdio_hardware_clock_enable
+ 142              		.syntax unified
+ 143              		.thumb
+ 144              		.thumb_func
+ 145              		.fpu softvfp
+ 147              	sdio_hardware_clock_enable:
+ 148              	.LFB125:
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable hardware clock control
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_hardware_clock_enable(void)
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 149              		.loc 1 64 1
+ 150              		.cfi_startproc
+ 151              		@ args = 0, pretend = 0, frame = 0
+ 152              		@ frame_needed = 1, uses_anonymous_args = 0
+ 153              		@ link register save eliminated.
+ 154 0000 80B4     		push	{r7}
+ 155              		.cfi_def_cfa_offset 4
+ 156              		.cfi_offset 7, -4
+ 157 0002 00AF     		add	r7, sp, #0
+ 158              		.cfi_def_cfa_register 7
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CLKCTL |= SDIO_CLKCTL_HWCLKEN;
+ 159              		.loc 1 65 17
+ 160 0004 044B     		ldr	r3, .L7
+ 161 0006 1B68     		ldr	r3, [r3]
+ 162 0008 034A     		ldr	r2, .L7
+ 163 000a 43F48043 		orr	r3, r3, #16384
+ 164 000e 1360     		str	r3, [r2]
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 165              		.loc 1 66 1
+ 166 0010 00BF     		nop
+ 167 0012 BD46     		mov	sp, r7
+ 168              		.cfi_def_cfa_register 13
+ 169              		@ sp needed
+ 170 0014 80BC     		pop	{r7}
+ 171              		.cfi_restore 7
+ 172              		.cfi_def_cfa_offset 0
+ 173 0016 7047     		bx	lr
+ 174              	.L8:
+ 175              		.align	2
+ 176              	.L7:
+ 177 0018 042C0140 		.word	1073818628
+ 178              		.cfi_endproc
+ 179              	.LFE125:
+ 181              		.section	.text.sdio_hardware_clock_disable,"ax",%progbits
+ 182              		.align	1
+ 183              		.global	sdio_hardware_clock_disable
+ 184              		.syntax unified
+ 185              		.thumb
+ 186              		.thumb_func
+ 187              		.fpu softvfp
+ 189              	sdio_hardware_clock_disable:
+ 190              	.LFB126:
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable hardware clock control
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_hardware_clock_disable(void)
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 191              		.loc 1 75 1
+ 192              		.cfi_startproc
+ 193              		@ args = 0, pretend = 0, frame = 0
+ 194              		@ frame_needed = 1, uses_anonymous_args = 0
+ 195              		@ link register save eliminated.
+ 196 0000 80B4     		push	{r7}
+ 197              		.cfi_def_cfa_offset 4
+ 198              		.cfi_offset 7, -4
+ 199 0002 00AF     		add	r7, sp, #0
+ 200              		.cfi_def_cfa_register 7
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CLKCTL &= ~SDIO_CLKCTL_HWCLKEN;
+ 201              		.loc 1 76 17
+ 202 0004 044B     		ldr	r3, .L10
+ 203 0006 1B68     		ldr	r3, [r3]
+ 204 0008 034A     		ldr	r2, .L10
+ 205 000a 23F48043 		bic	r3, r3, #16384
+ 206 000e 1360     		str	r3, [r2]
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 207              		.loc 1 77 1
+ 208 0010 00BF     		nop
+ 209 0012 BD46     		mov	sp, r7
+ 210              		.cfi_def_cfa_register 13
+ 211              		@ sp needed
+ 212 0014 80BC     		pop	{r7}
+ 213              		.cfi_restore 7
+ 214              		.cfi_def_cfa_offset 0
+ 215 0016 7047     		bx	lr
+ 216              	.L11:
+ 217              		.align	2
+ 218              	.L10:
+ 219 0018 042C0140 		.word	1073818628
+ 220              		.cfi_endproc
+ 221              	.LFE126:
+ 223              		.section	.text.sdio_bus_mode_set,"ax",%progbits
+ 224              		.align	1
+ 225              		.global	sdio_bus_mode_set
+ 226              		.syntax unified
+ 227              		.thumb
+ 228              		.thumb_func
+ 229              		.fpu softvfp
+ 231              	sdio_bus_mode_set:
+ 232              	.LFB127:
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      set different SDIO card bus mode
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  bus_mode: SDIO card bus mode
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_BUSMODE_1BIT: 1-bit SDIO card bus mode
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_BUSMODE_4BIT: 4-bit SDIO card bus mode
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_BUSMODE_8BIT: 8-bit SDIO card bus mode
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_bus_mode_set(uint32_t bus_mode)
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 233              		.loc 1 89 1
+ 234              		.cfi_startproc
+ 235              		@ args = 0, pretend = 0, frame = 8
+ 236              		@ frame_needed = 1, uses_anonymous_args = 0
+ 237              		@ link register save eliminated.
+ 238 0000 80B4     		push	{r7}
+ 239              		.cfi_def_cfa_offset 4
+ 240              		.cfi_offset 7, -4
+ 241 0002 83B0     		sub	sp, sp, #12
+ 242              		.cfi_def_cfa_offset 16
+ 243 0004 00AF     		add	r7, sp, #0
+ 244              		.cfi_def_cfa_register 7
+ 245 0006 7860     		str	r0, [r7, #4]
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* reset the SDIO card bus mode bits and set according to bus_mode */
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CLKCTL &= ~SDIO_CLKCTL_BUSMODE;
+ 246              		.loc 1 91 17
+ 247 0008 084B     		ldr	r3, .L13
+ 248 000a 1B68     		ldr	r3, [r3]
+ 249 000c 074A     		ldr	r2, .L13
+ 250 000e 23F4C053 		bic	r3, r3, #6144
+ 251 0012 1360     		str	r3, [r2]
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CLKCTL |= bus_mode;
+ 252              		.loc 1 92 17
+ 253 0014 054B     		ldr	r3, .L13
+ 254 0016 1A68     		ldr	r2, [r3]
+ 255 0018 0449     		ldr	r1, .L13
+ 256 001a 7B68     		ldr	r3, [r7, #4]
+ 257 001c 1343     		orrs	r3, r3, r2
+ 258 001e 0B60     		str	r3, [r1]
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 259              		.loc 1 93 1
+ 260 0020 00BF     		nop
+ 261 0022 0C37     		adds	r7, r7, #12
+ 262              		.cfi_def_cfa_offset 4
+ 263 0024 BD46     		mov	sp, r7
+ 264              		.cfi_def_cfa_register 13
+ 265              		@ sp needed
+ 266 0026 80BC     		pop	{r7}
+ 267              		.cfi_restore 7
+ 268              		.cfi_def_cfa_offset 0
+ 269 0028 7047     		bx	lr
+ 270              	.L14:
+ 271 002a 00BF     		.align	2
+ 272              	.L13:
+ 273 002c 042C0140 		.word	1073818628
+ 274              		.cfi_endproc
+ 275              	.LFE127:
+ 277              		.section	.text.sdio_power_state_set,"ax",%progbits
+ 278              		.align	1
+ 279              		.global	sdio_power_state_set
+ 280              		.syntax unified
+ 281              		.thumb
+ 282              		.thumb_func
+ 283              		.fpu softvfp
+ 285              	sdio_power_state_set:
+ 286              	.LFB128:
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      set the SDIO power state
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  power_state: SDIO power state
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_POWER_ON: SDIO power on
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_POWER_OFF: SDIO power off
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_power_state_set(uint32_t power_state)
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 287              		.loc 1 104 1
+ 288              		.cfi_startproc
+ 289              		@ args = 0, pretend = 0, frame = 8
+ 290              		@ frame_needed = 1, uses_anonymous_args = 0
+ 291              		@ link register save eliminated.
+ 292 0000 80B4     		push	{r7}
+ 293              		.cfi_def_cfa_offset 4
+ 294              		.cfi_offset 7, -4
+ 295 0002 83B0     		sub	sp, sp, #12
+ 296              		.cfi_def_cfa_offset 16
+ 297 0004 00AF     		add	r7, sp, #0
+ 298              		.cfi_def_cfa_register 7
+ 299 0006 7860     		str	r0, [r7, #4]
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_PWRCTL = power_state;
+ 300              		.loc 1 105 5
+ 301 0008 034A     		ldr	r2, .L16
+ 302              		.loc 1 105 17
+ 303 000a 7B68     		ldr	r3, [r7, #4]
+ 304 000c 1360     		str	r3, [r2]
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 305              		.loc 1 106 1
+ 306 000e 00BF     		nop
+ 307 0010 0C37     		adds	r7, r7, #12
+ 308              		.cfi_def_cfa_offset 4
+ 309 0012 BD46     		mov	sp, r7
+ 310              		.cfi_def_cfa_register 13
+ 311              		@ sp needed
+ 312 0014 80BC     		pop	{r7}
+ 313              		.cfi_restore 7
+ 314              		.cfi_def_cfa_offset 0
+ 315 0016 7047     		bx	lr
+ 316              	.L17:
+ 317              		.align	2
+ 318              	.L16:
+ 319 0018 002C0140 		.word	1073818624
+ 320              		.cfi_endproc
+ 321              	.LFE128:
+ 323              		.section	.text.sdio_power_state_get,"ax",%progbits
+ 324              		.align	1
+ 325              		.global	sdio_power_state_get
+ 326              		.syntax unified
+ 327              		.thumb
+ 328              		.thumb_func
+ 329              		.fpu softvfp
+ 331              	sdio_power_state_get:
+ 332              	.LFB129:
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      get the SDIO power state
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     SDIO power state
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_POWER_ON: SDIO power on
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_POWER_OFF: SDIO power off
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** uint32_t sdio_power_state_get(void)
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 333              		.loc 1 117 1
+ 334              		.cfi_startproc
+ 335              		@ args = 0, pretend = 0, frame = 0
+ 336              		@ frame_needed = 1, uses_anonymous_args = 0
+ 337              		@ link register save eliminated.
+ 338 0000 80B4     		push	{r7}
+ 339              		.cfi_def_cfa_offset 4
+ 340              		.cfi_offset 7, -4
+ 341 0002 00AF     		add	r7, sp, #0
+ 342              		.cfi_def_cfa_register 7
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     return SDIO_PWRCTL;
+ 343              		.loc 1 118 12
+ 344 0004 024B     		ldr	r3, .L20
+ 345 0006 1B68     		ldr	r3, [r3]
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 346              		.loc 1 119 1
+ 347 0008 1846     		mov	r0, r3
+ 348 000a BD46     		mov	sp, r7
+ 349              		.cfi_def_cfa_register 13
+ 350              		@ sp needed
+ 351 000c 80BC     		pop	{r7}
+ 352              		.cfi_restore 7
+ 353              		.cfi_def_cfa_offset 0
+ 354 000e 7047     		bx	lr
+ 355              	.L21:
+ 356              		.align	2
+ 357              	.L20:
+ 358 0010 002C0140 		.word	1073818624
+ 359              		.cfi_endproc
+ 360              	.LFE129:
+ 362              		.section	.text.sdio_clock_enable,"ax",%progbits
+ 363              		.align	1
+ 364              		.global	sdio_clock_enable
+ 365              		.syntax unified
+ 366              		.thumb
+ 367              		.thumb_func
+ 368              		.fpu softvfp
+ 370              	sdio_clock_enable:
+ 371              	.LFB130:
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable SDIO_CLK clock output
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_clock_enable(void)
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 372              		.loc 1 128 1
+ 373              		.cfi_startproc
+ 374              		@ args = 0, pretend = 0, frame = 0
+ 375              		@ frame_needed = 1, uses_anonymous_args = 0
+ 376              		@ link register save eliminated.
+ 377 0000 80B4     		push	{r7}
+ 378              		.cfi_def_cfa_offset 4
+ 379              		.cfi_offset 7, -4
+ 380 0002 00AF     		add	r7, sp, #0
+ 381              		.cfi_def_cfa_register 7
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CLKCTL |= SDIO_CLKCTL_CLKEN;
+ 382              		.loc 1 129 17
+ 383 0004 044B     		ldr	r3, .L23
+ 384 0006 1B68     		ldr	r3, [r3]
+ 385 0008 034A     		ldr	r2, .L23
+ 386 000a 43F48073 		orr	r3, r3, #256
+ 387 000e 1360     		str	r3, [r2]
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 388              		.loc 1 130 1
+ 389 0010 00BF     		nop
+ 390 0012 BD46     		mov	sp, r7
+ 391              		.cfi_def_cfa_register 13
+ 392              		@ sp needed
+ 393 0014 80BC     		pop	{r7}
+ 394              		.cfi_restore 7
+ 395              		.cfi_def_cfa_offset 0
+ 396 0016 7047     		bx	lr
+ 397              	.L24:
+ 398              		.align	2
+ 399              	.L23:
+ 400 0018 042C0140 		.word	1073818628
+ 401              		.cfi_endproc
+ 402              	.LFE130:
+ 404              		.section	.text.sdio_clock_disable,"ax",%progbits
+ 405              		.align	1
+ 406              		.global	sdio_clock_disable
+ 407              		.syntax unified
+ 408              		.thumb
+ 409              		.thumb_func
+ 410              		.fpu softvfp
+ 412              	sdio_clock_disable:
+ 413              	.LFB131:
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable SDIO_CLK clock output
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_clock_disable(void)
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 414              		.loc 1 139 1
+ 415              		.cfi_startproc
+ 416              		@ args = 0, pretend = 0, frame = 0
+ 417              		@ frame_needed = 1, uses_anonymous_args = 0
+ 418              		@ link register save eliminated.
+ 419 0000 80B4     		push	{r7}
+ 420              		.cfi_def_cfa_offset 4
+ 421              		.cfi_offset 7, -4
+ 422 0002 00AF     		add	r7, sp, #0
+ 423              		.cfi_def_cfa_register 7
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CLKCTL &= ~SDIO_CLKCTL_CLKEN;
+ 424              		.loc 1 140 17
+ 425 0004 044B     		ldr	r3, .L26
+ 426 0006 1B68     		ldr	r3, [r3]
+ 427 0008 034A     		ldr	r2, .L26
+ 428 000a 23F48073 		bic	r3, r3, #256
+ 429 000e 1360     		str	r3, [r2]
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 430              		.loc 1 141 1
+ 431 0010 00BF     		nop
+ 432 0012 BD46     		mov	sp, r7
+ 433              		.cfi_def_cfa_register 13
+ 434              		@ sp needed
+ 435 0014 80BC     		pop	{r7}
+ 436              		.cfi_restore 7
+ 437              		.cfi_def_cfa_offset 0
+ 438 0016 7047     		bx	lr
+ 439              	.L27:
+ 440              		.align	2
+ 441              	.L26:
+ 442 0018 042C0140 		.word	1073818628
+ 443              		.cfi_endproc
+ 444              	.LFE131:
+ 446              		.section	.text.sdio_command_response_config,"ax",%progbits
+ 447              		.align	1
+ 448              		.global	sdio_command_response_config
+ 449              		.syntax unified
+ 450              		.thumb
+ 451              		.thumb_func
+ 452              		.fpu softvfp
+ 454              	sdio_command_response_config:
+ 455              	.LFB132:
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      configure the command and response
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  cmd_index: command index, refer to the related specifications
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  cmd_argument: command argument, refer to the related specifications
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  response_type: response type
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_RESPONSETYPE_NO: no response
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_RESPONSETYPE_SHORT: short response
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_RESPONSETYPE_LONG: long response
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_command_response_config(uint32_t cmd_index, uint32_t cmd_argument, uint32_t response_type
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 456              		.loc 1 155 1
+ 457              		.cfi_startproc
+ 458              		@ args = 0, pretend = 0, frame = 24
+ 459              		@ frame_needed = 1, uses_anonymous_args = 0
+ 460              		@ link register save eliminated.
+ 461 0000 80B4     		push	{r7}
+ 462              		.cfi_def_cfa_offset 4
+ 463              		.cfi_offset 7, -4
+ 464 0002 87B0     		sub	sp, sp, #28
+ 465              		.cfi_def_cfa_offset 32
+ 466 0004 00AF     		add	r7, sp, #0
+ 467              		.cfi_def_cfa_register 7
+ 468 0006 F860     		str	r0, [r7, #12]
+ 469 0008 B960     		str	r1, [r7, #8]
+ 470 000a 7A60     		str	r2, [r7, #4]
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     uint32_t cmd_config = 0U;
+ 471              		.loc 1 156 14
+ 472 000c 0023     		movs	r3, #0
+ 473 000e 7B61     		str	r3, [r7, #20]
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* reset the command index, command argument and response type */
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDAGMT &= ~SDIO_CMDAGMT_CMDAGMT;
+ 474              		.loc 1 158 18
+ 475 0010 0E4B     		ldr	r3, .L29
+ 476 0012 1B68     		ldr	r3, [r3]
+ 477 0014 0D4B     		ldr	r3, .L29
+ 478 0016 0022     		movs	r2, #0
+ 479 0018 1A60     		str	r2, [r3]
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDAGMT = cmd_argument;
+ 480              		.loc 1 159 5
+ 481 001a 0C4A     		ldr	r2, .L29
+ 482              		.loc 1 159 18
+ 483 001c BB68     		ldr	r3, [r7, #8]
+ 484 001e 1360     		str	r3, [r2]
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     cmd_config = SDIO_CMDCTL;
+ 485              		.loc 1 160 18
+ 486 0020 0B4B     		ldr	r3, .L29+4
+ 487              		.loc 1 160 16
+ 488 0022 1B68     		ldr	r3, [r3]
+ 489 0024 7B61     		str	r3, [r7, #20]
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     cmd_config &= ~(SDIO_CMDCTL_CMDIDX | SDIO_CMDCTL_CMDRESP);
+ 490              		.loc 1 161 16
+ 491 0026 7B69     		ldr	r3, [r7, #20]
+ 492 0028 23F0FF03 		bic	r3, r3, #255
+ 493 002c 7B61     		str	r3, [r7, #20]
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* configure SDIO_CMDCTL and SDIO_CMDAGMT according to the parameters */
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     cmd_config |= (cmd_index | response_type);
+ 494              		.loc 1 163 30
+ 495 002e FA68     		ldr	r2, [r7, #12]
+ 496 0030 7B68     		ldr	r3, [r7, #4]
+ 497 0032 1343     		orrs	r3, r3, r2
+ 498              		.loc 1 163 16
+ 499 0034 7A69     		ldr	r2, [r7, #20]
+ 500 0036 1343     		orrs	r3, r3, r2
+ 501 0038 7B61     		str	r3, [r7, #20]
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL = cmd_config;
+ 502              		.loc 1 164 5
+ 503 003a 054A     		ldr	r2, .L29+4
+ 504              		.loc 1 164 17
+ 505 003c 7B69     		ldr	r3, [r7, #20]
+ 506 003e 1360     		str	r3, [r2]
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 507              		.loc 1 165 1
+ 508 0040 00BF     		nop
+ 509 0042 1C37     		adds	r7, r7, #28
+ 510              		.cfi_def_cfa_offset 4
+ 511 0044 BD46     		mov	sp, r7
+ 512              		.cfi_def_cfa_register 13
+ 513              		@ sp needed
+ 514 0046 80BC     		pop	{r7}
+ 515              		.cfi_restore 7
+ 516              		.cfi_def_cfa_offset 0
+ 517 0048 7047     		bx	lr
+ 518              	.L30:
+ 519 004a 00BF     		.align	2
+ 520              	.L29:
+ 521 004c 082C0140 		.word	1073818632
+ 522 0050 0C2C0140 		.word	1073818636
+ 523              		.cfi_endproc
+ 524              	.LFE132:
+ 526              		.section	.text.sdio_wait_type_set,"ax",%progbits
+ 527              		.align	1
+ 528              		.global	sdio_wait_type_set
+ 529              		.syntax unified
+ 530              		.thumb
+ 531              		.thumb_func
+ 532              		.fpu softvfp
+ 534              	sdio_wait_type_set:
+ 535              	.LFB133:
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      set the command state machine wait type
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  wait_type: wait type
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_WAITTYPE_NO: not wait interrupt
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_WAITTYPE_INTERRUPT: wait interrupt
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_WAITTYPE_DATAEND: wait the end of data transfer
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_wait_type_set(uint32_t wait_type)
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 536              		.loc 1 177 1
+ 537              		.cfi_startproc
+ 538              		@ args = 0, pretend = 0, frame = 8
+ 539              		@ frame_needed = 1, uses_anonymous_args = 0
+ 540              		@ link register save eliminated.
+ 541 0000 80B4     		push	{r7}
+ 542              		.cfi_def_cfa_offset 4
+ 543              		.cfi_offset 7, -4
+ 544 0002 83B0     		sub	sp, sp, #12
+ 545              		.cfi_def_cfa_offset 16
+ 546 0004 00AF     		add	r7, sp, #0
+ 547              		.cfi_def_cfa_register 7
+ 548 0006 7860     		str	r0, [r7, #4]
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* reset INTWAIT and WAITDEND */
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL &= ~(SDIO_CMDCTL_INTWAIT | SDIO_CMDCTL_WAITDEND);
+ 549              		.loc 1 179 17
+ 550 0008 084B     		ldr	r3, .L32
+ 551 000a 1B68     		ldr	r3, [r3]
+ 552 000c 074A     		ldr	r2, .L32
+ 553 000e 23F44073 		bic	r3, r3, #768
+ 554 0012 1360     		str	r3, [r2]
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* set the wait type according to wait_type */
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL |= wait_type;
+ 555              		.loc 1 181 17
+ 556 0014 054B     		ldr	r3, .L32
+ 557 0016 1A68     		ldr	r2, [r3]
+ 558 0018 0449     		ldr	r1, .L32
+ 559 001a 7B68     		ldr	r3, [r7, #4]
+ 560 001c 1343     		orrs	r3, r3, r2
+ 561 001e 0B60     		str	r3, [r1]
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 562              		.loc 1 182 1
+ 563 0020 00BF     		nop
+ 564 0022 0C37     		adds	r7, r7, #12
+ 565              		.cfi_def_cfa_offset 4
+ 566 0024 BD46     		mov	sp, r7
+ 567              		.cfi_def_cfa_register 13
+ 568              		@ sp needed
+ 569 0026 80BC     		pop	{r7}
+ 570              		.cfi_restore 7
+ 571              		.cfi_def_cfa_offset 0
+ 572 0028 7047     		bx	lr
+ 573              	.L33:
+ 574 002a 00BF     		.align	2
+ 575              	.L32:
+ 576 002c 0C2C0140 		.word	1073818636
+ 577              		.cfi_endproc
+ 578              	.LFE133:
+ 580              		.section	.text.sdio_csm_enable,"ax",%progbits
+ 581              		.align	1
+ 582              		.global	sdio_csm_enable
+ 583              		.syntax unified
+ 584              		.thumb
+ 585              		.thumb_func
+ 586              		.fpu softvfp
+ 588              	sdio_csm_enable:
+ 589              	.LFB134:
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the CSM(command state machine)
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_csm_enable(void)
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 590              		.loc 1 191 1
+ 591              		.cfi_startproc
+ 592              		@ args = 0, pretend = 0, frame = 0
+ 593              		@ frame_needed = 1, uses_anonymous_args = 0
+ 594              		@ link register save eliminated.
+ 595 0000 80B4     		push	{r7}
+ 596              		.cfi_def_cfa_offset 4
+ 597              		.cfi_offset 7, -4
+ 598 0002 00AF     		add	r7, sp, #0
+ 599              		.cfi_def_cfa_register 7
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL |= SDIO_CMDCTL_CSMEN;
+ 600              		.loc 1 192 17
+ 601 0004 044B     		ldr	r3, .L35
+ 602 0006 1B68     		ldr	r3, [r3]
+ 603 0008 034A     		ldr	r2, .L35
+ 604 000a 43F48063 		orr	r3, r3, #1024
+ 605 000e 1360     		str	r3, [r2]
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 606              		.loc 1 193 1
+ 607 0010 00BF     		nop
+ 608 0012 BD46     		mov	sp, r7
+ 609              		.cfi_def_cfa_register 13
+ 610              		@ sp needed
+ 611 0014 80BC     		pop	{r7}
+ 612              		.cfi_restore 7
+ 613              		.cfi_def_cfa_offset 0
+ 614 0016 7047     		bx	lr
+ 615              	.L36:
+ 616              		.align	2
+ 617              	.L35:
+ 618 0018 0C2C0140 		.word	1073818636
+ 619              		.cfi_endproc
+ 620              	.LFE134:
+ 622              		.section	.text.sdio_csm_disable,"ax",%progbits
+ 623              		.align	1
+ 624              		.global	sdio_csm_disable
+ 625              		.syntax unified
+ 626              		.thumb
+ 627              		.thumb_func
+ 628              		.fpu softvfp
+ 630              	sdio_csm_disable:
+ 631              	.LFB135:
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the CSM(command state machine)
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_csm_disable(void)
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 632              		.loc 1 202 1
+ 633              		.cfi_startproc
+ 634              		@ args = 0, pretend = 0, frame = 0
+ 635              		@ frame_needed = 1, uses_anonymous_args = 0
+ 636              		@ link register save eliminated.
+ 637 0000 80B4     		push	{r7}
+ 638              		.cfi_def_cfa_offset 4
+ 639              		.cfi_offset 7, -4
+ 640 0002 00AF     		add	r7, sp, #0
+ 641              		.cfi_def_cfa_register 7
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL &= ~SDIO_CMDCTL_CSMEN;
+ 642              		.loc 1 203 17
+ 643 0004 044B     		ldr	r3, .L38
+ 644 0006 1B68     		ldr	r3, [r3]
+ 645 0008 034A     		ldr	r2, .L38
+ 646 000a 23F48063 		bic	r3, r3, #1024
+ 647 000e 1360     		str	r3, [r2]
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 648              		.loc 1 204 1
+ 649 0010 00BF     		nop
+ 650 0012 BD46     		mov	sp, r7
+ 651              		.cfi_def_cfa_register 13
+ 652              		@ sp needed
+ 653 0014 80BC     		pop	{r7}
+ 654              		.cfi_restore 7
+ 655              		.cfi_def_cfa_offset 0
+ 656 0016 7047     		bx	lr
+ 657              	.L39:
+ 658              		.align	2
+ 659              	.L38:
+ 660 0018 0C2C0140 		.word	1073818636
+ 661              		.cfi_endproc
+ 662              	.LFE135:
+ 664              		.section	.text.sdio_command_index_get,"ax",%progbits
+ 665              		.align	1
+ 666              		.global	sdio_command_index_get
+ 667              		.syntax unified
+ 668              		.thumb
+ 669              		.thumb_func
+ 670              		.fpu softvfp
+ 672              	sdio_command_index_get:
+ 673              	.LFB136:
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      get the last response command index
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     last response command index
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** uint8_t sdio_command_index_get(void)
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 674              		.loc 1 213 1
+ 675              		.cfi_startproc
+ 676              		@ args = 0, pretend = 0, frame = 0
+ 677              		@ frame_needed = 1, uses_anonymous_args = 0
+ 678              		@ link register save eliminated.
+ 679 0000 80B4     		push	{r7}
+ 680              		.cfi_def_cfa_offset 4
+ 681              		.cfi_offset 7, -4
+ 682 0002 00AF     		add	r7, sp, #0
+ 683              		.cfi_def_cfa_register 7
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     return (uint8_t)SDIO_RSPCMDIDX;
+ 684              		.loc 1 214 21
+ 685 0004 034B     		ldr	r3, .L42
+ 686 0006 1B68     		ldr	r3, [r3]
+ 687              		.loc 1 214 12
+ 688 0008 DBB2     		uxtb	r3, r3
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 689              		.loc 1 215 1
+ 690 000a 1846     		mov	r0, r3
+ 691 000c BD46     		mov	sp, r7
+ 692              		.cfi_def_cfa_register 13
+ 693              		@ sp needed
+ 694 000e 80BC     		pop	{r7}
+ 695              		.cfi_restore 7
+ 696              		.cfi_def_cfa_offset 0
+ 697 0010 7047     		bx	lr
+ 698              	.L43:
+ 699 0012 00BF     		.align	2
+ 700              	.L42:
+ 701 0014 102C0140 		.word	1073818640
+ 702              		.cfi_endproc
+ 703              	.LFE136:
+ 705              		.section	.text.sdio_response_get,"ax",%progbits
+ 706              		.align	1
+ 707              		.global	sdio_response_get
+ 708              		.syntax unified
+ 709              		.thumb
+ 710              		.thumb_func
+ 711              		.fpu softvfp
+ 713              	sdio_response_get:
+ 714              	.LFB137:
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      get the response for the last received command
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  sdio_responsex: SDIO response
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg       SDIO_RESPONSE0: card response[31:0]/card response[127:96]
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg       SDIO_RESPONSE1: card response[95:64]
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg       SDIO_RESPONSE2: card response[63:32]
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg       SDIO_RESPONSE3: card response[31:1], plus bit 0
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     response for the last received command
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** uint32_t sdio_response_get(uint32_t sdio_responsex)
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 715              		.loc 1 228 1
+ 716              		.cfi_startproc
+ 717              		@ args = 0, pretend = 0, frame = 16
+ 718              		@ frame_needed = 1, uses_anonymous_args = 0
+ 719              		@ link register save eliminated.
+ 720 0000 80B4     		push	{r7}
+ 721              		.cfi_def_cfa_offset 4
+ 722              		.cfi_offset 7, -4
+ 723 0002 85B0     		sub	sp, sp, #20
+ 724              		.cfi_def_cfa_offset 24
+ 725 0004 00AF     		add	r7, sp, #0
+ 726              		.cfi_def_cfa_register 7
+ 727 0006 7860     		str	r0, [r7, #4]
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     uint32_t resp_content = 0U;
+ 728              		.loc 1 229 14
+ 729 0008 0023     		movs	r3, #0
+ 730 000a FB60     		str	r3, [r7, #12]
+ 731 000c 7B68     		ldr	r3, [r7, #4]
+ 732 000e 032B     		cmp	r3, #3
+ 733 0010 1AD8     		bhi	.L53
+ 734 0012 01A2     		adr	r2, .L47
+ 735 0014 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 736              		.p2align 2
+ 737              	.L47:
+ 738 0018 29000000 		.word	.L50+1
+ 739 001c 31000000 		.word	.L49+1
+ 740 0020 39000000 		.word	.L48+1
+ 741 0024 41000000 		.word	.L46+1
+ 742              		.p2align 1
+ 743              	.L50:
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     switch(sdio_responsex){
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     case SDIO_RESPONSE0:
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         resp_content = SDIO_RESP0;
+ 744              		.loc 1 232 24
+ 745 0028 0B4B     		ldr	r3, .L54
+ 746              		.loc 1 232 22
+ 747 002a 1B68     		ldr	r3, [r3]
+ 748 002c FB60     		str	r3, [r7, #12]
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         break;
+ 749              		.loc 1 233 9
+ 750 002e 0CE0     		b	.L51
+ 751              	.L49:
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     case SDIO_RESPONSE1:
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         resp_content = SDIO_RESP1;
+ 752              		.loc 1 235 24
+ 753 0030 0A4B     		ldr	r3, .L54+4
+ 754              		.loc 1 235 22
+ 755 0032 1B68     		ldr	r3, [r3]
+ 756 0034 FB60     		str	r3, [r7, #12]
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         break;
+ 757              		.loc 1 236 9
+ 758 0036 08E0     		b	.L51
+ 759              	.L48:
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     case SDIO_RESPONSE2:
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         resp_content = SDIO_RESP2;
+ 760              		.loc 1 238 24
+ 761 0038 094B     		ldr	r3, .L54+8
+ 762              		.loc 1 238 22
+ 763 003a 1B68     		ldr	r3, [r3]
+ 764 003c FB60     		str	r3, [r7, #12]
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         break;
+ 765              		.loc 1 239 9
+ 766 003e 04E0     		b	.L51
+ 767              	.L46:
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     case SDIO_RESPONSE3:
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         resp_content = SDIO_RESP3;
+ 768              		.loc 1 241 24
+ 769 0040 084B     		ldr	r3, .L54+12
+ 770              		.loc 1 241 22
+ 771 0042 1B68     		ldr	r3, [r3]
+ 772 0044 FB60     		str	r3, [r7, #12]
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         break;
+ 773              		.loc 1 242 9
+ 774 0046 00E0     		b	.L51
+ 775              	.L53:
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     default:
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         break;
+ 776              		.loc 1 244 9
+ 777 0048 00BF     		nop
+ 778              	.L51:
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     }
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     return resp_content;
+ 779              		.loc 1 246 12
+ 780 004a FB68     		ldr	r3, [r7, #12]
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 781              		.loc 1 247 1
+ 782 004c 1846     		mov	r0, r3
+ 783 004e 1437     		adds	r7, r7, #20
+ 784              		.cfi_def_cfa_offset 4
+ 785 0050 BD46     		mov	sp, r7
+ 786              		.cfi_def_cfa_register 13
+ 787              		@ sp needed
+ 788 0052 80BC     		pop	{r7}
+ 789              		.cfi_restore 7
+ 790              		.cfi_def_cfa_offset 0
+ 791 0054 7047     		bx	lr
+ 792              	.L55:
+ 793 0056 00BF     		.align	2
+ 794              	.L54:
+ 795 0058 142C0140 		.word	1073818644
+ 796 005c 182C0140 		.word	1073818648
+ 797 0060 1C2C0140 		.word	1073818652
+ 798 0064 202C0140 		.word	1073818656
+ 799              		.cfi_endproc
+ 800              	.LFE137:
+ 802              		.section	.text.sdio_data_config,"ax",%progbits
+ 803              		.align	1
+ 804              		.global	sdio_data_config
+ 805              		.syntax unified
+ 806              		.thumb
+ 807              		.thumb_func
+ 808              		.fpu softvfp
+ 810              	sdio_data_config:
+ 811              	.LFB138:
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      configure the data timeout, data length and data block size
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  data_timeout: data timeout period in card bus clock periods
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  data_length: number of data bytes to be transferred
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  data_blocksize: size of data block for block transfer
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_1BYTE: block size = 1 byte
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_2BYTES: block size = 2 bytes
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_4BYTES: block size = 4 bytes
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_8BYTES: block size = 8 bytes
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_16BYTES: block size = 16 bytes
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_32BYTES: block size = 32 bytes
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_64BYTES: block size = 64 bytes
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_128BYTES: block size = 128 bytes
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_256BYTES: block size = 256 bytes
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_512BYTES: block size = 512 bytes
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_1024BYTES: block size = 1024 bytes
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_2048BYTES: block size = 2048 bytes
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_4096BYTES: block size = 4096 bytes
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_8192BYTES: block size = 8192 bytes
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_DATABLOCKSIZE_16384BYTES: block size = 16384 bytes
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_data_config(uint32_t data_timeout, uint32_t data_length, uint32_t data_blocksize)
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 812              		.loc 1 273 1
+ 813              		.cfi_startproc
+ 814              		@ args = 0, pretend = 0, frame = 16
+ 815              		@ frame_needed = 1, uses_anonymous_args = 0
+ 816              		@ link register save eliminated.
+ 817 0000 80B4     		push	{r7}
+ 818              		.cfi_def_cfa_offset 4
+ 819              		.cfi_offset 7, -4
+ 820 0002 85B0     		sub	sp, sp, #20
+ 821              		.cfi_def_cfa_offset 24
+ 822 0004 00AF     		add	r7, sp, #0
+ 823              		.cfi_def_cfa_register 7
+ 824 0006 F860     		str	r0, [r7, #12]
+ 825 0008 B960     		str	r1, [r7, #8]
+ 826 000a 7A60     		str	r2, [r7, #4]
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* reset data timeout, data length and data block size */
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATATO &= ~SDIO_DATATO_DATATO;
+ 827              		.loc 1 275 17
+ 828 000c 104B     		ldr	r3, .L57
+ 829 000e 1B68     		ldr	r3, [r3]
+ 830 0010 0F4B     		ldr	r3, .L57
+ 831 0012 0022     		movs	r2, #0
+ 832 0014 1A60     		str	r2, [r3]
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATALEN &= ~SDIO_DATALEN_DATALEN;
+ 833              		.loc 1 276 18
+ 834 0016 0F4B     		ldr	r3, .L57+4
+ 835 0018 1B68     		ldr	r3, [r3]
+ 836 001a 0E4A     		ldr	r2, .L57+4
+ 837 001c 03F07E43 		and	r3, r3, #-33554432
+ 838 0020 1360     		str	r3, [r2]
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL &= ~SDIO_DATACTL_BLKSZ;
+ 839              		.loc 1 277 18
+ 840 0022 0D4B     		ldr	r3, .L57+8
+ 841 0024 1B68     		ldr	r3, [r3]
+ 842 0026 0C4A     		ldr	r2, .L57+8
+ 843 0028 23F0F003 		bic	r3, r3, #240
+ 844 002c 1360     		str	r3, [r2]
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* configure the related parameters of data */
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATATO = data_timeout;
+ 845              		.loc 1 279 5
+ 846 002e 084A     		ldr	r2, .L57
+ 847              		.loc 1 279 17
+ 848 0030 FB68     		ldr	r3, [r7, #12]
+ 849 0032 1360     		str	r3, [r2]
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATALEN = data_length;
+ 850              		.loc 1 280 5
+ 851 0034 074A     		ldr	r2, .L57+4
+ 852              		.loc 1 280 18
+ 853 0036 BB68     		ldr	r3, [r7, #8]
+ 854 0038 1360     		str	r3, [r2]
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL |= data_blocksize;
+ 855              		.loc 1 281 18
+ 856 003a 074B     		ldr	r3, .L57+8
+ 857 003c 1A68     		ldr	r2, [r3]
+ 858 003e 0649     		ldr	r1, .L57+8
+ 859 0040 7B68     		ldr	r3, [r7, #4]
+ 860 0042 1343     		orrs	r3, r3, r2
+ 861 0044 0B60     		str	r3, [r1]
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 862              		.loc 1 282 1
+ 863 0046 00BF     		nop
+ 864 0048 1437     		adds	r7, r7, #20
+ 865              		.cfi_def_cfa_offset 4
+ 866 004a BD46     		mov	sp, r7
+ 867              		.cfi_def_cfa_register 13
+ 868              		@ sp needed
+ 869 004c 80BC     		pop	{r7}
+ 870              		.cfi_restore 7
+ 871              		.cfi_def_cfa_offset 0
+ 872 004e 7047     		bx	lr
+ 873              	.L58:
+ 874              		.align	2
+ 875              	.L57:
+ 876 0050 242C0140 		.word	1073818660
+ 877 0054 282C0140 		.word	1073818664
+ 878 0058 2C2C0140 		.word	1073818668
+ 879              		.cfi_endproc
+ 880              	.LFE138:
+ 882              		.section	.text.sdio_data_transfer_config,"ax",%progbits
+ 883              		.align	1
+ 884              		.global	sdio_data_transfer_config
+ 885              		.syntax unified
+ 886              		.thumb
+ 887              		.thumb_func
+ 888              		.fpu softvfp
+ 890              	sdio_data_transfer_config:
+ 891              	.LFB139:
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      configure the data transfer mode and direction
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  transfer_mode: mode of data transfer
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg       SDIO_TRANSMODE_BLOCK: block transfer
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg       SDIO_TRANSMODE_STREAM: stream transfer or SDIO multibyte transfer
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  transfer_direction: data transfer direction, read or write
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg       SDIO_TRANSDIRECTION_TOCARD: write data to card
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg       SDIO_TRANSDIRECTION_TOSDIO: read data from card
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_data_transfer_config(uint32_t transfer_mode, uint32_t transfer_direction)
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 892              		.loc 1 296 1
+ 893              		.cfi_startproc
+ 894              		@ args = 0, pretend = 0, frame = 16
+ 895              		@ frame_needed = 1, uses_anonymous_args = 0
+ 896              		@ link register save eliminated.
+ 897 0000 80B4     		push	{r7}
+ 898              		.cfi_def_cfa_offset 4
+ 899              		.cfi_offset 7, -4
+ 900 0002 85B0     		sub	sp, sp, #20
+ 901              		.cfi_def_cfa_offset 24
+ 902 0004 00AF     		add	r7, sp, #0
+ 903              		.cfi_def_cfa_register 7
+ 904 0006 7860     		str	r0, [r7, #4]
+ 905 0008 3960     		str	r1, [r7]
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     uint32_t data_trans = 0U;
+ 906              		.loc 1 297 14
+ 907 000a 0023     		movs	r3, #0
+ 908 000c FB60     		str	r3, [r7, #12]
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     /* reset the data transfer mode, transfer direction and set according to the parameters */
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     data_trans = SDIO_DATACTL;
+ 909              		.loc 1 299 18
+ 910 000e 0A4B     		ldr	r3, .L60
+ 911              		.loc 1 299 16
+ 912 0010 1B68     		ldr	r3, [r3]
+ 913 0012 FB60     		str	r3, [r7, #12]
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     data_trans &= ~(SDIO_DATACTL_TRANSMOD | SDIO_DATACTL_DATADIR);
+ 914              		.loc 1 300 16
+ 915 0014 FB68     		ldr	r3, [r7, #12]
+ 916 0016 23F00603 		bic	r3, r3, #6
+ 917 001a FB60     		str	r3, [r7, #12]
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     data_trans |= (transfer_mode | transfer_direction);
+ 918              		.loc 1 301 34
+ 919 001c 7A68     		ldr	r2, [r7, #4]
+ 920 001e 3B68     		ldr	r3, [r7]
+ 921 0020 1343     		orrs	r3, r3, r2
+ 922              		.loc 1 301 16
+ 923 0022 FA68     		ldr	r2, [r7, #12]
+ 924 0024 1343     		orrs	r3, r3, r2
+ 925 0026 FB60     		str	r3, [r7, #12]
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL = data_trans;
+ 926              		.loc 1 302 5
+ 927 0028 034A     		ldr	r2, .L60
+ 928              		.loc 1 302 18
+ 929 002a FB68     		ldr	r3, [r7, #12]
+ 930 002c 1360     		str	r3, [r2]
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 931              		.loc 1 303 1
+ 932 002e 00BF     		nop
+ 933 0030 1437     		adds	r7, r7, #20
+ 934              		.cfi_def_cfa_offset 4
+ 935 0032 BD46     		mov	sp, r7
+ 936              		.cfi_def_cfa_register 13
+ 937              		@ sp needed
+ 938 0034 80BC     		pop	{r7}
+ 939              		.cfi_restore 7
+ 940              		.cfi_def_cfa_offset 0
+ 941 0036 7047     		bx	lr
+ 942              	.L61:
+ 943              		.align	2
+ 944              	.L60:
+ 945 0038 2C2C0140 		.word	1073818668
+ 946              		.cfi_endproc
+ 947              	.LFE139:
+ 949              		.section	.text.sdio_dsm_enable,"ax",%progbits
+ 950              		.align	1
+ 951              		.global	sdio_dsm_enable
+ 952              		.syntax unified
+ 953              		.thumb
+ 954              		.thumb_func
+ 955              		.fpu softvfp
+ 957              	sdio_dsm_enable:
+ 958              	.LFB140:
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the DSM(data state machine) for data transfer
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_dsm_enable(void)
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 959              		.loc 1 312 1
+ 960              		.cfi_startproc
+ 961              		@ args = 0, pretend = 0, frame = 0
+ 962              		@ frame_needed = 1, uses_anonymous_args = 0
+ 963              		@ link register save eliminated.
+ 964 0000 80B4     		push	{r7}
+ 965              		.cfi_def_cfa_offset 4
+ 966              		.cfi_offset 7, -4
+ 967 0002 00AF     		add	r7, sp, #0
+ 968              		.cfi_def_cfa_register 7
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL |= SDIO_DATACTL_DATAEN;
+ 969              		.loc 1 313 18
+ 970 0004 044B     		ldr	r3, .L63
+ 971 0006 1B68     		ldr	r3, [r3]
+ 972 0008 034A     		ldr	r2, .L63
+ 973 000a 43F00103 		orr	r3, r3, #1
+ 974 000e 1360     		str	r3, [r2]
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 975              		.loc 1 314 1
+ 976 0010 00BF     		nop
+ 977 0012 BD46     		mov	sp, r7
+ 978              		.cfi_def_cfa_register 13
+ 979              		@ sp needed
+ 980 0014 80BC     		pop	{r7}
+ 981              		.cfi_restore 7
+ 982              		.cfi_def_cfa_offset 0
+ 983 0016 7047     		bx	lr
+ 984              	.L64:
+ 985              		.align	2
+ 986              	.L63:
+ 987 0018 2C2C0140 		.word	1073818668
+ 988              		.cfi_endproc
+ 989              	.LFE140:
+ 991              		.section	.text.sdio_dsm_disable,"ax",%progbits
+ 992              		.align	1
+ 993              		.global	sdio_dsm_disable
+ 994              		.syntax unified
+ 995              		.thumb
+ 996              		.thumb_func
+ 997              		.fpu softvfp
+ 999              	sdio_dsm_disable:
+ 1000              	.LFB141:
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the DSM(data state machine)
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_dsm_disable(void)
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1001              		.loc 1 323 1
+ 1002              		.cfi_startproc
+ 1003              		@ args = 0, pretend = 0, frame = 0
+ 1004              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1005              		@ link register save eliminated.
+ 1006 0000 80B4     		push	{r7}
+ 1007              		.cfi_def_cfa_offset 4
+ 1008              		.cfi_offset 7, -4
+ 1009 0002 00AF     		add	r7, sp, #0
+ 1010              		.cfi_def_cfa_register 7
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL &= ~SDIO_DATACTL_DATAEN;
+ 1011              		.loc 1 324 18
+ 1012 0004 044B     		ldr	r3, .L66
+ 1013 0006 1B68     		ldr	r3, [r3]
+ 1014 0008 034A     		ldr	r2, .L66
+ 1015 000a 23F00103 		bic	r3, r3, #1
+ 1016 000e 1360     		str	r3, [r2]
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1017              		.loc 1 325 1
+ 1018 0010 00BF     		nop
+ 1019 0012 BD46     		mov	sp, r7
+ 1020              		.cfi_def_cfa_register 13
+ 1021              		@ sp needed
+ 1022 0014 80BC     		pop	{r7}
+ 1023              		.cfi_restore 7
+ 1024              		.cfi_def_cfa_offset 0
+ 1025 0016 7047     		bx	lr
+ 1026              	.L67:
+ 1027              		.align	2
+ 1028              	.L66:
+ 1029 0018 2C2C0140 		.word	1073818668
+ 1030              		.cfi_endproc
+ 1031              	.LFE141:
+ 1033              		.section	.text.sdio_data_write,"ax",%progbits
+ 1034              		.align	1
+ 1035              		.global	sdio_data_write
+ 1036              		.syntax unified
+ 1037              		.thumb
+ 1038              		.thumb_func
+ 1039              		.fpu softvfp
+ 1041              	sdio_data_write:
+ 1042              	.LFB142:
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      write data(one word) to the transmit FIFO
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  data: 32-bit data write to card
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_data_write(uint32_t data)
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1043              		.loc 1 334 1
+ 1044              		.cfi_startproc
+ 1045              		@ args = 0, pretend = 0, frame = 8
+ 1046              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1047              		@ link register save eliminated.
+ 1048 0000 80B4     		push	{r7}
+ 1049              		.cfi_def_cfa_offset 4
+ 1050              		.cfi_offset 7, -4
+ 1051 0002 83B0     		sub	sp, sp, #12
+ 1052              		.cfi_def_cfa_offset 16
+ 1053 0004 00AF     		add	r7, sp, #0
+ 1054              		.cfi_def_cfa_register 7
+ 1055 0006 7860     		str	r0, [r7, #4]
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_FIFO = data;
+ 1056              		.loc 1 335 5
+ 1057 0008 034A     		ldr	r2, .L69
+ 1058              		.loc 1 335 15
+ 1059 000a 7B68     		ldr	r3, [r7, #4]
+ 1060 000c 1360     		str	r3, [r2]
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1061              		.loc 1 336 1
+ 1062 000e 00BF     		nop
+ 1063 0010 0C37     		adds	r7, r7, #12
+ 1064              		.cfi_def_cfa_offset 4
+ 1065 0012 BD46     		mov	sp, r7
+ 1066              		.cfi_def_cfa_register 13
+ 1067              		@ sp needed
+ 1068 0014 80BC     		pop	{r7}
+ 1069              		.cfi_restore 7
+ 1070              		.cfi_def_cfa_offset 0
+ 1071 0016 7047     		bx	lr
+ 1072              	.L70:
+ 1073              		.align	2
+ 1074              	.L69:
+ 1075 0018 802C0140 		.word	1073818752
+ 1076              		.cfi_endproc
+ 1077              	.LFE142:
+ 1079              		.section	.text.sdio_data_read,"ax",%progbits
+ 1080              		.align	1
+ 1081              		.global	sdio_data_read
+ 1082              		.syntax unified
+ 1083              		.thumb
+ 1084              		.thumb_func
+ 1085              		.fpu softvfp
+ 1087              	sdio_data_read:
+ 1088              	.LFB143:
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      read data(one word) from the receive FIFO
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     received data
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** uint32_t sdio_data_read(void)
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1089              		.loc 1 345 1
+ 1090              		.cfi_startproc
+ 1091              		@ args = 0, pretend = 0, frame = 0
+ 1092              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1093              		@ link register save eliminated.
+ 1094 0000 80B4     		push	{r7}
+ 1095              		.cfi_def_cfa_offset 4
+ 1096              		.cfi_offset 7, -4
+ 1097 0002 00AF     		add	r7, sp, #0
+ 1098              		.cfi_def_cfa_register 7
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     return SDIO_FIFO;
+ 1099              		.loc 1 346 12
+ 1100 0004 024B     		ldr	r3, .L73
+ 1101 0006 1B68     		ldr	r3, [r3]
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1102              		.loc 1 347 1
+ 1103 0008 1846     		mov	r0, r3
+ 1104 000a BD46     		mov	sp, r7
+ 1105              		.cfi_def_cfa_register 13
+ 1106              		@ sp needed
+ 1107 000c 80BC     		pop	{r7}
+ 1108              		.cfi_restore 7
+ 1109              		.cfi_def_cfa_offset 0
+ 1110 000e 7047     		bx	lr
+ 1111              	.L74:
+ 1112              		.align	2
+ 1113              	.L73:
+ 1114 0010 802C0140 		.word	1073818752
+ 1115              		.cfi_endproc
+ 1116              	.LFE143:
+ 1118              		.section	.text.sdio_data_counter_get,"ax",%progbits
+ 1119              		.align	1
+ 1120              		.global	sdio_data_counter_get
+ 1121              		.syntax unified
+ 1122              		.thumb
+ 1123              		.thumb_func
+ 1124              		.fpu softvfp
+ 1126              	sdio_data_counter_get:
+ 1127              	.LFB144:
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      get the number of remaining data bytes to be transferred to card
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     number of remaining data bytes to be transferred
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** uint32_t sdio_data_counter_get(void)
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1128              		.loc 1 356 1
+ 1129              		.cfi_startproc
+ 1130              		@ args = 0, pretend = 0, frame = 0
+ 1131              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1132              		@ link register save eliminated.
+ 1133 0000 80B4     		push	{r7}
+ 1134              		.cfi_def_cfa_offset 4
+ 1135              		.cfi_offset 7, -4
+ 1136 0002 00AF     		add	r7, sp, #0
+ 1137              		.cfi_def_cfa_register 7
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     return SDIO_DATACNT;
+ 1138              		.loc 1 357 12
+ 1139 0004 024B     		ldr	r3, .L77
+ 1140 0006 1B68     		ldr	r3, [r3]
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1141              		.loc 1 358 1
+ 1142 0008 1846     		mov	r0, r3
+ 1143 000a BD46     		mov	sp, r7
+ 1144              		.cfi_def_cfa_register 13
+ 1145              		@ sp needed
+ 1146 000c 80BC     		pop	{r7}
+ 1147              		.cfi_restore 7
+ 1148              		.cfi_def_cfa_offset 0
+ 1149 000e 7047     		bx	lr
+ 1150              	.L78:
+ 1151              		.align	2
+ 1152              	.L77:
+ 1153 0010 302C0140 		.word	1073818672
+ 1154              		.cfi_endproc
+ 1155              	.LFE144:
+ 1157              		.section	.text.sdio_fifo_counter_get,"ax",%progbits
+ 1158              		.align	1
+ 1159              		.global	sdio_fifo_counter_get
+ 1160              		.syntax unified
+ 1161              		.thumb
+ 1162              		.thumb_func
+ 1163              		.fpu softvfp
+ 1165              	sdio_fifo_counter_get:
+ 1166              	.LFB145:
+ 359:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      get the number of words remaining to be written or read from FIFO
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 363:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 364:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     remaining number of words
+ 365:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 366:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** uint32_t sdio_fifo_counter_get(void)
+ 367:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1167              		.loc 1 367 1
+ 1168              		.cfi_startproc
+ 1169              		@ args = 0, pretend = 0, frame = 0
+ 1170              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1171              		@ link register save eliminated.
+ 1172 0000 80B4     		push	{r7}
+ 1173              		.cfi_def_cfa_offset 4
+ 1174              		.cfi_offset 7, -4
+ 1175 0002 00AF     		add	r7, sp, #0
+ 1176              		.cfi_def_cfa_register 7
+ 368:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     return SDIO_FIFOCNT;
+ 1177              		.loc 1 368 12
+ 1178 0004 024B     		ldr	r3, .L81
+ 1179 0006 1B68     		ldr	r3, [r3]
+ 369:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1180              		.loc 1 369 1
+ 1181 0008 1846     		mov	r0, r3
+ 1182 000a BD46     		mov	sp, r7
+ 1183              		.cfi_def_cfa_register 13
+ 1184              		@ sp needed
+ 1185 000c 80BC     		pop	{r7}
+ 1186              		.cfi_restore 7
+ 1187              		.cfi_def_cfa_offset 0
+ 1188 000e 7047     		bx	lr
+ 1189              	.L82:
+ 1190              		.align	2
+ 1191              	.L81:
+ 1192 0010 482C0140 		.word	1073818696
+ 1193              		.cfi_endproc
+ 1194              	.LFE145:
+ 1196              		.section	.text.sdio_dma_enable,"ax",%progbits
+ 1197              		.align	1
+ 1198              		.global	sdio_dma_enable
+ 1199              		.syntax unified
+ 1200              		.thumb
+ 1201              		.thumb_func
+ 1202              		.fpu softvfp
+ 1204              	sdio_dma_enable:
+ 1205              	.LFB146:
+ 370:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 371:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 372:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the DMA request for SDIO
+ 373:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 374:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 375:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 376:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 377:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_dma_enable(void)
+ 378:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1206              		.loc 1 378 1
+ 1207              		.cfi_startproc
+ 1208              		@ args = 0, pretend = 0, frame = 0
+ 1209              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1210              		@ link register save eliminated.
+ 1211 0000 80B4     		push	{r7}
+ 1212              		.cfi_def_cfa_offset 4
+ 1213              		.cfi_offset 7, -4
+ 1214 0002 00AF     		add	r7, sp, #0
+ 1215              		.cfi_def_cfa_register 7
+ 379:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL |= SDIO_DATACTL_DMAEN;
+ 1216              		.loc 1 379 18
+ 1217 0004 044B     		ldr	r3, .L84
+ 1218 0006 1B68     		ldr	r3, [r3]
+ 1219 0008 034A     		ldr	r2, .L84
+ 1220 000a 43F00803 		orr	r3, r3, #8
+ 1221 000e 1360     		str	r3, [r2]
+ 380:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1222              		.loc 1 380 1
+ 1223 0010 00BF     		nop
+ 1224 0012 BD46     		mov	sp, r7
+ 1225              		.cfi_def_cfa_register 13
+ 1226              		@ sp needed
+ 1227 0014 80BC     		pop	{r7}
+ 1228              		.cfi_restore 7
+ 1229              		.cfi_def_cfa_offset 0
+ 1230 0016 7047     		bx	lr
+ 1231              	.L85:
+ 1232              		.align	2
+ 1233              	.L84:
+ 1234 0018 2C2C0140 		.word	1073818668
+ 1235              		.cfi_endproc
+ 1236              	.LFE146:
+ 1238              		.section	.text.sdio_dma_disable,"ax",%progbits
+ 1239              		.align	1
+ 1240              		.global	sdio_dma_disable
+ 1241              		.syntax unified
+ 1242              		.thumb
+ 1243              		.thumb_func
+ 1244              		.fpu softvfp
+ 1246              	sdio_dma_disable:
+ 1247              	.LFB147:
+ 381:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 382:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 383:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the DMA request for SDIO
+ 384:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 385:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 386:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 387:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 388:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_dma_disable(void)
+ 389:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1248              		.loc 1 389 1
+ 1249              		.cfi_startproc
+ 1250              		@ args = 0, pretend = 0, frame = 0
+ 1251              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1252              		@ link register save eliminated.
+ 1253 0000 80B4     		push	{r7}
+ 1254              		.cfi_def_cfa_offset 4
+ 1255              		.cfi_offset 7, -4
+ 1256 0002 00AF     		add	r7, sp, #0
+ 1257              		.cfi_def_cfa_register 7
+ 390:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL &= ~SDIO_DATACTL_DMAEN;
+ 1258              		.loc 1 390 18
+ 1259 0004 044B     		ldr	r3, .L87
+ 1260 0006 1B68     		ldr	r3, [r3]
+ 1261 0008 034A     		ldr	r2, .L87
+ 1262 000a 23F00803 		bic	r3, r3, #8
+ 1263 000e 1360     		str	r3, [r2]
+ 391:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1264              		.loc 1 391 1
+ 1265 0010 00BF     		nop
+ 1266 0012 BD46     		mov	sp, r7
+ 1267              		.cfi_def_cfa_register 13
+ 1268              		@ sp needed
+ 1269 0014 80BC     		pop	{r7}
+ 1270              		.cfi_restore 7
+ 1271              		.cfi_def_cfa_offset 0
+ 1272 0016 7047     		bx	lr
+ 1273              	.L88:
+ 1274              		.align	2
+ 1275              	.L87:
+ 1276 0018 2C2C0140 		.word	1073818668
+ 1277              		.cfi_endproc
+ 1278              	.LFE147:
+ 1280              		.section	.text.sdio_flag_get,"ax",%progbits
+ 1281              		.align	1
+ 1282              		.global	sdio_flag_get
+ 1283              		.syntax unified
+ 1284              		.thumb
+ 1285              		.thumb_func
+ 1286              		.fpu softvfp
+ 1288              	sdio_flag_get:
+ 1289              	.LFB148:
+ 392:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 393:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 394:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      get the flags state of SDIO
+ 395:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  flag: flags state of SDIO
+ 396:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CCRCERR: command response received (CRC check failed) flag
+ 397:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_DTCRCERR: data block sent/received (CRC check failed) flag
+ 398:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CMDTMOUT: command response timeout flag
+ 399:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_DTTMOUT: data timeout flag
+ 400:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_TXURE: transmit FIFO underrun error occurs flag
+ 401:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_RXORE: received FIFO overrun error occurs flag
+ 402:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CMDRECV: command response received (CRC check passed) flag
+ 403:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CMDSEND: command sent (no response required) flag
+ 404:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_DTEND: data end (data counter, SDIO_DATACNT, is zero) flag
+ 405:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_STBITE: start bit error in the bus flag
+ 406:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_DTBLKEND: data block sent/received (CRC check passed) flag
+ 407:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CMDRUN: command transmission in progress flag
+ 408:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_TXRUN: data transmission in progress flag
+ 409:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_RXRUN: data reception in progress flag
+ 410:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_TFH: transmit FIFO is half empty flag: at least 8 words can be written 
+ 411:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_RFH: receive FIFO is half full flag: at least 8 words can be read in th
+ 412:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_TFF: transmit FIFO is full flag
+ 413:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_RFF: receive FIFO is full flag
+ 414:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_TFE: transmit FIFO is empty flag
+ 415:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_RFE: receive FIFO is empty flag
+ 416:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_TXDTVAL: data is valid in transmit FIFO flag
+ 417:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_RXDTVAL: data is valid in receive FIFO flag
+ 418:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_SDIOINT: SD I/O interrupt received flag
+ 419:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_ATAEND: CE-ATA command completion signal received (only for CMD61) flag
+ 420:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 421:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     FlagStatus: SET or RESET
+ 422:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 423:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** FlagStatus sdio_flag_get(uint32_t flag)
+ 424:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1290              		.loc 1 424 1
+ 1291              		.cfi_startproc
+ 1292              		@ args = 0, pretend = 0, frame = 16
+ 1293              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1294              		@ link register save eliminated.
+ 1295 0000 80B4     		push	{r7}
+ 1296              		.cfi_def_cfa_offset 4
+ 1297              		.cfi_offset 7, -4
+ 1298 0002 85B0     		sub	sp, sp, #20
+ 1299              		.cfi_def_cfa_offset 24
+ 1300 0004 00AF     		add	r7, sp, #0
+ 1301              		.cfi_def_cfa_register 7
+ 1302 0006 7860     		str	r0, [r7, #4]
+ 425:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     FlagStatus temp_flag = RESET;
+ 1303              		.loc 1 425 16
+ 1304 0008 0023     		movs	r3, #0
+ 1305 000a FB73     		strb	r3, [r7, #15]
+ 426:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     if(RESET != (SDIO_STAT & flag)){
+ 1306              		.loc 1 426 18
+ 1307 000c 064B     		ldr	r3, .L92
+ 1308 000e 1A68     		ldr	r2, [r3]
+ 1309              		.loc 1 426 28
+ 1310 0010 7B68     		ldr	r3, [r7, #4]
+ 1311 0012 1340     		ands	r3, r3, r2
+ 1312              		.loc 1 426 7
+ 1313 0014 002B     		cmp	r3, #0
+ 1314 0016 01D0     		beq	.L90
+ 427:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         temp_flag = SET;
+ 1315              		.loc 1 427 19
+ 1316 0018 0123     		movs	r3, #1
+ 1317 001a FB73     		strb	r3, [r7, #15]
+ 1318              	.L90:
+ 428:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     }
+ 429:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     return temp_flag;
+ 1319              		.loc 1 429 12
+ 1320 001c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 430:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1321              		.loc 1 430 1
+ 1322 001e 1846     		mov	r0, r3
+ 1323 0020 1437     		adds	r7, r7, #20
+ 1324              		.cfi_def_cfa_offset 4
+ 1325 0022 BD46     		mov	sp, r7
+ 1326              		.cfi_def_cfa_register 13
+ 1327              		@ sp needed
+ 1328 0024 80BC     		pop	{r7}
+ 1329              		.cfi_restore 7
+ 1330              		.cfi_def_cfa_offset 0
+ 1331 0026 7047     		bx	lr
+ 1332              	.L93:
+ 1333              		.align	2
+ 1334              	.L92:
+ 1335 0028 342C0140 		.word	1073818676
+ 1336              		.cfi_endproc
+ 1337              	.LFE148:
+ 1339              		.section	.text.sdio_flag_clear,"ax",%progbits
+ 1340              		.align	1
+ 1341              		.global	sdio_flag_clear
+ 1342              		.syntax unified
+ 1343              		.thumb
+ 1344              		.thumb_func
+ 1345              		.fpu softvfp
+ 1347              	sdio_flag_clear:
+ 1348              	.LFB149:
+ 431:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 432:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 433:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      clear the pending flags of SDIO
+ 434:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  flag: flags state of SDIO
+ 435:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CCRCERR: command response received (CRC check failed) flag
+ 436:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_DTCRCERR: data block sent/received (CRC check failed) flag
+ 437:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CMDTMOUT: command response timeout flag
+ 438:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_DTTMOUT: data timeout flag
+ 439:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_TXURE: transmit FIFO underrun error occurs flag
+ 440:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_RXORE: received FIFO overrun error occurs flag
+ 441:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CMDRECV: command response received (CRC check passed) flag
+ 442:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_CMDSEND: command sent (no response required) flag
+ 443:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_DTEND: data end (data counter, SDIO_DATACNT, is zero) flag
+ 444:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_STBITE: start bit error in the bus flag
+ 445:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_DTBLKEND: data block sent/received (CRC check passed) flag
+ 446:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_SDIOINT: SD I/O interrupt received flag
+ 447:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_FLAG_ATAEND: CE-ATA command completion signal received (only for CMD61) flag
+ 448:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 449:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 450:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 451:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_flag_clear(uint32_t flag)
+ 452:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1349              		.loc 1 452 1
+ 1350              		.cfi_startproc
+ 1351              		@ args = 0, pretend = 0, frame = 8
+ 1352              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1353              		@ link register save eliminated.
+ 1354 0000 80B4     		push	{r7}
+ 1355              		.cfi_def_cfa_offset 4
+ 1356              		.cfi_offset 7, -4
+ 1357 0002 83B0     		sub	sp, sp, #12
+ 1358              		.cfi_def_cfa_offset 16
+ 1359 0004 00AF     		add	r7, sp, #0
+ 1360              		.cfi_def_cfa_register 7
+ 1361 0006 7860     		str	r0, [r7, #4]
+ 453:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_INTC = flag;
+ 1362              		.loc 1 453 5
+ 1363 0008 034A     		ldr	r2, .L95
+ 1364              		.loc 1 453 15
+ 1365 000a 7B68     		ldr	r3, [r7, #4]
+ 1366 000c 1360     		str	r3, [r2]
+ 454:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1367              		.loc 1 454 1
+ 1368 000e 00BF     		nop
+ 1369 0010 0C37     		adds	r7, r7, #12
+ 1370              		.cfi_def_cfa_offset 4
+ 1371 0012 BD46     		mov	sp, r7
+ 1372              		.cfi_def_cfa_register 13
+ 1373              		@ sp needed
+ 1374 0014 80BC     		pop	{r7}
+ 1375              		.cfi_restore 7
+ 1376              		.cfi_def_cfa_offset 0
+ 1377 0016 7047     		bx	lr
+ 1378              	.L96:
+ 1379              		.align	2
+ 1380              	.L95:
+ 1381 0018 382C0140 		.word	1073818680
+ 1382              		.cfi_endproc
+ 1383              	.LFE149:
+ 1385              		.section	.text.sdio_interrupt_enable,"ax",%progbits
+ 1386              		.align	1
+ 1387              		.global	sdio_interrupt_enable
+ 1388              		.syntax unified
+ 1389              		.thumb
+ 1390              		.thumb_func
+ 1391              		.fpu softvfp
+ 1393              	sdio_interrupt_enable:
+ 1394              	.LFB150:
+ 455:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 456:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 457:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the SDIO interrupt
+ 458:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  int_flag: interrupt flags state of SDIO
+ 459:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CCRCERR: SDIO CCRCERR interrupt
+ 460:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTCRCERR: SDIO DTCRCERR interrupt
+ 461:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDTMOUT: SDIO CMDTMOUT interrupt
+ 462:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTTMOUT: SDIO DTTMOUT interrupt
+ 463:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXURE: SDIO TXURE interrupt
+ 464:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXORE: SDIO RXORE interrupt
+ 465:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDRECV: SDIO CMDRECV interrupt
+ 466:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDSEND: SDIO CMDSEND interrupt
+ 467:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTEND: SDIO DTEND interrupt
+ 468:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_STBITE: SDIO STBITE interrupt
+ 469:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTBLKEND: SDIO DTBLKEND interrupt
+ 470:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDRUN: SDIO CMDRUN interrupt
+ 471:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXRUN: SDIO TXRUN interrupt
+ 472:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXRUN: SDIO RXRUN interrupt
+ 473:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFH: SDIO TFH interrupt
+ 474:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFH: SDIO RFH interrupt
+ 475:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFF: SDIO TFF interrupt
+ 476:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFF: SDIO RFF interrupt
+ 477:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFE: SDIO TFE interrupt
+ 478:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFE: SDIO RFE interrupt
+ 479:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXDTVAL: SDIO TXDTVAL interrupt
+ 480:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXDTVAL: SDIO RXDTVAL interrupt
+ 481:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_SDIOINT: SDIO SDIOINT interrupt
+ 482:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_ATAEND: SDIO ATAEND interrupt
+ 483:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 484:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 485:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 486:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_interrupt_enable(uint32_t int_flag)
+ 487:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1395              		.loc 1 487 1
+ 1396              		.cfi_startproc
+ 1397              		@ args = 0, pretend = 0, frame = 8
+ 1398              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1399              		@ link register save eliminated.
+ 1400 0000 80B4     		push	{r7}
+ 1401              		.cfi_def_cfa_offset 4
+ 1402              		.cfi_offset 7, -4
+ 1403 0002 83B0     		sub	sp, sp, #12
+ 1404              		.cfi_def_cfa_offset 16
+ 1405 0004 00AF     		add	r7, sp, #0
+ 1406              		.cfi_def_cfa_register 7
+ 1407 0006 7860     		str	r0, [r7, #4]
+ 488:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_INTEN |= int_flag;
+ 1408              		.loc 1 488 16
+ 1409 0008 054B     		ldr	r3, .L98
+ 1410 000a 1A68     		ldr	r2, [r3]
+ 1411 000c 0449     		ldr	r1, .L98
+ 1412 000e 7B68     		ldr	r3, [r7, #4]
+ 1413 0010 1343     		orrs	r3, r3, r2
+ 1414 0012 0B60     		str	r3, [r1]
+ 489:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1415              		.loc 1 489 1
+ 1416 0014 00BF     		nop
+ 1417 0016 0C37     		adds	r7, r7, #12
+ 1418              		.cfi_def_cfa_offset 4
+ 1419 0018 BD46     		mov	sp, r7
+ 1420              		.cfi_def_cfa_register 13
+ 1421              		@ sp needed
+ 1422 001a 80BC     		pop	{r7}
+ 1423              		.cfi_restore 7
+ 1424              		.cfi_def_cfa_offset 0
+ 1425 001c 7047     		bx	lr
+ 1426              	.L99:
+ 1427 001e 00BF     		.align	2
+ 1428              	.L98:
+ 1429 0020 3C2C0140 		.word	1073818684
+ 1430              		.cfi_endproc
+ 1431              	.LFE150:
+ 1433              		.section	.text.sdio_interrupt_disable,"ax",%progbits
+ 1434              		.align	1
+ 1435              		.global	sdio_interrupt_disable
+ 1436              		.syntax unified
+ 1437              		.thumb
+ 1438              		.thumb_func
+ 1439              		.fpu softvfp
+ 1441              	sdio_interrupt_disable:
+ 1442              	.LFB151:
+ 490:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 491:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 492:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the SDIO interrupt
+ 493:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  int_flag: interrupt flags state of SDIO
+ 494:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CCRCERR: SDIO CCRCERR interrupt
+ 495:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTCRCERR: SDIO DTCRCERR interrupt
+ 496:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDTMOUT: SDIO CMDTMOUT interrupt
+ 497:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTTMOUT: SDIO DTTMOUT interrupt
+ 498:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXURE: SDIO TXURE interrupt
+ 499:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXORE: SDIO RXORE interrupt
+ 500:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDRECV: SDIO CMDRECV interrupt
+ 501:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDSEND: SDIO CMDSEND interrupt
+ 502:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTEND: SDIO DTEND interrupt
+ 503:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_STBITE: SDIO STBITE interrupt
+ 504:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTBLKEND: SDIO DTBLKEND interrupt
+ 505:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDRUN: SDIO CMDRUN interrupt
+ 506:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXRUN: SDIO TXRUN interrupt
+ 507:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXRUN: SDIO RXRUN interrupt
+ 508:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFH: SDIO TFH interrupt
+ 509:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFH: SDIO RFH interrupt
+ 510:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFF: SDIO TFF interrupt
+ 511:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFF: SDIO RFF interrupt
+ 512:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFE: SDIO TFE interrupt
+ 513:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFE: SDIO RFE interrupt
+ 514:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXDTVAL: SDIO TXDTVAL interrupt
+ 515:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXDTVAL: SDIO RXDTVAL interrupt
+ 516:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_SDIOINT: SDIO SDIOINT interrupt
+ 517:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_ATAEND: SDIO ATAEND interrupt
+ 518:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 519:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 520:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 521:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_interrupt_disable(uint32_t int_flag)
+ 522:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1443              		.loc 1 522 1
+ 1444              		.cfi_startproc
+ 1445              		@ args = 0, pretend = 0, frame = 8
+ 1446              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1447              		@ link register save eliminated.
+ 1448 0000 80B4     		push	{r7}
+ 1449              		.cfi_def_cfa_offset 4
+ 1450              		.cfi_offset 7, -4
+ 1451 0002 83B0     		sub	sp, sp, #12
+ 1452              		.cfi_def_cfa_offset 16
+ 1453 0004 00AF     		add	r7, sp, #0
+ 1454              		.cfi_def_cfa_register 7
+ 1455 0006 7860     		str	r0, [r7, #4]
+ 523:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_INTEN &= ~int_flag;
+ 1456              		.loc 1 523 16
+ 1457 0008 054B     		ldr	r3, .L101
+ 1458 000a 1A68     		ldr	r2, [r3]
+ 1459              		.loc 1 523 19
+ 1460 000c 7B68     		ldr	r3, [r7, #4]
+ 1461 000e DB43     		mvns	r3, r3
+ 1462              		.loc 1 523 16
+ 1463 0010 0349     		ldr	r1, .L101
+ 1464 0012 1340     		ands	r3, r3, r2
+ 1465 0014 0B60     		str	r3, [r1]
+ 524:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1466              		.loc 1 524 1
+ 1467 0016 00BF     		nop
+ 1468 0018 0C37     		adds	r7, r7, #12
+ 1469              		.cfi_def_cfa_offset 4
+ 1470 001a BD46     		mov	sp, r7
+ 1471              		.cfi_def_cfa_register 13
+ 1472              		@ sp needed
+ 1473 001c 80BC     		pop	{r7}
+ 1474              		.cfi_restore 7
+ 1475              		.cfi_def_cfa_offset 0
+ 1476 001e 7047     		bx	lr
+ 1477              	.L102:
+ 1478              		.align	2
+ 1479              	.L101:
+ 1480 0020 3C2C0140 		.word	1073818684
+ 1481              		.cfi_endproc
+ 1482              	.LFE151:
+ 1484              		.section	.text.sdio_interrupt_flag_get,"ax",%progbits
+ 1485              		.align	1
+ 1486              		.global	sdio_interrupt_flag_get
+ 1487              		.syntax unified
+ 1488              		.thumb
+ 1489              		.thumb_func
+ 1490              		.fpu softvfp
+ 1492              	sdio_interrupt_flag_get:
+ 1493              	.LFB152:
+ 525:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 526:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 527:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      get the interrupt flags state of SDIO
+ 528:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  int_flag: interrupt flags state of SDIO
+ 529:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CCRCERR: SDIO CCRCERR interrupt
+ 530:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTCRCERR: SDIO DTCRCERR interrupt
+ 531:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDTMOUT: SDIO CMDTMOUT interrupt
+ 532:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTTMOUT: SDIO DTTMOUT interrupt
+ 533:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXURE: SDIO TXURE interrupt
+ 534:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXORE: SDIO RXORE interrupt
+ 535:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDRECV: SDIO CMDRECV interrupt
+ 536:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDSEND: SDIO CMDSEND interrupt
+ 537:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTEND: SDIO DTEND interrupt
+ 538:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_STBITE: SDIO STBITE interrupt
+ 539:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTBLKEND: SDIO DTBLKEND interrupt
+ 540:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDRUN: SDIO CMDRUN interrupt
+ 541:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXRUN: SDIO TXRUN interrupt
+ 542:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXRUN: SDIO RXRUN interrupt
+ 543:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFH: SDIO TFH interrupt
+ 544:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFH: SDIO RFH interrupt
+ 545:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFF: SDIO TFF interrupt
+ 546:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFF: SDIO RFF interrupt
+ 547:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TFE: SDIO TFE interrupt
+ 548:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RFE: SDIO RFE interrupt
+ 549:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXDTVAL: SDIO TXDTVAL interrupt
+ 550:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXDTVAL: SDIO RXDTVAL interrupt
+ 551:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_SDIOINT: SDIO SDIOINT interrupt
+ 552:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_ATAEND: SDIO ATAEND interrupt
+ 553:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 554:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     FlagStatus: SET or RESET
+ 555:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 556:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** FlagStatus sdio_interrupt_flag_get(uint32_t int_flag)
+ 557:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1494              		.loc 1 557 1
+ 1495              		.cfi_startproc
+ 1496              		@ args = 0, pretend = 0, frame = 16
+ 1497              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1498              		@ link register save eliminated.
+ 1499 0000 80B4     		push	{r7}
+ 1500              		.cfi_def_cfa_offset 4
+ 1501              		.cfi_offset 7, -4
+ 1502 0002 85B0     		sub	sp, sp, #20
+ 1503              		.cfi_def_cfa_offset 24
+ 1504 0004 00AF     		add	r7, sp, #0
+ 1505              		.cfi_def_cfa_register 7
+ 1506 0006 7860     		str	r0, [r7, #4]
+ 558:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     FlagStatus temp_flag = RESET;
+ 1507              		.loc 1 558 16
+ 1508 0008 0023     		movs	r3, #0
+ 1509 000a FB73     		strb	r3, [r7, #15]
+ 559:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     if(RESET != (SDIO_STAT & int_flag)){
+ 1510              		.loc 1 559 18
+ 1511 000c 064B     		ldr	r3, .L106
+ 1512 000e 1A68     		ldr	r2, [r3]
+ 1513              		.loc 1 559 28
+ 1514 0010 7B68     		ldr	r3, [r7, #4]
+ 1515 0012 1340     		ands	r3, r3, r2
+ 1516              		.loc 1 559 7
+ 1517 0014 002B     		cmp	r3, #0
+ 1518 0016 01D0     		beq	.L104
+ 560:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         temp_flag = SET;
+ 1519              		.loc 1 560 19
+ 1520 0018 0123     		movs	r3, #1
+ 1521 001a FB73     		strb	r3, [r7, #15]
+ 1522              	.L104:
+ 561:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     }
+ 562:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     return temp_flag;
+ 1523              		.loc 1 562 12
+ 1524 001c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 563:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1525              		.loc 1 563 1
+ 1526 001e 1846     		mov	r0, r3
+ 1527 0020 1437     		adds	r7, r7, #20
+ 1528              		.cfi_def_cfa_offset 4
+ 1529 0022 BD46     		mov	sp, r7
+ 1530              		.cfi_def_cfa_register 13
+ 1531              		@ sp needed
+ 1532 0024 80BC     		pop	{r7}
+ 1533              		.cfi_restore 7
+ 1534              		.cfi_def_cfa_offset 0
+ 1535 0026 7047     		bx	lr
+ 1536              	.L107:
+ 1537              		.align	2
+ 1538              	.L106:
+ 1539 0028 342C0140 		.word	1073818676
+ 1540              		.cfi_endproc
+ 1541              	.LFE152:
+ 1543              		.section	.text.sdio_interrupt_flag_clear,"ax",%progbits
+ 1544              		.align	1
+ 1545              		.global	sdio_interrupt_flag_clear
+ 1546              		.syntax unified
+ 1547              		.thumb
+ 1548              		.thumb_func
+ 1549              		.fpu softvfp
+ 1551              	sdio_interrupt_flag_clear:
+ 1552              	.LFB153:
+ 564:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 565:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 566:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      clear the interrupt pending flags of SDIO
+ 567:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  int_flag: interrupt flags state of SDIO
+ 568:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CCRCERR: command response received (CRC check failed) flag
+ 569:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTCRCERR: data block sent/received (CRC check failed) flag
+ 570:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDTMOUT: command response timeout flag
+ 571:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTTMOUT: data timeout flag
+ 572:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_TXURE: transmit FIFO underrun error occurs flag
+ 573:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_RXORE: received FIFO overrun error occurs flag
+ 574:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDRECV: command response received (CRC check passed) flag
+ 575:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_CMDSEND: command sent (no response required) flag
+ 576:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTEND: data end (data counter, SDIO_DATACNT, is zero) flag
+ 577:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_STBITE: start bit error in the bus flag
+ 578:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_DTBLKEND: data block sent/received (CRC check passed) flag
+ 579:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_SDIOINT: SD I/O interrupt received flag
+ 580:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_INT_ATAEND: CE-ATA command completion signal received (only for CMD61) flag
+ 581:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 582:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 583:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 584:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_interrupt_flag_clear(uint32_t int_flag)
+ 585:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1553              		.loc 1 585 1
+ 1554              		.cfi_startproc
+ 1555              		@ args = 0, pretend = 0, frame = 8
+ 1556              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1557              		@ link register save eliminated.
+ 1558 0000 80B4     		push	{r7}
+ 1559              		.cfi_def_cfa_offset 4
+ 1560              		.cfi_offset 7, -4
+ 1561 0002 83B0     		sub	sp, sp, #12
+ 1562              		.cfi_def_cfa_offset 16
+ 1563 0004 00AF     		add	r7, sp, #0
+ 1564              		.cfi_def_cfa_register 7
+ 1565 0006 7860     		str	r0, [r7, #4]
+ 586:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_INTC = int_flag;
+ 1566              		.loc 1 586 5
+ 1567 0008 034A     		ldr	r2, .L109
+ 1568              		.loc 1 586 15
+ 1569 000a 7B68     		ldr	r3, [r7, #4]
+ 1570 000c 1360     		str	r3, [r2]
+ 587:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1571              		.loc 1 587 1
+ 1572 000e 00BF     		nop
+ 1573 0010 0C37     		adds	r7, r7, #12
+ 1574              		.cfi_def_cfa_offset 4
+ 1575 0012 BD46     		mov	sp, r7
+ 1576              		.cfi_def_cfa_register 13
+ 1577              		@ sp needed
+ 1578 0014 80BC     		pop	{r7}
+ 1579              		.cfi_restore 7
+ 1580              		.cfi_def_cfa_offset 0
+ 1581 0016 7047     		bx	lr
+ 1582              	.L110:
+ 1583              		.align	2
+ 1584              	.L109:
+ 1585 0018 382C0140 		.word	1073818680
+ 1586              		.cfi_endproc
+ 1587              	.LFE153:
+ 1589              		.section	.text.sdio_readwait_enable,"ax",%progbits
+ 1590              		.align	1
+ 1591              		.global	sdio_readwait_enable
+ 1592              		.syntax unified
+ 1593              		.thumb
+ 1594              		.thumb_func
+ 1595              		.fpu softvfp
+ 1597              	sdio_readwait_enable:
+ 1598              	.LFB154:
+ 588:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 589:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 590:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the read wait mode(SD I/O only)
+ 591:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 592:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 593:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 594:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 595:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_readwait_enable(void)
+ 596:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1599              		.loc 1 596 1
+ 1600              		.cfi_startproc
+ 1601              		@ args = 0, pretend = 0, frame = 0
+ 1602              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1603              		@ link register save eliminated.
+ 1604 0000 80B4     		push	{r7}
+ 1605              		.cfi_def_cfa_offset 4
+ 1606              		.cfi_offset 7, -4
+ 1607 0002 00AF     		add	r7, sp, #0
+ 1608              		.cfi_def_cfa_register 7
+ 597:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL |= SDIO_DATACTL_RWEN;
+ 1609              		.loc 1 597 18
+ 1610 0004 044B     		ldr	r3, .L112
+ 1611 0006 1B68     		ldr	r3, [r3]
+ 1612 0008 034A     		ldr	r2, .L112
+ 1613 000a 43F48073 		orr	r3, r3, #256
+ 1614 000e 1360     		str	r3, [r2]
+ 598:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1615              		.loc 1 598 1
+ 1616 0010 00BF     		nop
+ 1617 0012 BD46     		mov	sp, r7
+ 1618              		.cfi_def_cfa_register 13
+ 1619              		@ sp needed
+ 1620 0014 80BC     		pop	{r7}
+ 1621              		.cfi_restore 7
+ 1622              		.cfi_def_cfa_offset 0
+ 1623 0016 7047     		bx	lr
+ 1624              	.L113:
+ 1625              		.align	2
+ 1626              	.L112:
+ 1627 0018 2C2C0140 		.word	1073818668
+ 1628              		.cfi_endproc
+ 1629              	.LFE154:
+ 1631              		.section	.text.sdio_readwait_disable,"ax",%progbits
+ 1632              		.align	1
+ 1633              		.global	sdio_readwait_disable
+ 1634              		.syntax unified
+ 1635              		.thumb
+ 1636              		.thumb_func
+ 1637              		.fpu softvfp
+ 1639              	sdio_readwait_disable:
+ 1640              	.LFB155:
+ 599:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 600:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 601:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the read wait mode(SD I/O only)
+ 602:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 603:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 604:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 605:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 606:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_readwait_disable(void)
+ 607:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1641              		.loc 1 607 1
+ 1642              		.cfi_startproc
+ 1643              		@ args = 0, pretend = 0, frame = 0
+ 1644              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1645              		@ link register save eliminated.
+ 1646 0000 80B4     		push	{r7}
+ 1647              		.cfi_def_cfa_offset 4
+ 1648              		.cfi_offset 7, -4
+ 1649 0002 00AF     		add	r7, sp, #0
+ 1650              		.cfi_def_cfa_register 7
+ 608:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL &= ~SDIO_DATACTL_RWEN;
+ 1651              		.loc 1 608 18
+ 1652 0004 044B     		ldr	r3, .L115
+ 1653 0006 1B68     		ldr	r3, [r3]
+ 1654 0008 034A     		ldr	r2, .L115
+ 1655 000a 23F48073 		bic	r3, r3, #256
+ 1656 000e 1360     		str	r3, [r2]
+ 609:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1657              		.loc 1 609 1
+ 1658 0010 00BF     		nop
+ 1659 0012 BD46     		mov	sp, r7
+ 1660              		.cfi_def_cfa_register 13
+ 1661              		@ sp needed
+ 1662 0014 80BC     		pop	{r7}
+ 1663              		.cfi_restore 7
+ 1664              		.cfi_def_cfa_offset 0
+ 1665 0016 7047     		bx	lr
+ 1666              	.L116:
+ 1667              		.align	2
+ 1668              	.L115:
+ 1669 0018 2C2C0140 		.word	1073818668
+ 1670              		.cfi_endproc
+ 1671              	.LFE155:
+ 1673              		.section	.text.sdio_stop_readwait_enable,"ax",%progbits
+ 1674              		.align	1
+ 1675              		.global	sdio_stop_readwait_enable
+ 1676              		.syntax unified
+ 1677              		.thumb
+ 1678              		.thumb_func
+ 1679              		.fpu softvfp
+ 1681              	sdio_stop_readwait_enable:
+ 1682              	.LFB156:
+ 610:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 611:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 612:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the function that stop the read wait process(SD I/O only)
+ 613:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 614:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 615:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 616:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 617:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_stop_readwait_enable(void)
+ 618:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1683              		.loc 1 618 1
+ 1684              		.cfi_startproc
+ 1685              		@ args = 0, pretend = 0, frame = 0
+ 1686              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1687              		@ link register save eliminated.
+ 1688 0000 80B4     		push	{r7}
+ 1689              		.cfi_def_cfa_offset 4
+ 1690              		.cfi_offset 7, -4
+ 1691 0002 00AF     		add	r7, sp, #0
+ 1692              		.cfi_def_cfa_register 7
+ 619:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL |= SDIO_DATACTL_RWSTOP;
+ 1693              		.loc 1 619 18
+ 1694 0004 044B     		ldr	r3, .L118
+ 1695 0006 1B68     		ldr	r3, [r3]
+ 1696 0008 034A     		ldr	r2, .L118
+ 1697 000a 43F40073 		orr	r3, r3, #512
+ 1698 000e 1360     		str	r3, [r2]
+ 620:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1699              		.loc 1 620 1
+ 1700 0010 00BF     		nop
+ 1701 0012 BD46     		mov	sp, r7
+ 1702              		.cfi_def_cfa_register 13
+ 1703              		@ sp needed
+ 1704 0014 80BC     		pop	{r7}
+ 1705              		.cfi_restore 7
+ 1706              		.cfi_def_cfa_offset 0
+ 1707 0016 7047     		bx	lr
+ 1708              	.L119:
+ 1709              		.align	2
+ 1710              	.L118:
+ 1711 0018 2C2C0140 		.word	1073818668
+ 1712              		.cfi_endproc
+ 1713              	.LFE156:
+ 1715              		.section	.text.sdio_stop_readwait_disable,"ax",%progbits
+ 1716              		.align	1
+ 1717              		.global	sdio_stop_readwait_disable
+ 1718              		.syntax unified
+ 1719              		.thumb
+ 1720              		.thumb_func
+ 1721              		.fpu softvfp
+ 1723              	sdio_stop_readwait_disable:
+ 1724              	.LFB157:
+ 621:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 622:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 623:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the function that stop the read wait process(SD I/O only)
+ 624:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 625:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 626:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 627:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 628:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_stop_readwait_disable(void)
+ 629:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1725              		.loc 1 629 1
+ 1726              		.cfi_startproc
+ 1727              		@ args = 0, pretend = 0, frame = 0
+ 1728              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1729              		@ link register save eliminated.
+ 1730 0000 80B4     		push	{r7}
+ 1731              		.cfi_def_cfa_offset 4
+ 1732              		.cfi_offset 7, -4
+ 1733 0002 00AF     		add	r7, sp, #0
+ 1734              		.cfi_def_cfa_register 7
+ 630:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL &= ~SDIO_DATACTL_RWSTOP;
+ 1735              		.loc 1 630 18
+ 1736 0004 044B     		ldr	r3, .L121
+ 1737 0006 1B68     		ldr	r3, [r3]
+ 1738 0008 034A     		ldr	r2, .L121
+ 1739 000a 23F40073 		bic	r3, r3, #512
+ 1740 000e 1360     		str	r3, [r2]
+ 631:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1741              		.loc 1 631 1
+ 1742 0010 00BF     		nop
+ 1743 0012 BD46     		mov	sp, r7
+ 1744              		.cfi_def_cfa_register 13
+ 1745              		@ sp needed
+ 1746 0014 80BC     		pop	{r7}
+ 1747              		.cfi_restore 7
+ 1748              		.cfi_def_cfa_offset 0
+ 1749 0016 7047     		bx	lr
+ 1750              	.L122:
+ 1751              		.align	2
+ 1752              	.L121:
+ 1753 0018 2C2C0140 		.word	1073818668
+ 1754              		.cfi_endproc
+ 1755              	.LFE157:
+ 1757              		.section	.text.sdio_readwait_type_set,"ax",%progbits
+ 1758              		.align	1
+ 1759              		.global	sdio_readwait_type_set
+ 1760              		.syntax unified
+ 1761              		.thumb
+ 1762              		.thumb_func
+ 1763              		.fpu softvfp
+ 1765              	sdio_readwait_type_set:
+ 1766              	.LFB158:
+ 632:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 633:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 634:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      set the read wait type(SD I/O only)
+ 635:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  readwait_type: SD I/O read wait type
+ 636:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_READWAITTYPE_CLK: read wait control by stopping SDIO_CLK
+ 637:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****       \arg        SDIO_READWAITTYPE_DAT2: read wait control using SDIO_DAT[2]
+ 638:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 639:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 640:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 641:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_readwait_type_set(uint32_t readwait_type)
+ 642:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1767              		.loc 1 642 1
+ 1768              		.cfi_startproc
+ 1769              		@ args = 0, pretend = 0, frame = 8
+ 1770              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1771              		@ link register save eliminated.
+ 1772 0000 80B4     		push	{r7}
+ 1773              		.cfi_def_cfa_offset 4
+ 1774              		.cfi_offset 7, -4
+ 1775 0002 83B0     		sub	sp, sp, #12
+ 1776              		.cfi_def_cfa_offset 16
+ 1777 0004 00AF     		add	r7, sp, #0
+ 1778              		.cfi_def_cfa_register 7
+ 1779 0006 7860     		str	r0, [r7, #4]
+ 643:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     if(SDIO_READWAITTYPE_CLK == readwait_type){
+ 1780              		.loc 1 643 7
+ 1781 0008 7B68     		ldr	r3, [r7, #4]
+ 1782 000a B3F5806F 		cmp	r3, #1024
+ 1783 000e 06D1     		bne	.L124
+ 644:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         SDIO_DATACTL |= SDIO_DATACTL_RWTYPE;
+ 1784              		.loc 1 644 22
+ 1785 0010 084B     		ldr	r3, .L127
+ 1786 0012 1B68     		ldr	r3, [r3]
+ 1787 0014 074A     		ldr	r2, .L127
+ 1788 0016 43F48063 		orr	r3, r3, #1024
+ 1789 001a 1360     		str	r3, [r2]
+ 645:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     }else{
+ 646:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****         SDIO_DATACTL &= ~SDIO_DATACTL_RWTYPE;
+ 647:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     }
+ 648:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1790              		.loc 1 648 1
+ 1791 001c 05E0     		b	.L126
+ 1792              	.L124:
+ 646:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     }
+ 1793              		.loc 1 646 22
+ 1794 001e 054B     		ldr	r3, .L127
+ 1795 0020 1B68     		ldr	r3, [r3]
+ 1796 0022 044A     		ldr	r2, .L127
+ 1797 0024 23F48063 		bic	r3, r3, #1024
+ 1798 0028 1360     		str	r3, [r2]
+ 1799              	.L126:
+ 1800              		.loc 1 648 1
+ 1801 002a 00BF     		nop
+ 1802 002c 0C37     		adds	r7, r7, #12
+ 1803              		.cfi_def_cfa_offset 4
+ 1804 002e BD46     		mov	sp, r7
+ 1805              		.cfi_def_cfa_register 13
+ 1806              		@ sp needed
+ 1807 0030 80BC     		pop	{r7}
+ 1808              		.cfi_restore 7
+ 1809              		.cfi_def_cfa_offset 0
+ 1810 0032 7047     		bx	lr
+ 1811              	.L128:
+ 1812              		.align	2
+ 1813              	.L127:
+ 1814 0034 2C2C0140 		.word	1073818668
+ 1815              		.cfi_endproc
+ 1816              	.LFE158:
+ 1818              		.section	.text.sdio_operation_enable,"ax",%progbits
+ 1819              		.align	1
+ 1820              		.global	sdio_operation_enable
+ 1821              		.syntax unified
+ 1822              		.thumb
+ 1823              		.thumb_func
+ 1824              		.fpu softvfp
+ 1826              	sdio_operation_enable:
+ 1827              	.LFB159:
+ 649:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 650:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 651:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the SD I/O mode specific operation(SD I/O only)
+ 652:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 653:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 654:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 655:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 656:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_operation_enable(void)
+ 657:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1828              		.loc 1 657 1
+ 1829              		.cfi_startproc
+ 1830              		@ args = 0, pretend = 0, frame = 0
+ 1831              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1832              		@ link register save eliminated.
+ 1833 0000 80B4     		push	{r7}
+ 1834              		.cfi_def_cfa_offset 4
+ 1835              		.cfi_offset 7, -4
+ 1836 0002 00AF     		add	r7, sp, #0
+ 1837              		.cfi_def_cfa_register 7
+ 658:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL |= SDIO_DATACTL_IOEN;
+ 1838              		.loc 1 658 18
+ 1839 0004 044B     		ldr	r3, .L130
+ 1840 0006 1B68     		ldr	r3, [r3]
+ 1841 0008 034A     		ldr	r2, .L130
+ 1842 000a 43F40063 		orr	r3, r3, #2048
+ 1843 000e 1360     		str	r3, [r2]
+ 659:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1844              		.loc 1 659 1
+ 1845 0010 00BF     		nop
+ 1846 0012 BD46     		mov	sp, r7
+ 1847              		.cfi_def_cfa_register 13
+ 1848              		@ sp needed
+ 1849 0014 80BC     		pop	{r7}
+ 1850              		.cfi_restore 7
+ 1851              		.cfi_def_cfa_offset 0
+ 1852 0016 7047     		bx	lr
+ 1853              	.L131:
+ 1854              		.align	2
+ 1855              	.L130:
+ 1856 0018 2C2C0140 		.word	1073818668
+ 1857              		.cfi_endproc
+ 1858              	.LFE159:
+ 1860              		.section	.text.sdio_operation_disable,"ax",%progbits
+ 1861              		.align	1
+ 1862              		.global	sdio_operation_disable
+ 1863              		.syntax unified
+ 1864              		.thumb
+ 1865              		.thumb_func
+ 1866              		.fpu softvfp
+ 1868              	sdio_operation_disable:
+ 1869              	.LFB160:
+ 660:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 661:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 662:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the SD I/O mode specific operation(SD I/O only)
+ 663:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 664:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 665:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 666:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 667:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_operation_disable(void)
+ 668:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1870              		.loc 1 668 1
+ 1871              		.cfi_startproc
+ 1872              		@ args = 0, pretend = 0, frame = 0
+ 1873              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1874              		@ link register save eliminated.
+ 1875 0000 80B4     		push	{r7}
+ 1876              		.cfi_def_cfa_offset 4
+ 1877              		.cfi_offset 7, -4
+ 1878 0002 00AF     		add	r7, sp, #0
+ 1879              		.cfi_def_cfa_register 7
+ 669:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_DATACTL &= ~SDIO_DATACTL_IOEN;
+ 1880              		.loc 1 669 18
+ 1881 0004 044B     		ldr	r3, .L133
+ 1882 0006 1B68     		ldr	r3, [r3]
+ 1883 0008 034A     		ldr	r2, .L133
+ 1884 000a 23F40063 		bic	r3, r3, #2048
+ 1885 000e 1360     		str	r3, [r2]
+ 670:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1886              		.loc 1 670 1
+ 1887 0010 00BF     		nop
+ 1888 0012 BD46     		mov	sp, r7
+ 1889              		.cfi_def_cfa_register 13
+ 1890              		@ sp needed
+ 1891 0014 80BC     		pop	{r7}
+ 1892              		.cfi_restore 7
+ 1893              		.cfi_def_cfa_offset 0
+ 1894 0016 7047     		bx	lr
+ 1895              	.L134:
+ 1896              		.align	2
+ 1897              	.L133:
+ 1898 0018 2C2C0140 		.word	1073818668
+ 1899              		.cfi_endproc
+ 1900              	.LFE160:
+ 1902              		.section	.text.sdio_suspend_enable,"ax",%progbits
+ 1903              		.align	1
+ 1904              		.global	sdio_suspend_enable
+ 1905              		.syntax unified
+ 1906              		.thumb
+ 1907              		.thumb_func
+ 1908              		.fpu softvfp
+ 1910              	sdio_suspend_enable:
+ 1911              	.LFB161:
+ 671:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 672:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 673:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the SD I/O suspend operation(SD I/O only)
+ 674:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 675:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 676:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 677:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 678:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_suspend_enable(void)
+ 679:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1912              		.loc 1 679 1
+ 1913              		.cfi_startproc
+ 1914              		@ args = 0, pretend = 0, frame = 0
+ 1915              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1916              		@ link register save eliminated.
+ 1917 0000 80B4     		push	{r7}
+ 1918              		.cfi_def_cfa_offset 4
+ 1919              		.cfi_offset 7, -4
+ 1920 0002 00AF     		add	r7, sp, #0
+ 1921              		.cfi_def_cfa_register 7
+ 680:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL |= SDIO_CMDCTL_SUSPEND;
+ 1922              		.loc 1 680 17
+ 1923 0004 044B     		ldr	r3, .L136
+ 1924 0006 1B68     		ldr	r3, [r3]
+ 1925 0008 034A     		ldr	r2, .L136
+ 1926 000a 43F40063 		orr	r3, r3, #2048
+ 1927 000e 1360     		str	r3, [r2]
+ 681:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1928              		.loc 1 681 1
+ 1929 0010 00BF     		nop
+ 1930 0012 BD46     		mov	sp, r7
+ 1931              		.cfi_def_cfa_register 13
+ 1932              		@ sp needed
+ 1933 0014 80BC     		pop	{r7}
+ 1934              		.cfi_restore 7
+ 1935              		.cfi_def_cfa_offset 0
+ 1936 0016 7047     		bx	lr
+ 1937              	.L137:
+ 1938              		.align	2
+ 1939              	.L136:
+ 1940 0018 0C2C0140 		.word	1073818636
+ 1941              		.cfi_endproc
+ 1942              	.LFE161:
+ 1944              		.section	.text.sdio_suspend_disable,"ax",%progbits
+ 1945              		.align	1
+ 1946              		.global	sdio_suspend_disable
+ 1947              		.syntax unified
+ 1948              		.thumb
+ 1949              		.thumb_func
+ 1950              		.fpu softvfp
+ 1952              	sdio_suspend_disable:
+ 1953              	.LFB162:
+ 682:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 683:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 684:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the SD I/O suspend operation(SD I/O only)
+ 685:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 686:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 687:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 688:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 689:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_suspend_disable(void)
+ 690:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1954              		.loc 1 690 1
+ 1955              		.cfi_startproc
+ 1956              		@ args = 0, pretend = 0, frame = 0
+ 1957              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1958              		@ link register save eliminated.
+ 1959 0000 80B4     		push	{r7}
+ 1960              		.cfi_def_cfa_offset 4
+ 1961              		.cfi_offset 7, -4
+ 1962 0002 00AF     		add	r7, sp, #0
+ 1963              		.cfi_def_cfa_register 7
+ 691:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL &= ~SDIO_CMDCTL_SUSPEND;
+ 1964              		.loc 1 691 17
+ 1965 0004 044B     		ldr	r3, .L139
+ 1966 0006 1B68     		ldr	r3, [r3]
+ 1967 0008 034A     		ldr	r2, .L139
+ 1968 000a 23F40063 		bic	r3, r3, #2048
+ 1969 000e 1360     		str	r3, [r2]
+ 692:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 1970              		.loc 1 692 1
+ 1971 0010 00BF     		nop
+ 1972 0012 BD46     		mov	sp, r7
+ 1973              		.cfi_def_cfa_register 13
+ 1974              		@ sp needed
+ 1975 0014 80BC     		pop	{r7}
+ 1976              		.cfi_restore 7
+ 1977              		.cfi_def_cfa_offset 0
+ 1978 0016 7047     		bx	lr
+ 1979              	.L140:
+ 1980              		.align	2
+ 1981              	.L139:
+ 1982 0018 0C2C0140 		.word	1073818636
+ 1983              		.cfi_endproc
+ 1984              	.LFE162:
+ 1986              		.section	.text.sdio_ceata_command_enable,"ax",%progbits
+ 1987              		.align	1
+ 1988              		.global	sdio_ceata_command_enable
+ 1989              		.syntax unified
+ 1990              		.thumb
+ 1991              		.thumb_func
+ 1992              		.fpu softvfp
+ 1994              	sdio_ceata_command_enable:
+ 1995              	.LFB163:
+ 693:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 694:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 695:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the CE-ATA command(CE-ATA only)
+ 696:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 697:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 698:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 699:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 700:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_ceata_command_enable(void)
+ 701:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 1996              		.loc 1 701 1
+ 1997              		.cfi_startproc
+ 1998              		@ args = 0, pretend = 0, frame = 0
+ 1999              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2000              		@ link register save eliminated.
+ 2001 0000 80B4     		push	{r7}
+ 2002              		.cfi_def_cfa_offset 4
+ 2003              		.cfi_offset 7, -4
+ 2004 0002 00AF     		add	r7, sp, #0
+ 2005              		.cfi_def_cfa_register 7
+ 702:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL |= SDIO_CMDCTL_ATAEN;
+ 2006              		.loc 1 702 17
+ 2007 0004 044B     		ldr	r3, .L142
+ 2008 0006 1B68     		ldr	r3, [r3]
+ 2009 0008 034A     		ldr	r2, .L142
+ 2010 000a 43F48043 		orr	r3, r3, #16384
+ 2011 000e 1360     		str	r3, [r2]
+ 703:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 2012              		.loc 1 703 1
+ 2013 0010 00BF     		nop
+ 2014 0012 BD46     		mov	sp, r7
+ 2015              		.cfi_def_cfa_register 13
+ 2016              		@ sp needed
+ 2017 0014 80BC     		pop	{r7}
+ 2018              		.cfi_restore 7
+ 2019              		.cfi_def_cfa_offset 0
+ 2020 0016 7047     		bx	lr
+ 2021              	.L143:
+ 2022              		.align	2
+ 2023              	.L142:
+ 2024 0018 0C2C0140 		.word	1073818636
+ 2025              		.cfi_endproc
+ 2026              	.LFE163:
+ 2028              		.section	.text.sdio_ceata_command_disable,"ax",%progbits
+ 2029              		.align	1
+ 2030              		.global	sdio_ceata_command_disable
+ 2031              		.syntax unified
+ 2032              		.thumb
+ 2033              		.thumb_func
+ 2034              		.fpu softvfp
+ 2036              	sdio_ceata_command_disable:
+ 2037              	.LFB164:
+ 704:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 705:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 706:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the CE-ATA command(CE-ATA only)
+ 707:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 708:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 709:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 710:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 711:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_ceata_command_disable(void)
+ 712:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 2038              		.loc 1 712 1
+ 2039              		.cfi_startproc
+ 2040              		@ args = 0, pretend = 0, frame = 0
+ 2041              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2042              		@ link register save eliminated.
+ 2043 0000 80B4     		push	{r7}
+ 2044              		.cfi_def_cfa_offset 4
+ 2045              		.cfi_offset 7, -4
+ 2046 0002 00AF     		add	r7, sp, #0
+ 2047              		.cfi_def_cfa_register 7
+ 713:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL &= ~SDIO_CMDCTL_ATAEN;
+ 2048              		.loc 1 713 17
+ 2049 0004 044B     		ldr	r3, .L145
+ 2050 0006 1B68     		ldr	r3, [r3]
+ 2051 0008 034A     		ldr	r2, .L145
+ 2052 000a 23F48043 		bic	r3, r3, #16384
+ 2053 000e 1360     		str	r3, [r2]
+ 714:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 2054              		.loc 1 714 1
+ 2055 0010 00BF     		nop
+ 2056 0012 BD46     		mov	sp, r7
+ 2057              		.cfi_def_cfa_register 13
+ 2058              		@ sp needed
+ 2059 0014 80BC     		pop	{r7}
+ 2060              		.cfi_restore 7
+ 2061              		.cfi_def_cfa_offset 0
+ 2062 0016 7047     		bx	lr
+ 2063              	.L146:
+ 2064              		.align	2
+ 2065              	.L145:
+ 2066 0018 0C2C0140 		.word	1073818636
+ 2067              		.cfi_endproc
+ 2068              	.LFE164:
+ 2070              		.section	.text.sdio_ceata_interrupt_enable,"ax",%progbits
+ 2071              		.align	1
+ 2072              		.global	sdio_ceata_interrupt_enable
+ 2073              		.syntax unified
+ 2074              		.thumb
+ 2075              		.thumb_func
+ 2076              		.fpu softvfp
+ 2078              	sdio_ceata_interrupt_enable:
+ 2079              	.LFB165:
+ 715:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 716:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 717:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the CE-ATA interrupt(CE-ATA only)
+ 718:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 719:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 720:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 721:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 722:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_ceata_interrupt_enable(void)
+ 723:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 2080              		.loc 1 723 1
+ 2081              		.cfi_startproc
+ 2082              		@ args = 0, pretend = 0, frame = 0
+ 2083              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2084              		@ link register save eliminated.
+ 2085 0000 80B4     		push	{r7}
+ 2086              		.cfi_def_cfa_offset 4
+ 2087              		.cfi_offset 7, -4
+ 2088 0002 00AF     		add	r7, sp, #0
+ 2089              		.cfi_def_cfa_register 7
+ 724:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL &= ~SDIO_CMDCTL_NINTEN;
+ 2090              		.loc 1 724 17
+ 2091 0004 044B     		ldr	r3, .L148
+ 2092 0006 1B68     		ldr	r3, [r3]
+ 2093 0008 034A     		ldr	r2, .L148
+ 2094 000a 23F40053 		bic	r3, r3, #8192
+ 2095 000e 1360     		str	r3, [r2]
+ 725:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 2096              		.loc 1 725 1
+ 2097 0010 00BF     		nop
+ 2098 0012 BD46     		mov	sp, r7
+ 2099              		.cfi_def_cfa_register 13
+ 2100              		@ sp needed
+ 2101 0014 80BC     		pop	{r7}
+ 2102              		.cfi_restore 7
+ 2103              		.cfi_def_cfa_offset 0
+ 2104 0016 7047     		bx	lr
+ 2105              	.L149:
+ 2106              		.align	2
+ 2107              	.L148:
+ 2108 0018 0C2C0140 		.word	1073818636
+ 2109              		.cfi_endproc
+ 2110              	.LFE165:
+ 2112              		.section	.text.sdio_ceata_interrupt_disable,"ax",%progbits
+ 2113              		.align	1
+ 2114              		.global	sdio_ceata_interrupt_disable
+ 2115              		.syntax unified
+ 2116              		.thumb
+ 2117              		.thumb_func
+ 2118              		.fpu softvfp
+ 2120              	sdio_ceata_interrupt_disable:
+ 2121              	.LFB166:
+ 726:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 727:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 728:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the CE-ATA interrupt(CE-ATA only)
+ 729:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 730:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 731:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 732:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 733:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_ceata_interrupt_disable(void)
+ 734:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 2122              		.loc 1 734 1
+ 2123              		.cfi_startproc
+ 2124              		@ args = 0, pretend = 0, frame = 0
+ 2125              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2126              		@ link register save eliminated.
+ 2127 0000 80B4     		push	{r7}
+ 2128              		.cfi_def_cfa_offset 4
+ 2129              		.cfi_offset 7, -4
+ 2130 0002 00AF     		add	r7, sp, #0
+ 2131              		.cfi_def_cfa_register 7
+ 735:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL |= SDIO_CMDCTL_NINTEN;
+ 2132              		.loc 1 735 17
+ 2133 0004 044B     		ldr	r3, .L151
+ 2134 0006 1B68     		ldr	r3, [r3]
+ 2135 0008 034A     		ldr	r2, .L151
+ 2136 000a 43F40053 		orr	r3, r3, #8192
+ 2137 000e 1360     		str	r3, [r2]
+ 736:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 2138              		.loc 1 736 1
+ 2139 0010 00BF     		nop
+ 2140 0012 BD46     		mov	sp, r7
+ 2141              		.cfi_def_cfa_register 13
+ 2142              		@ sp needed
+ 2143 0014 80BC     		pop	{r7}
+ 2144              		.cfi_restore 7
+ 2145              		.cfi_def_cfa_offset 0
+ 2146 0016 7047     		bx	lr
+ 2147              	.L152:
+ 2148              		.align	2
+ 2149              	.L151:
+ 2150 0018 0C2C0140 		.word	1073818636
+ 2151              		.cfi_endproc
+ 2152              	.LFE166:
+ 2154              		.section	.text.sdio_ceata_command_completion_enable,"ax",%progbits
+ 2155              		.align	1
+ 2156              		.global	sdio_ceata_command_completion_enable
+ 2157              		.syntax unified
+ 2158              		.thumb
+ 2159              		.thumb_func
+ 2160              		.fpu softvfp
+ 2162              	sdio_ceata_command_completion_enable:
+ 2163              	.LFB167:
+ 737:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 738:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 739:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      enable the CE-ATA command completion signal(CE-ATA only)
+ 740:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 741:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 742:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 743:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 744:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_ceata_command_completion_enable(void)
+ 745:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 2164              		.loc 1 745 1
+ 2165              		.cfi_startproc
+ 2166              		@ args = 0, pretend = 0, frame = 0
+ 2167              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2168              		@ link register save eliminated.
+ 2169 0000 80B4     		push	{r7}
+ 2170              		.cfi_def_cfa_offset 4
+ 2171              		.cfi_offset 7, -4
+ 2172 0002 00AF     		add	r7, sp, #0
+ 2173              		.cfi_def_cfa_register 7
+ 746:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL |= SDIO_CMDCTL_ENCMDC;
+ 2174              		.loc 1 746 17
+ 2175 0004 044B     		ldr	r3, .L154
+ 2176 0006 1B68     		ldr	r3, [r3]
+ 2177 0008 034A     		ldr	r2, .L154
+ 2178 000a 43F48053 		orr	r3, r3, #4096
+ 2179 000e 1360     		str	r3, [r2]
+ 747:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 2180              		.loc 1 747 1
+ 2181 0010 00BF     		nop
+ 2182 0012 BD46     		mov	sp, r7
+ 2183              		.cfi_def_cfa_register 13
+ 2184              		@ sp needed
+ 2185 0014 80BC     		pop	{r7}
+ 2186              		.cfi_restore 7
+ 2187              		.cfi_def_cfa_offset 0
+ 2188 0016 7047     		bx	lr
+ 2189              	.L155:
+ 2190              		.align	2
+ 2191              	.L154:
+ 2192 0018 0C2C0140 		.word	1073818636
+ 2193              		.cfi_endproc
+ 2194              	.LFE167:
+ 2196              		.section	.text.sdio_ceata_command_completion_disable,"ax",%progbits
+ 2197              		.align	1
+ 2198              		.global	sdio_ceata_command_completion_disable
+ 2199              		.syntax unified
+ 2200              		.thumb
+ 2201              		.thumb_func
+ 2202              		.fpu softvfp
+ 2204              	sdio_ceata_command_completion_disable:
+ 2205              	.LFB168:
+ 748:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** 
+ 749:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** /*!
+ 750:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \brief      disable the CE-ATA command completion signal(CE-ATA only)
+ 751:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[in]  none
+ 752:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \param[out] none
+ 753:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     \retval     none
+ 754:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** */
+ 755:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** void sdio_ceata_command_completion_disable(void)
+ 756:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** {
+ 2206              		.loc 1 756 1
+ 2207              		.cfi_startproc
+ 2208              		@ args = 0, pretend = 0, frame = 0
+ 2209              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2210              		@ link register save eliminated.
+ 2211 0000 80B4     		push	{r7}
+ 2212              		.cfi_def_cfa_offset 4
+ 2213              		.cfi_offset 7, -4
+ 2214 0002 00AF     		add	r7, sp, #0
+ 2215              		.cfi_def_cfa_register 7
+ 757:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c ****     SDIO_CMDCTL &= ~SDIO_CMDCTL_ENCMDC;
+ 2216              		.loc 1 757 17
+ 2217 0004 044B     		ldr	r3, .L157
+ 2218 0006 1B68     		ldr	r3, [r3]
+ 2219 0008 034A     		ldr	r2, .L157
+ 2220 000a 23F48053 		bic	r3, r3, #4096
+ 2221 000e 1360     		str	r3, [r2]
+ 758:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_sdio.c **** }
+ 2222              		.loc 1 758 1
+ 2223 0010 00BF     		nop
+ 2224 0012 BD46     		mov	sp, r7
+ 2225              		.cfi_def_cfa_register 13
+ 2226              		@ sp needed
+ 2227 0014 80BC     		pop	{r7}
+ 2228              		.cfi_restore 7
+ 2229              		.cfi_def_cfa_offset 0
+ 2230 0016 7047     		bx	lr
+ 2231              	.L158:
+ 2232              		.align	2
+ 2233              	.L157:
+ 2234 0018 0C2C0140 		.word	1073818636
+ 2235              		.cfi_endproc
+ 2236              	.LFE168:
+ 2238              		.text
+ 2239              	.Letext0:
+ 2240              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 2241              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 2242              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 2243              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 2244              		.file 6 "../../CMSIS/gd32f4xx.h"
+ 2245              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_sdio.c
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:16     .text.sdio_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:24     .text.sdio_deinit:00000000 sdio_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:50     .text.sdio_clock_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:57     .text.sdio_clock_config:00000000 sdio_clock_config
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:134    .text.sdio_clock_config:0000005c $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:140    .text.sdio_hardware_clock_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:147    .text.sdio_hardware_clock_enable:00000000 sdio_hardware_clock_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:177    .text.sdio_hardware_clock_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:182    .text.sdio_hardware_clock_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:189    .text.sdio_hardware_clock_disable:00000000 sdio_hardware_clock_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:219    .text.sdio_hardware_clock_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:224    .text.sdio_bus_mode_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:231    .text.sdio_bus_mode_set:00000000 sdio_bus_mode_set
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:273    .text.sdio_bus_mode_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:278    .text.sdio_power_state_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:285    .text.sdio_power_state_set:00000000 sdio_power_state_set
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:319    .text.sdio_power_state_set:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:324    .text.sdio_power_state_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:331    .text.sdio_power_state_get:00000000 sdio_power_state_get
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:358    .text.sdio_power_state_get:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:363    .text.sdio_clock_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:370    .text.sdio_clock_enable:00000000 sdio_clock_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:400    .text.sdio_clock_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:405    .text.sdio_clock_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:412    .text.sdio_clock_disable:00000000 sdio_clock_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:442    .text.sdio_clock_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:447    .text.sdio_command_response_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:454    .text.sdio_command_response_config:00000000 sdio_command_response_config
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:521    .text.sdio_command_response_config:0000004c $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:527    .text.sdio_wait_type_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:534    .text.sdio_wait_type_set:00000000 sdio_wait_type_set
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:576    .text.sdio_wait_type_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:581    .text.sdio_csm_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:588    .text.sdio_csm_enable:00000000 sdio_csm_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:618    .text.sdio_csm_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:623    .text.sdio_csm_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:630    .text.sdio_csm_disable:00000000 sdio_csm_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:660    .text.sdio_csm_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:665    .text.sdio_command_index_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:672    .text.sdio_command_index_get:00000000 sdio_command_index_get
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:701    .text.sdio_command_index_get:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:706    .text.sdio_response_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:713    .text.sdio_response_get:00000000 sdio_response_get
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:738    .text.sdio_response_get:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:742    .text.sdio_response_get:00000028 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:795    .text.sdio_response_get:00000058 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:803    .text.sdio_data_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:810    .text.sdio_data_config:00000000 sdio_data_config
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:876    .text.sdio_data_config:00000050 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:883    .text.sdio_data_transfer_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:890    .text.sdio_data_transfer_config:00000000 sdio_data_transfer_config
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:945    .text.sdio_data_transfer_config:00000038 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:950    .text.sdio_dsm_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:957    .text.sdio_dsm_enable:00000000 sdio_dsm_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:987    .text.sdio_dsm_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:992    .text.sdio_dsm_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:999    .text.sdio_dsm_disable:00000000 sdio_dsm_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1029   .text.sdio_dsm_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1034   .text.sdio_data_write:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1041   .text.sdio_data_write:00000000 sdio_data_write
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1075   .text.sdio_data_write:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1080   .text.sdio_data_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1087   .text.sdio_data_read:00000000 sdio_data_read
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1114   .text.sdio_data_read:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1119   .text.sdio_data_counter_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1126   .text.sdio_data_counter_get:00000000 sdio_data_counter_get
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1153   .text.sdio_data_counter_get:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1158   .text.sdio_fifo_counter_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1165   .text.sdio_fifo_counter_get:00000000 sdio_fifo_counter_get
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1192   .text.sdio_fifo_counter_get:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1197   .text.sdio_dma_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1204   .text.sdio_dma_enable:00000000 sdio_dma_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1234   .text.sdio_dma_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1239   .text.sdio_dma_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1246   .text.sdio_dma_disable:00000000 sdio_dma_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1276   .text.sdio_dma_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1281   .text.sdio_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1288   .text.sdio_flag_get:00000000 sdio_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1335   .text.sdio_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1340   .text.sdio_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1347   .text.sdio_flag_clear:00000000 sdio_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1381   .text.sdio_flag_clear:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1386   .text.sdio_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1393   .text.sdio_interrupt_enable:00000000 sdio_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1429   .text.sdio_interrupt_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1434   .text.sdio_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1441   .text.sdio_interrupt_disable:00000000 sdio_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1480   .text.sdio_interrupt_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1485   .text.sdio_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1492   .text.sdio_interrupt_flag_get:00000000 sdio_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1539   .text.sdio_interrupt_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1544   .text.sdio_interrupt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1551   .text.sdio_interrupt_flag_clear:00000000 sdio_interrupt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1585   .text.sdio_interrupt_flag_clear:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1590   .text.sdio_readwait_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1597   .text.sdio_readwait_enable:00000000 sdio_readwait_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1627   .text.sdio_readwait_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1632   .text.sdio_readwait_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1639   .text.sdio_readwait_disable:00000000 sdio_readwait_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1669   .text.sdio_readwait_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1674   .text.sdio_stop_readwait_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1681   .text.sdio_stop_readwait_enable:00000000 sdio_stop_readwait_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1711   .text.sdio_stop_readwait_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1716   .text.sdio_stop_readwait_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1723   .text.sdio_stop_readwait_disable:00000000 sdio_stop_readwait_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1753   .text.sdio_stop_readwait_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1758   .text.sdio_readwait_type_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1765   .text.sdio_readwait_type_set:00000000 sdio_readwait_type_set
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1814   .text.sdio_readwait_type_set:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1819   .text.sdio_operation_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1826   .text.sdio_operation_enable:00000000 sdio_operation_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1856   .text.sdio_operation_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1861   .text.sdio_operation_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1868   .text.sdio_operation_disable:00000000 sdio_operation_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1898   .text.sdio_operation_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1903   .text.sdio_suspend_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1910   .text.sdio_suspend_enable:00000000 sdio_suspend_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1940   .text.sdio_suspend_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1945   .text.sdio_suspend_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1952   .text.sdio_suspend_disable:00000000 sdio_suspend_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1982   .text.sdio_suspend_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1987   .text.sdio_ceata_command_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:1994   .text.sdio_ceata_command_enable:00000000 sdio_ceata_command_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2024   .text.sdio_ceata_command_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2029   .text.sdio_ceata_command_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2036   .text.sdio_ceata_command_disable:00000000 sdio_ceata_command_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2066   .text.sdio_ceata_command_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2071   .text.sdio_ceata_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2078   .text.sdio_ceata_interrupt_enable:00000000 sdio_ceata_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2108   .text.sdio_ceata_interrupt_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2113   .text.sdio_ceata_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2120   .text.sdio_ceata_interrupt_disable:00000000 sdio_ceata_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2150   .text.sdio_ceata_interrupt_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2155   .text.sdio_ceata_command_completion_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2162   .text.sdio_ceata_command_completion_enable:00000000 sdio_ceata_command_completion_enable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2192   .text.sdio_ceata_command_completion_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2197   .text.sdio_ceata_command_completion_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2204   .text.sdio_ceata_command_completion_disable:00000000 sdio_ceata_command_completion_disable
+C:\Users\leonardo\AppData\Local\Temp\ccPVog1U.s:2234   .text.sdio_ceata_command_completion_disable:00000018 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_sdio.h.18.303820f5e18d4b6bfe5305e7f86026eb
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

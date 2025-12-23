@@ -1,0 +1,458 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"systick.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.bss.fac_us,"aw",%nobits
+  18              	fac_us:
+  19 0000 00       		.space	1
+  20              		.section	.bss.fac_ms,"aw",%nobits
+  21              		.align	1
+  24              	fac_ms:
+  25 0000 0000     		.space	2
+  26              		.section	.text.SystickInit,"ax",%progbits
+  27              		.align	1
+  28              		.global	SystickInit
+  29              		.arch armv7e-m
+  30              		.syntax unified
+  31              		.thumb
+  32              		.thumb_func
+  33              		.fpu softvfp
+  35              	SystickInit:
+  36              	.LFB156:
+  37              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys/systick.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** static uint8_t  fac_us=0; 
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** static uint16_t fac_ms=0; 
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** void SystickInit(void)
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** {
+  38              		.loc 1 30 1
+  39              		.cfi_startproc
+  40              		@ args = 0, pretend = 0, frame = 8
+  41              		@ frame_needed = 1, uses_anonymous_args = 0
+  42 0000 80B5     		push	{r7, lr}
+  43              		.cfi_def_cfa_offset 8
+  44              		.cfi_offset 7, -8
+  45              		.cfi_offset 14, -4
+  46 0002 82B0     		sub	sp, sp, #8
+  47              		.cfi_def_cfa_offset 16
+  48 0004 00AF     		add	r7, sp, #0
+  49              		.cfi_def_cfa_register 7
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     uint8_t sysclk_mhz = 0;
+  50              		.loc 1 31 13
+  51 0006 0023     		movs	r3, #0
+  52 0008 FB71     		strb	r3, [r7, #7]
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     systick_clksource_set(SYSTICK_CLKSOURCE_HCLK_DIV8);
+  53              		.loc 1 32 5
+  54 000a 6FF00400 		mvn	r0, #4
+  55 000e FFF7FEFF 		bl	systick_clksource_set
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     sysclk_mhz = SYSTERM_CLK / 1000000;
+  56              		.loc 1 35 16
+  57 0012 C823     		movs	r3, #200
+  58 0014 FB71     		strb	r3, [r7, #7]
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     fac_us = sysclk_mhz / 8;
+  59              		.loc 1 36 12
+  60 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  61 0018 DB08     		lsrs	r3, r3, #3
+  62 001a DAB2     		uxtb	r2, r3
+  63 001c 084B     		ldr	r3, .L2
+  64 001e 1A70     		strb	r2, [r3]
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     fac_ms = (uint16_t)fac_us * 1000;
+  65              		.loc 1 37 12
+  66 0020 074B     		ldr	r3, .L2
+  67 0022 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  68 0024 9BB2     		uxth	r3, r3
+  69 0026 1A46     		mov	r2, r3	@ movhi
+  70 0028 5201     		lsls	r2, r2, #5
+  71 002a D21A     		subs	r2, r2, r3
+  72 002c 9200     		lsls	r2, r2, #2
+  73 002e 1344     		add	r3, r3, r2
+  74 0030 DB00     		lsls	r3, r3, #3
+  75 0032 9AB2     		uxth	r2, r3
+  76 0034 034B     		ldr	r3, .L2+4
+  77 0036 1A80     		strh	r2, [r3]	@ movhi
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** }
+  78              		.loc 1 38 1
+  79 0038 00BF     		nop
+  80 003a 0837     		adds	r7, r7, #8
+  81              		.cfi_def_cfa_offset 8
+  82 003c BD46     		mov	sp, r7
+  83              		.cfi_def_cfa_register 13
+  84              		@ sp needed
+  85 003e 80BD     		pop	{r7, pc}
+  86              	.L3:
+  87              		.align	2
+  88              	.L2:
+  89 0040 00000000 		.word	fac_us
+  90 0044 00000000 		.word	fac_ms
+  91              		.cfi_endproc
+  92              	.LFE156:
+  94              		.section	.text.systick_dly_us,"ax",%progbits
+  95              		.align	1
+  96              		.global	systick_dly_us
+  97              		.syntax unified
+  98              		.thumb
+  99              		.thumb_func
+ 100              		.fpu softvfp
+ 102              	systick_dly_us:
+ 103              	.LFB157:
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** void systick_dly_us(uint32_t nus)
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** {
+ 104              		.loc 1 41 1
+ 105              		.cfi_startproc
+ 106              		@ args = 0, pretend = 0, frame = 16
+ 107              		@ frame_needed = 1, uses_anonymous_args = 0
+ 108              		@ link register save eliminated.
+ 109 0000 80B4     		push	{r7}
+ 110              		.cfi_def_cfa_offset 4
+ 111              		.cfi_offset 7, -4
+ 112 0002 85B0     		sub	sp, sp, #20
+ 113              		.cfi_def_cfa_offset 24
+ 114 0004 00AF     		add	r7, sp, #0
+ 115              		.cfi_def_cfa_register 7
+ 116 0006 7860     		str	r0, [r7, #4]
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     uint32_t temp;
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->LOAD = nus * fac_us;
+ 117              		.loc 1 45 25
+ 118 0008 154B     		ldr	r3, .L7
+ 119 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 120 000c 1946     		mov	r1, r3
+ 121              		.loc 1 45 12
+ 122 000e 154A     		ldr	r2, .L7+4
+ 123              		.loc 1 45 25
+ 124 0010 7B68     		ldr	r3, [r7, #4]
+ 125 0012 03FB01F3 		mul	r3, r3, r1
+ 126              		.loc 1 45 19
+ 127 0016 5360     		str	r3, [r2, #4]
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->VAL = 0x00;
+ 128              		.loc 1 47 12
+ 129 0018 124B     		ldr	r3, .L7+4
+ 130              		.loc 1 47 18
+ 131 001a 0022     		movs	r2, #0
+ 132 001c 9A60     		str	r2, [r3, #8]
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+ 133              		.loc 1 49 19
+ 134 001e 114B     		ldr	r3, .L7+4
+ 135 0020 1B68     		ldr	r3, [r3]
+ 136 0022 104A     		ldr	r2, .L7+4
+ 137 0024 43F00103 		orr	r3, r3, #1
+ 138 0028 1360     		str	r3, [r2]
+ 139              	.L6:
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     do
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     {
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****         temp=SysTick->CTRL;
+ 140              		.loc 1 52 21 discriminator 2
+ 141 002a 0E4B     		ldr	r3, .L7+4
+ 142              		.loc 1 52 13 discriminator 2
+ 143 002c 1B68     		ldr	r3, [r3]
+ 144 002e FB60     		str	r3, [r7, #12]
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     }
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     while((temp & 0x01)&& !(temp & (1<<16)));
+ 145              		.loc 1 54 17 discriminator 2
+ 146 0030 FB68     		ldr	r3, [r7, #12]
+ 147 0032 03F00103 		and	r3, r3, #1
+ 148              		.loc 1 54 5 discriminator 2
+ 149 0036 002B     		cmp	r3, #0
+ 150 0038 04D0     		beq	.L5
+ 151              		.loc 1 54 34 discriminator 1
+ 152 003a FB68     		ldr	r3, [r7, #12]
+ 153 003c 03F48033 		and	r3, r3, #65536
+ 154              		.loc 1 54 24 discriminator 1
+ 155 0040 002B     		cmp	r3, #0
+ 156 0042 F2D0     		beq	.L6
+ 157              	.L5:
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
+ 158              		.loc 1 56 19
+ 159 0044 074B     		ldr	r3, .L7+4
+ 160 0046 1B68     		ldr	r3, [r3]
+ 161 0048 064A     		ldr	r2, .L7+4
+ 162 004a 23F00103 		bic	r3, r3, #1
+ 163 004e 1360     		str	r3, [r2]
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->VAL = 0x00;
+ 164              		.loc 1 58 12
+ 165 0050 044B     		ldr	r3, .L7+4
+ 166              		.loc 1 58 18
+ 167 0052 0022     		movs	r2, #0
+ 168 0054 9A60     		str	r2, [r3, #8]
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** }
+ 169              		.loc 1 59 1
+ 170 0056 00BF     		nop
+ 171 0058 1437     		adds	r7, r7, #20
+ 172              		.cfi_def_cfa_offset 4
+ 173 005a BD46     		mov	sp, r7
+ 174              		.cfi_def_cfa_register 13
+ 175              		@ sp needed
+ 176 005c 80BC     		pop	{r7}
+ 177              		.cfi_restore 7
+ 178              		.cfi_def_cfa_offset 0
+ 179 005e 7047     		bx	lr
+ 180              	.L8:
+ 181              		.align	2
+ 182              	.L7:
+ 183 0060 00000000 		.word	fac_us
+ 184 0064 10E000E0 		.word	-536813552
+ 185              		.cfi_endproc
+ 186              	.LFE157:
+ 188              		.section	.text.systick_dly_ms,"ax",%progbits
+ 189              		.align	1
+ 190              		.global	systick_dly_ms
+ 191              		.syntax unified
+ 192              		.thumb
+ 193              		.thumb_func
+ 194              		.fpu softvfp
+ 196              	systick_dly_ms:
+ 197              	.LFB158:
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** void systick_dly_ms(uint16_t nms)
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** {
+ 198              		.loc 1 62 1
+ 199              		.cfi_startproc
+ 200              		@ args = 0, pretend = 0, frame = 16
+ 201              		@ frame_needed = 1, uses_anonymous_args = 0
+ 202              		@ link register save eliminated.
+ 203 0000 80B4     		push	{r7}
+ 204              		.cfi_def_cfa_offset 4
+ 205              		.cfi_offset 7, -4
+ 206 0002 85B0     		sub	sp, sp, #20
+ 207              		.cfi_def_cfa_offset 24
+ 208 0004 00AF     		add	r7, sp, #0
+ 209              		.cfi_def_cfa_register 7
+ 210 0006 0346     		mov	r3, r0
+ 211 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     uint32_t temp;
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** 
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->LOAD=(uint32_t)nms * fac_ms;
+ 212              		.loc 1 66 19
+ 213 000a FB88     		ldrh	r3, [r7, #6]
+ 214              		.loc 1 66 33
+ 215 000c 154A     		ldr	r2, .L12
+ 216 000e 1288     		ldrh	r2, [r2]
+ 217 0010 1146     		mov	r1, r2
+ 218              		.loc 1 66 12
+ 219 0012 154A     		ldr	r2, .L12+4
+ 220              		.loc 1 66 33
+ 221 0014 01FB03F3 		mul	r3, r1, r3
+ 222              		.loc 1 66 18
+ 223 0018 5360     		str	r3, [r2, #4]
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->VAL = 0x00;
+ 224              		.loc 1 68 12
+ 225 001a 134B     		ldr	r3, .L12+4
+ 226              		.loc 1 68 18
+ 227 001c 0022     		movs	r2, #0
+ 228 001e 9A60     		str	r2, [r3, #8]
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk ;
+ 229              		.loc 1 70 19
+ 230 0020 114B     		ldr	r3, .L12+4
+ 231 0022 1B68     		ldr	r3, [r3]
+ 232 0024 104A     		ldr	r2, .L12+4
+ 233 0026 43F00103 		orr	r3, r3, #1
+ 234 002a 1360     		str	r3, [r2]
+ 235              	.L11:
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     do
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     {
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****         temp = SysTick->CTRL;
+ 236              		.loc 1 73 23 discriminator 2
+ 237 002c 0E4B     		ldr	r3, .L12+4
+ 238              		.loc 1 73 14 discriminator 2
+ 239 002e 1B68     		ldr	r3, [r3]
+ 240 0030 FB60     		str	r3, [r7, #12]
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     }
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     while((temp & 0x01)&& !(temp & (1<<16)));
+ 241              		.loc 1 75 17 discriminator 2
+ 242 0032 FB68     		ldr	r3, [r7, #12]
+ 243 0034 03F00103 		and	r3, r3, #1
+ 244              		.loc 1 75 5 discriminator 2
+ 245 0038 002B     		cmp	r3, #0
+ 246 003a 04D0     		beq	.L10
+ 247              		.loc 1 75 34 discriminator 1
+ 248 003c FB68     		ldr	r3, [r7, #12]
+ 249 003e 03F48033 		and	r3, r3, #65536
+ 250              		.loc 1 75 24 discriminator 1
+ 251 0042 002B     		cmp	r3, #0
+ 252 0044 F2D0     		beq	.L11
+ 253              	.L10:
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->CTRL &= ~SysTick_CTRL_ENABLE_Msk;
+ 254              		.loc 1 77 19
+ 255 0046 084B     		ldr	r3, .L12+4
+ 256 0048 1B68     		ldr	r3, [r3]
+ 257 004a 074A     		ldr	r2, .L12+4
+ 258 004c 23F00103 		bic	r3, r3, #1
+ 259 0050 1360     		str	r3, [r2]
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c ****     SysTick->VAL = 0x00;
+ 260              		.loc 1 79 12
+ 261 0052 054B     		ldr	r3, .L12+4
+ 262              		.loc 1 79 18
+ 263 0054 0022     		movs	r2, #0
+ 264 0056 9A60     		str	r2, [r3, #8]
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\systick.c **** }
+ 265              		.loc 1 80 1
+ 266 0058 00BF     		nop
+ 267 005a 1437     		adds	r7, r7, #20
+ 268              		.cfi_def_cfa_offset 4
+ 269 005c BD46     		mov	sp, r7
+ 270              		.cfi_def_cfa_register 13
+ 271              		@ sp needed
+ 272 005e 80BC     		pop	{r7}
+ 273              		.cfi_restore 7
+ 274              		.cfi_def_cfa_offset 0
+ 275 0060 7047     		bx	lr
+ 276              	.L13:
+ 277 0062 00BF     		.align	2
+ 278              	.L12:
+ 279 0064 00000000 		.word	fac_ms
+ 280 0068 10E000E0 		.word	-536813552
+ 281              		.cfi_endproc
+ 282              	.LFE158:
+ 284              		.text
+ 285              	.Letext0:
+ 286              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 287              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 288              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 289              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 290              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 291              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 292              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 293              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 294              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 295              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 296              		.file 12 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 297              		.file 13 "../../Dawn/DawnLib/dawn_lib.h"
+ 298              		.file 14 "../../Dawn/DawnBsp/timebase.h"
+ 299              		.file 15 "../../Dawn/DawnCom/unpack.h"
+ 300              		.file 16 "../../Dawn/DawnDevice/icm206xx.h"
+ 301              		.file 17 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 302              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 303              		.file 19 "../../Dawn/DawnMain/dawn_function.h"
+ 304              		.file 20 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 systick.c
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:18     .bss.fac_us:00000000 fac_us
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:19     .bss.fac_us:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:21     .bss.fac_ms:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:24     .bss.fac_ms:00000000 fac_ms
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:27     .text.SystickInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:35     .text.SystickInit:00000000 SystickInit
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:89     .text.SystickInit:00000040 $d
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:95     .text.systick_dly_us:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:102    .text.systick_dly_us:00000000 systick_dly_us
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:183    .text.systick_dly_us:00000060 $d
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:189    .text.systick_dly_ms:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:196    .text.systick_dly_ms:00000000 systick_dly_ms
+C:\Users\leonardo\AppData\Local\Temp\ccvidAYL.s:279    .text.systick_dly_ms:00000064 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+UNDEFINED SYMBOLS
+systick_clksource_set

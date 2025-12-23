@@ -1,0 +1,1609 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_dci.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.dci_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	dci_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	dci_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_dci.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \file  gd32f4xx_dci.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief DCI driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** #include "gd32f4xx_dci.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      DCI deinit
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+  27              		.loc 1 21 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     rcu_periph_reset_enable(RCU_DCIRST);
+  37              		.loc 1 22 5
+  38 0004 4FF4A060 		mov	r0, #1280
+  39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     rcu_periph_reset_disable(RCU_DCIRST);
+  40              		.loc 1 23 5
+  41 000c 4FF4A060 		mov	r0, #1280
+  42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+  43              		.loc 1 24 1
+  44 0014 00BF     		nop
+  45 0016 80BD     		pop	{r7, pc}
+  46              		.cfi_endproc
+  47              	.LFE123:
+  49              		.section	.text.dci_init,"ax",%progbits
+  50              		.align	1
+  51              		.global	dci_init
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	dci_init:
+  58              	.LFB124:
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      initialize DCI registers
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  dci_struct: DCI parameter initialization stuct
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****                 members of the structure and the member values are shown as below:
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****                 capture_mode    : DCI_CAPTURE_MODE_CONTINUOUS, DCI_CAPTURE_MODE_SNAPSHOT
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****                 colck_polarity  : DCI_CK_POLARITY_FALLING, DCI_CK_POLARITY_RISING
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****                 hsync_polarity  : DCI_HSYNC_POLARITY_LOW, DCI_HSYNC_POLARITY_HIGH                  
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****                 vsync_polarity  : DCI_VSYNC_POLARITY_LOW, DCI_VSYNC_POLARITY_HIGH
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****                 frame_rate      : DCI_FRAME_RATE_ALL, DCI_FRAME_RATE_1_2, DCI_FRAME_RATE_1_4
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****                 interface_format: DCI_INTERFACE_FORMAT_8BITS, DCI_INTERFACE_FORMAT_10BITS,
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****                                       DCI_INTERFACE_FORMAT_12BITS, DCI_INTERFACE_FORMAT_14BITS
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_init(dci_parameter_struct* dci_struct)
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+  59              		.loc 1 41 1
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 16
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 80B4     		push	{r7}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 7, -4
+  67 0002 85B0     		sub	sp, sp, #20
+  68              		.cfi_def_cfa_offset 24
+  69 0004 00AF     		add	r7, sp, #0
+  70              		.cfi_def_cfa_register 7
+  71 0006 7860     		str	r0, [r7, #4]
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     uint32_t reg =0U;
+  72              		.loc 1 42 14
+  73 0008 0023     		movs	r3, #0
+  74 000a FB60     		str	r3, [r7, #12]
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     /* disable capture function and DCI */
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL &= ~(DCI_CTL_CAP | DCI_CTL_DCIEN);
+  75              		.loc 1 44 13
+  76 000c 164B     		ldr	r3, .L3
+  77 000e 1B68     		ldr	r3, [r3]
+  78 0010 154A     		ldr	r2, .L3
+  79 0012 23F48043 		bic	r3, r3, #16384
+  80 0016 23F00103 		bic	r3, r3, #1
+  81 001a 1360     		str	r3, [r2]
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     /* config DCI parameter */
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     reg |= dci_struct->capture_mode;
+  82              		.loc 1 46 22
+  83 001c 7B68     		ldr	r3, [r7, #4]
+  84 001e 1B68     		ldr	r3, [r3]
+  85              		.loc 1 46 9
+  86 0020 FA68     		ldr	r2, [r7, #12]
+  87 0022 1343     		orrs	r3, r3, r2
+  88 0024 FB60     		str	r3, [r7, #12]
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     reg |= dci_struct->clock_polarity;
+  89              		.loc 1 47 22
+  90 0026 7B68     		ldr	r3, [r7, #4]
+  91 0028 5B68     		ldr	r3, [r3, #4]
+  92              		.loc 1 47 9
+  93 002a FA68     		ldr	r2, [r7, #12]
+  94 002c 1343     		orrs	r3, r3, r2
+  95 002e FB60     		str	r3, [r7, #12]
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     reg |= dci_struct->hsync_polarity;
+  96              		.loc 1 48 22
+  97 0030 7B68     		ldr	r3, [r7, #4]
+  98 0032 9B68     		ldr	r3, [r3, #8]
+  99              		.loc 1 48 9
+ 100 0034 FA68     		ldr	r2, [r7, #12]
+ 101 0036 1343     		orrs	r3, r3, r2
+ 102 0038 FB60     		str	r3, [r7, #12]
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     reg |= dci_struct->vsync_polarity;
+ 103              		.loc 1 49 22
+ 104 003a 7B68     		ldr	r3, [r7, #4]
+ 105 003c DB68     		ldr	r3, [r3, #12]
+ 106              		.loc 1 49 9
+ 107 003e FA68     		ldr	r2, [r7, #12]
+ 108 0040 1343     		orrs	r3, r3, r2
+ 109 0042 FB60     		str	r3, [r7, #12]
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     reg |= dci_struct->frame_rate;
+ 110              		.loc 1 50 22
+ 111 0044 7B68     		ldr	r3, [r7, #4]
+ 112 0046 1B69     		ldr	r3, [r3, #16]
+ 113              		.loc 1 50 9
+ 114 0048 FA68     		ldr	r2, [r7, #12]
+ 115 004a 1343     		orrs	r3, r3, r2
+ 116 004c FB60     		str	r3, [r7, #12]
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     reg |= dci_struct->interface_format;
+ 117              		.loc 1 51 22
+ 118 004e 7B68     		ldr	r3, [r7, #4]
+ 119 0050 5B69     		ldr	r3, [r3, #20]
+ 120              		.loc 1 51 9
+ 121 0052 FA68     		ldr	r2, [r7, #12]
+ 122 0054 1343     		orrs	r3, r3, r2
+ 123 0056 FB60     		str	r3, [r7, #12]
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL = reg;
+ 124              		.loc 1 53 5
+ 125 0058 034A     		ldr	r2, .L3
+ 126              		.loc 1 53 13
+ 127 005a FB68     		ldr	r3, [r7, #12]
+ 128 005c 1360     		str	r3, [r2]
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 129              		.loc 1 54 1
+ 130 005e 00BF     		nop
+ 131 0060 1437     		adds	r7, r7, #20
+ 132              		.cfi_def_cfa_offset 4
+ 133 0062 BD46     		mov	sp, r7
+ 134              		.cfi_def_cfa_register 13
+ 135              		@ sp needed
+ 136 0064 80BC     		pop	{r7}
+ 137              		.cfi_restore 7
+ 138              		.cfi_def_cfa_offset 0
+ 139 0066 7047     		bx	lr
+ 140              	.L4:
+ 141              		.align	2
+ 142              	.L3:
+ 143 0068 00000550 		.word	1342504960
+ 144              		.cfi_endproc
+ 145              	.LFE124:
+ 147              		.section	.text.dci_enable,"ax",%progbits
+ 148              		.align	1
+ 149              		.global	dci_enable
+ 150              		.syntax unified
+ 151              		.thumb
+ 152              		.thumb_func
+ 153              		.fpu softvfp
+ 155              	dci_enable:
+ 156              	.LFB125:
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      enable DCI function 
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_enable(void)
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 157              		.loc 1 63 1
+ 158              		.cfi_startproc
+ 159              		@ args = 0, pretend = 0, frame = 0
+ 160              		@ frame_needed = 1, uses_anonymous_args = 0
+ 161              		@ link register save eliminated.
+ 162 0000 80B4     		push	{r7}
+ 163              		.cfi_def_cfa_offset 4
+ 164              		.cfi_offset 7, -4
+ 165 0002 00AF     		add	r7, sp, #0
+ 166              		.cfi_def_cfa_register 7
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL |= DCI_CTL_DCIEN;    
+ 167              		.loc 1 64 13
+ 168 0004 044B     		ldr	r3, .L6
+ 169 0006 1B68     		ldr	r3, [r3]
+ 170 0008 034A     		ldr	r2, .L6
+ 171 000a 43F48043 		orr	r3, r3, #16384
+ 172 000e 1360     		str	r3, [r2]
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 173              		.loc 1 65 1
+ 174 0010 00BF     		nop
+ 175 0012 BD46     		mov	sp, r7
+ 176              		.cfi_def_cfa_register 13
+ 177              		@ sp needed
+ 178 0014 80BC     		pop	{r7}
+ 179              		.cfi_restore 7
+ 180              		.cfi_def_cfa_offset 0
+ 181 0016 7047     		bx	lr
+ 182              	.L7:
+ 183              		.align	2
+ 184              	.L6:
+ 185 0018 00000550 		.word	1342504960
+ 186              		.cfi_endproc
+ 187              	.LFE125:
+ 189              		.section	.text.dci_disable,"ax",%progbits
+ 190              		.align	1
+ 191              		.global	dci_disable
+ 192              		.syntax unified
+ 193              		.thumb
+ 194              		.thumb_func
+ 195              		.fpu softvfp
+ 197              	dci_disable:
+ 198              	.LFB126:
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      disable DCI function 
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_disable(void)
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 199              		.loc 1 74 1
+ 200              		.cfi_startproc
+ 201              		@ args = 0, pretend = 0, frame = 0
+ 202              		@ frame_needed = 1, uses_anonymous_args = 0
+ 203              		@ link register save eliminated.
+ 204 0000 80B4     		push	{r7}
+ 205              		.cfi_def_cfa_offset 4
+ 206              		.cfi_offset 7, -4
+ 207 0002 00AF     		add	r7, sp, #0
+ 208              		.cfi_def_cfa_register 7
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL &= ~DCI_CTL_DCIEN;
+ 209              		.loc 1 75 13
+ 210 0004 044B     		ldr	r3, .L9
+ 211 0006 1B68     		ldr	r3, [r3]
+ 212 0008 034A     		ldr	r2, .L9
+ 213 000a 23F48043 		bic	r3, r3, #16384
+ 214 000e 1360     		str	r3, [r2]
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 215              		.loc 1 76 1
+ 216 0010 00BF     		nop
+ 217 0012 BD46     		mov	sp, r7
+ 218              		.cfi_def_cfa_register 13
+ 219              		@ sp needed
+ 220 0014 80BC     		pop	{r7}
+ 221              		.cfi_restore 7
+ 222              		.cfi_def_cfa_offset 0
+ 223 0016 7047     		bx	lr
+ 224              	.L10:
+ 225              		.align	2
+ 226              	.L9:
+ 227 0018 00000550 		.word	1342504960
+ 228              		.cfi_endproc
+ 229              	.LFE126:
+ 231              		.section	.text.dci_capture_enable,"ax",%progbits
+ 232              		.align	1
+ 233              		.global	dci_capture_enable
+ 234              		.syntax unified
+ 235              		.thumb
+ 236              		.thumb_func
+ 237              		.fpu softvfp
+ 239              	dci_capture_enable:
+ 240              	.LFB127:
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      enable DCI capture 
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_capture_enable(void)
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 241              		.loc 1 85 1
+ 242              		.cfi_startproc
+ 243              		@ args = 0, pretend = 0, frame = 0
+ 244              		@ frame_needed = 1, uses_anonymous_args = 0
+ 245              		@ link register save eliminated.
+ 246 0000 80B4     		push	{r7}
+ 247              		.cfi_def_cfa_offset 4
+ 248              		.cfi_offset 7, -4
+ 249 0002 00AF     		add	r7, sp, #0
+ 250              		.cfi_def_cfa_register 7
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL |= DCI_CTL_CAP;
+ 251              		.loc 1 86 13
+ 252 0004 044B     		ldr	r3, .L12
+ 253 0006 1B68     		ldr	r3, [r3]
+ 254 0008 034A     		ldr	r2, .L12
+ 255 000a 43F00103 		orr	r3, r3, #1
+ 256 000e 1360     		str	r3, [r2]
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 257              		.loc 1 87 1
+ 258 0010 00BF     		nop
+ 259 0012 BD46     		mov	sp, r7
+ 260              		.cfi_def_cfa_register 13
+ 261              		@ sp needed
+ 262 0014 80BC     		pop	{r7}
+ 263              		.cfi_restore 7
+ 264              		.cfi_def_cfa_offset 0
+ 265 0016 7047     		bx	lr
+ 266              	.L13:
+ 267              		.align	2
+ 268              	.L12:
+ 269 0018 00000550 		.word	1342504960
+ 270              		.cfi_endproc
+ 271              	.LFE127:
+ 273              		.section	.text.dci_capture_disable,"ax",%progbits
+ 274              		.align	1
+ 275              		.global	dci_capture_disable
+ 276              		.syntax unified
+ 277              		.thumb
+ 278              		.thumb_func
+ 279              		.fpu softvfp
+ 281              	dci_capture_disable:
+ 282              	.LFB128:
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      disable DCI capture 
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_capture_disable(void)
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 283              		.loc 1 96 1
+ 284              		.cfi_startproc
+ 285              		@ args = 0, pretend = 0, frame = 0
+ 286              		@ frame_needed = 1, uses_anonymous_args = 0
+ 287              		@ link register save eliminated.
+ 288 0000 80B4     		push	{r7}
+ 289              		.cfi_def_cfa_offset 4
+ 290              		.cfi_offset 7, -4
+ 291 0002 00AF     		add	r7, sp, #0
+ 292              		.cfi_def_cfa_register 7
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL &= ~DCI_CTL_CAP;
+ 293              		.loc 1 97 13
+ 294 0004 044B     		ldr	r3, .L15
+ 295 0006 1B68     		ldr	r3, [r3]
+ 296 0008 034A     		ldr	r2, .L15
+ 297 000a 23F00103 		bic	r3, r3, #1
+ 298 000e 1360     		str	r3, [r2]
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 299              		.loc 1 98 1
+ 300 0010 00BF     		nop
+ 301 0012 BD46     		mov	sp, r7
+ 302              		.cfi_def_cfa_register 13
+ 303              		@ sp needed
+ 304 0014 80BC     		pop	{r7}
+ 305              		.cfi_restore 7
+ 306              		.cfi_def_cfa_offset 0
+ 307 0016 7047     		bx	lr
+ 308              	.L16:
+ 309              		.align	2
+ 310              	.L15:
+ 311 0018 00000550 		.word	1342504960
+ 312              		.cfi_endproc
+ 313              	.LFE128:
+ 315              		.section	.text.dci_jpeg_enable,"ax",%progbits
+ 316              		.align	1
+ 317              		.global	dci_jpeg_enable
+ 318              		.syntax unified
+ 319              		.thumb
+ 320              		.thumb_func
+ 321              		.fpu softvfp
+ 323              	dci_jpeg_enable:
+ 324              	.LFB129:
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      enable DCI jpeg mode 
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_jpeg_enable(void)
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 325              		.loc 1 107 1
+ 326              		.cfi_startproc
+ 327              		@ args = 0, pretend = 0, frame = 0
+ 328              		@ frame_needed = 1, uses_anonymous_args = 0
+ 329              		@ link register save eliminated.
+ 330 0000 80B4     		push	{r7}
+ 331              		.cfi_def_cfa_offset 4
+ 332              		.cfi_offset 7, -4
+ 333 0002 00AF     		add	r7, sp, #0
+ 334              		.cfi_def_cfa_register 7
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL |= DCI_CTL_JM;
+ 335              		.loc 1 108 13
+ 336 0004 044B     		ldr	r3, .L18
+ 337 0006 1B68     		ldr	r3, [r3]
+ 338 0008 034A     		ldr	r2, .L18
+ 339 000a 43F00803 		orr	r3, r3, #8
+ 340 000e 1360     		str	r3, [r2]
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 341              		.loc 1 109 1
+ 342 0010 00BF     		nop
+ 343 0012 BD46     		mov	sp, r7
+ 344              		.cfi_def_cfa_register 13
+ 345              		@ sp needed
+ 346 0014 80BC     		pop	{r7}
+ 347              		.cfi_restore 7
+ 348              		.cfi_def_cfa_offset 0
+ 349 0016 7047     		bx	lr
+ 350              	.L19:
+ 351              		.align	2
+ 352              	.L18:
+ 353 0018 00000550 		.word	1342504960
+ 354              		.cfi_endproc
+ 355              	.LFE129:
+ 357              		.section	.text.dci_jpeg_disable,"ax",%progbits
+ 358              		.align	1
+ 359              		.global	dci_jpeg_disable
+ 360              		.syntax unified
+ 361              		.thumb
+ 362              		.thumb_func
+ 363              		.fpu softvfp
+ 365              	dci_jpeg_disable:
+ 366              	.LFB130:
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      disable DCI jpeg mode 
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_jpeg_disable(void)
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 367              		.loc 1 118 1
+ 368              		.cfi_startproc
+ 369              		@ args = 0, pretend = 0, frame = 0
+ 370              		@ frame_needed = 1, uses_anonymous_args = 0
+ 371              		@ link register save eliminated.
+ 372 0000 80B4     		push	{r7}
+ 373              		.cfi_def_cfa_offset 4
+ 374              		.cfi_offset 7, -4
+ 375 0002 00AF     		add	r7, sp, #0
+ 376              		.cfi_def_cfa_register 7
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL &= ~DCI_CTL_JM;
+ 377              		.loc 1 119 13
+ 378 0004 044B     		ldr	r3, .L21
+ 379 0006 1B68     		ldr	r3, [r3]
+ 380 0008 034A     		ldr	r2, .L21
+ 381 000a 23F00803 		bic	r3, r3, #8
+ 382 000e 1360     		str	r3, [r2]
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 383              		.loc 1 120 1
+ 384 0010 00BF     		nop
+ 385 0012 BD46     		mov	sp, r7
+ 386              		.cfi_def_cfa_register 13
+ 387              		@ sp needed
+ 388 0014 80BC     		pop	{r7}
+ 389              		.cfi_restore 7
+ 390              		.cfi_def_cfa_offset 0
+ 391 0016 7047     		bx	lr
+ 392              	.L22:
+ 393              		.align	2
+ 394              	.L21:
+ 395 0018 00000550 		.word	1342504960
+ 396              		.cfi_endproc
+ 397              	.LFE130:
+ 399              		.section	.text.dci_crop_window_enable,"ax",%progbits
+ 400              		.align	1
+ 401              		.global	dci_crop_window_enable
+ 402              		.syntax unified
+ 403              		.thumb
+ 404              		.thumb_func
+ 405              		.fpu softvfp
+ 407              	dci_crop_window_enable:
+ 408              	.LFB131:
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      enable cropping window function
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_crop_window_enable(void)
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 409              		.loc 1 129 1
+ 410              		.cfi_startproc
+ 411              		@ args = 0, pretend = 0, frame = 0
+ 412              		@ frame_needed = 1, uses_anonymous_args = 0
+ 413              		@ link register save eliminated.
+ 414 0000 80B4     		push	{r7}
+ 415              		.cfi_def_cfa_offset 4
+ 416              		.cfi_offset 7, -4
+ 417 0002 00AF     		add	r7, sp, #0
+ 418              		.cfi_def_cfa_register 7
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL |= DCI_CTL_WDEN;
+ 419              		.loc 1 130 13
+ 420 0004 044B     		ldr	r3, .L24
+ 421 0006 1B68     		ldr	r3, [r3]
+ 422 0008 034A     		ldr	r2, .L24
+ 423 000a 43F00403 		orr	r3, r3, #4
+ 424 000e 1360     		str	r3, [r2]
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 425              		.loc 1 131 1
+ 426 0010 00BF     		nop
+ 427 0012 BD46     		mov	sp, r7
+ 428              		.cfi_def_cfa_register 13
+ 429              		@ sp needed
+ 430 0014 80BC     		pop	{r7}
+ 431              		.cfi_restore 7
+ 432              		.cfi_def_cfa_offset 0
+ 433 0016 7047     		bx	lr
+ 434              	.L25:
+ 435              		.align	2
+ 436              	.L24:
+ 437 0018 00000550 		.word	1342504960
+ 438              		.cfi_endproc
+ 439              	.LFE131:
+ 441              		.section	.text.dci_crop_window_disable,"ax",%progbits
+ 442              		.align	1
+ 443              		.global	dci_crop_window_disable
+ 444              		.syntax unified
+ 445              		.thumb
+ 446              		.thumb_func
+ 447              		.fpu softvfp
+ 449              	dci_crop_window_disable:
+ 450              	.LFB132:
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      disable cropping window function
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_crop_window_disable(void)
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 451              		.loc 1 140 1
+ 452              		.cfi_startproc
+ 453              		@ args = 0, pretend = 0, frame = 0
+ 454              		@ frame_needed = 1, uses_anonymous_args = 0
+ 455              		@ link register save eliminated.
+ 456 0000 80B4     		push	{r7}
+ 457              		.cfi_def_cfa_offset 4
+ 458              		.cfi_offset 7, -4
+ 459 0002 00AF     		add	r7, sp, #0
+ 460              		.cfi_def_cfa_register 7
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL &= ~DCI_CTL_WDEN;
+ 461              		.loc 1 141 13
+ 462 0004 044B     		ldr	r3, .L27
+ 463 0006 1B68     		ldr	r3, [r3]
+ 464 0008 034A     		ldr	r2, .L27
+ 465 000a 23F00403 		bic	r3, r3, #4
+ 466 000e 1360     		str	r3, [r2]
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 467              		.loc 1 142 1
+ 468 0010 00BF     		nop
+ 469 0012 BD46     		mov	sp, r7
+ 470              		.cfi_def_cfa_register 13
+ 471              		@ sp needed
+ 472 0014 80BC     		pop	{r7}
+ 473              		.cfi_restore 7
+ 474              		.cfi_def_cfa_offset 0
+ 475 0016 7047     		bx	lr
+ 476              	.L28:
+ 477              		.align	2
+ 478              	.L27:
+ 479 0018 00000550 		.word	1342504960
+ 480              		.cfi_endproc
+ 481              	.LFE132:
+ 483              		.section	.text.dci_crop_window_config,"ax",%progbits
+ 484              		.align	1
+ 485              		.global	dci_crop_window_config
+ 486              		.syntax unified
+ 487              		.thumb
+ 488              		.thumb_func
+ 489              		.fpu softvfp
+ 491              	dci_crop_window_config:
+ 492              	.LFB133:
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      config DCI cropping window 
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  start_x: window horizontal start position
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  start_y: window vertical start position
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  size_height: window horizontal size
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  size_width: window vertical size
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_crop_window_config(uint16_t start_x, uint16_t start_y, uint16_t size_width, uint16_t size_
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 493              		.loc 1 154 1
+ 494              		.cfi_startproc
+ 495              		@ args = 0, pretend = 0, frame = 8
+ 496              		@ frame_needed = 1, uses_anonymous_args = 0
+ 497              		@ link register save eliminated.
+ 498 0000 90B4     		push	{r4, r7}
+ 499              		.cfi_def_cfa_offset 8
+ 500              		.cfi_offset 4, -8
+ 501              		.cfi_offset 7, -4
+ 502 0002 82B0     		sub	sp, sp, #8
+ 503              		.cfi_def_cfa_offset 16
+ 504 0004 00AF     		add	r7, sp, #0
+ 505              		.cfi_def_cfa_register 7
+ 506 0006 0446     		mov	r4, r0
+ 507 0008 0846     		mov	r0, r1
+ 508 000a 1146     		mov	r1, r2
+ 509 000c 1A46     		mov	r2, r3
+ 510 000e 2346     		mov	r3, r4	@ movhi
+ 511 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 512 0012 0346     		mov	r3, r0	@ movhi
+ 513 0014 BB80     		strh	r3, [r7, #4]	@ movhi
+ 514 0016 0B46     		mov	r3, r1	@ movhi
+ 515 0018 7B80     		strh	r3, [r7, #2]	@ movhi
+ 516 001a 1346     		mov	r3, r2	@ movhi
+ 517 001c 3B80     		strh	r3, [r7]	@ movhi
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CWSPOS = ((uint32_t)start_x | ((uint32_t)start_y<<16));
+ 518              		.loc 1 155 19
+ 519 001e FA88     		ldrh	r2, [r7, #6]
+ 520              		.loc 1 155 40
+ 521 0020 BB88     		ldrh	r3, [r7, #4]
+ 522              		.loc 1 155 57
+ 523 0022 1B04     		lsls	r3, r3, #16
+ 524              		.loc 1 155 5
+ 525 0024 0649     		ldr	r1, .L30
+ 526              		.loc 1 155 37
+ 527 0026 1343     		orrs	r3, r3, r2
+ 528              		.loc 1 155 16
+ 529 0028 0B60     		str	r3, [r1]
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CWSZ = ((uint32_t)size_width | ((uint32_t)size_height<<16));
+ 530              		.loc 1 156 17
+ 531 002a 7A88     		ldrh	r2, [r7, #2]
+ 532              		.loc 1 156 41
+ 533 002c 3B88     		ldrh	r3, [r7]
+ 534              		.loc 1 156 62
+ 535 002e 1B04     		lsls	r3, r3, #16
+ 536              		.loc 1 156 5
+ 537 0030 0449     		ldr	r1, .L30+4
+ 538              		.loc 1 156 38
+ 539 0032 1343     		orrs	r3, r3, r2
+ 540              		.loc 1 156 14
+ 541 0034 0B60     		str	r3, [r1]
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 542              		.loc 1 157 1
+ 543 0036 00BF     		nop
+ 544 0038 0837     		adds	r7, r7, #8
+ 545              		.cfi_def_cfa_offset 8
+ 546 003a BD46     		mov	sp, r7
+ 547              		.cfi_def_cfa_register 13
+ 548              		@ sp needed
+ 549 003c 90BC     		pop	{r4, r7}
+ 550              		.cfi_restore 7
+ 551              		.cfi_restore 4
+ 552              		.cfi_def_cfa_offset 0
+ 553 003e 7047     		bx	lr
+ 554              	.L31:
+ 555              		.align	2
+ 556              	.L30:
+ 557 0040 20000550 		.word	1342504992
+ 558 0044 24000550 		.word	1342504996
+ 559              		.cfi_endproc
+ 560              	.LFE133:
+ 562              		.section	.text.dci_sync_codes_enable,"ax",%progbits
+ 563              		.align	1
+ 564              		.global	dci_sync_codes_enable
+ 565              		.syntax unified
+ 566              		.thumb
+ 567              		.thumb_func
+ 568              		.fpu softvfp
+ 570              	dci_sync_codes_enable:
+ 571              	.LFB134:
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      enable sync codes function
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_sync_codes_enable(void)
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 572              		.loc 1 166 1
+ 573              		.cfi_startproc
+ 574              		@ args = 0, pretend = 0, frame = 0
+ 575              		@ frame_needed = 1, uses_anonymous_args = 0
+ 576              		@ link register save eliminated.
+ 577 0000 80B4     		push	{r7}
+ 578              		.cfi_def_cfa_offset 4
+ 579              		.cfi_offset 7, -4
+ 580 0002 00AF     		add	r7, sp, #0
+ 581              		.cfi_def_cfa_register 7
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL |= DCI_CTL_ESM;
+ 582              		.loc 1 167 13
+ 583 0004 044B     		ldr	r3, .L33
+ 584 0006 1B68     		ldr	r3, [r3]
+ 585 0008 034A     		ldr	r2, .L33
+ 586 000a 43F01003 		orr	r3, r3, #16
+ 587 000e 1360     		str	r3, [r2]
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 588              		.loc 1 168 1
+ 589 0010 00BF     		nop
+ 590 0012 BD46     		mov	sp, r7
+ 591              		.cfi_def_cfa_register 13
+ 592              		@ sp needed
+ 593 0014 80BC     		pop	{r7}
+ 594              		.cfi_restore 7
+ 595              		.cfi_def_cfa_offset 0
+ 596 0016 7047     		bx	lr
+ 597              	.L34:
+ 598              		.align	2
+ 599              	.L33:
+ 600 0018 00000550 		.word	1342504960
+ 601              		.cfi_endproc
+ 602              	.LFE134:
+ 604              		.section	.text.dci_sync_codes_disable,"ax",%progbits
+ 605              		.align	1
+ 606              		.global	dci_sync_codes_disable
+ 607              		.syntax unified
+ 608              		.thumb
+ 609              		.thumb_func
+ 610              		.fpu softvfp
+ 612              	dci_sync_codes_disable:
+ 613              	.LFB135:
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      disable sync codes function
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_sync_codes_disable(void)
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 614              		.loc 1 177 1
+ 615              		.cfi_startproc
+ 616              		@ args = 0, pretend = 0, frame = 0
+ 617              		@ frame_needed = 1, uses_anonymous_args = 0
+ 618              		@ link register save eliminated.
+ 619 0000 80B4     		push	{r7}
+ 620              		.cfi_def_cfa_offset 4
+ 621              		.cfi_offset 7, -4
+ 622 0002 00AF     		add	r7, sp, #0
+ 623              		.cfi_def_cfa_register 7
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_CTL &= ~DCI_CTL_ESM;
+ 624              		.loc 1 178 13
+ 625 0004 044B     		ldr	r3, .L36
+ 626 0006 1B68     		ldr	r3, [r3]
+ 627 0008 034A     		ldr	r2, .L36
+ 628 000a 23F01003 		bic	r3, r3, #16
+ 629 000e 1360     		str	r3, [r2]
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 630              		.loc 1 179 1
+ 631 0010 00BF     		nop
+ 632 0012 BD46     		mov	sp, r7
+ 633              		.cfi_def_cfa_register 13
+ 634              		@ sp needed
+ 635 0014 80BC     		pop	{r7}
+ 636              		.cfi_restore 7
+ 637              		.cfi_def_cfa_offset 0
+ 638 0016 7047     		bx	lr
+ 639              	.L37:
+ 640              		.align	2
+ 641              	.L36:
+ 642 0018 00000550 		.word	1342504960
+ 643              		.cfi_endproc
+ 644              	.LFE135:
+ 646              		.section	.text.dci_sync_codes_config,"ax",%progbits
+ 647              		.align	1
+ 648              		.global	dci_sync_codes_config
+ 649              		.syntax unified
+ 650              		.thumb
+ 651              		.thumb_func
+ 652              		.fpu softvfp
+ 654              	dci_sync_codes_config:
+ 655              	.LFB136:
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      config sync codes 
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  frame_start: frame start code in embedded synchronous mode
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  line_start: line start code in embedded synchronous mode
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  line_end: line end code in embedded synchronous mode
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  frame_end: frame end code in embedded synchronous mode
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_sync_codes_config(uint8_t frame_start, uint8_t line_start, uint8_t line_end, uint8_t frame
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 656              		.loc 1 190 1
+ 657              		.cfi_startproc
+ 658              		@ args = 0, pretend = 0, frame = 8
+ 659              		@ frame_needed = 1, uses_anonymous_args = 0
+ 660              		@ link register save eliminated.
+ 661 0000 90B4     		push	{r4, r7}
+ 662              		.cfi_def_cfa_offset 8
+ 663              		.cfi_offset 4, -8
+ 664              		.cfi_offset 7, -4
+ 665 0002 82B0     		sub	sp, sp, #8
+ 666              		.cfi_def_cfa_offset 16
+ 667 0004 00AF     		add	r7, sp, #0
+ 668              		.cfi_def_cfa_register 7
+ 669 0006 0446     		mov	r4, r0
+ 670 0008 0846     		mov	r0, r1
+ 671 000a 1146     		mov	r1, r2
+ 672 000c 1A46     		mov	r2, r3
+ 673 000e 2346     		mov	r3, r4
+ 674 0010 FB71     		strb	r3, [r7, #7]
+ 675 0012 0346     		mov	r3, r0
+ 676 0014 BB71     		strb	r3, [r7, #6]
+ 677 0016 0B46     		mov	r3, r1
+ 678 0018 7B71     		strb	r3, [r7, #5]
+ 679 001a 1346     		mov	r3, r2
+ 680 001c 3B71     		strb	r3, [r7, #4]
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_SC = ((uint32_t)frame_start | ((uint32_t)line_start<<8) | ((uint32_t)line_end<<16) | ((uint
+ 681              		.loc 1 191 15
+ 682 001e FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 683              		.loc 1 191 40
+ 684 0020 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 685              		.loc 1 191 60
+ 686 0022 1B02     		lsls	r3, r3, #8
+ 687              		.loc 1 191 37
+ 688 0024 1A43     		orrs	r2, r2, r3
+ 689              		.loc 1 191 68
+ 690 0026 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 691              		.loc 1 191 86
+ 692 0028 1B04     		lsls	r3, r3, #16
+ 693              		.loc 1 191 65
+ 694 002a 1A43     		orrs	r2, r2, r3
+ 695              		.loc 1 191 95
+ 696 002c 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 697              		.loc 1 191 114
+ 698 002e 1B06     		lsls	r3, r3, #24
+ 699              		.loc 1 191 5
+ 700 0030 0349     		ldr	r1, .L39
+ 701              		.loc 1 191 92
+ 702 0032 1343     		orrs	r3, r3, r2
+ 703              		.loc 1 191 12
+ 704 0034 0B60     		str	r3, [r1]
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 705              		.loc 1 192 1
+ 706 0036 00BF     		nop
+ 707 0038 0837     		adds	r7, r7, #8
+ 708              		.cfi_def_cfa_offset 8
+ 709 003a BD46     		mov	sp, r7
+ 710              		.cfi_def_cfa_register 13
+ 711              		@ sp needed
+ 712 003c 90BC     		pop	{r4, r7}
+ 713              		.cfi_restore 7
+ 714              		.cfi_restore 4
+ 715              		.cfi_def_cfa_offset 0
+ 716 003e 7047     		bx	lr
+ 717              	.L40:
+ 718              		.align	2
+ 719              	.L39:
+ 720 0040 18000550 		.word	1342504984
+ 721              		.cfi_endproc
+ 722              	.LFE136:
+ 724              		.section	.text.dci_sync_codes_unmask_config,"ax",%progbits
+ 725              		.align	1
+ 726              		.global	dci_sync_codes_unmask_config
+ 727              		.syntax unified
+ 728              		.thumb
+ 729              		.thumb_func
+ 730              		.fpu softvfp
+ 732              	dci_sync_codes_unmask_config:
+ 733              	.LFB137:
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      config sync codes unmask
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  frame_start: frame start code unmask bits in embedded synchronous mode
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  line_start: line start code unmask bits in embedded synchronous mode
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  line_end: line end code unmask bits in embedded synchronous mode
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  frame_end: frame end code unmask bits in embedded synchronous mode
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_sync_codes_unmask_config(uint8_t frame_start, uint8_t line_start, uint8_t line_end, uint8_
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 734              		.loc 1 204 1
+ 735              		.cfi_startproc
+ 736              		@ args = 0, pretend = 0, frame = 8
+ 737              		@ frame_needed = 1, uses_anonymous_args = 0
+ 738              		@ link register save eliminated.
+ 739 0000 90B4     		push	{r4, r7}
+ 740              		.cfi_def_cfa_offset 8
+ 741              		.cfi_offset 4, -8
+ 742              		.cfi_offset 7, -4
+ 743 0002 82B0     		sub	sp, sp, #8
+ 744              		.cfi_def_cfa_offset 16
+ 745 0004 00AF     		add	r7, sp, #0
+ 746              		.cfi_def_cfa_register 7
+ 747 0006 0446     		mov	r4, r0
+ 748 0008 0846     		mov	r0, r1
+ 749 000a 1146     		mov	r1, r2
+ 750 000c 1A46     		mov	r2, r3
+ 751 000e 2346     		mov	r3, r4
+ 752 0010 FB71     		strb	r3, [r7, #7]
+ 753 0012 0346     		mov	r3, r0
+ 754 0014 BB71     		strb	r3, [r7, #6]
+ 755 0016 0B46     		mov	r3, r1
+ 756 0018 7B71     		strb	r3, [r7, #5]
+ 757 001a 1346     		mov	r3, r2
+ 758 001c 3B71     		strb	r3, [r7, #4]
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_SCUMSK = ((uint32_t)frame_start | ((uint32_t)line_start<<8) | ((uint32_t)line_end<<16) | ((
+ 759              		.loc 1 205 19
+ 760 001e FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
+ 761              		.loc 1 205 44
+ 762 0020 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 763              		.loc 1 205 64
+ 764 0022 1B02     		lsls	r3, r3, #8
+ 765              		.loc 1 205 41
+ 766 0024 1A43     		orrs	r2, r2, r3
+ 767              		.loc 1 205 72
+ 768 0026 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 769              		.loc 1 205 90
+ 770 0028 1B04     		lsls	r3, r3, #16
+ 771              		.loc 1 205 69
+ 772 002a 1A43     		orrs	r2, r2, r3
+ 773              		.loc 1 205 99
+ 774 002c 3B79     		ldrb	r3, [r7, #4]	@ zero_extendqisi2
+ 775              		.loc 1 205 118
+ 776 002e 1B06     		lsls	r3, r3, #24
+ 777              		.loc 1 205 5
+ 778 0030 0349     		ldr	r1, .L42
+ 779              		.loc 1 205 96
+ 780 0032 1343     		orrs	r3, r3, r2
+ 781              		.loc 1 205 16
+ 782 0034 0B60     		str	r3, [r1]
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 783              		.loc 1 206 1
+ 784 0036 00BF     		nop
+ 785 0038 0837     		adds	r7, r7, #8
+ 786              		.cfi_def_cfa_offset 8
+ 787 003a BD46     		mov	sp, r7
+ 788              		.cfi_def_cfa_register 13
+ 789              		@ sp needed
+ 790 003c 90BC     		pop	{r4, r7}
+ 791              		.cfi_restore 7
+ 792              		.cfi_restore 4
+ 793              		.cfi_def_cfa_offset 0
+ 794 003e 7047     		bx	lr
+ 795              	.L43:
+ 796              		.align	2
+ 797              	.L42:
+ 798 0040 1C000550 		.word	1342504988
+ 799              		.cfi_endproc
+ 800              	.LFE137:
+ 802              		.section	.text.dci_data_read,"ax",%progbits
+ 803              		.align	1
+ 804              		.global	dci_data_read
+ 805              		.syntax unified
+ 806              		.thumb
+ 807              		.thumb_func
+ 808              		.fpu softvfp
+ 810              	dci_data_read:
+ 811              	.LFB138:
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      read DCI data register
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  none
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     data
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** uint32_t dci_data_read(void)
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 812              		.loc 1 215 1
+ 813              		.cfi_startproc
+ 814              		@ args = 0, pretend = 0, frame = 0
+ 815              		@ frame_needed = 1, uses_anonymous_args = 0
+ 816              		@ link register save eliminated.
+ 817 0000 80B4     		push	{r7}
+ 818              		.cfi_def_cfa_offset 4
+ 819              		.cfi_offset 7, -4
+ 820 0002 00AF     		add	r7, sp, #0
+ 821              		.cfi_def_cfa_register 7
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     return DCI_DATA;
+ 822              		.loc 1 216 12
+ 823 0004 024B     		ldr	r3, .L46
+ 824 0006 1B68     		ldr	r3, [r3]
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 825              		.loc 1 217 1
+ 826 0008 1846     		mov	r0, r3
+ 827 000a BD46     		mov	sp, r7
+ 828              		.cfi_def_cfa_register 13
+ 829              		@ sp needed
+ 830 000c 80BC     		pop	{r7}
+ 831              		.cfi_restore 7
+ 832              		.cfi_def_cfa_offset 0
+ 833 000e 7047     		bx	lr
+ 834              	.L47:
+ 835              		.align	2
+ 836              	.L46:
+ 837 0010 28000550 		.word	1342505000
+ 838              		.cfi_endproc
+ 839              	.LFE138:
+ 841              		.section	.text.dci_interrupt_enable,"ax",%progbits
+ 842              		.align	1
+ 843              		.global	dci_interrupt_enable
+ 844              		.syntax unified
+ 845              		.thumb
+ 846              		.thumb_func
+ 847              		.fpu softvfp
+ 849              	dci_interrupt_enable:
+ 850              	.LFB139:
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      enable specified DCI interrupt
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  interrupt:
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_EF: end of frame interrupt
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_OVR: FIFO overrun interrupt
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_ESE: embedded synchronous error interrupt 
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_VS: vsync interrupt
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_EL: end of line interrupt
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_interrupt_enable(uint32_t interrupt)
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 851              		.loc 1 231 1
+ 852              		.cfi_startproc
+ 853              		@ args = 0, pretend = 0, frame = 8
+ 854              		@ frame_needed = 1, uses_anonymous_args = 0
+ 855              		@ link register save eliminated.
+ 856 0000 80B4     		push	{r7}
+ 857              		.cfi_def_cfa_offset 4
+ 858              		.cfi_offset 7, -4
+ 859 0002 83B0     		sub	sp, sp, #12
+ 860              		.cfi_def_cfa_offset 16
+ 861 0004 00AF     		add	r7, sp, #0
+ 862              		.cfi_def_cfa_register 7
+ 863 0006 7860     		str	r0, [r7, #4]
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_INTEN |= interrupt;
+ 864              		.loc 1 232 15
+ 865 0008 054B     		ldr	r3, .L49
+ 866 000a 1A68     		ldr	r2, [r3]
+ 867 000c 0449     		ldr	r1, .L49
+ 868 000e 7B68     		ldr	r3, [r7, #4]
+ 869 0010 1343     		orrs	r3, r3, r2
+ 870 0012 0B60     		str	r3, [r1]
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 871              		.loc 1 233 1
+ 872 0014 00BF     		nop
+ 873 0016 0C37     		adds	r7, r7, #12
+ 874              		.cfi_def_cfa_offset 4
+ 875 0018 BD46     		mov	sp, r7
+ 876              		.cfi_def_cfa_register 13
+ 877              		@ sp needed
+ 878 001a 80BC     		pop	{r7}
+ 879              		.cfi_restore 7
+ 880              		.cfi_def_cfa_offset 0
+ 881 001c 7047     		bx	lr
+ 882              	.L50:
+ 883 001e 00BF     		.align	2
+ 884              	.L49:
+ 885 0020 0C000550 		.word	1342504972
+ 886              		.cfi_endproc
+ 887              	.LFE139:
+ 889              		.section	.text.dci_interrupt_disable,"ax",%progbits
+ 890              		.align	1
+ 891              		.global	dci_interrupt_disable
+ 892              		.syntax unified
+ 893              		.thumb
+ 894              		.thumb_func
+ 895              		.fpu softvfp
+ 897              	dci_interrupt_disable:
+ 898              	.LFB140:
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      disable specified DCI interrupt
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  interrupt:
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_EF: end of frame interrupt
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_OVR: FIFO overrun interrupt
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_ESE: embedded synchronous error interrupt 
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_VS: vsync interrupt
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_EL: end of line interrupt
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_interrupt_disable(uint32_t interrupt)
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 899              		.loc 1 247 1
+ 900              		.cfi_startproc
+ 901              		@ args = 0, pretend = 0, frame = 8
+ 902              		@ frame_needed = 1, uses_anonymous_args = 0
+ 903              		@ link register save eliminated.
+ 904 0000 80B4     		push	{r7}
+ 905              		.cfi_def_cfa_offset 4
+ 906              		.cfi_offset 7, -4
+ 907 0002 83B0     		sub	sp, sp, #12
+ 908              		.cfi_def_cfa_offset 16
+ 909 0004 00AF     		add	r7, sp, #0
+ 910              		.cfi_def_cfa_register 7
+ 911 0006 7860     		str	r0, [r7, #4]
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_INTEN &= ~interrupt;
+ 912              		.loc 1 248 15
+ 913 0008 054B     		ldr	r3, .L52
+ 914 000a 1A68     		ldr	r2, [r3]
+ 915              		.loc 1 248 18
+ 916 000c 7B68     		ldr	r3, [r7, #4]
+ 917 000e DB43     		mvns	r3, r3
+ 918              		.loc 1 248 15
+ 919 0010 0349     		ldr	r1, .L52
+ 920 0012 1340     		ands	r3, r3, r2
+ 921 0014 0B60     		str	r3, [r1]
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 922              		.loc 1 249 1
+ 923 0016 00BF     		nop
+ 924 0018 0C37     		adds	r7, r7, #12
+ 925              		.cfi_def_cfa_offset 4
+ 926 001a BD46     		mov	sp, r7
+ 927              		.cfi_def_cfa_register 13
+ 928              		@ sp needed
+ 929 001c 80BC     		pop	{r7}
+ 930              		.cfi_restore 7
+ 931              		.cfi_def_cfa_offset 0
+ 932 001e 7047     		bx	lr
+ 933              	.L53:
+ 934              		.align	2
+ 935              	.L52:
+ 936 0020 0C000550 		.word	1342504972
+ 937              		.cfi_endproc
+ 938              	.LFE140:
+ 940              		.section	.text.dci_interrupt_clear,"ax",%progbits
+ 941              		.align	1
+ 942              		.global	dci_interrupt_clear
+ 943              		.syntax unified
+ 944              		.thumb
+ 945              		.thumb_func
+ 946              		.fpu softvfp
+ 948              	dci_interrupt_clear:
+ 949              	.LFB141:
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      clear specified interrupt
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  interrupt:
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_EF: end of frame interrupt
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_OVR: FIFO overrun interrupt
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_ESE: embedded synchronous error interrupt 
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_VS: vsync interrupt
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_EL: end of line interrupt
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     none
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** void dci_interrupt_clear(uint32_t interrupt)
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 950              		.loc 1 263 1
+ 951              		.cfi_startproc
+ 952              		@ args = 0, pretend = 0, frame = 8
+ 953              		@ frame_needed = 1, uses_anonymous_args = 0
+ 954              		@ link register save eliminated.
+ 955 0000 80B4     		push	{r7}
+ 956              		.cfi_def_cfa_offset 4
+ 957              		.cfi_offset 7, -4
+ 958 0002 83B0     		sub	sp, sp, #12
+ 959              		.cfi_def_cfa_offset 16
+ 960 0004 00AF     		add	r7, sp, #0
+ 961              		.cfi_def_cfa_register 7
+ 962 0006 7860     		str	r0, [r7, #4]
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     DCI_INTC |= interrupt;
+ 963              		.loc 1 264 14
+ 964 0008 054B     		ldr	r3, .L55
+ 965 000a 1A68     		ldr	r2, [r3]
+ 966 000c 0449     		ldr	r1, .L55
+ 967 000e 7B68     		ldr	r3, [r7, #4]
+ 968 0010 1343     		orrs	r3, r3, r2
+ 969 0012 0B60     		str	r3, [r1]
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 970              		.loc 1 265 1
+ 971 0014 00BF     		nop
+ 972 0016 0C37     		adds	r7, r7, #12
+ 973              		.cfi_def_cfa_offset 4
+ 974 0018 BD46     		mov	sp, r7
+ 975              		.cfi_def_cfa_register 13
+ 976              		@ sp needed
+ 977 001a 80BC     		pop	{r7}
+ 978              		.cfi_restore 7
+ 979              		.cfi_def_cfa_offset 0
+ 980 001c 7047     		bx	lr
+ 981              	.L56:
+ 982 001e 00BF     		.align	2
+ 983              	.L55:
+ 984 0020 14000550 		.word	1342504980
+ 985              		.cfi_endproc
+ 986              	.LFE141:
+ 988              		.section	.text.dci_flag_get,"ax",%progbits
+ 989              		.align	1
+ 990              		.global	dci_flag_get
+ 991              		.syntax unified
+ 992              		.thumb
+ 993              		.thumb_func
+ 994              		.fpu softvfp
+ 996              	dci_flag_get:
+ 997              	.LFB142:
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      get specified flag
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  flag:
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_FLAG_HS: HS line status
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_FLAG_VS: VS line status
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_FLAG_FV:FIFO valid
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_FLAG_EFF: end of frame flag
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_FLAG_OVRF: FIFO overrun flag
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_FLAG_ESEF: embedded synchronous error flag
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_FLAG_VSF: vsync flag
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_FLAG_ELF: end of line flag
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     FlagStatus: SET or RESET
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** FlagStatus dci_flag_get(uint32_t flag)
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 998              		.loc 1 282 1
+ 999              		.cfi_startproc
+ 1000              		@ args = 0, pretend = 0, frame = 16
+ 1001              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1002              		@ link register save eliminated.
+ 1003 0000 80B4     		push	{r7}
+ 1004              		.cfi_def_cfa_offset 4
+ 1005              		.cfi_offset 7, -4
+ 1006 0002 85B0     		sub	sp, sp, #20
+ 1007              		.cfi_def_cfa_offset 24
+ 1008 0004 00AF     		add	r7, sp, #0
+ 1009              		.cfi_def_cfa_register 7
+ 1010 0006 7860     		str	r0, [r7, #4]
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     uint32_t ret = 0U;
+ 1011              		.loc 1 283 14
+ 1012 0008 0023     		movs	r3, #0
+ 1013 000a FB60     		str	r3, [r7, #12]
+ 1014 000c 7B68     		ldr	r3, [r7, #4]
+ 1015 000e 013B     		subs	r3, r3, #1
+ 1016 0010 072B     		cmp	r3, #7
+ 1017 0012 43D8     		bhi	.L71
+ 1018 0014 01A2     		adr	r2, .L60
+ 1019 0016 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 1020 001a 00BF     		.p2align 2
+ 1021              	.L60:
+ 1022 001c 3D000000 		.word	.L67+1
+ 1023 0020 49000000 		.word	.L66+1
+ 1024 0024 55000000 		.word	.L65+1
+ 1025 0028 61000000 		.word	.L64+1
+ 1026 002c 6D000000 		.word	.L63+1
+ 1027 0030 79000000 		.word	.L62+1
+ 1028 0034 85000000 		.word	.L61+1
+ 1029 0038 91000000 		.word	.L59+1
+ 1030              		.p2align 1
+ 1031              	.L67:
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     switch(flag){
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     /* get flag status from DCI_STAT0 register */
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     case DCI_FLAG_HS:
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         ret = (DCI_STAT0 & DCI_STAT0_HS);
+ 1032              		.loc 1 288 16
+ 1033 003c 1D4B     		ldr	r3, .L72
+ 1034 003e 1B68     		ldr	r3, [r3]
+ 1035              		.loc 1 288 13
+ 1036 0040 03F00103 		and	r3, r3, #1
+ 1037 0044 FB60     		str	r3, [r7, #12]
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1038              		.loc 1 289 9
+ 1039 0046 2AE0     		b	.L68
+ 1040              	.L66:
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     case DCI_FLAG_VS:
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         ret = (DCI_STAT0 & DCI_STAT0_VS);
+ 1041              		.loc 1 291 16
+ 1042 0048 1A4B     		ldr	r3, .L72
+ 1043 004a 1B68     		ldr	r3, [r3]
+ 1044              		.loc 1 291 13
+ 1045 004c 03F00203 		and	r3, r3, #2
+ 1046 0050 FB60     		str	r3, [r7, #12]
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1047              		.loc 1 292 9
+ 1048 0052 24E0     		b	.L68
+ 1049              	.L65:
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     case DCI_FLAG_FV:
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         ret = (DCI_STAT0 & DCI_STAT0_FV);
+ 1050              		.loc 1 294 16
+ 1051 0054 174B     		ldr	r3, .L72
+ 1052 0056 1B68     		ldr	r3, [r3]
+ 1053              		.loc 1 294 13
+ 1054 0058 03F00403 		and	r3, r3, #4
+ 1055 005c FB60     		str	r3, [r7, #12]
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1056              		.loc 1 295 9
+ 1057 005e 1EE0     		b	.L68
+ 1058              	.L64:
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     /* get flag status from DCI_STAT1 register */
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     case DCI_FLAG_EFF:
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         ret = (DCI_STAT1 & DCI_STAT1_EFF);
+ 1059              		.loc 1 298 16
+ 1060 0060 154B     		ldr	r3, .L72+4
+ 1061 0062 1B68     		ldr	r3, [r3]
+ 1062              		.loc 1 298 13
+ 1063 0064 03F00103 		and	r3, r3, #1
+ 1064 0068 FB60     		str	r3, [r7, #12]
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1065              		.loc 1 299 9
+ 1066 006a 18E0     		b	.L68
+ 1067              	.L63:
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     case DCI_FLAG_OVRF:
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         ret = (DCI_STAT1 & DCI_STAT1_OVRF);
+ 1068              		.loc 1 301 16
+ 1069 006c 124B     		ldr	r3, .L72+4
+ 1070 006e 1B68     		ldr	r3, [r3]
+ 1071              		.loc 1 301 13
+ 1072 0070 03F00203 		and	r3, r3, #2
+ 1073 0074 FB60     		str	r3, [r7, #12]
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1074              		.loc 1 302 9
+ 1075 0076 12E0     		b	.L68
+ 1076              	.L62:
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     case DCI_FLAG_ESEF:
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         ret = (DCI_STAT1 & DCI_STAT1_ESEF);
+ 1077              		.loc 1 304 16
+ 1078 0078 0F4B     		ldr	r3, .L72+4
+ 1079 007a 1B68     		ldr	r3, [r3]
+ 1080              		.loc 1 304 13
+ 1081 007c 03F00403 		and	r3, r3, #4
+ 1082 0080 FB60     		str	r3, [r7, #12]
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1083              		.loc 1 305 9
+ 1084 0082 0CE0     		b	.L68
+ 1085              	.L61:
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     case DCI_FLAG_VSF:
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         ret = (DCI_STAT1 & DCI_STAT1_VSF);
+ 1086              		.loc 1 307 16
+ 1087 0084 0C4B     		ldr	r3, .L72+4
+ 1088 0086 1B68     		ldr	r3, [r3]
+ 1089              		.loc 1 307 13
+ 1090 0088 03F00803 		and	r3, r3, #8
+ 1091 008c FB60     		str	r3, [r7, #12]
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1092              		.loc 1 308 9
+ 1093 008e 06E0     		b	.L68
+ 1094              	.L59:
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     case DCI_FLAG_ELF:
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         ret = (DCI_STAT1 & DCI_STAT1_ELF);
+ 1095              		.loc 1 310 16
+ 1096 0090 094B     		ldr	r3, .L72+4
+ 1097 0092 1B68     		ldr	r3, [r3]
+ 1098              		.loc 1 310 13
+ 1099 0094 03F01003 		and	r3, r3, #16
+ 1100 0098 FB60     		str	r3, [r7, #12]
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1101              		.loc 1 311 9
+ 1102 009a 00E0     		b	.L68
+ 1103              	.L71:
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     default :
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         break;
+ 1104              		.loc 1 313 9
+ 1105 009c 00BF     		nop
+ 1106              	.L68:
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     }
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     if(RESET == ret){
+ 1107              		.loc 1 316 7
+ 1108 009e FB68     		ldr	r3, [r7, #12]
+ 1109 00a0 002B     		cmp	r3, #0
+ 1110 00a2 01D1     		bne	.L69
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         return RESET;
+ 1111              		.loc 1 317 16
+ 1112 00a4 0023     		movs	r3, #0
+ 1113 00a6 00E0     		b	.L70
+ 1114              	.L69:
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     }else{
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         return SET;
+ 1115              		.loc 1 319 16
+ 1116 00a8 0123     		movs	r3, #1
+ 1117              	.L70:
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     }
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 1118              		.loc 1 321 1
+ 1119 00aa 1846     		mov	r0, r3
+ 1120 00ac 1437     		adds	r7, r7, #20
+ 1121              		.cfi_def_cfa_offset 4
+ 1122 00ae BD46     		mov	sp, r7
+ 1123              		.cfi_def_cfa_register 13
+ 1124              		@ sp needed
+ 1125 00b0 80BC     		pop	{r7}
+ 1126              		.cfi_restore 7
+ 1127              		.cfi_def_cfa_offset 0
+ 1128 00b2 7047     		bx	lr
+ 1129              	.L73:
+ 1130              		.align	2
+ 1131              	.L72:
+ 1132 00b4 04000550 		.word	1342504964
+ 1133 00b8 08000550 		.word	1342504968
+ 1134              		.cfi_endproc
+ 1135              	.LFE142:
+ 1137              		.section	.text.dci_interrupt_flag_get,"ax",%progbits
+ 1138              		.align	1
+ 1139              		.global	dci_interrupt_flag_get
+ 1140              		.syntax unified
+ 1141              		.thumb
+ 1142              		.thumb_func
+ 1143              		.fpu softvfp
+ 1145              	dci_interrupt_flag_get:
+ 1146              	.LFB143:
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** 
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** /*!
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \brief      get specified interrupt flag
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[in]  interrupt:
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_EF: end of frame interrupt
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_OVR: FIFO overrun interrupt
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_ESE: embedded synchronous error interrupt 
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_VS: vsync interrupt
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****       \arg         DCI_INT_EL: end of line interrupt
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \param[out] none
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     \retval     FlagStatus: SET or RESET
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** */
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** FlagStatus dci_interrupt_flag_get(uint32_t interrupt)
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** {
+ 1147              		.loc 1 335 1
+ 1148              		.cfi_startproc
+ 1149              		@ args = 0, pretend = 0, frame = 8
+ 1150              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1151              		@ link register save eliminated.
+ 1152 0000 80B4     		push	{r7}
+ 1153              		.cfi_def_cfa_offset 4
+ 1154              		.cfi_offset 7, -4
+ 1155 0002 83B0     		sub	sp, sp, #12
+ 1156              		.cfi_def_cfa_offset 16
+ 1157 0004 00AF     		add	r7, sp, #0
+ 1158              		.cfi_def_cfa_register 7
+ 1159 0006 7860     		str	r0, [r7, #4]
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     if(RESET == (DCI_INTF & interrupt)){
+ 1160              		.loc 1 336 18
+ 1161 0008 064B     		ldr	r3, .L77
+ 1162 000a 1A68     		ldr	r2, [r3]
+ 1163              		.loc 1 336 27
+ 1164 000c 7B68     		ldr	r3, [r7, #4]
+ 1165 000e 1340     		ands	r3, r3, r2
+ 1166              		.loc 1 336 7
+ 1167 0010 002B     		cmp	r3, #0
+ 1168 0012 01D1     		bne	.L75
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         return RESET;
+ 1169              		.loc 1 337 16
+ 1170 0014 0023     		movs	r3, #0
+ 1171 0016 00E0     		b	.L76
+ 1172              	.L75:
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     }else{
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****         return SET;
+ 1173              		.loc 1 339 16
+ 1174 0018 0123     		movs	r3, #1
+ 1175              	.L76:
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c ****     }
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dci.c **** }
+ 1176              		.loc 1 341 1
+ 1177 001a 1846     		mov	r0, r3
+ 1178 001c 0C37     		adds	r7, r7, #12
+ 1179              		.cfi_def_cfa_offset 4
+ 1180 001e BD46     		mov	sp, r7
+ 1181              		.cfi_def_cfa_register 13
+ 1182              		@ sp needed
+ 1183 0020 80BC     		pop	{r7}
+ 1184              		.cfi_restore 7
+ 1185              		.cfi_def_cfa_offset 0
+ 1186 0022 7047     		bx	lr
+ 1187              	.L78:
+ 1188              		.align	2
+ 1189              	.L77:
+ 1190 0024 10000550 		.word	1342504976
+ 1191              		.cfi_endproc
+ 1192              	.LFE143:
+ 1194              		.text
+ 1195              	.Letext0:
+ 1196              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1197              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1198              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 1199              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 1200              		.file 6 "../../CMSIS/gd32f4xx.h"
+ 1201              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+ 1202              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_dci.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_dci.c
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:16     .text.dci_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:24     .text.dci_deinit:00000000 dci_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:50     .text.dci_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:57     .text.dci_init:00000000 dci_init
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:143    .text.dci_init:00000068 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:148    .text.dci_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:155    .text.dci_enable:00000000 dci_enable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:185    .text.dci_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:190    .text.dci_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:197    .text.dci_disable:00000000 dci_disable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:227    .text.dci_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:232    .text.dci_capture_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:239    .text.dci_capture_enable:00000000 dci_capture_enable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:269    .text.dci_capture_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:274    .text.dci_capture_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:281    .text.dci_capture_disable:00000000 dci_capture_disable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:311    .text.dci_capture_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:316    .text.dci_jpeg_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:323    .text.dci_jpeg_enable:00000000 dci_jpeg_enable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:353    .text.dci_jpeg_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:358    .text.dci_jpeg_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:365    .text.dci_jpeg_disable:00000000 dci_jpeg_disable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:395    .text.dci_jpeg_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:400    .text.dci_crop_window_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:407    .text.dci_crop_window_enable:00000000 dci_crop_window_enable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:437    .text.dci_crop_window_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:442    .text.dci_crop_window_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:449    .text.dci_crop_window_disable:00000000 dci_crop_window_disable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:479    .text.dci_crop_window_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:484    .text.dci_crop_window_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:491    .text.dci_crop_window_config:00000000 dci_crop_window_config
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:557    .text.dci_crop_window_config:00000040 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:563    .text.dci_sync_codes_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:570    .text.dci_sync_codes_enable:00000000 dci_sync_codes_enable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:600    .text.dci_sync_codes_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:605    .text.dci_sync_codes_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:612    .text.dci_sync_codes_disable:00000000 dci_sync_codes_disable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:642    .text.dci_sync_codes_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:647    .text.dci_sync_codes_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:654    .text.dci_sync_codes_config:00000000 dci_sync_codes_config
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:720    .text.dci_sync_codes_config:00000040 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:725    .text.dci_sync_codes_unmask_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:732    .text.dci_sync_codes_unmask_config:00000000 dci_sync_codes_unmask_config
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:798    .text.dci_sync_codes_unmask_config:00000040 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:803    .text.dci_data_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:810    .text.dci_data_read:00000000 dci_data_read
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:837    .text.dci_data_read:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:842    .text.dci_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:849    .text.dci_interrupt_enable:00000000 dci_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:885    .text.dci_interrupt_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:890    .text.dci_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:897    .text.dci_interrupt_disable:00000000 dci_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:936    .text.dci_interrupt_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:941    .text.dci_interrupt_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:948    .text.dci_interrupt_clear:00000000 dci_interrupt_clear
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:984    .text.dci_interrupt_clear:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:989    .text.dci_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:996    .text.dci_flag_get:00000000 dci_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:1022   .text.dci_flag_get:0000001c $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:1030   .text.dci_flag_get:0000003c $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:1132   .text.dci_flag_get:000000b4 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:1138   .text.dci_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:1145   .text.dci_interrupt_flag_get:00000000 dci_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccmyFiLy.s:1190   .text.dci_interrupt_flag_get:00000024 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_dci.h.18.c172453cf4e192d226fe82a73c90a32b
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

@@ -1,0 +1,307 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"dawn_parameter.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	GimbalSystem
+  16              		.section	.data.GimbalSystem,"aw"
+  17              		.align	2
+  20              	GimbalSystem:
+  21 0000 00       		.byte	0
+  22 0001 000000   		.space	3
+  23 0004 00000000 		.space	4
+  24 0008 0000803F 		.word	1065353216
+  25 000c 0000803F 		.word	1065353216
+  26 0010 00000000 		.word	0
+  27 0014 01       		.byte	1
+  28 0015 01       		.byte	1
+  29 0016 00000000 		.space	6
+  29      0000
+  30 001c 00       		.byte	0
+  31 001d 000000   		.space	3
+  32 0020 CDCCCC3E 		.word	1053609165
+  33 0024 ACC52737 		.word	925353388
+  34 0028 CDCC4C3D 		.word	1028443341
+  35 002c 9A99193E 		.word	1041865114
+  36 0030 00000000 		.space	44
+  36      00000000 
+  36      00000000 
+  36      00000000 
+  36      00000000 
+  37 005c 00004842 		.word	1112014848
+  38 0060 17B7D138 		.word	953267991
+  39 0064 48E17A3F 		.word	1065017672
+  40 0068 48E17A3F 		.word	1065017672
+  41 006c 48E17A3F 		.word	1065017672
+  42 0070 00       		.byte	0
+  43 0071 00000000 		.space	15
+  43      00000000 
+  43      00000000 
+  43      000000
+  44 0080 00       		.byte	0
+  45 0081 00000000 		.space	15
+  45      00000000 
+  45      00000000 
+  45      000000
+  46 0090 00       		.byte	0
+  47 0091 00000000 		.space	15
+  47      00000000 
+  47      00000000 
+  47      000000
+  48 00a0 00       		.byte	0
+  49 00a1 00000000 		.space	15
+  49      00000000 
+  49      00000000 
+  49      000000
+  50 00b0 00       		.byte	0
+  51 00b1 00000000 		.space	15
+  51      00000000 
+  51      00000000 
+  51      000000
+  52 00c0 0000803F 		.word	1065353216
+  53 00c4 00000000 		.word	0
+  54 00c8 00000000 		.word	0
+  55 00cc 00000000 		.word	0
+  56 00d0 00000000 		.space	108
+  56      00000000 
+  56      00000000 
+  56      00000000 
+  56      00000000 
+  57 013c 0000803F 		.word	1065353216
+  58 0140 0000803F 		.word	1065353216
+  59 0144 000080BF 		.word	-1082130432
+  60 0148 00000000 		.space	24
+  60      00000000 
+  60      00000000 
+  60      00000000 
+  60      00000000 
+  61 0160 00000000 		.word	0
+  62 0164 295C8F3E 		.word	1049582633
+  63 0168 00000000 		.word	0
+  64 016c 00000000 		.space	24
+  64      00000000 
+  64      00000000 
+  64      00000000 
+  64      00000000 
+  65 0184 AE4721BF 		.word	-1088338002
+  66 0188 0000A0BF 		.word	-1080033280
+  67 018c AE4761BF 		.word	-1084143698
+  68 0190 AE47213F 		.word	1059145646
+  69 0194 0000A03F 		.word	1067450368
+  70 0198 9A99D93F 		.word	1071225242
+  71 019c 00000000 		.space	24
+  71      00000000 
+  71      00000000 
+  71      00000000 
+  71      00000000 
+  72 01b4 0000C842 		.word	1120403456
+  73 01b8 0000C842 		.word	1120403456
+  74 01bc 0000C842 		.word	1120403456
+  75 01c0 00000000 		.space	192
+  75      00000000 
+  75      00000000 
+  75      00000000 
+  75      00000000 
+  76 0280 0000C842 		.word	1120403456
+  77 0284 0000C842 		.word	1120403456
+  78 0288 0000C842 		.word	1120403456
+  79 028c 00004040 		.word	1077936128
+  80 0290 00004040 		.word	1077936128
+  81 0294 00002041 		.word	1092616192
+  82 0298 0000C03F 		.word	1069547520
+  83 029c 00000000 		.word	0
+  84 02a0 00002041 		.word	1092616192
+  85 02a4 00002041 		.word	1092616192
+  86 02a8 00000000 		.word	0
+  87 02ac 00000000 		.word	0
+  88 02b0 0000A0C0 		.word	-1063256064
+  89 02b4 0000A040 		.word	1084227584
+  90 02b8 0000A0C0 		.word	-1063256064
+  91 02bc 0000A040 		.word	1084227584
+  92 02c0 00000000 		.word	0
+  93 02c4 00000000 		.word	0
+  94 02c8 00000000 		.word	0
+  95 02cc 00004843 		.word	1128792064
+  96 02d0 00000000 		.word	0
+  97 02d4 00000000 		.word	0
+  98 02d8 0000A0C0 		.word	-1063256064
+  99 02dc 0000A040 		.word	1084227584
+ 100 02e0 0000A0C0 		.word	-1063256064
+ 101 02e4 0000A040 		.word	1084227584
+ 102 02e8 00000000 		.word	0
+ 103 02ec 00000000 		.word	0
+ 104 02f0 00000000 		.word	0
+ 105 02f4 0000003F 		.word	1056964608
+ 106 02f8 17B7D138 		.word	953267991
+ 107 02fc 00000000 		.word	0
+ 108 0300 0000A0C0 		.word	-1063256064
+ 109 0304 0000A040 		.word	1084227584
+ 110 0308 0000A0C0 		.word	-1063256064
+ 111 030c 0000A040 		.word	1084227584
+ 112 0310 00000000 		.word	0
+ 113 0314 00000000 		.word	0
+ 114 0318 00000000 		.word	0
+ 115 031c 00803B45 		.word	1161527296
+ 116 0320 0000C842 		.word	1120403456
+ 117 0324 00000000 		.word	0
+ 118 0328 0050C3C6 		.word	-960278528
+ 119 032c 00606A46 		.word	1181376512
+ 120 0330 0050C3C6 		.word	-960278528
+ 121 0334 00606A46 		.word	1181376512
+ 122 0338 00000000 		.word	0
+ 123 033c 00000000 		.word	0
+ 124 0340 00000000 		.word	0
+ 125 0344 00007A45 		.word	1165623296
+ 126 0348 00004843 		.word	1128792064
+ 127 034c 00000000 		.word	0
+ 128 0350 00803BC6 		.word	-969179136
+ 129 0354 00803B46 		.word	1178304512
+ 130 0358 00803BC6 		.word	-969179136
+ 131 035c 00803B46 		.word	1178304512
+ 132 0360 00000000 		.word	0
+ 133 0364 00000000 		.word	0
+ 134 0368 00000000 		.word	0
+ 135 036c 00C05A45 		.word	1163575296
+ 136 0370 0000C842 		.word	1120403456
+ 137 0374 00000000 		.word	0
+ 138 0378 00606AC6 		.word	-966107136
+ 139 037c 00606A46 		.word	1181376512
+ 140 0380 00606AC6 		.word	-966107136
+ 141 0384 00606A46 		.word	1181376512
+ 142 0388 00000000 		.word	0
+ 143 038c 00000000 		.word	0
+ 144 0390 00000000 		.word	0
+ 145 0394 00007A45 		.word	1165623296
+ 146 0398 0000A041 		.word	1101004800
+ 147 039c 00000000 		.word	0
+ 148 03a0 00D084C6 		.word	-964374528
+ 149 03a4 0000FA44 		.word	1157234688
+ 150 03a8 00D084C6 		.word	-964374528
+ 151 03ac 0000FA44 		.word	1157234688
+ 152 03b0 00000000 		.word	0
+ 153 03b4 00000000 		.word	0
+ 154 03b8 00000000 		.word	0
+ 155 03bc 0000FA45 		.word	1174011904
+ 156 03c0 00002041 		.word	1092616192
+ 157 03c4 00000000 		.word	0
+ 158 03c8 00803BC6 		.word	-969179136
+ 159 03cc 0000FA44 		.word	1157234688
+ 160 03d0 00803BC6 		.word	-969179136
+ 161 03d4 0000FA44 		.word	1157234688
+ 162 03d8 00000000 		.word	0
+ 163 03dc 00000000 		.word	0
+ 164 03e0 00000000 		.word	0
+ 165 03e4 00E88046 		.word	1182853120
+ 166 03e8 00001643 		.word	1125515264
+ 167 03ec 00000000 		.word	0
+ 168 03f0 00C0DAC5 		.word	-975519744
+ 169 03f4 00C0DA45 		.word	1171963904
+ 170 03f8 00C0DAC5 		.word	-975519744
+ 171 03fc 00C0DA45 		.word	1171963904
+ 172 0400 00000000 		.word	0
+ 173 0404 00000000 		.word	0
+ 174 0408 00000000 		.word	0
+ 175              		.text
+ 176              	.Letext0:
+ 177              		.file 1 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 178              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 179              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 180              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 181              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 182              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 183              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 184              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 185              		.file 9 "../../CMSIS/DSP/Include/core_cm4.h"
+ 186              		.file 10 "../../CMSIS/system_gd32f4xx.h"
+ 187              		.file 11 "../../CMSIS/gd32f4xx.h"
+ 188              		.file 12 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 189              		.file 13 "../../Dawn/DawnLib/dawn_lib.h"
+ 190              		.file 14 "../../Dawn/DawnBsp/timebase.h"
+ 191              		.file 15 "../../Dawn/DawnCom/unpack.h"
+ 192              		.file 16 "../../Dawn/DawnDevice/icm206xx.h"
+ 193              		.file 17 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 194              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 195              		.file 19 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.h"
+ 196              		.file 20 "../../Dawn/DawnBsp/gpio.h"
+ 197              		.file 21 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_parameter.c"
+DEFINED SYMBOLS
+                            *ABS*:00000000 dawn_parameter.c
+C:\Users\leonardo\AppData\Local\Temp\ccw6iShV.s:20     .data.GimbalSystem:00000000 GimbalSystem
+C:\Users\leonardo\AppData\Local\Temp\ccw6iShV.s:17     .data.GimbalSystem:00000000 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+NO UNDEFINED SYMBOLS

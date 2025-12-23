@@ -1,0 +1,2051 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_pmu.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.pmu_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	pmu_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	pmu_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_pmu.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \file  gd32f4xx_pmu.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief PMU driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     2016-08-15, V1.0.1, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** #include "gd32f4xx_pmu.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** #include "core_cm4.h"
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      reset PMU register
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+  27              		.loc 1 21 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset PMU */
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     rcu_periph_reset_enable(RCU_PMURST);
+  37              		.loc 1 23 5
+  38 0004 40F61C00 		movw	r0, #2076
+  39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     rcu_periph_reset_disable(RCU_PMURST);
+  40              		.loc 1 24 5
+  41 000c 40F61C00 		movw	r0, #2076
+  42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+  43              		.loc 1 25 1
+  44 0014 00BF     		nop
+  45 0016 80BD     		pop	{r7, pc}
+  46              		.cfi_endproc
+  47              	.LFE123:
+  49              		.section	.text.pmu_lvd_select,"ax",%progbits
+  50              		.align	1
+  51              		.global	pmu_lvd_select
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	pmu_lvd_select:
+  58              	.LFB124:
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      select low voltage detector threshold
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  lvdt_n:
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_0: voltage threshold is 2.2V
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_1: voltage threshold is 2.3V
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_2: voltage threshold is 2.4V
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_3: voltage threshold is 2.5V
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_4: voltage threshold is 2.6V
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_5: voltage threshold is 2.7V
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_6: voltage threshold is 2.8V
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_7: voltage threshold is 2.9V
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lvd_select(uint32_t lvdt_n)
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+  59              		.loc 1 42 1
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 8
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 80B4     		push	{r7}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 7, -4
+  67 0002 83B0     		sub	sp, sp, #12
+  68              		.cfi_def_cfa_offset 16
+  69 0004 00AF     		add	r7, sp, #0
+  70              		.cfi_def_cfa_register 7
+  71 0006 7860     		str	r0, [r7, #4]
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* disable LVD */
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDEN;
+  72              		.loc 1 44 13
+  73 0008 0E4B     		ldr	r3, .L3
+  74 000a 1B68     		ldr	r3, [r3]
+  75 000c 0D4A     		ldr	r2, .L3
+  76 000e 23F01003 		bic	r3, r3, #16
+  77 0012 1360     		str	r3, [r2]
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear LVDT bits */
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDT;
+  78              		.loc 1 46 13
+  79 0014 0B4B     		ldr	r3, .L3
+  80 0016 1B68     		ldr	r3, [r3]
+  81 0018 0A4A     		ldr	r2, .L3
+  82 001a 23F0E003 		bic	r3, r3, #224
+  83 001e 1360     		str	r3, [r2]
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set LVDT bits according to pmu_lvdt_n */
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= lvdt_n;
+  84              		.loc 1 48 13
+  85 0020 084B     		ldr	r3, .L3
+  86 0022 1A68     		ldr	r2, [r3]
+  87 0024 0749     		ldr	r1, .L3
+  88 0026 7B68     		ldr	r3, [r7, #4]
+  89 0028 1343     		orrs	r3, r3, r2
+  90 002a 0B60     		str	r3, [r1]
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* enable LVD */
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_LVDEN;
+  91              		.loc 1 50 13
+  92 002c 054B     		ldr	r3, .L3
+  93 002e 1B68     		ldr	r3, [r3]
+  94 0030 044A     		ldr	r2, .L3
+  95 0032 43F01003 		orr	r3, r3, #16
+  96 0036 1360     		str	r3, [r2]
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+  97              		.loc 1 51 1
+  98 0038 00BF     		nop
+  99 003a 0C37     		adds	r7, r7, #12
+ 100              		.cfi_def_cfa_offset 4
+ 101 003c BD46     		mov	sp, r7
+ 102              		.cfi_def_cfa_register 13
+ 103              		@ sp needed
+ 104 003e 80BC     		pop	{r7}
+ 105              		.cfi_restore 7
+ 106              		.cfi_def_cfa_offset 0
+ 107 0040 7047     		bx	lr
+ 108              	.L4:
+ 109 0042 00BF     		.align	2
+ 110              	.L3:
+ 111 0044 00700040 		.word	1073770496
+ 112              		.cfi_endproc
+ 113              	.LFE124:
+ 115              		.section	.text.pmu_ldo_output_select,"ax",%progbits
+ 116              		.align	1
+ 117              		.global	pmu_ldo_output_select
+ 118              		.syntax unified
+ 119              		.thumb
+ 120              		.thumb_func
+ 121              		.fpu softvfp
+ 123              	pmu_ldo_output_select:
+ 124              	.LFB125:
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      select LDO output voltage
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software when the main PLL closed, before closing PLL, change the s
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  ldo_output:
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_LOW: low-driver mode enable in deep-sleep mode
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_MID: low-driver mode disable in deep-sleep mode
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_HIGH: low-driver mode disable in deep-sleep mode
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_ldo_output_select(uint32_t ldo_output)
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 125              		.loc 1 64 1
+ 126              		.cfi_startproc
+ 127              		@ args = 0, pretend = 0, frame = 8
+ 128              		@ frame_needed = 1, uses_anonymous_args = 0
+ 129              		@ link register save eliminated.
+ 130 0000 80B4     		push	{r7}
+ 131              		.cfi_def_cfa_offset 4
+ 132              		.cfi_offset 7, -4
+ 133 0002 83B0     		sub	sp, sp, #12
+ 134              		.cfi_def_cfa_offset 16
+ 135 0004 00AF     		add	r7, sp, #0
+ 136              		.cfi_def_cfa_register 7
+ 137 0006 7860     		str	r0, [r7, #4]
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDOVS;
+ 138              		.loc 1 65 13
+ 139 0008 084B     		ldr	r3, .L6
+ 140 000a 1B68     		ldr	r3, [r3]
+ 141 000c 074A     		ldr	r2, .L6
+ 142 000e 23F44043 		bic	r3, r3, #49152
+ 143 0012 1360     		str	r3, [r2]
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= ldo_output;
+ 144              		.loc 1 66 13
+ 145 0014 054B     		ldr	r3, .L6
+ 146 0016 1A68     		ldr	r2, [r3]
+ 147 0018 0449     		ldr	r1, .L6
+ 148 001a 7B68     		ldr	r3, [r7, #4]
+ 149 001c 1343     		orrs	r3, r3, r2
+ 150 001e 0B60     		str	r3, [r1]
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 151              		.loc 1 67 1
+ 152 0020 00BF     		nop
+ 153 0022 0C37     		adds	r7, r7, #12
+ 154              		.cfi_def_cfa_offset 4
+ 155 0024 BD46     		mov	sp, r7
+ 156              		.cfi_def_cfa_register 13
+ 157              		@ sp needed
+ 158 0026 80BC     		pop	{r7}
+ 159              		.cfi_restore 7
+ 160              		.cfi_def_cfa_offset 0
+ 161 0028 7047     		bx	lr
+ 162              	.L7:
+ 163 002a 00BF     		.align	2
+ 164              	.L6:
+ 165 002c 00700040 		.word	1073770496
+ 166              		.cfi_endproc
+ 167              	.LFE125:
+ 169              		.section	.text.pmu_low_driver_mode_enable,"ax",%progbits
+ 170              		.align	1
+ 171              		.global	pmu_low_driver_mode_enable
+ 172              		.syntax unified
+ 173              		.thumb
+ 174              		.thumb_func
+ 175              		.fpu softvfp
+ 177              	pmu_low_driver_mode_enable:
+ 178              	.LFB126:
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable low-driver mode in deep-sleep mode
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  lowdr_mode:
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDRIVER_ENABLE: enable low-driver mode in deep-sleep mode
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDRIVER_DISABLE: disable low-driver mode in deep-sleep mode
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_low_driver_mode_enable(uint32_t lowdr_mode)
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 179              		.loc 1 78 1
+ 180              		.cfi_startproc
+ 181              		@ args = 0, pretend = 0, frame = 8
+ 182              		@ frame_needed = 1, uses_anonymous_args = 0
+ 183              		@ link register save eliminated.
+ 184 0000 80B4     		push	{r7}
+ 185              		.cfi_def_cfa_offset 4
+ 186              		.cfi_offset 7, -4
+ 187 0002 83B0     		sub	sp, sp, #12
+ 188              		.cfi_def_cfa_offset 16
+ 189 0004 00AF     		add	r7, sp, #0
+ 190              		.cfi_def_cfa_register 7
+ 191 0006 7860     		str	r0, [r7, #4]
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDEN;
+ 192              		.loc 1 79 13
+ 193 0008 084B     		ldr	r3, .L9
+ 194 000a 1B68     		ldr	r3, [r3]
+ 195 000c 074A     		ldr	r2, .L9
+ 196 000e 23F44023 		bic	r3, r3, #786432
+ 197 0012 1360     		str	r3, [r2]
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= lowdr_mode;
+ 198              		.loc 1 80 13
+ 199 0014 054B     		ldr	r3, .L9
+ 200 0016 1A68     		ldr	r2, [r3]
+ 201 0018 0449     		ldr	r1, .L9
+ 202 001a 7B68     		ldr	r3, [r7, #4]
+ 203 001c 1343     		orrs	r3, r3, r2
+ 204 001e 0B60     		str	r3, [r1]
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 205              		.loc 1 81 1
+ 206 0020 00BF     		nop
+ 207 0022 0C37     		adds	r7, r7, #12
+ 208              		.cfi_def_cfa_offset 4
+ 209 0024 BD46     		mov	sp, r7
+ 210              		.cfi_def_cfa_register 13
+ 211              		@ sp needed
+ 212 0026 80BC     		pop	{r7}
+ 213              		.cfi_restore 7
+ 214              		.cfi_def_cfa_offset 0
+ 215 0028 7047     		bx	lr
+ 216              	.L10:
+ 217 002a 00BF     		.align	2
+ 218              	.L9:
+ 219 002c 00700040 		.word	1073770496
+ 220              		.cfi_endproc
+ 221              	.LFE126:
+ 223              		.section	.text.pmu_highdriver_switch_select,"ax",%progbits
+ 224              		.align	1
+ 225              		.global	pmu_highdriver_switch_select
+ 226              		.syntax unified
+ 227              		.thumb
+ 228              		.thumb_func
+ 229              		.fpu softvfp
+ 231              	pmu_highdriver_switch_select:
+ 232              	.LFB127:
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      switch high-driver mode
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software only when IRC16M or HXTAL used as system clock
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  highdr_switch:
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_HIGHDR_SWITCH_NONE: disable high-driver mode switch
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_HIGHDR_SWITCH_EN: enable high-driver mode switch
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_switch_select(uint32_t highdr_switch)
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 233              		.loc 1 93 1
+ 234              		.cfi_startproc
+ 235              		@ args = 0, pretend = 0, frame = 8
+ 236              		@ frame_needed = 1, uses_anonymous_args = 0
+ 237 0000 80B5     		push	{r7, lr}
+ 238              		.cfi_def_cfa_offset 8
+ 239              		.cfi_offset 7, -8
+ 240              		.cfi_offset 14, -4
+ 241 0002 82B0     		sub	sp, sp, #8
+ 242              		.cfi_def_cfa_offset 16
+ 243 0004 00AF     		add	r7, sp, #0
+ 244              		.cfi_def_cfa_register 7
+ 245 0006 7860     		str	r0, [r7, #4]
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* wait for HDRF flag set */
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     while(SET != pmu_flag_get(PMU_FLAG_HDRF)){
+ 246              		.loc 1 95 10
+ 247 0008 00BF     		nop
+ 248              	.L12:
+ 249              		.loc 1 95 18 discriminator 1
+ 250 000a 4FF48030 		mov	r0, #65536
+ 251 000e FFF7FEFF 		bl	pmu_flag_get
+ 252 0012 0346     		mov	r3, r0
+ 253              		.loc 1 95 10 discriminator 1
+ 254 0014 012B     		cmp	r3, #1
+ 255 0016 F8D1     		bne	.L12
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_HDS;
+ 256              		.loc 1 97 13
+ 257 0018 074B     		ldr	r3, .L13
+ 258 001a 1B68     		ldr	r3, [r3]
+ 259 001c 064A     		ldr	r2, .L13
+ 260 001e 23F40033 		bic	r3, r3, #131072
+ 261 0022 1360     		str	r3, [r2]
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= highdr_switch;
+ 262              		.loc 1 98 13
+ 263 0024 044B     		ldr	r3, .L13
+ 264 0026 1A68     		ldr	r2, [r3]
+ 265 0028 0349     		ldr	r1, .L13
+ 266 002a 7B68     		ldr	r3, [r7, #4]
+ 267 002c 1343     		orrs	r3, r3, r2
+ 268 002e 0B60     		str	r3, [r1]
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 269              		.loc 1 99 1
+ 270 0030 00BF     		nop
+ 271 0032 0837     		adds	r7, r7, #8
+ 272              		.cfi_def_cfa_offset 8
+ 273 0034 BD46     		mov	sp, r7
+ 274              		.cfi_def_cfa_register 13
+ 275              		@ sp needed
+ 276 0036 80BD     		pop	{r7, pc}
+ 277              	.L14:
+ 278              		.align	2
+ 279              	.L13:
+ 280 0038 00700040 		.word	1073770496
+ 281              		.cfi_endproc
+ 282              	.LFE127:
+ 284              		.section	.text.pmu_highdriver_mode_enable,"ax",%progbits
+ 285              		.align	1
+ 286              		.global	pmu_highdriver_mode_enable
+ 287              		.syntax unified
+ 288              		.thumb
+ 289              		.thumb_func
+ 290              		.fpu softvfp
+ 292              	pmu_highdriver_mode_enable:
+ 293              	.LFB128:
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable high-driver mode
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software only when IRC16M or HXTAL used as system clock
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_mode_enable(void)
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 294              		.loc 1 109 1
+ 295              		.cfi_startproc
+ 296              		@ args = 0, pretend = 0, frame = 0
+ 297              		@ frame_needed = 1, uses_anonymous_args = 0
+ 298              		@ link register save eliminated.
+ 299 0000 80B4     		push	{r7}
+ 300              		.cfi_def_cfa_offset 4
+ 301              		.cfi_offset 7, -4
+ 302 0002 00AF     		add	r7, sp, #0
+ 303              		.cfi_def_cfa_register 7
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_HDEN;
+ 304              		.loc 1 110 13
+ 305 0004 044B     		ldr	r3, .L16
+ 306 0006 1B68     		ldr	r3, [r3]
+ 307 0008 034A     		ldr	r2, .L16
+ 308 000a 43F48033 		orr	r3, r3, #65536
+ 309 000e 1360     		str	r3, [r2]
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 310              		.loc 1 111 1
+ 311 0010 00BF     		nop
+ 312 0012 BD46     		mov	sp, r7
+ 313              		.cfi_def_cfa_register 13
+ 314              		@ sp needed
+ 315 0014 80BC     		pop	{r7}
+ 316              		.cfi_restore 7
+ 317              		.cfi_def_cfa_offset 0
+ 318 0016 7047     		bx	lr
+ 319              	.L17:
+ 320              		.align	2
+ 321              	.L16:
+ 322 0018 00700040 		.word	1073770496
+ 323              		.cfi_endproc
+ 324              	.LFE128:
+ 326              		.section	.text.pmu_highdriver_mode_disable,"ax",%progbits
+ 327              		.align	1
+ 328              		.global	pmu_highdriver_mode_disable
+ 329              		.syntax unified
+ 330              		.thumb
+ 331              		.thumb_func
+ 332              		.fpu softvfp
+ 334              	pmu_highdriver_mode_disable:
+ 335              	.LFB129:
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable high-driver mode
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_mode_disable(void)
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 336              		.loc 1 120 1
+ 337              		.cfi_startproc
+ 338              		@ args = 0, pretend = 0, frame = 0
+ 339              		@ frame_needed = 1, uses_anonymous_args = 0
+ 340              		@ link register save eliminated.
+ 341 0000 80B4     		push	{r7}
+ 342              		.cfi_def_cfa_offset 4
+ 343              		.cfi_offset 7, -4
+ 344 0002 00AF     		add	r7, sp, #0
+ 345              		.cfi_def_cfa_register 7
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_HDEN;
+ 346              		.loc 1 121 13
+ 347 0004 044B     		ldr	r3, .L19
+ 348 0006 1B68     		ldr	r3, [r3]
+ 349 0008 034A     		ldr	r2, .L19
+ 350 000a 23F48033 		bic	r3, r3, #65536
+ 351 000e 1360     		str	r3, [r2]
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 352              		.loc 1 122 1
+ 353 0010 00BF     		nop
+ 354 0012 BD46     		mov	sp, r7
+ 355              		.cfi_def_cfa_register 13
+ 356              		@ sp needed
+ 357 0014 80BC     		pop	{r7}
+ 358              		.cfi_restore 7
+ 359              		.cfi_def_cfa_offset 0
+ 360 0016 7047     		bx	lr
+ 361              	.L20:
+ 362              		.align	2
+ 363              	.L19:
+ 364 0018 00700040 		.word	1073770496
+ 365              		.cfi_endproc
+ 366              	.LFE129:
+ 368              		.section	.text.pmu_lvd_disable,"ax",%progbits
+ 369              		.align	1
+ 370              		.global	pmu_lvd_disable
+ 371              		.syntax unified
+ 372              		.thumb
+ 373              		.thumb_func
+ 374              		.fpu softvfp
+ 376              	pmu_lvd_disable:
+ 377              	.LFB130:
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable PMU lvd
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lvd_disable(void)
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 378              		.loc 1 131 1
+ 379              		.cfi_startproc
+ 380              		@ args = 0, pretend = 0, frame = 0
+ 381              		@ frame_needed = 1, uses_anonymous_args = 0
+ 382              		@ link register save eliminated.
+ 383 0000 80B4     		push	{r7}
+ 384              		.cfi_def_cfa_offset 4
+ 385              		.cfi_offset 7, -4
+ 386 0002 00AF     		add	r7, sp, #0
+ 387              		.cfi_def_cfa_register 7
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* disable LVD */
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDEN;
+ 388              		.loc 1 133 13
+ 389 0004 044B     		ldr	r3, .L22
+ 390 0006 1B68     		ldr	r3, [r3]
+ 391 0008 034A     		ldr	r2, .L22
+ 392 000a 23F01003 		bic	r3, r3, #16
+ 393 000e 1360     		str	r3, [r2]
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 394              		.loc 1 134 1
+ 395 0010 00BF     		nop
+ 396 0012 BD46     		mov	sp, r7
+ 397              		.cfi_def_cfa_register 13
+ 398              		@ sp needed
+ 399 0014 80BC     		pop	{r7}
+ 400              		.cfi_restore 7
+ 401              		.cfi_def_cfa_offset 0
+ 402 0016 7047     		bx	lr
+ 403              	.L23:
+ 404              		.align	2
+ 405              	.L22:
+ 406 0018 00700040 		.word	1073770496
+ 407              		.cfi_endproc
+ 408              	.LFE130:
+ 410              		.section	.text.pmu_lowdriver_lowpower_config,"ax",%progbits
+ 411              		.align	1
+ 412              		.global	pmu_lowdriver_lowpower_config
+ 413              		.syntax unified
+ 414              		.thumb
+ 415              		.thumb_func
+ 416              		.fpu softvfp
+ 418              	pmu_lowdriver_lowpower_config:
+ 419              	.LFB131:
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      low-driver mode when use low power LDO
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  mode:
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_NORMALDR_LOWPWR:  normal driver when use low power LDO
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDR_LOWPWR:  low-driver mode enabled when LDEN is 11 and use low power LDO
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lowdriver_lowpower_config(uint32_t mode)
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 420              		.loc 1 145 1
+ 421              		.cfi_startproc
+ 422              		@ args = 0, pretend = 0, frame = 8
+ 423              		@ frame_needed = 1, uses_anonymous_args = 0
+ 424              		@ link register save eliminated.
+ 425 0000 80B4     		push	{r7}
+ 426              		.cfi_def_cfa_offset 4
+ 427              		.cfi_offset 7, -4
+ 428 0002 83B0     		sub	sp, sp, #12
+ 429              		.cfi_def_cfa_offset 16
+ 430 0004 00AF     		add	r7, sp, #0
+ 431              		.cfi_def_cfa_register 7
+ 432 0006 7860     		str	r0, [r7, #4]
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDLP;
+ 433              		.loc 1 146 13
+ 434 0008 084B     		ldr	r3, .L25
+ 435 000a 1B68     		ldr	r3, [r3]
+ 436 000c 074A     		ldr	r2, .L25
+ 437 000e 23F48063 		bic	r3, r3, #1024
+ 438 0012 1360     		str	r3, [r2]
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= mode;
+ 439              		.loc 1 147 13
+ 440 0014 054B     		ldr	r3, .L25
+ 441 0016 1A68     		ldr	r2, [r3]
+ 442 0018 0449     		ldr	r1, .L25
+ 443 001a 7B68     		ldr	r3, [r7, #4]
+ 444 001c 1343     		orrs	r3, r3, r2
+ 445 001e 0B60     		str	r3, [r1]
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 446              		.loc 1 148 1
+ 447 0020 00BF     		nop
+ 448 0022 0C37     		adds	r7, r7, #12
+ 449              		.cfi_def_cfa_offset 4
+ 450 0024 BD46     		mov	sp, r7
+ 451              		.cfi_def_cfa_register 13
+ 452              		@ sp needed
+ 453 0026 80BC     		pop	{r7}
+ 454              		.cfi_restore 7
+ 455              		.cfi_def_cfa_offset 0
+ 456 0028 7047     		bx	lr
+ 457              	.L26:
+ 458 002a 00BF     		.align	2
+ 459              	.L25:
+ 460 002c 00700040 		.word	1073770496
+ 461              		.cfi_endproc
+ 462              	.LFE131:
+ 464              		.section	.text.pmu_lowdriver_normalpower_config,"ax",%progbits
+ 465              		.align	1
+ 466              		.global	pmu_lowdriver_normalpower_config
+ 467              		.syntax unified
+ 468              		.thumb
+ 469              		.thumb_func
+ 470              		.fpu softvfp
+ 472              	pmu_lowdriver_normalpower_config:
+ 473              	.LFB132:
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      low-driver mode when use normal power LDO
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  mode:
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_NORMALDR_NORMALPWR:  normal driver when use low power LDO
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDR_NORMALPWR:  low-driver mode enabled when LDEN is 11 and use low power L
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lowdriver_normalpower_config(uint32_t mode)
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 474              		.loc 1 159 1
+ 475              		.cfi_startproc
+ 476              		@ args = 0, pretend = 0, frame = 8
+ 477              		@ frame_needed = 1, uses_anonymous_args = 0
+ 478              		@ link register save eliminated.
+ 479 0000 80B4     		push	{r7}
+ 480              		.cfi_def_cfa_offset 4
+ 481              		.cfi_offset 7, -4
+ 482 0002 83B0     		sub	sp, sp, #12
+ 483              		.cfi_def_cfa_offset 16
+ 484 0004 00AF     		add	r7, sp, #0
+ 485              		.cfi_def_cfa_register 7
+ 486 0006 7860     		str	r0, [r7, #4]
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDNP;
+ 487              		.loc 1 160 13
+ 488 0008 084B     		ldr	r3, .L28
+ 489 000a 1B68     		ldr	r3, [r3]
+ 490 000c 074A     		ldr	r2, .L28
+ 491 000e 23F40063 		bic	r3, r3, #2048
+ 492 0012 1360     		str	r3, [r2]
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= mode;
+ 493              		.loc 1 161 13
+ 494 0014 054B     		ldr	r3, .L28
+ 495 0016 1A68     		ldr	r2, [r3]
+ 496 0018 0449     		ldr	r1, .L28
+ 497 001a 7B68     		ldr	r3, [r7, #4]
+ 498 001c 1343     		orrs	r3, r3, r2
+ 499 001e 0B60     		str	r3, [r1]
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 500              		.loc 1 162 1
+ 501 0020 00BF     		nop
+ 502 0022 0C37     		adds	r7, r7, #12
+ 503              		.cfi_def_cfa_offset 4
+ 504 0024 BD46     		mov	sp, r7
+ 505              		.cfi_def_cfa_register 13
+ 506              		@ sp needed
+ 507 0026 80BC     		pop	{r7}
+ 508              		.cfi_restore 7
+ 509              		.cfi_def_cfa_offset 0
+ 510 0028 7047     		bx	lr
+ 511              	.L29:
+ 512 002a 00BF     		.align	2
+ 513              	.L28:
+ 514 002c 00700040 		.word	1073770496
+ 515              		.cfi_endproc
+ 516              	.LFE132:
+ 518              		.section	.text.pmu_to_sleepmode,"ax",%progbits
+ 519              		.align	1
+ 520              		.global	pmu_to_sleepmode
+ 521              		.syntax unified
+ 522              		.thumb
+ 523              		.thumb_func
+ 524              		.fpu softvfp
+ 526              	pmu_to_sleepmode:
+ 527              	.LFB133:
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      PMU work at sleep mode
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  sleepmodecmd:
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_sleepmode(uint8_t sleepmodecmd)
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 528              		.loc 1 173 1
+ 529              		.cfi_startproc
+ 530              		@ args = 0, pretend = 0, frame = 8
+ 531              		@ frame_needed = 1, uses_anonymous_args = 0
+ 532              		@ link register save eliminated.
+ 533 0000 80B4     		push	{r7}
+ 534              		.cfi_def_cfa_offset 4
+ 535              		.cfi_offset 7, -4
+ 536 0002 83B0     		sub	sp, sp, #12
+ 537              		.cfi_def_cfa_offset 16
+ 538 0004 00AF     		add	r7, sp, #0
+ 539              		.cfi_def_cfa_register 7
+ 540 0006 0346     		mov	r3, r0
+ 541 0008 FB71     		strb	r3, [r7, #7]
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear sleepdeep bit of Cortex-M4 system control register */
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR &= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);
+ 542              		.loc 1 175 14
+ 543 000a 094B     		ldr	r3, .L33
+ 544 000c 1B69     		ldr	r3, [r3, #16]
+ 545 000e 084A     		ldr	r2, .L33
+ 546 0010 23F00403 		bic	r3, r3, #4
+ 547 0014 1361     		str	r3, [r2, #16]
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter sleep mode */
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == sleepmodecmd){
+ 548              		.loc 1 178 7
+ 549 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 550 0018 002B     		cmp	r3, #0
+ 551 001a 01D1     		bne	.L31
+ 552              	.LBB18:
+ 553              	.LBB19:
+ 554              		.file 2 "../../CMSIS/DSP/Include/core_cmInstr.h"
+   1:../../CMSIS/DSP/Include/core_cmInstr.h **** /**************************************************************************//**
+   2:../../CMSIS/DSP/Include/core_cmInstr.h ****  * @file     core_cmInstr.h
+   3:../../CMSIS/DSP/Include/core_cmInstr.h ****  * @brief    CMSIS Cortex-M Core Instruction Access Header File
+   4:../../CMSIS/DSP/Include/core_cmInstr.h ****  * @version  V4.10
+   5:../../CMSIS/DSP/Include/core_cmInstr.h ****  * @date     18. March 2015
+   6:../../CMSIS/DSP/Include/core_cmInstr.h ****  *
+   7:../../CMSIS/DSP/Include/core_cmInstr.h ****  * @note
+   8:../../CMSIS/DSP/Include/core_cmInstr.h ****  *
+   9:../../CMSIS/DSP/Include/core_cmInstr.h ****  ******************************************************************************/
+  10:../../CMSIS/DSP/Include/core_cmInstr.h **** /* Copyright (c) 2009 - 2014 ARM LIMITED
+  11:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  12:../../CMSIS/DSP/Include/core_cmInstr.h ****    All rights reserved.
+  13:../../CMSIS/DSP/Include/core_cmInstr.h ****    Redistribution and use in source and binary forms, with or without
+  14:../../CMSIS/DSP/Include/core_cmInstr.h ****    modification, are permitted provided that the following conditions are met:
+  15:../../CMSIS/DSP/Include/core_cmInstr.h ****    - Redistributions of source code must retain the above copyright
+  16:../../CMSIS/DSP/Include/core_cmInstr.h ****      notice, this list of conditions and the following disclaimer.
+  17:../../CMSIS/DSP/Include/core_cmInstr.h ****    - Redistributions in binary form must reproduce the above copyright
+  18:../../CMSIS/DSP/Include/core_cmInstr.h ****      notice, this list of conditions and the following disclaimer in the
+  19:../../CMSIS/DSP/Include/core_cmInstr.h ****      documentation and/or other materials provided with the distribution.
+  20:../../CMSIS/DSP/Include/core_cmInstr.h ****    - Neither the name of ARM nor the names of its contributors may be used
+  21:../../CMSIS/DSP/Include/core_cmInstr.h ****      to endorse or promote products derived from this software without
+  22:../../CMSIS/DSP/Include/core_cmInstr.h ****      specific prior written permission.
+  23:../../CMSIS/DSP/Include/core_cmInstr.h ****    *
+  24:../../CMSIS/DSP/Include/core_cmInstr.h ****    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:../../CMSIS/DSP/Include/core_cmInstr.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  26:../../CMSIS/DSP/Include/core_cmInstr.h ****    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  27:../../CMSIS/DSP/Include/core_cmInstr.h ****    ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
+  28:../../CMSIS/DSP/Include/core_cmInstr.h ****    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  29:../../CMSIS/DSP/Include/core_cmInstr.h ****    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  30:../../CMSIS/DSP/Include/core_cmInstr.h ****    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  31:../../CMSIS/DSP/Include/core_cmInstr.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  32:../../CMSIS/DSP/Include/core_cmInstr.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  33:../../CMSIS/DSP/Include/core_cmInstr.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  34:../../CMSIS/DSP/Include/core_cmInstr.h ****    POSSIBILITY OF SUCH DAMAGE.
+  35:../../CMSIS/DSP/Include/core_cmInstr.h ****    ---------------------------------------------------------------------------*/
+  36:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  37:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  38:../../CMSIS/DSP/Include/core_cmInstr.h **** #ifndef __CORE_CMINSTR_H
+  39:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __CORE_CMINSTR_H
+  40:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  41:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  42:../../CMSIS/DSP/Include/core_cmInstr.h **** /* ##########################  Core Instruction Access  ######################### */
+  43:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \defgroup CMSIS_Core_InstructionInterface CMSIS Core Instruction Interface
+  44:../../CMSIS/DSP/Include/core_cmInstr.h ****   Access to dedicated instructions
+  45:../../CMSIS/DSP/Include/core_cmInstr.h ****   @{
+  46:../../CMSIS/DSP/Include/core_cmInstr.h **** */
+  47:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  48:../../CMSIS/DSP/Include/core_cmInstr.h **** #if   defined ( __CC_ARM ) /*------------------RealView Compiler -----------------*/
+  49:../../CMSIS/DSP/Include/core_cmInstr.h **** /* ARM armcc specific functions */
+  50:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  51:../../CMSIS/DSP/Include/core_cmInstr.h **** #if (__ARMCC_VERSION < 400677)
+  52:../../CMSIS/DSP/Include/core_cmInstr.h ****   #error "Please use ARM Compiler Toolchain V4.0.677 or later!"
+  53:../../CMSIS/DSP/Include/core_cmInstr.h **** #endif
+  54:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  55:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  56:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  No Operation
+  57:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  58:../../CMSIS/DSP/Include/core_cmInstr.h ****     No Operation does nothing. This instruction can be used for code alignment purposes.
+  59:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+  60:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __NOP                             __nop
+  61:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  62:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  63:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Wait For Interrupt
+  64:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  65:../../CMSIS/DSP/Include/core_cmInstr.h ****     Wait For Interrupt is a hint instruction that suspends execution
+  66:../../CMSIS/DSP/Include/core_cmInstr.h ****     until one of a number of events occurs.
+  67:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+  68:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __WFI                             __wfi
+  69:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  70:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  71:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Wait For Event
+  72:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  73:../../CMSIS/DSP/Include/core_cmInstr.h ****     Wait For Event is a hint instruction that permits the processor to enter
+  74:../../CMSIS/DSP/Include/core_cmInstr.h ****     a low-power state until one of a number of events occurs.
+  75:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+  76:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __WFE                             __wfe
+  77:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  78:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  79:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Send Event
+  80:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  81:../../CMSIS/DSP/Include/core_cmInstr.h ****     Send Event is a hint instruction. It causes an event to be signaled to the CPU.
+  82:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+  83:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __SEV                             __sev
+  84:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  85:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  86:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Instruction Synchronization Barrier
+  87:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  88:../../CMSIS/DSP/Include/core_cmInstr.h ****     Instruction Synchronization Barrier flushes the pipeline in the processor,
+  89:../../CMSIS/DSP/Include/core_cmInstr.h ****     so that all instructions following the ISB are fetched from cache or
+  90:../../CMSIS/DSP/Include/core_cmInstr.h ****     memory, after the instruction has been completed.
+  91:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+  92:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __ISB() do {\
+  93:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __schedule_barrier();\
+  94:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __isb(0xF);\
+  95:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __schedule_barrier();\
+  96:../../CMSIS/DSP/Include/core_cmInstr.h ****                 } while (0)
+  97:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+  98:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Data Synchronization Barrier
+  99:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 100:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function acts as a special kind of Data Memory Barrier.
+ 101:../../CMSIS/DSP/Include/core_cmInstr.h ****     It completes when all explicit memory accesses before this instruction complete.
+ 102:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 103:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __DSB() do {\
+ 104:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __schedule_barrier();\
+ 105:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __dsb(0xF);\
+ 106:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __schedule_barrier();\
+ 107:../../CMSIS/DSP/Include/core_cmInstr.h ****                 } while (0)
+ 108:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 109:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Data Memory Barrier
+ 110:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 111:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function ensures the apparent order of the explicit memory operations before
+ 112:../../CMSIS/DSP/Include/core_cmInstr.h ****     and after the instruction, without ensuring their completion.
+ 113:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 114:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __DMB() do {\
+ 115:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __schedule_barrier();\
+ 116:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __dmb(0xF);\
+ 117:../../CMSIS/DSP/Include/core_cmInstr.h ****                    __schedule_barrier();\
+ 118:../../CMSIS/DSP/Include/core_cmInstr.h ****                 } while (0)
+ 119:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 120:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Reverse byte order (32 bit)
+ 121:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 122:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function reverses the byte order in integer value.
+ 123:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 124:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    value  Value to reverse
+ 125:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return               Reversed value
+ 126:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 127:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __REV                             __rev
+ 128:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 129:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 130:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Reverse byte order (16 bit)
+ 131:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 132:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function reverses the byte order in two unsigned short values.
+ 133:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 134:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    value  Value to reverse
+ 135:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return               Reversed value
+ 136:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 137:../../CMSIS/DSP/Include/core_cmInstr.h **** #ifndef __NO_EMBEDDED_ASM
+ 138:../../CMSIS/DSP/Include/core_cmInstr.h **** __attribute__((section(".rev16_text"))) __STATIC_INLINE __ASM uint32_t __REV16(uint32_t value)
+ 139:../../CMSIS/DSP/Include/core_cmInstr.h **** {
+ 140:../../CMSIS/DSP/Include/core_cmInstr.h ****   rev16 r0, r0
+ 141:../../CMSIS/DSP/Include/core_cmInstr.h ****   bx lr
+ 142:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 143:../../CMSIS/DSP/Include/core_cmInstr.h **** #endif
+ 144:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 145:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Reverse byte order in signed short value
+ 146:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 147:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function reverses the byte order in a signed short value with sign extension to integer.
+ 148:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 149:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    value  Value to reverse
+ 150:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return               Reversed value
+ 151:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 152:../../CMSIS/DSP/Include/core_cmInstr.h **** #ifndef __NO_EMBEDDED_ASM
+ 153:../../CMSIS/DSP/Include/core_cmInstr.h **** __attribute__((section(".revsh_text"))) __STATIC_INLINE __ASM int32_t __REVSH(int32_t value)
+ 154:../../CMSIS/DSP/Include/core_cmInstr.h **** {
+ 155:../../CMSIS/DSP/Include/core_cmInstr.h ****   revsh r0, r0
+ 156:../../CMSIS/DSP/Include/core_cmInstr.h ****   bx lr
+ 157:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 158:../../CMSIS/DSP/Include/core_cmInstr.h **** #endif
+ 159:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 160:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 161:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Rotate Right in unsigned value (32 bit)
+ 162:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 163:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function Rotate Right (immediate) provides the value of the contents of a register rotated
+ 164:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 165:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    value  Value to rotate
+ 166:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    value  Number of Bits to rotate
+ 167:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return               Rotated value
+ 168:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 169:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __ROR                             __ror
+ 170:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 171:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 172:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Breakpoint
+ 173:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 174:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function causes the processor to enter Debug state.
+ 175:../../CMSIS/DSP/Include/core_cmInstr.h ****     Debug tools can use this to investigate system state when the instruction at a particular addre
+ 176:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 177:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    value  is ignored by the processor.
+ 178:../../CMSIS/DSP/Include/core_cmInstr.h ****                    If required, a debugger can use it to store additional information about the bre
+ 179:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 180:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __BKPT(value)                       __breakpoint(value)
+ 181:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 182:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 183:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Reverse bit order of value
+ 184:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 185:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function reverses the bit order of the given value.
+ 186:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 187:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    value  Value to reverse
+ 188:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return               Reversed value
+ 189:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 190:../../CMSIS/DSP/Include/core_cmInstr.h **** #if       (__CORTEX_M >= 0x03) || (__CORTEX_SC >= 300)
+ 191:../../CMSIS/DSP/Include/core_cmInstr.h ****   #define __RBIT                          __rbit
+ 192:../../CMSIS/DSP/Include/core_cmInstr.h **** #else
+ 193:../../CMSIS/DSP/Include/core_cmInstr.h **** __attribute__((always_inline)) __STATIC_INLINE uint32_t __RBIT(uint32_t value)
+ 194:../../CMSIS/DSP/Include/core_cmInstr.h **** {
+ 195:../../CMSIS/DSP/Include/core_cmInstr.h ****   uint32_t result;
+ 196:../../CMSIS/DSP/Include/core_cmInstr.h ****   int32_t s = 4 /*sizeof(v)*/ * 8 - 1; // extra shift needed at end
+ 197:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 198:../../CMSIS/DSP/Include/core_cmInstr.h ****   result = value;                      // r will be reversed bits of v; first get LSB of v
+ 199:../../CMSIS/DSP/Include/core_cmInstr.h ****   for (value >>= 1; value; value >>= 1)
+ 200:../../CMSIS/DSP/Include/core_cmInstr.h ****   {
+ 201:../../CMSIS/DSP/Include/core_cmInstr.h ****     result <<= 1;
+ 202:../../CMSIS/DSP/Include/core_cmInstr.h ****     result |= value & 1;
+ 203:../../CMSIS/DSP/Include/core_cmInstr.h ****     s--;
+ 204:../../CMSIS/DSP/Include/core_cmInstr.h ****   }
+ 205:../../CMSIS/DSP/Include/core_cmInstr.h ****   result <<= s;                       // shift when v's highest bits are zero
+ 206:../../CMSIS/DSP/Include/core_cmInstr.h ****   return(result);
+ 207:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 208:../../CMSIS/DSP/Include/core_cmInstr.h **** #endif
+ 209:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 210:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 211:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Count leading zeros
+ 212:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 213:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function counts the number of leading zeros of a data value.
+ 214:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 215:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to count the leading zeros
+ 216:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return             number of leading zeros in value
+ 217:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 218:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __CLZ                             __clz
+ 219:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 220:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 221:../../CMSIS/DSP/Include/core_cmInstr.h **** #if       (__CORTEX_M >= 0x03) || (__CORTEX_SC >= 300)
+ 222:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 223:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  LDR Exclusive (8 bit)
+ 224:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 225:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a exclusive LDR instruction for 8 bit value.
+ 226:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 227:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 228:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return             value of type uint8_t at (*ptr)
+ 229:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 230:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __LDREXB(ptr)                     ((uint8_t ) __ldrex(ptr))
+ 231:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 232:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 233:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  LDR Exclusive (16 bit)
+ 234:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 235:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a exclusive LDR instruction for 16 bit values.
+ 236:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 237:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 238:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return        value of type uint16_t at (*ptr)
+ 239:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 240:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __LDREXH(ptr)                     ((uint16_t) __ldrex(ptr))
+ 241:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 242:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 243:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  LDR Exclusive (32 bit)
+ 244:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 245:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a exclusive LDR instruction for 32 bit values.
+ 246:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 247:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 248:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return        value of type uint32_t at (*ptr)
+ 249:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 250:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __LDREXW(ptr)                     ((uint32_t ) __ldrex(ptr))
+ 251:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 252:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 253:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  STR Exclusive (8 bit)
+ 254:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 255:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a exclusive STR instruction for 8 bit values.
+ 256:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 257:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to store
+ 258:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 259:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return          0  Function succeeded
+ 260:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return          1  Function failed
+ 261:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 262:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __STREXB(value, ptr)              __strex(value, ptr)
+ 263:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 264:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 265:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  STR Exclusive (16 bit)
+ 266:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 267:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a exclusive STR instruction for 16 bit values.
+ 268:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 269:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to store
+ 270:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 271:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return          0  Function succeeded
+ 272:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return          1  Function failed
+ 273:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 274:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __STREXH(value, ptr)              __strex(value, ptr)
+ 275:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 276:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 277:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  STR Exclusive (32 bit)
+ 278:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 279:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a exclusive STR instruction for 32 bit values.
+ 280:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 281:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to store
+ 282:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 283:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return          0  Function succeeded
+ 284:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return          1  Function failed
+ 285:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 286:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __STREXW(value, ptr)              __strex(value, ptr)
+ 287:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 288:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 289:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Remove the exclusive lock
+ 290:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 291:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function removes the exclusive lock which is created by LDREX.
+ 292:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 293:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 294:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __CLREX                           __clrex
+ 295:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 296:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 297:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Signed Saturate
+ 298:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 299:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function saturates a signed value.
+ 300:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 301:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to be saturated
+ 302:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    sat  Bit position to saturate to (1..32)
+ 303:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return             Saturated value
+ 304:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 305:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __SSAT                            __ssat
+ 306:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 307:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 308:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Unsigned Saturate
+ 309:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 310:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function saturates an unsigned value.
+ 311:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 312:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to be saturated
+ 313:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    sat  Bit position to saturate to (0..31)
+ 314:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return             Saturated value
+ 315:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 316:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __USAT                            __usat
+ 317:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 318:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 319:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Rotate Right with Extend (32 bit)
+ 320:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 321:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function moves each bit of a bitstring right by one bit.
+ 322:../../CMSIS/DSP/Include/core_cmInstr.h ****     The carry input is shifted in at the left end of the bitstring.
+ 323:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 324:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    value  Value to rotate
+ 325:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return               Rotated value
+ 326:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 327:../../CMSIS/DSP/Include/core_cmInstr.h **** #ifndef __NO_EMBEDDED_ASM
+ 328:../../CMSIS/DSP/Include/core_cmInstr.h **** __attribute__((section(".rrx_text"))) __STATIC_INLINE __ASM uint32_t __RRX(uint32_t value)
+ 329:../../CMSIS/DSP/Include/core_cmInstr.h **** {
+ 330:../../CMSIS/DSP/Include/core_cmInstr.h ****   rrx r0, r0
+ 331:../../CMSIS/DSP/Include/core_cmInstr.h ****   bx lr
+ 332:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 333:../../CMSIS/DSP/Include/core_cmInstr.h **** #endif
+ 334:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 335:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 336:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  LDRT Unprivileged (8 bit)
+ 337:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 338:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a Unprivileged LDRT instruction for 8 bit value.
+ 339:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 340:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 341:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return             value of type uint8_t at (*ptr)
+ 342:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 343:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __LDRBT(ptr)                      ((uint8_t )  __ldrt(ptr))
+ 344:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 345:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 346:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  LDRT Unprivileged (16 bit)
+ 347:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 348:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a Unprivileged LDRT instruction for 16 bit values.
+ 349:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 350:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 351:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return        value of type uint16_t at (*ptr)
+ 352:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 353:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __LDRHT(ptr)                      ((uint16_t)  __ldrt(ptr))
+ 354:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 355:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 356:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  LDRT Unprivileged (32 bit)
+ 357:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 358:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a Unprivileged LDRT instruction for 32 bit values.
+ 359:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 360:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to data
+ 361:../../CMSIS/DSP/Include/core_cmInstr.h ****     \return        value of type uint32_t at (*ptr)
+ 362:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 363:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __LDRT(ptr)                       ((uint32_t ) __ldrt(ptr))
+ 364:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 365:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 366:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  STRT Unprivileged (8 bit)
+ 367:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 368:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a Unprivileged STRT instruction for 8 bit values.
+ 369:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 370:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to store
+ 371:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 372:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 373:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __STRBT(value, ptr)               __strt(value, ptr)
+ 374:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 375:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 376:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  STRT Unprivileged (16 bit)
+ 377:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 378:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a Unprivileged STRT instruction for 16 bit values.
+ 379:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 380:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to store
+ 381:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 382:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 383:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __STRHT(value, ptr)               __strt(value, ptr)
+ 384:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 385:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 386:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  STRT Unprivileged (32 bit)
+ 387:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 388:../../CMSIS/DSP/Include/core_cmInstr.h ****     This function executes a Unprivileged STRT instruction for 32 bit values.
+ 389:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 390:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]  value  Value to store
+ 391:../../CMSIS/DSP/Include/core_cmInstr.h ****     \param [in]    ptr  Pointer to location
+ 392:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 393:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __STRT(value, ptr)                __strt(value, ptr)
+ 394:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 395:../../CMSIS/DSP/Include/core_cmInstr.h **** #endif /* (__CORTEX_M >= 0x03) || (__CORTEX_SC >= 300) */
+ 396:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 397:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 398:../../CMSIS/DSP/Include/core_cmInstr.h **** #elif defined ( __GNUC__ ) /*------------------ GNU Compiler ---------------------*/
+ 399:../../CMSIS/DSP/Include/core_cmInstr.h **** /* GNU gcc specific functions */
+ 400:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 401:../../CMSIS/DSP/Include/core_cmInstr.h **** /* Define macros for porting to both thumb1 and thumb2.
+ 402:../../CMSIS/DSP/Include/core_cmInstr.h ****  * For thumb1, use low register (r0-r7), specified by constrant "l"
+ 403:../../CMSIS/DSP/Include/core_cmInstr.h ****  * Otherwise, use general registers, specified by constrant "r" */
+ 404:../../CMSIS/DSP/Include/core_cmInstr.h **** #if defined (__thumb__) && !defined (__thumb2__)
+ 405:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __CMSIS_GCC_OUT_REG(r) "=l" (r)
+ 406:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __CMSIS_GCC_USE_REG(r) "l" (r)
+ 407:../../CMSIS/DSP/Include/core_cmInstr.h **** #else
+ 408:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __CMSIS_GCC_OUT_REG(r) "=r" (r)
+ 409:../../CMSIS/DSP/Include/core_cmInstr.h **** #define __CMSIS_GCC_USE_REG(r) "r" (r)
+ 410:../../CMSIS/DSP/Include/core_cmInstr.h **** #endif
+ 411:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 412:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  No Operation
+ 413:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 414:../../CMSIS/DSP/Include/core_cmInstr.h ****     No Operation does nothing. This instruction can be used for code alignment purposes.
+ 415:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 416:../../CMSIS/DSP/Include/core_cmInstr.h **** __attribute__((always_inline)) __STATIC_INLINE void __NOP(void)
+ 417:../../CMSIS/DSP/Include/core_cmInstr.h **** {
+ 418:../../CMSIS/DSP/Include/core_cmInstr.h ****   __ASM volatile ("nop");
+ 419:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 420:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 421:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 422:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Wait For Interrupt
+ 423:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 424:../../CMSIS/DSP/Include/core_cmInstr.h ****     Wait For Interrupt is a hint instruction that suspends execution
+ 425:../../CMSIS/DSP/Include/core_cmInstr.h ****     until one of a number of events occurs.
+ 426:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 427:../../CMSIS/DSP/Include/core_cmInstr.h **** __attribute__((always_inline)) __STATIC_INLINE void __WFI(void)
+ 428:../../CMSIS/DSP/Include/core_cmInstr.h **** {
+ 429:../../CMSIS/DSP/Include/core_cmInstr.h ****   __ASM volatile ("wfi");
+ 555              		.loc 2 429 3
+ 556              		.syntax unified
+ 557              	@ 429 "../../CMSIS/DSP/Include/core_cmInstr.h" 1
+ 558 001c 30BF     		wfi
+ 559              	@ 0 "" 2
+ 430:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 560              		.loc 2 430 1
+ 561              		.thumb
+ 562              		.syntax unified
+ 563 001e 01E0     		b	.L32
+ 564              	.L31:
+ 565              	.LBE19:
+ 566              	.LBE18:
+ 567              	.LBB20:
+ 568              	.LBB21:
+ 431:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 432:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 433:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Wait For Event
+ 434:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 435:../../CMSIS/DSP/Include/core_cmInstr.h ****     Wait For Event is a hint instruction that permits the processor to enter
+ 436:../../CMSIS/DSP/Include/core_cmInstr.h ****     a low-power state until one of a number of events occurs.
+ 437:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 438:../../CMSIS/DSP/Include/core_cmInstr.h **** __attribute__((always_inline)) __STATIC_INLINE void __WFE(void)
+ 439:../../CMSIS/DSP/Include/core_cmInstr.h **** {
+ 440:../../CMSIS/DSP/Include/core_cmInstr.h ****   __ASM volatile ("wfe");
+ 569              		.loc 2 440 3
+ 570              		.syntax unified
+ 571              	@ 440 "../../CMSIS/DSP/Include/core_cmInstr.h" 1
+ 572 0020 20BF     		wfe
+ 573              	@ 0 "" 2
+ 441:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 574              		.loc 2 441 1
+ 575              		.thumb
+ 576              		.syntax unified
+ 577 0022 00BF     		nop
+ 578              	.L32:
+ 579              	.LBE21:
+ 580              	.LBE20:
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 581              		.loc 1 183 1
+ 582 0024 00BF     		nop
+ 583 0026 0C37     		adds	r7, r7, #12
+ 584              		.cfi_def_cfa_offset 4
+ 585 0028 BD46     		mov	sp, r7
+ 586              		.cfi_def_cfa_register 13
+ 587              		@ sp needed
+ 588 002a 80BC     		pop	{r7}
+ 589              		.cfi_restore 7
+ 590              		.cfi_def_cfa_offset 0
+ 591 002c 7047     		bx	lr
+ 592              	.L34:
+ 593 002e 00BF     		.align	2
+ 594              	.L33:
+ 595 0030 00ED00E0 		.word	-536810240
+ 596              		.cfi_endproc
+ 597              	.LFE133:
+ 599              		.section	.text.pmu_to_deepsleepmode,"ax",%progbits
+ 600              		.align	1
+ 601              		.global	pmu_to_deepsleepmode
+ 602              		.syntax unified
+ 603              		.thumb
+ 604              		.thumb_func
+ 605              		.fpu softvfp
+ 607              	pmu_to_deepsleepmode:
+ 608              	.LFB134:
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      PMU work at deepsleep mode
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  ldo
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDO_NORMAL: LDO normal work when pmu enter deepsleep mode
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDO_LOWPOWER: LDO work at low power mode when pmu enter deepsleep mode
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  deepsleepmodecmd: 
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_deepsleepmode(uint32_t ldo,uint8_t deepsleepmodecmd)
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 609              		.loc 1 197 1
+ 610              		.cfi_startproc
+ 611              		@ args = 0, pretend = 0, frame = 8
+ 612              		@ frame_needed = 1, uses_anonymous_args = 0
+ 613              		@ link register save eliminated.
+ 614 0000 80B4     		push	{r7}
+ 615              		.cfi_def_cfa_offset 4
+ 616              		.cfi_offset 7, -4
+ 617 0002 83B0     		sub	sp, sp, #12
+ 618              		.cfi_def_cfa_offset 16
+ 619 0004 00AF     		add	r7, sp, #0
+ 620              		.cfi_def_cfa_register 7
+ 621 0006 7860     		str	r0, [r7, #4]
+ 622 0008 0B46     		mov	r3, r1
+ 623 000a FB70     		strb	r3, [r7, #3]
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear stbmod and ldolp bits */
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~((uint32_t)(PMU_CTL_STBMOD | PMU_CTL_LDOLP));
+ 624              		.loc 1 199 13
+ 625 000c 134B     		ldr	r3, .L38
+ 626 000e 1B68     		ldr	r3, [r3]
+ 627 0010 124A     		ldr	r2, .L38
+ 628 0012 23F00303 		bic	r3, r3, #3
+ 629 0016 1360     		str	r3, [r2]
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set ldolp bit according to pmu_ldo */
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= ldo;
+ 630              		.loc 1 202 13
+ 631 0018 104B     		ldr	r3, .L38
+ 632 001a 1A68     		ldr	r2, [r3]
+ 633 001c 0F49     		ldr	r1, .L38
+ 634 001e 7B68     		ldr	r3, [r7, #4]
+ 635 0020 1343     		orrs	r3, r3, r2
+ 636 0022 0B60     		str	r3, [r1]
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set sleepdeep bit of Cortex-M4 system control register */
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+ 637              		.loc 1 205 14
+ 638 0024 0E4B     		ldr	r3, .L38+4
+ 639 0026 1B69     		ldr	r3, [r3, #16]
+ 640 0028 0D4A     		ldr	r2, .L38+4
+ 641 002a 43F00403 		orr	r3, r3, #4
+ 642 002e 1361     		str	r3, [r2, #16]
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter deepsleep mode */
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == deepsleepmodecmd){
+ 643              		.loc 1 208 7
+ 644 0030 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 645 0032 002B     		cmp	r3, #0
+ 646 0034 01D1     		bne	.L36
+ 647              	.LBB22:
+ 648              	.LBB23:
+ 429:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 649              		.loc 2 429 3
+ 650              		.syntax unified
+ 651              	@ 429 "../../CMSIS/DSP/Include/core_cmInstr.h" 1
+ 652 0036 30BF     		wfi
+ 653              	@ 0 "" 2
+ 430:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 654              		.loc 2 430 1
+ 655              		.thumb
+ 656              		.syntax unified
+ 657 0038 05E0     		b	.L37
+ 658              	.L36:
+ 659              	.LBE23:
+ 660              	.LBE22:
+ 661              	.LBB24:
+ 662              	.LBB25:
+ 442:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 443:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 444:../../CMSIS/DSP/Include/core_cmInstr.h **** /** \brief  Send Event
+ 445:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 446:../../CMSIS/DSP/Include/core_cmInstr.h ****     Send Event is a hint instruction. It causes an event to be signaled to the CPU.
+ 447:../../CMSIS/DSP/Include/core_cmInstr.h ****  */
+ 448:../../CMSIS/DSP/Include/core_cmInstr.h **** __attribute__((always_inline)) __STATIC_INLINE void __SEV(void)
+ 449:../../CMSIS/DSP/Include/core_cmInstr.h **** {
+ 450:../../CMSIS/DSP/Include/core_cmInstr.h ****   __ASM volatile ("sev");
+ 663              		.loc 2 450 3
+ 664              		.syntax unified
+ 665              	@ 450 "../../CMSIS/DSP/Include/core_cmInstr.h" 1
+ 666 003a 40BF     		sev
+ 667              	@ 0 "" 2
+ 451:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 668              		.loc 2 451 1
+ 669              		.thumb
+ 670              		.syntax unified
+ 671 003c 00BF     		nop
+ 672              	.LBE25:
+ 673              	.LBE24:
+ 674              	.LBB26:
+ 675              	.LBB27:
+ 440:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 676              		.loc 2 440 3
+ 677              		.syntax unified
+ 678              	@ 440 "../../CMSIS/DSP/Include/core_cmInstr.h" 1
+ 679 003e 20BF     		wfe
+ 680              	@ 0 "" 2
+ 441:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 681              		.loc 2 441 1
+ 682              		.thumb
+ 683              		.syntax unified
+ 684 0040 00BF     		nop
+ 685              	.LBE27:
+ 686              	.LBE26:
+ 687              	.LBB28:
+ 688              	.LBB29:
+ 440:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 689              		.loc 2 440 3
+ 690              		.syntax unified
+ 691              	@ 440 "../../CMSIS/DSP/Include/core_cmInstr.h" 1
+ 692 0042 20BF     		wfe
+ 693              	@ 0 "" 2
+ 441:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 694              		.loc 2 441 1
+ 695              		.thumb
+ 696              		.syntax unified
+ 697 0044 00BF     		nop
+ 698              	.L37:
+ 699              	.LBE29:
+ 700              	.LBE28:
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __SEV();
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset sleepdeep bit of Cortex-M4 system control register */
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR &= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);
+ 701              		.loc 1 216 14
+ 702 0046 064B     		ldr	r3, .L38+4
+ 703 0048 1B69     		ldr	r3, [r3, #16]
+ 704 004a 054A     		ldr	r2, .L38+4
+ 705 004c 23F00403 		bic	r3, r3, #4
+ 706 0050 1361     		str	r3, [r2, #16]
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 707              		.loc 1 217 1
+ 708 0052 00BF     		nop
+ 709 0054 0C37     		adds	r7, r7, #12
+ 710              		.cfi_def_cfa_offset 4
+ 711 0056 BD46     		mov	sp, r7
+ 712              		.cfi_def_cfa_register 13
+ 713              		@ sp needed
+ 714 0058 80BC     		pop	{r7}
+ 715              		.cfi_restore 7
+ 716              		.cfi_def_cfa_offset 0
+ 717 005a 7047     		bx	lr
+ 718              	.L39:
+ 719              		.align	2
+ 720              	.L38:
+ 721 005c 00700040 		.word	1073770496
+ 722 0060 00ED00E0 		.word	-536810240
+ 723              		.cfi_endproc
+ 724              	.LFE134:
+ 726              		.section	.text.pmu_to_standbymode,"ax",%progbits
+ 727              		.align	1
+ 728              		.global	pmu_to_standbymode
+ 729              		.syntax unified
+ 730              		.thumb
+ 731              		.thumb_func
+ 732              		.fpu softvfp
+ 734              	pmu_to_standbymode:
+ 735              	.LFB135:
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      pmu work at standby mode
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  standbymodecmd:
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_standbymode(uint8_t standbymodecmd)
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 736              		.loc 1 228 1
+ 737              		.cfi_startproc
+ 738              		@ args = 0, pretend = 0, frame = 8
+ 739              		@ frame_needed = 1, uses_anonymous_args = 0
+ 740              		@ link register save eliminated.
+ 741 0000 80B4     		push	{r7}
+ 742              		.cfi_def_cfa_offset 4
+ 743              		.cfi_offset 7, -4
+ 744 0002 83B0     		sub	sp, sp, #12
+ 745              		.cfi_def_cfa_offset 16
+ 746 0004 00AF     		add	r7, sp, #0
+ 747              		.cfi_def_cfa_register 7
+ 748 0006 0346     		mov	r3, r0
+ 749 0008 FB71     		strb	r3, [r7, #7]
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set sleepdeep bit of Cortex-M4 system control register */
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+ 750              		.loc 1 230 14
+ 751 000a 0F4B     		ldr	r3, .L43
+ 752 000c 1B69     		ldr	r3, [r3, #16]
+ 753 000e 0E4A     		ldr	r2, .L43
+ 754 0010 43F00403 		orr	r3, r3, #4
+ 755 0014 1361     		str	r3, [r2, #16]
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set stbmod bit */
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_STBMOD;
+ 756              		.loc 1 233 13
+ 757 0016 0D4B     		ldr	r3, .L43+4
+ 758 0018 1B68     		ldr	r3, [r3]
+ 759 001a 0C4A     		ldr	r2, .L43+4
+ 760 001c 43F00203 		orr	r3, r3, #2
+ 761 0020 1360     		str	r3, [r2]
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset wakeup flag */
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_WURST;
+ 762              		.loc 1 236 13
+ 763 0022 0A4B     		ldr	r3, .L43+4
+ 764 0024 1B68     		ldr	r3, [r3]
+ 765 0026 094A     		ldr	r2, .L43+4
+ 766 0028 43F00403 		orr	r3, r3, #4
+ 767 002c 1360     		str	r3, [r2]
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter standby mode */
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == standbymodecmd){
+ 768              		.loc 1 239 7
+ 769 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 770 0030 002B     		cmp	r3, #0
+ 771 0032 01D1     		bne	.L41
+ 772              	.LBB30:
+ 773              	.LBB31:
+ 429:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 774              		.loc 2 429 3
+ 775              		.syntax unified
+ 776              	@ 429 "../../CMSIS/DSP/Include/core_cmInstr.h" 1
+ 777 0034 30BF     		wfi
+ 778              	@ 0 "" 2
+ 430:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 779              		.loc 2 430 1
+ 780              		.thumb
+ 781              		.syntax unified
+ 782 0036 01E0     		b	.L42
+ 783              	.L41:
+ 784              	.LBE31:
+ 785              	.LBE30:
+ 786              	.LBB32:
+ 787              	.LBB33:
+ 440:../../CMSIS/DSP/Include/core_cmInstr.h **** }
+ 788              		.loc 2 440 3
+ 789              		.syntax unified
+ 790              	@ 440 "../../CMSIS/DSP/Include/core_cmInstr.h" 1
+ 791 0038 20BF     		wfe
+ 792              	@ 0 "" 2
+ 441:../../CMSIS/DSP/Include/core_cmInstr.h **** 
+ 793              		.loc 2 441 1
+ 794              		.thumb
+ 795              		.syntax unified
+ 796 003a 00BF     		nop
+ 797              	.L42:
+ 798              	.LBE33:
+ 799              	.LBE32:
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 800              		.loc 1 244 1
+ 801 003c 00BF     		nop
+ 802 003e 0C37     		adds	r7, r7, #12
+ 803              		.cfi_def_cfa_offset 4
+ 804 0040 BD46     		mov	sp, r7
+ 805              		.cfi_def_cfa_register 13
+ 806              		@ sp needed
+ 807 0042 80BC     		pop	{r7}
+ 808              		.cfi_restore 7
+ 809              		.cfi_def_cfa_offset 0
+ 810 0044 7047     		bx	lr
+ 811              	.L44:
+ 812 0046 00BF     		.align	2
+ 813              	.L43:
+ 814 0048 00ED00E0 		.word	-536810240
+ 815 004c 00700040 		.word	1073770496
+ 816              		.cfi_endproc
+ 817              	.LFE135:
+ 819              		.section	.text.pmu_backup_ldo_config,"ax",%progbits
+ 820              		.align	1
+ 821              		.global	pmu_backup_ldo_config
+ 822              		.syntax unified
+ 823              		.thumb
+ 824              		.thumb_func
+ 825              		.fpu softvfp
+ 827              	pmu_backup_ldo_config:
+ 828              	.LFB136:
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      backup SRAM LDO on
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  bkp_ldo:
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_BLDOON_OFF: backup SRAM LDO closed
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_BLDOON_ON: open the backup SRAM LDO
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_ldo_config(uint32_t bkp_ldo)
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 829              		.loc 1 255 1
+ 830              		.cfi_startproc
+ 831              		@ args = 0, pretend = 0, frame = 8
+ 832              		@ frame_needed = 1, uses_anonymous_args = 0
+ 833              		@ link register save eliminated.
+ 834 0000 80B4     		push	{r7}
+ 835              		.cfi_def_cfa_offset 4
+ 836              		.cfi_offset 7, -4
+ 837 0002 83B0     		sub	sp, sp, #12
+ 838              		.cfi_def_cfa_offset 16
+ 839 0004 00AF     		add	r7, sp, #0
+ 840              		.cfi_def_cfa_register 7
+ 841 0006 7860     		str	r0, [r7, #4]
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS &= ~PMU_CS_BLDOON;
+ 842              		.loc 1 256 12
+ 843 0008 084B     		ldr	r3, .L46
+ 844 000a 1B68     		ldr	r3, [r3]
+ 845 000c 074A     		ldr	r2, .L46
+ 846 000e 23F40073 		bic	r3, r3, #512
+ 847 0012 1360     		str	r3, [r2]
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS |= bkp_ldo;
+ 848              		.loc 1 257 12
+ 849 0014 054B     		ldr	r3, .L46
+ 850 0016 1A68     		ldr	r2, [r3]
+ 851 0018 0449     		ldr	r1, .L46
+ 852 001a 7B68     		ldr	r3, [r7, #4]
+ 853 001c 1343     		orrs	r3, r3, r2
+ 854 001e 0B60     		str	r3, [r1]
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 855              		.loc 1 258 1
+ 856 0020 00BF     		nop
+ 857 0022 0C37     		adds	r7, r7, #12
+ 858              		.cfi_def_cfa_offset 4
+ 859 0024 BD46     		mov	sp, r7
+ 860              		.cfi_def_cfa_register 13
+ 861              		@ sp needed
+ 862 0026 80BC     		pop	{r7}
+ 863              		.cfi_restore 7
+ 864              		.cfi_def_cfa_offset 0
+ 865 0028 7047     		bx	lr
+ 866              	.L47:
+ 867 002a 00BF     		.align	2
+ 868              	.L46:
+ 869 002c 04700040 		.word	1073770500
+ 870              		.cfi_endproc
+ 871              	.LFE136:
+ 873              		.section	.text.pmu_flag_reset,"ax",%progbits
+ 874              		.align	1
+ 875              		.global	pmu_flag_reset
+ 876              		.syntax unified
+ 877              		.thumb
+ 878              		.thumb_func
+ 879              		.fpu softvfp
+ 881              	pmu_flag_reset:
+ 882              	.LFB137:
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      reset flag bit
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  flag_reset:
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_RESET_WAKEUP: reset wakeup flag
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_RESET_STANDBY: reset standby flag
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_flag_reset(uint32_t flag_reset)
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 883              		.loc 1 269 1
+ 884              		.cfi_startproc
+ 885              		@ args = 0, pretend = 0, frame = 8
+ 886              		@ frame_needed = 1, uses_anonymous_args = 0
+ 887              		@ link register save eliminated.
+ 888 0000 80B4     		push	{r7}
+ 889              		.cfi_def_cfa_offset 4
+ 890              		.cfi_offset 7, -4
+ 891 0002 83B0     		sub	sp, sp, #12
+ 892              		.cfi_def_cfa_offset 16
+ 893 0004 00AF     		add	r7, sp, #0
+ 894              		.cfi_def_cfa_register 7
+ 895 0006 7860     		str	r0, [r7, #4]
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     switch(flag_reset){
+ 896              		.loc 1 270 5
+ 897 0008 7B68     		ldr	r3, [r7, #4]
+ 898 000a 002B     		cmp	r3, #0
+ 899 000c 03D0     		beq	.L49
+ 900 000e 7B68     		ldr	r3, [r7, #4]
+ 901 0010 012B     		cmp	r3, #1
+ 902 0012 07D0     		beq	.L50
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_WAKEUP:
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         /* reset wakeup flag */
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         PMU_CTL |= PMU_CTL_WURST;
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_STANDBY:
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         /* reset standby flag */
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         PMU_CTL |= PMU_CTL_STBRST;
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     default :
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 903              		.loc 1 280 9
+ 904 0014 0DE0     		b	.L52
+ 905              	.L49:
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 906              		.loc 1 273 17
+ 907 0016 094B     		ldr	r3, .L53
+ 908 0018 1B68     		ldr	r3, [r3]
+ 909 001a 084A     		ldr	r2, .L53
+ 910 001c 43F00403 		orr	r3, r3, #4
+ 911 0020 1360     		str	r3, [r2]
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_STANDBY:
+ 912              		.loc 1 274 9
+ 913 0022 06E0     		b	.L52
+ 914              	.L50:
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 915              		.loc 1 277 17
+ 916 0024 054B     		ldr	r3, .L53
+ 917 0026 1B68     		ldr	r3, [r3]
+ 918 0028 044A     		ldr	r2, .L53
+ 919 002a 43F00803 		orr	r3, r3, #8
+ 920 002e 1360     		str	r3, [r2]
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     default :
+ 921              		.loc 1 278 9
+ 922 0030 00BF     		nop
+ 923              	.L52:
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 924              		.loc 1 282 1
+ 925 0032 00BF     		nop
+ 926 0034 0C37     		adds	r7, r7, #12
+ 927              		.cfi_def_cfa_offset 4
+ 928 0036 BD46     		mov	sp, r7
+ 929              		.cfi_def_cfa_register 13
+ 930              		@ sp needed
+ 931 0038 80BC     		pop	{r7}
+ 932              		.cfi_restore 7
+ 933              		.cfi_def_cfa_offset 0
+ 934 003a 7047     		bx	lr
+ 935              	.L54:
+ 936              		.align	2
+ 937              	.L53:
+ 938 003c 00700040 		.word	1073770496
+ 939              		.cfi_endproc
+ 940              	.LFE137:
+ 942              		.section	.text.pmu_flag_get,"ax",%progbits
+ 943              		.align	1
+ 944              		.global	pmu_flag_get
+ 945              		.syntax unified
+ 946              		.thumb
+ 947              		.thumb_func
+ 948              		.fpu softvfp
+ 950              	pmu_flag_get:
+ 951              	.LFB138:
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      get flag state
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  flag:
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_WAKEUP: wakeup flag
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_STANDBY: standby flag
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LVD: lvd flag
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_BLDORF: backup SRAM LDO ready flag
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LDOVSRF: LDO voltage select ready flag
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_HDRF: high-driver ready flag
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_HDSRF: high-driver switch ready flag
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LDRF: low-driver mode ready flag 
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     FlagStatus: SET or RESET
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** FlagStatus pmu_flag_get(uint32_t flag)
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 952              		.loc 1 299 1
+ 953              		.cfi_startproc
+ 954              		@ args = 0, pretend = 0, frame = 8
+ 955              		@ frame_needed = 1, uses_anonymous_args = 0
+ 956              		@ link register save eliminated.
+ 957 0000 80B4     		push	{r7}
+ 958              		.cfi_def_cfa_offset 4
+ 959              		.cfi_offset 7, -4
+ 960 0002 83B0     		sub	sp, sp, #12
+ 961              		.cfi_def_cfa_offset 16
+ 962 0004 00AF     		add	r7, sp, #0
+ 963              		.cfi_def_cfa_register 7
+ 964 0006 7860     		str	r0, [r7, #4]
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(PMU_CS & flag){
+ 965              		.loc 1 300 8
+ 966 0008 064B     		ldr	r3, .L58
+ 967 000a 1A68     		ldr	r2, [r3]
+ 968              		.loc 1 300 15
+ 969 000c 7B68     		ldr	r3, [r7, #4]
+ 970 000e 1340     		ands	r3, r3, r2
+ 971              		.loc 1 300 7
+ 972 0010 002B     		cmp	r3, #0
+ 973 0012 01D0     		beq	.L56
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         return  SET;
+ 974              		.loc 1 301 17
+ 975 0014 0123     		movs	r3, #1
+ 976 0016 00E0     		b	.L57
+ 977              	.L56:
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         return  RESET;
+ 978              		.loc 1 303 17
+ 979 0018 0023     		movs	r3, #0
+ 980              	.L57:
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 981              		.loc 1 305 1
+ 982 001a 1846     		mov	r0, r3
+ 983 001c 0C37     		adds	r7, r7, #12
+ 984              		.cfi_def_cfa_offset 4
+ 985 001e BD46     		mov	sp, r7
+ 986              		.cfi_def_cfa_register 13
+ 987              		@ sp needed
+ 988 0020 80BC     		pop	{r7}
+ 989              		.cfi_restore 7
+ 990              		.cfi_def_cfa_offset 0
+ 991 0022 7047     		bx	lr
+ 992              	.L59:
+ 993              		.align	2
+ 994              	.L58:
+ 995 0024 04700040 		.word	1073770500
+ 996              		.cfi_endproc
+ 997              	.LFE138:
+ 999              		.section	.text.pmu_backup_write_enable,"ax",%progbits
+ 1000              		.align	1
+ 1001              		.global	pmu_backup_write_enable
+ 1002              		.syntax unified
+ 1003              		.thumb
+ 1004              		.thumb_func
+ 1005              		.fpu softvfp
+ 1007              	pmu_backup_write_enable:
+ 1008              	.LFB139:
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable backup domain write
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_write_enable(void)
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 1009              		.loc 1 314 1
+ 1010              		.cfi_startproc
+ 1011              		@ args = 0, pretend = 0, frame = 0
+ 1012              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1013              		@ link register save eliminated.
+ 1014 0000 80B4     		push	{r7}
+ 1015              		.cfi_def_cfa_offset 4
+ 1016              		.cfi_offset 7, -4
+ 1017 0002 00AF     		add	r7, sp, #0
+ 1018              		.cfi_def_cfa_register 7
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_BKPWEN;
+ 1019              		.loc 1 315 13
+ 1020 0004 044B     		ldr	r3, .L61
+ 1021 0006 1B68     		ldr	r3, [r3]
+ 1022 0008 034A     		ldr	r2, .L61
+ 1023 000a 43F48073 		orr	r3, r3, #256
+ 1024 000e 1360     		str	r3, [r2]
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 1025              		.loc 1 316 1
+ 1026 0010 00BF     		nop
+ 1027 0012 BD46     		mov	sp, r7
+ 1028              		.cfi_def_cfa_register 13
+ 1029              		@ sp needed
+ 1030 0014 80BC     		pop	{r7}
+ 1031              		.cfi_restore 7
+ 1032              		.cfi_def_cfa_offset 0
+ 1033 0016 7047     		bx	lr
+ 1034              	.L62:
+ 1035              		.align	2
+ 1036              	.L61:
+ 1037 0018 00700040 		.word	1073770496
+ 1038              		.cfi_endproc
+ 1039              	.LFE139:
+ 1041              		.section	.text.pmu_backup_write_disable,"ax",%progbits
+ 1042              		.align	1
+ 1043              		.global	pmu_backup_write_disable
+ 1044              		.syntax unified
+ 1045              		.thumb
+ 1046              		.thumb_func
+ 1047              		.fpu softvfp
+ 1049              	pmu_backup_write_disable:
+ 1050              	.LFB140:
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable backup domain write
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_write_disable(void)
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 1051              		.loc 1 325 1
+ 1052              		.cfi_startproc
+ 1053              		@ args = 0, pretend = 0, frame = 0
+ 1054              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1055              		@ link register save eliminated.
+ 1056 0000 80B4     		push	{r7}
+ 1057              		.cfi_def_cfa_offset 4
+ 1058              		.cfi_offset 7, -4
+ 1059 0002 00AF     		add	r7, sp, #0
+ 1060              		.cfi_def_cfa_register 7
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_BKPWEN;
+ 1061              		.loc 1 326 13
+ 1062 0004 044B     		ldr	r3, .L64
+ 1063 0006 1B68     		ldr	r3, [r3]
+ 1064 0008 034A     		ldr	r2, .L64
+ 1065 000a 23F48073 		bic	r3, r3, #256
+ 1066 000e 1360     		str	r3, [r2]
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 1067              		.loc 1 327 1
+ 1068 0010 00BF     		nop
+ 1069 0012 BD46     		mov	sp, r7
+ 1070              		.cfi_def_cfa_register 13
+ 1071              		@ sp needed
+ 1072 0014 80BC     		pop	{r7}
+ 1073              		.cfi_restore 7
+ 1074              		.cfi_def_cfa_offset 0
+ 1075 0016 7047     		bx	lr
+ 1076              	.L65:
+ 1077              		.align	2
+ 1078              	.L64:
+ 1079 0018 00700040 		.word	1073770496
+ 1080              		.cfi_endproc
+ 1081              	.LFE140:
+ 1083              		.section	.text.pmu_wakeup_pin_enable,"ax",%progbits
+ 1084              		.align	1
+ 1085              		.global	pmu_wakeup_pin_enable
+ 1086              		.syntax unified
+ 1087              		.thumb
+ 1088              		.thumb_func
+ 1089              		.fpu softvfp
+ 1091              	pmu_wakeup_pin_enable:
+ 1092              	.LFB141:
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable wakeup pin
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_wakeup_pin_enable(void)
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 1093              		.loc 1 336 1
+ 1094              		.cfi_startproc
+ 1095              		@ args = 0, pretend = 0, frame = 0
+ 1096              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1097              		@ link register save eliminated.
+ 1098 0000 80B4     		push	{r7}
+ 1099              		.cfi_def_cfa_offset 4
+ 1100              		.cfi_offset 7, -4
+ 1101 0002 00AF     		add	r7, sp, #0
+ 1102              		.cfi_def_cfa_register 7
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS |= PMU_CS_WUPEN;
+ 1103              		.loc 1 337 12
+ 1104 0004 044B     		ldr	r3, .L67
+ 1105 0006 1B68     		ldr	r3, [r3]
+ 1106 0008 034A     		ldr	r2, .L67
+ 1107 000a 43F48073 		orr	r3, r3, #256
+ 1108 000e 1360     		str	r3, [r2]
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 1109              		.loc 1 338 1
+ 1110 0010 00BF     		nop
+ 1111 0012 BD46     		mov	sp, r7
+ 1112              		.cfi_def_cfa_register 13
+ 1113              		@ sp needed
+ 1114 0014 80BC     		pop	{r7}
+ 1115              		.cfi_restore 7
+ 1116              		.cfi_def_cfa_offset 0
+ 1117 0016 7047     		bx	lr
+ 1118              	.L68:
+ 1119              		.align	2
+ 1120              	.L67:
+ 1121 0018 04700040 		.word	1073770500
+ 1122              		.cfi_endproc
+ 1123              	.LFE141:
+ 1125              		.section	.text.pmu_wakeup_pin_disable,"ax",%progbits
+ 1126              		.align	1
+ 1127              		.global	pmu_wakeup_pin_disable
+ 1128              		.syntax unified
+ 1129              		.thumb
+ 1130              		.thumb_func
+ 1131              		.fpu softvfp
+ 1133              	pmu_wakeup_pin_disable:
+ 1134              	.LFB142:
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable wakeup pin
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_wakeup_pin_disable(void)
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 1135              		.loc 1 347 1
+ 1136              		.cfi_startproc
+ 1137              		@ args = 0, pretend = 0, frame = 0
+ 1138              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1139              		@ link register save eliminated.
+ 1140 0000 80B4     		push	{r7}
+ 1141              		.cfi_def_cfa_offset 4
+ 1142              		.cfi_offset 7, -4
+ 1143 0002 00AF     		add	r7, sp, #0
+ 1144              		.cfi_def_cfa_register 7
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS &= ~PMU_CS_WUPEN;
+ 1145              		.loc 1 348 12
+ 1146 0004 044B     		ldr	r3, .L70
+ 1147 0006 1B68     		ldr	r3, [r3]
+ 1148 0008 034A     		ldr	r2, .L70
+ 1149 000a 23F48073 		bic	r3, r3, #256
+ 1150 000e 1360     		str	r3, [r2]
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 1151              		.loc 1 349 1
+ 1152 0010 00BF     		nop
+ 1153 0012 BD46     		mov	sp, r7
+ 1154              		.cfi_def_cfa_register 13
+ 1155              		@ sp needed
+ 1156 0014 80BC     		pop	{r7}
+ 1157              		.cfi_restore 7
+ 1158              		.cfi_def_cfa_offset 0
+ 1159 0016 7047     		bx	lr
+ 1160              	.L71:
+ 1161              		.align	2
+ 1162              	.L70:
+ 1163 0018 04700040 		.word	1073770500
+ 1164              		.cfi_endproc
+ 1165              	.LFE142:
+ 1167              		.text
+ 1168              	.Letext0:
+ 1169              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1170              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1171              		.file 5 "../../CMSIS/DSP/Include/core_cm4.h"
+ 1172              		.file 6 "../../CMSIS/system_gd32f4xx.h"
+ 1173              		.file 7 "../../CMSIS/gd32f4xx.h"
+ 1174              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_pmu.c
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:16     .text.pmu_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:24     .text.pmu_deinit:00000000 pmu_deinit
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:50     .text.pmu_lvd_select:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:57     .text.pmu_lvd_select:00000000 pmu_lvd_select
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:111    .text.pmu_lvd_select:00000044 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:116    .text.pmu_ldo_output_select:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:123    .text.pmu_ldo_output_select:00000000 pmu_ldo_output_select
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:165    .text.pmu_ldo_output_select:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:170    .text.pmu_low_driver_mode_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:177    .text.pmu_low_driver_mode_enable:00000000 pmu_low_driver_mode_enable
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:219    .text.pmu_low_driver_mode_enable:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:224    .text.pmu_highdriver_switch_select:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:231    .text.pmu_highdriver_switch_select:00000000 pmu_highdriver_switch_select
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:950    .text.pmu_flag_get:00000000 pmu_flag_get
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:280    .text.pmu_highdriver_switch_select:00000038 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:285    .text.pmu_highdriver_mode_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:292    .text.pmu_highdriver_mode_enable:00000000 pmu_highdriver_mode_enable
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:322    .text.pmu_highdriver_mode_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:327    .text.pmu_highdriver_mode_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:334    .text.pmu_highdriver_mode_disable:00000000 pmu_highdriver_mode_disable
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:364    .text.pmu_highdriver_mode_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:369    .text.pmu_lvd_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:376    .text.pmu_lvd_disable:00000000 pmu_lvd_disable
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:406    .text.pmu_lvd_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:411    .text.pmu_lowdriver_lowpower_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:418    .text.pmu_lowdriver_lowpower_config:00000000 pmu_lowdriver_lowpower_config
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:460    .text.pmu_lowdriver_lowpower_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:465    .text.pmu_lowdriver_normalpower_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:472    .text.pmu_lowdriver_normalpower_config:00000000 pmu_lowdriver_normalpower_config
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:514    .text.pmu_lowdriver_normalpower_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:519    .text.pmu_to_sleepmode:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:526    .text.pmu_to_sleepmode:00000000 pmu_to_sleepmode
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:595    .text.pmu_to_sleepmode:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:600    .text.pmu_to_deepsleepmode:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:607    .text.pmu_to_deepsleepmode:00000000 pmu_to_deepsleepmode
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:721    .text.pmu_to_deepsleepmode:0000005c $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:727    .text.pmu_to_standbymode:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:734    .text.pmu_to_standbymode:00000000 pmu_to_standbymode
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:814    .text.pmu_to_standbymode:00000048 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:820    .text.pmu_backup_ldo_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:827    .text.pmu_backup_ldo_config:00000000 pmu_backup_ldo_config
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:869    .text.pmu_backup_ldo_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:874    .text.pmu_flag_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:881    .text.pmu_flag_reset:00000000 pmu_flag_reset
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:938    .text.pmu_flag_reset:0000003c $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:943    .text.pmu_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:995    .text.pmu_flag_get:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1000   .text.pmu_backup_write_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1007   .text.pmu_backup_write_enable:00000000 pmu_backup_write_enable
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1037   .text.pmu_backup_write_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1042   .text.pmu_backup_write_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1049   .text.pmu_backup_write_disable:00000000 pmu_backup_write_disable
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1079   .text.pmu_backup_write_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1084   .text.pmu_wakeup_pin_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1091   .text.pmu_wakeup_pin_enable:00000000 pmu_wakeup_pin_enable
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1121   .text.pmu_wakeup_pin_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1126   .text.pmu_wakeup_pin_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1133   .text.pmu_wakeup_pin_disable:00000000 pmu_wakeup_pin_disable
+C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1163   .text.pmu_wakeup_pin_disable:00000018 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_pmu.h.18.41f97b8827dfef4aa0564ce9eeadaf07
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

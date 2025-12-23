@@ -1,0 +1,1029 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"flash.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.flash_sector_get,"ax",%progbits
+  16              		.align	1
+  17              		.arch armv7e-m
+  18              		.syntax unified
+  19              		.thumb
+  20              		.thumb_func
+  21              		.fpu softvfp
+  23              	flash_sector_get:
+  24              	.LFB156:
+  25              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys/flash.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** static uint32_t flash_sector_get(uint32_t addr)
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** {
+  26              		.loc 1 27 1
+  27              		.cfi_startproc
+  28              		@ args = 0, pretend = 0, frame = 16
+  29              		@ frame_needed = 1, uses_anonymous_args = 0
+  30              		@ link register save eliminated.
+  31 0000 80B4     		push	{r7}
+  32              		.cfi_def_cfa_offset 4
+  33              		.cfi_offset 7, -4
+  34 0002 85B0     		sub	sp, sp, #20
+  35              		.cfi_def_cfa_offset 24
+  36 0004 00AF     		add	r7, sp, #0
+  37              		.cfi_def_cfa_register 7
+  38 0006 7860     		str	r0, [r7, #4]
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     uint32_t sector = 0;
+  39              		.loc 1 28 14
+  40 0008 0023     		movs	r3, #0
+  41 000a FB60     		str	r3, [r7, #12]
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     if((addr < ADDR_FMC_SECTOR_1) && (addr >= ADDR_FMC_SECTOR_0))
+  42              		.loc 1 30 7
+  43 000c 7B68     		ldr	r3, [r7, #4]
+  44 000e 944A     		ldr	r2, .L31
+  45 0010 9342     		cmp	r3, r2
+  46 0012 06D2     		bcs	.L2
+  47              		.loc 1 30 35 discriminator 1
+  48 0014 7B68     		ldr	r3, [r7, #4]
+  49 0016 B3F1006F 		cmp	r3, #134217728
+  50 001a 02D3     		bcc	.L2
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_0;
+  51              		.loc 1 32 16
+  52 001c 0023     		movs	r3, #0
+  53 001e FB60     		str	r3, [r7, #12]
+  54 0020 52E1     		b	.L3
+  55              	.L2:
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_2) && (addr >= ADDR_FMC_SECTOR_1))
+  56              		.loc 1 34 12
+  57 0022 7B68     		ldr	r3, [r7, #4]
+  58 0024 8F4A     		ldr	r2, .L31+4
+  59 0026 9342     		cmp	r3, r2
+  60 0028 06D2     		bcs	.L4
+  61              		.loc 1 34 40 discriminator 1
+  62 002a 7B68     		ldr	r3, [r7, #4]
+  63 002c 8C4A     		ldr	r2, .L31
+  64 002e 9342     		cmp	r3, r2
+  65 0030 02D3     		bcc	.L4
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_1;
+  66              		.loc 1 36 16
+  67 0032 0823     		movs	r3, #8
+  68 0034 FB60     		str	r3, [r7, #12]
+  69 0036 47E1     		b	.L3
+  70              	.L4:
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_3) && (addr >= ADDR_FMC_SECTOR_2))
+  71              		.loc 1 38 12
+  72 0038 7B68     		ldr	r3, [r7, #4]
+  73 003a 8B4A     		ldr	r2, .L31+8
+  74 003c 9342     		cmp	r3, r2
+  75 003e 06D2     		bcs	.L5
+  76              		.loc 1 38 40 discriminator 1
+  77 0040 7B68     		ldr	r3, [r7, #4]
+  78 0042 884A     		ldr	r2, .L31+4
+  79 0044 9342     		cmp	r3, r2
+  80 0046 02D3     		bcc	.L5
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_2;
+  81              		.loc 1 40 16
+  82 0048 1023     		movs	r3, #16
+  83 004a FB60     		str	r3, [r7, #12]
+  84 004c 3CE1     		b	.L3
+  85              	.L5:
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_4) && (addr >= ADDR_FMC_SECTOR_3))
+  86              		.loc 1 42 12
+  87 004e 7B68     		ldr	r3, [r7, #4]
+  88 0050 864A     		ldr	r2, .L31+12
+  89 0052 9342     		cmp	r3, r2
+  90 0054 06D8     		bhi	.L6
+  91              		.loc 1 42 40 discriminator 1
+  92 0056 7B68     		ldr	r3, [r7, #4]
+  93 0058 834A     		ldr	r2, .L31+8
+  94 005a 9342     		cmp	r3, r2
+  95 005c 02D3     		bcc	.L6
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_3;  
+  96              		.loc 1 44 16
+  97 005e 1823     		movs	r3, #24
+  98 0060 FB60     		str	r3, [r7, #12]
+  99 0062 31E1     		b	.L3
+ 100              	.L6:
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_5) && (addr >= ADDR_FMC_SECTOR_4))
+ 101              		.loc 1 46 12
+ 102 0064 7B68     		ldr	r3, [r7, #4]
+ 103 0066 824A     		ldr	r2, .L31+16
+ 104 0068 9342     		cmp	r3, r2
+ 105 006a 06D8     		bhi	.L7
+ 106              		.loc 1 46 40 discriminator 1
+ 107 006c 7B68     		ldr	r3, [r7, #4]
+ 108 006e 7F4A     		ldr	r2, .L31+12
+ 109 0070 9342     		cmp	r3, r2
+ 110 0072 02D9     		bls	.L7
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_4;
+ 111              		.loc 1 48 16
+ 112 0074 2023     		movs	r3, #32
+ 113 0076 FB60     		str	r3, [r7, #12]
+ 114 0078 26E1     		b	.L3
+ 115              	.L7:
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_6) && (addr >= ADDR_FMC_SECTOR_5))
+ 116              		.loc 1 50 12
+ 117 007a 7B68     		ldr	r3, [r7, #4]
+ 118 007c 7D4A     		ldr	r2, .L31+20
+ 119 007e 9342     		cmp	r3, r2
+ 120 0080 06D8     		bhi	.L8
+ 121              		.loc 1 50 40 discriminator 1
+ 122 0082 7B68     		ldr	r3, [r7, #4]
+ 123 0084 7A4A     		ldr	r2, .L31+16
+ 124 0086 9342     		cmp	r3, r2
+ 125 0088 02D9     		bls	.L8
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_5;
+ 126              		.loc 1 52 16
+ 127 008a 2823     		movs	r3, #40
+ 128 008c FB60     		str	r3, [r7, #12]
+ 129 008e 1BE1     		b	.L3
+ 130              	.L8:
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_7) && (addr >= ADDR_FMC_SECTOR_6))
+ 131              		.loc 1 54 12
+ 132 0090 7B68     		ldr	r3, [r7, #4]
+ 133 0092 794A     		ldr	r2, .L31+24
+ 134 0094 9342     		cmp	r3, r2
+ 135 0096 06D8     		bhi	.L9
+ 136              		.loc 1 54 40 discriminator 1
+ 137 0098 7B68     		ldr	r3, [r7, #4]
+ 138 009a 764A     		ldr	r2, .L31+20
+ 139 009c 9342     		cmp	r3, r2
+ 140 009e 02D9     		bls	.L9
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_6;
+ 141              		.loc 1 56 16
+ 142 00a0 3023     		movs	r3, #48
+ 143 00a2 FB60     		str	r3, [r7, #12]
+ 144 00a4 10E1     		b	.L3
+ 145              	.L9:
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_8) && (addr >= ADDR_FMC_SECTOR_7))
+ 146              		.loc 1 58 12
+ 147 00a6 7B68     		ldr	r3, [r7, #4]
+ 148 00a8 744A     		ldr	r2, .L31+28
+ 149 00aa 9342     		cmp	r3, r2
+ 150 00ac 06D8     		bhi	.L10
+ 151              		.loc 1 58 40 discriminator 1
+ 152 00ae 7B68     		ldr	r3, [r7, #4]
+ 153 00b0 714A     		ldr	r2, .L31+24
+ 154 00b2 9342     		cmp	r3, r2
+ 155 00b4 02D9     		bls	.L10
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_7;  
+ 156              		.loc 1 60 16
+ 157 00b6 3823     		movs	r3, #56
+ 158 00b8 FB60     		str	r3, [r7, #12]
+ 159 00ba 05E1     		b	.L3
+ 160              	.L10:
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_9) && (addr >= ADDR_FMC_SECTOR_8))
+ 161              		.loc 1 62 12
+ 162 00bc 7B68     		ldr	r3, [r7, #4]
+ 163 00be 704A     		ldr	r2, .L31+32
+ 164 00c0 9342     		cmp	r3, r2
+ 165 00c2 06D8     		bhi	.L11
+ 166              		.loc 1 62 40 discriminator 1
+ 167 00c4 7B68     		ldr	r3, [r7, #4]
+ 168 00c6 6D4A     		ldr	r2, .L31+28
+ 169 00c8 9342     		cmp	r3, r2
+ 170 00ca 02D9     		bls	.L11
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_8;
+ 171              		.loc 1 64 16
+ 172 00cc 4023     		movs	r3, #64
+ 173 00ce FB60     		str	r3, [r7, #12]
+ 174 00d0 FAE0     		b	.L3
+ 175              	.L11:
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_10) && (addr >= ADDR_FMC_SECTOR_9))
+ 176              		.loc 1 66 12
+ 177 00d2 7B68     		ldr	r3, [r7, #4]
+ 178 00d4 6B4A     		ldr	r2, .L31+36
+ 179 00d6 9342     		cmp	r3, r2
+ 180 00d8 06D8     		bhi	.L12
+ 181              		.loc 1 66 41 discriminator 1
+ 182 00da 7B68     		ldr	r3, [r7, #4]
+ 183 00dc 684A     		ldr	r2, .L31+32
+ 184 00de 9342     		cmp	r3, r2
+ 185 00e0 02D9     		bls	.L12
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_9;
+ 186              		.loc 1 68 16
+ 187 00e2 4823     		movs	r3, #72
+ 188 00e4 FB60     		str	r3, [r7, #12]
+ 189 00e6 EFE0     		b	.L3
+ 190              	.L12:
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_11) && (addr >= ADDR_FMC_SECTOR_10))
+ 191              		.loc 1 70 12
+ 192 00e8 7B68     		ldr	r3, [r7, #4]
+ 193 00ea 674A     		ldr	r2, .L31+40
+ 194 00ec 9342     		cmp	r3, r2
+ 195 00ee 06D8     		bhi	.L13
+ 196              		.loc 1 70 41 discriminator 1
+ 197 00f0 7B68     		ldr	r3, [r7, #4]
+ 198 00f2 644A     		ldr	r2, .L31+36
+ 199 00f4 9342     		cmp	r3, r2
+ 200 00f6 02D9     		bls	.L13
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_10;
+ 201              		.loc 1 72 16
+ 202 00f8 5023     		movs	r3, #80
+ 203 00fa FB60     		str	r3, [r7, #12]
+ 204 00fc E4E0     		b	.L3
+ 205              	.L13:
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_12) && (addr >= ADDR_FMC_SECTOR_11))
+ 206              		.loc 1 74 12
+ 207 00fe 7B68     		ldr	r3, [r7, #4]
+ 208 0100 B3F1016F 		cmp	r3, #135266304
+ 209 0104 06D2     		bcs	.L14
+ 210              		.loc 1 74 41 discriminator 1
+ 211 0106 7B68     		ldr	r3, [r7, #4]
+ 212 0108 5F4A     		ldr	r2, .L31+40
+ 213 010a 9342     		cmp	r3, r2
+ 214 010c 02D9     		bls	.L14
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_11;
+ 215              		.loc 1 76 16
+ 216 010e 5823     		movs	r3, #88
+ 217 0110 FB60     		str	r3, [r7, #12]
+ 218 0112 D9E0     		b	.L3
+ 219              	.L14:
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_13) && (addr >= ADDR_FMC_SECTOR_12))
+ 220              		.loc 1 78 12
+ 221 0114 7B68     		ldr	r3, [r7, #4]
+ 222 0116 5D4A     		ldr	r2, .L31+44
+ 223 0118 9342     		cmp	r3, r2
+ 224 011a 06D2     		bcs	.L15
+ 225              		.loc 1 78 41 discriminator 1
+ 226 011c 7B68     		ldr	r3, [r7, #4]
+ 227 011e B3F1016F 		cmp	r3, #135266304
+ 228 0122 02D3     		bcc	.L15
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_12;
+ 229              		.loc 1 80 16
+ 230 0124 8023     		movs	r3, #128
+ 231 0126 FB60     		str	r3, [r7, #12]
+ 232 0128 CEE0     		b	.L3
+ 233              	.L15:
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_14) && (addr >= ADDR_FMC_SECTOR_13))
+ 234              		.loc 1 82 12
+ 235 012a 7B68     		ldr	r3, [r7, #4]
+ 236 012c 584A     		ldr	r2, .L31+48
+ 237 012e 9342     		cmp	r3, r2
+ 238 0130 06D2     		bcs	.L16
+ 239              		.loc 1 82 41 discriminator 1
+ 240 0132 7B68     		ldr	r3, [r7, #4]
+ 241 0134 554A     		ldr	r2, .L31+44
+ 242 0136 9342     		cmp	r3, r2
+ 243 0138 02D3     		bcc	.L16
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_13;
+ 244              		.loc 1 84 16
+ 245 013a 8823     		movs	r3, #136
+ 246 013c FB60     		str	r3, [r7, #12]
+ 247 013e C3E0     		b	.L3
+ 248              	.L16:
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_15) && (addr >= ADDR_FMC_SECTOR_14))
+ 249              		.loc 1 86 12
+ 250 0140 7B68     		ldr	r3, [r7, #4]
+ 251 0142 544A     		ldr	r2, .L31+52
+ 252 0144 9342     		cmp	r3, r2
+ 253 0146 06D2     		bcs	.L17
+ 254              		.loc 1 86 41 discriminator 1
+ 255 0148 7B68     		ldr	r3, [r7, #4]
+ 256 014a 514A     		ldr	r2, .L31+48
+ 257 014c 9342     		cmp	r3, r2
+ 258 014e 02D3     		bcc	.L17
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_14;
+ 259              		.loc 1 88 16
+ 260 0150 9023     		movs	r3, #144
+ 261 0152 FB60     		str	r3, [r7, #12]
+ 262 0154 B8E0     		b	.L3
+ 263              	.L17:
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_16) && (addr >= ADDR_FMC_SECTOR_15))
+ 264              		.loc 1 90 12
+ 265 0156 7B68     		ldr	r3, [r7, #4]
+ 266 0158 4F4A     		ldr	r2, .L31+56
+ 267 015a 9342     		cmp	r3, r2
+ 268 015c 06D8     		bhi	.L18
+ 269              		.loc 1 90 41 discriminator 1
+ 270 015e 7B68     		ldr	r3, [r7, #4]
+ 271 0160 4C4A     		ldr	r2, .L31+52
+ 272 0162 9342     		cmp	r3, r2
+ 273 0164 02D3     		bcc	.L18
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_15;
+ 274              		.loc 1 92 16
+ 275 0166 9823     		movs	r3, #152
+ 276 0168 FB60     		str	r3, [r7, #12]
+ 277 016a ADE0     		b	.L3
+ 278              	.L18:
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_17) && (addr >= ADDR_FMC_SECTOR_16))
+ 279              		.loc 1 94 12
+ 280 016c 7B68     		ldr	r3, [r7, #4]
+ 281 016e 4B4A     		ldr	r2, .L31+60
+ 282 0170 9342     		cmp	r3, r2
+ 283 0172 06D8     		bhi	.L19
+ 284              		.loc 1 94 41 discriminator 1
+ 285 0174 7B68     		ldr	r3, [r7, #4]
+ 286 0176 484A     		ldr	r2, .L31+56
+ 287 0178 9342     		cmp	r3, r2
+ 288 017a 02D9     		bls	.L19
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_16;
+ 289              		.loc 1 96 16
+ 290 017c A023     		movs	r3, #160
+ 291 017e FB60     		str	r3, [r7, #12]
+ 292 0180 A2E0     		b	.L3
+ 293              	.L19:
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_18) && (addr >= ADDR_FMC_SECTOR_17))
+ 294              		.loc 1 98 12
+ 295 0182 7B68     		ldr	r3, [r7, #4]
+ 296 0184 464A     		ldr	r2, .L31+64
+ 297 0186 9342     		cmp	r3, r2
+ 298 0188 06D8     		bhi	.L20
+ 299              		.loc 1 98 41 discriminator 1
+ 300 018a 7B68     		ldr	r3, [r7, #4]
+ 301 018c 434A     		ldr	r2, .L31+60
+ 302 018e 9342     		cmp	r3, r2
+ 303 0190 02D9     		bls	.L20
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_17;
+ 304              		.loc 1 100 16
+ 305 0192 A823     		movs	r3, #168
+ 306 0194 FB60     		str	r3, [r7, #12]
+ 307 0196 97E0     		b	.L3
+ 308              	.L20:
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_19) && (addr >= ADDR_FMC_SECTOR_18))
+ 309              		.loc 1 102 12
+ 310 0198 7B68     		ldr	r3, [r7, #4]
+ 311 019a 424A     		ldr	r2, .L31+68
+ 312 019c 9342     		cmp	r3, r2
+ 313 019e 06D8     		bhi	.L21
+ 314              		.loc 1 102 41 discriminator 1
+ 315 01a0 7B68     		ldr	r3, [r7, #4]
+ 316 01a2 3F4A     		ldr	r2, .L31+64
+ 317 01a4 9342     		cmp	r3, r2
+ 318 01a6 02D9     		bls	.L21
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_18;
+ 319              		.loc 1 104 16
+ 320 01a8 B023     		movs	r3, #176
+ 321 01aa FB60     		str	r3, [r7, #12]
+ 322 01ac 8CE0     		b	.L3
+ 323              	.L21:
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_20) && (addr >= ADDR_FMC_SECTOR_19))
+ 324              		.loc 1 106 12
+ 325 01ae 7B68     		ldr	r3, [r7, #4]
+ 326 01b0 3D4A     		ldr	r2, .L31+72
+ 327 01b2 9342     		cmp	r3, r2
+ 328 01b4 06D8     		bhi	.L22
+ 329              		.loc 1 106 41 discriminator 1
+ 330 01b6 7B68     		ldr	r3, [r7, #4]
+ 331 01b8 3A4A     		ldr	r2, .L31+68
+ 332 01ba 9342     		cmp	r3, r2
+ 333 01bc 02D9     		bls	.L22
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_19;
+ 334              		.loc 1 108 16
+ 335 01be B823     		movs	r3, #184
+ 336 01c0 FB60     		str	r3, [r7, #12]
+ 337 01c2 81E0     		b	.L3
+ 338              	.L22:
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_21) && (addr >= ADDR_FMC_SECTOR_20))
+ 339              		.loc 1 110 12
+ 340 01c4 7B68     		ldr	r3, [r7, #4]
+ 341 01c6 394A     		ldr	r2, .L31+76
+ 342 01c8 9342     		cmp	r3, r2
+ 343 01ca 06D8     		bhi	.L23
+ 344              		.loc 1 110 41 discriminator 1
+ 345 01cc 7B68     		ldr	r3, [r7, #4]
+ 346 01ce 364A     		ldr	r2, .L31+72
+ 347 01d0 9342     		cmp	r3, r2
+ 348 01d2 02D9     		bls	.L23
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_20;
+ 349              		.loc 1 112 16
+ 350 01d4 C023     		movs	r3, #192
+ 351 01d6 FB60     		str	r3, [r7, #12]
+ 352 01d8 76E0     		b	.L3
+ 353              	.L23:
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_22) && (addr >= ADDR_FMC_SECTOR_21))
+ 354              		.loc 1 114 12
+ 355 01da 7B68     		ldr	r3, [r7, #4]
+ 356 01dc 344A     		ldr	r2, .L31+80
+ 357 01de 9342     		cmp	r3, r2
+ 358 01e0 06D8     		bhi	.L24
+ 359              		.loc 1 114 41 discriminator 1
+ 360 01e2 7B68     		ldr	r3, [r7, #4]
+ 361 01e4 314A     		ldr	r2, .L31+76
+ 362 01e6 9342     		cmp	r3, r2
+ 363 01e8 02D9     		bls	.L24
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_21;
+ 364              		.loc 1 116 16
+ 365 01ea C823     		movs	r3, #200
+ 366 01ec FB60     		str	r3, [r7, #12]
+ 367 01ee 6BE0     		b	.L3
+ 368              	.L24:
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_23) && (addr >= ADDR_FMC_SECTOR_22))
+ 369              		.loc 1 118 12
+ 370 01f0 7B68     		ldr	r3, [r7, #4]
+ 371 01f2 304A     		ldr	r2, .L31+84
+ 372 01f4 9342     		cmp	r3, r2
+ 373 01f6 06D8     		bhi	.L25
+ 374              		.loc 1 118 41 discriminator 1
+ 375 01f8 7B68     		ldr	r3, [r7, #4]
+ 376 01fa 2D4A     		ldr	r2, .L31+80
+ 377 01fc 9342     		cmp	r3, r2
+ 378 01fe 02D9     		bls	.L25
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_22;
+ 379              		.loc 1 120 16
+ 380 0200 D023     		movs	r3, #208
+ 381 0202 FB60     		str	r3, [r7, #12]
+ 382 0204 60E0     		b	.L3
+ 383              	.L25:
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_24) && (addr >= ADDR_FMC_SECTOR_23))
+ 384              		.loc 1 122 12
+ 385 0206 7B68     		ldr	r3, [r7, #4]
+ 386 0208 B3F1026F 		cmp	r3, #136314880
+ 387 020c 06D2     		bcs	.L26
+ 388              		.loc 1 122 41 discriminator 1
+ 389 020e 7B68     		ldr	r3, [r7, #4]
+ 390 0210 284A     		ldr	r2, .L31+84
+ 391 0212 9342     		cmp	r3, r2
+ 392 0214 02D9     		bls	.L26
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_23;
+ 393              		.loc 1 124 16
+ 394 0216 D823     		movs	r3, #216
+ 395 0218 FB60     		str	r3, [r7, #12]
+ 396 021a 55E0     		b	.L3
+ 397              	.L26:
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_25) && (addr >= ADDR_FMC_SECTOR_24))
+ 398              		.loc 1 126 12
+ 399 021c 7B68     		ldr	r3, [r7, #4]
+ 400 021e 264A     		ldr	r2, .L31+88
+ 401 0220 9342     		cmp	r3, r2
+ 402 0222 06D8     		bhi	.L27
+ 403              		.loc 1 126 41 discriminator 1
+ 404 0224 7B68     		ldr	r3, [r7, #4]
+ 405 0226 B3F1026F 		cmp	r3, #136314880
+ 406 022a 02D3     		bcc	.L27
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_24;
+ 407              		.loc 1 128 16
+ 408 022c 6023     		movs	r3, #96
+ 409 022e FB60     		str	r3, [r7, #12]
+ 410 0230 4AE0     		b	.L3
+ 411              	.L27:
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_26) && (addr >= ADDR_FMC_SECTOR_25))
+ 412              		.loc 1 130 12
+ 413 0232 7B68     		ldr	r3, [r7, #4]
+ 414 0234 214A     		ldr	r2, .L31+92
+ 415 0236 9342     		cmp	r3, r2
+ 416 0238 06D8     		bhi	.L28
+ 417              		.loc 1 130 41 discriminator 1
+ 418 023a 7B68     		ldr	r3, [r7, #4]
+ 419 023c 1E4A     		ldr	r2, .L31+88
+ 420 023e 9342     		cmp	r3, r2
+ 421 0240 02D9     		bls	.L28
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_25;
+ 422              		.loc 1 132 16
+ 423 0242 6823     		movs	r3, #104
+ 424 0244 FB60     		str	r3, [r7, #12]
+ 425 0246 3FE0     		b	.L3
+ 426              	.L28:
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else if((addr < ADDR_FMC_SECTOR_27) && (addr >= ADDR_FMC_SECTOR_26))
+ 427              		.loc 1 134 12
+ 428 0248 7B68     		ldr	r3, [r7, #4]
+ 429 024a 1D4A     		ldr	r2, .L31+96
+ 430 024c 9342     		cmp	r3, r2
+ 431 024e 39D8     		bhi	.L29
+ 432              		.loc 1 134 41 discriminator 1
+ 433 0250 7B68     		ldr	r3, [r7, #4]
+ 434 0252 1A4A     		ldr	r2, .L31+92
+ 435 0254 9342     		cmp	r3, r2
+ 436 0256 35D9     		bls	.L29
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_26;
+ 437              		.loc 1 136 16
+ 438 0258 7023     		movs	r3, #112
+ 439 025a FB60     		str	r3, [r7, #12]
+ 440 025c 34E0     		b	.L3
+ 441              	.L32:
+ 442 025e 00BF     		.align	2
+ 443              	.L31:
+ 444 0260 00400008 		.word	134234112
+ 445 0264 00800008 		.word	134250496
+ 446 0268 00C00008 		.word	134266880
+ 447 026c FFFF0008 		.word	134283263
+ 448 0270 FFFF0108 		.word	134348799
+ 449 0274 FFFF0308 		.word	134479871
+ 450 0278 FFFF0508 		.word	134610943
+ 451 027c FFFF0708 		.word	134742015
+ 452 0280 FFFF0908 		.word	134873087
+ 453 0284 FFFF0B08 		.word	135004159
+ 454 0288 FFFF0D08 		.word	135135231
+ 455 028c 00401008 		.word	135282688
+ 456 0290 00801008 		.word	135299072
+ 457 0294 00C01008 		.word	135315456
+ 458 0298 FFFF1008 		.word	135331839
+ 459 029c FFFF1108 		.word	135397375
+ 460 02a0 FFFF1308 		.word	135528447
+ 461 02a4 FFFF1508 		.word	135659519
+ 462 02a8 FFFF1708 		.word	135790591
+ 463 02ac FFFF1908 		.word	135921663
+ 464 02b0 FFFF1B08 		.word	136052735
+ 465 02b4 FFFF1D08 		.word	136183807
+ 466 02b8 FFFF2308 		.word	136577023
+ 467 02bc FFFF2708 		.word	136839167
+ 468 02c0 FFFF2B08 		.word	137101311
+ 469              	.L29:
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     else
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         sector = CTL_SECTOR_NUMBER_27;
+ 470              		.loc 1 140 16
+ 471 02c4 7823     		movs	r3, #120
+ 472 02c6 FB60     		str	r3, [r7, #12]
+ 473              	.L3:
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     return sector;
+ 474              		.loc 1 143 12
+ 475 02c8 FB68     		ldr	r3, [r7, #12]
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** }
+ 476              		.loc 1 144 1
+ 477 02ca 1846     		mov	r0, r3
+ 478 02cc 1437     		adds	r7, r7, #20
+ 479              		.cfi_def_cfa_offset 4
+ 480 02ce BD46     		mov	sp, r7
+ 481              		.cfi_def_cfa_register 13
+ 482              		@ sp needed
+ 483 02d0 80BC     		pop	{r7}
+ 484              		.cfi_restore 7
+ 485              		.cfi_def_cfa_offset 0
+ 486 02d2 7047     		bx	lr
+ 487              		.cfi_endproc
+ 488              	.LFE156:
+ 490              		.section	.text.flash_erase,"ax",%progbits
+ 491              		.align	1
+ 492              		.global	flash_erase
+ 493              		.syntax unified
+ 494              		.thumb
+ 495              		.thumb_func
+ 496              		.fpu softvfp
+ 498              	flash_erase:
+ 499              	.LFB157:
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** void flash_erase(uint32_t saddr, uint32_t eaddr)
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** {
+ 500              		.loc 1 147 1
+ 501              		.cfi_startproc
+ 502              		@ args = 0, pretend = 0, frame = 24
+ 503              		@ frame_needed = 1, uses_anonymous_args = 0
+ 504 0000 80B5     		push	{r7, lr}
+ 505              		.cfi_def_cfa_offset 8
+ 506              		.cfi_offset 7, -8
+ 507              		.cfi_offset 14, -4
+ 508 0002 86B0     		sub	sp, sp, #24
+ 509              		.cfi_def_cfa_offset 32
+ 510 0004 00AF     		add	r7, sp, #0
+ 511              		.cfi_def_cfa_register 7
+ 512 0006 7860     		str	r0, [r7, #4]
+ 513 0008 3960     		str	r1, [r7]
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     uint32_t i = 0, start_page = 0, end_page = 0;
+ 514              		.loc 1 148 14
+ 515 000a 0023     		movs	r3, #0
+ 516 000c 7B61     		str	r3, [r7, #20]
+ 517              		.loc 1 148 21
+ 518 000e 0023     		movs	r3, #0
+ 519 0010 3B61     		str	r3, [r7, #16]
+ 520              		.loc 1 148 37
+ 521 0012 0023     		movs	r3, #0
+ 522 0014 FB60     		str	r3, [r7, #12]
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     start_page = flash_sector_get(saddr);
+ 523              		.loc 1 150 18
+ 524 0016 7868     		ldr	r0, [r7, #4]
+ 525 0018 FFF7FEFF 		bl	flash_sector_get
+ 526 001c 3861     		str	r0, [r7, #16]
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     end_page = flash_sector_get(eaddr);
+ 527              		.loc 1 151 16
+ 528 001e 3868     		ldr	r0, [r7]
+ 529 0020 FFF7FEFF 		bl	flash_sector_get
+ 530 0024 F860     		str	r0, [r7, #12]
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     fmc_unlock();
+ 531              		.loc 1 154 5
+ 532 0026 FFF7FEFF 		bl	fmc_unlock
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     fmc_flag_clear(FMC_FLAG_END | FMC_FLAG_OPERR | FMC_FLAG_WPERR | FMC_FLAG_PGMERR | FMC_FLAG_PGSE
+ 533              		.loc 1 157 5
+ 534 002a D320     		movs	r0, #211
+ 535 002c FFF7FEFF 		bl	fmc_flag_clear
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     for(i = start_page; i < end_page; i += 8)
+ 536              		.loc 1 160 11
+ 537 0030 3B69     		ldr	r3, [r7, #16]
+ 538 0032 7B61     		str	r3, [r7, #20]
+ 539              		.loc 1 160 5
+ 540 0034 07E0     		b	.L34
+ 541              	.L35:
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         iwdg_feed();
+ 542              		.loc 1 163 9 discriminator 3
+ 543 0036 FFF7FEFF 		bl	iwdg_feed
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         fmc_sector_erase(i);
+ 544              		.loc 1 165 9 discriminator 3
+ 545 003a 7869     		ldr	r0, [r7, #20]
+ 546 003c FFF7FEFF 		bl	fmc_sector_erase
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 547              		.loc 1 160 41 discriminator 3
+ 548 0040 7B69     		ldr	r3, [r7, #20]
+ 549 0042 0833     		adds	r3, r3, #8
+ 550 0044 7B61     		str	r3, [r7, #20]
+ 551              	.L34:
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 552              		.loc 1 160 5 discriminator 1
+ 553 0046 7A69     		ldr	r2, [r7, #20]
+ 554 0048 FB68     		ldr	r3, [r7, #12]
+ 555 004a 9A42     		cmp	r2, r3
+ 556 004c F3D3     		bcc	.L35
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     fmc_lock();
+ 557              		.loc 1 169 5
+ 558 004e FFF7FEFF 		bl	fmc_lock
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** }
+ 559              		.loc 1 170 1
+ 560 0052 00BF     		nop
+ 561 0054 1837     		adds	r7, r7, #24
+ 562              		.cfi_def_cfa_offset 8
+ 563 0056 BD46     		mov	sp, r7
+ 564              		.cfi_def_cfa_register 13
+ 565              		@ sp needed
+ 566 0058 80BD     		pop	{r7, pc}
+ 567              		.cfi_endproc
+ 568              	.LFE157:
+ 570              		.section	.text.flash_write_words,"ax",%progbits
+ 571              		.align	1
+ 572              		.global	flash_write_words
+ 573              		.syntax unified
+ 574              		.thumb
+ 575              		.thumb_func
+ 576              		.fpu softvfp
+ 578              	flash_write_words:
+ 579              	.LFB158:
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** void flash_write_words(uint32_t waddr, uint32_t *pbuf, uint32_t num)
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** {
+ 580              		.loc 1 173 1
+ 581              		.cfi_startproc
+ 582              		@ args = 0, pretend = 0, frame = 24
+ 583              		@ frame_needed = 1, uses_anonymous_args = 0
+ 584 0000 80B5     		push	{r7, lr}
+ 585              		.cfi_def_cfa_offset 8
+ 586              		.cfi_offset 7, -8
+ 587              		.cfi_offset 14, -4
+ 588 0002 86B0     		sub	sp, sp, #24
+ 589              		.cfi_def_cfa_offset 32
+ 590 0004 00AF     		add	r7, sp, #0
+ 591              		.cfi_def_cfa_register 7
+ 592 0006 F860     		str	r0, [r7, #12]
+ 593 0008 B960     		str	r1, [r7, #8]
+ 594 000a 7A60     		str	r2, [r7, #4]
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     uint32_t i = 0;
+ 595              		.loc 1 174 14
+ 596 000c 0023     		movs	r3, #0
+ 597 000e 7B61     		str	r3, [r7, #20]
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     fmc_unlock();
+ 598              		.loc 1 177 5
+ 599 0010 FFF7FEFF 		bl	fmc_unlock
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     fmc_flag_clear(FMC_FLAG_END | FMC_FLAG_OPERR | FMC_FLAG_WPERR | FMC_FLAG_PGMERR | FMC_FLAG_PGSE
+ 600              		.loc 1 180 5
+ 601 0014 D320     		movs	r0, #211
+ 602 0016 FFF7FEFF 		bl	fmc_flag_clear
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     for(i=0; i < num; i++)
+ 603              		.loc 1 182 10
+ 604 001a 0023     		movs	r3, #0
+ 605 001c 7B61     		str	r3, [r7, #20]
+ 606              		.loc 1 182 5
+ 607 001e 10E0     		b	.L37
+ 608              	.L38:
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         iwdg_feed();
+ 609              		.loc 1 185 9 discriminator 3
+ 610 0020 FFF7FEFF 		bl	iwdg_feed
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         fmc_word_program(waddr, pbuf[i]);
+ 611              		.loc 1 187 37 discriminator 3
+ 612 0024 7B69     		ldr	r3, [r7, #20]
+ 613 0026 9B00     		lsls	r3, r3, #2
+ 614 0028 BA68     		ldr	r2, [r7, #8]
+ 615 002a 1344     		add	r3, r3, r2
+ 616              		.loc 1 187 9 discriminator 3
+ 617 002c 1B68     		ldr	r3, [r3]
+ 618 002e 1946     		mov	r1, r3
+ 619 0030 F868     		ldr	r0, [r7, #12]
+ 620 0032 FFF7FEFF 		bl	fmc_word_program
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         waddr += 4;
+ 621              		.loc 1 188 15 discriminator 3
+ 622 0036 FB68     		ldr	r3, [r7, #12]
+ 623 0038 0433     		adds	r3, r3, #4
+ 624 003a FB60     		str	r3, [r7, #12]
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 625              		.loc 1 182 24 discriminator 3
+ 626 003c 7B69     		ldr	r3, [r7, #20]
+ 627 003e 0133     		adds	r3, r3, #1
+ 628 0040 7B61     		str	r3, [r7, #20]
+ 629              	.L37:
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 630              		.loc 1 182 5 discriminator 1
+ 631 0042 7A69     		ldr	r2, [r7, #20]
+ 632 0044 7B68     		ldr	r3, [r7, #4]
+ 633 0046 9A42     		cmp	r2, r3
+ 634 0048 EAD3     		bcc	.L38
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     fmc_lock();
+ 635              		.loc 1 192 5
+ 636 004a FFF7FEFF 		bl	fmc_lock
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** }
+ 637              		.loc 1 193 1
+ 638 004e 00BF     		nop
+ 639 0050 1837     		adds	r7, r7, #24
+ 640              		.cfi_def_cfa_offset 8
+ 641 0052 BD46     		mov	sp, r7
+ 642              		.cfi_def_cfa_register 13
+ 643              		@ sp needed
+ 644 0054 80BD     		pop	{r7, pc}
+ 645              		.cfi_endproc
+ 646              	.LFE158:
+ 648              		.section	.text.flash_read_words,"ax",%progbits
+ 649              		.align	1
+ 650              		.global	flash_read_words
+ 651              		.syntax unified
+ 652              		.thumb
+ 653              		.thumb_func
+ 654              		.fpu softvfp
+ 656              	flash_read_words:
+ 657              	.LFB159:
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** void flash_read_words(uint32_t raddr, uint32_t *pbuf, uint32_t num)
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** {
+ 658              		.loc 1 196 1
+ 659              		.cfi_startproc
+ 660              		@ args = 0, pretend = 0, frame = 24
+ 661              		@ frame_needed = 1, uses_anonymous_args = 0
+ 662              		@ link register save eliminated.
+ 663 0000 80B4     		push	{r7}
+ 664              		.cfi_def_cfa_offset 4
+ 665              		.cfi_offset 7, -4
+ 666 0002 87B0     		sub	sp, sp, #28
+ 667              		.cfi_def_cfa_offset 32
+ 668 0004 00AF     		add	r7, sp, #0
+ 669              		.cfi_def_cfa_register 7
+ 670 0006 F860     		str	r0, [r7, #12]
+ 671 0008 B960     		str	r1, [r7, #8]
+ 672 000a 7A60     		str	r2, [r7, #4]
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     uint32_t i;
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** 
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     for(i=0; i < num; i++)
+ 673              		.loc 1 199 10
+ 674 000c 0023     		movs	r3, #0
+ 675 000e 7B61     		str	r3, [r7, #20]
+ 676              		.loc 1 199 5
+ 677 0010 0CE0     		b	.L40
+ 678              	.L41:
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         pbuf[i] = *(uint32_t*)(raddr);
+ 679              		.loc 1 202 20 discriminator 3
+ 680 0012 FA68     		ldr	r2, [r7, #12]
+ 681              		.loc 1 202 13 discriminator 3
+ 682 0014 7B69     		ldr	r3, [r7, #20]
+ 683 0016 9B00     		lsls	r3, r3, #2
+ 684 0018 B968     		ldr	r1, [r7, #8]
+ 685 001a 0B44     		add	r3, r3, r1
+ 686              		.loc 1 202 19 discriminator 3
+ 687 001c 1268     		ldr	r2, [r2]
+ 688              		.loc 1 202 17 discriminator 3
+ 689 001e 1A60     		str	r2, [r3]
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****         raddr += 4;
+ 690              		.loc 1 204 15 discriminator 3
+ 691 0020 FB68     		ldr	r3, [r7, #12]
+ 692 0022 0433     		adds	r3, r3, #4
+ 693 0024 FB60     		str	r3, [r7, #12]
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 694              		.loc 1 199 24 discriminator 3
+ 695 0026 7B69     		ldr	r3, [r7, #20]
+ 696 0028 0133     		adds	r3, r3, #1
+ 697 002a 7B61     		str	r3, [r7, #20]
+ 698              	.L40:
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     {
+ 699              		.loc 1 199 5 discriminator 1
+ 700 002c 7A69     		ldr	r2, [r7, #20]
+ 701 002e 7B68     		ldr	r3, [r7, #4]
+ 702 0030 9A42     		cmp	r2, r3
+ 703 0032 EED3     		bcc	.L41
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c ****     }
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys\flash.c **** }
+ 704              		.loc 1 206 1
+ 705 0034 00BF     		nop
+ 706 0036 00BF     		nop
+ 707 0038 1C37     		adds	r7, r7, #28
+ 708              		.cfi_def_cfa_offset 4
+ 709 003a BD46     		mov	sp, r7
+ 710              		.cfi_def_cfa_register 13
+ 711              		@ sp needed
+ 712 003c 80BC     		pop	{r7}
+ 713              		.cfi_restore 7
+ 714              		.cfi_def_cfa_offset 0
+ 715 003e 7047     		bx	lr
+ 716              		.cfi_endproc
+ 717              	.LFE159:
+ 719              		.text
+ 720              	.Letext0:
+ 721              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 722              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 723              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 724              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 725              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 726              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 727              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 728              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 729              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 730              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 731              		.file 12 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 732              		.file 13 "../../Dawn/DawnLib/dawn_lib.h"
+ 733              		.file 14 "../../Dawn/DawnBsp/timebase.h"
+ 734              		.file 15 "../../Dawn/DawnCom/unpack.h"
+ 735              		.file 16 "../../Dawn/DawnDevice/icm206xx.h"
+ 736              		.file 17 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 737              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 738              		.file 19 "../../Dawn/DawnMain/dawn_function.h"
+ 739              		.file 20 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 flash.c
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:16     .text.flash_sector_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:23     .text.flash_sector_get:00000000 flash_sector_get
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:444    .text.flash_sector_get:00000260 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:471    .text.flash_sector_get:000002c4 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:491    .text.flash_erase:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:498    .text.flash_erase:00000000 flash_erase
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:571    .text.flash_write_words:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:578    .text.flash_write_words:00000000 flash_write_words
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:649    .text.flash_read_words:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbOpScP.s:656    .text.flash_read_words:00000000 flash_read_words
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+UNDEFINED SYMBOLS
+fmc_unlock
+fmc_flag_clear
+iwdg_feed
+fmc_sector_erase
+fmc_lock
+fmc_word_program

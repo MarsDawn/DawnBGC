@@ -1,0 +1,510 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_fwdgt.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.fwdgt_write_disable,"ax",%progbits
+  16              		.align	1
+  17              		.global	fwdgt_write_disable
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	fwdgt_write_disable:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_fwdgt.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \file  gd32f4xx_fwdgt.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \brief FWDGT driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** #include "gd32f4xx_fwdgt.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /* write value to FWDGT_CTL_CMD bit field */
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** #define CTL_CMD(regval)             (BITS(0,15) & ((uint32_t)(regval) << 0))
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /* write value to FWDGT_RLD_RLD bit field */
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** #define RLD_RLD(regval)             (BITS(0,11) & ((uint32_t)(regval) << 0))
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /*!
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \brief      disable write access to FWDGT_PSC and FWDGT_RLD
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[in]  none
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[out] none
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \retval     none
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** */
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** void fwdgt_write_disable(void)
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** {
+  27              		.loc 1 26 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 80B4     		push	{r7}
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 7, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     FWDGT_CTL = FWDGT_WRITEACCESS_DISABLE;
+  37              		.loc 1 27 5
+  38 0004 034B     		ldr	r3, .L2
+  39              		.loc 1 27 15
+  40 0006 0022     		movs	r2, #0
+  41 0008 1A60     		str	r2, [r3]
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** }
+  42              		.loc 1 28 1
+  43 000a 00BF     		nop
+  44 000c BD46     		mov	sp, r7
+  45              		.cfi_def_cfa_register 13
+  46              		@ sp needed
+  47 000e 80BC     		pop	{r7}
+  48              		.cfi_restore 7
+  49              		.cfi_def_cfa_offset 0
+  50 0010 7047     		bx	lr
+  51              	.L3:
+  52 0012 00BF     		.align	2
+  53              	.L2:
+  54 0014 00300040 		.word	1073754112
+  55              		.cfi_endproc
+  56              	.LFE123:
+  58              		.section	.text.fwdgt_counter_reload,"ax",%progbits
+  59              		.align	1
+  60              		.global	fwdgt_counter_reload
+  61              		.syntax unified
+  62              		.thumb
+  63              		.thumb_func
+  64              		.fpu softvfp
+  66              	fwdgt_counter_reload:
+  67              	.LFB124:
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /*!
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \brief      reload the counter of FWDGT
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[in]  none
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[out] none
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \retval     none
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** */
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** void fwdgt_counter_reload(void)
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** {
+  68              		.loc 1 37 1
+  69              		.cfi_startproc
+  70              		@ args = 0, pretend = 0, frame = 0
+  71              		@ frame_needed = 1, uses_anonymous_args = 0
+  72              		@ link register save eliminated.
+  73 0000 80B4     		push	{r7}
+  74              		.cfi_def_cfa_offset 4
+  75              		.cfi_offset 7, -4
+  76 0002 00AF     		add	r7, sp, #0
+  77              		.cfi_def_cfa_register 7
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     FWDGT_CTL = FWDGT_KEY_RELOAD;
+  78              		.loc 1 38 5
+  79 0004 034B     		ldr	r3, .L5
+  80              		.loc 1 38 15
+  81 0006 4AF6AA22 		movw	r2, #43690
+  82 000a 1A60     		str	r2, [r3]
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** }
+  83              		.loc 1 39 1
+  84 000c 00BF     		nop
+  85 000e BD46     		mov	sp, r7
+  86              		.cfi_def_cfa_register 13
+  87              		@ sp needed
+  88 0010 80BC     		pop	{r7}
+  89              		.cfi_restore 7
+  90              		.cfi_def_cfa_offset 0
+  91 0012 7047     		bx	lr
+  92              	.L6:
+  93              		.align	2
+  94              	.L5:
+  95 0014 00300040 		.word	1073754112
+  96              		.cfi_endproc
+  97              	.LFE124:
+  99              		.section	.text.fwdgt_enable,"ax",%progbits
+ 100              		.align	1
+ 101              		.global	fwdgt_enable
+ 102              		.syntax unified
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.fpu softvfp
+ 107              	fwdgt_enable:
+ 108              	.LFB125:
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /*!
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \brief      start the free watchdog timer counter
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[in]  none
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[out] none
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \retval     none
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** */
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** void fwdgt_enable(void)
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** {
+ 109              		.loc 1 48 1
+ 110              		.cfi_startproc
+ 111              		@ args = 0, pretend = 0, frame = 0
+ 112              		@ frame_needed = 1, uses_anonymous_args = 0
+ 113              		@ link register save eliminated.
+ 114 0000 80B4     		push	{r7}
+ 115              		.cfi_def_cfa_offset 4
+ 116              		.cfi_offset 7, -4
+ 117 0002 00AF     		add	r7, sp, #0
+ 118              		.cfi_def_cfa_register 7
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     FWDGT_CTL = FWDGT_KEY_ENABLE;
+ 119              		.loc 1 49 5
+ 120 0004 034B     		ldr	r3, .L8
+ 121              		.loc 1 49 15
+ 122 0006 4CF6CC42 		movw	r2, #52428
+ 123 000a 1A60     		str	r2, [r3]
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** }
+ 124              		.loc 1 50 1
+ 125 000c 00BF     		nop
+ 126 000e BD46     		mov	sp, r7
+ 127              		.cfi_def_cfa_register 13
+ 128              		@ sp needed
+ 129 0010 80BC     		pop	{r7}
+ 130              		.cfi_restore 7
+ 131              		.cfi_def_cfa_offset 0
+ 132 0012 7047     		bx	lr
+ 133              	.L9:
+ 134              		.align	2
+ 135              	.L8:
+ 136 0014 00300040 		.word	1073754112
+ 137              		.cfi_endproc
+ 138              	.LFE125:
+ 140              		.section	.text.fwdgt_config,"ax",%progbits
+ 141              		.align	1
+ 142              		.global	fwdgt_config
+ 143              		.syntax unified
+ 144              		.thumb
+ 145              		.thumb_func
+ 146              		.fpu softvfp
+ 148              	fwdgt_config:
+ 149              	.LFB126:
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /*!
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \brief      configure counter reload value, and prescaler divider value
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[in]  reload_value: specify reload value(0x0000 - 0x0FFF)
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[in]  prescaler_div: FWDGT prescaler value
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_PSC_DIV4: FWDGT prescaler set to 4
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_PSC_DIV8: FWDGT prescaler set to 8
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_PSC_DIV16: FWDGT prescaler set to 16
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_PSC_DIV32: FWDGT prescaler set to 32
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_PSC_DIV64: FWDGT prescaler set to 64
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_PSC_DIV128: FWDGT prescaler set to 128
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_PSC_DIV256: FWDGT prescaler set to 256
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[out] none
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \retval     ErrStatus: ERROR or SUCCESS
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** */
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** ErrStatus fwdgt_config(uint16_t reload_value, uint8_t prescaler_div)
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** {
+ 150              		.loc 1 68 1
+ 151              		.cfi_startproc
+ 152              		@ args = 0, pretend = 0, frame = 16
+ 153              		@ frame_needed = 1, uses_anonymous_args = 0
+ 154              		@ link register save eliminated.
+ 155 0000 80B4     		push	{r7}
+ 156              		.cfi_def_cfa_offset 4
+ 157              		.cfi_offset 7, -4
+ 158 0002 85B0     		sub	sp, sp, #20
+ 159              		.cfi_def_cfa_offset 24
+ 160 0004 00AF     		add	r7, sp, #0
+ 161              		.cfi_def_cfa_register 7
+ 162 0006 0346     		mov	r3, r0
+ 163 0008 0A46     		mov	r2, r1
+ 164 000a FB80     		strh	r3, [r7, #6]	@ movhi
+ 165 000c 1346     		mov	r3, r2
+ 166 000e 7B71     		strb	r3, [r7, #5]
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     uint32_t timeout = FWDGT_PSC_TIMEOUT;
+ 167              		.loc 1 69 14
+ 168 0010 204B     		ldr	r3, .L18
+ 169 0012 FB60     		str	r3, [r7, #12]
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     uint32_t flag_status = RESET;
+ 170              		.loc 1 70 14
+ 171 0014 0023     		movs	r3, #0
+ 172 0016 BB60     		str	r3, [r7, #8]
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****   
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     /* enable write access to FWDGT_PSC,and FWDGT_RLD */
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     FWDGT_CTL = FWDGT_WRITEACCESS_ENABLE;
+ 173              		.loc 1 73 5
+ 174 0018 1F4B     		ldr	r3, .L18+4
+ 175              		.loc 1 73 15
+ 176 001a 45F25552 		movw	r2, #21845
+ 177 001e 1A60     		str	r2, [r3]
+ 178              	.L12:
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****   
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     /* wait until the PUD flag to be reset */
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     do{
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****        flag_status = FWDGT_STAT & FWDGT_STAT_PUD;
+ 179              		.loc 1 77 22 discriminator 2
+ 180 0020 1E4B     		ldr	r3, .L18+8
+ 181 0022 1B68     		ldr	r3, [r3]
+ 182              		.loc 1 77 20 discriminator 2
+ 183 0024 03F00103 		and	r3, r3, #1
+ 184 0028 BB60     		str	r3, [r7, #8]
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     }while((--timeout > 0U) && ((uint32_t)RESET != flag_status));
+ 185              		.loc 1 78 5 discriminator 2
+ 186 002a FB68     		ldr	r3, [r7, #12]
+ 187 002c 013B     		subs	r3, r3, #1
+ 188 002e FB60     		str	r3, [r7, #12]
+ 189 0030 FB68     		ldr	r3, [r7, #12]
+ 190 0032 002B     		cmp	r3, #0
+ 191 0034 02D0     		beq	.L11
+ 192              		.loc 1 78 29 discriminator 1
+ 193 0036 BB68     		ldr	r3, [r7, #8]
+ 194 0038 002B     		cmp	r3, #0
+ 195 003a F1D1     		bne	.L12
+ 196              	.L11:
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     if ((uint32_t)RESET != flag_status){
+ 197              		.loc 1 80 8
+ 198 003c BB68     		ldr	r3, [r7, #8]
+ 199 003e 002B     		cmp	r3, #0
+ 200 0040 01D0     		beq	.L13
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****         return ERROR;
+ 201              		.loc 1 81 16
+ 202 0042 0023     		movs	r3, #0
+ 203 0044 21E0     		b	.L14
+ 204              	.L13:
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     }
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     /* configure FWDGT */
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     FWDGT_PSC = (uint32_t)prescaler_div;
+ 205              		.loc 1 85 5
+ 206 0046 164A     		ldr	r2, .L18+12
+ 207              		.loc 1 85 17
+ 208 0048 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
+ 209              		.loc 1 85 15
+ 210 004a 1360     		str	r3, [r2]
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     timeout = FWDGT_RLD_TIMEOUT;
+ 211              		.loc 1 87 13
+ 212 004c 114B     		ldr	r3, .L18
+ 213 004e FB60     		str	r3, [r7, #12]
+ 214              	.L16:
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     /* wait until the RUD flag to be reset */
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     do{
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****        flag_status = FWDGT_STAT & FWDGT_STAT_RUD;
+ 215              		.loc 1 90 22 discriminator 2
+ 216 0050 124B     		ldr	r3, .L18+8
+ 217 0052 1B68     		ldr	r3, [r3]
+ 218              		.loc 1 90 20 discriminator 2
+ 219 0054 03F00203 		and	r3, r3, #2
+ 220 0058 BB60     		str	r3, [r7, #8]
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     }while((--timeout > 0U) && ((uint32_t)RESET != flag_status));
+ 221              		.loc 1 91 5 discriminator 2
+ 222 005a FB68     		ldr	r3, [r7, #12]
+ 223 005c 013B     		subs	r3, r3, #1
+ 224 005e FB60     		str	r3, [r7, #12]
+ 225 0060 FB68     		ldr	r3, [r7, #12]
+ 226 0062 002B     		cmp	r3, #0
+ 227 0064 02D0     		beq	.L15
+ 228              		.loc 1 91 29 discriminator 1
+ 229 0066 BB68     		ldr	r3, [r7, #8]
+ 230 0068 002B     		cmp	r3, #0
+ 231 006a F1D1     		bne	.L16
+ 232              	.L15:
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****    
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     if ((uint32_t)RESET != flag_status){
+ 233              		.loc 1 93 8
+ 234 006c BB68     		ldr	r3, [r7, #8]
+ 235 006e 002B     		cmp	r3, #0
+ 236 0070 01D0     		beq	.L17
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****         return ERROR;
+ 237              		.loc 1 94 16
+ 238 0072 0023     		movs	r3, #0
+ 239 0074 09E0     		b	.L14
+ 240              	.L17:
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     }
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     FWDGT_RLD = RLD_RLD(reload_value);
+ 241              		.loc 1 97 17
+ 242 0076 FB88     		ldrh	r3, [r7, #6]
+ 243              		.loc 1 97 5
+ 244 0078 0A4A     		ldr	r2, .L18+16
+ 245              		.loc 1 97 17
+ 246 007a C3F30B03 		ubfx	r3, r3, #0, #12
+ 247              		.loc 1 97 15
+ 248 007e 1360     		str	r3, [r2]
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     /* reload the counter */
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     FWDGT_CTL = FWDGT_KEY_RELOAD;
+ 249              		.loc 1 100 5
+ 250 0080 054B     		ldr	r3, .L18+4
+ 251              		.loc 1 100 15
+ 252 0082 4AF6AA22 		movw	r2, #43690
+ 253 0086 1A60     		str	r2, [r3]
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     return SUCCESS;
+ 254              		.loc 1 102 12
+ 255 0088 0123     		movs	r3, #1
+ 256              	.L14:
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** }
+ 257              		.loc 1 103 1
+ 258 008a 1846     		mov	r0, r3
+ 259 008c 1437     		adds	r7, r7, #20
+ 260              		.cfi_def_cfa_offset 4
+ 261 008e BD46     		mov	sp, r7
+ 262              		.cfi_def_cfa_register 13
+ 263              		@ sp needed
+ 264 0090 80BC     		pop	{r7}
+ 265              		.cfi_restore 7
+ 266              		.cfi_def_cfa_offset 0
+ 267 0092 7047     		bx	lr
+ 268              	.L19:
+ 269              		.align	2
+ 270              	.L18:
+ 271 0094 FFFF0F00 		.word	1048575
+ 272 0098 00300040 		.word	1073754112
+ 273 009c 0C300040 		.word	1073754124
+ 274 00a0 04300040 		.word	1073754116
+ 275 00a4 08300040 		.word	1073754120
+ 276              		.cfi_endproc
+ 277              	.LFE126:
+ 279              		.section	.text.fwdgt_flag_get,"ax",%progbits
+ 280              		.align	1
+ 281              		.global	fwdgt_flag_get
+ 282              		.syntax unified
+ 283              		.thumb
+ 284              		.thumb_func
+ 285              		.fpu softvfp
+ 287              	fwdgt_flag_get:
+ 288              	.LFB127:
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** /*!
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \brief      get flag state of FWDGT
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[in]  flag: flag to get 
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_STAT_PUD: a write operation to FWDGT_PSC register is on going
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****       \arg        FWDGT_STAT_RUD: a write operation to FWDGT_RLD register is on going
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \param[out] none
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     \retval     FlagStatus: SET or RESET
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** */
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** FlagStatus fwdgt_flag_get(uint16_t flag)
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** {
+ 289              		.loc 1 114 1
+ 290              		.cfi_startproc
+ 291              		@ args = 0, pretend = 0, frame = 8
+ 292              		@ frame_needed = 1, uses_anonymous_args = 0
+ 293              		@ link register save eliminated.
+ 294 0000 80B4     		push	{r7}
+ 295              		.cfi_def_cfa_offset 4
+ 296              		.cfi_offset 7, -4
+ 297 0002 83B0     		sub	sp, sp, #12
+ 298              		.cfi_def_cfa_offset 16
+ 299 0004 00AF     		add	r7, sp, #0
+ 300              		.cfi_def_cfa_register 7
+ 301 0006 0346     		mov	r3, r0
+ 302 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****   if(FWDGT_STAT & flag){
+ 303              		.loc 1 115 6
+ 304 000a 074B     		ldr	r3, .L23
+ 305 000c 1A68     		ldr	r2, [r3]
+ 306              		.loc 1 115 17
+ 307 000e FB88     		ldrh	r3, [r7, #6]
+ 308 0010 1340     		ands	r3, r3, r2
+ 309              		.loc 1 115 5
+ 310 0012 002B     		cmp	r3, #0
+ 311 0014 01D0     		beq	.L21
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****         return SET;
+ 312              		.loc 1 116 16
+ 313 0016 0123     		movs	r3, #1
+ 314 0018 00E0     		b	.L22
+ 315              	.L21:
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****   }
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** 
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c ****     return RESET;
+ 316              		.loc 1 119 12
+ 317 001a 0023     		movs	r3, #0
+ 318              	.L22:
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_fwdgt.c **** }
+ 319              		.loc 1 120 1
+ 320 001c 1846     		mov	r0, r3
+ 321 001e 0C37     		adds	r7, r7, #12
+ 322              		.cfi_def_cfa_offset 4
+ 323 0020 BD46     		mov	sp, r7
+ 324              		.cfi_def_cfa_register 13
+ 325              		@ sp needed
+ 326 0022 80BC     		pop	{r7}
+ 327              		.cfi_restore 7
+ 328              		.cfi_def_cfa_offset 0
+ 329 0024 7047     		bx	lr
+ 330              	.L24:
+ 331 0026 00BF     		.align	2
+ 332              	.L23:
+ 333 0028 0C300040 		.word	1073754124
+ 334              		.cfi_endproc
+ 335              	.LFE127:
+ 337              		.text
+ 338              	.Letext0:
+ 339              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 340              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 341              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 342              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 343              		.file 6 "../../CMSIS/gd32f4xx.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_fwdgt.c
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:16     .text.fwdgt_write_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:24     .text.fwdgt_write_disable:00000000 fwdgt_write_disable
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:54     .text.fwdgt_write_disable:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:59     .text.fwdgt_counter_reload:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:66     .text.fwdgt_counter_reload:00000000 fwdgt_counter_reload
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:95     .text.fwdgt_counter_reload:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:100    .text.fwdgt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:107    .text.fwdgt_enable:00000000 fwdgt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:136    .text.fwdgt_enable:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:141    .text.fwdgt_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:148    .text.fwdgt_config:00000000 fwdgt_config
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:271    .text.fwdgt_config:00000094 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:280    .text.fwdgt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:287    .text.fwdgt_flag_get:00000000 fwdgt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccDZZZqb.s:333    .text.fwdgt_flag_get:00000028 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.18.5f6c7659fa286929c41a58d4120a0172
+
+NO UNDEFINED SYMBOLS

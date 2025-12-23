@@ -1,0 +1,1785 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"usart.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.data.is_debug_usart_dma_trans_completed,"aw"
+  18              	is_debug_usart_dma_trans_completed:
+  19 0000 01       		.byte	1
+  20              		.section	.bss.debug_usart_rx_buf,"aw",%nobits
+  21              		.align	2
+  24              	debug_usart_rx_buf:
+  25 0000 00000000 		.space	512
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  26              		.section	.bss.debug_usart_tx_buf,"aw",%nobits
+  27              		.align	2
+  30              	debug_usart_tx_buf:
+  31 0000 00000000 		.space	1024
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  32              		.section	.bss.debug_usart_rx_buff_head,"aw",%nobits
+  33              		.align	1
+  36              	debug_usart_rx_buff_head:
+  37 0000 0000     		.space	2
+  38              		.section	.bss.debug_usart_rx_buff_tail,"aw",%nobits
+  39              		.align	1
+  42              	debug_usart_rx_buff_tail:
+  43 0000 0000     		.space	2
+  44              		.section	.bss.debug_usart_rx_buff_tail_last,"aw",%nobits
+  45              		.align	1
+  48              	debug_usart_rx_buff_tail_last:
+  49 0000 0000     		.space	2
+  50              		.section	.bss.debug_usart_rx_dma_cnt,"aw",%nobits
+  51              		.align	1
+  54              	debug_usart_rx_dma_cnt:
+  55 0000 0000     		.space	2
+  56              		.section	.bss.debug_usart_tx_buff_head,"aw",%nobits
+  57              		.align	1
+  60              	debug_usart_tx_buff_head:
+  61 0000 0000     		.space	2
+  62              		.section	.bss.debug_usart_tx_buff_tail,"aw",%nobits
+  63              		.align	1
+  66              	debug_usart_tx_buff_tail:
+  67 0000 0000     		.space	2
+  68              		.section	.text.DebugUsartInit,"ax",%progbits
+  69              		.align	1
+  70              		.global	DebugUsartInit
+  71              		.arch armv7e-m
+  72              		.syntax unified
+  73              		.thumb
+  74              		.thumb_func
+  75              		.fpu softvfp
+  77              	DebugUsartInit:
+  78              	.LFB156:
+  79              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp/usart.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** #include "usart.h"
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static bool is_debug_usart_dma_trans_completed = TRUE;
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static uint8_t debug_usart_rx_buf[DEBUG_USART_RX_BUFF_SIZE] = {0};
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static uint8_t debug_usart_tx_buf[DEBUG_USART_TX_BUFF_SIZE] = {0};
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static uint16_t debug_usart_rx_buff_head = 0;
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static uint16_t debug_usart_rx_buff_tail = 0;
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static uint16_t debug_usart_rx_buff_tail_last = 0;
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static uint16_t debug_usart_rx_dma_cnt = 0;
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static uint16_t debug_usart_tx_buff_head = 0;
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** static uint16_t debug_usart_tx_buff_tail = 0;
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** void DebugUsartInit(uint32_t baudrate)
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** {
+  80              		.loc 1 41 1
+  81              		.cfi_startproc
+  82              		@ args = 0, pretend = 0, frame = 48
+  83              		@ frame_needed = 1, uses_anonymous_args = 0
+  84 0000 B0B5     		push	{r4, r5, r7, lr}
+  85              		.cfi_def_cfa_offset 16
+  86              		.cfi_offset 4, -16
+  87              		.cfi_offset 5, -12
+  88              		.cfi_offset 7, -8
+  89              		.cfi_offset 14, -4
+  90 0002 94B0     		sub	sp, sp, #80
+  91              		.cfi_def_cfa_offset 96
+  92 0004 08AF     		add	r7, sp, #32
+  93              		.cfi_def_cfa 7, 64
+  94 0006 7860     		str	r0, [r7, #4]
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_single_data_parameter_struct dma_init_struct;
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     rcu_periph_clock_enable(RCU_GPIOC);
+  95              		.loc 1 44 5
+  96 0008 40F60240 		movw	r0, #3074
+  97 000c FFF7FEFF 		bl	rcu_periph_clock_enable
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     rcu_periph_clock_enable(RCU_USART2);
+  98              		.loc 1 45 5
+  99 0010 41F21200 		movw	r0, #4114
+ 100 0014 FFF7FEFF 		bl	rcu_periph_clock_enable
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     rcu_periph_clock_enable(RCU_DMA0);
+ 101              		.loc 1 46 5
+ 102 0018 40F61540 		movw	r0, #3093
+ 103 001c FFF7FEFF 		bl	rcu_periph_clock_enable
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     gpio_af_set(GPIOC, GPIO_AF_7, GPIO_PIN_10);  
+ 104              		.loc 1 48 5
+ 105 0020 4FF48062 		mov	r2, #1024
+ 106 0024 0721     		movs	r1, #7
+ 107 0026 7348     		ldr	r0, .L2
+ 108 0028 FFF7FEFF 		bl	gpio_af_set
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     gpio_af_set(GPIOC, GPIO_AF_7, GPIO_PIN_11);  
+ 109              		.loc 1 49 5
+ 110 002c 4FF40062 		mov	r2, #2048
+ 111 0030 0721     		movs	r1, #7
+ 112 0032 7048     		ldr	r0, .L2
+ 113 0034 FFF7FEFF 		bl	gpio_af_set
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     gpio_mode_set(GPIOC, GPIO_MODE_AF, GPIO_PUPD_PULLUP, GPIO_PIN_10);
+ 114              		.loc 1 51 5
+ 115 0038 4FF48063 		mov	r3, #1024
+ 116 003c 0122     		movs	r2, #1
+ 117 003e 0221     		movs	r1, #2
+ 118 0040 6C48     		ldr	r0, .L2
+ 119 0042 FFF7FEFF 		bl	gpio_mode_set
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_10);
+ 120              		.loc 1 52 5
+ 121 0046 4FF48063 		mov	r3, #1024
+ 122 004a 0222     		movs	r2, #2
+ 123 004c 0021     		movs	r1, #0
+ 124 004e 6948     		ldr	r0, .L2
+ 125 0050 FFF7FEFF 		bl	gpio_output_options_set
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     gpio_mode_set(GPIOC, GPIO_MODE_AF, GPIO_PUPD_PULLUP, GPIO_PIN_11);
+ 126              		.loc 1 54 5
+ 127 0054 4FF40063 		mov	r3, #2048
+ 128 0058 0122     		movs	r2, #1
+ 129 005a 0221     		movs	r1, #2
+ 130 005c 6548     		ldr	r0, .L2
+ 131 005e FFF7FEFF 		bl	gpio_mode_set
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_11);
+ 132              		.loc 1 55 5
+ 133 0062 4FF40063 		mov	r3, #2048
+ 134 0066 0222     		movs	r2, #2
+ 135 0068 0021     		movs	r1, #0
+ 136 006a 6248     		ldr	r0, .L2
+ 137 006c FFF7FEFF 		bl	gpio_output_options_set
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_deinit(USART2);
+ 138              		.loc 1 58 5
+ 139 0070 6148     		ldr	r0, .L2+4
+ 140 0072 FFF7FEFF 		bl	usart_deinit
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_baudrate_set(USART2, baudrate);
+ 141              		.loc 1 59 5
+ 142 0076 7968     		ldr	r1, [r7, #4]
+ 143 0078 5F48     		ldr	r0, .L2+4
+ 144 007a FFF7FEFF 		bl	usart_baudrate_set
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_word_length_set(USART2, USART_WL_8BIT);
+ 145              		.loc 1 60 5
+ 146 007e 0021     		movs	r1, #0
+ 147 0080 5D48     		ldr	r0, .L2+4
+ 148 0082 FFF7FEFF 		bl	usart_word_length_set
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_stop_bit_set(USART2, USART_STB_1BIT);
+ 149              		.loc 1 61 5
+ 150 0086 0021     		movs	r1, #0
+ 151 0088 5B48     		ldr	r0, .L2+4
+ 152 008a FFF7FEFF 		bl	usart_stop_bit_set
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_parity_config(USART2, USART_PM_NONE);
+ 153              		.loc 1 62 5
+ 154 008e 0021     		movs	r1, #0
+ 155 0090 5948     		ldr	r0, .L2+4
+ 156 0092 FFF7FEFF 		bl	usart_parity_config
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_hardware_flow_rts_config(USART2, USART_RTS_DISABLE);
+ 157              		.loc 1 63 5
+ 158 0096 0021     		movs	r1, #0
+ 159 0098 5748     		ldr	r0, .L2+4
+ 160 009a FFF7FEFF 		bl	usart_hardware_flow_rts_config
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_hardware_flow_cts_config(USART2, USART_CTS_DISABLE);
+ 161              		.loc 1 64 5
+ 162 009e 0021     		movs	r1, #0
+ 163 00a0 5548     		ldr	r0, .L2+4
+ 164 00a2 FFF7FEFF 		bl	usart_hardware_flow_cts_config
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_receive_config(USART2, USART_RECEIVE_ENABLE);
+ 165              		.loc 1 65 5
+ 166 00a6 0421     		movs	r1, #4
+ 167 00a8 5348     		ldr	r0, .L2+4
+ 168 00aa FFF7FEFF 		bl	usart_receive_config
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_transmit_config(USART2, USART_TRANSMIT_ENABLE);
+ 169              		.loc 1 66 5
+ 170 00ae 0821     		movs	r1, #8
+ 171 00b0 5148     		ldr	r0, .L2+4
+ 172 00b2 FFF7FEFF 		bl	usart_transmit_config
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     nvic_irq_enable(USART2_IRQn, DEBUG_USART_PRE_PRIORITY, DEBUG_USART_SUB_PRIORITY);
+ 173              		.loc 1 68 5
+ 174 00b6 0122     		movs	r2, #1
+ 175 00b8 0221     		movs	r1, #2
+ 176 00ba 2720     		movs	r0, #39
+ 177 00bc FFF7FEFF 		bl	nvic_irq_enable
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_dma_receive_config(USART2, USART_DENR_ENABLE);
+ 178              		.loc 1 70 5
+ 179 00c0 4021     		movs	r1, #64
+ 180 00c2 4D48     		ldr	r0, .L2+4
+ 181 00c4 FFF7FEFF 		bl	usart_dma_receive_config
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_dma_transmit_config(USART2, USART_DENT_ENABLE);
+ 182              		.loc 1 71 5
+ 183 00c8 8021     		movs	r1, #128
+ 184 00ca 4B48     		ldr	r0, .L2+4
+ 185 00cc FFF7FEFF 		bl	usart_dma_transmit_config
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_flag_clear(USART2, USART_FLAG_TC);
+ 186              		.loc 1 73 5
+ 187 00d0 0621     		movs	r1, #6
+ 188 00d2 4948     		ldr	r0, .L2+4
+ 189 00d4 FFF7FEFF 		bl	usart_flag_clear
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_interrupt_enable(USART2, USART_INTEN_IDLEIE);    
+ 190              		.loc 1 74 5
+ 191 00d8 4849     		ldr	r1, .L2+8
+ 192 00da 4748     		ldr	r0, .L2+4
+ 193 00dc FFF7FEFF 		bl	usart_interrupt_enable
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_deinit(DMA0, DMA_CH1);   
+ 194              		.loc 1 76 5
+ 195 00e0 0121     		movs	r1, #1
+ 196 00e2 4748     		ldr	r0, .L2+12
+ 197 00e4 FFF7FEFF 		bl	dma_deinit
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.periph_addr = (uint32_t)&USART_DATA(USART2);
+ 198              		.loc 1 77 33
+ 199 00e8 464B     		ldr	r3, .L2+16
+ 200 00ea FB60     		str	r3, [r7, #12]
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.memory0_addr = (uint32_t)&debug_usart_rx_buf[0];
+ 201              		.loc 1 78 36
+ 202 00ec 464B     		ldr	r3, .L2+20
+ 203              		.loc 1 78 34
+ 204 00ee 7B61     		str	r3, [r7, #20]
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.direction = DMA_PERIPH_TO_MEMORY;
+ 205              		.loc 1 79 31
+ 206 00f0 0023     		movs	r3, #0
+ 207 00f2 7B62     		str	r3, [r7, #36]
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.number = DEBUG_USART_RX_DMA_BUFFER_SIZE;
+ 208              		.loc 1 80 28
+ 209 00f4 4023     		movs	r3, #64
+ 210 00f6 BB62     		str	r3, [r7, #40]
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
+ 211              		.loc 1 81 32
+ 212 00f8 0123     		movs	r3, #1
+ 213 00fa 3B61     		str	r3, [r7, #16]
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
+ 214              		.loc 1 82 32
+ 215 00fc 0023     		movs	r3, #0
+ 216 00fe BB61     		str	r3, [r7, #24]
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.periph_memory_width = DMA_PERIPH_WIDTH_8BIT;
+ 217              		.loc 1 83 41
+ 218 0100 0023     		movs	r3, #0
+ 219 0102 FB61     		str	r3, [r7, #28]
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.circular_mode = DMA_CIRCULAR_MODE_DISABLE;
+ 220              		.loc 1 84 35
+ 221 0104 0123     		movs	r3, #1
+ 222 0106 3B62     		str	r3, [r7, #32]
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
+ 223              		.loc 1 85 30
+ 224 0108 4FF44033 		mov	r3, #196608
+ 225 010c FB62     		str	r3, [r7, #44]
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_single_data_mode_init(DMA0, DMA_CH1, dma_init_struct);
+ 226              		.loc 1 86 5
+ 227 010e 6D46     		mov	r5, sp
+ 228 0110 07F11404 		add	r4, r7, #20
+ 229 0114 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 230 0116 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 231 0118 94E80700 		ldm	r4, {r0, r1, r2}
+ 232 011c 85E80700 		stm	r5, {r0, r1, r2}
+ 233 0120 07F10C03 		add	r3, r7, #12
+ 234 0124 0CCB     		ldm	r3, {r2, r3}
+ 235 0126 0121     		movs	r1, #1
+ 236 0128 3548     		ldr	r0, .L2+12
+ 237 012a FFF7FEFF 		bl	dma_single_data_mode_init
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_channel_subperipheral_select(DMA0, DMA_CH1, DMA_SUBPERI4);
+ 238              		.loc 1 87 5
+ 239 012e 0422     		movs	r2, #4
+ 240 0130 0121     		movs	r1, #1
+ 241 0132 3348     		ldr	r0, .L2+12
+ 242 0134 FFF7FEFF 		bl	dma_channel_subperipheral_select
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     debug_usart_rx_dma_cnt = DEBUG_USART_RX_DMA_BUFFER_SIZE;
+ 243              		.loc 1 89 28
+ 244 0138 344B     		ldr	r3, .L2+24
+ 245 013a 4022     		movs	r2, #64
+ 246 013c 1A80     		strh	r2, [r3]	@ movhi
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     nvic_irq_enable(DMA0_Channel1_IRQn, DEBUG_USART_PRE_PRIORITY, DEBUG_USART_SUB_PRIORITY);
+ 247              		.loc 1 91 5
+ 248 013e 0122     		movs	r2, #1
+ 249 0140 0221     		movs	r1, #2
+ 250 0142 0C20     		movs	r0, #12
+ 251 0144 FFF7FEFF 		bl	nvic_irq_enable
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_deinit(DMA0, DMA_CH3);   
+ 252              		.loc 1 93 5
+ 253 0148 0321     		movs	r1, #3
+ 254 014a 2D48     		ldr	r0, .L2+12
+ 255 014c FFF7FEFF 		bl	dma_deinit
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.periph_addr = (uint32_t)&USART_DATA(USART2);
+ 256              		.loc 1 94 33
+ 257 0150 2C4B     		ldr	r3, .L2+16
+ 258 0152 FB60     		str	r3, [r7, #12]
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.memory0_addr = (uint32_t)&debug_usart_tx_buf[0];
+ 259              		.loc 1 95 36
+ 260 0154 2E4B     		ldr	r3, .L2+28
+ 261              		.loc 1 95 34
+ 262 0156 7B61     		str	r3, [r7, #20]
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.direction = DMA_MEMORY_TO_PERIPH;
+ 263              		.loc 1 96 31
+ 264 0158 4023     		movs	r3, #64
+ 265 015a 7B62     		str	r3, [r7, #36]
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.number = DEBUG_USART_TX_BUFF_SIZE;
+ 266              		.loc 1 97 28
+ 267 015c 4FF48063 		mov	r3, #1024
+ 268 0160 BB62     		str	r3, [r7, #40]
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
+ 269              		.loc 1 98 32
+ 270 0162 0123     		movs	r3, #1
+ 271 0164 3B61     		str	r3, [r7, #16]
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
+ 272              		.loc 1 99 32
+ 273 0166 0023     		movs	r3, #0
+ 274 0168 BB61     		str	r3, [r7, #24]
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.periph_memory_width = DMA_PERIPH_WIDTH_8BIT;
+ 275              		.loc 1 100 41
+ 276 016a 0023     		movs	r3, #0
+ 277 016c FB61     		str	r3, [r7, #28]
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.circular_mode = DMA_CIRCULAR_MODE_DISABLE;
+ 278              		.loc 1 101 35
+ 279 016e 0123     		movs	r3, #1
+ 280 0170 3B62     		str	r3, [r7, #32]
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
+ 281              		.loc 1 102 30
+ 282 0172 4FF44033 		mov	r3, #196608
+ 283 0176 FB62     		str	r3, [r7, #44]
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_single_data_mode_init(DMA0, DMA_CH3, dma_init_struct);
+ 284              		.loc 1 103 5
+ 285 0178 6D46     		mov	r5, sp
+ 286 017a 07F11404 		add	r4, r7, #20
+ 287 017e 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 288 0180 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 289 0182 94E80700 		ldm	r4, {r0, r1, r2}
+ 290 0186 85E80700 		stm	r5, {r0, r1, r2}
+ 291 018a 07F10C03 		add	r3, r7, #12
+ 292 018e 0CCB     		ldm	r3, {r2, r3}
+ 293 0190 0321     		movs	r1, #3
+ 294 0192 1B48     		ldr	r0, .L2+12
+ 295 0194 FFF7FEFF 		bl	dma_single_data_mode_init
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_channel_subperipheral_select(DMA0, DMA_CH3, DMA_SUBPERI4);
+ 296              		.loc 1 104 5
+ 297 0198 0422     		movs	r2, #4
+ 298 019a 0321     		movs	r1, #3
+ 299 019c 1848     		ldr	r0, .L2+12
+ 300 019e FFF7FEFF 		bl	dma_channel_subperipheral_select
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     nvic_irq_enable(DMA0_Channel3_IRQn, DEBUG_USART_PRE_PRIORITY, DEBUG_USART_SUB_PRIORITY);
+ 301              		.loc 1 106 5
+ 302 01a2 0122     		movs	r2, #1
+ 303 01a4 0221     		movs	r1, #2
+ 304 01a6 0E20     		movs	r0, #14
+ 305 01a8 FFF7FEFF 		bl	nvic_irq_enable
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_channel_enable(DMA0, DMA_CH1);
+ 306              		.loc 1 108 5
+ 307 01ac 0121     		movs	r1, #1
+ 308 01ae 1448     		ldr	r0, .L2+12
+ 309 01b0 FFF7FEFF 		bl	dma_channel_enable
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_channel_disable(DMA0, DMA_CH3);          
+ 310              		.loc 1 109 5
+ 311 01b4 0321     		movs	r1, #3
+ 312 01b6 1248     		ldr	r0, .L2+12
+ 313 01b8 FFF7FEFF 		bl	dma_channel_disable
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_interrupt_flag_clear(DMA0, DMA_CH1, DMA_INTC_FTFIFC);
+ 314              		.loc 1 111 5
+ 315 01bc 2022     		movs	r2, #32
+ 316 01be 0121     		movs	r1, #1
+ 317 01c0 0F48     		ldr	r0, .L2+12
+ 318 01c2 FFF7FEFF 		bl	dma_interrupt_flag_clear
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_interrupt_flag_clear(DMA0, DMA_CH3, DMA_INTC_FTFIFC);
+ 319              		.loc 1 112 5
+ 320 01c6 2022     		movs	r2, #32
+ 321 01c8 0321     		movs	r1, #3
+ 322 01ca 0D48     		ldr	r0, .L2+12
+ 323 01cc FFF7FEFF 		bl	dma_interrupt_flag_clear
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_interrupt_enable(DMA0, DMA_CH1, DMA_CHXCTL_FTFIE);
+ 324              		.loc 1 114 5
+ 325 01d0 1022     		movs	r2, #16
+ 326 01d2 0121     		movs	r1, #1
+ 327 01d4 0A48     		ldr	r0, .L2+12
+ 328 01d6 FFF7FEFF 		bl	dma_interrupt_enable
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_interrupt_enable(DMA0, DMA_CH3, DMA_CHXCTL_FTFIE);
+ 329              		.loc 1 115 5
+ 330 01da 1022     		movs	r2, #16
+ 331 01dc 0321     		movs	r1, #3
+ 332 01de 0848     		ldr	r0, .L2+12
+ 333 01e0 FFF7FEFF 		bl	dma_interrupt_enable
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     usart_enable(USART2);
+ 334              		.loc 1 117 5
+ 335 01e4 0448     		ldr	r0, .L2+4
+ 336 01e6 FFF7FEFF 		bl	usart_enable
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** }
+ 337              		.loc 1 118 1
+ 338 01ea 00BF     		nop
+ 339 01ec 3037     		adds	r7, r7, #48
+ 340              		.cfi_def_cfa_offset 16
+ 341 01ee BD46     		mov	sp, r7
+ 342              		.cfi_def_cfa_register 13
+ 343              		@ sp needed
+ 344 01f0 B0BD     		pop	{r4, r5, r7, pc}
+ 345              	.L3:
+ 346 01f2 00BF     		.align	2
+ 347              	.L2:
+ 348 01f4 00080240 		.word	1073874944
+ 349 01f8 00480040 		.word	1073760256
+ 350 01fc 10000010 		.word	268435472
+ 351 0200 00600240 		.word	1073897472
+ 352 0204 04480040 		.word	1073760260
+ 353 0208 00000000 		.word	debug_usart_rx_buf
+ 354 020c 00000000 		.word	debug_usart_rx_dma_cnt
+ 355 0210 00000000 		.word	debug_usart_tx_buf
+ 356              		.cfi_endproc
+ 357              	.LFE156:
+ 359              		.section	.text.debug_usart_trans_enable,"ax",%progbits
+ 360              		.align	1
+ 361              		.global	debug_usart_trans_enable
+ 362              		.syntax unified
+ 363              		.thumb
+ 364              		.thumb_func
+ 365              		.fpu softvfp
+ 367              	debug_usart_trans_enable:
+ 368              	.LFB157:
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** void debug_usart_trans_enable(void)
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** {
+ 369              		.loc 1 121 1
+ 370              		.cfi_startproc
+ 371              		@ args = 0, pretend = 0, frame = 0
+ 372              		@ frame_needed = 1, uses_anonymous_args = 0
+ 373 0000 80B5     		push	{r7, lr}
+ 374              		.cfi_def_cfa_offset 8
+ 375              		.cfi_offset 7, -8
+ 376              		.cfi_offset 14, -4
+ 377 0002 00AF     		add	r7, sp, #0
+ 378              		.cfi_def_cfa_register 7
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     if(is_debug_usart_dma_trans_completed == TRUE)
+ 379              		.loc 1 123 43
+ 380 0004 044B     		ldr	r3, .L7
+ 381 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 382              		.loc 1 123 7
+ 383 0008 012B     		cmp	r3, #1
+ 384 000a 03D1     		bne	.L6
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         usart_interrupt_enable(USART2, USART_INTEN_TBEIE);   
+ 385              		.loc 1 125 9
+ 386 000c 0349     		ldr	r1, .L7+4
+ 387 000e 0448     		ldr	r0, .L7+8
+ 388 0010 FFF7FEFF 		bl	usart_interrupt_enable
+ 389              	.L6:
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** }
+ 390              		.loc 1 127 1
+ 391 0014 00BF     		nop
+ 392 0016 80BD     		pop	{r7, pc}
+ 393              	.L8:
+ 394              		.align	2
+ 395              	.L7:
+ 396 0018 00000000 		.word	is_debug_usart_dma_trans_completed
+ 397 001c 80000010 		.word	268435584
+ 398 0020 00480040 		.word	1073760256
+ 399              		.cfi_endproc
+ 400              	.LFE157:
+ 402              		.section	.text.debug_usart_put_byte,"ax",%progbits
+ 403              		.align	1
+ 404              		.global	debug_usart_put_byte
+ 405              		.syntax unified
+ 406              		.thumb
+ 407              		.thumb_func
+ 408              		.fpu softvfp
+ 410              	debug_usart_put_byte:
+ 411              	.LFB158:
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** void debug_usart_put_byte(uint8_t *pbuf, uint16_t len)
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** {
+ 412              		.loc 1 130 1
+ 413              		.cfi_startproc
+ 414              		@ args = 0, pretend = 0, frame = 16
+ 415              		@ frame_needed = 1, uses_anonymous_args = 0
+ 416 0000 80B5     		push	{r7, lr}
+ 417              		.cfi_def_cfa_offset 8
+ 418              		.cfi_offset 7, -8
+ 419              		.cfi_offset 14, -4
+ 420 0002 84B0     		sub	sp, sp, #16
+ 421              		.cfi_def_cfa_offset 24
+ 422 0004 00AF     		add	r7, sp, #0
+ 423              		.cfi_def_cfa_register 7
+ 424 0006 7860     		str	r0, [r7, #4]
+ 425 0008 0B46     		mov	r3, r1
+ 426 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     uint16_t next_head = 0;          
+ 427              		.loc 1 131 14
+ 428 000c 0023     		movs	r3, #0
+ 429 000e FB81     		strh	r3, [r7, #14]	@ movhi
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     uint16_t len1 = 0, len2 = 0;
+ 430              		.loc 1 132 14
+ 431 0010 0023     		movs	r3, #0
+ 432 0012 BB81     		strh	r3, [r7, #12]	@ movhi
+ 433              		.loc 1 132 24
+ 434 0014 0023     		movs	r3, #0
+ 435 0016 7B81     		strh	r3, [r7, #10]	@ movhi
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     next_head = debug_usart_tx_buff_head + len;
+ 436              		.loc 1 134 42
+ 437 0018 1C4B     		ldr	r3, .L12
+ 438 001a 1A88     		ldrh	r2, [r3]
+ 439              		.loc 1 134 15
+ 440 001c 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 441 001e 1344     		add	r3, r3, r2
+ 442 0020 FB81     		strh	r3, [r7, #14]	@ movhi
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     if(next_head <= DEBUG_USART_TX_BUFF_SIZE)
+ 443              		.loc 1 135 7
+ 444 0022 FB89     		ldrh	r3, [r7, #14]
+ 445 0024 B3F5806F 		cmp	r3, #1024
+ 446 0028 0AD8     		bhi	.L10
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         memcpy(&debug_usart_tx_buf[debug_usart_tx_buff_head], pbuf, len);
+ 447              		.loc 1 137 35
+ 448 002a 184B     		ldr	r3, .L12
+ 449 002c 1B88     		ldrh	r3, [r3]
+ 450 002e 1A46     		mov	r2, r3
+ 451              		.loc 1 137 16
+ 452 0030 174B     		ldr	r3, .L12+4
+ 453 0032 1344     		add	r3, r3, r2
+ 454              		.loc 1 137 9
+ 455 0034 7A88     		ldrh	r2, [r7, #2]
+ 456 0036 7968     		ldr	r1, [r7, #4]
+ 457 0038 1846     		mov	r0, r3
+ 458 003a FFF7FEFF 		bl	memcpy
+ 459 003e 1AE0     		b	.L11
+ 460              	.L10:
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     else
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         len1 = DEBUG_USART_TX_BUFF_SIZE - debug_usart_tx_buff_head;
+ 461              		.loc 1 141 41
+ 462 0040 124B     		ldr	r3, .L12
+ 463 0042 1B88     		ldrh	r3, [r3]
+ 464              		.loc 1 141 14
+ 465 0044 C3F58063 		rsb	r3, r3, #1024
+ 466 0048 BB81     		strh	r3, [r7, #12]	@ movhi
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         len2 = len - len1;
+ 467              		.loc 1 142 14
+ 468 004a 7A88     		ldrh	r2, [r7, #2]	@ movhi
+ 469 004c BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 470 004e D31A     		subs	r3, r2, r3
+ 471 0050 7B81     		strh	r3, [r7, #10]	@ movhi
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         memcpy(&debug_usart_tx_buf[debug_usart_tx_buff_head], pbuf, len1);
+ 472              		.loc 1 143 35
+ 473 0052 0E4B     		ldr	r3, .L12
+ 474 0054 1B88     		ldrh	r3, [r3]
+ 475 0056 1A46     		mov	r2, r3
+ 476              		.loc 1 143 16
+ 477 0058 0D4B     		ldr	r3, .L12+4
+ 478 005a 1344     		add	r3, r3, r2
+ 479              		.loc 1 143 9
+ 480 005c BA89     		ldrh	r2, [r7, #12]
+ 481 005e 7968     		ldr	r1, [r7, #4]
+ 482 0060 1846     		mov	r0, r3
+ 483 0062 FFF7FEFF 		bl	memcpy
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         memcpy(&debug_usart_tx_buf[0], &pbuf[len1], len2);
+ 484              		.loc 1 144 9
+ 485 0066 BB89     		ldrh	r3, [r7, #12]
+ 486              		.loc 1 144 40
+ 487 0068 7A68     		ldr	r2, [r7, #4]
+ 488 006a 1344     		add	r3, r3, r2
+ 489              		.loc 1 144 9
+ 490 006c 7A89     		ldrh	r2, [r7, #10]
+ 491 006e 1946     		mov	r1, r3
+ 492 0070 0748     		ldr	r0, .L12+4
+ 493 0072 FFF7FEFF 		bl	memcpy
+ 494              	.L11:
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     debug_usart_tx_buff_head = next_head % DEBUG_USART_TX_BUFF_SIZE;
+ 495              		.loc 1 146 42
+ 496 0076 FB89     		ldrh	r3, [r7, #14]	@ movhi
+ 497 0078 C3F30903 		ubfx	r3, r3, #0, #10
+ 498 007c 9AB2     		uxth	r2, r3
+ 499              		.loc 1 146 30
+ 500 007e 034B     		ldr	r3, .L12
+ 501 0080 1A80     		strh	r2, [r3]	@ movhi
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** }
+ 502              		.loc 1 147 1
+ 503 0082 00BF     		nop
+ 504 0084 1037     		adds	r7, r7, #16
+ 505              		.cfi_def_cfa_offset 8
+ 506 0086 BD46     		mov	sp, r7
+ 507              		.cfi_def_cfa_register 13
+ 508              		@ sp needed
+ 509 0088 80BD     		pop	{r7, pc}
+ 510              	.L13:
+ 511 008a 00BF     		.align	2
+ 512              	.L12:
+ 513 008c 00000000 		.word	debug_usart_tx_buff_head
+ 514 0090 00000000 		.word	debug_usart_tx_buf
+ 515              		.cfi_endproc
+ 516              	.LFE158:
+ 518              		.section	.text.debug_usart_get_byte,"ax",%progbits
+ 519              		.align	1
+ 520              		.global	debug_usart_get_byte
+ 521              		.syntax unified
+ 522              		.thumb
+ 523              		.thumb_func
+ 524              		.fpu softvfp
+ 526              	debug_usart_get_byte:
+ 527              	.LFB159:
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** uint16_t debug_usart_get_byte(uint8_t *pbuf)
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** {
+ 528              		.loc 1 150 1
+ 529              		.cfi_startproc
+ 530              		@ args = 0, pretend = 0, frame = 16
+ 531              		@ frame_needed = 1, uses_anonymous_args = 0
+ 532 0000 80B5     		push	{r7, lr}
+ 533              		.cfi_def_cfa_offset 8
+ 534              		.cfi_offset 7, -8
+ 535              		.cfi_offset 14, -4
+ 536 0002 84B0     		sub	sp, sp, #16
+ 537              		.cfi_def_cfa_offset 24
+ 538 0004 00AF     		add	r7, sp, #0
+ 539              		.cfi_def_cfa_register 7
+ 540 0006 7860     		str	r0, [r7, #4]
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     uint16_t len = 0, local_rx_head = 0;
+ 541              		.loc 1 151 14
+ 542 0008 0023     		movs	r3, #0
+ 543 000a FB81     		strh	r3, [r7, #14]	@ movhi
+ 544              		.loc 1 151 23
+ 545 000c 0023     		movs	r3, #0
+ 546 000e BB81     		strh	r3, [r7, #12]	@ movhi
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     local_rx_head = debug_usart_rx_buff_head;
+ 547              		.loc 1 154 19
+ 548 0010 1B4B     		ldr	r3, .L18
+ 549 0012 1B88     		ldrh	r3, [r3]	@ movhi
+ 550 0014 BB81     		strh	r3, [r7, #12]	@ movhi
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     if(debug_usart_rx_buff_tail < local_rx_head)
+ 551              		.loc 1 155 33
+ 552 0016 1B4B     		ldr	r3, .L18+4
+ 553 0018 1B88     		ldrh	r3, [r3]
+ 554              		.loc 1 155 7
+ 555 001a BA89     		ldrh	r2, [r7, #12]
+ 556 001c 9A42     		cmp	r2, r3
+ 557 001e 12D9     		bls	.L15
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         len = local_rx_head - debug_usart_rx_buff_tail;
+ 558              		.loc 1 157 29
+ 559 0020 184B     		ldr	r3, .L18+4
+ 560 0022 1B88     		ldrh	r3, [r3]
+ 561              		.loc 1 157 13
+ 562 0024 BA89     		ldrh	r2, [r7, #12]	@ movhi
+ 563 0026 D31A     		subs	r3, r2, r3
+ 564 0028 FB81     		strh	r3, [r7, #14]	@ movhi
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         memcpy(pbuf, &debug_usart_rx_buf[debug_usart_rx_buff_tail], len);
+ 565              		.loc 1 158 41
+ 566 002a 164B     		ldr	r3, .L18+4
+ 567 002c 1B88     		ldrh	r3, [r3]
+ 568 002e 1A46     		mov	r2, r3
+ 569              		.loc 1 158 22
+ 570 0030 154B     		ldr	r3, .L18+8
+ 571 0032 1344     		add	r3, r3, r2
+ 572              		.loc 1 158 9
+ 573 0034 FA89     		ldrh	r2, [r7, #14]
+ 574 0036 1946     		mov	r1, r3
+ 575 0038 7868     		ldr	r0, [r7, #4]
+ 576 003a FFF7FEFF 		bl	memcpy
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         debug_usart_rx_buff_tail = local_rx_head;
+ 577              		.loc 1 159 34
+ 578 003e 114A     		ldr	r2, .L18+4
+ 579 0040 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 580 0042 1380     		strh	r3, [r2]	@ movhi
+ 581 0044 16E0     		b	.L16
+ 582              	.L15:
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     else if(debug_usart_rx_buff_tail > local_rx_head)
+ 583              		.loc 1 161 38
+ 584 0046 0F4B     		ldr	r3, .L18+4
+ 585 0048 1B88     		ldrh	r3, [r3]
+ 586              		.loc 1 161 12
+ 587 004a BA89     		ldrh	r2, [r7, #12]
+ 588 004c 9A42     		cmp	r2, r3
+ 589 004e 11D2     		bcs	.L16
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         len = DEBUG_USART_RX_BUFF_SIZE - debug_usart_rx_buff_tail;
+ 590              		.loc 1 163 40
+ 591 0050 0C4B     		ldr	r3, .L18+4
+ 592 0052 1B88     		ldrh	r3, [r3]
+ 593              		.loc 1 163 13
+ 594 0054 C3F50073 		rsb	r3, r3, #512
+ 595 0058 FB81     		strh	r3, [r7, #14]	@ movhi
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         memcpy(pbuf, &debug_usart_rx_buf[debug_usart_rx_buff_tail], len);
+ 596              		.loc 1 164 41
+ 597 005a 0A4B     		ldr	r3, .L18+4
+ 598 005c 1B88     		ldrh	r3, [r3]
+ 599 005e 1A46     		mov	r2, r3
+ 600              		.loc 1 164 22
+ 601 0060 094B     		ldr	r3, .L18+8
+ 602 0062 1344     		add	r3, r3, r2
+ 603              		.loc 1 164 9
+ 604 0064 FA89     		ldrh	r2, [r7, #14]
+ 605 0066 1946     		mov	r1, r3
+ 606 0068 7868     		ldr	r0, [r7, #4]
+ 607 006a FFF7FEFF 		bl	memcpy
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         debug_usart_rx_buff_tail = 0;
+ 608              		.loc 1 165 34
+ 609 006e 054B     		ldr	r3, .L18+4
+ 610 0070 0022     		movs	r2, #0
+ 611 0072 1A80     		strh	r2, [r3]	@ movhi
+ 612              	.L16:
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     return len;
+ 613              		.loc 1 168 12
+ 614 0074 FB89     		ldrh	r3, [r7, #14]
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** }
+ 615              		.loc 1 169 1
+ 616 0076 1846     		mov	r0, r3
+ 617 0078 1037     		adds	r7, r7, #16
+ 618              		.cfi_def_cfa_offset 8
+ 619 007a BD46     		mov	sp, r7
+ 620              		.cfi_def_cfa_register 13
+ 621              		@ sp needed
+ 622 007c 80BD     		pop	{r7, pc}
+ 623              	.L19:
+ 624 007e 00BF     		.align	2
+ 625              	.L18:
+ 626 0080 00000000 		.word	debug_usart_rx_buff_head
+ 627 0084 00000000 		.word	debug_usart_rx_buff_tail
+ 628 0088 00000000 		.word	debug_usart_rx_buf
+ 629              		.cfi_endproc
+ 630              	.LFE159:
+ 632              		.section	.text.debug_usart_rx_buff_reset,"ax",%progbits
+ 633              		.align	1
+ 634              		.global	debug_usart_rx_buff_reset
+ 635              		.syntax unified
+ 636              		.thumb
+ 637              		.thumb_func
+ 638              		.fpu softvfp
+ 640              	debug_usart_rx_buff_reset:
+ 641              	.LFB160:
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** void debug_usart_rx_buff_reset(void)
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** {
+ 642              		.loc 1 172 1
+ 643              		.cfi_startproc
+ 644              		@ args = 0, pretend = 0, frame = 0
+ 645              		@ frame_needed = 1, uses_anonymous_args = 0
+ 646 0000 80B5     		push	{r7, lr}
+ 647              		.cfi_def_cfa_offset 8
+ 648              		.cfi_offset 7, -8
+ 649              		.cfi_offset 14, -4
+ 650 0002 00AF     		add	r7, sp, #0
+ 651              		.cfi_def_cfa_register 7
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     debug_usart_rx_buff_head = 0;
+ 652              		.loc 1 173 30
+ 653 0004 174B     		ldr	r3, .L21
+ 654 0006 0022     		movs	r2, #0
+ 655 0008 1A80     		strh	r2, [r3]	@ movhi
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     debug_usart_rx_buff_tail = 0;
+ 656              		.loc 1 174 30
+ 657 000a 174B     		ldr	r3, .L21+4
+ 658 000c 0022     		movs	r2, #0
+ 659 000e 1A80     		strh	r2, [r3]	@ movhi
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     debug_usart_rx_buff_tail_last = 0;
+ 660              		.loc 1 175 35
+ 661 0010 164B     		ldr	r3, .L21+8
+ 662 0012 0022     		movs	r2, #0
+ 663 0014 1A80     		strh	r2, [r3]	@ movhi
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     debug_usart_rx_dma_cnt = DEBUG_USART_RX_DMA_BUFFER_SIZE;
+ 664              		.loc 1 176 28
+ 665 0016 164B     		ldr	r3, .L21+12
+ 666 0018 4022     		movs	r2, #64
+ 667 001a 1A80     		strh	r2, [r3]	@ movhi
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_interrupt_disable(DMA0, DMA_CH1, DMA_CHXCTL_FTFIE);
+ 668              		.loc 1 178 5
+ 669 001c 1022     		movs	r2, #16
+ 670 001e 0121     		movs	r1, #1
+ 671 0020 1448     		ldr	r0, .L21+16
+ 672 0022 FFF7FEFF 		bl	dma_interrupt_disable
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_channel_disable(DMA0, DMA_CH1);
+ 673              		.loc 1 179 5
+ 674 0026 0121     		movs	r1, #1
+ 675 0028 1248     		ldr	r0, .L21+16
+ 676 002a FFF7FEFF 		bl	dma_channel_disable
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     DMA_CHM0ADDR(DMA0, DMA_CH1) = (uint32_t)&debug_usart_rx_buf[debug_usart_rx_buff_head];
+ 677              		.loc 1 180 64
+ 678 002e 0D4B     		ldr	r3, .L21
+ 679 0030 1B88     		ldrh	r3, [r3]
+ 680 0032 1A46     		mov	r2, r3
+ 681              		.loc 1 180 45
+ 682 0034 104B     		ldr	r3, .L21+20
+ 683 0036 1A44     		add	r2, r2, r3
+ 684              		.loc 1 180 5
+ 685 0038 104B     		ldr	r3, .L21+24
+ 686              		.loc 1 180 33
+ 687 003a 1A60     		str	r2, [r3]
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     DMA_CHCNT(DMA0, DMA_CH1) = debug_usart_rx_dma_cnt;
+ 688              		.loc 1 181 30
+ 689 003c 0C4B     		ldr	r3, .L21+12
+ 690 003e 1A88     		ldrh	r2, [r3]
+ 691              		.loc 1 181 5
+ 692 0040 0F4B     		ldr	r3, .L21+28
+ 693              		.loc 1 181 30
+ 694 0042 1A60     		str	r2, [r3]
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_interrupt_flag_clear(DMA0, DMA_CH1, DMA_INTC_FTFIFC | DMA_INTC_HTFIFC);
+ 695              		.loc 1 183 5
+ 696 0044 3022     		movs	r2, #48
+ 697 0046 0121     		movs	r1, #1
+ 698 0048 0A48     		ldr	r0, .L21+16
+ 699 004a FFF7FEFF 		bl	dma_interrupt_flag_clear
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_channel_enable(DMA0, DMA_CH1);
+ 700              		.loc 1 184 5
+ 701 004e 0121     		movs	r1, #1
+ 702 0050 0848     		ldr	r0, .L21+16
+ 703 0052 FFF7FEFF 		bl	dma_channel_enable
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     dma_interrupt_enable(DMA0, DMA_CH1, DMA_CHXCTL_FTFIE);
+ 704              		.loc 1 185 5
+ 705 0056 1022     		movs	r2, #16
+ 706 0058 0121     		movs	r1, #1
+ 707 005a 0648     		ldr	r0, .L21+16
+ 708 005c FFF7FEFF 		bl	dma_interrupt_enable
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** }
+ 709              		.loc 1 186 1
+ 710 0060 00BF     		nop
+ 711 0062 80BD     		pop	{r7, pc}
+ 712              	.L22:
+ 713              		.align	2
+ 714              	.L21:
+ 715 0064 00000000 		.word	debug_usart_rx_buff_head
+ 716 0068 00000000 		.word	debug_usart_rx_buff_tail
+ 717 006c 00000000 		.word	debug_usart_rx_buff_tail_last
+ 718 0070 00000000 		.word	debug_usart_rx_dma_cnt
+ 719 0074 00600240 		.word	1073897472
+ 720 0078 00000000 		.word	debug_usart_rx_buf
+ 721 007c 34600240 		.word	1073897524
+ 722 0080 2C600240 		.word	1073897516
+ 723              		.cfi_endproc
+ 724              	.LFE160:
+ 726              		.section	.text.DMA0_Channel1_IRQHandler,"ax",%progbits
+ 727              		.align	1
+ 728              		.global	DMA0_Channel1_IRQHandler
+ 729              		.syntax unified
+ 730              		.thumb
+ 731              		.thumb_func
+ 732              		.fpu softvfp
+ 734              	DMA0_Channel1_IRQHandler:
+ 735              	.LFB161:
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** void DMA0_Channel1_IRQHandler(void)
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** {
+ 736              		.loc 1 189 1
+ 737              		.cfi_startproc
+ 738              		@ args = 0, pretend = 0, frame = 0
+ 739              		@ frame_needed = 1, uses_anonymous_args = 0
+ 740 0000 80B5     		push	{r7, lr}
+ 741              		.cfi_def_cfa_offset 8
+ 742              		.cfi_offset 7, -8
+ 743              		.cfi_offset 14, -4
+ 744 0002 00AF     		add	r7, sp, #0
+ 745              		.cfi_def_cfa_register 7
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     if(dma_interrupt_flag_get(DMA0, DMA_CH1, DMA_INTF_FTFIF) == SET)
+ 746              		.loc 1 191 8
+ 747 0004 2022     		movs	r2, #32
+ 748 0006 0121     		movs	r1, #1
+ 749 0008 3B48     		ldr	r0, .L30
+ 750 000a FFF7FEFF 		bl	dma_interrupt_flag_get
+ 751 000e 0346     		mov	r3, r0
+ 752              		.loc 1 191 7
+ 753 0010 012B     		cmp	r3, #1
+ 754 0012 6FD1     		bne	.L29
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_interrupt_flag_clear(DMA0, DMA_CH1, DMA_INTC_FTFIFC | DMA_INTC_HTFIFC);
+ 755              		.loc 1 193 9
+ 756 0014 3022     		movs	r2, #48
+ 757 0016 0121     		movs	r1, #1
+ 758 0018 3748     		ldr	r0, .L30
+ 759 001a FFF7FEFF 		bl	dma_interrupt_flag_clear
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         if(debug_usart_rx_buff_head >= debug_usart_rx_buff_tail_last)   
+ 760              		.loc 1 195 37
+ 761 001e 374B     		ldr	r3, .L30+4
+ 762 0020 1A88     		ldrh	r2, [r3]
+ 763 0022 374B     		ldr	r3, .L30+8
+ 764 0024 1B88     		ldrh	r3, [r3]
+ 765              		.loc 1 195 11
+ 766 0026 9A42     		cmp	r2, r3
+ 767 0028 29D3     		bcc	.L25
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         {
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_buff_head += debug_usart_rx_dma_cnt;
+ 768              		.loc 1 197 38
+ 769 002a 344B     		ldr	r3, .L30+4
+ 770 002c 1A88     		ldrh	r2, [r3]
+ 771 002e 354B     		ldr	r3, .L30+12
+ 772 0030 1B88     		ldrh	r3, [r3]
+ 773 0032 1344     		add	r3, r3, r2
+ 774 0034 9AB2     		uxth	r2, r3
+ 775 0036 314B     		ldr	r3, .L30+4
+ 776 0038 1A80     		strh	r2, [r3]	@ movhi
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_buff_head %= DEBUG_USART_RX_BUFF_SIZE;
+ 777              		.loc 1 198 38
+ 778 003a 304B     		ldr	r3, .L30+4
+ 779 003c 1B88     		ldrh	r3, [r3]
+ 780 003e C3F30803 		ubfx	r3, r3, #0, #9
+ 781 0042 9AB2     		uxth	r2, r3
+ 782 0044 2D4B     		ldr	r3, .L30+4
+ 783 0046 1A80     		strh	r2, [r3]	@ movhi
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                     
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             if(debug_usart_rx_buff_head > debug_usart_rx_buff_tail_last)
+ 784              		.loc 1 200 41
+ 785 0048 2C4B     		ldr	r3, .L30+4
+ 786 004a 1A88     		ldrh	r2, [r3]
+ 787 004c 2C4B     		ldr	r3, .L30+8
+ 788 004e 1B88     		ldrh	r3, [r3]
+ 789              		.loc 1 200 15
+ 790 0050 9A42     		cmp	r2, r3
+ 791 0052 0BD9     		bls	.L26
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             {
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 debug_usart_rx_dma_cnt = DEBUG_USART_RX_BUFF_SIZE - debug_usart_rx_buff_head;
+ 792              		.loc 1 202 67
+ 793 0054 294B     		ldr	r3, .L30+4
+ 794 0056 1B88     		ldrh	r3, [r3]
+ 795 0058 C3F50073 		rsb	r3, r3, #512
+ 796 005c 9AB2     		uxth	r2, r3
+ 797              		.loc 1 202 40
+ 798 005e 294B     		ldr	r3, .L30+12
+ 799 0060 1A80     		strh	r2, [r3]	@ movhi
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 debug_usart_rx_buff_tail_last = debug_usart_rx_buff_tail;
+ 800              		.loc 1 203 47
+ 801 0062 294B     		ldr	r3, .L30+16
+ 802 0064 1A88     		ldrh	r2, [r3]
+ 803 0066 264B     		ldr	r3, .L30+8
+ 804 0068 1A80     		strh	r2, [r3]	@ movhi
+ 805 006a 29E0     		b	.L27
+ 806              	.L26:
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             }
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             else
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             {
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 debug_usart_rx_buff_tail_last = debug_usart_rx_buff_tail;
+ 807              		.loc 1 207 47
+ 808 006c 264B     		ldr	r3, .L30+16
+ 809 006e 1A88     		ldrh	r2, [r3]
+ 810 0070 234B     		ldr	r3, .L30+8
+ 811 0072 1A80     		strh	r2, [r3]	@ movhi
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 debug_usart_rx_dma_cnt = debug_usart_rx_buff_tail_last;
+ 812              		.loc 1 208 40
+ 813 0074 224B     		ldr	r3, .L30+8
+ 814 0076 1A88     		ldrh	r2, [r3]
+ 815 0078 224B     		ldr	r3, .L30+12
+ 816 007a 1A80     		strh	r2, [r3]	@ movhi
+ 817 007c 20E0     		b	.L27
+ 818              	.L25:
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             }
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         }
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         else if(debug_usart_rx_buff_head < debug_usart_rx_buff_tail_last)
+ 819              		.loc 1 211 42
+ 820 007e 1F4B     		ldr	r3, .L30+4
+ 821 0080 1A88     		ldrh	r2, [r3]
+ 822 0082 1F4B     		ldr	r3, .L30+8
+ 823 0084 1B88     		ldrh	r3, [r3]
+ 824              		.loc 1 211 16
+ 825 0086 9A42     		cmp	r2, r3
+ 826 0088 1AD2     		bcs	.L27
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         {
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_buff_head += debug_usart_rx_dma_cnt;
+ 827              		.loc 1 213 38
+ 828 008a 1C4B     		ldr	r3, .L30+4
+ 829 008c 1A88     		ldrh	r2, [r3]
+ 830 008e 1D4B     		ldr	r3, .L30+12
+ 831 0090 1B88     		ldrh	r3, [r3]
+ 832 0092 1344     		add	r3, r3, r2
+ 833 0094 9AB2     		uxth	r2, r3
+ 834 0096 194B     		ldr	r3, .L30+4
+ 835 0098 1A80     		strh	r2, [r3]	@ movhi
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_buff_head %= DEBUG_USART_RX_BUFF_SIZE;
+ 836              		.loc 1 214 38
+ 837 009a 184B     		ldr	r3, .L30+4
+ 838 009c 1B88     		ldrh	r3, [r3]
+ 839 009e C3F30803 		ubfx	r3, r3, #0, #9
+ 840 00a2 9AB2     		uxth	r2, r3
+ 841 00a4 154B     		ldr	r3, .L30+4
+ 842 00a6 1A80     		strh	r2, [r3]	@ movhi
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_buff_tail_last = debug_usart_rx_buff_tail;
+ 843              		.loc 1 216 43
+ 844 00a8 174B     		ldr	r3, .L30+16
+ 845 00aa 1A88     		ldrh	r2, [r3]
+ 846 00ac 144B     		ldr	r3, .L30+8
+ 847 00ae 1A80     		strh	r2, [r3]	@ movhi
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_dma_cnt = debug_usart_rx_buff_tail_last - debug_usart_rx_buff_head;
+ 848              		.loc 1 218 68
+ 849 00b0 134B     		ldr	r3, .L30+8
+ 850 00b2 1A88     		ldrh	r2, [r3]
+ 851 00b4 114B     		ldr	r3, .L30+4
+ 852 00b6 1B88     		ldrh	r3, [r3]
+ 853 00b8 D31A     		subs	r3, r2, r3
+ 854 00ba 9AB2     		uxth	r2, r3
+ 855              		.loc 1 218 36
+ 856 00bc 114B     		ldr	r3, .L30+12
+ 857 00be 1A80     		strh	r2, [r3]	@ movhi
+ 858              	.L27:
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         }
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         if(debug_usart_rx_dma_cnt > DEBUG_USART_RX_DMA_BUFFER_SIZE)
+ 859              		.loc 1 221 35
+ 860 00c0 104B     		ldr	r3, .L30+12
+ 861 00c2 1B88     		ldrh	r3, [r3]
+ 862              		.loc 1 221 11
+ 863 00c4 402B     		cmp	r3, #64
+ 864 00c6 02D9     		bls	.L28
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         {
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_dma_cnt = DEBUG_USART_RX_DMA_BUFFER_SIZE;
+ 865              		.loc 1 223 36
+ 866 00c8 0E4B     		ldr	r3, .L30+12
+ 867 00ca 4022     		movs	r2, #64
+ 868 00cc 1A80     		strh	r2, [r3]	@ movhi
+ 869              	.L28:
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         }
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_channel_disable(DMA0, DMA_CH1);
+ 870              		.loc 1 226 9
+ 871 00ce 0121     		movs	r1, #1
+ 872 00d0 0948     		ldr	r0, .L30
+ 873 00d2 FFF7FEFF 		bl	dma_channel_disable
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         DMA_CHM0ADDR(DMA0, DMA_CH1) = (uint32_t)&debug_usart_rx_buf[debug_usart_rx_buff_head];
+ 874              		.loc 1 227 68
+ 875 00d6 094B     		ldr	r3, .L30+4
+ 876 00d8 1B88     		ldrh	r3, [r3]
+ 877 00da 1A46     		mov	r2, r3
+ 878              		.loc 1 227 49
+ 879 00dc 0B4B     		ldr	r3, .L30+20
+ 880 00de 1A44     		add	r2, r2, r3
+ 881              		.loc 1 227 9
+ 882 00e0 0B4B     		ldr	r3, .L30+24
+ 883              		.loc 1 227 37
+ 884 00e2 1A60     		str	r2, [r3]
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         DMA_CHCNT(DMA0, DMA_CH1) = debug_usart_rx_dma_cnt;
+ 885              		.loc 1 228 34
+ 886 00e4 074B     		ldr	r3, .L30+12
+ 887 00e6 1A88     		ldrh	r2, [r3]
+ 888              		.loc 1 228 9
+ 889 00e8 0A4B     		ldr	r3, .L30+28
+ 890              		.loc 1 228 34
+ 891 00ea 1A60     		str	r2, [r3]
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_channel_enable(DMA0, DMA_CH1);
+ 892              		.loc 1 229 9
+ 893 00ec 0121     		movs	r1, #1
+ 894 00ee 0248     		ldr	r0, .L30
+ 895 00f0 FFF7FEFF 		bl	dma_channel_enable
+ 896              	.L29:
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** }
+ 897              		.loc 1 231 1
+ 898 00f4 00BF     		nop
+ 899 00f6 80BD     		pop	{r7, pc}
+ 900              	.L31:
+ 901              		.align	2
+ 902              	.L30:
+ 903 00f8 00600240 		.word	1073897472
+ 904 00fc 00000000 		.word	debug_usart_rx_buff_head
+ 905 0100 00000000 		.word	debug_usart_rx_buff_tail_last
+ 906 0104 00000000 		.word	debug_usart_rx_dma_cnt
+ 907 0108 00000000 		.word	debug_usart_rx_buff_tail
+ 908 010c 00000000 		.word	debug_usart_rx_buf
+ 909 0110 34600240 		.word	1073897524
+ 910 0114 2C600240 		.word	1073897516
+ 911              		.cfi_endproc
+ 912              	.LFE161:
+ 914              		.section	.text.DMA0_Channel3_IRQHandler,"ax",%progbits
+ 915              		.align	1
+ 916              		.global	DMA0_Channel3_IRQHandler
+ 917              		.syntax unified
+ 918              		.thumb
+ 919              		.thumb_func
+ 920              		.fpu softvfp
+ 922              	DMA0_Channel3_IRQHandler:
+ 923              	.LFB162:
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** void DMA0_Channel3_IRQHandler(void)
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** {
+ 924              		.loc 1 234 1
+ 925              		.cfi_startproc
+ 926              		@ args = 0, pretend = 0, frame = 0
+ 927              		@ frame_needed = 1, uses_anonymous_args = 0
+ 928 0000 80B5     		push	{r7, lr}
+ 929              		.cfi_def_cfa_offset 8
+ 930              		.cfi_offset 7, -8
+ 931              		.cfi_offset 14, -4
+ 932 0002 00AF     		add	r7, sp, #0
+ 933              		.cfi_def_cfa_register 7
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     if(dma_interrupt_flag_get(DMA0, DMA_CH3, DMA_INTF_FTFIF) == SET)
+ 934              		.loc 1 236 8
+ 935 0004 2022     		movs	r2, #32
+ 936 0006 0321     		movs	r1, #3
+ 937 0008 0848     		ldr	r0, .L35
+ 938 000a FFF7FEFF 		bl	dma_interrupt_flag_get
+ 939 000e 0346     		mov	r3, r0
+ 940              		.loc 1 236 7
+ 941 0010 012B     		cmp	r3, #1
+ 942 0012 09D1     		bne	.L34
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_interrupt_flag_clear(DMA0, DMA_CH3, DMA_INTC_FTFIFC | DMA_INTC_HTFIFC);
+ 943              		.loc 1 238 9
+ 944 0014 3022     		movs	r2, #48
+ 945 0016 0321     		movs	r1, #3
+ 946 0018 0448     		ldr	r0, .L35
+ 947 001a FFF7FEFF 		bl	dma_interrupt_flag_clear
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         is_debug_usart_dma_trans_completed = TRUE;
+ 948              		.loc 1 240 44
+ 949 001e 044B     		ldr	r3, .L35+4
+ 950 0020 0122     		movs	r2, #1
+ 951 0022 1A70     		strb	r2, [r3]
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         debug_usart_trans_enable();   
+ 952              		.loc 1 242 9
+ 953 0024 FFF7FEFF 		bl	debug_usart_trans_enable
+ 954              	.L34:
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** }
+ 955              		.loc 1 244 1
+ 956 0028 00BF     		nop
+ 957 002a 80BD     		pop	{r7, pc}
+ 958              	.L36:
+ 959              		.align	2
+ 960              	.L35:
+ 961 002c 00600240 		.word	1073897472
+ 962 0030 00000000 		.word	is_debug_usart_dma_trans_completed
+ 963              		.cfi_endproc
+ 964              	.LFE162:
+ 966              		.section	.text.USART2_IRQHandler,"ax",%progbits
+ 967              		.align	1
+ 968              		.global	USART2_IRQHandler
+ 969              		.syntax unified
+ 970              		.thumb
+ 971              		.thumb_func
+ 972              		.fpu softvfp
+ 974              	USART2_IRQHandler:
+ 975              	.LFB163:
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** void USART2_IRQHandler(void)
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** {
+ 976              		.loc 1 247 1
+ 977              		.cfi_startproc
+ 978              		@ args = 0, pretend = 0, frame = 8
+ 979              		@ frame_needed = 1, uses_anonymous_args = 0
+ 980 0000 90B5     		push	{r4, r7, lr}
+ 981              		.cfi_def_cfa_offset 12
+ 982              		.cfi_offset 4, -12
+ 983              		.cfi_offset 7, -8
+ 984              		.cfi_offset 14, -4
+ 985 0002 83B0     		sub	sp, sp, #12
+ 986              		.cfi_def_cfa_offset 24
+ 987 0004 00AF     		add	r7, sp, #0
+ 988              		.cfi_def_cfa_register 7
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     uint16_t len = 0;
+ 989              		.loc 1 248 14
+ 990 0006 0023     		movs	r3, #0
+ 991 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     if(usart_interrupt_flag_get(USART2, USART_INT_IDLEIE) == SET)   
+ 992              		.loc 1 251 8
+ 993 000a 4FF44171 		mov	r1, #772
+ 994 000e 7448     		ldr	r0, .L47
+ 995 0010 FFF7FEFF 		bl	usart_interrupt_flag_get
+ 996 0014 0346     		mov	r3, r0
+ 997              		.loc 1 251 7
+ 998 0016 012B     		cmp	r3, #1
+ 999 0018 5CD1     		bne	.L38
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         usart_data_receive(USART2);
+ 1000              		.loc 1 254 9
+ 1001 001a 7148     		ldr	r0, .L47
+ 1002 001c FFF7FEFF 		bl	usart_data_receive
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         len = debug_usart_rx_dma_cnt - dma_transfer_number_get(DMA0, DMA_CH1);  
+ 1003              		.loc 1 256 38
+ 1004 0020 704B     		ldr	r3, .L47+4
+ 1005 0022 1C88     		ldrh	r4, [r3]
+ 1006              		.loc 1 256 40
+ 1007 0024 0121     		movs	r1, #1
+ 1008 0026 7048     		ldr	r0, .L47+8
+ 1009 0028 FFF7FEFF 		bl	dma_transfer_number_get
+ 1010 002c 0346     		mov	r3, r0
+ 1011              		.loc 1 256 38
+ 1012 002e 9BB2     		uxth	r3, r3
+ 1013              		.loc 1 256 13
+ 1014 0030 E31A     		subs	r3, r4, r3
+ 1015 0032 FB80     		strh	r3, [r7, #6]	@ movhi
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         debug_usart_rx_buff_head += len;
+ 1016              		.loc 1 257 34
+ 1017 0034 6D4B     		ldr	r3, .L47+12
+ 1018 0036 1A88     		ldrh	r2, [r3]
+ 1019 0038 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 1020 003a 1344     		add	r3, r3, r2
+ 1021 003c 9AB2     		uxth	r2, r3
+ 1022 003e 6B4B     		ldr	r3, .L47+12
+ 1023 0040 1A80     		strh	r2, [r3]	@ movhi
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         debug_usart_rx_buff_tail_last = debug_usart_rx_buff_tail;
+ 1024              		.loc 1 259 39
+ 1025 0042 6B4B     		ldr	r3, .L47+16
+ 1026 0044 1A88     		ldrh	r2, [r3]
+ 1027 0046 6B4B     		ldr	r3, .L47+20
+ 1028 0048 1A80     		strh	r2, [r3]	@ movhi
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         if(debug_usart_rx_buff_head >= debug_usart_rx_buff_tail_last)   
+ 1029              		.loc 1 261 37
+ 1030 004a 684B     		ldr	r3, .L47+12
+ 1031 004c 1A88     		ldrh	r2, [r3]
+ 1032 004e 694B     		ldr	r3, .L47+20
+ 1033 0050 1B88     		ldrh	r3, [r3]
+ 1034              		.loc 1 261 11
+ 1035 0052 9A42     		cmp	r2, r3
+ 1036 0054 07D3     		bcc	.L39
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         {
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_dma_cnt = DEBUG_USART_RX_BUFF_SIZE - debug_usart_rx_buff_head;
+ 1037              		.loc 1 263 63
+ 1038 0056 654B     		ldr	r3, .L47+12
+ 1039 0058 1B88     		ldrh	r3, [r3]
+ 1040 005a C3F50073 		rsb	r3, r3, #512
+ 1041 005e 9AB2     		uxth	r2, r3
+ 1042              		.loc 1 263 36
+ 1043 0060 604B     		ldr	r3, .L47+4
+ 1044 0062 1A80     		strh	r2, [r3]	@ movhi
+ 1045 0064 0DE0     		b	.L40
+ 1046              	.L39:
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         }
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         else if(debug_usart_rx_buff_head < debug_usart_rx_buff_tail_last)
+ 1047              		.loc 1 265 42
+ 1048 0066 614B     		ldr	r3, .L47+12
+ 1049 0068 1A88     		ldrh	r2, [r3]
+ 1050 006a 624B     		ldr	r3, .L47+20
+ 1051 006c 1B88     		ldrh	r3, [r3]
+ 1052              		.loc 1 265 16
+ 1053 006e 9A42     		cmp	r2, r3
+ 1054 0070 07D2     		bcs	.L40
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         {
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_dma_cnt = debug_usart_rx_buff_tail_last - debug_usart_rx_buff_head;
+ 1055              		.loc 1 267 68
+ 1056 0072 604B     		ldr	r3, .L47+20
+ 1057 0074 1A88     		ldrh	r2, [r3]
+ 1058 0076 5D4B     		ldr	r3, .L47+12
+ 1059 0078 1B88     		ldrh	r3, [r3]
+ 1060 007a D31A     		subs	r3, r2, r3
+ 1061 007c 9AB2     		uxth	r2, r3
+ 1062              		.loc 1 267 36
+ 1063 007e 594B     		ldr	r3, .L47+4
+ 1064 0080 1A80     		strh	r2, [r3]	@ movhi
+ 1065              	.L40:
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         }
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         if(debug_usart_rx_dma_cnt > DEBUG_USART_RX_DMA_BUFFER_SIZE)
+ 1066              		.loc 1 270 35
+ 1067 0082 584B     		ldr	r3, .L47+4
+ 1068 0084 1B88     		ldrh	r3, [r3]
+ 1069              		.loc 1 270 11
+ 1070 0086 402B     		cmp	r3, #64
+ 1071 0088 02D9     		bls	.L41
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         {
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             debug_usart_rx_dma_cnt = DEBUG_USART_RX_DMA_BUFFER_SIZE;
+ 1072              		.loc 1 272 36
+ 1073 008a 564B     		ldr	r3, .L47+4
+ 1074 008c 4022     		movs	r2, #64
+ 1075 008e 1A80     		strh	r2, [r3]	@ movhi
+ 1076              	.L41:
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         }
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** 
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_interrupt_disable(DMA0, DMA_CH1, DMA_CHXCTL_FTFIE);
+ 1077              		.loc 1 275 9
+ 1078 0090 1022     		movs	r2, #16
+ 1079 0092 0121     		movs	r1, #1
+ 1080 0094 5448     		ldr	r0, .L47+8
+ 1081 0096 FFF7FEFF 		bl	dma_interrupt_disable
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_channel_disable(DMA0, DMA_CH1);
+ 1082              		.loc 1 276 9
+ 1083 009a 0121     		movs	r1, #1
+ 1084 009c 5248     		ldr	r0, .L47+8
+ 1085 009e FFF7FEFF 		bl	dma_channel_disable
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         DMA_CHM0ADDR(DMA0, DMA_CH1) = (uint32_t)&debug_usart_rx_buf[debug_usart_rx_buff_head];
+ 1086              		.loc 1 277 68
+ 1087 00a2 524B     		ldr	r3, .L47+12
+ 1088 00a4 1B88     		ldrh	r3, [r3]
+ 1089 00a6 1A46     		mov	r2, r3
+ 1090              		.loc 1 277 49
+ 1091 00a8 534B     		ldr	r3, .L47+24
+ 1092 00aa 1A44     		add	r2, r2, r3
+ 1093              		.loc 1 277 9
+ 1094 00ac 534B     		ldr	r3, .L47+28
+ 1095              		.loc 1 277 37
+ 1096 00ae 1A60     		str	r2, [r3]
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         DMA_CHCNT(DMA0, DMA_CH1) = debug_usart_rx_dma_cnt;
+ 1097              		.loc 1 278 34
+ 1098 00b0 4C4B     		ldr	r3, .L47+4
+ 1099 00b2 1A88     		ldrh	r2, [r3]
+ 1100              		.loc 1 278 9
+ 1101 00b4 524B     		ldr	r3, .L47+32
+ 1102              		.loc 1 278 34
+ 1103 00b6 1A60     		str	r2, [r3]
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_interrupt_flag_clear(DMA0, DMA_CH1, DMA_INTC_FTFIFC | DMA_INTC_HTFIFC);
+ 1104              		.loc 1 280 9
+ 1105 00b8 3022     		movs	r2, #48
+ 1106 00ba 0121     		movs	r1, #1
+ 1107 00bc 4A48     		ldr	r0, .L47+8
+ 1108 00be FFF7FEFF 		bl	dma_interrupt_flag_clear
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_channel_enable(DMA0, DMA_CH1);
+ 1109              		.loc 1 281 9
+ 1110 00c2 0121     		movs	r1, #1
+ 1111 00c4 4848     		ldr	r0, .L47+8
+ 1112 00c6 FFF7FEFF 		bl	dma_channel_enable
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         dma_interrupt_enable(DMA0, DMA_CH1, DMA_CHXCTL_FTFIE);
+ 1113              		.loc 1 282 9
+ 1114 00ca 1022     		movs	r2, #16
+ 1115 00cc 0121     		movs	r1, #1
+ 1116 00ce 4648     		ldr	r0, .L47+8
+ 1117 00d0 FFF7FEFF 		bl	dma_interrupt_enable
+ 1118              	.L38:
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     if(usart_interrupt_flag_get(USART2, USART_INT_TBEIE) == SET)
+ 1119              		.loc 1 286 8
+ 1120 00d4 40F20731 		movw	r1, #775
+ 1121 00d8 4148     		ldr	r0, .L47
+ 1122 00da FFF7FEFF 		bl	usart_interrupt_flag_get
+ 1123 00de 0346     		mov	r3, r0
+ 1124              		.loc 1 286 7
+ 1125 00e0 012B     		cmp	r3, #1
+ 1126 00e2 6AD1     		bne	.L42
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         if(debug_usart_tx_buff_head > debug_usart_tx_buff_tail)       
+ 1127              		.loc 1 288 37
+ 1128 00e4 474B     		ldr	r3, .L47+36
+ 1129 00e6 1A88     		ldrh	r2, [r3]
+ 1130 00e8 474B     		ldr	r3, .L47+40
+ 1131 00ea 1B88     		ldrh	r3, [r3]
+ 1132              		.loc 1 288 11
+ 1133 00ec 9A42     		cmp	r2, r3
+ 1134 00ee 31D9     		bls	.L43
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         {
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             if(is_debug_usart_dma_trans_completed == TRUE)
+ 1135              		.loc 1 291 51
+ 1136 00f0 464B     		ldr	r3, .L47+44
+ 1137 00f2 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1138              		.loc 1 291 15
+ 1139 00f4 012B     		cmp	r3, #1
+ 1140 00f6 5CD1     		bne	.L44
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             {
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 is_debug_usart_dma_trans_completed = FALSE;
+ 1141              		.loc 1 293 52
+ 1142 00f8 444B     		ldr	r3, .L47+44
+ 1143 00fa 0022     		movs	r2, #0
+ 1144 00fc 1A70     		strb	r2, [r3]
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_interrupt_disable(DMA0, DMA_CH3, DMA_CHXCTL_FTFIE);
+ 1145              		.loc 1 295 17
+ 1146 00fe 1022     		movs	r2, #16
+ 1147 0100 0321     		movs	r1, #3
+ 1148 0102 3948     		ldr	r0, .L47+8
+ 1149 0104 FFF7FEFF 		bl	dma_interrupt_disable
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_channel_disable(DMA0, DMA_CH3);
+ 1150              		.loc 1 296 17
+ 1151 0108 0321     		movs	r1, #3
+ 1152 010a 3748     		ldr	r0, .L47+8
+ 1153 010c FFF7FEFF 		bl	dma_channel_disable
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 DMA_CHM0ADDR(DMA0, DMA_CH3) = (uint32_t)&debug_usart_tx_buf[debug_usart_tx_buff_tai
+ 1154              		.loc 1 297 76
+ 1155 0110 3D4B     		ldr	r3, .L47+40
+ 1156 0112 1B88     		ldrh	r3, [r3]
+ 1157 0114 1A46     		mov	r2, r3
+ 1158              		.loc 1 297 57
+ 1159 0116 3E4B     		ldr	r3, .L47+48
+ 1160 0118 1A44     		add	r2, r2, r3
+ 1161              		.loc 1 297 17
+ 1162 011a 3E4B     		ldr	r3, .L47+52
+ 1163              		.loc 1 297 45
+ 1164 011c 1A60     		str	r2, [r3]
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 DMA_CHCNT(DMA0, DMA_CH3) = debug_usart_tx_buff_head - debug_usart_tx_buff_tail;
+ 1165              		.loc 1 298 69
+ 1166 011e 394B     		ldr	r3, .L47+36
+ 1167 0120 1B88     		ldrh	r3, [r3]
+ 1168 0122 1A46     		mov	r2, r3
+ 1169 0124 384B     		ldr	r3, .L47+40
+ 1170 0126 1B88     		ldrh	r3, [r3]
+ 1171 0128 D21A     		subs	r2, r2, r3
+ 1172              		.loc 1 298 17
+ 1173 012a 3B4B     		ldr	r3, .L47+56
+ 1174              		.loc 1 298 42
+ 1175 012c 1A60     		str	r2, [r3]
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_interrupt_flag_clear(DMA0, DMA_CH3, DMA_INTC_FTFIFC | DMA_INTC_HTFIFC);
+ 1176              		.loc 1 300 17
+ 1177 012e 3022     		movs	r2, #48
+ 1178 0130 0321     		movs	r1, #3
+ 1179 0132 2D48     		ldr	r0, .L47+8
+ 1180 0134 FFF7FEFF 		bl	dma_interrupt_flag_clear
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_channel_enable(DMA0, DMA_CH3);
+ 1181              		.loc 1 301 17
+ 1182 0138 0321     		movs	r1, #3
+ 1183 013a 2B48     		ldr	r0, .L47+8
+ 1184 013c FFF7FEFF 		bl	dma_channel_enable
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_interrupt_enable(DMA0, DMA_CH3, DMA_CHXCTL_FTFIE);
+ 1185              		.loc 1 302 17
+ 1186 0140 1022     		movs	r2, #16
+ 1187 0142 0321     		movs	r1, #3
+ 1188 0144 2848     		ldr	r0, .L47+8
+ 1189 0146 FFF7FEFF 		bl	dma_interrupt_enable
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 debug_usart_tx_buff_tail = debug_usart_tx_buff_head;
+ 1190              		.loc 1 304 42
+ 1191 014a 2E4B     		ldr	r3, .L47+36
+ 1192 014c 1A88     		ldrh	r2, [r3]
+ 1193 014e 2E4B     		ldr	r3, .L47+40
+ 1194 0150 1A80     		strh	r2, [r3]	@ movhi
+ 1195 0152 2EE0     		b	.L44
+ 1196              	.L43:
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             }
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         }
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         else if(debug_usart_tx_buff_head < debug_usart_tx_buff_tail)
+ 1197              		.loc 1 307 42
+ 1198 0154 2B4B     		ldr	r3, .L47+36
+ 1199 0156 1A88     		ldrh	r2, [r3]
+ 1200 0158 2B4B     		ldr	r3, .L47+40
+ 1201 015a 1B88     		ldrh	r3, [r3]
+ 1202              		.loc 1 307 16
+ 1203 015c 9A42     		cmp	r2, r3
+ 1204 015e 28D2     		bcs	.L44
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         {
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             if(is_debug_usart_dma_trans_completed == TRUE)
+ 1205              		.loc 1 310 51
+ 1206 0160 2A4B     		ldr	r3, .L47+44
+ 1207 0162 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 1208              		.loc 1 310 15
+ 1209 0164 012B     		cmp	r3, #1
+ 1210 0166 24D1     		bne	.L44
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             {
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 is_debug_usart_dma_trans_completed = FALSE;
+ 1211              		.loc 1 312 52
+ 1212 0168 284B     		ldr	r3, .L47+44
+ 1213 016a 0022     		movs	r2, #0
+ 1214 016c 1A70     		strb	r2, [r3]
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_channel_disable(DMA0, DMA_CH3);
+ 1215              		.loc 1 314 17
+ 1216 016e 0321     		movs	r1, #3
+ 1217 0170 1D48     		ldr	r0, .L47+8
+ 1218 0172 FFF7FEFF 		bl	dma_channel_disable
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 DMA_CHM0ADDR(DMA0, DMA_CH3) = (uint32_t)&debug_usart_tx_buf[debug_usart_tx_buff_tai
+ 1219              		.loc 1 315 76
+ 1220 0176 244B     		ldr	r3, .L47+40
+ 1221 0178 1B88     		ldrh	r3, [r3]
+ 1222 017a 1A46     		mov	r2, r3
+ 1223              		.loc 1 315 57
+ 1224 017c 244B     		ldr	r3, .L47+48
+ 1225 017e 1A44     		add	r2, r2, r3
+ 1226              		.loc 1 315 17
+ 1227 0180 244B     		ldr	r3, .L47+52
+ 1228              		.loc 1 315 45
+ 1229 0182 1A60     		str	r2, [r3]
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 DMA_CHCNT(DMA0, DMA_CH3) = DEBUG_USART_TX_BUFF_SIZE - debug_usart_tx_buff_tail;
+ 1230              		.loc 1 316 69
+ 1231 0184 204B     		ldr	r3, .L47+40
+ 1232 0186 1B88     		ldrh	r3, [r3]
+ 1233 0188 C3F58062 		rsb	r2, r3, #1024
+ 1234              		.loc 1 316 17
+ 1235 018c 224B     		ldr	r3, .L47+56
+ 1236              		.loc 1 316 42
+ 1237 018e 1A60     		str	r2, [r3]
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_interrupt_flag_clear(DMA0, DMA_CH3, DMA_INTC_FTFIFC | DMA_INTC_HTFIFC);
+ 1238              		.loc 1 318 17
+ 1239 0190 3022     		movs	r2, #48
+ 1240 0192 0321     		movs	r1, #3
+ 1241 0194 1448     		ldr	r0, .L47+8
+ 1242 0196 FFF7FEFF 		bl	dma_interrupt_flag_clear
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_channel_enable(DMA0, DMA_CH3);
+ 1243              		.loc 1 319 17
+ 1244 019a 0321     		movs	r1, #3
+ 1245 019c 1248     		ldr	r0, .L47+8
+ 1246 019e FFF7FEFF 		bl	dma_channel_enable
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 dma_interrupt_enable(DMA0, DMA_CH3, DMA_CHXCTL_FTFIE);
+ 1247              		.loc 1 320 17
+ 1248 01a2 1022     		movs	r2, #16
+ 1249 01a4 0321     		movs	r1, #3
+ 1250 01a6 1048     		ldr	r0, .L47+8
+ 1251 01a8 FFF7FEFF 		bl	dma_interrupt_enable
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****                 debug_usart_tx_buff_tail = 0;
+ 1252              		.loc 1 322 42
+ 1253 01ac 164B     		ldr	r3, .L47+40
+ 1254 01ae 0022     		movs	r2, #0
+ 1255 01b0 1A80     		strh	r2, [r3]	@ movhi
+ 1256              	.L44:
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****             }
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         }
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         usart_interrupt_disable(USART2, USART_INTEN_TBEIE);
+ 1257              		.loc 1 325 9
+ 1258 01b2 1A49     		ldr	r1, .L47+60
+ 1259 01b4 0A48     		ldr	r0, .L47
+ 1260 01b6 FFF7FEFF 		bl	usart_interrupt_disable
+ 1261              	.L42:
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     if(usart_flag_get(USART2, USART_FLAG_ORERR) == SET)
+ 1262              		.loc 1 329 8
+ 1263 01ba 0321     		movs	r1, #3
+ 1264 01bc 0848     		ldr	r0, .L47
+ 1265 01be FFF7FEFF 		bl	usart_flag_get
+ 1266 01c2 0346     		mov	r3, r0
+ 1267              		.loc 1 329 7
+ 1268 01c4 012B     		cmp	r3, #1
+ 1269 01c6 06D1     		bne	.L46
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     {
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         usart_data_receive(USART2);
+ 1270              		.loc 1 331 9
+ 1271 01c8 0548     		ldr	r0, .L47
+ 1272 01ca FFF7FEFF 		bl	usart_data_receive
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****         usart_flag_clear(USART2, USART_FLAG_ORERR);
+ 1273              		.loc 1 332 9
+ 1274 01ce 0321     		movs	r1, #3
+ 1275 01d0 0348     		ldr	r0, .L47
+ 1276 01d2 FFF7FEFF 		bl	usart_flag_clear
+ 1277              	.L46:
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c ****     }
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp\usart.c **** }
+ 1278              		.loc 1 334 1
+ 1279 01d6 00BF     		nop
+ 1280 01d8 0C37     		adds	r7, r7, #12
+ 1281              		.cfi_def_cfa_offset 12
+ 1282 01da BD46     		mov	sp, r7
+ 1283              		.cfi_def_cfa_register 13
+ 1284              		@ sp needed
+ 1285 01dc 90BD     		pop	{r4, r7, pc}
+ 1286              	.L48:
+ 1287 01de 00BF     		.align	2
+ 1288              	.L47:
+ 1289 01e0 00480040 		.word	1073760256
+ 1290 01e4 00000000 		.word	debug_usart_rx_dma_cnt
+ 1291 01e8 00600240 		.word	1073897472
+ 1292 01ec 00000000 		.word	debug_usart_rx_buff_head
+ 1293 01f0 00000000 		.word	debug_usart_rx_buff_tail
+ 1294 01f4 00000000 		.word	debug_usart_rx_buff_tail_last
+ 1295 01f8 00000000 		.word	debug_usart_rx_buf
+ 1296 01fc 34600240 		.word	1073897524
+ 1297 0200 2C600240 		.word	1073897516
+ 1298 0204 00000000 		.word	debug_usart_tx_buff_head
+ 1299 0208 00000000 		.word	debug_usart_tx_buff_tail
+ 1300 020c 00000000 		.word	is_debug_usart_dma_trans_completed
+ 1301 0210 00000000 		.word	debug_usart_tx_buf
+ 1302 0214 64600240 		.word	1073897572
+ 1303 0218 5C600240 		.word	1073897564
+ 1304 021c 80000010 		.word	268435584
+ 1305              		.cfi_endproc
+ 1306              	.LFE163:
+ 1308              		.text
+ 1309              	.Letext0:
+ 1310              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1311              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1312              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1313              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1314              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1315              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1316              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1317              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1318              		.file 10 "../../CMSIS/gd32f4xx.h"
+ 1319              		.file 11 "../../CMSIS/DSP/Include/core_cm4.h"
+ 1320              		.file 12 "../../CMSIS/system_gd32f4xx.h"
+ 1321              		.file 13 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+ 1322              		.file 14 "../../Libraries/FWLIB/inc/gd32f4xx_dma.h"
+ 1323              		.file 15 "../../Libraries/FWLIB/inc/gd32f4xx_usart.h"
+ 1324              		.file 16 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 1325              		.file 17 "../../Dawn/DawnLib/dawn_lib.h"
+ 1326              		.file 18 "../../Dawn/DawnBsp/timebase.h"
+ 1327              		.file 19 "../../Dawn/DawnCom/unpack.h"
+ 1328              		.file 20 "../../Dawn/DawnDevice/icm206xx.h"
+ 1329              		.file 21 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 1330              		.file 22 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 1331              		.file 23 "../../Dawn/DawnMain/dawn_function.h"
+ 1332              		.file 24 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 usart.c
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:18     .data.is_debug_usart_dma_trans_completed:00000000 is_debug_usart_dma_trans_completed
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:21     .bss.debug_usart_rx_buf:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:24     .bss.debug_usart_rx_buf:00000000 debug_usart_rx_buf
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:27     .bss.debug_usart_tx_buf:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:30     .bss.debug_usart_tx_buf:00000000 debug_usart_tx_buf
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:33     .bss.debug_usart_rx_buff_head:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:36     .bss.debug_usart_rx_buff_head:00000000 debug_usart_rx_buff_head
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:39     .bss.debug_usart_rx_buff_tail:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:42     .bss.debug_usart_rx_buff_tail:00000000 debug_usart_rx_buff_tail
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:45     .bss.debug_usart_rx_buff_tail_last:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:48     .bss.debug_usart_rx_buff_tail_last:00000000 debug_usart_rx_buff_tail_last
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:51     .bss.debug_usart_rx_dma_cnt:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:54     .bss.debug_usart_rx_dma_cnt:00000000 debug_usart_rx_dma_cnt
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:57     .bss.debug_usart_tx_buff_head:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:60     .bss.debug_usart_tx_buff_head:00000000 debug_usart_tx_buff_head
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:63     .bss.debug_usart_tx_buff_tail:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:66     .bss.debug_usart_tx_buff_tail:00000000 debug_usart_tx_buff_tail
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:69     .text.DebugUsartInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:77     .text.DebugUsartInit:00000000 DebugUsartInit
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:348    .text.DebugUsartInit:000001f4 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:360    .text.debug_usart_trans_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:367    .text.debug_usart_trans_enable:00000000 debug_usart_trans_enable
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:396    .text.debug_usart_trans_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:403    .text.debug_usart_put_byte:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:410    .text.debug_usart_put_byte:00000000 debug_usart_put_byte
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:513    .text.debug_usart_put_byte:0000008c $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:519    .text.debug_usart_get_byte:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:526    .text.debug_usart_get_byte:00000000 debug_usart_get_byte
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:626    .text.debug_usart_get_byte:00000080 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:633    .text.debug_usart_rx_buff_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:640    .text.debug_usart_rx_buff_reset:00000000 debug_usart_rx_buff_reset
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:715    .text.debug_usart_rx_buff_reset:00000064 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:727    .text.DMA0_Channel1_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:734    .text.DMA0_Channel1_IRQHandler:00000000 DMA0_Channel1_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:903    .text.DMA0_Channel1_IRQHandler:000000f8 $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:915    .text.DMA0_Channel3_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:922    .text.DMA0_Channel3_IRQHandler:00000000 DMA0_Channel3_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:961    .text.DMA0_Channel3_IRQHandler:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:967    .text.USART2_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:974    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\cc61aWg0.s:1289   .text.USART2_IRQHandler:000001e0 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+UNDEFINED SYMBOLS
+rcu_periph_clock_enable
+gpio_af_set
+gpio_mode_set
+gpio_output_options_set
+usart_deinit
+usart_baudrate_set
+usart_word_length_set
+usart_stop_bit_set
+usart_parity_config
+usart_hardware_flow_rts_config
+usart_hardware_flow_cts_config
+usart_receive_config
+usart_transmit_config
+nvic_irq_enable
+usart_dma_receive_config
+usart_dma_transmit_config
+usart_flag_clear
+usart_interrupt_enable
+dma_deinit
+dma_single_data_mode_init
+dma_channel_subperipheral_select
+dma_channel_enable
+dma_channel_disable
+dma_interrupt_flag_clear
+dma_interrupt_enable
+usart_enable
+memcpy
+dma_interrupt_disable
+dma_interrupt_flag_get
+usart_interrupt_flag_get
+usart_data_receive
+dma_transfer_number_get
+usart_interrupt_disable
+usart_flag_get

@@ -1,0 +1,1637 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_ctc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.ctc_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	ctc_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	ctc_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_ctc.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \file  gd32f4xx_ctc.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief CTC driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** #include "gd32f4xx_ctc.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** #define CTC_FLAG_MASK            ((uint32_t)0x00000700U)
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      reset CTC clock trim controller
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_deinit(void)
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+  27              		.loc 1 23 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     /* reset CTC */
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     rcu_periph_reset_enable(RCU_CTCRST);
+  37              		.loc 1 25 5
+  38 0004 43F61B00 		movw	r0, #14363
+  39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     rcu_periph_reset_disable(RCU_CTCRST);
+  40              		.loc 1 26 5
+  41 000c 43F61B00 		movw	r0, #14363
+  42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+  43              		.loc 1 27 1
+  44 0014 00BF     		nop
+  45 0016 80BD     		pop	{r7, pc}
+  46              		.cfi_endproc
+  47              	.LFE123:
+  49              		.section	.text.ctc_irc48m_trim_value_config,"ax",%progbits
+  50              		.align	1
+  51              		.global	ctc_irc48m_trim_value_config
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	ctc_irc48m_trim_value_config:
+  58              	.LFB124:
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      configure the IRC48M trim value
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_trim_value: 8-bit IRC48M trim value
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_irc48m_trim_value_config(uint8_t ctc_trim_value)
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+  59              		.loc 1 36 1
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 8
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 80B4     		push	{r7}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 7, -4
+  67 0002 83B0     		sub	sp, sp, #12
+  68              		.cfi_def_cfa_offset 16
+  69 0004 00AF     		add	r7, sp, #0
+  70              		.cfi_def_cfa_register 7
+  71 0006 0346     		mov	r3, r0
+  72 0008 FB71     		strb	r3, [r7, #7]
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     /* clear TRIMVALUE bits */
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 &= (~(uint32_t)CTC_CTL0_TRIMVALUE);
+  73              		.loc 1 38 14
+  74 000a 094B     		ldr	r3, .L3
+  75 000c 1B68     		ldr	r3, [r3]
+  76 000e 084A     		ldr	r2, .L3
+  77 0010 23F47C53 		bic	r3, r3, #16128
+  78 0014 1360     		str	r3, [r2]
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     /* set TRIMVALUE bits */
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 |= ((uint32_t)ctc_trim_value << 8);
+  79              		.loc 1 40 14
+  80 0016 064B     		ldr	r3, .L3
+  81 0018 1A68     		ldr	r2, [r3]
+  82              		.loc 1 40 18
+  83 001a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  84              		.loc 1 40 43
+  85 001c 1B02     		lsls	r3, r3, #8
+  86              		.loc 1 40 14
+  87 001e 0449     		ldr	r1, .L3
+  88 0020 1343     		orrs	r3, r3, r2
+  89 0022 0B60     		str	r3, [r1]
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+  90              		.loc 1 41 1
+  91 0024 00BF     		nop
+  92 0026 0C37     		adds	r7, r7, #12
+  93              		.cfi_def_cfa_offset 4
+  94 0028 BD46     		mov	sp, r7
+  95              		.cfi_def_cfa_register 13
+  96              		@ sp needed
+  97 002a 80BC     		pop	{r7}
+  98              		.cfi_restore 7
+  99              		.cfi_def_cfa_offset 0
+ 100 002c 7047     		bx	lr
+ 101              	.L4:
+ 102 002e 00BF     		.align	2
+ 103              	.L3:
+ 104 0030 006C0040 		.word	1073769472
+ 105              		.cfi_endproc
+ 106              	.LFE124:
+ 108              		.section	.text.ctc_software_refsource_pulse_generate,"ax",%progbits
+ 109              		.align	1
+ 110              		.global	ctc_software_refsource_pulse_generate
+ 111              		.syntax unified
+ 112              		.thumb
+ 113              		.thumb_func
+ 114              		.fpu softvfp
+ 116              	ctc_software_refsource_pulse_generate:
+ 117              	.LFB125:
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      generate software reference source sync pulse
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  none
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_software_refsource_pulse_generate(void)
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 118              		.loc 1 50 1
+ 119              		.cfi_startproc
+ 120              		@ args = 0, pretend = 0, frame = 0
+ 121              		@ frame_needed = 1, uses_anonymous_args = 0
+ 122              		@ link register save eliminated.
+ 123 0000 80B4     		push	{r7}
+ 124              		.cfi_def_cfa_offset 4
+ 125              		.cfi_offset 7, -4
+ 126 0002 00AF     		add	r7, sp, #0
+ 127              		.cfi_def_cfa_register 7
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 |= (uint32_t)CTC_CTL0_SWREFPUL;
+ 128              		.loc 1 51 14
+ 129 0004 044B     		ldr	r3, .L6
+ 130 0006 1B68     		ldr	r3, [r3]
+ 131 0008 034A     		ldr	r2, .L6
+ 132 000a 43F08003 		orr	r3, r3, #128
+ 133 000e 1360     		str	r3, [r2]
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 134              		.loc 1 52 1
+ 135 0010 00BF     		nop
+ 136 0012 BD46     		mov	sp, r7
+ 137              		.cfi_def_cfa_register 13
+ 138              		@ sp needed
+ 139 0014 80BC     		pop	{r7}
+ 140              		.cfi_restore 7
+ 141              		.cfi_def_cfa_offset 0
+ 142 0016 7047     		bx	lr
+ 143              	.L7:
+ 144              		.align	2
+ 145              	.L6:
+ 146 0018 006C0040 		.word	1073769472
+ 147              		.cfi_endproc
+ 148              	.LFE125:
+ 150              		.section	.text.ctc_hardware_trim_mode_config,"ax",%progbits
+ 151              		.align	1
+ 152              		.global	ctc_hardware_trim_mode_config
+ 153              		.syntax unified
+ 154              		.thumb
+ 155              		.thumb_func
+ 156              		.fpu softvfp
+ 158              	ctc_hardware_trim_mode_config:
+ 159              	.LFB126:
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      configure hardware automatically trim mode
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_hardmode:
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_HARDWARE_TRIM_MODE_ENABLE: hardware automatically trim mode enable
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_HARDWARE_TRIM_MODE_DISABLE: hardware automatically trim mode disable
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_hardware_trim_mode_config(uint32_t ctc_hardmode)
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 160              		.loc 1 63 1
+ 161              		.cfi_startproc
+ 162              		@ args = 0, pretend = 0, frame = 8
+ 163              		@ frame_needed = 1, uses_anonymous_args = 0
+ 164              		@ link register save eliminated.
+ 165 0000 80B4     		push	{r7}
+ 166              		.cfi_def_cfa_offset 4
+ 167              		.cfi_offset 7, -4
+ 168 0002 83B0     		sub	sp, sp, #12
+ 169              		.cfi_def_cfa_offset 16
+ 170 0004 00AF     		add	r7, sp, #0
+ 171              		.cfi_def_cfa_register 7
+ 172 0006 7860     		str	r0, [r7, #4]
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 &= (uint32_t)(~CTC_CTL0_AUTOTRIM);
+ 173              		.loc 1 64 14
+ 174 0008 084B     		ldr	r3, .L9
+ 175 000a 1B68     		ldr	r3, [r3]
+ 176 000c 074A     		ldr	r2, .L9
+ 177 000e 23F04003 		bic	r3, r3, #64
+ 178 0012 1360     		str	r3, [r2]
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 |= (uint32_t)ctc_hardmode;
+ 179              		.loc 1 65 14
+ 180 0014 054B     		ldr	r3, .L9
+ 181 0016 1A68     		ldr	r2, [r3]
+ 182 0018 0449     		ldr	r1, .L9
+ 183 001a 7B68     		ldr	r3, [r7, #4]
+ 184 001c 1343     		orrs	r3, r3, r2
+ 185 001e 0B60     		str	r3, [r1]
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 186              		.loc 1 66 1
+ 187 0020 00BF     		nop
+ 188 0022 0C37     		adds	r7, r7, #12
+ 189              		.cfi_def_cfa_offset 4
+ 190 0024 BD46     		mov	sp, r7
+ 191              		.cfi_def_cfa_register 13
+ 192              		@ sp needed
+ 193 0026 80BC     		pop	{r7}
+ 194              		.cfi_restore 7
+ 195              		.cfi_def_cfa_offset 0
+ 196 0028 7047     		bx	lr
+ 197              	.L10:
+ 198 002a 00BF     		.align	2
+ 199              	.L9:
+ 200 002c 006C0040 		.word	1073769472
+ 201              		.cfi_endproc
+ 202              	.LFE126:
+ 204              		.section	.text.ctc_counter_enable,"ax",%progbits
+ 205              		.align	1
+ 206              		.global	ctc_counter_enable
+ 207              		.syntax unified
+ 208              		.thumb
+ 209              		.thumb_func
+ 210              		.fpu softvfp
+ 212              	ctc_counter_enable:
+ 213              	.LFB127:
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      enable CTC counter
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  none
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_counter_enable(void)
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 214              		.loc 1 75 1
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 0
+ 217              		@ frame_needed = 1, uses_anonymous_args = 0
+ 218              		@ link register save eliminated.
+ 219 0000 80B4     		push	{r7}
+ 220              		.cfi_def_cfa_offset 4
+ 221              		.cfi_offset 7, -4
+ 222 0002 00AF     		add	r7, sp, #0
+ 223              		.cfi_def_cfa_register 7
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 |= (uint32_t)CTC_CTL0_CNTEN;
+ 224              		.loc 1 76 14
+ 225 0004 044B     		ldr	r3, .L12
+ 226 0006 1B68     		ldr	r3, [r3]
+ 227 0008 034A     		ldr	r2, .L12
+ 228 000a 43F02003 		orr	r3, r3, #32
+ 229 000e 1360     		str	r3, [r2]
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 230              		.loc 1 77 1
+ 231 0010 00BF     		nop
+ 232 0012 BD46     		mov	sp, r7
+ 233              		.cfi_def_cfa_register 13
+ 234              		@ sp needed
+ 235 0014 80BC     		pop	{r7}
+ 236              		.cfi_restore 7
+ 237              		.cfi_def_cfa_offset 0
+ 238 0016 7047     		bx	lr
+ 239              	.L13:
+ 240              		.align	2
+ 241              	.L12:
+ 242 0018 006C0040 		.word	1073769472
+ 243              		.cfi_endproc
+ 244              	.LFE127:
+ 246              		.section	.text.ctc_counter_disable,"ax",%progbits
+ 247              		.align	1
+ 248              		.global	ctc_counter_disable
+ 249              		.syntax unified
+ 250              		.thumb
+ 251              		.thumb_func
+ 252              		.fpu softvfp
+ 254              	ctc_counter_disable:
+ 255              	.LFB128:
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      disable CTC counter
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  none
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_counter_disable(void)
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 256              		.loc 1 86 1
+ 257              		.cfi_startproc
+ 258              		@ args = 0, pretend = 0, frame = 0
+ 259              		@ frame_needed = 1, uses_anonymous_args = 0
+ 260              		@ link register save eliminated.
+ 261 0000 80B4     		push	{r7}
+ 262              		.cfi_def_cfa_offset 4
+ 263              		.cfi_offset 7, -4
+ 264 0002 00AF     		add	r7, sp, #0
+ 265              		.cfi_def_cfa_register 7
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 &= (uint32_t)(~CTC_CTL0_CNTEN);
+ 266              		.loc 1 87 14
+ 267 0004 044B     		ldr	r3, .L15
+ 268 0006 1B68     		ldr	r3, [r3]
+ 269 0008 034A     		ldr	r2, .L15
+ 270 000a 23F02003 		bic	r3, r3, #32
+ 271 000e 1360     		str	r3, [r2]
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 272              		.loc 1 88 1
+ 273 0010 00BF     		nop
+ 274 0012 BD46     		mov	sp, r7
+ 275              		.cfi_def_cfa_register 13
+ 276              		@ sp needed
+ 277 0014 80BC     		pop	{r7}
+ 278              		.cfi_restore 7
+ 279              		.cfi_def_cfa_offset 0
+ 280 0016 7047     		bx	lr
+ 281              	.L16:
+ 282              		.align	2
+ 283              	.L15:
+ 284 0018 006C0040 		.word	1073769472
+ 285              		.cfi_endproc
+ 286              	.LFE128:
+ 288              		.section	.text.ctc_refsource_polarity_config,"ax",%progbits
+ 289              		.align	1
+ 290              		.global	ctc_refsource_polarity_config
+ 291              		.syntax unified
+ 292              		.thumb
+ 293              		.thumb_func
+ 294              		.fpu softvfp
+ 296              	ctc_refsource_polarity_config:
+ 297              	.LFB129:
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      configure reference signal source polarity
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_polarity:
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_POLARITY_FALLING: reference signal source polarity is falling edge
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_POLARITY_RISING: reference signal source polarity is rising edge
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_refsource_polarity_config(uint32_t ctc_polarity)
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 298              		.loc 1 99 1
+ 299              		.cfi_startproc
+ 300              		@ args = 0, pretend = 0, frame = 8
+ 301              		@ frame_needed = 1, uses_anonymous_args = 0
+ 302              		@ link register save eliminated.
+ 303 0000 80B4     		push	{r7}
+ 304              		.cfi_def_cfa_offset 4
+ 305              		.cfi_offset 7, -4
+ 306 0002 83B0     		sub	sp, sp, #12
+ 307              		.cfi_def_cfa_offset 16
+ 308 0004 00AF     		add	r7, sp, #0
+ 309              		.cfi_def_cfa_register 7
+ 310 0006 7860     		str	r0, [r7, #4]
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 &= (uint32_t)(~CTC_CTL1_REFPOL);
+ 311              		.loc 1 100 14
+ 312 0008 084B     		ldr	r3, .L18
+ 313 000a 1B68     		ldr	r3, [r3]
+ 314 000c 074A     		ldr	r2, .L18
+ 315 000e 23F00043 		bic	r3, r3, #-2147483648
+ 316 0012 1360     		str	r3, [r2]
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 |= (uint32_t)ctc_polarity;
+ 317              		.loc 1 101 14
+ 318 0014 054B     		ldr	r3, .L18
+ 319 0016 1A68     		ldr	r2, [r3]
+ 320 0018 0449     		ldr	r1, .L18
+ 321 001a 7B68     		ldr	r3, [r7, #4]
+ 322 001c 1343     		orrs	r3, r3, r2
+ 323 001e 0B60     		str	r3, [r1]
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 324              		.loc 1 102 1
+ 325 0020 00BF     		nop
+ 326 0022 0C37     		adds	r7, r7, #12
+ 327              		.cfi_def_cfa_offset 4
+ 328 0024 BD46     		mov	sp, r7
+ 329              		.cfi_def_cfa_register 13
+ 330              		@ sp needed
+ 331 0026 80BC     		pop	{r7}
+ 332              		.cfi_restore 7
+ 333              		.cfi_def_cfa_offset 0
+ 334 0028 7047     		bx	lr
+ 335              	.L19:
+ 336 002a 00BF     		.align	2
+ 337              	.L18:
+ 338 002c 046C0040 		.word	1073769476
+ 339              		.cfi_endproc
+ 340              	.LFE129:
+ 342              		.section	.text.ctc_usbsof_signal_select,"ax",%progbits
+ 343              		.align	1
+ 344              		.global	ctc_usbsof_signal_select
+ 345              		.syntax unified
+ 346              		.thumb
+ 347              		.thumb_func
+ 348              		.fpu softvfp
+ 350              	ctc_usbsof_signal_select:
+ 351              	.LFB130:
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      select USBFS or USBHS SOF signal
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_usbsof:
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_USBSOFSEL_USBHS: USBHS SOF signal is selected
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_USBSOFSEL_USBFS: USBFS SOF signal is selected
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_usbsof_signal_select(uint32_t ctc_usbsof)
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 352              		.loc 1 113 1
+ 353              		.cfi_startproc
+ 354              		@ args = 0, pretend = 0, frame = 8
+ 355              		@ frame_needed = 1, uses_anonymous_args = 0
+ 356              		@ link register save eliminated.
+ 357 0000 80B4     		push	{r7}
+ 358              		.cfi_def_cfa_offset 4
+ 359              		.cfi_offset 7, -4
+ 360 0002 83B0     		sub	sp, sp, #12
+ 361              		.cfi_def_cfa_offset 16
+ 362 0004 00AF     		add	r7, sp, #0
+ 363              		.cfi_def_cfa_register 7
+ 364 0006 7860     		str	r0, [r7, #4]
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 &= (uint32_t)(~CTC_CTL1_USBSOFSEL);
+ 365              		.loc 1 114 14
+ 366 0008 084B     		ldr	r3, .L21
+ 367 000a 1B68     		ldr	r3, [r3]
+ 368 000c 074A     		ldr	r2, .L21
+ 369 000e 23F08043 		bic	r3, r3, #1073741824
+ 370 0012 1360     		str	r3, [r2]
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 |= (uint32_t)ctc_usbsof;
+ 371              		.loc 1 115 14
+ 372 0014 054B     		ldr	r3, .L21
+ 373 0016 1A68     		ldr	r2, [r3]
+ 374 0018 0449     		ldr	r1, .L21
+ 375 001a 7B68     		ldr	r3, [r7, #4]
+ 376 001c 1343     		orrs	r3, r3, r2
+ 377 001e 0B60     		str	r3, [r1]
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 378              		.loc 1 116 1
+ 379 0020 00BF     		nop
+ 380 0022 0C37     		adds	r7, r7, #12
+ 381              		.cfi_def_cfa_offset 4
+ 382 0024 BD46     		mov	sp, r7
+ 383              		.cfi_def_cfa_register 13
+ 384              		@ sp needed
+ 385 0026 80BC     		pop	{r7}
+ 386              		.cfi_restore 7
+ 387              		.cfi_def_cfa_offset 0
+ 388 0028 7047     		bx	lr
+ 389              	.L22:
+ 390 002a 00BF     		.align	2
+ 391              	.L21:
+ 392 002c 046C0040 		.word	1073769476
+ 393              		.cfi_endproc
+ 394              	.LFE130:
+ 396              		.section	.text.ctc_refsource_signal_select,"ax",%progbits
+ 397              		.align	1
+ 398              		.global	ctc_refsource_signal_select
+ 399              		.syntax unified
+ 400              		.thumb
+ 401              		.thumb_func
+ 402              		.fpu softvfp
+ 404              	ctc_refsource_signal_select:
+ 405              	.LFB131:
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      select reference signal source
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_refs:
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_GPIO: GPIO is selected
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_LXTAL: LXTAL is clock selected
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_USBSOF: USBSOF is selected
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_refsource_signal_select(uint32_t ctc_refs)
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 406              		.loc 1 128 1
+ 407              		.cfi_startproc
+ 408              		@ args = 0, pretend = 0, frame = 8
+ 409              		@ frame_needed = 1, uses_anonymous_args = 0
+ 410              		@ link register save eliminated.
+ 411 0000 80B4     		push	{r7}
+ 412              		.cfi_def_cfa_offset 4
+ 413              		.cfi_offset 7, -4
+ 414 0002 83B0     		sub	sp, sp, #12
+ 415              		.cfi_def_cfa_offset 16
+ 416 0004 00AF     		add	r7, sp, #0
+ 417              		.cfi_def_cfa_register 7
+ 418 0006 7860     		str	r0, [r7, #4]
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 &= (uint32_t)(~CTC_CTL1_REFSEL);
+ 419              		.loc 1 129 14
+ 420 0008 084B     		ldr	r3, .L24
+ 421 000a 1B68     		ldr	r3, [r3]
+ 422 000c 074A     		ldr	r2, .L24
+ 423 000e 23F04053 		bic	r3, r3, #805306368
+ 424 0012 1360     		str	r3, [r2]
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 |= (uint32_t)ctc_refs;
+ 425              		.loc 1 130 14
+ 426 0014 054B     		ldr	r3, .L24
+ 427 0016 1A68     		ldr	r2, [r3]
+ 428 0018 0449     		ldr	r1, .L24
+ 429 001a 7B68     		ldr	r3, [r7, #4]
+ 430 001c 1343     		orrs	r3, r3, r2
+ 431 001e 0B60     		str	r3, [r1]
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 432              		.loc 1 131 1
+ 433 0020 00BF     		nop
+ 434 0022 0C37     		adds	r7, r7, #12
+ 435              		.cfi_def_cfa_offset 4
+ 436 0024 BD46     		mov	sp, r7
+ 437              		.cfi_def_cfa_register 13
+ 438              		@ sp needed
+ 439 0026 80BC     		pop	{r7}
+ 440              		.cfi_restore 7
+ 441              		.cfi_def_cfa_offset 0
+ 442 0028 7047     		bx	lr
+ 443              	.L25:
+ 444 002a 00BF     		.align	2
+ 445              	.L24:
+ 446 002c 046C0040 		.word	1073769476
+ 447              		.cfi_endproc
+ 448              	.LFE131:
+ 450              		.section	.text.ctc_refsource_prescaler_config,"ax",%progbits
+ 451              		.align	1
+ 452              		.global	ctc_refsource_prescaler_config
+ 453              		.syntax unified
+ 454              		.thumb
+ 455              		.thumb_func
+ 456              		.fpu softvfp
+ 458              	ctc_refsource_prescaler_config:
+ 459              	.LFB132:
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      configure reference signal source prescaler
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_prescaler:
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_PSC_OFF: reference signal not divided
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_PSC_DIV2: reference signal divided by 2
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_PSC_DIV4: reference signal divided by 4
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_PSC_DIV8: reference signal divided by 8
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_PSC_DIV16: reference signal divided by 16
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_PSC_DIV32: reference signal divided by 32
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_PSC_DIV64: reference signal divided by 64
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_REFSOURCE_PSC_DIV128: reference signal divided by 128
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_refsource_prescaler_config(uint32_t ctc_prescaler)
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 460              		.loc 1 148 1
+ 461              		.cfi_startproc
+ 462              		@ args = 0, pretend = 0, frame = 8
+ 463              		@ frame_needed = 1, uses_anonymous_args = 0
+ 464              		@ link register save eliminated.
+ 465 0000 80B4     		push	{r7}
+ 466              		.cfi_def_cfa_offset 4
+ 467              		.cfi_offset 7, -4
+ 468 0002 83B0     		sub	sp, sp, #12
+ 469              		.cfi_def_cfa_offset 16
+ 470 0004 00AF     		add	r7, sp, #0
+ 471              		.cfi_def_cfa_register 7
+ 472 0006 7860     		str	r0, [r7, #4]
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 &= (uint32_t)(~CTC_CTL1_REFPSC);
+ 473              		.loc 1 149 14
+ 474 0008 084B     		ldr	r3, .L27
+ 475 000a 1B68     		ldr	r3, [r3]
+ 476 000c 074A     		ldr	r2, .L27
+ 477 000e 23F0E063 		bic	r3, r3, #117440512
+ 478 0012 1360     		str	r3, [r2]
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 |= (uint32_t)ctc_prescaler;
+ 479              		.loc 1 150 14
+ 480 0014 054B     		ldr	r3, .L27
+ 481 0016 1A68     		ldr	r2, [r3]
+ 482 0018 0449     		ldr	r1, .L27
+ 483 001a 7B68     		ldr	r3, [r7, #4]
+ 484 001c 1343     		orrs	r3, r3, r2
+ 485 001e 0B60     		str	r3, [r1]
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 486              		.loc 1 151 1
+ 487 0020 00BF     		nop
+ 488 0022 0C37     		adds	r7, r7, #12
+ 489              		.cfi_def_cfa_offset 4
+ 490 0024 BD46     		mov	sp, r7
+ 491              		.cfi_def_cfa_register 13
+ 492              		@ sp needed
+ 493 0026 80BC     		pop	{r7}
+ 494              		.cfi_restore 7
+ 495              		.cfi_def_cfa_offset 0
+ 496 0028 7047     		bx	lr
+ 497              	.L28:
+ 498 002a 00BF     		.align	2
+ 499              	.L27:
+ 500 002c 046C0040 		.word	1073769476
+ 501              		.cfi_endproc
+ 502              	.LFE132:
+ 504              		.section	.text.ctc_clock_limit_value_config,"ax",%progbits
+ 505              		.align	1
+ 506              		.global	ctc_clock_limit_value_config
+ 507              		.syntax unified
+ 508              		.thumb
+ 509              		.thumb_func
+ 510              		.fpu softvfp
+ 512              	ctc_clock_limit_value_config:
+ 513              	.LFB133:
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      configure clock trim base limit value
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_limit_value: 8-bit clock trim base limit value
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_clock_limit_value_config(uint8_t ctc_limit_value)
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 514              		.loc 1 160 1
+ 515              		.cfi_startproc
+ 516              		@ args = 0, pretend = 0, frame = 8
+ 517              		@ frame_needed = 1, uses_anonymous_args = 0
+ 518              		@ link register save eliminated.
+ 519 0000 80B4     		push	{r7}
+ 520              		.cfi_def_cfa_offset 4
+ 521              		.cfi_offset 7, -4
+ 522 0002 83B0     		sub	sp, sp, #12
+ 523              		.cfi_def_cfa_offset 16
+ 524 0004 00AF     		add	r7, sp, #0
+ 525              		.cfi_def_cfa_register 7
+ 526 0006 0346     		mov	r3, r0
+ 527 0008 FB71     		strb	r3, [r7, #7]
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 &= (uint32_t)(~CTC_CTL1_CKLIM);
+ 528              		.loc 1 161 14
+ 529 000a 094B     		ldr	r3, .L30
+ 530 000c 1B68     		ldr	r3, [r3]
+ 531 000e 084A     		ldr	r2, .L30
+ 532 0010 23F47F03 		bic	r3, r3, #16711680
+ 533 0014 1360     		str	r3, [r2]
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 |= (uint32_t)((uint32_t)ctc_limit_value << 16);
+ 534              		.loc 1 162 14
+ 535 0016 064B     		ldr	r3, .L30
+ 536 0018 1A68     		ldr	r2, [r3]
+ 537              		.loc 1 162 28
+ 538 001a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 539              		.loc 1 162 17
+ 540 001c 1B04     		lsls	r3, r3, #16
+ 541              		.loc 1 162 14
+ 542 001e 0449     		ldr	r1, .L30
+ 543 0020 1343     		orrs	r3, r3, r2
+ 544 0022 0B60     		str	r3, [r1]
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 545              		.loc 1 163 1
+ 546 0024 00BF     		nop
+ 547 0026 0C37     		adds	r7, r7, #12
+ 548              		.cfi_def_cfa_offset 4
+ 549 0028 BD46     		mov	sp, r7
+ 550              		.cfi_def_cfa_register 13
+ 551              		@ sp needed
+ 552 002a 80BC     		pop	{r7}
+ 553              		.cfi_restore 7
+ 554              		.cfi_def_cfa_offset 0
+ 555 002c 7047     		bx	lr
+ 556              	.L31:
+ 557 002e 00BF     		.align	2
+ 558              	.L30:
+ 559 0030 046C0040 		.word	1073769476
+ 560              		.cfi_endproc
+ 561              	.LFE133:
+ 563              		.section	.text.ctc_counter_reload_value_config,"ax",%progbits
+ 564              		.align	1
+ 565              		.global	ctc_counter_reload_value_config
+ 566              		.syntax unified
+ 567              		.thumb
+ 568              		.thumb_func
+ 569              		.fpu softvfp
+ 571              	ctc_counter_reload_value_config:
+ 572              	.LFB134:
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      configure CTC counter reload value
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_reload_value: 16-bit CTC counter reload value
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_counter_reload_value_config(uint16_t ctc_reload_value)
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 573              		.loc 1 172 1
+ 574              		.cfi_startproc
+ 575              		@ args = 0, pretend = 0, frame = 8
+ 576              		@ frame_needed = 1, uses_anonymous_args = 0
+ 577              		@ link register save eliminated.
+ 578 0000 80B4     		push	{r7}
+ 579              		.cfi_def_cfa_offset 4
+ 580              		.cfi_offset 7, -4
+ 581 0002 83B0     		sub	sp, sp, #12
+ 582              		.cfi_def_cfa_offset 16
+ 583 0004 00AF     		add	r7, sp, #0
+ 584              		.cfi_def_cfa_register 7
+ 585 0006 0346     		mov	r3, r0
+ 586 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 &= (uint32_t)(~CTC_CTL1_RLVALUE);
+ 587              		.loc 1 173 14
+ 588 000a 084B     		ldr	r3, .L33
+ 589 000c 1B68     		ldr	r3, [r3]
+ 590 000e 074A     		ldr	r2, .L33
+ 591 0010 1B0C     		lsrs	r3, r3, #16
+ 592 0012 1B04     		lsls	r3, r3, #16
+ 593 0014 1360     		str	r3, [r2]
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL1 |= (uint32_t)ctc_reload_value;
+ 594              		.loc 1 174 14
+ 595 0016 054B     		ldr	r3, .L33
+ 596 0018 1A68     		ldr	r2, [r3]
+ 597              		.loc 1 174 17
+ 598 001a FB88     		ldrh	r3, [r7, #6]
+ 599              		.loc 1 174 14
+ 600 001c 0349     		ldr	r1, .L33
+ 601 001e 1343     		orrs	r3, r3, r2
+ 602 0020 0B60     		str	r3, [r1]
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 603              		.loc 1 175 1
+ 604 0022 00BF     		nop
+ 605 0024 0C37     		adds	r7, r7, #12
+ 606              		.cfi_def_cfa_offset 4
+ 607 0026 BD46     		mov	sp, r7
+ 608              		.cfi_def_cfa_register 13
+ 609              		@ sp needed
+ 610 0028 80BC     		pop	{r7}
+ 611              		.cfi_restore 7
+ 612              		.cfi_def_cfa_offset 0
+ 613 002a 7047     		bx	lr
+ 614              	.L34:
+ 615              		.align	2
+ 616              	.L33:
+ 617 002c 046C0040 		.word	1073769476
+ 618              		.cfi_endproc
+ 619              	.LFE134:
+ 621              		.section	.text.ctc_counter_capture_value_read,"ax",%progbits
+ 622              		.align	1
+ 623              		.global	ctc_counter_capture_value_read
+ 624              		.syntax unified
+ 625              		.thumb
+ 626              		.thumb_func
+ 627              		.fpu softvfp
+ 629              	ctc_counter_capture_value_read:
+ 630              	.LFB135:
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      read CTC counter capture value when reference sync pulse occurred
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  none
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     the 16-bit CTC counter capture value
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** uint16_t ctc_counter_capture_value_read(void)
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 631              		.loc 1 184 1
+ 632              		.cfi_startproc
+ 633              		@ args = 0, pretend = 0, frame = 8
+ 634              		@ frame_needed = 1, uses_anonymous_args = 0
+ 635              		@ link register save eliminated.
+ 636 0000 80B4     		push	{r7}
+ 637              		.cfi_def_cfa_offset 4
+ 638              		.cfi_offset 7, -4
+ 639 0002 83B0     		sub	sp, sp, #12
+ 640              		.cfi_def_cfa_offset 16
+ 641 0004 00AF     		add	r7, sp, #0
+ 642              		.cfi_def_cfa_register 7
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     uint16_t capture_value = 0U;
+ 643              		.loc 1 185 14
+ 644 0006 0023     		movs	r3, #0
+ 645 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     capture_value = (uint16_t)((CTC_STAT & CTC_STAT_REFCAP)>> 16);
+ 646              		.loc 1 186 33
+ 647 000a 054B     		ldr	r3, .L37
+ 648 000c 1B68     		ldr	r3, [r3]
+ 649              		.loc 1 186 60
+ 650 000e 1B0C     		lsrs	r3, r3, #16
+ 651              		.loc 1 186 19
+ 652 0010 FB80     		strh	r3, [r7, #6]	@ movhi
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     return (capture_value);
+ 653              		.loc 1 187 12
+ 654 0012 FB88     		ldrh	r3, [r7, #6]
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 655              		.loc 1 188 1
+ 656 0014 1846     		mov	r0, r3
+ 657 0016 0C37     		adds	r7, r7, #12
+ 658              		.cfi_def_cfa_offset 4
+ 659 0018 BD46     		mov	sp, r7
+ 660              		.cfi_def_cfa_register 13
+ 661              		@ sp needed
+ 662 001a 80BC     		pop	{r7}
+ 663              		.cfi_restore 7
+ 664              		.cfi_def_cfa_offset 0
+ 665 001c 7047     		bx	lr
+ 666              	.L38:
+ 667 001e 00BF     		.align	2
+ 668              	.L37:
+ 669 0020 086C0040 		.word	1073769480
+ 670              		.cfi_endproc
+ 671              	.LFE135:
+ 673              		.section	.text.ctc_counter_direction_read,"ax",%progbits
+ 674              		.align	1
+ 675              		.global	ctc_counter_direction_read
+ 676              		.syntax unified
+ 677              		.thumb
+ 678              		.thumb_func
+ 679              		.fpu softvfp
+ 681              	ctc_counter_direction_read:
+ 682              	.LFB136:
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      read CTC trim counter direction when reference sync pulse occurred
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  none
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     FlagStatus: SET or RESET
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        SET: CTC trim counter direction is down-counting
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        RESET: CTC trim counter direction is up-counting
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** FlagStatus ctc_counter_direction_read(void)
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 683              		.loc 1 199 1
+ 684              		.cfi_startproc
+ 685              		@ args = 0, pretend = 0, frame = 0
+ 686              		@ frame_needed = 1, uses_anonymous_args = 0
+ 687              		@ link register save eliminated.
+ 688 0000 80B4     		push	{r7}
+ 689              		.cfi_def_cfa_offset 4
+ 690              		.cfi_offset 7, -4
+ 691 0002 00AF     		add	r7, sp, #0
+ 692              		.cfi_def_cfa_register 7
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     if(RESET != (CTC_STAT & CTC_STAT_REFDIR)){
+ 693              		.loc 1 200 18
+ 694 0004 064B     		ldr	r3, .L42
+ 695 0006 1B68     		ldr	r3, [r3]
+ 696              		.loc 1 200 27
+ 697 0008 03F40043 		and	r3, r3, #32768
+ 698              		.loc 1 200 7
+ 699 000c 002B     		cmp	r3, #0
+ 700 000e 01D0     		beq	.L40
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         return SET;
+ 701              		.loc 1 201 16
+ 702 0010 0123     		movs	r3, #1
+ 703 0012 00E0     		b	.L41
+ 704              	.L40:
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }else{
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         return RESET;
+ 705              		.loc 1 203 16
+ 706 0014 0023     		movs	r3, #0
+ 707              	.L41:
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 708              		.loc 1 205 1
+ 709 0016 1846     		mov	r0, r3
+ 710 0018 BD46     		mov	sp, r7
+ 711              		.cfi_def_cfa_register 13
+ 712              		@ sp needed
+ 713 001a 80BC     		pop	{r7}
+ 714              		.cfi_restore 7
+ 715              		.cfi_def_cfa_offset 0
+ 716 001c 7047     		bx	lr
+ 717              	.L43:
+ 718 001e 00BF     		.align	2
+ 719              	.L42:
+ 720 0020 086C0040 		.word	1073769480
+ 721              		.cfi_endproc
+ 722              	.LFE136:
+ 724              		.section	.text.ctc_counter_reload_value_read,"ax",%progbits
+ 725              		.align	1
+ 726              		.global	ctc_counter_reload_value_read
+ 727              		.syntax unified
+ 728              		.thumb
+ 729              		.thumb_func
+ 730              		.fpu softvfp
+ 732              	ctc_counter_reload_value_read:
+ 733              	.LFB137:
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      read CTC counter reload value
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  none
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     the 16-bit CTC counter reload value
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** uint16_t ctc_counter_reload_value_read(void)
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 734              		.loc 1 214 1
+ 735              		.cfi_startproc
+ 736              		@ args = 0, pretend = 0, frame = 8
+ 737              		@ frame_needed = 1, uses_anonymous_args = 0
+ 738              		@ link register save eliminated.
+ 739 0000 80B4     		push	{r7}
+ 740              		.cfi_def_cfa_offset 4
+ 741              		.cfi_offset 7, -4
+ 742 0002 83B0     		sub	sp, sp, #12
+ 743              		.cfi_def_cfa_offset 16
+ 744 0004 00AF     		add	r7, sp, #0
+ 745              		.cfi_def_cfa_register 7
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     uint16_t reload_value = 0U;
+ 746              		.loc 1 215 14
+ 747 0006 0023     		movs	r3, #0
+ 748 0008 FB80     		strh	r3, [r7, #6]	@ movhi
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     reload_value = (uint16_t)(CTC_CTL1 & CTC_CTL1_RLVALUE);
+ 749              		.loc 1 216 31
+ 750 000a 044B     		ldr	r3, .L46
+ 751 000c 1B68     		ldr	r3, [r3]
+ 752              		.loc 1 216 18
+ 753 000e FB80     		strh	r3, [r7, #6]	@ movhi
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     return (reload_value);
+ 754              		.loc 1 217 12
+ 755 0010 FB88     		ldrh	r3, [r7, #6]
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 756              		.loc 1 218 1
+ 757 0012 1846     		mov	r0, r3
+ 758 0014 0C37     		adds	r7, r7, #12
+ 759              		.cfi_def_cfa_offset 4
+ 760 0016 BD46     		mov	sp, r7
+ 761              		.cfi_def_cfa_register 13
+ 762              		@ sp needed
+ 763 0018 80BC     		pop	{r7}
+ 764              		.cfi_restore 7
+ 765              		.cfi_def_cfa_offset 0
+ 766 001a 7047     		bx	lr
+ 767              	.L47:
+ 768              		.align	2
+ 769              	.L46:
+ 770 001c 046C0040 		.word	1073769476
+ 771              		.cfi_endproc
+ 772              	.LFE137:
+ 774              		.section	.text.ctc_irc48m_trim_value_read,"ax",%progbits
+ 775              		.align	1
+ 776              		.global	ctc_irc48m_trim_value_read
+ 777              		.syntax unified
+ 778              		.thumb
+ 779              		.thumb_func
+ 780              		.fpu softvfp
+ 782              	ctc_irc48m_trim_value_read:
+ 783              	.LFB138:
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      read the IRC48M trim value
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  none
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     the 8-bit IRC48M trim value
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** uint8_t ctc_irc48m_trim_value_read(void)
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 784              		.loc 1 227 1
+ 785              		.cfi_startproc
+ 786              		@ args = 0, pretend = 0, frame = 8
+ 787              		@ frame_needed = 1, uses_anonymous_args = 0
+ 788              		@ link register save eliminated.
+ 789 0000 80B4     		push	{r7}
+ 790              		.cfi_def_cfa_offset 4
+ 791              		.cfi_offset 7, -4
+ 792 0002 83B0     		sub	sp, sp, #12
+ 793              		.cfi_def_cfa_offset 16
+ 794 0004 00AF     		add	r7, sp, #0
+ 795              		.cfi_def_cfa_register 7
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     uint8_t trim_value = 0U;
+ 796              		.loc 1 228 13
+ 797 0006 0023     		movs	r3, #0
+ 798 0008 FB71     		strb	r3, [r7, #7]
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     trim_value = (uint8_t)((CTC_CTL0 & CTC_CTL0_TRIMVALUE) >> 8);
+ 799              		.loc 1 229 29
+ 800 000a 064B     		ldr	r3, .L50
+ 801 000c 1B68     		ldr	r3, [r3]
+ 802              		.loc 1 229 60
+ 803 000e 1B0A     		lsrs	r3, r3, #8
+ 804              		.loc 1 229 18
+ 805 0010 DBB2     		uxtb	r3, r3
+ 806              		.loc 1 229 16
+ 807 0012 03F03F03 		and	r3, r3, #63
+ 808 0016 FB71     		strb	r3, [r7, #7]
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     return (trim_value);
+ 809              		.loc 1 230 12
+ 810 0018 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 811              		.loc 1 231 1
+ 812 001a 1846     		mov	r0, r3
+ 813 001c 0C37     		adds	r7, r7, #12
+ 814              		.cfi_def_cfa_offset 4
+ 815 001e BD46     		mov	sp, r7
+ 816              		.cfi_def_cfa_register 13
+ 817              		@ sp needed
+ 818 0020 80BC     		pop	{r7}
+ 819              		.cfi_restore 7
+ 820              		.cfi_def_cfa_offset 0
+ 821 0022 7047     		bx	lr
+ 822              	.L51:
+ 823              		.align	2
+ 824              	.L50:
+ 825 0024 006C0040 		.word	1073769472
+ 826              		.cfi_endproc
+ 827              	.LFE138:
+ 829              		.section	.text.ctc_interrupt_enable,"ax",%progbits
+ 830              		.align	1
+ 831              		.global	ctc_interrupt_enable
+ 832              		.syntax unified
+ 833              		.thumb
+ 834              		.thumb_func
+ 835              		.fpu softvfp
+ 837              	ctc_interrupt_enable:
+ 838              	.LFB139:
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      enable the CTC interrupt
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_interrupt: CTC interrupt enable
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKOKIE: clock trim OK interrupt enable
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKWARNIE: clock trim warning interrupt enable
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_ERRIE: error interrupt enable
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_EREFIE: expect reference interrupt enable
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_interrupt_enable(uint32_t ctc_interrupt)
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 839              		.loc 1 244 1
+ 840              		.cfi_startproc
+ 841              		@ args = 0, pretend = 0, frame = 8
+ 842              		@ frame_needed = 1, uses_anonymous_args = 0
+ 843              		@ link register save eliminated.
+ 844 0000 80B4     		push	{r7}
+ 845              		.cfi_def_cfa_offset 4
+ 846              		.cfi_offset 7, -4
+ 847 0002 83B0     		sub	sp, sp, #12
+ 848              		.cfi_def_cfa_offset 16
+ 849 0004 00AF     		add	r7, sp, #0
+ 850              		.cfi_def_cfa_register 7
+ 851 0006 7860     		str	r0, [r7, #4]
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 |= (uint32_t)ctc_interrupt; 
+ 852              		.loc 1 245 14
+ 853 0008 054B     		ldr	r3, .L53
+ 854 000a 1A68     		ldr	r2, [r3]
+ 855 000c 0449     		ldr	r1, .L53
+ 856 000e 7B68     		ldr	r3, [r7, #4]
+ 857 0010 1343     		orrs	r3, r3, r2
+ 858 0012 0B60     		str	r3, [r1]
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 859              		.loc 1 246 1
+ 860 0014 00BF     		nop
+ 861 0016 0C37     		adds	r7, r7, #12
+ 862              		.cfi_def_cfa_offset 4
+ 863 0018 BD46     		mov	sp, r7
+ 864              		.cfi_def_cfa_register 13
+ 865              		@ sp needed
+ 866 001a 80BC     		pop	{r7}
+ 867              		.cfi_restore 7
+ 868              		.cfi_def_cfa_offset 0
+ 869 001c 7047     		bx	lr
+ 870              	.L54:
+ 871 001e 00BF     		.align	2
+ 872              	.L53:
+ 873 0020 006C0040 		.word	1073769472
+ 874              		.cfi_endproc
+ 875              	.LFE139:
+ 877              		.section	.text.ctc_interrupt_disable,"ax",%progbits
+ 878              		.align	1
+ 879              		.global	ctc_interrupt_disable
+ 880              		.syntax unified
+ 881              		.thumb
+ 882              		.thumb_func
+ 883              		.fpu softvfp
+ 885              	ctc_interrupt_disable:
+ 886              	.LFB140:
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      disable the CTC interrupt
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_interrupt: CTC interrupt enable source
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKOKIE: clock trim OK interrupt enable
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKWARNIE: clock trim warning interrupt enable
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_ERRIE: error interrupt enable
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_EREFIE: expect reference interrupt enable
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_interrupt_disable(uint32_t ctc_interrupt)
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 887              		.loc 1 259 1
+ 888              		.cfi_startproc
+ 889              		@ args = 0, pretend = 0, frame = 8
+ 890              		@ frame_needed = 1, uses_anonymous_args = 0
+ 891              		@ link register save eliminated.
+ 892 0000 80B4     		push	{r7}
+ 893              		.cfi_def_cfa_offset 4
+ 894              		.cfi_offset 7, -4
+ 895 0002 83B0     		sub	sp, sp, #12
+ 896              		.cfi_def_cfa_offset 16
+ 897 0004 00AF     		add	r7, sp, #0
+ 898              		.cfi_def_cfa_register 7
+ 899 0006 7860     		str	r0, [r7, #4]
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     CTC_CTL0 &= (uint32_t)(~ctc_interrupt); 
+ 900              		.loc 1 260 14
+ 901 0008 054B     		ldr	r3, .L56
+ 902 000a 1A68     		ldr	r2, [r3]
+ 903              		.loc 1 260 28
+ 904 000c 7B68     		ldr	r3, [r7, #4]
+ 905 000e DB43     		mvns	r3, r3
+ 906              		.loc 1 260 14
+ 907 0010 0349     		ldr	r1, .L56
+ 908 0012 1340     		ands	r3, r3, r2
+ 909 0014 0B60     		str	r3, [r1]
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 910              		.loc 1 261 1
+ 911 0016 00BF     		nop
+ 912 0018 0C37     		adds	r7, r7, #12
+ 913              		.cfi_def_cfa_offset 4
+ 914 001a BD46     		mov	sp, r7
+ 915              		.cfi_def_cfa_register 13
+ 916              		@ sp needed
+ 917 001c 80BC     		pop	{r7}
+ 918              		.cfi_restore 7
+ 919              		.cfi_def_cfa_offset 0
+ 920 001e 7047     		bx	lr
+ 921              	.L57:
+ 922              		.align	2
+ 923              	.L56:
+ 924 0020 006C0040 		.word	1073769472
+ 925              		.cfi_endproc
+ 926              	.LFE140:
+ 928              		.section	.text.ctc_interrupt_flag_get,"ax",%progbits
+ 929              		.align	1
+ 930              		.global	ctc_interrupt_flag_get
+ 931              		.syntax unified
+ 932              		.thumb
+ 933              		.thumb_func
+ 934              		.fpu softvfp
+ 936              	ctc_interrupt_flag_get:
+ 937              	.LFB141:
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      get CTC interrupt flag
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_interrupt: the CTC interrupt flag
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKOK: clock trim OK interrupt
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKWARN: clock trim warning interrupt 
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_ERR: error interrupt 
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_EREF: expect reference interrupt
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKERR: clock trim error bit interrupt
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_REFMISS: reference sync pulse miss interrupt 
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_TRIMERR: trim value error interrupt
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     FlagStatus: SET or RESET
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** FlagStatus ctc_interrupt_flag_get(uint32_t ctc_interrupt)
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 938              		.loc 1 277 1
+ 939              		.cfi_startproc
+ 940              		@ args = 0, pretend = 0, frame = 16
+ 941              		@ frame_needed = 1, uses_anonymous_args = 0
+ 942              		@ link register save eliminated.
+ 943 0000 80B4     		push	{r7}
+ 944              		.cfi_def_cfa_offset 4
+ 945              		.cfi_offset 7, -4
+ 946 0002 85B0     		sub	sp, sp, #20
+ 947              		.cfi_def_cfa_offset 24
+ 948 0004 00AF     		add	r7, sp, #0
+ 949              		.cfi_def_cfa_register 7
+ 950 0006 7860     		str	r0, [r7, #4]
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     uint32_t interrupt = 0U, intenable = 0U;
+ 951              		.loc 1 278 14
+ 952 0008 0023     		movs	r3, #0
+ 953 000a BB60     		str	r3, [r7, #8]
+ 954              		.loc 1 278 30
+ 955 000c 0023     		movs	r3, #0
+ 956 000e FB60     		str	r3, [r7, #12]
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     if(ctc_interrupt & CTC_FLAG_MASK){
+ 957              		.loc 1 280 22
+ 958 0010 7B68     		ldr	r3, [r7, #4]
+ 959 0012 03F4E063 		and	r3, r3, #1792
+ 960              		.loc 1 280 7
+ 961 0016 002B     		cmp	r3, #0
+ 962 0018 05D0     		beq	.L59
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         intenable = CTC_CTL0 & CTC_INT_ERRIE;
+ 963              		.loc 1 281 21
+ 964 001a 0F4B     		ldr	r3, .L63
+ 965 001c 1B68     		ldr	r3, [r3]
+ 966              		.loc 1 281 19
+ 967 001e 03F00403 		and	r3, r3, #4
+ 968 0022 FB60     		str	r3, [r7, #12]
+ 969 0024 04E0     		b	.L60
+ 970              	.L59:
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }else{
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         intenable = CTC_CTL0 & ctc_interrupt;
+ 971              		.loc 1 283 21
+ 972 0026 0C4B     		ldr	r3, .L63
+ 973 0028 1B68     		ldr	r3, [r3]
+ 974              		.loc 1 283 19
+ 975 002a 7A68     		ldr	r2, [r7, #4]
+ 976 002c 1340     		ands	r3, r3, r2
+ 977 002e FB60     		str	r3, [r7, #12]
+ 978              	.L60:
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     interrupt = CTC_STAT & ctc_interrupt;
+ 979              		.loc 1 285 17
+ 980 0030 0A4B     		ldr	r3, .L63+4
+ 981 0032 1B68     		ldr	r3, [r3]
+ 982              		.loc 1 285 15
+ 983 0034 7A68     		ldr	r2, [r7, #4]
+ 984 0036 1340     		ands	r3, r3, r2
+ 985 0038 BB60     		str	r3, [r7, #8]
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     if(interrupt && intenable){
+ 986              		.loc 1 287 7
+ 987 003a BB68     		ldr	r3, [r7, #8]
+ 988 003c 002B     		cmp	r3, #0
+ 989 003e 04D0     		beq	.L61
+ 990              		.loc 1 287 18 discriminator 1
+ 991 0040 FB68     		ldr	r3, [r7, #12]
+ 992 0042 002B     		cmp	r3, #0
+ 993 0044 01D0     		beq	.L61
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         return SET;
+ 994              		.loc 1 288 16
+ 995 0046 0123     		movs	r3, #1
+ 996 0048 00E0     		b	.L62
+ 997              	.L61:
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }else{
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         return RESET;
+ 998              		.loc 1 290 16
+ 999 004a 0023     		movs	r3, #0
+ 1000              	.L62:
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 1001              		.loc 1 292 1
+ 1002 004c 1846     		mov	r0, r3
+ 1003 004e 1437     		adds	r7, r7, #20
+ 1004              		.cfi_def_cfa_offset 4
+ 1005 0050 BD46     		mov	sp, r7
+ 1006              		.cfi_def_cfa_register 13
+ 1007              		@ sp needed
+ 1008 0052 80BC     		pop	{r7}
+ 1009              		.cfi_restore 7
+ 1010              		.cfi_def_cfa_offset 0
+ 1011 0054 7047     		bx	lr
+ 1012              	.L64:
+ 1013 0056 00BF     		.align	2
+ 1014              	.L63:
+ 1015 0058 006C0040 		.word	1073769472
+ 1016 005c 086C0040 		.word	1073769480
+ 1017              		.cfi_endproc
+ 1018              	.LFE141:
+ 1020              		.section	.text.ctc_interrupt_flag_clear,"ax",%progbits
+ 1021              		.align	1
+ 1022              		.global	ctc_interrupt_flag_clear
+ 1023              		.syntax unified
+ 1024              		.thumb
+ 1025              		.thumb_func
+ 1026              		.fpu softvfp
+ 1028              	ctc_interrupt_flag_clear:
+ 1029              	.LFB142:
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      clear CTC interrupt flag
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_interrupt: the CTC interrupt flag
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKOK: clock trim OK interrupt
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKWARN: clock trim warning interrupt 
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_ERR: error interrupt 
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_EREF: expect reference interrupt 
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_CKERR: clock trim error bit interrupt
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_REFMISS: reference sync pulse miss interrupt 
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_INT_TRIMERR: trim value error interrupt
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */ 
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_interrupt_flag_clear(uint32_t ctc_interrupt)
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 1030              		.loc 1 308 1
+ 1031              		.cfi_startproc
+ 1032              		@ args = 0, pretend = 0, frame = 8
+ 1033              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1034              		@ link register save eliminated.
+ 1035 0000 80B4     		push	{r7}
+ 1036              		.cfi_def_cfa_offset 4
+ 1037              		.cfi_offset 7, -4
+ 1038 0002 83B0     		sub	sp, sp, #12
+ 1039              		.cfi_def_cfa_offset 16
+ 1040 0004 00AF     		add	r7, sp, #0
+ 1041              		.cfi_def_cfa_register 7
+ 1042 0006 7860     		str	r0, [r7, #4]
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     if(ctc_interrupt & CTC_FLAG_MASK){
+ 1043              		.loc 1 309 22
+ 1044 0008 7B68     		ldr	r3, [r7, #4]
+ 1045 000a 03F4E063 		and	r3, r3, #1792
+ 1046              		.loc 1 309 7
+ 1047 000e 002B     		cmp	r3, #0
+ 1048 0010 06D0     		beq	.L66
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         CTC_INTC |= CTC_INTC_ERRIC;
+ 1049              		.loc 1 310 18
+ 1050 0012 094B     		ldr	r3, .L69
+ 1051 0014 1B68     		ldr	r3, [r3]
+ 1052 0016 084A     		ldr	r2, .L69
+ 1053 0018 43F00403 		orr	r3, r3, #4
+ 1054 001c 1360     		str	r3, [r2]
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }else{
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         CTC_INTC |= ctc_interrupt;
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 1055              		.loc 1 314 1
+ 1056 001e 05E0     		b	.L68
+ 1057              	.L66:
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }
+ 1058              		.loc 1 312 18
+ 1059 0020 054B     		ldr	r3, .L69
+ 1060 0022 1A68     		ldr	r2, [r3]
+ 1061 0024 0449     		ldr	r1, .L69
+ 1062 0026 7B68     		ldr	r3, [r7, #4]
+ 1063 0028 1343     		orrs	r3, r3, r2
+ 1064 002a 0B60     		str	r3, [r1]
+ 1065              	.L68:
+ 1066              		.loc 1 314 1
+ 1067 002c 00BF     		nop
+ 1068 002e 0C37     		adds	r7, r7, #12
+ 1069              		.cfi_def_cfa_offset 4
+ 1070 0030 BD46     		mov	sp, r7
+ 1071              		.cfi_def_cfa_register 13
+ 1072              		@ sp needed
+ 1073 0032 80BC     		pop	{r7}
+ 1074              		.cfi_restore 7
+ 1075              		.cfi_def_cfa_offset 0
+ 1076 0034 7047     		bx	lr
+ 1077              	.L70:
+ 1078 0036 00BF     		.align	2
+ 1079              	.L69:
+ 1080 0038 0C6C0040 		.word	1073769484
+ 1081              		.cfi_endproc
+ 1082              	.LFE142:
+ 1084              		.section	.text.ctc_flag_get,"ax",%progbits
+ 1085              		.align	1
+ 1086              		.global	ctc_flag_get
+ 1087              		.syntax unified
+ 1088              		.thumb
+ 1089              		.thumb_func
+ 1090              		.fpu softvfp
+ 1092              	ctc_flag_get:
+ 1093              	.LFB143:
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      get CTC flag
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_flag: the CTC flag
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_CKOK: clock trim OK flag
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_CKWARN: clock trim warning flag 
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_ERR: error flag 
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_EREF: expect reference flag
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_CKERR: clock trim error bit
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_REFMISS: reference sync pulse miss
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_TRIMERR: trim value error bit
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     FlagStatus: SET or RESET
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** FlagStatus ctc_flag_get(uint32_t ctc_flag)
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 1094              		.loc 1 330 1
+ 1095              		.cfi_startproc
+ 1096              		@ args = 0, pretend = 0, frame = 8
+ 1097              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1098              		@ link register save eliminated.
+ 1099 0000 80B4     		push	{r7}
+ 1100              		.cfi_def_cfa_offset 4
+ 1101              		.cfi_offset 7, -4
+ 1102 0002 83B0     		sub	sp, sp, #12
+ 1103              		.cfi_def_cfa_offset 16
+ 1104 0004 00AF     		add	r7, sp, #0
+ 1105              		.cfi_def_cfa_register 7
+ 1106 0006 7860     		str	r0, [r7, #4]
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     if(RESET != (CTC_STAT & ctc_flag)){
+ 1107              		.loc 1 331 18
+ 1108 0008 064B     		ldr	r3, .L74
+ 1109 000a 1A68     		ldr	r2, [r3]
+ 1110              		.loc 1 331 27
+ 1111 000c 7B68     		ldr	r3, [r7, #4]
+ 1112 000e 1340     		ands	r3, r3, r2
+ 1113              		.loc 1 331 7
+ 1114 0010 002B     		cmp	r3, #0
+ 1115 0012 01D0     		beq	.L72
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         return SET;
+ 1116              		.loc 1 332 16
+ 1117 0014 0123     		movs	r3, #1
+ 1118 0016 00E0     		b	.L73
+ 1119              	.L72:
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }else{
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         return RESET;
+ 1120              		.loc 1 334 16
+ 1121 0018 0023     		movs	r3, #0
+ 1122              	.L73:
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 1123              		.loc 1 336 1
+ 1124 001a 1846     		mov	r0, r3
+ 1125 001c 0C37     		adds	r7, r7, #12
+ 1126              		.cfi_def_cfa_offset 4
+ 1127 001e BD46     		mov	sp, r7
+ 1128              		.cfi_def_cfa_register 13
+ 1129              		@ sp needed
+ 1130 0020 80BC     		pop	{r7}
+ 1131              		.cfi_restore 7
+ 1132              		.cfi_def_cfa_offset 0
+ 1133 0022 7047     		bx	lr
+ 1134              	.L75:
+ 1135              		.align	2
+ 1136              	.L74:
+ 1137 0024 086C0040 		.word	1073769480
+ 1138              		.cfi_endproc
+ 1139              	.LFE143:
+ 1141              		.section	.text.ctc_flag_clear,"ax",%progbits
+ 1142              		.align	1
+ 1143              		.global	ctc_flag_clear
+ 1144              		.syntax unified
+ 1145              		.thumb
+ 1146              		.thumb_func
+ 1147              		.fpu softvfp
+ 1149              	ctc_flag_clear:
+ 1150              	.LFB144:
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** 
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** /*!
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \brief      clear CTC flag
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[in]  ctc_flag: the CTC flag
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_CKOK: clock trim OK flag
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_CKWARN: clock trim warning flag 
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_ERR: error flag 
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_EREF: expect reference flag
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_CKERR: clock trim error bit
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_REFMISS: reference sync pulse miss
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****       \arg        CTC_FLAG_TRIMERR: trim value error bit
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \param[out] none
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     \retval     none
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** */
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** void ctc_flag_clear(uint32_t ctc_flag)
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** {
+ 1151              		.loc 1 352 1
+ 1152              		.cfi_startproc
+ 1153              		@ args = 0, pretend = 0, frame = 8
+ 1154              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1155              		@ link register save eliminated.
+ 1156 0000 80B4     		push	{r7}
+ 1157              		.cfi_def_cfa_offset 4
+ 1158              		.cfi_offset 7, -4
+ 1159 0002 83B0     		sub	sp, sp, #12
+ 1160              		.cfi_def_cfa_offset 16
+ 1161 0004 00AF     		add	r7, sp, #0
+ 1162              		.cfi_def_cfa_register 7
+ 1163 0006 7860     		str	r0, [r7, #4]
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     if(ctc_flag & CTC_FLAG_MASK){
+ 1164              		.loc 1 353 17
+ 1165 0008 7B68     		ldr	r3, [r7, #4]
+ 1166 000a 03F4E063 		and	r3, r3, #1792
+ 1167              		.loc 1 353 7
+ 1168 000e 002B     		cmp	r3, #0
+ 1169 0010 06D0     		beq	.L77
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         CTC_INTC |= CTC_INTC_ERRIC;
+ 1170              		.loc 1 354 18
+ 1171 0012 094B     		ldr	r3, .L80
+ 1172 0014 1B68     		ldr	r3, [r3]
+ 1173 0016 084A     		ldr	r2, .L80
+ 1174 0018 43F00403 		orr	r3, r3, #4
+ 1175 001c 1360     		str	r3, [r2]
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }else{
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****         CTC_INTC |= ctc_flag;
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c **** }
+ 1176              		.loc 1 358 1
+ 1177 001e 05E0     		b	.L79
+ 1178              	.L77:
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ctc.c ****     }
+ 1179              		.loc 1 356 18
+ 1180 0020 054B     		ldr	r3, .L80
+ 1181 0022 1A68     		ldr	r2, [r3]
+ 1182 0024 0449     		ldr	r1, .L80
+ 1183 0026 7B68     		ldr	r3, [r7, #4]
+ 1184 0028 1343     		orrs	r3, r3, r2
+ 1185 002a 0B60     		str	r3, [r1]
+ 1186              	.L79:
+ 1187              		.loc 1 358 1
+ 1188 002c 00BF     		nop
+ 1189 002e 0C37     		adds	r7, r7, #12
+ 1190              		.cfi_def_cfa_offset 4
+ 1191 0030 BD46     		mov	sp, r7
+ 1192              		.cfi_def_cfa_register 13
+ 1193              		@ sp needed
+ 1194 0032 80BC     		pop	{r7}
+ 1195              		.cfi_restore 7
+ 1196              		.cfi_def_cfa_offset 0
+ 1197 0034 7047     		bx	lr
+ 1198              	.L81:
+ 1199 0036 00BF     		.align	2
+ 1200              	.L80:
+ 1201 0038 0C6C0040 		.word	1073769484
+ 1202              		.cfi_endproc
+ 1203              	.LFE144:
+ 1205              		.text
+ 1206              	.Letext0:
+ 1207              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1208              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1209              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 1210              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 1211              		.file 6 "../../CMSIS/gd32f4xx.h"
+ 1212              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_ctc.c
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:16     .text.ctc_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:24     .text.ctc_deinit:00000000 ctc_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:50     .text.ctc_irc48m_trim_value_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:57     .text.ctc_irc48m_trim_value_config:00000000 ctc_irc48m_trim_value_config
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:104    .text.ctc_irc48m_trim_value_config:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:109    .text.ctc_software_refsource_pulse_generate:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:116    .text.ctc_software_refsource_pulse_generate:00000000 ctc_software_refsource_pulse_generate
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:146    .text.ctc_software_refsource_pulse_generate:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:151    .text.ctc_hardware_trim_mode_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:158    .text.ctc_hardware_trim_mode_config:00000000 ctc_hardware_trim_mode_config
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:200    .text.ctc_hardware_trim_mode_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:205    .text.ctc_counter_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:212    .text.ctc_counter_enable:00000000 ctc_counter_enable
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:242    .text.ctc_counter_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:247    .text.ctc_counter_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:254    .text.ctc_counter_disable:00000000 ctc_counter_disable
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:284    .text.ctc_counter_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:289    .text.ctc_refsource_polarity_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:296    .text.ctc_refsource_polarity_config:00000000 ctc_refsource_polarity_config
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:338    .text.ctc_refsource_polarity_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:343    .text.ctc_usbsof_signal_select:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:350    .text.ctc_usbsof_signal_select:00000000 ctc_usbsof_signal_select
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:392    .text.ctc_usbsof_signal_select:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:397    .text.ctc_refsource_signal_select:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:404    .text.ctc_refsource_signal_select:00000000 ctc_refsource_signal_select
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:446    .text.ctc_refsource_signal_select:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:451    .text.ctc_refsource_prescaler_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:458    .text.ctc_refsource_prescaler_config:00000000 ctc_refsource_prescaler_config
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:500    .text.ctc_refsource_prescaler_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:505    .text.ctc_clock_limit_value_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:512    .text.ctc_clock_limit_value_config:00000000 ctc_clock_limit_value_config
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:559    .text.ctc_clock_limit_value_config:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:564    .text.ctc_counter_reload_value_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:571    .text.ctc_counter_reload_value_config:00000000 ctc_counter_reload_value_config
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:617    .text.ctc_counter_reload_value_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:622    .text.ctc_counter_capture_value_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:629    .text.ctc_counter_capture_value_read:00000000 ctc_counter_capture_value_read
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:669    .text.ctc_counter_capture_value_read:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:674    .text.ctc_counter_direction_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:681    .text.ctc_counter_direction_read:00000000 ctc_counter_direction_read
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:720    .text.ctc_counter_direction_read:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:725    .text.ctc_counter_reload_value_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:732    .text.ctc_counter_reload_value_read:00000000 ctc_counter_reload_value_read
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:770    .text.ctc_counter_reload_value_read:0000001c $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:775    .text.ctc_irc48m_trim_value_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:782    .text.ctc_irc48m_trim_value_read:00000000 ctc_irc48m_trim_value_read
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:825    .text.ctc_irc48m_trim_value_read:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:830    .text.ctc_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:837    .text.ctc_interrupt_enable:00000000 ctc_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:873    .text.ctc_interrupt_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:878    .text.ctc_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:885    .text.ctc_interrupt_disable:00000000 ctc_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:924    .text.ctc_interrupt_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:929    .text.ctc_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:936    .text.ctc_interrupt_flag_get:00000000 ctc_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1015   .text.ctc_interrupt_flag_get:00000058 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1021   .text.ctc_interrupt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1028   .text.ctc_interrupt_flag_clear:00000000 ctc_interrupt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1080   .text.ctc_interrupt_flag_clear:00000038 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1085   .text.ctc_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1092   .text.ctc_flag_get:00000000 ctc_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1137   .text.ctc_flag_get:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1142   .text.ctc_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1149   .text.ctc_flag_clear:00000000 ctc_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccGwCFhk.s:1201   .text.ctc_flag_clear:00000038 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_ctc.h.18.f8cdde6d301c4135e36d8cec947272c4
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

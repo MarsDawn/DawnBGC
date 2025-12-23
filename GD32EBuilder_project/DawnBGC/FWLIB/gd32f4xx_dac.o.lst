@@ -1,0 +1,3047 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_dac.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.dac_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	dac_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	dac_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_dac.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \file  gd32f4xx_dac.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief DAC driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** #include "gd32f4xx_dac.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      deinitialize DAC
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+  27              		.loc 1 21 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     rcu_periph_reset_enable(RCU_DACRST);
+  37              		.loc 1 22 5
+  38 0004 40F61D00 		movw	r0, #2077
+  39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     rcu_periph_reset_disable(RCU_DACRST);
+  40              		.loc 1 23 5
+  41 000c 40F61D00 		movw	r0, #2077
+  42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+  43              		.loc 1 24 1
+  44 0014 00BF     		nop
+  45 0016 80BD     		pop	{r7, pc}
+  46              		.cfi_endproc
+  47              	.LFE123:
+  49              		.section	.text.dac_enable,"ax",%progbits
+  50              		.align	1
+  51              		.global	dac_enable
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	dac_enable:
+  58              	.LFB124:
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_enable(uint32_t dac_periph)
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+  59              		.loc 1 34 1
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 8
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 80B4     		push	{r7}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 7, -4
+  67 0002 83B0     		sub	sp, sp, #12
+  68              		.cfi_def_cfa_offset 16
+  69 0004 00AF     		add	r7, sp, #0
+  70              		.cfi_def_cfa_register 7
+  71 0006 7860     		str	r0, [r7, #4]
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+  72              		.loc 1 35 7
+  73 0008 7B68     		ldr	r3, [r7, #4]
+  74 000a 002B     		cmp	r3, #0
+  75 000c 06D1     		bne	.L3
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DEN0;
+  76              		.loc 1 36 17
+  77 000e 094B     		ldr	r3, .L6
+  78 0010 1B68     		ldr	r3, [r3]
+  79 0012 084A     		ldr	r2, .L6
+  80 0014 43F00103 		orr	r3, r3, #1
+  81 0018 1360     		str	r3, [r2]
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DEN1;
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** } 
+  82              		.loc 1 40 1
+  83 001a 05E0     		b	.L5
+  84              	.L3:
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+  85              		.loc 1 38 17
+  86 001c 054B     		ldr	r3, .L6
+  87 001e 1B68     		ldr	r3, [r3]
+  88 0020 044A     		ldr	r2, .L6
+  89 0022 43F48033 		orr	r3, r3, #65536
+  90 0026 1360     		str	r3, [r2]
+  91              	.L5:
+  92              		.loc 1 40 1
+  93 0028 00BF     		nop
+  94 002a 0C37     		adds	r7, r7, #12
+  95              		.cfi_def_cfa_offset 4
+  96 002c BD46     		mov	sp, r7
+  97              		.cfi_def_cfa_register 13
+  98              		@ sp needed
+  99 002e 80BC     		pop	{r7}
+ 100              		.cfi_restore 7
+ 101              		.cfi_def_cfa_offset 0
+ 102 0030 7047     		bx	lr
+ 103              	.L7:
+ 104 0032 00BF     		.align	2
+ 105              	.L6:
+ 106 0034 00740040 		.word	1073771520
+ 107              		.cfi_endproc
+ 108              	.LFE124:
+ 110              		.section	.text.dac_disable,"ax",%progbits
+ 111              		.align	1
+ 112              		.global	dac_disable
+ 113              		.syntax unified
+ 114              		.thumb
+ 115              		.thumb_func
+ 116              		.fpu softvfp
+ 118              	dac_disable:
+ 119              	.LFB125:
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_disable(uint32_t dac_periph)
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 120              		.loc 1 50 1
+ 121              		.cfi_startproc
+ 122              		@ args = 0, pretend = 0, frame = 8
+ 123              		@ frame_needed = 1, uses_anonymous_args = 0
+ 124              		@ link register save eliminated.
+ 125 0000 80B4     		push	{r7}
+ 126              		.cfi_def_cfa_offset 4
+ 127              		.cfi_offset 7, -4
+ 128 0002 83B0     		sub	sp, sp, #12
+ 129              		.cfi_def_cfa_offset 16
+ 130 0004 00AF     		add	r7, sp, #0
+ 131              		.cfi_def_cfa_register 7
+ 132 0006 7860     		str	r0, [r7, #4]
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 133              		.loc 1 51 7
+ 134 0008 7B68     		ldr	r3, [r7, #4]
+ 135 000a 002B     		cmp	r3, #0
+ 136 000c 06D1     		bne	.L9
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DEN0;
+ 137              		.loc 1 52 17
+ 138 000e 094B     		ldr	r3, .L12
+ 139 0010 1B68     		ldr	r3, [r3]
+ 140 0012 084A     		ldr	r2, .L12
+ 141 0014 23F00103 		bic	r3, r3, #1
+ 142 0018 1360     		str	r3, [r2]
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DEN1;
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 143              		.loc 1 56 1
+ 144 001a 05E0     		b	.L11
+ 145              	.L9:
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 146              		.loc 1 54 17
+ 147 001c 054B     		ldr	r3, .L12
+ 148 001e 1B68     		ldr	r3, [r3]
+ 149 0020 044A     		ldr	r2, .L12
+ 150 0022 23F48033 		bic	r3, r3, #65536
+ 151 0026 1360     		str	r3, [r2]
+ 152              	.L11:
+ 153              		.loc 1 56 1
+ 154 0028 00BF     		nop
+ 155 002a 0C37     		adds	r7, r7, #12
+ 156              		.cfi_def_cfa_offset 4
+ 157 002c BD46     		mov	sp, r7
+ 158              		.cfi_def_cfa_register 13
+ 159              		@ sp needed
+ 160 002e 80BC     		pop	{r7}
+ 161              		.cfi_restore 7
+ 162              		.cfi_def_cfa_offset 0
+ 163 0030 7047     		bx	lr
+ 164              	.L13:
+ 165 0032 00BF     		.align	2
+ 166              	.L12:
+ 167 0034 00740040 		.word	1073771520
+ 168              		.cfi_endproc
+ 169              	.LFE125:
+ 171              		.section	.text.dac_dma_enable,"ax",%progbits
+ 172              		.align	1
+ 173              		.global	dac_dma_enable
+ 174              		.syntax unified
+ 175              		.thumb
+ 176              		.thumb_func
+ 177              		.fpu softvfp
+ 179              	dac_dma_enable:
+ 180              	.LFB126:
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC DMA function
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_dma_enable(uint32_t dac_periph)
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 181              		.loc 1 66 1
+ 182              		.cfi_startproc
+ 183              		@ args = 0, pretend = 0, frame = 8
+ 184              		@ frame_needed = 1, uses_anonymous_args = 0
+ 185              		@ link register save eliminated.
+ 186 0000 80B4     		push	{r7}
+ 187              		.cfi_def_cfa_offset 4
+ 188              		.cfi_offset 7, -4
+ 189 0002 83B0     		sub	sp, sp, #12
+ 190              		.cfi_def_cfa_offset 16
+ 191 0004 00AF     		add	r7, sp, #0
+ 192              		.cfi_def_cfa_register 7
+ 193 0006 7860     		str	r0, [r7, #4]
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 194              		.loc 1 67 7
+ 195 0008 7B68     		ldr	r3, [r7, #4]
+ 196 000a 002B     		cmp	r3, #0
+ 197 000c 06D1     		bne	.L15
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DDMAEN0;
+ 198              		.loc 1 68 17
+ 199 000e 094B     		ldr	r3, .L18
+ 200 0010 1B68     		ldr	r3, [r3]
+ 201 0012 084A     		ldr	r2, .L18
+ 202 0014 43F48053 		orr	r3, r3, #4096
+ 203 0018 1360     		str	r3, [r2]
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DDMAEN1;
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 204              		.loc 1 72 1
+ 205 001a 05E0     		b	.L17
+ 206              	.L15:
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 207              		.loc 1 70 17
+ 208 001c 054B     		ldr	r3, .L18
+ 209 001e 1B68     		ldr	r3, [r3]
+ 210 0020 044A     		ldr	r2, .L18
+ 211 0022 43F08053 		orr	r3, r3, #268435456
+ 212 0026 1360     		str	r3, [r2]
+ 213              	.L17:
+ 214              		.loc 1 72 1
+ 215 0028 00BF     		nop
+ 216 002a 0C37     		adds	r7, r7, #12
+ 217              		.cfi_def_cfa_offset 4
+ 218 002c BD46     		mov	sp, r7
+ 219              		.cfi_def_cfa_register 13
+ 220              		@ sp needed
+ 221 002e 80BC     		pop	{r7}
+ 222              		.cfi_restore 7
+ 223              		.cfi_def_cfa_offset 0
+ 224 0030 7047     		bx	lr
+ 225              	.L19:
+ 226 0032 00BF     		.align	2
+ 227              	.L18:
+ 228 0034 00740040 		.word	1073771520
+ 229              		.cfi_endproc
+ 230              	.LFE126:
+ 232              		.section	.text.dac_dma_disable,"ax",%progbits
+ 233              		.align	1
+ 234              		.global	dac_dma_disable
+ 235              		.syntax unified
+ 236              		.thumb
+ 237              		.thumb_func
+ 238              		.fpu softvfp
+ 240              	dac_dma_disable:
+ 241              	.LFB127:
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC DMA function
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_dma_disable(uint32_t dac_periph)
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 242              		.loc 1 82 1
+ 243              		.cfi_startproc
+ 244              		@ args = 0, pretend = 0, frame = 8
+ 245              		@ frame_needed = 1, uses_anonymous_args = 0
+ 246              		@ link register save eliminated.
+ 247 0000 80B4     		push	{r7}
+ 248              		.cfi_def_cfa_offset 4
+ 249              		.cfi_offset 7, -4
+ 250 0002 83B0     		sub	sp, sp, #12
+ 251              		.cfi_def_cfa_offset 16
+ 252 0004 00AF     		add	r7, sp, #0
+ 253              		.cfi_def_cfa_register 7
+ 254 0006 7860     		str	r0, [r7, #4]
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 255              		.loc 1 83 7
+ 256 0008 7B68     		ldr	r3, [r7, #4]
+ 257 000a 002B     		cmp	r3, #0
+ 258 000c 06D1     		bne	.L21
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DDMAEN0;
+ 259              		.loc 1 84 17
+ 260 000e 094B     		ldr	r3, .L24
+ 261 0010 1B68     		ldr	r3, [r3]
+ 262 0012 084A     		ldr	r2, .L24
+ 263 0014 23F48053 		bic	r3, r3, #4096
+ 264 0018 1360     		str	r3, [r2]
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DDMAEN1;
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 265              		.loc 1 88 1
+ 266 001a 05E0     		b	.L23
+ 267              	.L21:
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 268              		.loc 1 86 17
+ 269 001c 054B     		ldr	r3, .L24
+ 270 001e 1B68     		ldr	r3, [r3]
+ 271 0020 044A     		ldr	r2, .L24
+ 272 0022 23F08053 		bic	r3, r3, #268435456
+ 273 0026 1360     		str	r3, [r2]
+ 274              	.L23:
+ 275              		.loc 1 88 1
+ 276 0028 00BF     		nop
+ 277 002a 0C37     		adds	r7, r7, #12
+ 278              		.cfi_def_cfa_offset 4
+ 279 002c BD46     		mov	sp, r7
+ 280              		.cfi_def_cfa_register 13
+ 281              		@ sp needed
+ 282 002e 80BC     		pop	{r7}
+ 283              		.cfi_restore 7
+ 284              		.cfi_def_cfa_offset 0
+ 285 0030 7047     		bx	lr
+ 286              	.L25:
+ 287 0032 00BF     		.align	2
+ 288              	.L24:
+ 289 0034 00740040 		.word	1073771520
+ 290              		.cfi_endproc
+ 291              	.LFE127:
+ 293              		.section	.text.dac_output_buffer_enable,"ax",%progbits
+ 294              		.align	1
+ 295              		.global	dac_output_buffer_enable
+ 296              		.syntax unified
+ 297              		.thumb
+ 298              		.thumb_func
+ 299              		.fpu softvfp
+ 301              	dac_output_buffer_enable:
+ 302              	.LFB128:
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC output buffer
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_output_buffer_enable(uint32_t dac_periph)
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 303              		.loc 1 98 1
+ 304              		.cfi_startproc
+ 305              		@ args = 0, pretend = 0, frame = 8
+ 306              		@ frame_needed = 1, uses_anonymous_args = 0
+ 307              		@ link register save eliminated.
+ 308 0000 80B4     		push	{r7}
+ 309              		.cfi_def_cfa_offset 4
+ 310              		.cfi_offset 7, -4
+ 311 0002 83B0     		sub	sp, sp, #12
+ 312              		.cfi_def_cfa_offset 16
+ 313 0004 00AF     		add	r7, sp, #0
+ 314              		.cfi_def_cfa_register 7
+ 315 0006 7860     		str	r0, [r7, #4]
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 316              		.loc 1 99 7
+ 317 0008 7B68     		ldr	r3, [r7, #4]
+ 318 000a 002B     		cmp	r3, #0
+ 319 000c 06D1     		bne	.L27
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DBOFF0;
+ 320              		.loc 1 100 17
+ 321 000e 094B     		ldr	r3, .L30
+ 322 0010 1B68     		ldr	r3, [r3]
+ 323 0012 084A     		ldr	r2, .L30
+ 324 0014 23F00203 		bic	r3, r3, #2
+ 325 0018 1360     		str	r3, [r2]
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DBOFF1;
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 326              		.loc 1 104 1
+ 327 001a 05E0     		b	.L29
+ 328              	.L27:
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 329              		.loc 1 102 17
+ 330 001c 054B     		ldr	r3, .L30
+ 331 001e 1B68     		ldr	r3, [r3]
+ 332 0020 044A     		ldr	r2, .L30
+ 333 0022 23F40033 		bic	r3, r3, #131072
+ 334 0026 1360     		str	r3, [r2]
+ 335              	.L29:
+ 336              		.loc 1 104 1
+ 337 0028 00BF     		nop
+ 338 002a 0C37     		adds	r7, r7, #12
+ 339              		.cfi_def_cfa_offset 4
+ 340 002c BD46     		mov	sp, r7
+ 341              		.cfi_def_cfa_register 13
+ 342              		@ sp needed
+ 343 002e 80BC     		pop	{r7}
+ 344              		.cfi_restore 7
+ 345              		.cfi_def_cfa_offset 0
+ 346 0030 7047     		bx	lr
+ 347              	.L31:
+ 348 0032 00BF     		.align	2
+ 349              	.L30:
+ 350 0034 00740040 		.word	1073771520
+ 351              		.cfi_endproc
+ 352              	.LFE128:
+ 354              		.section	.text.dac_output_buffer_disable,"ax",%progbits
+ 355              		.align	1
+ 356              		.global	dac_output_buffer_disable
+ 357              		.syntax unified
+ 358              		.thumb
+ 359              		.thumb_func
+ 360              		.fpu softvfp
+ 362              	dac_output_buffer_disable:
+ 363              	.LFB129:
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC output buffer
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_output_buffer_disable(uint32_t dac_periph)
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 364              		.loc 1 114 1
+ 365              		.cfi_startproc
+ 366              		@ args = 0, pretend = 0, frame = 8
+ 367              		@ frame_needed = 1, uses_anonymous_args = 0
+ 368              		@ link register save eliminated.
+ 369 0000 80B4     		push	{r7}
+ 370              		.cfi_def_cfa_offset 4
+ 371              		.cfi_offset 7, -4
+ 372 0002 83B0     		sub	sp, sp, #12
+ 373              		.cfi_def_cfa_offset 16
+ 374 0004 00AF     		add	r7, sp, #0
+ 375              		.cfi_def_cfa_register 7
+ 376 0006 7860     		str	r0, [r7, #4]
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 377              		.loc 1 115 7
+ 378 0008 7B68     		ldr	r3, [r7, #4]
+ 379 000a 002B     		cmp	r3, #0
+ 380 000c 06D1     		bne	.L33
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DBOFF0;
+ 381              		.loc 1 116 17
+ 382 000e 094B     		ldr	r3, .L36
+ 383 0010 1B68     		ldr	r3, [r3]
+ 384 0012 084A     		ldr	r2, .L36
+ 385 0014 43F00203 		orr	r3, r3, #2
+ 386 0018 1360     		str	r3, [r2]
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DBOFF1;
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 387              		.loc 1 120 1
+ 388 001a 05E0     		b	.L35
+ 389              	.L33:
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 390              		.loc 1 118 17
+ 391 001c 054B     		ldr	r3, .L36
+ 392 001e 1B68     		ldr	r3, [r3]
+ 393 0020 044A     		ldr	r2, .L36
+ 394 0022 43F40033 		orr	r3, r3, #131072
+ 395 0026 1360     		str	r3, [r2]
+ 396              	.L35:
+ 397              		.loc 1 120 1
+ 398 0028 00BF     		nop
+ 399 002a 0C37     		adds	r7, r7, #12
+ 400              		.cfi_def_cfa_offset 4
+ 401 002c BD46     		mov	sp, r7
+ 402              		.cfi_def_cfa_register 13
+ 403              		@ sp needed
+ 404 002e 80BC     		pop	{r7}
+ 405              		.cfi_restore 7
+ 406              		.cfi_def_cfa_offset 0
+ 407 0030 7047     		bx	lr
+ 408              	.L37:
+ 409 0032 00BF     		.align	2
+ 410              	.L36:
+ 411 0034 00740040 		.word	1073771520
+ 412              		.cfi_endproc
+ 413              	.LFE129:
+ 415              		.section	.text.dac_trigger_enable,"ax",%progbits
+ 416              		.align	1
+ 417              		.global	dac_trigger_enable
+ 418              		.syntax unified
+ 419              		.thumb
+ 420              		.thumb_func
+ 421              		.fpu softvfp
+ 423              	dac_trigger_enable:
+ 424              	.LFB130:
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC trigger
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_trigger_enable(uint32_t dac_periph)
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 425              		.loc 1 130 1
+ 426              		.cfi_startproc
+ 427              		@ args = 0, pretend = 0, frame = 8
+ 428              		@ frame_needed = 1, uses_anonymous_args = 0
+ 429              		@ link register save eliminated.
+ 430 0000 80B4     		push	{r7}
+ 431              		.cfi_def_cfa_offset 4
+ 432              		.cfi_offset 7, -4
+ 433 0002 83B0     		sub	sp, sp, #12
+ 434              		.cfi_def_cfa_offset 16
+ 435 0004 00AF     		add	r7, sp, #0
+ 436              		.cfi_def_cfa_register 7
+ 437 0006 7860     		str	r0, [r7, #4]
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 438              		.loc 1 131 7
+ 439 0008 7B68     		ldr	r3, [r7, #4]
+ 440 000a 002B     		cmp	r3, #0
+ 441 000c 06D1     		bne	.L39
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DTEN0;
+ 442              		.loc 1 132 17
+ 443 000e 094B     		ldr	r3, .L42
+ 444 0010 1B68     		ldr	r3, [r3]
+ 445 0012 084A     		ldr	r2, .L42
+ 446 0014 43F00403 		orr	r3, r3, #4
+ 447 0018 1360     		str	r3, [r2]
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DTEN1;
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 448              		.loc 1 136 1
+ 449 001a 05E0     		b	.L41
+ 450              	.L39:
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 451              		.loc 1 134 17
+ 452 001c 054B     		ldr	r3, .L42
+ 453 001e 1B68     		ldr	r3, [r3]
+ 454 0020 044A     		ldr	r2, .L42
+ 455 0022 43F48023 		orr	r3, r3, #262144
+ 456 0026 1360     		str	r3, [r2]
+ 457              	.L41:
+ 458              		.loc 1 136 1
+ 459 0028 00BF     		nop
+ 460 002a 0C37     		adds	r7, r7, #12
+ 461              		.cfi_def_cfa_offset 4
+ 462 002c BD46     		mov	sp, r7
+ 463              		.cfi_def_cfa_register 13
+ 464              		@ sp needed
+ 465 002e 80BC     		pop	{r7}
+ 466              		.cfi_restore 7
+ 467              		.cfi_def_cfa_offset 0
+ 468 0030 7047     		bx	lr
+ 469              	.L43:
+ 470 0032 00BF     		.align	2
+ 471              	.L42:
+ 472 0034 00740040 		.word	1073771520
+ 473              		.cfi_endproc
+ 474              	.LFE130:
+ 476              		.section	.text.dac_trigger_disable,"ax",%progbits
+ 477              		.align	1
+ 478              		.global	dac_trigger_disable
+ 479              		.syntax unified
+ 480              		.thumb
+ 481              		.thumb_func
+ 482              		.fpu softvfp
+ 484              	dac_trigger_disable:
+ 485              	.LFB131:
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC trigger
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_trigger_disable(uint32_t dac_periph)
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 486              		.loc 1 146 1
+ 487              		.cfi_startproc
+ 488              		@ args = 0, pretend = 0, frame = 8
+ 489              		@ frame_needed = 1, uses_anonymous_args = 0
+ 490              		@ link register save eliminated.
+ 491 0000 80B4     		push	{r7}
+ 492              		.cfi_def_cfa_offset 4
+ 493              		.cfi_offset 7, -4
+ 494 0002 83B0     		sub	sp, sp, #12
+ 495              		.cfi_def_cfa_offset 16
+ 496 0004 00AF     		add	r7, sp, #0
+ 497              		.cfi_def_cfa_register 7
+ 498 0006 7860     		str	r0, [r7, #4]
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 499              		.loc 1 147 7
+ 500 0008 7B68     		ldr	r3, [r7, #4]
+ 501 000a 002B     		cmp	r3, #0
+ 502 000c 06D1     		bne	.L45
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DTEN0;
+ 503              		.loc 1 148 17
+ 504 000e 094B     		ldr	r3, .L48
+ 505 0010 1B68     		ldr	r3, [r3]
+ 506 0012 084A     		ldr	r2, .L48
+ 507 0014 23F00403 		bic	r3, r3, #4
+ 508 0018 1360     		str	r3, [r2]
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DTEN1;
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 509              		.loc 1 152 1
+ 510 001a 05E0     		b	.L47
+ 511              	.L45:
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 512              		.loc 1 150 17
+ 513 001c 054B     		ldr	r3, .L48
+ 514 001e 1B68     		ldr	r3, [r3]
+ 515 0020 044A     		ldr	r2, .L48
+ 516 0022 23F48023 		bic	r3, r3, #262144
+ 517 0026 1360     		str	r3, [r2]
+ 518              	.L47:
+ 519              		.loc 1 152 1
+ 520 0028 00BF     		nop
+ 521 002a 0C37     		adds	r7, r7, #12
+ 522              		.cfi_def_cfa_offset 4
+ 523 002c BD46     		mov	sp, r7
+ 524              		.cfi_def_cfa_register 13
+ 525              		@ sp needed
+ 526 002e 80BC     		pop	{r7}
+ 527              		.cfi_restore 7
+ 528              		.cfi_def_cfa_offset 0
+ 529 0030 7047     		bx	lr
+ 530              	.L49:
+ 531 0032 00BF     		.align	2
+ 532              	.L48:
+ 533 0034 00740040 		.word	1073771520
+ 534              		.cfi_endproc
+ 535              	.LFE131:
+ 537              		.section	.text.dac_software_trigger_enable,"ax",%progbits
+ 538              		.align	1
+ 539              		.global	dac_software_trigger_enable
+ 540              		.syntax unified
+ 541              		.thumb
+ 542              		.thumb_func
+ 543              		.fpu softvfp
+ 545              	dac_software_trigger_enable:
+ 546              	.LFB132:
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC software trigger
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_software_trigger_enable(uint32_t dac_periph)
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 547              		.loc 1 161 1
+ 548              		.cfi_startproc
+ 549              		@ args = 0, pretend = 0, frame = 8
+ 550              		@ frame_needed = 1, uses_anonymous_args = 0
+ 551              		@ link register save eliminated.
+ 552 0000 80B4     		push	{r7}
+ 553              		.cfi_def_cfa_offset 4
+ 554              		.cfi_offset 7, -4
+ 555 0002 83B0     		sub	sp, sp, #12
+ 556              		.cfi_def_cfa_offset 16
+ 557 0004 00AF     		add	r7, sp, #0
+ 558              		.cfi_def_cfa_register 7
+ 559 0006 7860     		str	r0, [r7, #4]
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 560              		.loc 1 162 7
+ 561 0008 7B68     		ldr	r3, [r7, #4]
+ 562 000a 002B     		cmp	r3, #0
+ 563 000c 06D1     		bne	.L51
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_SWT |= DAC_SWT_SWTR0;
+ 564              		.loc 1 163 17
+ 565 000e 094B     		ldr	r3, .L54
+ 566 0010 1B68     		ldr	r3, [r3]
+ 567 0012 084A     		ldr	r2, .L54
+ 568 0014 43F00103 		orr	r3, r3, #1
+ 569 0018 1360     		str	r3, [r2]
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_SWT |= DAC_SWT_SWTR1;
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 570              		.loc 1 167 1
+ 571 001a 05E0     		b	.L53
+ 572              	.L51:
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 573              		.loc 1 165 17
+ 574 001c 054B     		ldr	r3, .L54
+ 575 001e 1B68     		ldr	r3, [r3]
+ 576 0020 044A     		ldr	r2, .L54
+ 577 0022 43F00203 		orr	r3, r3, #2
+ 578 0026 1360     		str	r3, [r2]
+ 579              	.L53:
+ 580              		.loc 1 167 1
+ 581 0028 00BF     		nop
+ 582 002a 0C37     		adds	r7, r7, #12
+ 583              		.cfi_def_cfa_offset 4
+ 584 002c BD46     		mov	sp, r7
+ 585              		.cfi_def_cfa_register 13
+ 586              		@ sp needed
+ 587 002e 80BC     		pop	{r7}
+ 588              		.cfi_restore 7
+ 589              		.cfi_def_cfa_offset 0
+ 590 0030 7047     		bx	lr
+ 591              	.L55:
+ 592 0032 00BF     		.align	2
+ 593              	.L54:
+ 594 0034 04740040 		.word	1073771524
+ 595              		.cfi_endproc
+ 596              	.LFE132:
+ 598              		.section	.text.dac_software_trigger_disable,"ax",%progbits
+ 599              		.align	1
+ 600              		.global	dac_software_trigger_disable
+ 601              		.syntax unified
+ 602              		.thumb
+ 603              		.thumb_func
+ 604              		.fpu softvfp
+ 606              	dac_software_trigger_disable:
+ 607              	.LFB133:
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC software trigger
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_software_trigger_disable(uint32_t dac_periph)
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 608              		.loc 1 177 1
+ 609              		.cfi_startproc
+ 610              		@ args = 0, pretend = 0, frame = 8
+ 611              		@ frame_needed = 1, uses_anonymous_args = 0
+ 612              		@ link register save eliminated.
+ 613 0000 80B4     		push	{r7}
+ 614              		.cfi_def_cfa_offset 4
+ 615              		.cfi_offset 7, -4
+ 616 0002 83B0     		sub	sp, sp, #12
+ 617              		.cfi_def_cfa_offset 16
+ 618 0004 00AF     		add	r7, sp, #0
+ 619              		.cfi_def_cfa_register 7
+ 620 0006 7860     		str	r0, [r7, #4]
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 621              		.loc 1 178 7
+ 622 0008 7B68     		ldr	r3, [r7, #4]
+ 623 000a 002B     		cmp	r3, #0
+ 624 000c 06D1     		bne	.L57
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_SWT &= ~DAC_SWT_SWTR0;
+ 625              		.loc 1 179 17
+ 626 000e 094B     		ldr	r3, .L60
+ 627 0010 1B68     		ldr	r3, [r3]
+ 628 0012 084A     		ldr	r2, .L60
+ 629 0014 23F00103 		bic	r3, r3, #1
+ 630 0018 1360     		str	r3, [r2]
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_SWT &= ~DAC_SWT_SWTR1;
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 631              		.loc 1 183 1
+ 632 001a 05E0     		b	.L59
+ 633              	.L57:
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 634              		.loc 1 181 17
+ 635 001c 054B     		ldr	r3, .L60
+ 636 001e 1B68     		ldr	r3, [r3]
+ 637 0020 044A     		ldr	r2, .L60
+ 638 0022 23F00203 		bic	r3, r3, #2
+ 639 0026 1360     		str	r3, [r2]
+ 640              	.L59:
+ 641              		.loc 1 183 1
+ 642 0028 00BF     		nop
+ 643 002a 0C37     		adds	r7, r7, #12
+ 644              		.cfi_def_cfa_offset 4
+ 645 002c BD46     		mov	sp, r7
+ 646              		.cfi_def_cfa_register 13
+ 647              		@ sp needed
+ 648 002e 80BC     		pop	{r7}
+ 649              		.cfi_restore 7
+ 650              		.cfi_def_cfa_offset 0
+ 651 0030 7047     		bx	lr
+ 652              	.L61:
+ 653 0032 00BF     		.align	2
+ 654              	.L60:
+ 655 0034 04740040 		.word	1073771524
+ 656              		.cfi_endproc
+ 657              	.LFE133:
+ 659              		.section	.text.dac_interrupt_enable,"ax",%progbits
+ 660              		.align	1
+ 661              		.global	dac_interrupt_enable
+ 662              		.syntax unified
+ 663              		.thumb
+ 664              		.thumb_func
+ 665              		.fpu softvfp
+ 667              	dac_interrupt_enable:
+ 668              	.LFB134:
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC interrupt(DAC0 DMA underrun interrupt)
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_interrupt_enable(uint32_t dac_periph)
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 669              		.loc 1 193 1
+ 670              		.cfi_startproc
+ 671              		@ args = 0, pretend = 0, frame = 8
+ 672              		@ frame_needed = 1, uses_anonymous_args = 0
+ 673              		@ link register save eliminated.
+ 674 0000 80B4     		push	{r7}
+ 675              		.cfi_def_cfa_offset 4
+ 676              		.cfi_offset 7, -4
+ 677 0002 83B0     		sub	sp, sp, #12
+ 678              		.cfi_def_cfa_offset 16
+ 679 0004 00AF     		add	r7, sp, #0
+ 680              		.cfi_def_cfa_register 7
+ 681 0006 7860     		str	r0, [r7, #4]
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 682              		.loc 1 194 7
+ 683 0008 7B68     		ldr	r3, [r7, #4]
+ 684 000a 002B     		cmp	r3, #0
+ 685 000c 06D1     		bne	.L63
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DDUDRIE0;
+ 686              		.loc 1 195 17
+ 687 000e 094B     		ldr	r3, .L66
+ 688 0010 1B68     		ldr	r3, [r3]
+ 689 0012 084A     		ldr	r2, .L66
+ 690 0014 43F40053 		orr	r3, r3, #8192
+ 691 0018 1360     		str	r3, [r2]
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= DAC_CTL_DDUDRIE1;
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 692              		.loc 1 199 1
+ 693 001a 05E0     		b	.L65
+ 694              	.L63:
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 695              		.loc 1 197 17
+ 696 001c 054B     		ldr	r3, .L66
+ 697 001e 1B68     		ldr	r3, [r3]
+ 698 0020 044A     		ldr	r2, .L66
+ 699 0022 43F00053 		orr	r3, r3, #536870912
+ 700 0026 1360     		str	r3, [r2]
+ 701              	.L65:
+ 702              		.loc 1 199 1
+ 703 0028 00BF     		nop
+ 704 002a 0C37     		adds	r7, r7, #12
+ 705              		.cfi_def_cfa_offset 4
+ 706 002c BD46     		mov	sp, r7
+ 707              		.cfi_def_cfa_register 13
+ 708              		@ sp needed
+ 709 002e 80BC     		pop	{r7}
+ 710              		.cfi_restore 7
+ 711              		.cfi_def_cfa_offset 0
+ 712 0030 7047     		bx	lr
+ 713              	.L67:
+ 714 0032 00BF     		.align	2
+ 715              	.L66:
+ 716 0034 00740040 		.word	1073771520
+ 717              		.cfi_endproc
+ 718              	.LFE134:
+ 720              		.section	.text.dac_interrupt_disable,"ax",%progbits
+ 721              		.align	1
+ 722              		.global	dac_interrupt_disable
+ 723              		.syntax unified
+ 724              		.thumb
+ 725              		.thumb_func
+ 726              		.fpu softvfp
+ 728              	dac_interrupt_disable:
+ 729              	.LFB135:
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC interrupt(DAC0 DMA underrun interrupt)
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_interrupt_disable(uint32_t dac_periph)
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 730              		.loc 1 209 1
+ 731              		.cfi_startproc
+ 732              		@ args = 0, pretend = 0, frame = 8
+ 733              		@ frame_needed = 1, uses_anonymous_args = 0
+ 734              		@ link register save eliminated.
+ 735 0000 80B4     		push	{r7}
+ 736              		.cfi_def_cfa_offset 4
+ 737              		.cfi_offset 7, -4
+ 738 0002 83B0     		sub	sp, sp, #12
+ 739              		.cfi_def_cfa_offset 16
+ 740 0004 00AF     		add	r7, sp, #0
+ 741              		.cfi_def_cfa_register 7
+ 742 0006 7860     		str	r0, [r7, #4]
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 743              		.loc 1 210 7
+ 744 0008 7B68     		ldr	r3, [r7, #4]
+ 745 000a 002B     		cmp	r3, #0
+ 746 000c 06D1     		bne	.L69
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DDUDRIE0;
+ 747              		.loc 1 211 17
+ 748 000e 094B     		ldr	r3, .L72
+ 749 0010 1B68     		ldr	r3, [r3]
+ 750 0012 084A     		ldr	r2, .L72
+ 751 0014 23F40053 		bic	r3, r3, #8192
+ 752 0018 1360     		str	r3, [r2]
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DDUDRIE1;
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 753              		.loc 1 215 1
+ 754 001a 05E0     		b	.L71
+ 755              	.L69:
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 756              		.loc 1 213 17
+ 757 001c 054B     		ldr	r3, .L72
+ 758 001e 1B68     		ldr	r3, [r3]
+ 759 0020 044A     		ldr	r2, .L72
+ 760 0022 23F00053 		bic	r3, r3, #536870912
+ 761 0026 1360     		str	r3, [r2]
+ 762              	.L71:
+ 763              		.loc 1 215 1
+ 764 0028 00BF     		nop
+ 765 002a 0C37     		adds	r7, r7, #12
+ 766              		.cfi_def_cfa_offset 4
+ 767 002c BD46     		mov	sp, r7
+ 768              		.cfi_def_cfa_register 13
+ 769              		@ sp needed
+ 770 002e 80BC     		pop	{r7}
+ 771              		.cfi_restore 7
+ 772              		.cfi_def_cfa_offset 0
+ 773 0030 7047     		bx	lr
+ 774              	.L73:
+ 775 0032 00BF     		.align	2
+ 776              	.L72:
+ 777 0034 00740040 		.word	1073771520
+ 778              		.cfi_endproc
+ 779              	.LFE135:
+ 781              		.section	.text.dac_trigger_source_config,"ax",%progbits
+ 782              		.align	1
+ 783              		.global	dac_trigger_source_config
+ 784              		.syntax unified
+ 785              		.thumb
+ 786              		.thumb_func
+ 787              		.fpu softvfp
+ 789              	dac_trigger_source_config:
+ 790              	.LFB136:
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      set DAC trigger source
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x =0,1)
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  triggersource: external triggers of DAC
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIGGER_T1_TRGO: TIMER1 TRGO
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIGGER_T3_TRGO: TIMER3 TRGO
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIGGER_T4_TRGO: TIMER4 TRGO
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIGGER_T5_TRGO: TIMER5 TRGO
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIGGER_T6_TRGO: TIMER6 TRGO
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIGGER_T7_TRGO: TIMER7 TRGO
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIGGER_EXTI_9: EXTI interrupt line9 event
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIGGER_SOFTWARE: software trigger
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_trigger_source_config(uint32_t dac_periph,uint32_t triggersource)
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 791              		.loc 1 234 1
+ 792              		.cfi_startproc
+ 793              		@ args = 0, pretend = 0, frame = 8
+ 794              		@ frame_needed = 1, uses_anonymous_args = 0
+ 795              		@ link register save eliminated.
+ 796 0000 80B4     		push	{r7}
+ 797              		.cfi_def_cfa_offset 4
+ 798              		.cfi_offset 7, -4
+ 799 0002 83B0     		sub	sp, sp, #12
+ 800              		.cfi_def_cfa_offset 16
+ 801 0004 00AF     		add	r7, sp, #0
+ 802              		.cfi_def_cfa_register 7
+ 803 0006 7860     		str	r0, [r7, #4]
+ 804 0008 3960     		str	r1, [r7]
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 805              		.loc 1 235 7
+ 806 000a 7B68     		ldr	r3, [r7, #4]
+ 807 000c 002B     		cmp	r3, #0
+ 808 000e 0CD1     		bne	.L75
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DTSEL0;
+ 809              		.loc 1 236 17
+ 810 0010 0F4B     		ldr	r3, .L78
+ 811 0012 1B68     		ldr	r3, [r3]
+ 812 0014 0E4A     		ldr	r2, .L78
+ 813 0016 23F03803 		bic	r3, r3, #56
+ 814 001a 1360     		str	r3, [r2]
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= triggersource;
+ 815              		.loc 1 237 17
+ 816 001c 0C4B     		ldr	r3, .L78
+ 817 001e 1A68     		ldr	r2, [r3]
+ 818 0020 0B49     		ldr	r1, .L78
+ 819 0022 3B68     		ldr	r3, [r7]
+ 820 0024 1343     		orrs	r3, r3, r2
+ 821 0026 0B60     		str	r3, [r1]
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DTSEL1;
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= (triggersource << 16);
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 822              		.loc 1 242 1
+ 823 0028 0CE0     		b	.L77
+ 824              	.L75:
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= (triggersource << 16);
+ 825              		.loc 1 239 17
+ 826 002a 094B     		ldr	r3, .L78
+ 827 002c 1B68     		ldr	r3, [r3]
+ 828 002e 084A     		ldr	r2, .L78
+ 829 0030 23F46013 		bic	r3, r3, #3670016
+ 830 0034 1360     		str	r3, [r2]
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 831              		.loc 1 240 17
+ 832 0036 064B     		ldr	r3, .L78
+ 833 0038 1A68     		ldr	r2, [r3]
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 834              		.loc 1 240 35
+ 835 003a 3B68     		ldr	r3, [r7]
+ 836 003c 1B04     		lsls	r3, r3, #16
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 837              		.loc 1 240 17
+ 838 003e 0449     		ldr	r1, .L78
+ 839 0040 1343     		orrs	r3, r3, r2
+ 840 0042 0B60     		str	r3, [r1]
+ 841              	.L77:
+ 842              		.loc 1 242 1
+ 843 0044 00BF     		nop
+ 844 0046 0C37     		adds	r7, r7, #12
+ 845              		.cfi_def_cfa_offset 4
+ 846 0048 BD46     		mov	sp, r7
+ 847              		.cfi_def_cfa_register 13
+ 848              		@ sp needed
+ 849 004a 80BC     		pop	{r7}
+ 850              		.cfi_restore 7
+ 851              		.cfi_def_cfa_offset 0
+ 852 004c 7047     		bx	lr
+ 853              	.L79:
+ 854 004e 00BF     		.align	2
+ 855              	.L78:
+ 856 0050 00740040 		.word	1073771520
+ 857              		.cfi_endproc
+ 858              	.LFE136:
+ 860              		.section	.text.dac_wave_mode_config,"ax",%progbits
+ 861              		.align	1
+ 862              		.global	dac_wave_mode_config
+ 863              		.syntax unified
+ 864              		.thumb
+ 865              		.thumb_func
+ 866              		.fpu softvfp
+ 868              	dac_wave_mode_config:
+ 869              	.LFB137:
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      configure DAC wave mode
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  wave_mode
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_DISABLE: wave disable
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_MODE_LFSR: LFSR noise mode
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_MODE_TRIANGLE: triangle noise mode
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_wave_mode_config(uint32_t dac_periph, uint32_t wave_mode)
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 870              		.loc 1 256 1
+ 871              		.cfi_startproc
+ 872              		@ args = 0, pretend = 0, frame = 8
+ 873              		@ frame_needed = 1, uses_anonymous_args = 0
+ 874              		@ link register save eliminated.
+ 875 0000 80B4     		push	{r7}
+ 876              		.cfi_def_cfa_offset 4
+ 877              		.cfi_offset 7, -4
+ 878 0002 83B0     		sub	sp, sp, #12
+ 879              		.cfi_def_cfa_offset 16
+ 880 0004 00AF     		add	r7, sp, #0
+ 881              		.cfi_def_cfa_register 7
+ 882 0006 7860     		str	r0, [r7, #4]
+ 883 0008 3960     		str	r1, [r7]
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 884              		.loc 1 257 7
+ 885 000a 7B68     		ldr	r3, [r7, #4]
+ 886 000c 002B     		cmp	r3, #0
+ 887 000e 0CD1     		bne	.L81
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DWM0;
+ 888              		.loc 1 258 17
+ 889 0010 0F4B     		ldr	r3, .L84
+ 890 0012 1B68     		ldr	r3, [r3]
+ 891 0014 0E4A     		ldr	r2, .L84
+ 892 0016 23F0C003 		bic	r3, r3, #192
+ 893 001a 1360     		str	r3, [r2]
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= wave_mode;
+ 894              		.loc 1 259 17
+ 895 001c 0C4B     		ldr	r3, .L84
+ 896 001e 1A68     		ldr	r2, [r3]
+ 897 0020 0B49     		ldr	r1, .L84
+ 898 0022 3B68     		ldr	r3, [r7]
+ 899 0024 1343     		orrs	r3, r3, r2
+ 900 0026 0B60     		str	r3, [r1]
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DWM1;
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= wave_mode << 16;
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 901              		.loc 1 264 1
+ 902 0028 0CE0     		b	.L83
+ 903              	.L81:
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= wave_mode << 16;
+ 904              		.loc 1 261 17
+ 905 002a 094B     		ldr	r3, .L84
+ 906 002c 1B68     		ldr	r3, [r3]
+ 907 002e 084A     		ldr	r2, .L84
+ 908 0030 23F44003 		bic	r3, r3, #12582912
+ 909 0034 1360     		str	r3, [r2]
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 910              		.loc 1 262 17
+ 911 0036 064B     		ldr	r3, .L84
+ 912 0038 1A68     		ldr	r2, [r3]
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 913              		.loc 1 262 30
+ 914 003a 3B68     		ldr	r3, [r7]
+ 915 003c 1B04     		lsls	r3, r3, #16
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 916              		.loc 1 262 17
+ 917 003e 0449     		ldr	r1, .L84
+ 918 0040 1343     		orrs	r3, r3, r2
+ 919 0042 0B60     		str	r3, [r1]
+ 920              	.L83:
+ 921              		.loc 1 264 1
+ 922 0044 00BF     		nop
+ 923 0046 0C37     		adds	r7, r7, #12
+ 924              		.cfi_def_cfa_offset 4
+ 925 0048 BD46     		mov	sp, r7
+ 926              		.cfi_def_cfa_register 13
+ 927              		@ sp needed
+ 928 004a 80BC     		pop	{r7}
+ 929              		.cfi_restore 7
+ 930              		.cfi_def_cfa_offset 0
+ 931 004c 7047     		bx	lr
+ 932              	.L85:
+ 933 004e 00BF     		.align	2
+ 934              	.L84:
+ 935 0050 00740040 		.word	1073771520
+ 936              		.cfi_endproc
+ 937              	.LFE137:
+ 939              		.section	.text.dac_wave_bit_width_config,"ax",%progbits
+ 940              		.align	1
+ 941              		.global	dac_wave_bit_width_config
+ 942              		.syntax unified
+ 943              		.thumb
+ 944              		.thumb_func
+ 945              		.fpu softvfp
+ 947              	dac_wave_bit_width_config:
+ 948              	.LFB138:
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      configure DAC wave bit width
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  bit_width
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_1: bit width of the wave signal is 1
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_2: bit width of the wave signal is 2
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_3: bit width of the wave signal is 3
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_4: bit width of the wave signal is 4
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_5: bit width of the wave signal is 5
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_6: bit width of the wave signal is 6
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_7: bit width of the wave signal is 7
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_8: bit width of the wave signal is 8
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_9: bit width of the wave signal is 9
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_10: bit width of the wave signal is 10
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_11: bit width of the wave signal is 11
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_WAVE_BIT_WIDTH_12: bit width of the wave signal is 12
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_wave_bit_width_config(uint32_t dac_periph, uint32_t bit_width)
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 949              		.loc 1 287 1
+ 950              		.cfi_startproc
+ 951              		@ args = 0, pretend = 0, frame = 8
+ 952              		@ frame_needed = 1, uses_anonymous_args = 0
+ 953              		@ link register save eliminated.
+ 954 0000 80B4     		push	{r7}
+ 955              		.cfi_def_cfa_offset 4
+ 956              		.cfi_offset 7, -4
+ 957 0002 83B0     		sub	sp, sp, #12
+ 958              		.cfi_def_cfa_offset 16
+ 959 0004 00AF     		add	r7, sp, #0
+ 960              		.cfi_def_cfa_register 7
+ 961 0006 7860     		str	r0, [r7, #4]
+ 962 0008 3960     		str	r1, [r7]
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 963              		.loc 1 288 7
+ 964 000a 7B68     		ldr	r3, [r7, #4]
+ 965 000c 002B     		cmp	r3, #0
+ 966 000e 0CD1     		bne	.L87
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW0;
+ 967              		.loc 1 289 17
+ 968 0010 0F4B     		ldr	r3, .L90
+ 969 0012 1B68     		ldr	r3, [r3]
+ 970 0014 0E4A     		ldr	r2, .L90
+ 971 0016 23F47063 		bic	r3, r3, #3840
+ 972 001a 1360     		str	r3, [r2]
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= bit_width;
+ 973              		.loc 1 290 17
+ 974 001c 0C4B     		ldr	r3, .L90
+ 975 001e 1A68     		ldr	r2, [r3]
+ 976 0020 0B49     		ldr	r1, .L90
+ 977 0022 3B68     		ldr	r3, [r7]
+ 978 0024 1343     		orrs	r3, r3, r2
+ 979 0026 0B60     		str	r3, [r1]
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW1;
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= bit_width << 16;
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 980              		.loc 1 295 1
+ 981 0028 0CE0     		b	.L89
+ 982              	.L87:
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= bit_width << 16;
+ 983              		.loc 1 292 17
+ 984 002a 094B     		ldr	r3, .L90
+ 985 002c 1B68     		ldr	r3, [r3]
+ 986 002e 084A     		ldr	r2, .L90
+ 987 0030 23F07063 		bic	r3, r3, #251658240
+ 988 0034 1360     		str	r3, [r2]
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 989              		.loc 1 293 17
+ 990 0036 064B     		ldr	r3, .L90
+ 991 0038 1A68     		ldr	r2, [r3]
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 992              		.loc 1 293 30
+ 993 003a 3B68     		ldr	r3, [r7]
+ 994 003c 1B04     		lsls	r3, r3, #16
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 995              		.loc 1 293 17
+ 996 003e 0449     		ldr	r1, .L90
+ 997 0040 1343     		orrs	r3, r3, r2
+ 998 0042 0B60     		str	r3, [r1]
+ 999              	.L89:
+ 1000              		.loc 1 295 1
+ 1001 0044 00BF     		nop
+ 1002 0046 0C37     		adds	r7, r7, #12
+ 1003              		.cfi_def_cfa_offset 4
+ 1004 0048 BD46     		mov	sp, r7
+ 1005              		.cfi_def_cfa_register 13
+ 1006              		@ sp needed
+ 1007 004a 80BC     		pop	{r7}
+ 1008              		.cfi_restore 7
+ 1009              		.cfi_def_cfa_offset 0
+ 1010 004c 7047     		bx	lr
+ 1011              	.L91:
+ 1012 004e 00BF     		.align	2
+ 1013              	.L90:
+ 1014 0050 00740040 		.word	1073771520
+ 1015              		.cfi_endproc
+ 1016              	.LFE138:
+ 1018              		.section	.text.dac_lfsr_noise_config,"ax",%progbits
+ 1019              		.align	1
+ 1020              		.global	dac_lfsr_noise_config
+ 1021              		.syntax unified
+ 1022              		.thumb
+ 1023              		.thumb_func
+ 1024              		.fpu softvfp
+ 1026              	dac_lfsr_noise_config:
+ 1027              	.LFB139:
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      configure DAC LFSR noise mode
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  unmask_bits
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BIT0: unmask the LFSR bit0
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS1_0: unmask the LFSR bits[1:0]
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS2_0: unmask the LFSR bits[2:0]
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS3_0: unmask the LFSR bits[3:0]
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS4_0: unmask the LFSR bits[4:0]
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS5_0: unmask the LFSR bits[5:0]
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS6_0: unmask the LFSR bits[6:0]
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS7_0: unmask the LFSR bits[7:0]
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS8_0: unmask the LFSR bits[8:0]
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS9_0: unmask the LFSR bits[9:0]
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS10_0: unmask the LFSR bits[10:0]
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_LFSR_BITS11_0: unmask the LFSR bits[11:0]
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_lfsr_noise_config(uint32_t dac_periph, uint32_t unmask_bits)
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1028              		.loc 1 318 1
+ 1029              		.cfi_startproc
+ 1030              		@ args = 0, pretend = 0, frame = 8
+ 1031              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1032              		@ link register save eliminated.
+ 1033 0000 80B4     		push	{r7}
+ 1034              		.cfi_def_cfa_offset 4
+ 1035              		.cfi_offset 7, -4
+ 1036 0002 83B0     		sub	sp, sp, #12
+ 1037              		.cfi_def_cfa_offset 16
+ 1038 0004 00AF     		add	r7, sp, #0
+ 1039              		.cfi_def_cfa_register 7
+ 1040 0006 7860     		str	r0, [r7, #4]
+ 1041 0008 3960     		str	r1, [r7]
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 1042              		.loc 1 319 7
+ 1043 000a 7B68     		ldr	r3, [r7, #4]
+ 1044 000c 002B     		cmp	r3, #0
+ 1045 000e 0CD1     		bne	.L93
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW0;
+ 1046              		.loc 1 320 17
+ 1047 0010 0F4B     		ldr	r3, .L96
+ 1048 0012 1B68     		ldr	r3, [r3]
+ 1049 0014 0E4A     		ldr	r2, .L96
+ 1050 0016 23F47063 		bic	r3, r3, #3840
+ 1051 001a 1360     		str	r3, [r2]
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= unmask_bits;
+ 1052              		.loc 1 321 17
+ 1053 001c 0C4B     		ldr	r3, .L96
+ 1054 001e 1A68     		ldr	r2, [r3]
+ 1055 0020 0B49     		ldr	r1, .L96
+ 1056 0022 3B68     		ldr	r3, [r7]
+ 1057 0024 1343     		orrs	r3, r3, r2
+ 1058 0026 0B60     		str	r3, [r1]
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW1;
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= unmask_bits << 16;
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1059              		.loc 1 326 1
+ 1060 0028 0CE0     		b	.L95
+ 1061              	.L93:
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= unmask_bits << 16;
+ 1062              		.loc 1 323 17
+ 1063 002a 094B     		ldr	r3, .L96
+ 1064 002c 1B68     		ldr	r3, [r3]
+ 1065 002e 084A     		ldr	r2, .L96
+ 1066 0030 23F07063 		bic	r3, r3, #251658240
+ 1067 0034 1360     		str	r3, [r2]
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 1068              		.loc 1 324 17
+ 1069 0036 064B     		ldr	r3, .L96
+ 1070 0038 1A68     		ldr	r2, [r3]
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 1071              		.loc 1 324 32
+ 1072 003a 3B68     		ldr	r3, [r7]
+ 1073 003c 1B04     		lsls	r3, r3, #16
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 1074              		.loc 1 324 17
+ 1075 003e 0449     		ldr	r1, .L96
+ 1076 0040 1343     		orrs	r3, r3, r2
+ 1077 0042 0B60     		str	r3, [r1]
+ 1078              	.L95:
+ 1079              		.loc 1 326 1
+ 1080 0044 00BF     		nop
+ 1081 0046 0C37     		adds	r7, r7, #12
+ 1082              		.cfi_def_cfa_offset 4
+ 1083 0048 BD46     		mov	sp, r7
+ 1084              		.cfi_def_cfa_register 13
+ 1085              		@ sp needed
+ 1086 004a 80BC     		pop	{r7}
+ 1087              		.cfi_restore 7
+ 1088              		.cfi_def_cfa_offset 0
+ 1089 004c 7047     		bx	lr
+ 1090              	.L97:
+ 1091 004e 00BF     		.align	2
+ 1092              	.L96:
+ 1093 0050 00740040 		.word	1073771520
+ 1094              		.cfi_endproc
+ 1095              	.LFE139:
+ 1097              		.section	.text.dac_triangle_noise_config,"ax",%progbits
+ 1098              		.align	1
+ 1099              		.global	dac_triangle_noise_config
+ 1100              		.syntax unified
+ 1101              		.thumb
+ 1102              		.thumb_func
+ 1103              		.fpu softvfp
+ 1105              	dac_triangle_noise_config:
+ 1106              	.LFB140:
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      configure DAC triangle noise mode
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  amplitude
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_1: triangle amplitude is 1
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_3: triangle amplitude is 3
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_7: triangle amplitude is 7
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_15: triangle amplitude is 15
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_31: triangle amplitude is 31
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_63: triangle amplitude is 63
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_127: triangle amplitude is 127
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_255: triangle amplitude is 255
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_511: triangle amplitude is 511
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_1023: triangle amplitude is 1023
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_2047: triangle amplitude is 2047
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_TRIANGLE_AMPLITUDE_4095: triangle amplitude is 4095
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_triangle_noise_config(uint32_t dac_periph, uint32_t amplitude)
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1107              		.loc 1 349 1
+ 1108              		.cfi_startproc
+ 1109              		@ args = 0, pretend = 0, frame = 8
+ 1110              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1111              		@ link register save eliminated.
+ 1112 0000 80B4     		push	{r7}
+ 1113              		.cfi_def_cfa_offset 4
+ 1114              		.cfi_offset 7, -4
+ 1115 0002 83B0     		sub	sp, sp, #12
+ 1116              		.cfi_def_cfa_offset 16
+ 1117 0004 00AF     		add	r7, sp, #0
+ 1118              		.cfi_def_cfa_register 7
+ 1119 0006 7860     		str	r0, [r7, #4]
+ 1120 0008 3960     		str	r1, [r7]
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 1121              		.loc 1 350 7
+ 1122 000a 7B68     		ldr	r3, [r7, #4]
+ 1123 000c 002B     		cmp	r3, #0
+ 1124 000e 0CD1     		bne	.L99
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW0;
+ 1125              		.loc 1 351 17
+ 1126 0010 0F4B     		ldr	r3, .L102
+ 1127 0012 1B68     		ldr	r3, [r3]
+ 1128 0014 0E4A     		ldr	r2, .L102
+ 1129 0016 23F47063 		bic	r3, r3, #3840
+ 1130 001a 1360     		str	r3, [r2]
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= amplitude;
+ 1131              		.loc 1 352 17
+ 1132 001c 0C4B     		ldr	r3, .L102
+ 1133 001e 1A68     		ldr	r2, [r3]
+ 1134 0020 0B49     		ldr	r1, .L102
+ 1135 0022 3B68     		ldr	r3, [r7]
+ 1136 0024 1343     		orrs	r3, r3, r2
+ 1137 0026 0B60     		str	r3, [r1]
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL &= ~DAC_CTL_DWBW1;
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= amplitude << 16;
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1138              		.loc 1 357 1
+ 1139 0028 0CE0     		b	.L101
+ 1140              	.L99:
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_CTL |= amplitude << 16;
+ 1141              		.loc 1 354 17
+ 1142 002a 094B     		ldr	r3, .L102
+ 1143 002c 1B68     		ldr	r3, [r3]
+ 1144 002e 084A     		ldr	r2, .L102
+ 1145 0030 23F07063 		bic	r3, r3, #251658240
+ 1146 0034 1360     		str	r3, [r2]
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 1147              		.loc 1 355 17
+ 1148 0036 064B     		ldr	r3, .L102
+ 1149 0038 1A68     		ldr	r2, [r3]
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 1150              		.loc 1 355 30
+ 1151 003a 3B68     		ldr	r3, [r7]
+ 1152 003c 1B04     		lsls	r3, r3, #16
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 1153              		.loc 1 355 17
+ 1154 003e 0449     		ldr	r1, .L102
+ 1155 0040 1343     		orrs	r3, r3, r2
+ 1156 0042 0B60     		str	r3, [r1]
+ 1157              	.L101:
+ 1158              		.loc 1 357 1
+ 1159 0044 00BF     		nop
+ 1160 0046 0C37     		adds	r7, r7, #12
+ 1161              		.cfi_def_cfa_offset 4
+ 1162 0048 BD46     		mov	sp, r7
+ 1163              		.cfi_def_cfa_register 13
+ 1164              		@ sp needed
+ 1165 004a 80BC     		pop	{r7}
+ 1166              		.cfi_restore 7
+ 1167              		.cfi_def_cfa_offset 0
+ 1168 004c 7047     		bx	lr
+ 1169              	.L103:
+ 1170 004e 00BF     		.align	2
+ 1171              	.L102:
+ 1172 0050 00740040 		.word	1073771520
+ 1173              		.cfi_endproc
+ 1174              	.LFE140:
+ 1176              		.section	.text.dac_output_value_get,"ax",%progbits
+ 1177              		.align	1
+ 1178              		.global	dac_output_value_get
+ 1179              		.syntax unified
+ 1180              		.thumb
+ 1181              		.thumb_func
+ 1182              		.fpu softvfp
+ 1184              	dac_output_value_get:
+ 1185              	.LFB141:
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 359:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      get DAC output value
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 363:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 364:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     DAC output data
+ 365:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 366:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** uint16_t dac_output_value_get(uint32_t dac_periph)
+ 367:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1186              		.loc 1 367 1
+ 1187              		.cfi_startproc
+ 1188              		@ args = 0, pretend = 0, frame = 16
+ 1189              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1190              		@ link register save eliminated.
+ 1191 0000 80B4     		push	{r7}
+ 1192              		.cfi_def_cfa_offset 4
+ 1193              		.cfi_offset 7, -4
+ 1194 0002 85B0     		sub	sp, sp, #20
+ 1195              		.cfi_def_cfa_offset 24
+ 1196 0004 00AF     		add	r7, sp, #0
+ 1197              		.cfi_def_cfa_register 7
+ 1198 0006 7860     		str	r0, [r7, #4]
+ 368:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint16_t data = 0U;
+ 1199              		.loc 1 368 14
+ 1200 0008 0023     		movs	r3, #0
+ 1201 000a FB81     		strh	r3, [r7, #14]	@ movhi
+ 369:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 1202              		.loc 1 369 7
+ 1203 000c 7B68     		ldr	r3, [r7, #4]
+ 1204 000e 002B     		cmp	r3, #0
+ 1205 0010 03D1     		bne	.L105
+ 370:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         data = (uint16_t)DAC0_DO;
+ 1206              		.loc 1 370 26
+ 1207 0012 064B     		ldr	r3, .L108
+ 1208 0014 1B68     		ldr	r3, [r3]
+ 1209              		.loc 1 370 14
+ 1210 0016 FB81     		strh	r3, [r7, #14]	@ movhi
+ 1211 0018 02E0     		b	.L106
+ 1212              	.L105:
+ 371:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 372:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         data = (uint16_t)DAC1_DO;
+ 1213              		.loc 1 372 26
+ 1214 001a 054B     		ldr	r3, .L108+4
+ 1215 001c 1B68     		ldr	r3, [r3]
+ 1216              		.loc 1 372 14
+ 1217 001e FB81     		strh	r3, [r7, #14]	@ movhi
+ 1218              	.L106:
+ 373:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 374:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     return data;
+ 1219              		.loc 1 374 12
+ 1220 0020 FB89     		ldrh	r3, [r7, #14]
+ 375:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1221              		.loc 1 375 1
+ 1222 0022 1846     		mov	r0, r3
+ 1223 0024 1437     		adds	r7, r7, #20
+ 1224              		.cfi_def_cfa_offset 4
+ 1225 0026 BD46     		mov	sp, r7
+ 1226              		.cfi_def_cfa_register 13
+ 1227              		@ sp needed
+ 1228 0028 80BC     		pop	{r7}
+ 1229              		.cfi_restore 7
+ 1230              		.cfi_def_cfa_offset 0
+ 1231 002a 7047     		bx	lr
+ 1232              	.L109:
+ 1233              		.align	2
+ 1234              	.L108:
+ 1235 002c 2C740040 		.word	1073771564
+ 1236 0030 30740040 		.word	1073771568
+ 1237              		.cfi_endproc
+ 1238              	.LFE141:
+ 1240              		.section	.text.dac_concurrent_enable,"ax",%progbits
+ 1241              		.align	1
+ 1242              		.global	dac_concurrent_enable
+ 1243              		.syntax unified
+ 1244              		.thumb
+ 1245              		.thumb_func
+ 1246              		.fpu softvfp
+ 1248              	dac_concurrent_enable:
+ 1249              	.LFB142:
+ 376:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 377:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 378:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC concurrent mode
+ 379:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+ 380:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 381:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 382:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 383:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_enable(void)
+ 384:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1250              		.loc 1 384 1
+ 1251              		.cfi_startproc
+ 1252              		@ args = 0, pretend = 0, frame = 8
+ 1253              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1254              		@ link register save eliminated.
+ 1255 0000 80B4     		push	{r7}
+ 1256              		.cfi_def_cfa_offset 4
+ 1257              		.cfi_offset 7, -4
+ 1258 0002 83B0     		sub	sp, sp, #12
+ 1259              		.cfi_def_cfa_offset 16
+ 1260 0004 00AF     		add	r7, sp, #0
+ 1261              		.cfi_def_cfa_register 7
+ 385:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t ctl = 0U;
+ 1262              		.loc 1 385 14
+ 1263 0006 0023     		movs	r3, #0
+ 1264 0008 7B60     		str	r3, [r7, #4]
+ 386:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     ctl = DAC_CTL_DEN0 | DAC_CTL_DEN1;
+ 1265              		.loc 1 386 9
+ 1266 000a 4FF00113 		mov	r3, #65537
+ 1267 000e 7B60     		str	r3, [r7, #4]
+ 387:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     DAC_CTL |= (ctl);
+ 1268              		.loc 1 387 13
+ 1269 0010 054B     		ldr	r3, .L111
+ 1270 0012 1A68     		ldr	r2, [r3]
+ 1271 0014 0449     		ldr	r1, .L111
+ 1272 0016 7B68     		ldr	r3, [r7, #4]
+ 1273 0018 1343     		orrs	r3, r3, r2
+ 1274 001a 0B60     		str	r3, [r1]
+ 388:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1275              		.loc 1 388 1
+ 1276 001c 00BF     		nop
+ 1277 001e 0C37     		adds	r7, r7, #12
+ 1278              		.cfi_def_cfa_offset 4
+ 1279 0020 BD46     		mov	sp, r7
+ 1280              		.cfi_def_cfa_register 13
+ 1281              		@ sp needed
+ 1282 0022 80BC     		pop	{r7}
+ 1283              		.cfi_restore 7
+ 1284              		.cfi_def_cfa_offset 0
+ 1285 0024 7047     		bx	lr
+ 1286              	.L112:
+ 1287 0026 00BF     		.align	2
+ 1288              	.L111:
+ 1289 0028 00740040 		.word	1073771520
+ 1290              		.cfi_endproc
+ 1291              	.LFE142:
+ 1293              		.section	.text.dac_concurrent_disable,"ax",%progbits
+ 1294              		.align	1
+ 1295              		.global	dac_concurrent_disable
+ 1296              		.syntax unified
+ 1297              		.thumb
+ 1298              		.thumb_func
+ 1299              		.fpu softvfp
+ 1301              	dac_concurrent_disable:
+ 1302              	.LFB143:
+ 389:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 390:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 391:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC concurrent mode
+ 392:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+ 393:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 394:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 395:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 396:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_disable(void)
+ 397:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1303              		.loc 1 397 1
+ 1304              		.cfi_startproc
+ 1305              		@ args = 0, pretend = 0, frame = 8
+ 1306              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1307              		@ link register save eliminated.
+ 1308 0000 80B4     		push	{r7}
+ 1309              		.cfi_def_cfa_offset 4
+ 1310              		.cfi_offset 7, -4
+ 1311 0002 83B0     		sub	sp, sp, #12
+ 1312              		.cfi_def_cfa_offset 16
+ 1313 0004 00AF     		add	r7, sp, #0
+ 1314              		.cfi_def_cfa_register 7
+ 398:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t ctl = 0U;
+ 1315              		.loc 1 398 14
+ 1316 0006 0023     		movs	r3, #0
+ 1317 0008 7B60     		str	r3, [r7, #4]
+ 399:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     ctl = DAC_CTL_DEN0 | DAC_CTL_DEN1;
+ 1318              		.loc 1 399 9
+ 1319 000a 4FF00113 		mov	r3, #65537
+ 1320 000e 7B60     		str	r3, [r7, #4]
+ 400:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     DAC_CTL &= (~ctl);
+ 1321              		.loc 1 400 13
+ 1322 0010 054B     		ldr	r3, .L114
+ 1323 0012 1A68     		ldr	r2, [r3]
+ 1324              		.loc 1 400 17
+ 1325 0014 7B68     		ldr	r3, [r7, #4]
+ 1326 0016 DB43     		mvns	r3, r3
+ 1327              		.loc 1 400 13
+ 1328 0018 0349     		ldr	r1, .L114
+ 1329 001a 1340     		ands	r3, r3, r2
+ 1330 001c 0B60     		str	r3, [r1]
+ 401:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1331              		.loc 1 401 1
+ 1332 001e 00BF     		nop
+ 1333 0020 0C37     		adds	r7, r7, #12
+ 1334              		.cfi_def_cfa_offset 4
+ 1335 0022 BD46     		mov	sp, r7
+ 1336              		.cfi_def_cfa_register 13
+ 1337              		@ sp needed
+ 1338 0024 80BC     		pop	{r7}
+ 1339              		.cfi_restore 7
+ 1340              		.cfi_def_cfa_offset 0
+ 1341 0026 7047     		bx	lr
+ 1342              	.L115:
+ 1343              		.align	2
+ 1344              	.L114:
+ 1345 0028 00740040 		.word	1073771520
+ 1346              		.cfi_endproc
+ 1347              	.LFE143:
+ 1349              		.section	.text.dac_concurrent_software_trigger_enable,"ax",%progbits
+ 1350              		.align	1
+ 1351              		.global	dac_concurrent_software_trigger_enable
+ 1352              		.syntax unified
+ 1353              		.thumb
+ 1354              		.thumb_func
+ 1355              		.fpu softvfp
+ 1357              	dac_concurrent_software_trigger_enable:
+ 1358              	.LFB144:
+ 402:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 403:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 404:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC concurrent software trigger function
+ 405:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+ 406:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 407:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 408:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 409:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_software_trigger_enable(void)
+ 410:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1359              		.loc 1 410 1
+ 1360              		.cfi_startproc
+ 1361              		@ args = 0, pretend = 0, frame = 8
+ 1362              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1363              		@ link register save eliminated.
+ 1364 0000 80B4     		push	{r7}
+ 1365              		.cfi_def_cfa_offset 4
+ 1366              		.cfi_offset 7, -4
+ 1367 0002 83B0     		sub	sp, sp, #12
+ 1368              		.cfi_def_cfa_offset 16
+ 1369 0004 00AF     		add	r7, sp, #0
+ 1370              		.cfi_def_cfa_register 7
+ 411:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t swt = 0U;
+ 1371              		.loc 1 411 14
+ 1372 0006 0023     		movs	r3, #0
+ 1373 0008 7B60     		str	r3, [r7, #4]
+ 412:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     swt = DAC_SWT_SWTR0 | DAC_SWT_SWTR1;
+ 1374              		.loc 1 412 9
+ 1375 000a 0323     		movs	r3, #3
+ 1376 000c 7B60     		str	r3, [r7, #4]
+ 413:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     DAC_SWT |= (swt); 
+ 1377              		.loc 1 413 13
+ 1378 000e 054B     		ldr	r3, .L117
+ 1379 0010 1A68     		ldr	r2, [r3]
+ 1380 0012 0449     		ldr	r1, .L117
+ 1381 0014 7B68     		ldr	r3, [r7, #4]
+ 1382 0016 1343     		orrs	r3, r3, r2
+ 1383 0018 0B60     		str	r3, [r1]
+ 414:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1384              		.loc 1 414 1
+ 1385 001a 00BF     		nop
+ 1386 001c 0C37     		adds	r7, r7, #12
+ 1387              		.cfi_def_cfa_offset 4
+ 1388 001e BD46     		mov	sp, r7
+ 1389              		.cfi_def_cfa_register 13
+ 1390              		@ sp needed
+ 1391 0020 80BC     		pop	{r7}
+ 1392              		.cfi_restore 7
+ 1393              		.cfi_def_cfa_offset 0
+ 1394 0022 7047     		bx	lr
+ 1395              	.L118:
+ 1396              		.align	2
+ 1397              	.L117:
+ 1398 0024 04740040 		.word	1073771524
+ 1399              		.cfi_endproc
+ 1400              	.LFE144:
+ 1402              		.section	.text.dac_concurrent_software_trigger_disable,"ax",%progbits
+ 1403              		.align	1
+ 1404              		.global	dac_concurrent_software_trigger_disable
+ 1405              		.syntax unified
+ 1406              		.thumb
+ 1407              		.thumb_func
+ 1408              		.fpu softvfp
+ 1410              	dac_concurrent_software_trigger_disable:
+ 1411              	.LFB145:
+ 415:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 416:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 417:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC concurrent software trigger function
+ 418:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+ 419:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 420:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 421:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 422:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_software_trigger_disable(void)
+ 423:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1412              		.loc 1 423 1
+ 1413              		.cfi_startproc
+ 1414              		@ args = 0, pretend = 0, frame = 8
+ 1415              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1416              		@ link register save eliminated.
+ 1417 0000 80B4     		push	{r7}
+ 1418              		.cfi_def_cfa_offset 4
+ 1419              		.cfi_offset 7, -4
+ 1420 0002 83B0     		sub	sp, sp, #12
+ 1421              		.cfi_def_cfa_offset 16
+ 1422 0004 00AF     		add	r7, sp, #0
+ 1423              		.cfi_def_cfa_register 7
+ 424:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t swt = 0U;
+ 1424              		.loc 1 424 14
+ 1425 0006 0023     		movs	r3, #0
+ 1426 0008 7B60     		str	r3, [r7, #4]
+ 425:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     swt = DAC_SWT_SWTR0 | DAC_SWT_SWTR1;
+ 1427              		.loc 1 425 9
+ 1428 000a 0323     		movs	r3, #3
+ 1429 000c 7B60     		str	r3, [r7, #4]
+ 426:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     DAC_SWT &= (~swt);
+ 1430              		.loc 1 426 13
+ 1431 000e 064B     		ldr	r3, .L120
+ 1432 0010 1A68     		ldr	r2, [r3]
+ 1433              		.loc 1 426 17
+ 1434 0012 7B68     		ldr	r3, [r7, #4]
+ 1435 0014 DB43     		mvns	r3, r3
+ 1436              		.loc 1 426 13
+ 1437 0016 0449     		ldr	r1, .L120
+ 1438 0018 1340     		ands	r3, r3, r2
+ 1439 001a 0B60     		str	r3, [r1]
+ 427:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1440              		.loc 1 427 1
+ 1441 001c 00BF     		nop
+ 1442 001e 0C37     		adds	r7, r7, #12
+ 1443              		.cfi_def_cfa_offset 4
+ 1444 0020 BD46     		mov	sp, r7
+ 1445              		.cfi_def_cfa_register 13
+ 1446              		@ sp needed
+ 1447 0022 80BC     		pop	{r7}
+ 1448              		.cfi_restore 7
+ 1449              		.cfi_def_cfa_offset 0
+ 1450 0024 7047     		bx	lr
+ 1451              	.L121:
+ 1452 0026 00BF     		.align	2
+ 1453              	.L120:
+ 1454 0028 04740040 		.word	1073771524
+ 1455              		.cfi_endproc
+ 1456              	.LFE145:
+ 1458              		.section	.text.dac_concurrent_output_buffer_enable,"ax",%progbits
+ 1459              		.align	1
+ 1460              		.global	dac_concurrent_output_buffer_enable
+ 1461              		.syntax unified
+ 1462              		.thumb
+ 1463              		.thumb_func
+ 1464              		.fpu softvfp
+ 1466              	dac_concurrent_output_buffer_enable:
+ 1467              	.LFB146:
+ 428:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 429:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 430:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC concurrent buffer function
+ 431:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+ 432:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 433:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 434:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 435:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_output_buffer_enable(void)
+ 436:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1468              		.loc 1 436 1
+ 1469              		.cfi_startproc
+ 1470              		@ args = 0, pretend = 0, frame = 8
+ 1471              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1472              		@ link register save eliminated.
+ 1473 0000 80B4     		push	{r7}
+ 1474              		.cfi_def_cfa_offset 4
+ 1475              		.cfi_offset 7, -4
+ 1476 0002 83B0     		sub	sp, sp, #12
+ 1477              		.cfi_def_cfa_offset 16
+ 1478 0004 00AF     		add	r7, sp, #0
+ 1479              		.cfi_def_cfa_register 7
+ 437:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t ctl = 0U;
+ 1480              		.loc 1 437 14
+ 1481 0006 0023     		movs	r3, #0
+ 1482 0008 7B60     		str	r3, [r7, #4]
+ 438:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     ctl = DAC_CTL_DBOFF0 | DAC_CTL_DBOFF1;
+ 1483              		.loc 1 438 9
+ 1484 000a 4FF00213 		mov	r3, #131074
+ 1485 000e 7B60     		str	r3, [r7, #4]
+ 439:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     DAC_CTL &= (~ctl);
+ 1486              		.loc 1 439 13
+ 1487 0010 054B     		ldr	r3, .L123
+ 1488 0012 1A68     		ldr	r2, [r3]
+ 1489              		.loc 1 439 17
+ 1490 0014 7B68     		ldr	r3, [r7, #4]
+ 1491 0016 DB43     		mvns	r3, r3
+ 1492              		.loc 1 439 13
+ 1493 0018 0349     		ldr	r1, .L123
+ 1494 001a 1340     		ands	r3, r3, r2
+ 1495 001c 0B60     		str	r3, [r1]
+ 440:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1496              		.loc 1 440 1
+ 1497 001e 00BF     		nop
+ 1498 0020 0C37     		adds	r7, r7, #12
+ 1499              		.cfi_def_cfa_offset 4
+ 1500 0022 BD46     		mov	sp, r7
+ 1501              		.cfi_def_cfa_register 13
+ 1502              		@ sp needed
+ 1503 0024 80BC     		pop	{r7}
+ 1504              		.cfi_restore 7
+ 1505              		.cfi_def_cfa_offset 0
+ 1506 0026 7047     		bx	lr
+ 1507              	.L124:
+ 1508              		.align	2
+ 1509              	.L123:
+ 1510 0028 00740040 		.word	1073771520
+ 1511              		.cfi_endproc
+ 1512              	.LFE146:
+ 1514              		.section	.text.dac_concurrent_output_buffer_disable,"ax",%progbits
+ 1515              		.align	1
+ 1516              		.global	dac_concurrent_output_buffer_disable
+ 1517              		.syntax unified
+ 1518              		.thumb
+ 1519              		.thumb_func
+ 1520              		.fpu softvfp
+ 1522              	dac_concurrent_output_buffer_disable:
+ 1523              	.LFB147:
+ 441:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 442:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 443:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC concurrent buffer function
+ 444:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+ 445:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 446:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 447:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 448:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_output_buffer_disable(void)
+ 449:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1524              		.loc 1 449 1
+ 1525              		.cfi_startproc
+ 1526              		@ args = 0, pretend = 0, frame = 8
+ 1527              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1528              		@ link register save eliminated.
+ 1529 0000 80B4     		push	{r7}
+ 1530              		.cfi_def_cfa_offset 4
+ 1531              		.cfi_offset 7, -4
+ 1532 0002 83B0     		sub	sp, sp, #12
+ 1533              		.cfi_def_cfa_offset 16
+ 1534 0004 00AF     		add	r7, sp, #0
+ 1535              		.cfi_def_cfa_register 7
+ 450:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t ctl = 0U;
+ 1536              		.loc 1 450 14
+ 1537 0006 0023     		movs	r3, #0
+ 1538 0008 7B60     		str	r3, [r7, #4]
+ 451:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     ctl = DAC_CTL_DBOFF0 | DAC_CTL_DBOFF1;
+ 1539              		.loc 1 451 9
+ 1540 000a 4FF00213 		mov	r3, #131074
+ 1541 000e 7B60     		str	r3, [r7, #4]
+ 452:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     DAC_CTL |= (ctl);
+ 1542              		.loc 1 452 13
+ 1543 0010 054B     		ldr	r3, .L126
+ 1544 0012 1A68     		ldr	r2, [r3]
+ 1545 0014 0449     		ldr	r1, .L126
+ 1546 0016 7B68     		ldr	r3, [r7, #4]
+ 1547 0018 1343     		orrs	r3, r3, r2
+ 1548 001a 0B60     		str	r3, [r1]
+ 453:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1549              		.loc 1 453 1
+ 1550 001c 00BF     		nop
+ 1551 001e 0C37     		adds	r7, r7, #12
+ 1552              		.cfi_def_cfa_offset 4
+ 1553 0020 BD46     		mov	sp, r7
+ 1554              		.cfi_def_cfa_register 13
+ 1555              		@ sp needed
+ 1556 0022 80BC     		pop	{r7}
+ 1557              		.cfi_restore 7
+ 1558              		.cfi_def_cfa_offset 0
+ 1559 0024 7047     		bx	lr
+ 1560              	.L127:
+ 1561 0026 00BF     		.align	2
+ 1562              	.L126:
+ 1563 0028 00740040 		.word	1073771520
+ 1564              		.cfi_endproc
+ 1565              	.LFE147:
+ 1567              		.section	.text.dac_concurrent_interrupt_enable,"ax",%progbits
+ 1568              		.align	1
+ 1569              		.global	dac_concurrent_interrupt_enable
+ 1570              		.syntax unified
+ 1571              		.thumb
+ 1572              		.thumb_func
+ 1573              		.fpu softvfp
+ 1575              	dac_concurrent_interrupt_enable:
+ 1576              	.LFB148:
+ 454:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 455:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 456:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      enable DAC concurrent interrupt funcution
+ 457:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+ 458:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 459:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 460:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 461:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_interrupt_enable(void)
+ 462:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1577              		.loc 1 462 1
+ 1578              		.cfi_startproc
+ 1579              		@ args = 0, pretend = 0, frame = 8
+ 1580              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1581              		@ link register save eliminated.
+ 1582 0000 80B4     		push	{r7}
+ 1583              		.cfi_def_cfa_offset 4
+ 1584              		.cfi_offset 7, -4
+ 1585 0002 83B0     		sub	sp, sp, #12
+ 1586              		.cfi_def_cfa_offset 16
+ 1587 0004 00AF     		add	r7, sp, #0
+ 1588              		.cfi_def_cfa_register 7
+ 463:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t ctl = 0U;
+ 1589              		.loc 1 463 14
+ 1590 0006 0023     		movs	r3, #0
+ 1591 0008 7B60     		str	r3, [r7, #4]
+ 464:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     ctl = DAC_CTL_DDUDRIE0 | DAC_CTL_DDUDRIE1;
+ 1592              		.loc 1 464 9
+ 1593 000a 4FF02023 		mov	r3, #536879104
+ 1594 000e 7B60     		str	r3, [r7, #4]
+ 465:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     DAC_CTL |= (ctl);
+ 1595              		.loc 1 465 13
+ 1596 0010 054B     		ldr	r3, .L129
+ 1597 0012 1A68     		ldr	r2, [r3]
+ 1598 0014 0449     		ldr	r1, .L129
+ 1599 0016 7B68     		ldr	r3, [r7, #4]
+ 1600 0018 1343     		orrs	r3, r3, r2
+ 1601 001a 0B60     		str	r3, [r1]
+ 466:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1602              		.loc 1 466 1
+ 1603 001c 00BF     		nop
+ 1604 001e 0C37     		adds	r7, r7, #12
+ 1605              		.cfi_def_cfa_offset 4
+ 1606 0020 BD46     		mov	sp, r7
+ 1607              		.cfi_def_cfa_register 13
+ 1608              		@ sp needed
+ 1609 0022 80BC     		pop	{r7}
+ 1610              		.cfi_restore 7
+ 1611              		.cfi_def_cfa_offset 0
+ 1612 0024 7047     		bx	lr
+ 1613              	.L130:
+ 1614 0026 00BF     		.align	2
+ 1615              	.L129:
+ 1616 0028 00740040 		.word	1073771520
+ 1617              		.cfi_endproc
+ 1618              	.LFE148:
+ 1620              		.section	.text.dac_concurrent_interrupt_disable,"ax",%progbits
+ 1621              		.align	1
+ 1622              		.global	dac_concurrent_interrupt_disable
+ 1623              		.syntax unified
+ 1624              		.thumb
+ 1625              		.thumb_func
+ 1626              		.fpu softvfp
+ 1628              	dac_concurrent_interrupt_disable:
+ 1629              	.LFB149:
+ 467:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 468:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 469:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      disable DAC concurrent interrupt funcution
+ 470:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  none
+ 471:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 472:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 473:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 474:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_interrupt_disable(void)
+ 475:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1630              		.loc 1 475 1
+ 1631              		.cfi_startproc
+ 1632              		@ args = 0, pretend = 0, frame = 8
+ 1633              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1634              		@ link register save eliminated.
+ 1635 0000 80B4     		push	{r7}
+ 1636              		.cfi_def_cfa_offset 4
+ 1637              		.cfi_offset 7, -4
+ 1638 0002 83B0     		sub	sp, sp, #12
+ 1639              		.cfi_def_cfa_offset 16
+ 1640 0004 00AF     		add	r7, sp, #0
+ 1641              		.cfi_def_cfa_register 7
+ 476:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t ctl = 0U;
+ 1642              		.loc 1 476 14
+ 1643 0006 0023     		movs	r3, #0
+ 1644 0008 7B60     		str	r3, [r7, #4]
+ 477:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     ctl = DAC_CTL_DDUDRIE0 | DAC_CTL_DDUDRIE1;
+ 1645              		.loc 1 477 9
+ 1646 000a 4FF02023 		mov	r3, #536879104
+ 1647 000e 7B60     		str	r3, [r7, #4]
+ 478:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     DAC_CTL &= (~ctl);
+ 1648              		.loc 1 478 13
+ 1649 0010 054B     		ldr	r3, .L132
+ 1650 0012 1A68     		ldr	r2, [r3]
+ 1651              		.loc 1 478 17
+ 1652 0014 7B68     		ldr	r3, [r7, #4]
+ 1653 0016 DB43     		mvns	r3, r3
+ 1654              		.loc 1 478 13
+ 1655 0018 0349     		ldr	r1, .L132
+ 1656 001a 1340     		ands	r3, r3, r2
+ 1657 001c 0B60     		str	r3, [r1]
+ 479:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1658              		.loc 1 479 1
+ 1659 001e 00BF     		nop
+ 1660 0020 0C37     		adds	r7, r7, #12
+ 1661              		.cfi_def_cfa_offset 4
+ 1662 0022 BD46     		mov	sp, r7
+ 1663              		.cfi_def_cfa_register 13
+ 1664              		@ sp needed
+ 1665 0024 80BC     		pop	{r7}
+ 1666              		.cfi_restore 7
+ 1667              		.cfi_def_cfa_offset 0
+ 1668 0026 7047     		bx	lr
+ 1669              	.L133:
+ 1670              		.align	2
+ 1671              	.L132:
+ 1672 0028 00740040 		.word	1073771520
+ 1673              		.cfi_endproc
+ 1674              	.LFE149:
+ 1676              		.section	.text.dac_data_set,"ax",%progbits
+ 1677              		.align	1
+ 1678              		.global	dac_data_set
+ 1679              		.syntax unified
+ 1680              		.thumb
+ 1681              		.thumb_func
+ 1682              		.fpu softvfp
+ 1684              	dac_data_set:
+ 1685              	.LFB150:
+ 480:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 481:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 482:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      set the DAC specified data holding register value
+ 483:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 484:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 485:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_align
+ 486:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_ALIGN_8B_R: data right 8b alignment
+ 487:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_ALIGN_12B_R: data right 12b alignment
+ 488:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_ALIGN_12B_L: data left 12b alignment
+ 489:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  data: data to be loaded
+ 490:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 491:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 492:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 493:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_data_set(uint32_t dac_periph, uint32_t dac_align, uint16_t data)
+ 494:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1686              		.loc 1 494 1
+ 1687              		.cfi_startproc
+ 1688              		@ args = 0, pretend = 0, frame = 16
+ 1689              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1690              		@ link register save eliminated.
+ 1691 0000 80B4     		push	{r7}
+ 1692              		.cfi_def_cfa_offset 4
+ 1693              		.cfi_offset 7, -4
+ 1694 0002 85B0     		sub	sp, sp, #20
+ 1695              		.cfi_def_cfa_offset 24
+ 1696 0004 00AF     		add	r7, sp, #0
+ 1697              		.cfi_def_cfa_register 7
+ 1698 0006 F860     		str	r0, [r7, #12]
+ 1699 0008 B960     		str	r1, [r7, #8]
+ 1700 000a 1346     		mov	r3, r2
+ 1701 000c FB80     		strh	r3, [r7, #6]	@ movhi
+ 495:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 1702              		.loc 1 495 7
+ 1703 000e FB68     		ldr	r3, [r7, #12]
+ 1704 0010 002B     		cmp	r3, #0
+ 1705 0012 18D1     		bne	.L135
+ 496:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         switch(dac_align){
+ 1706              		.loc 1 496 9
+ 1707 0014 BB68     		ldr	r3, [r7, #8]
+ 1708 0016 022B     		cmp	r3, #2
+ 1709 0018 11D0     		beq	.L136
+ 1710 001a BB68     		ldr	r3, [r7, #8]
+ 1711 001c 022B     		cmp	r3, #2
+ 1712 001e 2BD8     		bhi	.L146
+ 1713 0020 BB68     		ldr	r3, [r7, #8]
+ 1714 0022 002B     		cmp	r3, #0
+ 1715 0024 03D0     		beq	.L138
+ 1716 0026 BB68     		ldr	r3, [r7, #8]
+ 1717 0028 012B     		cmp	r3, #1
+ 1718 002a 04D0     		beq	.L139
+ 497:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data right 12b alignment */
+ 498:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         case DAC_ALIGN_12B_R:
+ 499:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             DAC0_R12DH = data;
+ 500:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 501:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data left 12b alignment */
+ 502:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         case DAC_ALIGN_12B_L:
+ 503:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             DAC0_L12DH = data;
+ 504:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 505:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data right 8b alignment */
+ 506:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         case DAC_ALIGN_8B_R:
+ 507:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             DAC0_R8DH = data;
+ 508:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 509:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         default:
+ 510:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1719              		.loc 1 510 13
+ 1720 002c 24E0     		b	.L146
+ 1721              	.L138:
+ 499:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1722              		.loc 1 499 13
+ 1723 002e 164A     		ldr	r2, .L149
+ 499:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1724              		.loc 1 499 24
+ 1725 0030 FB88     		ldrh	r3, [r7, #6]
+ 1726 0032 1360     		str	r3, [r2]
+ 500:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data left 12b alignment */
+ 1727              		.loc 1 500 13
+ 1728 0034 23E0     		b	.L141
+ 1729              	.L139:
+ 503:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1730              		.loc 1 503 13
+ 1731 0036 154A     		ldr	r2, .L149+4
+ 503:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1732              		.loc 1 503 24
+ 1733 0038 FB88     		ldrh	r3, [r7, #6]
+ 1734 003a 1360     		str	r3, [r2]
+ 504:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data right 8b alignment */
+ 1735              		.loc 1 504 13
+ 1736 003c 1FE0     		b	.L141
+ 1737              	.L136:
+ 507:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1738              		.loc 1 507 13
+ 1739 003e 144A     		ldr	r2, .L149+8
+ 507:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1740              		.loc 1 507 23
+ 1741 0040 FB88     		ldrh	r3, [r7, #6]
+ 1742 0042 1360     		str	r3, [r2]
+ 508:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         default:
+ 1743              		.loc 1 508 13
+ 1744 0044 1BE0     		b	.L141
+ 1745              	.L135:
+ 511:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         }
+ 512:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 513:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         switch(dac_align){
+ 1746              		.loc 1 513 9
+ 1747 0046 BB68     		ldr	r3, [r7, #8]
+ 1748 0048 022B     		cmp	r3, #2
+ 1749 004a 11D0     		beq	.L142
+ 1750 004c BB68     		ldr	r3, [r7, #8]
+ 1751 004e 022B     		cmp	r3, #2
+ 1752 0050 14D8     		bhi	.L147
+ 1753 0052 BB68     		ldr	r3, [r7, #8]
+ 1754 0054 002B     		cmp	r3, #0
+ 1755 0056 03D0     		beq	.L144
+ 1756 0058 BB68     		ldr	r3, [r7, #8]
+ 1757 005a 012B     		cmp	r3, #1
+ 1758 005c 04D0     		beq	.L145
+ 514:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data right 12b alignment */
+ 515:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         case DAC_ALIGN_12B_R:
+ 516:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             DAC1_R12DH = data;
+ 517:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 518:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data left 12b alignment */
+ 519:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         case DAC_ALIGN_12B_L:
+ 520:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             DAC1_L12DH = data;
+ 521:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 522:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data right 8b alignment */
+ 523:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         case DAC_ALIGN_8B_R:
+ 524:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             DAC1_R8DH = data;
+ 525:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 526:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         default:
+ 527:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1759              		.loc 1 527 13
+ 1760 005e 0DE0     		b	.L147
+ 1761              	.L144:
+ 516:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1762              		.loc 1 516 13
+ 1763 0060 0C4A     		ldr	r2, .L149+12
+ 516:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1764              		.loc 1 516 24
+ 1765 0062 FB88     		ldrh	r3, [r7, #6]
+ 1766 0064 1360     		str	r3, [r2]
+ 517:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data left 12b alignment */
+ 1767              		.loc 1 517 13
+ 1768 0066 0AE0     		b	.L141
+ 1769              	.L145:
+ 520:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1770              		.loc 1 520 13
+ 1771 0068 0B4A     		ldr	r2, .L149+16
+ 520:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1772              		.loc 1 520 24
+ 1773 006a FB88     		ldrh	r3, [r7, #6]
+ 1774 006c 1360     		str	r3, [r2]
+ 521:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* data right 8b alignment */
+ 1775              		.loc 1 521 13
+ 1776 006e 06E0     		b	.L141
+ 1777              	.L142:
+ 524:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1778              		.loc 1 524 13
+ 1779 0070 0A4A     		ldr	r2, .L149+20
+ 524:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             break;
+ 1780              		.loc 1 524 23
+ 1781 0072 FB88     		ldrh	r3, [r7, #6]
+ 1782 0074 1360     		str	r3, [r2]
+ 525:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         default:
+ 1783              		.loc 1 525 13
+ 1784 0076 02E0     		b	.L141
+ 1785              	.L146:
+ 510:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         }
+ 1786              		.loc 1 510 13
+ 1787 0078 00BF     		nop
+ 1788 007a 00E0     		b	.L148
+ 1789              	.L147:
+ 1790              		.loc 1 527 13
+ 1791 007c 00BF     		nop
+ 1792              	.L141:
+ 1793              	.L148:
+ 528:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         }
+ 529:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 530:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1794              		.loc 1 530 1
+ 1795 007e 00BF     		nop
+ 1796 0080 1437     		adds	r7, r7, #20
+ 1797              		.cfi_def_cfa_offset 4
+ 1798 0082 BD46     		mov	sp, r7
+ 1799              		.cfi_def_cfa_register 13
+ 1800              		@ sp needed
+ 1801 0084 80BC     		pop	{r7}
+ 1802              		.cfi_restore 7
+ 1803              		.cfi_def_cfa_offset 0
+ 1804 0086 7047     		bx	lr
+ 1805              	.L150:
+ 1806              		.align	2
+ 1807              	.L149:
+ 1808 0088 08740040 		.word	1073771528
+ 1809 008c 0C740040 		.word	1073771532
+ 1810 0090 10740040 		.word	1073771536
+ 1811 0094 14740040 		.word	1073771540
+ 1812 0098 18740040 		.word	1073771544
+ 1813 009c 1C740040 		.word	1073771548
+ 1814              		.cfi_endproc
+ 1815              	.LFE150:
+ 1817              		.section	.text.dac_concurrent_data_set,"ax",%progbits
+ 1818              		.align	1
+ 1819              		.global	dac_concurrent_data_set
+ 1820              		.syntax unified
+ 1821              		.thumb
+ 1822              		.thumb_func
+ 1823              		.fpu softvfp
+ 1825              	dac_concurrent_data_set:
+ 1826              	.LFB151:
+ 531:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 532:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 533:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      set DAC concurrent mode data holding register value
+ 534:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_align
+ 535:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_ALIGN_8B_R: data right 8b alignment
+ 536:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_ALIGN_12B_R: data right 12b alignment
+ 537:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DAC_ALIGN_12B_L: data left 12b alignment
+ 538:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  data0: data to be loaded
+ 539:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  data1: data to be loaded
+ 540:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 541:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 542:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 543:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_concurrent_data_set(uint32_t dac_align, uint16_t data0, uint16_t data1)
+ 544:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1827              		.loc 1 544 1
+ 1828              		.cfi_startproc
+ 1829              		@ args = 0, pretend = 0, frame = 16
+ 1830              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1831              		@ link register save eliminated.
+ 1832 0000 80B4     		push	{r7}
+ 1833              		.cfi_def_cfa_offset 4
+ 1834              		.cfi_offset 7, -4
+ 1835 0002 85B0     		sub	sp, sp, #20
+ 1836              		.cfi_def_cfa_offset 24
+ 1837 0004 00AF     		add	r7, sp, #0
+ 1838              		.cfi_def_cfa_register 7
+ 1839 0006 7860     		str	r0, [r7, #4]
+ 1840 0008 0B46     		mov	r3, r1
+ 1841 000a 7B80     		strh	r3, [r7, #2]	@ movhi
+ 1842 000c 1346     		mov	r3, r2	@ movhi
+ 1843 000e 3B80     		strh	r3, [r7]	@ movhi
+ 545:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t data = 0U;
+ 1844              		.loc 1 545 14
+ 1845 0010 0023     		movs	r3, #0
+ 1846 0012 FB60     		str	r3, [r7, #12]
+ 546:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     switch(dac_align){
+ 1847              		.loc 1 546 5
+ 1848 0014 7B68     		ldr	r3, [r7, #4]
+ 1849 0016 022B     		cmp	r3, #2
+ 1850 0018 1BD0     		beq	.L152
+ 1851 001a 7B68     		ldr	r3, [r7, #4]
+ 1852 001c 022B     		cmp	r3, #2
+ 1853 001e 21D8     		bhi	.L157
+ 1854 0020 7B68     		ldr	r3, [r7, #4]
+ 1855 0022 002B     		cmp	r3, #0
+ 1856 0024 03D0     		beq	.L154
+ 1857 0026 7B68     		ldr	r3, [r7, #4]
+ 1858 0028 012B     		cmp	r3, #1
+ 1859 002a 09D0     		beq	.L155
+ 547:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     /* data right 12b alignment */
+ 548:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     case DAC_ALIGN_12B_R:
+ 549:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         data = ((uint32_t)data1 << 16) | data0;
+ 550:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R12DH = data;
+ 551:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 552:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     /* data left 12b alignment */
+ 553:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     case DAC_ALIGN_12B_L:
+ 554:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         data = ((uint32_t)data1 << 16) | data0;
+ 555:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_L12DH = data;
+ 556:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 557:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     /* data right 8b alignment */
+ 558:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     case DAC_ALIGN_8B_R:
+ 559:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         data = ((uint32_t)data1 << 8) | data0;
+ 560:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R8DH = data;
+ 561:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 562:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     default:
+ 563:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 1860              		.loc 1 563 9
+ 1861 002c 1AE0     		b	.L157
+ 1862              	.L154:
+ 549:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R12DH = data;
+ 1863              		.loc 1 549 17
+ 1864 002e 3B88     		ldrh	r3, [r7]
+ 549:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R12DH = data;
+ 1865              		.loc 1 549 33
+ 1866 0030 1A04     		lsls	r2, r3, #16
+ 549:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R12DH = data;
+ 1867              		.loc 1 549 40
+ 1868 0032 7B88     		ldrh	r3, [r7, #2]
+ 549:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R12DH = data;
+ 1869              		.loc 1 549 14
+ 1870 0034 1343     		orrs	r3, r3, r2
+ 1871 0036 FB60     		str	r3, [r7, #12]
+ 550:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 1872              		.loc 1 550 9
+ 1873 0038 0D4A     		ldr	r2, .L158
+ 550:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 1874              		.loc 1 550 20
+ 1875 003a FB68     		ldr	r3, [r7, #12]
+ 1876 003c 1360     		str	r3, [r2]
+ 551:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     /* data left 12b alignment */
+ 1877              		.loc 1 551 9
+ 1878 003e 12E0     		b	.L156
+ 1879              	.L155:
+ 554:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_L12DH = data;
+ 1880              		.loc 1 554 17
+ 1881 0040 3B88     		ldrh	r3, [r7]
+ 554:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_L12DH = data;
+ 1882              		.loc 1 554 33
+ 1883 0042 1A04     		lsls	r2, r3, #16
+ 554:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_L12DH = data;
+ 1884              		.loc 1 554 40
+ 1885 0044 7B88     		ldrh	r3, [r7, #2]
+ 554:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_L12DH = data;
+ 1886              		.loc 1 554 14
+ 1887 0046 1343     		orrs	r3, r3, r2
+ 1888 0048 FB60     		str	r3, [r7, #12]
+ 555:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 1889              		.loc 1 555 9
+ 1890 004a 0A4A     		ldr	r2, .L158+4
+ 555:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 1891              		.loc 1 555 20
+ 1892 004c FB68     		ldr	r3, [r7, #12]
+ 1893 004e 1360     		str	r3, [r2]
+ 556:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     /* data right 8b alignment */
+ 1894              		.loc 1 556 9
+ 1895 0050 09E0     		b	.L156
+ 1896              	.L152:
+ 559:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R8DH = data;
+ 1897              		.loc 1 559 17
+ 1898 0052 3B88     		ldrh	r3, [r7]
+ 559:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R8DH = data;
+ 1899              		.loc 1 559 33
+ 1900 0054 1A02     		lsls	r2, r3, #8
+ 559:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R8DH = data;
+ 1901              		.loc 1 559 39
+ 1902 0056 7B88     		ldrh	r3, [r7, #2]
+ 559:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DACC_R8DH = data;
+ 1903              		.loc 1 559 14
+ 1904 0058 1343     		orrs	r3, r3, r2
+ 1905 005a FB60     		str	r3, [r7, #12]
+ 560:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 1906              		.loc 1 560 9
+ 1907 005c 064A     		ldr	r2, .L158+8
+ 560:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         break;
+ 1908              		.loc 1 560 19
+ 1909 005e FB68     		ldr	r3, [r7, #12]
+ 1910 0060 1360     		str	r3, [r2]
+ 561:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     default:
+ 1911              		.loc 1 561 9
+ 1912 0062 00E0     		b	.L156
+ 1913              	.L157:
+ 1914              		.loc 1 563 9
+ 1915 0064 00BF     		nop
+ 1916              	.L156:
+ 564:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 565:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1917              		.loc 1 565 1
+ 1918 0066 00BF     		nop
+ 1919 0068 1437     		adds	r7, r7, #20
+ 1920              		.cfi_def_cfa_offset 4
+ 1921 006a BD46     		mov	sp, r7
+ 1922              		.cfi_def_cfa_register 13
+ 1923              		@ sp needed
+ 1924 006c 80BC     		pop	{r7}
+ 1925              		.cfi_restore 7
+ 1926              		.cfi_def_cfa_offset 0
+ 1927 006e 7047     		bx	lr
+ 1928              	.L159:
+ 1929              		.align	2
+ 1930              	.L158:
+ 1931 0070 20740040 		.word	1073771552
+ 1932 0074 24740040 		.word	1073771556
+ 1933 0078 28740040 		.word	1073771560
+ 1934              		.cfi_endproc
+ 1935              	.LFE151:
+ 1937              		.section	.text.dac_flag_get,"ax",%progbits
+ 1938              		.align	1
+ 1939              		.global	dac_flag_get
+ 1940              		.syntax unified
+ 1941              		.thumb
+ 1942              		.thumb_func
+ 1943              		.fpu softvfp
+ 1945              	dac_flag_get:
+ 1946              	.LFB152:
+ 566:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 567:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 568:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      get the specified DAC flag(DAC DMA underrun flag)
+ 569:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 570:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 571:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 572:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     the state of dac bit(SET or RESET)
+ 573:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 574:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** FlagStatus dac_flag_get(uint32_t dac_periph)
+ 575:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 1947              		.loc 1 575 1
+ 1948              		.cfi_startproc
+ 1949              		@ args = 0, pretend = 0, frame = 16
+ 1950              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1951              		@ link register save eliminated.
+ 1952 0000 80B4     		push	{r7}
+ 1953              		.cfi_def_cfa_offset 4
+ 1954              		.cfi_offset 7, -4
+ 1955 0002 85B0     		sub	sp, sp, #20
+ 1956              		.cfi_def_cfa_offset 24
+ 1957 0004 00AF     		add	r7, sp, #0
+ 1958              		.cfi_def_cfa_register 7
+ 1959 0006 7860     		str	r0, [r7, #4]
+ 576:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     FlagStatus temp_flag = RESET;
+ 1960              		.loc 1 576 16
+ 1961 0008 0023     		movs	r3, #0
+ 1962 000a FB73     		strb	r3, [r7, #15]
+ 577:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 1963              		.loc 1 577 7
+ 1964 000c 7B68     		ldr	r3, [r7, #4]
+ 1965 000e 002B     		cmp	r3, #0
+ 1966 0010 08D1     		bne	.L161
+ 578:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* check the DMA underrun flag */
+ 579:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         if(RESET != (DAC_STAT & DAC_STAT_DDUDR0)){
+ 1967              		.loc 1 579 22
+ 1968 0012 0B4B     		ldr	r3, .L164
+ 1969 0014 1B68     		ldr	r3, [r3]
+ 1970              		.loc 1 579 31
+ 1971 0016 03F40053 		and	r3, r3, #8192
+ 1972              		.loc 1 579 11
+ 1973 001a 002B     		cmp	r3, #0
+ 1974 001c 0AD0     		beq	.L162
+ 580:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             temp_flag = SET;
+ 1975              		.loc 1 580 23
+ 1976 001e 0123     		movs	r3, #1
+ 1977 0020 FB73     		strb	r3, [r7, #15]
+ 1978 0022 07E0     		b	.L162
+ 1979              	.L161:
+ 581:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         }
+ 582:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 583:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* check the DMA underrun flag */
+ 584:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         if(RESET != (DAC_STAT & DAC_STAT_DDUDR1)){
+ 1980              		.loc 1 584 22
+ 1981 0024 064B     		ldr	r3, .L164
+ 1982 0026 1B68     		ldr	r3, [r3]
+ 1983              		.loc 1 584 31
+ 1984 0028 03F00053 		and	r3, r3, #536870912
+ 1985              		.loc 1 584 11
+ 1986 002c 002B     		cmp	r3, #0
+ 1987 002e 01D0     		beq	.L162
+ 585:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             temp_flag = SET;
+ 1988              		.loc 1 585 23
+ 1989 0030 0123     		movs	r3, #1
+ 1990 0032 FB73     		strb	r3, [r7, #15]
+ 1991              	.L162:
+ 586:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         }
+ 587:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 588:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     return temp_flag;
+ 1992              		.loc 1 588 12
+ 1993 0034 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 589:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 1994              		.loc 1 589 1
+ 1995 0036 1846     		mov	r0, r3
+ 1996 0038 1437     		adds	r7, r7, #20
+ 1997              		.cfi_def_cfa_offset 4
+ 1998 003a BD46     		mov	sp, r7
+ 1999              		.cfi_def_cfa_register 13
+ 2000              		@ sp needed
+ 2001 003c 80BC     		pop	{r7}
+ 2002              		.cfi_restore 7
+ 2003              		.cfi_def_cfa_offset 0
+ 2004 003e 7047     		bx	lr
+ 2005              	.L165:
+ 2006              		.align	2
+ 2007              	.L164:
+ 2008 0040 34740040 		.word	1073771572
+ 2009              		.cfi_endproc
+ 2010              	.LFE152:
+ 2012              		.section	.text.dac_flag_clear,"ax",%progbits
+ 2013              		.align	1
+ 2014              		.global	dac_flag_clear
+ 2015              		.syntax unified
+ 2016              		.thumb
+ 2017              		.thumb_func
+ 2018              		.fpu softvfp
+ 2020              	dac_flag_clear:
+ 2021              	.LFB153:
+ 590:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 591:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 592:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      clear the specified DAC flag(DAC DMA underrun flag)
+ 593:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 594:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 595:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 596:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 597:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 598:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_flag_clear(uint32_t dac_periph)
+ 599:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 2022              		.loc 1 599 1
+ 2023              		.cfi_startproc
+ 2024              		@ args = 0, pretend = 0, frame = 8
+ 2025              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2026              		@ link register save eliminated.
+ 2027 0000 80B4     		push	{r7}
+ 2028              		.cfi_def_cfa_offset 4
+ 2029              		.cfi_offset 7, -4
+ 2030 0002 83B0     		sub	sp, sp, #12
+ 2031              		.cfi_def_cfa_offset 16
+ 2032 0004 00AF     		add	r7, sp, #0
+ 2033              		.cfi_def_cfa_register 7
+ 2034 0006 7860     		str	r0, [r7, #4]
+ 600:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 2035              		.loc 1 600 7
+ 2036 0008 7B68     		ldr	r3, [r7, #4]
+ 2037 000a 002B     		cmp	r3, #0
+ 2038 000c 06D1     		bne	.L167
+ 601:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_STAT |= DAC_STAT_DDUDR0;
+ 2039              		.loc 1 601 18
+ 2040 000e 094B     		ldr	r3, .L170
+ 2041 0010 1B68     		ldr	r3, [r3]
+ 2042 0012 084A     		ldr	r2, .L170
+ 2043 0014 43F40053 		orr	r3, r3, #8192
+ 2044 0018 1360     		str	r3, [r2]
+ 602:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 603:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_STAT |= DAC_STAT_DDUDR1;
+ 604:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 605:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 2045              		.loc 1 605 1
+ 2046 001a 05E0     		b	.L169
+ 2047              	.L167:
+ 603:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 2048              		.loc 1 603 18
+ 2049 001c 054B     		ldr	r3, .L170
+ 2050 001e 1B68     		ldr	r3, [r3]
+ 2051 0020 044A     		ldr	r2, .L170
+ 2052 0022 43F00053 		orr	r3, r3, #536870912
+ 2053 0026 1360     		str	r3, [r2]
+ 2054              	.L169:
+ 2055              		.loc 1 605 1
+ 2056 0028 00BF     		nop
+ 2057 002a 0C37     		adds	r7, r7, #12
+ 2058              		.cfi_def_cfa_offset 4
+ 2059 002c BD46     		mov	sp, r7
+ 2060              		.cfi_def_cfa_register 13
+ 2061              		@ sp needed
+ 2062 002e 80BC     		pop	{r7}
+ 2063              		.cfi_restore 7
+ 2064              		.cfi_def_cfa_offset 0
+ 2065 0030 7047     		bx	lr
+ 2066              	.L171:
+ 2067 0032 00BF     		.align	2
+ 2068              	.L170:
+ 2069 0034 34740040 		.word	1073771572
+ 2070              		.cfi_endproc
+ 2071              	.LFE153:
+ 2073              		.section	.text.dac_interrupt_flag_get,"ax",%progbits
+ 2074              		.align	1
+ 2075              		.global	dac_interrupt_flag_get
+ 2076              		.syntax unified
+ 2077              		.thumb
+ 2078              		.thumb_func
+ 2079              		.fpu softvfp
+ 2081              	dac_interrupt_flag_get:
+ 2082              	.LFB154:
+ 606:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 607:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 608:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      get the specified DAC interrupt flag(DAC DMA underrun interrupt flag)
+ 609:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 610:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 611:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 612:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     the state of DAC interrupt flag(SET or RESET)
+ 613:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 614:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** FlagStatus dac_interrupt_flag_get(uint32_t dac_periph)
+ 615:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 2083              		.loc 1 615 1
+ 2084              		.cfi_startproc
+ 2085              		@ args = 0, pretend = 0, frame = 24
+ 2086              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2087              		@ link register save eliminated.
+ 2088 0000 80B4     		push	{r7}
+ 2089              		.cfi_def_cfa_offset 4
+ 2090              		.cfi_offset 7, -4
+ 2091 0002 87B0     		sub	sp, sp, #28
+ 2092              		.cfi_def_cfa_offset 32
+ 2093 0004 00AF     		add	r7, sp, #0
+ 2094              		.cfi_def_cfa_register 7
+ 2095 0006 7860     		str	r0, [r7, #4]
+ 616:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     FlagStatus temp_flag = RESET;
+ 2096              		.loc 1 616 16
+ 2097 0008 0023     		movs	r3, #0
+ 2098 000a FB75     		strb	r3, [r7, #23]
+ 617:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     uint32_t ddudr_flag = 0U, ddudrie_flag = 0U;
+ 2099              		.loc 1 617 14
+ 2100 000c 0023     		movs	r3, #0
+ 2101 000e 3B61     		str	r3, [r7, #16]
+ 2102              		.loc 1 617 31
+ 2103 0010 0023     		movs	r3, #0
+ 2104 0012 FB60     		str	r3, [r7, #12]
+ 618:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 2105              		.loc 1 618 7
+ 2106 0014 7B68     		ldr	r3, [r7, #4]
+ 2107 0016 002B     		cmp	r3, #0
+ 2108 0018 12D1     		bne	.L173
+ 619:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* check the DMA underrun flag and DAC DMA underrun interrupt enable flag */
+ 620:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         ddudr_flag = DAC_STAT & DAC_STAT_DDUDR0;
+ 2109              		.loc 1 620 22
+ 2110 001a 154B     		ldr	r3, .L176
+ 2111 001c 1B68     		ldr	r3, [r3]
+ 2112              		.loc 1 620 20
+ 2113 001e 03F40053 		and	r3, r3, #8192
+ 2114 0022 3B61     		str	r3, [r7, #16]
+ 621:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         ddudrie_flag = DAC_CTL & DAC_CTL_DDUDRIE0;
+ 2115              		.loc 1 621 24
+ 2116 0024 134B     		ldr	r3, .L176+4
+ 2117 0026 1B68     		ldr	r3, [r3]
+ 2118              		.loc 1 621 22
+ 2119 0028 03F40053 		and	r3, r3, #8192
+ 2120 002c FB60     		str	r3, [r7, #12]
+ 622:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         if((RESET != ddudr_flag) && (RESET != ddudrie_flag)){
+ 2121              		.loc 1 622 11
+ 2122 002e 3B69     		ldr	r3, [r7, #16]
+ 2123 0030 002B     		cmp	r3, #0
+ 2124 0032 17D0     		beq	.L174
+ 2125              		.loc 1 622 34 discriminator 1
+ 2126 0034 FB68     		ldr	r3, [r7, #12]
+ 2127 0036 002B     		cmp	r3, #0
+ 2128 0038 14D0     		beq	.L174
+ 623:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             temp_flag = SET;
+ 2129              		.loc 1 623 23
+ 2130 003a 0123     		movs	r3, #1
+ 2131 003c FB75     		strb	r3, [r7, #23]
+ 2132 003e 11E0     		b	.L174
+ 2133              	.L173:
+ 624:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         }
+ 625:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 626:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         /* check the DMA underrun flag and DAC DMA underrun interrupt enable flag */
+ 627:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         ddudr_flag = DAC_STAT & DAC_STAT_DDUDR1;
+ 2134              		.loc 1 627 22
+ 2135 0040 0B4B     		ldr	r3, .L176
+ 2136 0042 1B68     		ldr	r3, [r3]
+ 2137              		.loc 1 627 20
+ 2138 0044 03F00053 		and	r3, r3, #536870912
+ 2139 0048 3B61     		str	r3, [r7, #16]
+ 628:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         ddudrie_flag = DAC_CTL & DAC_CTL_DDUDRIE1;
+ 2140              		.loc 1 628 24
+ 2141 004a 0A4B     		ldr	r3, .L176+4
+ 2142 004c 1B68     		ldr	r3, [r3]
+ 2143              		.loc 1 628 22
+ 2144 004e 03F00053 		and	r3, r3, #536870912
+ 2145 0052 FB60     		str	r3, [r7, #12]
+ 629:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         if((RESET != ddudr_flag) && (RESET != ddudrie_flag)){
+ 2146              		.loc 1 629 11
+ 2147 0054 3B69     		ldr	r3, [r7, #16]
+ 2148 0056 002B     		cmp	r3, #0
+ 2149 0058 04D0     		beq	.L174
+ 2150              		.loc 1 629 34 discriminator 1
+ 2151 005a FB68     		ldr	r3, [r7, #12]
+ 2152 005c 002B     		cmp	r3, #0
+ 2153 005e 01D0     		beq	.L174
+ 630:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****             temp_flag = SET;
+ 2154              		.loc 1 630 23
+ 2155 0060 0123     		movs	r3, #1
+ 2156 0062 FB75     		strb	r3, [r7, #23]
+ 2157              	.L174:
+ 631:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         }
+ 632:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 633:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     return temp_flag;
+ 2158              		.loc 1 633 12
+ 2159 0064 FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
+ 634:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 2160              		.loc 1 634 1
+ 2161 0066 1846     		mov	r0, r3
+ 2162 0068 1C37     		adds	r7, r7, #28
+ 2163              		.cfi_def_cfa_offset 4
+ 2164 006a BD46     		mov	sp, r7
+ 2165              		.cfi_def_cfa_register 13
+ 2166              		@ sp needed
+ 2167 006c 80BC     		pop	{r7}
+ 2168              		.cfi_restore 7
+ 2169              		.cfi_def_cfa_offset 0
+ 2170 006e 7047     		bx	lr
+ 2171              	.L177:
+ 2172              		.align	2
+ 2173              	.L176:
+ 2174 0070 34740040 		.word	1073771572
+ 2175 0074 00740040 		.word	1073771520
+ 2176              		.cfi_endproc
+ 2177              	.LFE154:
+ 2179              		.section	.text.dac_interrupt_flag_clear,"ax",%progbits
+ 2180              		.align	1
+ 2181              		.global	dac_interrupt_flag_clear
+ 2182              		.syntax unified
+ 2183              		.thumb
+ 2184              		.thumb_func
+ 2185              		.fpu softvfp
+ 2187              	dac_interrupt_flag_clear:
+ 2188              	.LFB155:
+ 635:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** 
+ 636:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** /*!
+ 637:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \brief      clear the specified DAC interrupt flag(DAC DMA underrun interrupt flag)
+ 638:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[in]  dac_periph
+ 639:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****       \arg        DACx(x=0,1)
+ 640:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \param[out] none
+ 641:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     \retval     none
+ 642:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** */
+ 643:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** void dac_interrupt_flag_clear(uint32_t dac_periph)
+ 644:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** {
+ 2189              		.loc 1 644 1
+ 2190              		.cfi_startproc
+ 2191              		@ args = 0, pretend = 0, frame = 8
+ 2192              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2193              		@ link register save eliminated.
+ 2194 0000 80B4     		push	{r7}
+ 2195              		.cfi_def_cfa_offset 4
+ 2196              		.cfi_offset 7, -4
+ 2197 0002 83B0     		sub	sp, sp, #12
+ 2198              		.cfi_def_cfa_offset 16
+ 2199 0004 00AF     		add	r7, sp, #0
+ 2200              		.cfi_def_cfa_register 7
+ 2201 0006 7860     		str	r0, [r7, #4]
+ 645:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     if(DAC0 == dac_periph){
+ 2202              		.loc 1 645 7
+ 2203 0008 7B68     		ldr	r3, [r7, #4]
+ 2204 000a 002B     		cmp	r3, #0
+ 2205 000c 06D1     		bne	.L179
+ 646:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_STAT |= DAC_STAT_DDUDR0;
+ 2206              		.loc 1 646 18
+ 2207 000e 094B     		ldr	r3, .L182
+ 2208 0010 1B68     		ldr	r3, [r3]
+ 2209 0012 084A     		ldr	r2, .L182
+ 2210 0014 43F40053 		orr	r3, r3, #8192
+ 2211 0018 1360     		str	r3, [r2]
+ 647:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }else{
+ 648:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****         DAC_STAT |= DAC_STAT_DDUDR1;
+ 649:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 650:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c **** }
+ 2212              		.loc 1 650 1
+ 2213 001a 05E0     		b	.L181
+ 2214              	.L179:
+ 648:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dac.c ****     }
+ 2215              		.loc 1 648 18
+ 2216 001c 054B     		ldr	r3, .L182
+ 2217 001e 1B68     		ldr	r3, [r3]
+ 2218 0020 044A     		ldr	r2, .L182
+ 2219 0022 43F00053 		orr	r3, r3, #536870912
+ 2220 0026 1360     		str	r3, [r2]
+ 2221              	.L181:
+ 2222              		.loc 1 650 1
+ 2223 0028 00BF     		nop
+ 2224 002a 0C37     		adds	r7, r7, #12
+ 2225              		.cfi_def_cfa_offset 4
+ 2226 002c BD46     		mov	sp, r7
+ 2227              		.cfi_def_cfa_register 13
+ 2228              		@ sp needed
+ 2229 002e 80BC     		pop	{r7}
+ 2230              		.cfi_restore 7
+ 2231              		.cfi_def_cfa_offset 0
+ 2232 0030 7047     		bx	lr
+ 2233              	.L183:
+ 2234 0032 00BF     		.align	2
+ 2235              	.L182:
+ 2236 0034 34740040 		.word	1073771572
+ 2237              		.cfi_endproc
+ 2238              	.LFE155:
+ 2240              		.text
+ 2241              	.Letext0:
+ 2242              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 2243              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 2244              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 2245              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 2246              		.file 6 "../../CMSIS/gd32f4xx.h"
+ 2247              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_dac.c
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:16     .text.dac_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:24     .text.dac_deinit:00000000 dac_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:50     .text.dac_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:57     .text.dac_enable:00000000 dac_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:106    .text.dac_enable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:111    .text.dac_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:118    .text.dac_disable:00000000 dac_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:167    .text.dac_disable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:172    .text.dac_dma_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:179    .text.dac_dma_enable:00000000 dac_dma_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:228    .text.dac_dma_enable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:233    .text.dac_dma_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:240    .text.dac_dma_disable:00000000 dac_dma_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:289    .text.dac_dma_disable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:294    .text.dac_output_buffer_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:301    .text.dac_output_buffer_enable:00000000 dac_output_buffer_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:350    .text.dac_output_buffer_enable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:355    .text.dac_output_buffer_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:362    .text.dac_output_buffer_disable:00000000 dac_output_buffer_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:411    .text.dac_output_buffer_disable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:416    .text.dac_trigger_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:423    .text.dac_trigger_enable:00000000 dac_trigger_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:472    .text.dac_trigger_enable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:477    .text.dac_trigger_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:484    .text.dac_trigger_disable:00000000 dac_trigger_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:533    .text.dac_trigger_disable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:538    .text.dac_software_trigger_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:545    .text.dac_software_trigger_enable:00000000 dac_software_trigger_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:594    .text.dac_software_trigger_enable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:599    .text.dac_software_trigger_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:606    .text.dac_software_trigger_disable:00000000 dac_software_trigger_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:655    .text.dac_software_trigger_disable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:660    .text.dac_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:667    .text.dac_interrupt_enable:00000000 dac_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:716    .text.dac_interrupt_enable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:721    .text.dac_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:728    .text.dac_interrupt_disable:00000000 dac_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:777    .text.dac_interrupt_disable:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:782    .text.dac_trigger_source_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:789    .text.dac_trigger_source_config:00000000 dac_trigger_source_config
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:856    .text.dac_trigger_source_config:00000050 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:861    .text.dac_wave_mode_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:868    .text.dac_wave_mode_config:00000000 dac_wave_mode_config
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:935    .text.dac_wave_mode_config:00000050 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:940    .text.dac_wave_bit_width_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:947    .text.dac_wave_bit_width_config:00000000 dac_wave_bit_width_config
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1014   .text.dac_wave_bit_width_config:00000050 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1019   .text.dac_lfsr_noise_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1026   .text.dac_lfsr_noise_config:00000000 dac_lfsr_noise_config
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1093   .text.dac_lfsr_noise_config:00000050 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1098   .text.dac_triangle_noise_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1105   .text.dac_triangle_noise_config:00000000 dac_triangle_noise_config
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1172   .text.dac_triangle_noise_config:00000050 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1177   .text.dac_output_value_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1184   .text.dac_output_value_get:00000000 dac_output_value_get
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1235   .text.dac_output_value_get:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1241   .text.dac_concurrent_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1248   .text.dac_concurrent_enable:00000000 dac_concurrent_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1289   .text.dac_concurrent_enable:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1294   .text.dac_concurrent_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1301   .text.dac_concurrent_disable:00000000 dac_concurrent_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1345   .text.dac_concurrent_disable:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1350   .text.dac_concurrent_software_trigger_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1357   .text.dac_concurrent_software_trigger_enable:00000000 dac_concurrent_software_trigger_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1398   .text.dac_concurrent_software_trigger_enable:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1403   .text.dac_concurrent_software_trigger_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1410   .text.dac_concurrent_software_trigger_disable:00000000 dac_concurrent_software_trigger_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1454   .text.dac_concurrent_software_trigger_disable:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1459   .text.dac_concurrent_output_buffer_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1466   .text.dac_concurrent_output_buffer_enable:00000000 dac_concurrent_output_buffer_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1510   .text.dac_concurrent_output_buffer_enable:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1515   .text.dac_concurrent_output_buffer_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1522   .text.dac_concurrent_output_buffer_disable:00000000 dac_concurrent_output_buffer_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1563   .text.dac_concurrent_output_buffer_disable:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1568   .text.dac_concurrent_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1575   .text.dac_concurrent_interrupt_enable:00000000 dac_concurrent_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1616   .text.dac_concurrent_interrupt_enable:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1621   .text.dac_concurrent_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1628   .text.dac_concurrent_interrupt_disable:00000000 dac_concurrent_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1672   .text.dac_concurrent_interrupt_disable:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1677   .text.dac_data_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1684   .text.dac_data_set:00000000 dac_data_set
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1808   .text.dac_data_set:00000088 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1818   .text.dac_concurrent_data_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1825   .text.dac_concurrent_data_set:00000000 dac_concurrent_data_set
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1931   .text.dac_concurrent_data_set:00000070 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1938   .text.dac_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:1945   .text.dac_flag_get:00000000 dac_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2008   .text.dac_flag_get:00000040 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2013   .text.dac_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2020   .text.dac_flag_clear:00000000 dac_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2069   .text.dac_flag_clear:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2074   .text.dac_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2081   .text.dac_interrupt_flag_get:00000000 dac_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2174   .text.dac_interrupt_flag_get:00000070 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2180   .text.dac_interrupt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2187   .text.dac_interrupt_flag_clear:00000000 dac_interrupt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccA1lTQo.s:2236   .text.dac_interrupt_flag_clear:00000034 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_dac.h.18.956bd7ec49cbdac5e86dd0ec7ad5772a
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

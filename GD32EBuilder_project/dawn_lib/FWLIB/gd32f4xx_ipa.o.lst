@@ -1,0 +1,2019 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_ipa.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.ipa_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	ipa_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	ipa_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_ipa.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \file  gd32f4xx_ipa.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief IPA driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     2016-08-15, V1.0.1, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** #include "gd32f4xx_ipa.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      deinitialize IPA registers 
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+  27              		.loc 1 21 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     rcu_periph_reset_enable(RCU_IPARST);
+  37              		.loc 1 22 5
+  38 0004 40F21740 		movw	r0, #1047
+  39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     rcu_periph_reset_disable(RCU_IPARST);
+  40              		.loc 1 23 5
+  41 000c 40F21740 		movw	r0, #1047
+  42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+  43              		.loc 1 24 1
+  44 0014 00BF     		nop
+  45 0016 80BD     		pop	{r7, pc}
+  46              		.cfi_endproc
+  47              	.LFE123:
+  49              		.section	.text.ipa_transfer_enable,"ax",%progbits
+  50              		.align	1
+  51              		.global	ipa_transfer_enable
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	ipa_transfer_enable:
+  58              	.LFB124:
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA transfer enable 
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  none
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_transfer_enable(void)
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+  59              		.loc 1 33 1
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 80B4     		push	{r7}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 7, -4
+  67 0002 00AF     		add	r7, sp, #0
+  68              		.cfi_def_cfa_register 7
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_CTL |= IPA_CTL_TEN;
+  69              		.loc 1 34 13
+  70 0004 044B     		ldr	r3, .L3
+  71 0006 1B68     		ldr	r3, [r3]
+  72 0008 034A     		ldr	r2, .L3
+  73 000a 43F00103 		orr	r3, r3, #1
+  74 000e 1360     		str	r3, [r2]
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+  75              		.loc 1 35 1
+  76 0010 00BF     		nop
+  77 0012 BD46     		mov	sp, r7
+  78              		.cfi_def_cfa_register 13
+  79              		@ sp needed
+  80 0014 80BC     		pop	{r7}
+  81              		.cfi_restore 7
+  82              		.cfi_def_cfa_offset 0
+  83 0016 7047     		bx	lr
+  84              	.L4:
+  85              		.align	2
+  86              	.L3:
+  87 0018 00B00240 		.word	1073917952
+  88              		.cfi_endproc
+  89              	.LFE124:
+  91              		.section	.text.ipa_transfer_hangup_enable,"ax",%progbits
+  92              		.align	1
+  93              		.global	ipa_transfer_hangup_enable
+  94              		.syntax unified
+  95              		.thumb
+  96              		.thumb_func
+  97              		.fpu softvfp
+  99              	ipa_transfer_hangup_enable:
+ 100              	.LFB125:
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA transfer hang up enable
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  none.
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_transfer_hangup_enable(void)
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 101              		.loc 1 44 1
+ 102              		.cfi_startproc
+ 103              		@ args = 0, pretend = 0, frame = 0
+ 104              		@ frame_needed = 1, uses_anonymous_args = 0
+ 105              		@ link register save eliminated.
+ 106 0000 80B4     		push	{r7}
+ 107              		.cfi_def_cfa_offset 4
+ 108              		.cfi_offset 7, -4
+ 109 0002 00AF     		add	r7, sp, #0
+ 110              		.cfi_def_cfa_register 7
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_CTL |= IPA_CTL_THU;
+ 111              		.loc 1 45 13
+ 112 0004 044B     		ldr	r3, .L6
+ 113 0006 1B68     		ldr	r3, [r3]
+ 114 0008 034A     		ldr	r2, .L6
+ 115 000a 43F00203 		orr	r3, r3, #2
+ 116 000e 1360     		str	r3, [r2]
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 117              		.loc 1 46 1
+ 118 0010 00BF     		nop
+ 119 0012 BD46     		mov	sp, r7
+ 120              		.cfi_def_cfa_register 13
+ 121              		@ sp needed
+ 122 0014 80BC     		pop	{r7}
+ 123              		.cfi_restore 7
+ 124              		.cfi_def_cfa_offset 0
+ 125 0016 7047     		bx	lr
+ 126              	.L7:
+ 127              		.align	2
+ 128              	.L6:
+ 129 0018 00B00240 		.word	1073917952
+ 130              		.cfi_endproc
+ 131              	.LFE125:
+ 133              		.section	.text.ipa_transfer_hangup_disable,"ax",%progbits
+ 134              		.align	1
+ 135              		.global	ipa_transfer_hangup_disable
+ 136              		.syntax unified
+ 137              		.thumb
+ 138              		.thumb_func
+ 139              		.fpu softvfp
+ 141              	ipa_transfer_hangup_disable:
+ 142              	.LFB126:
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA transfer hang up disable
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  none.
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_transfer_hangup_disable(void)
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 143              		.loc 1 55 1
+ 144              		.cfi_startproc
+ 145              		@ args = 0, pretend = 0, frame = 0
+ 146              		@ frame_needed = 1, uses_anonymous_args = 0
+ 147              		@ link register save eliminated.
+ 148 0000 80B4     		push	{r7}
+ 149              		.cfi_def_cfa_offset 4
+ 150              		.cfi_offset 7, -4
+ 151 0002 00AF     		add	r7, sp, #0
+ 152              		.cfi_def_cfa_register 7
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_CTL &= ~(IPA_CTL_THU);
+ 153              		.loc 1 56 13
+ 154 0004 044B     		ldr	r3, .L9
+ 155 0006 1B68     		ldr	r3, [r3]
+ 156 0008 034A     		ldr	r2, .L9
+ 157 000a 23F00203 		bic	r3, r3, #2
+ 158 000e 1360     		str	r3, [r2]
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 159              		.loc 1 57 1
+ 160 0010 00BF     		nop
+ 161 0012 BD46     		mov	sp, r7
+ 162              		.cfi_def_cfa_register 13
+ 163              		@ sp needed
+ 164 0014 80BC     		pop	{r7}
+ 165              		.cfi_restore 7
+ 166              		.cfi_def_cfa_offset 0
+ 167 0016 7047     		bx	lr
+ 168              	.L10:
+ 169              		.align	2
+ 170              	.L9:
+ 171 0018 00B00240 		.word	1073917952
+ 172              		.cfi_endproc
+ 173              	.LFE126:
+ 175              		.section	.text.ipa_transfer_stop_enable,"ax",%progbits
+ 176              		.align	1
+ 177              		.global	ipa_transfer_stop_enable
+ 178              		.syntax unified
+ 179              		.thumb
+ 180              		.thumb_func
+ 181              		.fpu softvfp
+ 183              	ipa_transfer_stop_enable:
+ 184              	.LFB127:
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA transfer stop enable 
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  none.
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_transfer_stop_enable(void)
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 185              		.loc 1 66 1
+ 186              		.cfi_startproc
+ 187              		@ args = 0, pretend = 0, frame = 0
+ 188              		@ frame_needed = 1, uses_anonymous_args = 0
+ 189              		@ link register save eliminated.
+ 190 0000 80B4     		push	{r7}
+ 191              		.cfi_def_cfa_offset 4
+ 192              		.cfi_offset 7, -4
+ 193 0002 00AF     		add	r7, sp, #0
+ 194              		.cfi_def_cfa_register 7
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_CTL |= IPA_CTL_TST;
+ 195              		.loc 1 67 13
+ 196 0004 044B     		ldr	r3, .L12
+ 197 0006 1B68     		ldr	r3, [r3]
+ 198 0008 034A     		ldr	r2, .L12
+ 199 000a 43F00403 		orr	r3, r3, #4
+ 200 000e 1360     		str	r3, [r2]
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 201              		.loc 1 68 1
+ 202 0010 00BF     		nop
+ 203 0012 BD46     		mov	sp, r7
+ 204              		.cfi_def_cfa_register 13
+ 205              		@ sp needed
+ 206 0014 80BC     		pop	{r7}
+ 207              		.cfi_restore 7
+ 208              		.cfi_def_cfa_offset 0
+ 209 0016 7047     		bx	lr
+ 210              	.L13:
+ 211              		.align	2
+ 212              	.L12:
+ 213 0018 00B00240 		.word	1073917952
+ 214              		.cfi_endproc
+ 215              	.LFE127:
+ 217              		.section	.text.ipa_transfer_stop_disable,"ax",%progbits
+ 218              		.align	1
+ 219              		.global	ipa_transfer_stop_disable
+ 220              		.syntax unified
+ 221              		.thumb
+ 222              		.thumb_func
+ 223              		.fpu softvfp
+ 225              	ipa_transfer_stop_disable:
+ 226              	.LFB128:
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA transfer stop disable 
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  none.
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_transfer_stop_disable(void)
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 227              		.loc 1 77 1
+ 228              		.cfi_startproc
+ 229              		@ args = 0, pretend = 0, frame = 0
+ 230              		@ frame_needed = 1, uses_anonymous_args = 0
+ 231              		@ link register save eliminated.
+ 232 0000 80B4     		push	{r7}
+ 233              		.cfi_def_cfa_offset 4
+ 234              		.cfi_offset 7, -4
+ 235 0002 00AF     		add	r7, sp, #0
+ 236              		.cfi_def_cfa_register 7
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_CTL &= ~(IPA_CTL_TST);
+ 237              		.loc 1 78 13
+ 238 0004 044B     		ldr	r3, .L15
+ 239 0006 1B68     		ldr	r3, [r3]
+ 240 0008 034A     		ldr	r2, .L15
+ 241 000a 23F00403 		bic	r3, r3, #4
+ 242 000e 1360     		str	r3, [r2]
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 243              		.loc 1 79 1
+ 244 0010 00BF     		nop
+ 245 0012 BD46     		mov	sp, r7
+ 246              		.cfi_def_cfa_register 13
+ 247              		@ sp needed
+ 248 0014 80BC     		pop	{r7}
+ 249              		.cfi_restore 7
+ 250              		.cfi_def_cfa_offset 0
+ 251 0016 7047     		bx	lr
+ 252              	.L16:
+ 253              		.align	2
+ 254              	.L15:
+ 255 0018 00B00240 		.word	1073917952
+ 256              		.cfi_endproc
+ 257              	.LFE128:
+ 259              		.section	.text.ipa_foreground_lut_loading_enable,"ax",%progbits
+ 260              		.align	1
+ 261              		.global	ipa_foreground_lut_loading_enable
+ 262              		.syntax unified
+ 263              		.thumb
+ 264              		.thumb_func
+ 265              		.fpu softvfp
+ 267              	ipa_foreground_lut_loading_enable:
+ 268              	.LFB129:
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA foreground LUT loading enable 
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  none.
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_foreground_lut_loading_enable(void)
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 269              		.loc 1 87 1
+ 270              		.cfi_startproc
+ 271              		@ args = 0, pretend = 0, frame = 0
+ 272              		@ frame_needed = 1, uses_anonymous_args = 0
+ 273              		@ link register save eliminated.
+ 274 0000 80B4     		push	{r7}
+ 275              		.cfi_def_cfa_offset 4
+ 276              		.cfi_offset 7, -4
+ 277 0002 00AF     		add	r7, sp, #0
+ 278              		.cfi_def_cfa_register 7
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FPCTL |= IPA_FPCTL_FLLEN;
+ 279              		.loc 1 88 15
+ 280 0004 044B     		ldr	r3, .L18
+ 281 0006 1B68     		ldr	r3, [r3]
+ 282 0008 034A     		ldr	r2, .L18
+ 283 000a 43F02003 		orr	r3, r3, #32
+ 284 000e 1360     		str	r3, [r2]
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 285              		.loc 1 89 1
+ 286 0010 00BF     		nop
+ 287 0012 BD46     		mov	sp, r7
+ 288              		.cfi_def_cfa_register 13
+ 289              		@ sp needed
+ 290 0014 80BC     		pop	{r7}
+ 291              		.cfi_restore 7
+ 292              		.cfi_def_cfa_offset 0
+ 293 0016 7047     		bx	lr
+ 294              	.L19:
+ 295              		.align	2
+ 296              	.L18:
+ 297 0018 1CB00240 		.word	1073917980
+ 298              		.cfi_endproc
+ 299              	.LFE129:
+ 301              		.section	.text.ipa_background_lut_loading_enable,"ax",%progbits
+ 302              		.align	1
+ 303              		.global	ipa_background_lut_loading_enable
+ 304              		.syntax unified
+ 305              		.thumb
+ 306              		.thumb_func
+ 307              		.fpu softvfp
+ 309              	ipa_background_lut_loading_enable:
+ 310              	.LFB130:
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA background LUT loading enable 
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  none.
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_background_lut_loading_enable(void)
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 311              		.loc 1 98 1
+ 312              		.cfi_startproc
+ 313              		@ args = 0, pretend = 0, frame = 0
+ 314              		@ frame_needed = 1, uses_anonymous_args = 0
+ 315              		@ link register save eliminated.
+ 316 0000 80B4     		push	{r7}
+ 317              		.cfi_def_cfa_offset 4
+ 318              		.cfi_offset 7, -4
+ 319 0002 00AF     		add	r7, sp, #0
+ 320              		.cfi_def_cfa_register 7
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BPCTL |= IPA_BPCTL_BLLEN;
+ 321              		.loc 1 99 15
+ 322 0004 044B     		ldr	r3, .L21
+ 323 0006 1B68     		ldr	r3, [r3]
+ 324 0008 034A     		ldr	r2, .L21
+ 325 000a 43F02003 		orr	r3, r3, #32
+ 326 000e 1360     		str	r3, [r2]
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 327              		.loc 1 100 1
+ 328 0010 00BF     		nop
+ 329 0012 BD46     		mov	sp, r7
+ 330              		.cfi_def_cfa_register 13
+ 331              		@ sp needed
+ 332 0014 80BC     		pop	{r7}
+ 333              		.cfi_restore 7
+ 334              		.cfi_def_cfa_offset 0
+ 335 0016 7047     		bx	lr
+ 336              	.L22:
+ 337              		.align	2
+ 338              	.L21:
+ 339 0018 24B00240 		.word	1073917988
+ 340              		.cfi_endproc
+ 341              	.LFE130:
+ 343              		.section	.text.ipa_pixel_format_convert_mod,"ax",%progbits
+ 344              		.align	1
+ 345              		.global	ipa_pixel_format_convert_mod
+ 346              		.syntax unified
+ 347              		.thumb
+ 348              		.thumb_func
+ 349              		.fpu softvfp
+ 351              	ipa_pixel_format_convert_mod:
+ 352              	.LFB131:
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      Pixel format convert mode 
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  pfcm:
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_FGTODE: foreground memory to destination memory without pixel format convert 
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_FGTODE_PF_CONVERT: foreground memory to destination memory with pixel format 
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_FGBGTODE: blending foreground and background memory to destination memory 
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_FILL_UP_DE: fill up destination memory with specific color 
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_pixel_format_convert_mod(uint32_t pfcm)
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 353              		.loc 1 113 1
+ 354              		.cfi_startproc
+ 355              		@ args = 0, pretend = 0, frame = 8
+ 356              		@ frame_needed = 1, uses_anonymous_args = 0
+ 357              		@ link register save eliminated.
+ 358 0000 80B4     		push	{r7}
+ 359              		.cfi_def_cfa_offset 4
+ 360              		.cfi_offset 7, -4
+ 361 0002 83B0     		sub	sp, sp, #12
+ 362              		.cfi_def_cfa_offset 16
+ 363 0004 00AF     		add	r7, sp, #0
+ 364              		.cfi_def_cfa_register 7
+ 365 0006 7860     		str	r0, [r7, #4]
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_CTL |= pfcm;
+ 366              		.loc 1 114 13
+ 367 0008 054B     		ldr	r3, .L24
+ 368 000a 1A68     		ldr	r2, [r3]
+ 369 000c 0449     		ldr	r1, .L24
+ 370 000e 7B68     		ldr	r3, [r7, #4]
+ 371 0010 1343     		orrs	r3, r3, r2
+ 372 0012 0B60     		str	r3, [r1]
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 373              		.loc 1 115 1
+ 374 0014 00BF     		nop
+ 375 0016 0C37     		adds	r7, r7, #12
+ 376              		.cfi_def_cfa_offset 4
+ 377 0018 BD46     		mov	sp, r7
+ 378              		.cfi_def_cfa_register 13
+ 379              		@ sp needed
+ 380 001a 80BC     		pop	{r7}
+ 381              		.cfi_restore 7
+ 382              		.cfi_def_cfa_offset 0
+ 383 001c 7047     		bx	lr
+ 384              	.L25:
+ 385 001e 00BF     		.align	2
+ 386              	.L24:
+ 387 0020 00B00240 		.word	1073917952
+ 388              		.cfi_endproc
+ 389              	.LFE131:
+ 391              		.section	.text.ipa_foreground_init,"ax",%progbits
+ 392              		.align	1
+ 393              		.global	ipa_foreground_init
+ 394              		.syntax unified
+ 395              		.thumb
+ 396              		.thumb_func
+ 397              		.fpu softvfp
+ 399              	ipa_foreground_init:
+ 400              	.LFB132:
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      initialize foreground parameters 
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  foreground_struct: the data needed to initialize fore.
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   foreground_memaddr: foreground memory base address
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   foreground_lineoff: foreground line offset
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   foreground_prealpha: foreground pre-defined alpha value 
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   foreground_alpha_algorithm: IPA_FG_ALPHA_MODE_0,IPA_FG_ALPHA_MODE_1,IPA_FG_ALPHA_
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   foreground_pf: foreground pixel format
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   foreground_prered: foreground pre-defined red value
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   foreground_pregreen: foreground pre-defined green value 
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   foreground_preblue: foreground pre-defined blue value
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_foreground_init(ipa_foreground_parameter_struct* foreground_struct)
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 401              		.loc 1 132 1
+ 402              		.cfi_startproc
+ 403              		@ args = 0, pretend = 0, frame = 8
+ 404              		@ frame_needed = 1, uses_anonymous_args = 0
+ 405              		@ link register save eliminated.
+ 406 0000 80B4     		push	{r7}
+ 407              		.cfi_def_cfa_offset 4
+ 408              		.cfi_offset 7, -4
+ 409 0002 83B0     		sub	sp, sp, #12
+ 410              		.cfi_def_cfa_offset 16
+ 411 0004 00AF     		add	r7, sp, #0
+ 412              		.cfi_def_cfa_register 7
+ 413 0006 7860     		str	r0, [r7, #4]
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* foreground memory base address configuration */
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FMADDR &= ~(IPA_FMADDR_FMADDR);
+ 414              		.loc 1 134 16
+ 415 0008 254B     		ldr	r3, .L27
+ 416 000a 1B68     		ldr	r3, [r3]
+ 417 000c 244B     		ldr	r3, .L27
+ 418 000e 0022     		movs	r2, #0
+ 419 0010 1A60     		str	r2, [r3]
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FMADDR = foreground_struct->foreground_memaddr;
+ 420              		.loc 1 135 5
+ 421 0012 234A     		ldr	r2, .L27
+ 422              		.loc 1 135 35
+ 423 0014 7B68     		ldr	r3, [r7, #4]
+ 424 0016 1B68     		ldr	r3, [r3]
+ 425              		.loc 1 135 16
+ 426 0018 1360     		str	r3, [r2]
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* foreground line offset configuration */
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FLOFF &= ~(IPA_FLOFF_FLOFF);
+ 427              		.loc 1 137 15
+ 428 001a 224B     		ldr	r3, .L27+4
+ 429 001c 1B68     		ldr	r3, [r3]
+ 430 001e 214A     		ldr	r2, .L27+4
+ 431 0020 23F47F53 		bic	r3, r3, #16320
+ 432 0024 23F03F03 		bic	r3, r3, #63
+ 433 0028 1360     		str	r3, [r2]
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FLOFF = foreground_struct->foreground_lineoff;
+ 434              		.loc 1 138 5
+ 435 002a 1E4A     		ldr	r2, .L27+4
+ 436              		.loc 1 138 34
+ 437 002c 7B68     		ldr	r3, [r7, #4]
+ 438 002e 5B68     		ldr	r3, [r3, #4]
+ 439              		.loc 1 138 15
+ 440 0030 1360     		str	r3, [r2]
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* foreground pixel format pre-defined alpha, alpha calculation algorithm configuration */    
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FPCTL &= ~(IPA_FPCTL_FPDAV|IPA_FPCTL_FAVCA|IPA_FPCTL_FPF);
+ 441              		.loc 1 140 15
+ 442 0032 1D4B     		ldr	r3, .L27+8
+ 443 0034 1A68     		ldr	r2, [r3]
+ 444 0036 1C49     		ldr	r1, .L27+8
+ 445 0038 1C4B     		ldr	r3, .L27+12
+ 446 003a 1340     		ands	r3, r3, r2
+ 447 003c 0B60     		str	r3, [r1]
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FPCTL |= (foreground_struct->foreground_prealpha<<24U);
+ 448              		.loc 1 141 15
+ 449 003e 1A4B     		ldr	r3, .L27+8
+ 450 0040 1A68     		ldr	r2, [r3]
+ 451              		.loc 1 141 36
+ 452 0042 7B68     		ldr	r3, [r7, #4]
+ 453 0044 9B68     		ldr	r3, [r3, #8]
+ 454              		.loc 1 141 57
+ 455 0046 1B06     		lsls	r3, r3, #24
+ 456              		.loc 1 141 15
+ 457 0048 1749     		ldr	r1, .L27+8
+ 458 004a 1343     		orrs	r3, r3, r2
+ 459 004c 0B60     		str	r3, [r1]
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FPCTL |= foreground_struct->foreground_alpha_algorithm;
+ 460              		.loc 1 142 15
+ 461 004e 164B     		ldr	r3, .L27+8
+ 462 0050 1A68     		ldr	r2, [r3]
+ 463              		.loc 1 142 35
+ 464 0052 7B68     		ldr	r3, [r7, #4]
+ 465 0054 DB68     		ldr	r3, [r3, #12]
+ 466              		.loc 1 142 15
+ 467 0056 1449     		ldr	r1, .L27+8
+ 468 0058 1343     		orrs	r3, r3, r2
+ 469 005a 0B60     		str	r3, [r1]
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FPCTL |= foreground_struct->foreground_pf;
+ 470              		.loc 1 143 15
+ 471 005c 124B     		ldr	r3, .L27+8
+ 472 005e 1A68     		ldr	r2, [r3]
+ 473              		.loc 1 143 35
+ 474 0060 7B68     		ldr	r3, [r7, #4]
+ 475 0062 1B69     		ldr	r3, [r3, #16]
+ 476              		.loc 1 143 15
+ 477 0064 1049     		ldr	r1, .L27+8
+ 478 0066 1343     		orrs	r3, r3, r2
+ 479 0068 0B60     		str	r3, [r1]
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* foreground pre-defined red green blue configuration */    
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FPV &= ~(IPA_FPV_FPDRV|IPA_FPV_FPDGV|IPA_FPV_FPDBV);
+ 480              		.loc 1 145 13
+ 481 006a 114B     		ldr	r3, .L27+16
+ 482 006c 1B68     		ldr	r3, [r3]
+ 483 006e 104A     		ldr	r2, .L27+16
+ 484 0070 03F07F43 		and	r3, r3, #-16777216
+ 485 0074 1360     		str	r3, [r2]
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FPV |= ((foreground_struct->foreground_prered<<16U)|(foreground_struct->foreground_pregreen
+ 486              		.loc 1 146 13
+ 487 0076 0E4B     		ldr	r3, .L27+16
+ 488 0078 1A68     		ldr	r2, [r3]
+ 489              		.loc 1 146 35
+ 490 007a 7B68     		ldr	r3, [r7, #4]
+ 491 007c 5B69     		ldr	r3, [r3, #20]
+ 492              		.loc 1 146 54
+ 493 007e 1904     		lsls	r1, r3, #16
+ 494              		.loc 1 146 79
+ 495 0080 7B68     		ldr	r3, [r7, #4]
+ 496 0082 9B69     		ldr	r3, [r3, #24]
+ 497              		.loc 1 146 100
+ 498 0084 1B02     		lsls	r3, r3, #8
+ 499              		.loc 1 146 60
+ 500 0086 1943     		orrs	r1, r1, r3
+ 501              		.loc 1 146 124
+ 502 0088 7B68     		ldr	r3, [r7, #4]
+ 503 008a DB69     		ldr	r3, [r3, #28]
+ 504              		.loc 1 146 105
+ 505 008c 0B43     		orrs	r3, r3, r1
+ 506              		.loc 1 146 13
+ 507 008e 0849     		ldr	r1, .L27+16
+ 508 0090 1343     		orrs	r3, r3, r2
+ 509 0092 0B60     		str	r3, [r1]
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 510              		.loc 1 147 1
+ 511 0094 00BF     		nop
+ 512 0096 0C37     		adds	r7, r7, #12
+ 513              		.cfi_def_cfa_offset 4
+ 514 0098 BD46     		mov	sp, r7
+ 515              		.cfi_def_cfa_register 13
+ 516              		@ sp needed
+ 517 009a 80BC     		pop	{r7}
+ 518              		.cfi_restore 7
+ 519              		.cfi_def_cfa_offset 0
+ 520 009c 7047     		bx	lr
+ 521              	.L28:
+ 522 009e 00BF     		.align	2
+ 523              	.L27:
+ 524 00a0 0CB00240 		.word	1073917964
+ 525 00a4 10B00240 		.word	1073917968
+ 526 00a8 1CB00240 		.word	1073917980
+ 527 00ac F0FFFC00 		.word	16580592
+ 528 00b0 20B00240 		.word	1073917984
+ 529              		.cfi_endproc
+ 530              	.LFE132:
+ 532              		.section	.text.ipa_background_init,"ax",%progbits
+ 533              		.align	1
+ 534              		.global	ipa_background_init
+ 535              		.syntax unified
+ 536              		.thumb
+ 537              		.thumb_func
+ 538              		.fpu softvfp
+ 540              	ipa_background_init:
+ 541              	.LFB133:
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      initialize background parameters 
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  background_struct: the data needed to initialize fore.
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   background_memaddr: background memory base address
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   background_lineoff: background line offset
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   background_prealpha: background pre-defined alpha value 
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   background_alpha_algorithm: IPA_BG_ALPHA_MODE_0,IPA_FG_ALPHA_MODE_1,IPA_FG_ALPHA_
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   background_pf: background pixel format
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   background_prered: background pre-defined red value
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   background_pregreen: background pre-defined green value 
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   background_preblue: background pre-defined blue value
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_background_init(ipa_background_parameter_struct* background_struct)
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 542              		.loc 1 164 1
+ 543              		.cfi_startproc
+ 544              		@ args = 0, pretend = 0, frame = 8
+ 545              		@ frame_needed = 1, uses_anonymous_args = 0
+ 546              		@ link register save eliminated.
+ 547 0000 80B4     		push	{r7}
+ 548              		.cfi_def_cfa_offset 4
+ 549              		.cfi_offset 7, -4
+ 550 0002 83B0     		sub	sp, sp, #12
+ 551              		.cfi_def_cfa_offset 16
+ 552 0004 00AF     		add	r7, sp, #0
+ 553              		.cfi_def_cfa_register 7
+ 554 0006 7860     		str	r0, [r7, #4]
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* background memory base address configuration */
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BMADDR &= ~(IPA_BMADDR_BMADDR);
+ 555              		.loc 1 166 16
+ 556 0008 254B     		ldr	r3, .L30
+ 557 000a 1B68     		ldr	r3, [r3]
+ 558 000c 244B     		ldr	r3, .L30
+ 559 000e 0022     		movs	r2, #0
+ 560 0010 1A60     		str	r2, [r3]
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BMADDR = background_struct->background_memaddr;
+ 561              		.loc 1 167 5
+ 562 0012 234A     		ldr	r2, .L30
+ 563              		.loc 1 167 35
+ 564 0014 7B68     		ldr	r3, [r7, #4]
+ 565 0016 1B68     		ldr	r3, [r3]
+ 566              		.loc 1 167 16
+ 567 0018 1360     		str	r3, [r2]
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* background line offset configuration */
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BLOFF &= ~(IPA_BLOFF_BLOFF);
+ 568              		.loc 1 169 15
+ 569 001a 224B     		ldr	r3, .L30+4
+ 570 001c 1B68     		ldr	r3, [r3]
+ 571 001e 214A     		ldr	r2, .L30+4
+ 572 0020 23F47F53 		bic	r3, r3, #16320
+ 573 0024 23F03F03 		bic	r3, r3, #63
+ 574 0028 1360     		str	r3, [r2]
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BLOFF =background_struct->background_lineoff;
+ 575              		.loc 1 170 5
+ 576 002a 1E4A     		ldr	r2, .L30+4
+ 577              		.loc 1 170 33
+ 578 002c 7B68     		ldr	r3, [r7, #4]
+ 579 002e 5B68     		ldr	r3, [r3, #4]
+ 580              		.loc 1 170 15
+ 581 0030 1360     		str	r3, [r2]
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* background pixel format pre-defined alpha, alpha calculation algorithm configuration */    
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BPCTL &= ~(IPA_BPCTL_BPDAV|IPA_BPCTL_BAVCA|IPA_BPCTL_BPF);
+ 582              		.loc 1 172 15
+ 583 0032 1D4B     		ldr	r3, .L30+8
+ 584 0034 1A68     		ldr	r2, [r3]
+ 585 0036 1C49     		ldr	r1, .L30+8
+ 586 0038 1C4B     		ldr	r3, .L30+12
+ 587 003a 1340     		ands	r3, r3, r2
+ 588 003c 0B60     		str	r3, [r1]
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BPCTL |= (background_struct->background_prealpha<<24U);
+ 589              		.loc 1 173 15
+ 590 003e 1A4B     		ldr	r3, .L30+8
+ 591 0040 1A68     		ldr	r2, [r3]
+ 592              		.loc 1 173 36
+ 593 0042 7B68     		ldr	r3, [r7, #4]
+ 594 0044 9B68     		ldr	r3, [r3, #8]
+ 595              		.loc 1 173 57
+ 596 0046 1B06     		lsls	r3, r3, #24
+ 597              		.loc 1 173 15
+ 598 0048 1749     		ldr	r1, .L30+8
+ 599 004a 1343     		orrs	r3, r3, r2
+ 600 004c 0B60     		str	r3, [r1]
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BPCTL |= background_struct->background_alpha_algorithm;
+ 601              		.loc 1 174 15
+ 602 004e 164B     		ldr	r3, .L30+8
+ 603 0050 1A68     		ldr	r2, [r3]
+ 604              		.loc 1 174 35
+ 605 0052 7B68     		ldr	r3, [r7, #4]
+ 606 0054 DB68     		ldr	r3, [r3, #12]
+ 607              		.loc 1 174 15
+ 608 0056 1449     		ldr	r1, .L30+8
+ 609 0058 1343     		orrs	r3, r3, r2
+ 610 005a 0B60     		str	r3, [r1]
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BPCTL |= background_struct->background_pf; 
+ 611              		.loc 1 175 15
+ 612 005c 124B     		ldr	r3, .L30+8
+ 613 005e 1A68     		ldr	r2, [r3]
+ 614              		.loc 1 175 35
+ 615 0060 7B68     		ldr	r3, [r7, #4]
+ 616 0062 1B69     		ldr	r3, [r3, #16]
+ 617              		.loc 1 175 15
+ 618 0064 1049     		ldr	r1, .L30+8
+ 619 0066 1343     		orrs	r3, r3, r2
+ 620 0068 0B60     		str	r3, [r1]
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* background pre-defined red green blue configuration */  
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BPV &= ~(IPA_BPV_BPDRV|IPA_BPV_BPDGV|IPA_BPV_BPDBV);
+ 621              		.loc 1 177 13
+ 622 006a 114B     		ldr	r3, .L30+16
+ 623 006c 1B68     		ldr	r3, [r3]
+ 624 006e 104A     		ldr	r2, .L30+16
+ 625 0070 03F07F43 		and	r3, r3, #-16777216
+ 626 0074 1360     		str	r3, [r2]
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BPV |= ((background_struct->background_prered<<16U)|(background_struct->background_pregreen
+ 627              		.loc 1 178 13
+ 628 0076 0E4B     		ldr	r3, .L30+16
+ 629 0078 1A68     		ldr	r2, [r3]
+ 630              		.loc 1 178 35
+ 631 007a 7B68     		ldr	r3, [r7, #4]
+ 632 007c 5B69     		ldr	r3, [r3, #20]
+ 633              		.loc 1 178 54
+ 634 007e 1904     		lsls	r1, r3, #16
+ 635              		.loc 1 178 79
+ 636 0080 7B68     		ldr	r3, [r7, #4]
+ 637 0082 9B69     		ldr	r3, [r3, #24]
+ 638              		.loc 1 178 100
+ 639 0084 1B02     		lsls	r3, r3, #8
+ 640              		.loc 1 178 60
+ 641 0086 1943     		orrs	r1, r1, r3
+ 642              		.loc 1 178 124
+ 643 0088 7B68     		ldr	r3, [r7, #4]
+ 644 008a DB69     		ldr	r3, [r3, #28]
+ 645              		.loc 1 178 105
+ 646 008c 0B43     		orrs	r3, r3, r1
+ 647              		.loc 1 178 13
+ 648 008e 0849     		ldr	r1, .L30+16
+ 649 0090 1343     		orrs	r3, r3, r2
+ 650 0092 0B60     		str	r3, [r1]
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 651              		.loc 1 179 1
+ 652 0094 00BF     		nop
+ 653 0096 0C37     		adds	r7, r7, #12
+ 654              		.cfi_def_cfa_offset 4
+ 655 0098 BD46     		mov	sp, r7
+ 656              		.cfi_def_cfa_register 13
+ 657              		@ sp needed
+ 658 009a 80BC     		pop	{r7}
+ 659              		.cfi_restore 7
+ 660              		.cfi_def_cfa_offset 0
+ 661 009c 7047     		bx	lr
+ 662              	.L31:
+ 663 009e 00BF     		.align	2
+ 664              	.L30:
+ 665 00a0 14B00240 		.word	1073917972
+ 666 00a4 18B00240 		.word	1073917976
+ 667 00a8 24B00240 		.word	1073917988
+ 668 00ac F0FFFC00 		.word	16580592
+ 669 00b0 28B00240 		.word	1073917992
+ 670              		.cfi_endproc
+ 671              	.LFE133:
+ 673              		.section	.text.ipa_destination_init,"ax",%progbits
+ 674              		.align	1
+ 675              		.global	ipa_destination_init
+ 676              		.syntax unified
+ 677              		.thumb
+ 678              		.thumb_func
+ 679              		.fpu softvfp
+ 681              	ipa_destination_init:
+ 682              	.LFB134:
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      initialize destination parameters  
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  destination_struct: the data needed to initialize tli.
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   destination_pf: refer to ipa_dpf_enum 
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   destination_lineoff: destination line offset
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   destination_prealpha: destination pre-defined alpha value 
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   destination_prered: destination pre-defined red value
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   destination_pregreen: destination pre-defined green value
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   destination_preblue: destination pre-defined blue value
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   destination_memaddr: destination memory base address 
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   image_width: width of the image to be processed
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                   image_height: height of the image to be processed
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_destination_init(ipa_destination_parameter_struct* destination_struct)
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 683              		.loc 1 197 1
+ 684              		.cfi_startproc
+ 685              		@ args = 0, pretend = 0, frame = 16
+ 686              		@ frame_needed = 1, uses_anonymous_args = 0
+ 687              		@ link register save eliminated.
+ 688 0000 80B4     		push	{r7}
+ 689              		.cfi_def_cfa_offset 4
+ 690              		.cfi_offset 7, -4
+ 691 0002 85B0     		sub	sp, sp, #20
+ 692              		.cfi_def_cfa_offset 24
+ 693 0004 00AF     		add	r7, sp, #0
+ 694              		.cfi_def_cfa_register 7
+ 695 0006 7860     		str	r0, [r7, #4]
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     uint32_t destination_pixelformat;
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* destination pixel format configuration */
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_DPCTL &= ~(IPA_DPCTL_DPF);
+ 696              		.loc 1 200 15
+ 697 0008 594B     		ldr	r3, .L42
+ 698 000a 1B68     		ldr	r3, [r3]
+ 699 000c 584A     		ldr	r2, .L42
+ 700 000e 23F00703 		bic	r3, r3, #7
+ 701 0012 1360     		str	r3, [r2]
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_DPCTL = destination_struct->destination_pf;
+ 702              		.loc 1 201 5
+ 703 0014 564A     		ldr	r2, .L42
+ 704              		.loc 1 201 35
+ 705 0016 7B68     		ldr	r3, [r7, #4]
+ 706 0018 DB68     		ldr	r3, [r3, #12]
+ 707              		.loc 1 201 15
+ 708 001a 1360     		str	r3, [r2]
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     destination_pixelformat = destination_struct->destination_pf;
+ 709              		.loc 1 202 29
+ 710 001c 7B68     		ldr	r3, [r7, #4]
+ 711 001e DB68     		ldr	r3, [r3, #12]
+ 712 0020 FB60     		str	r3, [r7, #12]
+ 713 0022 FB68     		ldr	r3, [r7, #12]
+ 714 0024 042B     		cmp	r3, #4
+ 715 0026 77D8     		bhi	.L41
+ 716 0028 01A2     		adr	r2, .L35
+ 717 002a 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 718 002e 00BF     		.p2align 2
+ 719              	.L35:
+ 720 0030 45000000 		.word	.L39+1
+ 721 0034 71000000 		.word	.L38+1
+ 722 0038 97000000 		.word	.L37+1
+ 723 003c BD000000 		.word	.L36+1
+ 724 0040 EB000000 		.word	.L34+1
+ 725              		.p2align 1
+ 726              	.L39:
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* destination pixel format ARGB8888 */
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     switch(destination_pixelformat){
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     case IPA_DPF_ARGB8888:
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV &= ~(IPA_DPV_DPDBV_0|(IPA_DPV_DPDGV_0)|(IPA_DPV_DPDRV_0)|(IPA_DPV_DPDAV_0));
+ 727              		.loc 1 206 17
+ 728 0044 4B4B     		ldr	r3, .L42+4
+ 729 0046 1B68     		ldr	r3, [r3]
+ 730 0048 4A4B     		ldr	r3, .L42+4
+ 731 004a 0022     		movs	r2, #0
+ 732 004c 1A60     		str	r2, [r3]
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 733              		.loc 1 207 38
+ 734 004e 7B68     		ldr	r3, [r7, #4]
+ 735 0050 9A69     		ldr	r2, [r3, #24]
+ 736              		.loc 1 207 79
+ 737 0052 7B68     		ldr	r3, [r7, #4]
+ 738 0054 5B69     		ldr	r3, [r3, #20]
+ 739              		.loc 1 207 101
+ 740 0056 1B02     		lsls	r3, r3, #8
+ 741              		.loc 1 207 59
+ 742 0058 1A43     		orrs	r2, r2, r3
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                                                             |(destination_struct->destination_prere
+ 743              		.loc 1 208 81
+ 744 005a 7B68     		ldr	r3, [r7, #4]
+ 745 005c 1B69     		ldr	r3, [r3, #16]
+ 746              		.loc 1 208 101
+ 747 005e 1B04     		lsls	r3, r3, #16
+ 748              		.loc 1 208 61
+ 749 0060 1A43     		orrs	r2, r2, r3
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                                                             |(destination_struct->destination_preal
+ 750              		.loc 1 209 81
+ 751 0062 7B68     		ldr	r3, [r7, #4]
+ 752 0064 9B68     		ldr	r3, [r3, #8]
+ 753              		.loc 1 209 103
+ 754 0066 1B06     		lsls	r3, r3, #24
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 755              		.loc 1 207 9
+ 756 0068 4249     		ldr	r1, .L42+4
+ 757              		.loc 1 209 61
+ 758 006a 1343     		orrs	r3, r3, r2
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 759              		.loc 1 207 17
+ 760 006c 0B60     		str	r3, [r1]
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         break;
+ 761              		.loc 1 210 9
+ 762 006e 54E0     		b	.L40
+ 763              	.L38:
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* destination pixel format RGB888 */
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     case IPA_DPF_RGB888:
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV &= ~(IPA_DPV_DPDBV_1|(IPA_DPV_DPDGV_1)|(IPA_DPV_DPDRV_1));
+ 764              		.loc 1 213 17
+ 765 0070 404B     		ldr	r3, .L42+4
+ 766 0072 1B68     		ldr	r3, [r3]
+ 767 0074 3F4A     		ldr	r2, .L42+4
+ 768 0076 03F07F43 		and	r3, r3, #-16777216
+ 769 007a 1360     		str	r3, [r2]
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 770              		.loc 1 214 38
+ 771 007c 7B68     		ldr	r3, [r7, #4]
+ 772 007e 9A69     		ldr	r2, [r3, #24]
+ 773              		.loc 1 214 79
+ 774 0080 7B68     		ldr	r3, [r7, #4]
+ 775 0082 5B69     		ldr	r3, [r3, #20]
+ 776              		.loc 1 214 101
+ 777 0084 1B02     		lsls	r3, r3, #8
+ 778              		.loc 1 214 59
+ 779 0086 1A43     		orrs	r2, r2, r3
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                                                             |(destination_struct->destination_prere
+ 780              		.loc 1 215 81
+ 781 0088 7B68     		ldr	r3, [r7, #4]
+ 782 008a 1B69     		ldr	r3, [r3, #16]
+ 783              		.loc 1 215 101
+ 784 008c 1B04     		lsls	r3, r3, #16
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 785              		.loc 1 214 9
+ 786 008e 3949     		ldr	r1, .L42+4
+ 787              		.loc 1 215 61
+ 788 0090 1343     		orrs	r3, r3, r2
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 789              		.loc 1 214 17
+ 790 0092 0B60     		str	r3, [r1]
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         break;
+ 791              		.loc 1 216 9
+ 792 0094 41E0     		b	.L40
+ 793              	.L37:
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* destination pixel format RGB565 */
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     case IPA_DPF_RGB565:
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV &= ~(IPA_DPV_DPDBV_2|(IPA_DPV_DPDGV_2)|(IPA_DPV_DPDRV_2));
+ 794              		.loc 1 219 17
+ 795 0096 374B     		ldr	r3, .L42+4
+ 796 0098 1B68     		ldr	r3, [r3]
+ 797 009a 364A     		ldr	r2, .L42+4
+ 798 009c 1B0C     		lsrs	r3, r3, #16
+ 799 009e 1B04     		lsls	r3, r3, #16
+ 800 00a0 1360     		str	r3, [r2]
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 801              		.loc 1 220 38
+ 802 00a2 7B68     		ldr	r3, [r7, #4]
+ 803 00a4 9A69     		ldr	r2, [r3, #24]
+ 804              		.loc 1 220 79
+ 805 00a6 7B68     		ldr	r3, [r7, #4]
+ 806 00a8 5B69     		ldr	r3, [r3, #20]
+ 807              		.loc 1 220 101
+ 808 00aa 5B01     		lsls	r3, r3, #5
+ 809              		.loc 1 220 59
+ 810 00ac 1A43     		orrs	r2, r2, r3
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                                                             |(destination_struct->destination_prere
+ 811              		.loc 1 221 81
+ 812 00ae 7B68     		ldr	r3, [r7, #4]
+ 813 00b0 1B69     		ldr	r3, [r3, #16]
+ 814              		.loc 1 221 101
+ 815 00b2 DB02     		lsls	r3, r3, #11
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 816              		.loc 1 220 9
+ 817 00b4 2F49     		ldr	r1, .L42+4
+ 818              		.loc 1 221 61
+ 819 00b6 1343     		orrs	r3, r3, r2
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 820              		.loc 1 220 17
+ 821 00b8 0B60     		str	r3, [r1]
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         break;
+ 822              		.loc 1 222 9
+ 823 00ba 2EE0     		b	.L40
+ 824              	.L36:
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* destination pixel format ARGB1555 */
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     case IPA_DPF_ARGB1555:
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV &= ~(IPA_DPV_DPDBV_3|(IPA_DPV_DPDGV_3)|(IPA_DPV_DPDRV_3)|(IPA_DPV_DPDAV_3));
+ 825              		.loc 1 225 17
+ 826 00bc 2D4B     		ldr	r3, .L42+4
+ 827 00be 1B68     		ldr	r3, [r3]
+ 828 00c0 2C4A     		ldr	r2, .L42+4
+ 829 00c2 1B0C     		lsrs	r3, r3, #16
+ 830 00c4 1B04     		lsls	r3, r3, #16
+ 831 00c6 1360     		str	r3, [r2]
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 832              		.loc 1 226 38
+ 833 00c8 7B68     		ldr	r3, [r7, #4]
+ 834 00ca 9A69     		ldr	r2, [r3, #24]
+ 835              		.loc 1 226 79
+ 836 00cc 7B68     		ldr	r3, [r7, #4]
+ 837 00ce 5B69     		ldr	r3, [r3, #20]
+ 838              		.loc 1 226 101
+ 839 00d0 5B01     		lsls	r3, r3, #5
+ 840              		.loc 1 226 59
+ 841 00d2 1A43     		orrs	r2, r2, r3
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                                                             |(destination_struct->destination_prere
+ 842              		.loc 1 227 81
+ 843 00d4 7B68     		ldr	r3, [r7, #4]
+ 844 00d6 1B69     		ldr	r3, [r3, #16]
+ 845              		.loc 1 227 101
+ 846 00d8 9B02     		lsls	r3, r3, #10
+ 847              		.loc 1 227 61
+ 848 00da 1A43     		orrs	r2, r2, r3
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                                                             |(destination_struct->destination_preal
+ 849              		.loc 1 228 81
+ 850 00dc 7B68     		ldr	r3, [r7, #4]
+ 851 00de 9B68     		ldr	r3, [r3, #8]
+ 852              		.loc 1 228 103
+ 853 00e0 DB03     		lsls	r3, r3, #15
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 854              		.loc 1 226 9
+ 855 00e2 2449     		ldr	r1, .L42+4
+ 856              		.loc 1 228 61
+ 857 00e4 1343     		orrs	r3, r3, r2
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 858              		.loc 1 226 17
+ 859 00e6 0B60     		str	r3, [r1]
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         break;
+ 860              		.loc 1 229 9
+ 861 00e8 17E0     		b	.L40
+ 862              	.L34:
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* destination pixel format ARGB4444 */
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     case IPA_DPF_ARGB4444:
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV &= ~(IPA_DPV_DPDBV_4|(IPA_DPV_DPDGV_4)|(IPA_DPV_DPDRV_4)|(IPA_DPV_DPDAV_4));
+ 863              		.loc 1 232 17
+ 864 00ea 224B     		ldr	r3, .L42+4
+ 865 00ec 1B68     		ldr	r3, [r3]
+ 866 00ee 214A     		ldr	r2, .L42+4
+ 867 00f0 1B0C     		lsrs	r3, r3, #16
+ 868 00f2 1B04     		lsls	r3, r3, #16
+ 869 00f4 1360     		str	r3, [r2]
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 870              		.loc 1 233 38
+ 871 00f6 7B68     		ldr	r3, [r7, #4]
+ 872 00f8 9A69     		ldr	r2, [r3, #24]
+ 873              		.loc 1 233 79
+ 874 00fa 7B68     		ldr	r3, [r7, #4]
+ 875 00fc 5B69     		ldr	r3, [r3, #20]
+ 876              		.loc 1 233 101
+ 877 00fe 5B01     		lsls	r3, r3, #5
+ 878              		.loc 1 233 59
+ 879 0100 1A43     		orrs	r2, r2, r3
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                                                             |(destination_struct->destination_prere
+ 880              		.loc 1 234 81
+ 881 0102 7B68     		ldr	r3, [r7, #4]
+ 882 0104 1B69     		ldr	r3, [r3, #16]
+ 883              		.loc 1 234 101
+ 884 0106 9B02     		lsls	r3, r3, #10
+ 885              		.loc 1 234 61
+ 886 0108 1A43     		orrs	r2, r2, r3
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****                                                             |(destination_struct->destination_preal
+ 887              		.loc 1 235 81
+ 888 010a 7B68     		ldr	r3, [r7, #4]
+ 889 010c 9B68     		ldr	r3, [r3, #8]
+ 890              		.loc 1 235 103
+ 891 010e DB03     		lsls	r3, r3, #15
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 892              		.loc 1 233 9
+ 893 0110 1849     		ldr	r1, .L42+4
+ 894              		.loc 1 235 61
+ 895 0112 1343     		orrs	r3, r3, r2
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_DPV = (destination_struct->destination_preblue|(destination_struct->destination_pregree
+ 896              		.loc 1 233 17
+ 897 0114 0B60     		str	r3, [r1]
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         break;
+ 898              		.loc 1 236 9
+ 899 0116 00E0     		b	.L40
+ 900              	.L41:
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     default:
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         break;
+ 901              		.loc 1 238 9
+ 902 0118 00BF     		nop
+ 903              	.L40:
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* destination memory base address configuration */
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_DMADDR &= ~(IPA_DMADDR_DMADDR);
+ 904              		.loc 1 241 16
+ 905 011a 174B     		ldr	r3, .L42+8
+ 906 011c 1B68     		ldr	r3, [r3]
+ 907 011e 164B     		ldr	r3, .L42+8
+ 908 0120 0022     		movs	r2, #0
+ 909 0122 1A60     		str	r2, [r3]
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_DMADDR =destination_struct->destination_memaddr;
+ 910              		.loc 1 242 5
+ 911 0124 144A     		ldr	r2, .L42+8
+ 912              		.loc 1 242 35
+ 913 0126 7B68     		ldr	r3, [r7, #4]
+ 914 0128 1B68     		ldr	r3, [r3]
+ 915              		.loc 1 242 16
+ 916 012a 1360     		str	r3, [r2]
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* destination line offset configuration */    
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_DLOFF &= ~(IPA_DLOFF_DLOFF);
+ 917              		.loc 1 244 15
+ 918 012c 134B     		ldr	r3, .L42+12
+ 919 012e 1B68     		ldr	r3, [r3]
+ 920 0130 124A     		ldr	r2, .L42+12
+ 921 0132 23F47F53 		bic	r3, r3, #16320
+ 922 0136 23F03F03 		bic	r3, r3, #63
+ 923 013a 1360     		str	r3, [r2]
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_DLOFF =destination_struct->destination_lineoff;
+ 924              		.loc 1 245 5
+ 925 013c 0F4A     		ldr	r2, .L42+12
+ 926              		.loc 1 245 34
+ 927 013e 7B68     		ldr	r3, [r7, #4]
+ 928 0140 5B68     		ldr	r3, [r3, #4]
+ 929              		.loc 1 245 15
+ 930 0142 1360     		str	r3, [r2]
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* image size configuration */    
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_IMS &= ~(IPA_IMS_HEIGHT|IPA_IMS_WIDTH);
+ 931              		.loc 1 247 13
+ 932 0144 0E4B     		ldr	r3, .L42+16
+ 933 0146 1B68     		ldr	r3, [r3]
+ 934 0148 0D4A     		ldr	r2, .L42+16
+ 935 014a 03F04043 		and	r3, r3, #-1073741824
+ 936 014e 1360     		str	r3, [r2]
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_IMS |= ((destination_struct->image_width<<16)|(destination_struct->image_height));
+ 937              		.loc 1 248 13
+ 938 0150 0B4B     		ldr	r3, .L42+16
+ 939 0152 1A68     		ldr	r2, [r3]
+ 940              		.loc 1 248 36
+ 941 0154 7B68     		ldr	r3, [r7, #4]
+ 942 0156 DB69     		ldr	r3, [r3, #28]
+ 943              		.loc 1 248 49
+ 944 0158 1904     		lsls	r1, r3, #16
+ 945              		.loc 1 248 74
+ 946 015a 7B68     		ldr	r3, [r7, #4]
+ 947 015c 1B6A     		ldr	r3, [r3, #32]
+ 948              		.loc 1 248 54
+ 949 015e 0B43     		orrs	r3, r3, r1
+ 950              		.loc 1 248 13
+ 951 0160 0749     		ldr	r1, .L42+16
+ 952 0162 1343     		orrs	r3, r3, r2
+ 953 0164 0B60     		str	r3, [r1]
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 954              		.loc 1 249 1
+ 955 0166 00BF     		nop
+ 956 0168 1437     		adds	r7, r7, #20
+ 957              		.cfi_def_cfa_offset 4
+ 958 016a BD46     		mov	sp, r7
+ 959              		.cfi_def_cfa_register 13
+ 960              		@ sp needed
+ 961 016c 80BC     		pop	{r7}
+ 962              		.cfi_restore 7
+ 963              		.cfi_def_cfa_offset 0
+ 964 016e 7047     		bx	lr
+ 965              	.L43:
+ 966              		.align	2
+ 967              	.L42:
+ 968 0170 34B00240 		.word	1073918004
+ 969 0174 38B00240 		.word	1073918008
+ 970 0178 3CB00240 		.word	1073918012
+ 971 017c 40B00240 		.word	1073918016
+ 972 0180 44B00240 		.word	1073918020
+ 973              		.cfi_endproc
+ 974              	.LFE134:
+ 976              		.section	.text.ipa_foreground_lut_init,"ax",%progbits
+ 977              		.align	1
+ 978              		.global	ipa_foreground_lut_init
+ 979              		.syntax unified
+ 980              		.thumb
+ 981              		.thumb_func
+ 982              		.fpu softvfp
+ 984              	ipa_foreground_lut_init:
+ 985              	.LFB135:
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      initialize IPA foreground LUT parameters  
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  fg_lut_num: foreground LUT number of pixel.
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  fg_lut_pf: foreground LUT pixel format,IPA_LUT_PF_ARGB8888,IPA_LUT_PF_RGB888.
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  fg_lut_addr: foreground LUT memory base address.
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_foreground_lut_init(uint32_t fg_lut_num,uint8_t fg_lut_pf, uint32_t fg_lut_addr)
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 986              		.loc 1 260 1
+ 987              		.cfi_startproc
+ 988              		@ args = 0, pretend = 0, frame = 16
+ 989              		@ frame_needed = 1, uses_anonymous_args = 0
+ 990              		@ link register save eliminated.
+ 991 0000 80B4     		push	{r7}
+ 992              		.cfi_def_cfa_offset 4
+ 993              		.cfi_offset 7, -4
+ 994 0002 85B0     		sub	sp, sp, #20
+ 995              		.cfi_def_cfa_offset 24
+ 996 0004 00AF     		add	r7, sp, #0
+ 997              		.cfi_def_cfa_register 7
+ 998 0006 F860     		str	r0, [r7, #12]
+ 999 0008 0B46     		mov	r3, r1
+ 1000 000a 7A60     		str	r2, [r7, #4]
+ 1001 000c FB72     		strb	r3, [r7, #11]
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* foreground LUT number of pixel configuration */
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FPCTL |= (fg_lut_num<<8U);
+ 1002              		.loc 1 262 15
+ 1003 000e 124B     		ldr	r3, .L47
+ 1004 0010 1A68     		ldr	r2, [r3]
+ 1005              		.loc 1 262 29
+ 1006 0012 FB68     		ldr	r3, [r7, #12]
+ 1007 0014 1B02     		lsls	r3, r3, #8
+ 1008              		.loc 1 262 15
+ 1009 0016 1049     		ldr	r1, .L47
+ 1010 0018 1343     		orrs	r3, r3, r2
+ 1011 001a 0B60     		str	r3, [r1]
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* foreground LUT pixel format configuration */
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     if(IPA_LUT_PF_RGB888 == fg_lut_pf){
+ 1012              		.loc 1 264 7
+ 1013 001c FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 1014 001e 012B     		cmp	r3, #1
+ 1015 0020 06D1     		bne	.L45
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_FPCTL |= IPA_FPCTL_FLPF;
+ 1016              		.loc 1 265 19
+ 1017 0022 0D4B     		ldr	r3, .L47
+ 1018 0024 1B68     		ldr	r3, [r3]
+ 1019 0026 0C4A     		ldr	r2, .L47
+ 1020 0028 43F01003 		orr	r3, r3, #16
+ 1021 002c 1360     		str	r3, [r2]
+ 1022 002e 05E0     		b	.L46
+ 1023              	.L45:
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }else{
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_FPCTL &= ~(IPA_FPCTL_FLPF);
+ 1024              		.loc 1 267 19
+ 1025 0030 094B     		ldr	r3, .L47
+ 1026 0032 1B68     		ldr	r3, [r3]
+ 1027 0034 084A     		ldr	r2, .L47
+ 1028 0036 23F01003 		bic	r3, r3, #16
+ 1029 003a 1360     		str	r3, [r2]
+ 1030              	.L46:
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* foreground LUT memory base address configuration */
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FLMADDR &= ~(IPA_FLMADDR_FLMADDR);
+ 1031              		.loc 1 270 17
+ 1032 003c 074B     		ldr	r3, .L47+4
+ 1033 003e 1B68     		ldr	r3, [r3]
+ 1034 0040 064B     		ldr	r3, .L47+4
+ 1035 0042 0022     		movs	r2, #0
+ 1036 0044 1A60     		str	r2, [r3]
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_FLMADDR = fg_lut_addr;
+ 1037              		.loc 1 271 5
+ 1038 0046 054A     		ldr	r2, .L47+4
+ 1039              		.loc 1 271 17
+ 1040 0048 7B68     		ldr	r3, [r7, #4]
+ 1041 004a 1360     		str	r3, [r2]
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1042              		.loc 1 272 1
+ 1043 004c 00BF     		nop
+ 1044 004e 1437     		adds	r7, r7, #20
+ 1045              		.cfi_def_cfa_offset 4
+ 1046 0050 BD46     		mov	sp, r7
+ 1047              		.cfi_def_cfa_register 13
+ 1048              		@ sp needed
+ 1049 0052 80BC     		pop	{r7}
+ 1050              		.cfi_restore 7
+ 1051              		.cfi_def_cfa_offset 0
+ 1052 0054 7047     		bx	lr
+ 1053              	.L48:
+ 1054 0056 00BF     		.align	2
+ 1055              	.L47:
+ 1056 0058 1CB00240 		.word	1073917980
+ 1057 005c 2CB00240 		.word	1073917996
+ 1058              		.cfi_endproc
+ 1059              	.LFE135:
+ 1061              		.section	.text.ipa_background_lut_init,"ax",%progbits
+ 1062              		.align	1
+ 1063              		.global	ipa_background_lut_init
+ 1064              		.syntax unified
+ 1065              		.thumb
+ 1066              		.thumb_func
+ 1067              		.fpu softvfp
+ 1069              	ipa_background_lut_init:
+ 1070              	.LFB136:
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      initialize IPA background LUT parameters  
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  bg_lut_num: background LUT number of pixel.
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  bg_lut_pf: background LUT pixel format, IPA_LUT_PF_ARGB8888,IPA_LUT_PF_RGB888.
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  bg_lut_addr: background LUT memory base address.
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_background_lut_init(uint32_t bg_lut_num,uint8_t bg_lut_pf, uint32_t bg_lut_addr)
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 1071              		.loc 1 283 1
+ 1072              		.cfi_startproc
+ 1073              		@ args = 0, pretend = 0, frame = 16
+ 1074              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1075              		@ link register save eliminated.
+ 1076 0000 80B4     		push	{r7}
+ 1077              		.cfi_def_cfa_offset 4
+ 1078              		.cfi_offset 7, -4
+ 1079 0002 85B0     		sub	sp, sp, #20
+ 1080              		.cfi_def_cfa_offset 24
+ 1081 0004 00AF     		add	r7, sp, #0
+ 1082              		.cfi_def_cfa_register 7
+ 1083 0006 F860     		str	r0, [r7, #12]
+ 1084 0008 0B46     		mov	r3, r1
+ 1085 000a 7A60     		str	r2, [r7, #4]
+ 1086 000c FB72     		strb	r3, [r7, #11]
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* background LUT number of pixel configuration */
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BPCTL|=(bg_lut_num<<8U);
+ 1087              		.loc 1 285 14
+ 1088 000e 124B     		ldr	r3, .L52
+ 1089 0010 1A68     		ldr	r2, [r3]
+ 1090              		.loc 1 285 27
+ 1091 0012 FB68     		ldr	r3, [r7, #12]
+ 1092 0014 1B02     		lsls	r3, r3, #8
+ 1093              		.loc 1 285 14
+ 1094 0016 1049     		ldr	r1, .L52
+ 1095 0018 1343     		orrs	r3, r3, r2
+ 1096 001a 0B60     		str	r3, [r1]
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* background LUT pixel format configuration */
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     if(IPA_LUT_PF_RGB888 == bg_lut_pf){
+ 1097              		.loc 1 287 7
+ 1098 001c FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 1099 001e 012B     		cmp	r3, #1
+ 1100 0020 06D1     		bne	.L50
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_BPCTL |= IPA_BPCTL_BLPF;
+ 1101              		.loc 1 288 19
+ 1102 0022 0D4B     		ldr	r3, .L52
+ 1103 0024 1B68     		ldr	r3, [r3]
+ 1104 0026 0C4A     		ldr	r2, .L52
+ 1105 0028 43F01003 		orr	r3, r3, #16
+ 1106 002c 1360     		str	r3, [r2]
+ 1107 002e 05E0     		b	.L51
+ 1108              	.L50:
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }else{
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_BPCTL &= ~(IPA_BPCTL_BLPF);
+ 1109              		.loc 1 290 19
+ 1110 0030 094B     		ldr	r3, .L52
+ 1111 0032 1B68     		ldr	r3, [r3]
+ 1112 0034 084A     		ldr	r2, .L52
+ 1113 0036 23F01003 		bic	r3, r3, #16
+ 1114 003a 1360     		str	r3, [r2]
+ 1115              	.L51:
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     /* background LUT memory base address configuration */
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BLMADDR &= ~(IPA_BLMADDR_BLMADDR);
+ 1116              		.loc 1 293 17
+ 1117 003c 074B     		ldr	r3, .L52+4
+ 1118 003e 1B68     		ldr	r3, [r3]
+ 1119 0040 064B     		ldr	r3, .L52+4
+ 1120 0042 0022     		movs	r2, #0
+ 1121 0044 1A60     		str	r2, [r3]
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_BLMADDR = bg_lut_addr;
+ 1122              		.loc 1 294 5
+ 1123 0046 054A     		ldr	r2, .L52+4
+ 1124              		.loc 1 294 17
+ 1125 0048 7B68     		ldr	r3, [r7, #4]
+ 1126 004a 1360     		str	r3, [r2]
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1127              		.loc 1 295 1
+ 1128 004c 00BF     		nop
+ 1129 004e 1437     		adds	r7, r7, #20
+ 1130              		.cfi_def_cfa_offset 4
+ 1131 0050 BD46     		mov	sp, r7
+ 1132              		.cfi_def_cfa_register 13
+ 1133              		@ sp needed
+ 1134 0052 80BC     		pop	{r7}
+ 1135              		.cfi_restore 7
+ 1136              		.cfi_def_cfa_offset 0
+ 1137 0054 7047     		bx	lr
+ 1138              	.L53:
+ 1139 0056 00BF     		.align	2
+ 1140              	.L52:
+ 1141 0058 24B00240 		.word	1073917988
+ 1142 005c 30B00240 		.word	1073918000
+ 1143              		.cfi_endproc
+ 1144              	.LFE136:
+ 1146              		.section	.text.ipa_line_mark_config,"ax",%progbits
+ 1147              		.align	1
+ 1148              		.global	ipa_line_mark_config
+ 1149              		.syntax unified
+ 1150              		.thumb
+ 1151              		.thumb_func
+ 1152              		.fpu softvfp
+ 1154              	ipa_line_mark_config:
+ 1155              	.LFB137:
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      configure line mark 
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  linenum: line number.
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_line_mark_config(uint32_t linenum)
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 1156              		.loc 1 304 1
+ 1157              		.cfi_startproc
+ 1158              		@ args = 0, pretend = 0, frame = 8
+ 1159              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1160              		@ link register save eliminated.
+ 1161 0000 80B4     		push	{r7}
+ 1162              		.cfi_def_cfa_offset 4
+ 1163              		.cfi_offset 7, -4
+ 1164 0002 83B0     		sub	sp, sp, #12
+ 1165              		.cfi_def_cfa_offset 16
+ 1166 0004 00AF     		add	r7, sp, #0
+ 1167              		.cfi_def_cfa_register 7
+ 1168 0006 7860     		str	r0, [r7, #4]
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_LM &= ~(IPA_LM_LM);
+ 1169              		.loc 1 305 12
+ 1170 0008 064B     		ldr	r3, .L55
+ 1171 000a 1B68     		ldr	r3, [r3]
+ 1172 000c 054A     		ldr	r2, .L55
+ 1173 000e 1B0C     		lsrs	r3, r3, #16
+ 1174 0010 1B04     		lsls	r3, r3, #16
+ 1175 0012 1360     		str	r3, [r2]
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_LM = linenum;
+ 1176              		.loc 1 306 5
+ 1177 0014 034A     		ldr	r2, .L55
+ 1178              		.loc 1 306 12
+ 1179 0016 7B68     		ldr	r3, [r7, #4]
+ 1180 0018 1360     		str	r3, [r2]
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1181              		.loc 1 307 1
+ 1182 001a 00BF     		nop
+ 1183 001c 0C37     		adds	r7, r7, #12
+ 1184              		.cfi_def_cfa_offset 4
+ 1185 001e BD46     		mov	sp, r7
+ 1186              		.cfi_def_cfa_register 13
+ 1187              		@ sp needed
+ 1188 0020 80BC     		pop	{r7}
+ 1189              		.cfi_restore 7
+ 1190              		.cfi_def_cfa_offset 0
+ 1191 0022 7047     		bx	lr
+ 1192              	.L56:
+ 1193              		.align	2
+ 1194              	.L55:
+ 1195 0024 48B00240 		.word	1073918024
+ 1196              		.cfi_endproc
+ 1197              	.LFE137:
+ 1199              		.section	.text.ipa_inter_timer_config,"ax",%progbits
+ 1200              		.align	1
+ 1201              		.global	ipa_inter_timer_config
+ 1202              		.syntax unified
+ 1203              		.thumb
+ 1204              		.thumb_func
+ 1205              		.fpu softvfp
+ 1207              	ipa_inter_timer_config:
+ 1208              	.LFB138:
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      Inter-timer enable or disable 
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  timercfg: IPA_INTER_TIMER_ENABLE,IPA_INTER_TIMER_DISABLE
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_inter_timer_config(uint8_t timercfg)
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 1209              		.loc 1 316 1
+ 1210              		.cfi_startproc
+ 1211              		@ args = 0, pretend = 0, frame = 8
+ 1212              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1213              		@ link register save eliminated.
+ 1214 0000 80B4     		push	{r7}
+ 1215              		.cfi_def_cfa_offset 4
+ 1216              		.cfi_offset 7, -4
+ 1217 0002 83B0     		sub	sp, sp, #12
+ 1218              		.cfi_def_cfa_offset 16
+ 1219 0004 00AF     		add	r7, sp, #0
+ 1220              		.cfi_def_cfa_register 7
+ 1221 0006 0346     		mov	r3, r0
+ 1222 0008 FB71     		strb	r3, [r7, #7]
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     if(IPA_INTER_TIMER_ENABLE == timercfg){
+ 1223              		.loc 1 317 7
+ 1224 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 1225 000c 012B     		cmp	r3, #1
+ 1226 000e 06D1     		bne	.L58
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_ITCTL |= IPA_ITCTL_ITEN;
+ 1227              		.loc 1 318 19
+ 1228 0010 084B     		ldr	r3, .L61
+ 1229 0012 1B68     		ldr	r3, [r3]
+ 1230 0014 074A     		ldr	r2, .L61
+ 1231 0016 43F00103 		orr	r3, r3, #1
+ 1232 001a 1360     		str	r3, [r2]
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }else{
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         IPA_ITCTL &= ~(IPA_ITCTL_ITEN);
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1233              		.loc 1 322 1
+ 1234 001c 05E0     		b	.L60
+ 1235              	.L58:
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }
+ 1236              		.loc 1 320 19
+ 1237 001e 054B     		ldr	r3, .L61
+ 1238 0020 1B68     		ldr	r3, [r3]
+ 1239 0022 044A     		ldr	r2, .L61
+ 1240 0024 23F00103 		bic	r3, r3, #1
+ 1241 0028 1360     		str	r3, [r2]
+ 1242              	.L60:
+ 1243              		.loc 1 322 1
+ 1244 002a 00BF     		nop
+ 1245 002c 0C37     		adds	r7, r7, #12
+ 1246              		.cfi_def_cfa_offset 4
+ 1247 002e BD46     		mov	sp, r7
+ 1248              		.cfi_def_cfa_register 13
+ 1249              		@ sp needed
+ 1250 0030 80BC     		pop	{r7}
+ 1251              		.cfi_restore 7
+ 1252              		.cfi_def_cfa_offset 0
+ 1253 0032 7047     		bx	lr
+ 1254              	.L62:
+ 1255              		.align	2
+ 1256              	.L61:
+ 1257 0034 4CB00240 		.word	1073918028
+ 1258              		.cfi_endproc
+ 1259              	.LFE138:
+ 1261              		.section	.text.ipa_interval_clock_num_config,"ax",%progbits
+ 1262              		.align	1
+ 1263              		.global	ipa_interval_clock_num_config
+ 1264              		.syntax unified
+ 1265              		.thumb
+ 1266              		.thumb_func
+ 1267              		.fpu softvfp
+ 1269              	ipa_interval_clock_num_config:
+ 1270              	.LFB139:
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      number of clock cycles interval set 
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  clk_num: the number of clock cycles.
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_interval_clock_num_config(uint32_t clk_num )
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 1271              		.loc 1 331 1
+ 1272              		.cfi_startproc
+ 1273              		@ args = 0, pretend = 0, frame = 8
+ 1274              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1275              		@ link register save eliminated.
+ 1276 0000 80B4     		push	{r7}
+ 1277              		.cfi_def_cfa_offset 4
+ 1278              		.cfi_offset 7, -4
+ 1279 0002 83B0     		sub	sp, sp, #12
+ 1280              		.cfi_def_cfa_offset 16
+ 1281 0004 00AF     		add	r7, sp, #0
+ 1282              		.cfi_def_cfa_register 7
+ 1283 0006 7860     		str	r0, [r7, #4]
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_ITCTL &= ~(IPA_ITCTL_NCCI);
+ 1284              		.loc 1 332 15
+ 1285 0008 084B     		ldr	r3, .L64
+ 1286 000a 1B68     		ldr	r3, [r3]
+ 1287 000c 074A     		ldr	r2, .L64
+ 1288 000e 23F47F43 		bic	r3, r3, #65280
+ 1289 0012 1360     		str	r3, [r2]
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_ITCTL |= (clk_num<<8U);
+ 1290              		.loc 1 333 15
+ 1291 0014 054B     		ldr	r3, .L64
+ 1292 0016 1A68     		ldr	r2, [r3]
+ 1293              		.loc 1 333 26
+ 1294 0018 7B68     		ldr	r3, [r7, #4]
+ 1295 001a 1B02     		lsls	r3, r3, #8
+ 1296              		.loc 1 333 15
+ 1297 001c 0349     		ldr	r1, .L64
+ 1298 001e 1343     		orrs	r3, r3, r2
+ 1299 0020 0B60     		str	r3, [r1]
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1300              		.loc 1 334 1
+ 1301 0022 00BF     		nop
+ 1302 0024 0C37     		adds	r7, r7, #12
+ 1303              		.cfi_def_cfa_offset 4
+ 1304 0026 BD46     		mov	sp, r7
+ 1305              		.cfi_def_cfa_register 13
+ 1306              		@ sp needed
+ 1307 0028 80BC     		pop	{r7}
+ 1308              		.cfi_restore 7
+ 1309              		.cfi_def_cfa_offset 0
+ 1310 002a 7047     		bx	lr
+ 1311              	.L65:
+ 1312              		.align	2
+ 1313              	.L64:
+ 1314 002c 4CB00240 		.word	1073918028
+ 1315              		.cfi_endproc
+ 1316              	.LFE139:
+ 1318              		.section	.text.ipa_interrupt_enable,"ax",%progbits
+ 1319              		.align	1
+ 1320              		.global	ipa_interrupt_enable
+ 1321              		.syntax unified
+ 1322              		.thumb
+ 1323              		.thumb_func
+ 1324              		.fpu softvfp
+ 1326              	ipa_interrupt_enable:
+ 1327              	.LFB140:
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA interrupt enable 
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  inttype: IPA interrupt bits.
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_TAEIE: transfer access error interrupt 
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_FTFIE: full transfer finish interrupt 
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_TLMIE: transfer line mark interrupt   
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_LACIE: LUT access conflict interrupt 
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_LLFIE: LUT loading finish interrupt
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_WCFIE: wrong configuration interrupt 
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_interrupt_enable(uint32_t inttype)
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 1328              		.loc 1 349 1
+ 1329              		.cfi_startproc
+ 1330              		@ args = 0, pretend = 0, frame = 8
+ 1331              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1332              		@ link register save eliminated.
+ 1333 0000 80B4     		push	{r7}
+ 1334              		.cfi_def_cfa_offset 4
+ 1335              		.cfi_offset 7, -4
+ 1336 0002 83B0     		sub	sp, sp, #12
+ 1337              		.cfi_def_cfa_offset 16
+ 1338 0004 00AF     		add	r7, sp, #0
+ 1339              		.cfi_def_cfa_register 7
+ 1340 0006 7860     		str	r0, [r7, #4]
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_CTL |= (inttype);
+ 1341              		.loc 1 350 13
+ 1342 0008 054B     		ldr	r3, .L67
+ 1343 000a 1A68     		ldr	r2, [r3]
+ 1344 000c 0449     		ldr	r1, .L67
+ 1345 000e 7B68     		ldr	r3, [r7, #4]
+ 1346 0010 1343     		orrs	r3, r3, r2
+ 1347 0012 0B60     		str	r3, [r1]
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1348              		.loc 1 351 1
+ 1349 0014 00BF     		nop
+ 1350 0016 0C37     		adds	r7, r7, #12
+ 1351              		.cfi_def_cfa_offset 4
+ 1352 0018 BD46     		mov	sp, r7
+ 1353              		.cfi_def_cfa_register 13
+ 1354              		@ sp needed
+ 1355 001a 80BC     		pop	{r7}
+ 1356              		.cfi_restore 7
+ 1357              		.cfi_def_cfa_offset 0
+ 1358 001c 7047     		bx	lr
+ 1359              	.L68:
+ 1360 001e 00BF     		.align	2
+ 1361              	.L67:
+ 1362 0020 00B00240 		.word	1073917952
+ 1363              		.cfi_endproc
+ 1364              	.LFE140:
+ 1366              		.section	.text.ipa_interrupt_disable,"ax",%progbits
+ 1367              		.align	1
+ 1368              		.global	ipa_interrupt_disable
+ 1369              		.syntax unified
+ 1370              		.thumb
+ 1371              		.thumb_func
+ 1372              		.fpu softvfp
+ 1374              	ipa_interrupt_disable:
+ 1375              	.LFB141:
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      IPA interrupt disable 
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  inttype: IPA interrupt bits.
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_TAEIE: transfer access error interrupt 
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_FTFIE: full transfer finish interrupt 
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_TLMIE: transfer line mark interrupt   
+ 359:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_LACIE: LUT access conflict interrupt 
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_LLFIE: LUT loading finish interrupt
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_CTL_WCFIE: wrong configuration interrupt 
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 363:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 364:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 365:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_interrupt_disable(uint32_t inttype)
+ 366:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 1376              		.loc 1 366 1
+ 1377              		.cfi_startproc
+ 1378              		@ args = 0, pretend = 0, frame = 8
+ 1379              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1380              		@ link register save eliminated.
+ 1381 0000 80B4     		push	{r7}
+ 1382              		.cfi_def_cfa_offset 4
+ 1383              		.cfi_offset 7, -4
+ 1384 0002 83B0     		sub	sp, sp, #12
+ 1385              		.cfi_def_cfa_offset 16
+ 1386 0004 00AF     		add	r7, sp, #0
+ 1387              		.cfi_def_cfa_register 7
+ 1388 0006 7860     		str	r0, [r7, #4]
+ 367:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_CTL &= ~(inttype);
+ 1389              		.loc 1 367 13
+ 1390 0008 054B     		ldr	r3, .L70
+ 1391 000a 1A68     		ldr	r2, [r3]
+ 1392              		.loc 1 367 16
+ 1393 000c 7B68     		ldr	r3, [r7, #4]
+ 1394 000e DB43     		mvns	r3, r3
+ 1395              		.loc 1 367 13
+ 1396 0010 0349     		ldr	r1, .L70
+ 1397 0012 1340     		ands	r3, r3, r2
+ 1398 0014 0B60     		str	r3, [r1]
+ 368:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1399              		.loc 1 368 1
+ 1400 0016 00BF     		nop
+ 1401 0018 0C37     		adds	r7, r7, #12
+ 1402              		.cfi_def_cfa_offset 4
+ 1403 001a BD46     		mov	sp, r7
+ 1404              		.cfi_def_cfa_register 13
+ 1405              		@ sp needed
+ 1406 001c 80BC     		pop	{r7}
+ 1407              		.cfi_restore 7
+ 1408              		.cfi_def_cfa_offset 0
+ 1409 001e 7047     		bx	lr
+ 1410              	.L71:
+ 1411              		.align	2
+ 1412              	.L70:
+ 1413 0020 00B00240 		.word	1073917952
+ 1414              		.cfi_endproc
+ 1415              	.LFE141:
+ 1417              		.section	.text.ipa_interrupt_flag_get,"ax",%progbits
+ 1418              		.align	1
+ 1419              		.global	ipa_interrupt_flag_get
+ 1420              		.syntax unified
+ 1421              		.thumb
+ 1422              		.thumb_func
+ 1423              		.fpu softvfp
+ 1425              	ipa_interrupt_flag_get:
+ 1426              	.LFB142:
+ 369:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 370:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 371:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      get IPA interrupt flag 
+ 372:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  intflag: tli interrupt flag bits.
+ 373:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTF_TAEIF: transfer access error interrupt flag 
+ 374:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTF_FTFIF: full transfer finish interrupt flag 
+ 375:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTF_TLMIF: transfer line mark interrupt flag
+ 376:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTF_LACIF: LUT access conflict interrupt flag 
+ 377:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTF_LLFIF: LUT loading finish interrupt flag 
+ 378:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTF_WCFIF: wrong configuration interrupt flag 
+ 379:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 380:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 381:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 382:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** FlagStatus ipa_interrupt_flag_get(uint32_t intflag)
+ 383:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 1427              		.loc 1 383 1
+ 1428              		.cfi_startproc
+ 1429              		@ args = 0, pretend = 0, frame = 16
+ 1430              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1431              		@ link register save eliminated.
+ 1432 0000 80B4     		push	{r7}
+ 1433              		.cfi_def_cfa_offset 4
+ 1434              		.cfi_offset 7, -4
+ 1435 0002 85B0     		sub	sp, sp, #20
+ 1436              		.cfi_def_cfa_offset 24
+ 1437 0004 00AF     		add	r7, sp, #0
+ 1438              		.cfi_def_cfa_register 7
+ 1439 0006 7860     		str	r0, [r7, #4]
+ 384:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     uint32_t state;
+ 385:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     state = IPA_INTF;
+ 1440              		.loc 1 385 13
+ 1441 0008 074B     		ldr	r3, .L75
+ 1442              		.loc 1 385 11
+ 1443 000a 1B68     		ldr	r3, [r3]
+ 1444 000c FB60     		str	r3, [r7, #12]
+ 386:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     if(state & intflag){
+ 1445              		.loc 1 386 14
+ 1446 000e FA68     		ldr	r2, [r7, #12]
+ 1447 0010 7B68     		ldr	r3, [r7, #4]
+ 1448 0012 1340     		ands	r3, r3, r2
+ 1449              		.loc 1 386 7
+ 1450 0014 002B     		cmp	r3, #0
+ 1451 0016 01D0     		beq	.L73
+ 387:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         return SET;
+ 1452              		.loc 1 387 16
+ 1453 0018 0123     		movs	r3, #1
+ 1454 001a 00E0     		b	.L74
+ 1455              	.L73:
+ 388:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }else{
+ 389:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****         return RESET;
+ 1456              		.loc 1 389 16
+ 1457 001c 0023     		movs	r3, #0
+ 1458              	.L74:
+ 390:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     }
+ 391:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1459              		.loc 1 391 1
+ 1460 001e 1846     		mov	r0, r3
+ 1461 0020 1437     		adds	r7, r7, #20
+ 1462              		.cfi_def_cfa_offset 4
+ 1463 0022 BD46     		mov	sp, r7
+ 1464              		.cfi_def_cfa_register 13
+ 1465              		@ sp needed
+ 1466 0024 80BC     		pop	{r7}
+ 1467              		.cfi_restore 7
+ 1468              		.cfi_def_cfa_offset 0
+ 1469 0026 7047     		bx	lr
+ 1470              	.L76:
+ 1471              		.align	2
+ 1472              	.L75:
+ 1473 0028 04B00240 		.word	1073917956
+ 1474              		.cfi_endproc
+ 1475              	.LFE142:
+ 1477              		.section	.text.ipa_interrupt_flag_clear,"ax",%progbits
+ 1478              		.align	1
+ 1479              		.global	ipa_interrupt_flag_clear
+ 1480              		.syntax unified
+ 1481              		.thumb
+ 1482              		.thumb_func
+ 1483              		.fpu softvfp
+ 1485              	ipa_interrupt_flag_clear:
+ 1486              	.LFB143:
+ 392:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** 
+ 393:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** /*!
+ 394:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \brief      clear IPA interrupt flag 
+ 395:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[in]  intflag: tli interrupt flag bits.
+ 396:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTC_TAEIFC: transfer access error interrupt flag 
+ 397:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTC_FTFIFC: full transfer finish interrupt flag 
+ 398:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTC_TLMIFC: transfer line mark interrupt flag
+ 399:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTC_LACIFC: LUT access conflict interrupt flag 
+ 400:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTC_LLFIFC: LUT loading finish interrupt flag 
+ 401:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****       \arg        IPA_INTC_WCFIFC: wrong configuration interrupt flag 
+ 402:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \param[out] none
+ 403:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     \retval     none
+ 404:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** */
+ 405:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** void ipa_interrupt_flag_clear(uint32_t intflag)
+ 406:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** {
+ 1487              		.loc 1 406 1
+ 1488              		.cfi_startproc
+ 1489              		@ args = 0, pretend = 0, frame = 8
+ 1490              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1491              		@ link register save eliminated.
+ 1492 0000 80B4     		push	{r7}
+ 1493              		.cfi_def_cfa_offset 4
+ 1494              		.cfi_offset 7, -4
+ 1495 0002 83B0     		sub	sp, sp, #12
+ 1496              		.cfi_def_cfa_offset 16
+ 1497 0004 00AF     		add	r7, sp, #0
+ 1498              		.cfi_def_cfa_register 7
+ 1499 0006 7860     		str	r0, [r7, #4]
+ 407:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c ****     IPA_INTC |= (intflag);
+ 1500              		.loc 1 407 14
+ 1501 0008 054B     		ldr	r3, .L78
+ 1502 000a 1A68     		ldr	r2, [r3]
+ 1503 000c 0449     		ldr	r1, .L78
+ 1504 000e 7B68     		ldr	r3, [r7, #4]
+ 1505 0010 1343     		orrs	r3, r3, r2
+ 1506 0012 0B60     		str	r3, [r1]
+ 408:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_ipa.c **** }
+ 1507              		.loc 1 408 1
+ 1508 0014 00BF     		nop
+ 1509 0016 0C37     		adds	r7, r7, #12
+ 1510              		.cfi_def_cfa_offset 4
+ 1511 0018 BD46     		mov	sp, r7
+ 1512              		.cfi_def_cfa_register 13
+ 1513              		@ sp needed
+ 1514 001a 80BC     		pop	{r7}
+ 1515              		.cfi_restore 7
+ 1516              		.cfi_def_cfa_offset 0
+ 1517 001c 7047     		bx	lr
+ 1518              	.L79:
+ 1519 001e 00BF     		.align	2
+ 1520              	.L78:
+ 1521 0020 08B00240 		.word	1073917960
+ 1522              		.cfi_endproc
+ 1523              	.LFE143:
+ 1525              		.text
+ 1526              	.Letext0:
+ 1527              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1528              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1529              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 1530              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 1531              		.file 6 "../../CMSIS/gd32f4xx.h"
+ 1532              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+ 1533              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_ipa.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_ipa.c
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:16     .text.ipa_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:24     .text.ipa_deinit:00000000 ipa_deinit
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:50     .text.ipa_transfer_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:57     .text.ipa_transfer_enable:00000000 ipa_transfer_enable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:87     .text.ipa_transfer_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:92     .text.ipa_transfer_hangup_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:99     .text.ipa_transfer_hangup_enable:00000000 ipa_transfer_hangup_enable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:129    .text.ipa_transfer_hangup_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:134    .text.ipa_transfer_hangup_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:141    .text.ipa_transfer_hangup_disable:00000000 ipa_transfer_hangup_disable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:171    .text.ipa_transfer_hangup_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:176    .text.ipa_transfer_stop_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:183    .text.ipa_transfer_stop_enable:00000000 ipa_transfer_stop_enable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:213    .text.ipa_transfer_stop_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:218    .text.ipa_transfer_stop_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:225    .text.ipa_transfer_stop_disable:00000000 ipa_transfer_stop_disable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:255    .text.ipa_transfer_stop_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:260    .text.ipa_foreground_lut_loading_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:267    .text.ipa_foreground_lut_loading_enable:00000000 ipa_foreground_lut_loading_enable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:297    .text.ipa_foreground_lut_loading_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:302    .text.ipa_background_lut_loading_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:309    .text.ipa_background_lut_loading_enable:00000000 ipa_background_lut_loading_enable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:339    .text.ipa_background_lut_loading_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:344    .text.ipa_pixel_format_convert_mod:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:351    .text.ipa_pixel_format_convert_mod:00000000 ipa_pixel_format_convert_mod
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:387    .text.ipa_pixel_format_convert_mod:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:392    .text.ipa_foreground_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:399    .text.ipa_foreground_init:00000000 ipa_foreground_init
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:524    .text.ipa_foreground_init:000000a0 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:533    .text.ipa_background_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:540    .text.ipa_background_init:00000000 ipa_background_init
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:665    .text.ipa_background_init:000000a0 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:674    .text.ipa_destination_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:681    .text.ipa_destination_init:00000000 ipa_destination_init
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:720    .text.ipa_destination_init:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:725    .text.ipa_destination_init:00000044 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:968    .text.ipa_destination_init:00000170 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:977    .text.ipa_foreground_lut_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:984    .text.ipa_foreground_lut_init:00000000 ipa_foreground_lut_init
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1056   .text.ipa_foreground_lut_init:00000058 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1062   .text.ipa_background_lut_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1069   .text.ipa_background_lut_init:00000000 ipa_background_lut_init
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1141   .text.ipa_background_lut_init:00000058 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1147   .text.ipa_line_mark_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1154   .text.ipa_line_mark_config:00000000 ipa_line_mark_config
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1195   .text.ipa_line_mark_config:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1200   .text.ipa_inter_timer_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1207   .text.ipa_inter_timer_config:00000000 ipa_inter_timer_config
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1257   .text.ipa_inter_timer_config:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1262   .text.ipa_interval_clock_num_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1269   .text.ipa_interval_clock_num_config:00000000 ipa_interval_clock_num_config
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1314   .text.ipa_interval_clock_num_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1319   .text.ipa_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1326   .text.ipa_interrupt_enable:00000000 ipa_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1362   .text.ipa_interrupt_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1367   .text.ipa_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1374   .text.ipa_interrupt_disable:00000000 ipa_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1413   .text.ipa_interrupt_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1418   .text.ipa_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1425   .text.ipa_interrupt_flag_get:00000000 ipa_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1473   .text.ipa_interrupt_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1478   .text.ipa_interrupt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1485   .text.ipa_interrupt_flag_clear:00000000 ipa_interrupt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\cciU4rfg.s:1521   .text.ipa_interrupt_flag_clear:00000020 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_ipa.h.18.7b3d67435e0a51c5af7203abe7bdbc8a
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

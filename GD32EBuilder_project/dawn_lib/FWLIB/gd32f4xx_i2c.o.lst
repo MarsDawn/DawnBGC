@@ -1,0 +1,3186 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_i2c.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.i2c_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	i2c_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	i2c_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_i2c.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \file  gd32f4xx_i2c.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief I2C driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     Copyright (C) 2016 GigaDevice
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     2016-08-15, V1.0.1, firmware for GD32F4xx
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** #include "gd32f4xx_i2c.h"
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** #define I2CCLK_MAX                    0x3fU              /*!< i2cclk max value */
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** #define I2C_STATE_MASK                0x0000FFFFU        /*!< i2c state mask */
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      reset I2C
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_deinit(uint32_t i2c_periph)
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+  27              		.loc 1 25 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 8
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 82B0     		sub	sp, sp, #8
+  36              		.cfi_def_cfa_offset 16
+  37 0004 00AF     		add	r7, sp, #0
+  38              		.cfi_def_cfa_register 7
+  39 0006 7860     		str	r0, [r7, #4]
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     switch(i2c_periph){
+  40              		.loc 1 26 5
+  41 0008 7B68     		ldr	r3, [r7, #4]
+  42 000a 184A     		ldr	r2, .L8
+  43 000c 9342     		cmp	r3, r2
+  44 000e 1ED0     		beq	.L2
+  45 0010 7B68     		ldr	r3, [r7, #4]
+  46 0012 164A     		ldr	r2, .L8
+  47 0014 9342     		cmp	r3, r2
+  48 0016 23D8     		bhi	.L7
+  49 0018 7B68     		ldr	r3, [r7, #4]
+  50 001a 154A     		ldr	r2, .L8+4
+  51 001c 9342     		cmp	r3, r2
+  52 001e 04D0     		beq	.L4
+  53 0020 7B68     		ldr	r3, [r7, #4]
+  54 0022 144A     		ldr	r2, .L8+8
+  55 0024 9342     		cmp	r3, r2
+  56 0026 09D0     		beq	.L5
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     case I2C0:
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_enable(RCU_I2C0RST);
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_disable(RCU_I2C0RST);
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         break;
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     case I2C1:
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_enable(RCU_I2C1RST);
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_disable(RCU_I2C1RST);
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         break;
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     case I2C2:
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_enable(RCU_I2C2RST);
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_disable(RCU_I2C2RST);
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         break;
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     default:
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         break;
+  57              		.loc 1 40 9
+  58 0028 1AE0     		b	.L7
+  59              	.L4:
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_disable(RCU_I2C0RST);
+  60              		.loc 1 28 9
+  61 002a 40F61500 		movw	r0, #2069
+  62 002e FFF7FEFF 		bl	rcu_periph_reset_enable
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         break;
+  63              		.loc 1 29 9
+  64 0032 40F61500 		movw	r0, #2069
+  65 0036 FFF7FEFF 		bl	rcu_periph_reset_disable
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     case I2C1:
+  66              		.loc 1 30 9
+  67 003a 12E0     		b	.L6
+  68              	.L5:
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_disable(RCU_I2C1RST);
+  69              		.loc 1 32 9
+  70 003c 40F61600 		movw	r0, #2070
+  71 0040 FFF7FEFF 		bl	rcu_periph_reset_enable
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         break;
+  72              		.loc 1 33 9
+  73 0044 40F61600 		movw	r0, #2070
+  74 0048 FFF7FEFF 		bl	rcu_periph_reset_disable
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     case I2C2:
+  75              		.loc 1 34 9
+  76 004c 09E0     		b	.L6
+  77              	.L2:
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         rcu_periph_reset_disable(RCU_I2C2RST);
+  78              		.loc 1 36 9
+  79 004e 40F61700 		movw	r0, #2071
+  80 0052 FFF7FEFF 		bl	rcu_periph_reset_enable
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         break;
+  81              		.loc 1 37 9
+  82 0056 40F61700 		movw	r0, #2071
+  83 005a FFF7FEFF 		bl	rcu_periph_reset_disable
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     default:
+  84              		.loc 1 38 9
+  85 005e 00E0     		b	.L6
+  86              	.L7:
+  87              		.loc 1 40 9
+  88 0060 00BF     		nop
+  89              	.L6:
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+  90              		.loc 1 43 1
+  91 0062 00BF     		nop
+  92 0064 0837     		adds	r7, r7, #8
+  93              		.cfi_def_cfa_offset 8
+  94 0066 BD46     		mov	sp, r7
+  95              		.cfi_def_cfa_register 13
+  96              		@ sp needed
+  97 0068 80BD     		pop	{r7, pc}
+  98              	.L9:
+  99 006a 00BF     		.align	2
+ 100              	.L8:
+ 101 006c 005C0040 		.word	1073765376
+ 102 0070 00540040 		.word	1073763328
+ 103 0074 00580040 		.word	1073764352
+ 104              		.cfi_endproc
+ 105              	.LFE123:
+ 107              		.section	.text.i2c_clock_config,"ax",%progbits
+ 108              		.align	1
+ 109              		.global	i2c_clock_config
+ 110              		.syntax unified
+ 111              		.thumb
+ 112              		.thumb_func
+ 113              		.fpu softvfp
+ 115              	i2c_clock_config:
+ 116              	.LFB124:
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      I2C clock configure
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  clkspeed: i2c clock speed   
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  dutycyc: duty cycle in fast mode
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DTCY_2:    T_low/T_high=2 
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DTCY_16_9: T_low/T_high=16/9
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_clock_config(uint32_t i2c_periph,uint32_t clkspeed,uint32_t dutycyc)
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 117              		.loc 1 56 1
+ 118              		.cfi_startproc
+ 119              		@ args = 0, pretend = 0, frame = 40
+ 120              		@ frame_needed = 1, uses_anonymous_args = 0
+ 121 0000 80B5     		push	{r7, lr}
+ 122              		.cfi_def_cfa_offset 8
+ 123              		.cfi_offset 7, -8
+ 124              		.cfi_offset 14, -4
+ 125 0002 8AB0     		sub	sp, sp, #40
+ 126              		.cfi_def_cfa_offset 48
+ 127 0004 00AF     		add	r7, sp, #0
+ 128              		.cfi_def_cfa_register 7
+ 129 0006 F860     		str	r0, [r7, #12]
+ 130 0008 B960     		str	r1, [r7, #8]
+ 131 000a 7A60     		str	r2, [r7, #4]
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t pclk1,clkc,freq,risetime;
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t temp;
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     pclk1 = rcu_clock_freq_get(CK_APB1);
+ 132              		.loc 1 60 13
+ 133 000c 0220     		movs	r0, #2
+ 134 000e FFF7FEFF 		bl	rcu_clock_freq_get
+ 135 0012 F861     		str	r0, [r7, #28]
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* I2C peripheral clock frequency */
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     freq = (uint32_t)(pclk1/1000000U);
+ 136              		.loc 1 62 10
+ 137 0014 FB69     		ldr	r3, [r7, #28]
+ 138 0016 4F4A     		ldr	r2, .L21
+ 139 0018 A2FB0323 		umull	r2, r3, r2, r3
+ 140 001c 9B0C     		lsrs	r3, r3, #18
+ 141 001e 3B62     		str	r3, [r7, #32]
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(freq >= I2CCLK_MAX){
+ 142              		.loc 1 63 7
+ 143 0020 3B6A     		ldr	r3, [r7, #32]
+ 144 0022 3E2B     		cmp	r3, #62
+ 145 0024 01D9     		bls	.L11
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         freq = I2CCLK_MAX;
+ 146              		.loc 1 64 14
+ 147 0026 3F23     		movs	r3, #63
+ 148 0028 3B62     		str	r3, [r7, #32]
+ 149              	.L11:
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     temp = I2C_CTL1(i2c_periph);
+ 150              		.loc 1 67 12
+ 151 002a FB68     		ldr	r3, [r7, #12]
+ 152 002c 0433     		adds	r3, r3, #4
+ 153              		.loc 1 67 10
+ 154 002e 1B68     		ldr	r3, [r3]
+ 155 0030 BB61     		str	r3, [r7, #24]
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     temp &= ~I2C_CTL1_I2CCLK;
+ 156              		.loc 1 68 10
+ 157 0032 BB69     		ldr	r3, [r7, #24]
+ 158 0034 23F03F03 		bic	r3, r3, #63
+ 159 0038 BB61     		str	r3, [r7, #24]
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     temp |= freq;
+ 160              		.loc 1 69 10
+ 161 003a BA69     		ldr	r2, [r7, #24]
+ 162 003c 3B6A     		ldr	r3, [r7, #32]
+ 163 003e 1343     		orrs	r3, r3, r2
+ 164 0040 BB61     		str	r3, [r7, #24]
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL1(i2c_periph) = temp;
+ 165              		.loc 1 71 5
+ 166 0042 FB68     		ldr	r3, [r7, #12]
+ 167 0044 0433     		adds	r3, r3, #4
+ 168 0046 1A46     		mov	r2, r3
+ 169              		.loc 1 71 26
+ 170 0048 BB69     		ldr	r3, [r7, #24]
+ 171 004a 1360     		str	r3, [r2]
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(100000U >= clkspeed){
+ 172              		.loc 1 73 7
+ 173 004c BB68     		ldr	r3, [r7, #8]
+ 174 004e 424A     		ldr	r2, .L21+4
+ 175 0050 9342     		cmp	r3, r2
+ 176 0052 2AD8     		bhi	.L12
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         /* the maximum SCL rise time is 1000ns instandard mode */
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         risetime = (uint32_t)((pclk1/1000000U)+1U);
+ 177              		.loc 1 75 37
+ 178 0054 FB69     		ldr	r3, [r7, #28]
+ 179 0056 3F4A     		ldr	r2, .L21
+ 180 0058 A2FB0323 		umull	r2, r3, r2, r3
+ 181 005c 9B0C     		lsrs	r3, r3, #18
+ 182              		.loc 1 75 18
+ 183 005e 0133     		adds	r3, r3, #1
+ 184 0060 7B61     		str	r3, [r7, #20]
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(risetime >= I2CCLK_MAX){
+ 185              		.loc 1 76 11
+ 186 0062 7B69     		ldr	r3, [r7, #20]
+ 187 0064 3E2B     		cmp	r3, #62
+ 188 0066 05D9     		bls	.L13
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             I2C_RT(i2c_periph) = I2CCLK_MAX;
+ 189              		.loc 1 77 13
+ 190 0068 FB68     		ldr	r3, [r7, #12]
+ 191 006a 2033     		adds	r3, r3, #32
+ 192 006c 1A46     		mov	r2, r3
+ 193              		.loc 1 77 32
+ 194 006e 3F23     		movs	r3, #63
+ 195 0070 1360     		str	r3, [r2]
+ 196 0072 04E0     		b	.L14
+ 197              	.L13:
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }else{
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             I2C_RT(i2c_periph) = risetime;
+ 198              		.loc 1 79 13
+ 199 0074 FB68     		ldr	r3, [r7, #12]
+ 200 0076 2033     		adds	r3, r3, #32
+ 201 0078 1A46     		mov	r2, r3
+ 202              		.loc 1 79 32
+ 203 007a 7B69     		ldr	r3, [r7, #20]
+ 204 007c 1360     		str	r3, [r2]
+ 205              	.L14:
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         clkc = (uint32_t)(pclk1/(clkspeed*2U)); 
+ 206              		.loc 1 81 42
+ 207 007e BB68     		ldr	r3, [r7, #8]
+ 208 0080 5B00     		lsls	r3, r3, #1
+ 209              		.loc 1 81 14
+ 210 0082 FA69     		ldr	r2, [r7, #28]
+ 211 0084 B2FBF3F3 		udiv	r3, r2, r3
+ 212 0088 7B62     		str	r3, [r7, #36]
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(clkc < 0x04U){
+ 213              		.loc 1 82 11
+ 214 008a 7B6A     		ldr	r3, [r7, #36]
+ 215 008c 032B     		cmp	r3, #3
+ 216 008e 01D8     		bhi	.L15
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             /* the CLKC in standard mode minmum value is 4 */
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             clkc = 0x04U;
+ 217              		.loc 1 84 18
+ 218 0090 0423     		movs	r3, #4
+ 219 0092 7B62     		str	r3, [r7, #36]
+ 220              	.L15:
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         I2C_CKCFG(i2c_periph) |= (I2C_CKCFG_CLKC & clkc);
+ 221              		.loc 1 87 31
+ 222 0094 FB68     		ldr	r3, [r7, #12]
+ 223 0096 1C33     		adds	r3, r3, #28
+ 224 0098 1A68     		ldr	r2, [r3]
+ 225              		.loc 1 87 50
+ 226 009a 7B6A     		ldr	r3, [r7, #36]
+ 227 009c C3F30B03 		ubfx	r3, r3, #0, #12
+ 228              		.loc 1 87 31
+ 229 00a0 F968     		ldr	r1, [r7, #12]
+ 230 00a2 1C31     		adds	r1, r1, #28
+ 231 00a4 1343     		orrs	r3, r3, r2
+ 232 00a6 0B60     		str	r3, [r1]
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else if(400000U >= clkspeed){
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         /* the maximum SCL rise time is 300ns in fast mode */
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         I2C_RT(i2c_periph) = (uint32_t)(((freq*(uint32_t)300U)/(uint32_t)1000U)+(uint32_t)1U);
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(I2C_DTCY_2 == dutycyc){
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             /* I2C_DutyCycle == 2 */
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             clkc = (uint32_t)(pclk1/(clkspeed*3U));
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             I2C_CKCFG(i2c_periph) &= ~I2C_CKCFG_DTCY;
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }else{
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             /* I2C_DutyCycle == 16/9 */
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             clkc = (uint32_t)(pclk1/(clkspeed*25U));
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             I2C_CKCFG(i2c_periph) |= I2C_CKCFG_DTCY;
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(0U == (clkc & I2C_CKCFG_CLKC)){
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             /* the CLKC in fast mode minmum value is 1 */
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             clkc |= 0x0001;  
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         I2C_CKCFG(i2c_periph) |= I2C_CKCFG_FAST;
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         I2C_CKCFG(i2c_periph) |= clkc;
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 233              		.loc 1 108 1
+ 234 00a8 50E0     		b	.L20
+ 235              	.L12:
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         /* the maximum SCL rise time is 300ns in fast mode */
+ 236              		.loc 1 89 13
+ 237 00aa BB68     		ldr	r3, [r7, #8]
+ 238 00ac 2B4A     		ldr	r2, .L21+8
+ 239 00ae 9342     		cmp	r3, r2
+ 240 00b0 4CD8     		bhi	.L20
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(I2C_DTCY_2 == dutycyc){
+ 241              		.loc 1 91 47
+ 242 00b2 3B6A     		ldr	r3, [r7, #32]
+ 243 00b4 4FF49672 		mov	r2, #300
+ 244 00b8 02FB03F3 		mul	r3, r2, r3
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(I2C_DTCY_2 == dutycyc){
+ 245              		.loc 1 91 63
+ 246 00bc 284A     		ldr	r2, .L21+12
+ 247 00be A2FB0323 		umull	r2, r3, r2, r3
+ 248 00c2 9B09     		lsrs	r3, r3, #6
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(I2C_DTCY_2 == dutycyc){
+ 249              		.loc 1 91 9
+ 250 00c4 FA68     		ldr	r2, [r7, #12]
+ 251 00c6 2032     		adds	r2, r2, #32
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(I2C_DTCY_2 == dutycyc){
+ 252              		.loc 1 91 30
+ 253 00c8 0133     		adds	r3, r3, #1
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if(I2C_DTCY_2 == dutycyc){
+ 254              		.loc 1 91 28
+ 255 00ca 1360     		str	r3, [r2]
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             /* I2C_DutyCycle == 2 */
+ 256              		.loc 1 92 11
+ 257 00cc 7B68     		ldr	r3, [r7, #4]
+ 258 00ce 002B     		cmp	r3, #0
+ 259 00d0 10D1     		bne	.L17
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             I2C_CKCFG(i2c_periph) &= ~I2C_CKCFG_DTCY;
+ 260              		.loc 1 94 46
+ 261 00d2 BA68     		ldr	r2, [r7, #8]
+ 262 00d4 1346     		mov	r3, r2
+ 263 00d6 5B00     		lsls	r3, r3, #1
+ 264 00d8 1344     		add	r3, r3, r2
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             I2C_CKCFG(i2c_periph) &= ~I2C_CKCFG_DTCY;
+ 265              		.loc 1 94 18
+ 266 00da FA69     		ldr	r2, [r7, #28]
+ 267 00dc B2FBF3F3 		udiv	r3, r2, r3
+ 268 00e0 7B62     		str	r3, [r7, #36]
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }else{
+ 269              		.loc 1 95 35
+ 270 00e2 FB68     		ldr	r3, [r7, #12]
+ 271 00e4 1C33     		adds	r3, r3, #28
+ 272 00e6 1B68     		ldr	r3, [r3]
+ 273 00e8 FA68     		ldr	r2, [r7, #12]
+ 274 00ea 1C32     		adds	r2, r2, #28
+ 275 00ec 23F48043 		bic	r3, r3, #16384
+ 276 00f0 1360     		str	r3, [r2]
+ 277 00f2 11E0     		b	.L18
+ 278              	.L17:
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             I2C_CKCFG(i2c_periph) |= I2C_CKCFG_DTCY;
+ 279              		.loc 1 98 46
+ 280 00f4 BA68     		ldr	r2, [r7, #8]
+ 281 00f6 1346     		mov	r3, r2
+ 282 00f8 9B00     		lsls	r3, r3, #2
+ 283 00fa 1344     		add	r3, r3, r2
+ 284 00fc 9A00     		lsls	r2, r3, #2
+ 285 00fe 1344     		add	r3, r3, r2
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             I2C_CKCFG(i2c_periph) |= I2C_CKCFG_DTCY;
+ 286              		.loc 1 98 18
+ 287 0100 FA69     		ldr	r2, [r7, #28]
+ 288 0102 B2FBF3F3 		udiv	r3, r2, r3
+ 289 0106 7B62     		str	r3, [r7, #36]
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }
+ 290              		.loc 1 99 35
+ 291 0108 FB68     		ldr	r3, [r7, #12]
+ 292 010a 1C33     		adds	r3, r3, #28
+ 293 010c 1B68     		ldr	r3, [r3]
+ 294 010e FA68     		ldr	r2, [r7, #12]
+ 295 0110 1C32     		adds	r2, r2, #28
+ 296 0112 43F48043 		orr	r3, r3, #16384
+ 297 0116 1360     		str	r3, [r2]
+ 298              	.L18:
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             /* the CLKC in fast mode minmum value is 1 */
+ 299              		.loc 1 101 24
+ 300 0118 7B6A     		ldr	r3, [r7, #36]
+ 301 011a C3F30B03 		ubfx	r3, r3, #0, #12
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             /* the CLKC in fast mode minmum value is 1 */
+ 302              		.loc 1 101 11
+ 303 011e 002B     		cmp	r3, #0
+ 304 0120 03D1     		bne	.L19
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }
+ 305              		.loc 1 103 18
+ 306 0122 7B6A     		ldr	r3, [r7, #36]
+ 307 0124 43F00103 		orr	r3, r3, #1
+ 308 0128 7B62     		str	r3, [r7, #36]
+ 309              	.L19:
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         I2C_CKCFG(i2c_periph) |= clkc;
+ 310              		.loc 1 105 31
+ 311 012a FB68     		ldr	r3, [r7, #12]
+ 312 012c 1C33     		adds	r3, r3, #28
+ 313 012e 1B68     		ldr	r3, [r3]
+ 314 0130 FA68     		ldr	r2, [r7, #12]
+ 315 0132 1C32     		adds	r2, r2, #28
+ 316 0134 43F40043 		orr	r3, r3, #32768
+ 317 0138 1360     		str	r3, [r2]
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 318              		.loc 1 106 31
+ 319 013a FB68     		ldr	r3, [r7, #12]
+ 320 013c 1C33     		adds	r3, r3, #28
+ 321 013e 1A68     		ldr	r2, [r3]
+ 322 0140 FB68     		ldr	r3, [r7, #12]
+ 323 0142 1C33     		adds	r3, r3, #28
+ 324 0144 1946     		mov	r1, r3
+ 325 0146 7B6A     		ldr	r3, [r7, #36]
+ 326 0148 1343     		orrs	r3, r3, r2
+ 327 014a 0B60     		str	r3, [r1]
+ 328              	.L20:
+ 329              		.loc 1 108 1
+ 330 014c 00BF     		nop
+ 331 014e 2837     		adds	r7, r7, #40
+ 332              		.cfi_def_cfa_offset 8
+ 333 0150 BD46     		mov	sp, r7
+ 334              		.cfi_def_cfa_register 13
+ 335              		@ sp needed
+ 336 0152 80BD     		pop	{r7, pc}
+ 337              	.L22:
+ 338              		.align	2
+ 339              	.L21:
+ 340 0154 83DE1B43 		.word	1125899907
+ 341 0158 A0860100 		.word	100000
+ 342 015c 801A0600 		.word	400000
+ 343 0160 D34D6210 		.word	274877907
+ 344              		.cfi_endproc
+ 345              	.LFE124:
+ 347              		.section	.text.i2c_mode_addr_config,"ax",%progbits
+ 348              		.align	1
+ 349              		.global	i2c_mode_addr_config
+ 350              		.syntax unified
+ 351              		.thumb
+ 352              		.thumb_func
+ 353              		.fpu softvfp
+ 355              	i2c_mode_addr_config:
+ 356              	.LFB125:
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      I2C address configure
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2cmod:
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_I2CMODE_ENABLE:  I2C mode
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SMBUSMODE_ENABLE: SMBus mode
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  addformat: 7bits or 10bits
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ADDFORMAT_7BITS:  7bits
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ADDFORMAT_10BITS: 10bits
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  addr: I2C address
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_mode_addr_config(uint32_t i2c_periph,uint32_t i2cmod,uint32_t addformat,uint32_t addr)
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 357              		.loc 1 124 1
+ 358              		.cfi_startproc
+ 359              		@ args = 0, pretend = 0, frame = 24
+ 360              		@ frame_needed = 1, uses_anonymous_args = 0
+ 361              		@ link register save eliminated.
+ 362 0000 80B4     		push	{r7}
+ 363              		.cfi_def_cfa_offset 4
+ 364              		.cfi_offset 7, -4
+ 365 0002 87B0     		sub	sp, sp, #28
+ 366              		.cfi_def_cfa_offset 32
+ 367 0004 00AF     		add	r7, sp, #0
+ 368              		.cfi_def_cfa_register 7
+ 369 0006 F860     		str	r0, [r7, #12]
+ 370 0008 B960     		str	r1, [r7, #8]
+ 371 000a 7A60     		str	r2, [r7, #4]
+ 372 000c 3B60     		str	r3, [r7]
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* SMBus/I2C mode selected */
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 373              		.loc 1 126 14
+ 374 000e 0023     		movs	r3, #0
+ 375 0010 7B61     		str	r3, [r7, #20]
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL0(i2c_periph);
+ 376              		.loc 1 127 11
+ 377 0012 FB68     		ldr	r3, [r7, #12]
+ 378              		.loc 1 127 9
+ 379 0014 1B68     		ldr	r3, [r3]
+ 380 0016 7B61     		str	r3, [r7, #20]
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL0_SMBEN); 
+ 381              		.loc 1 128 9
+ 382 0018 7B69     		ldr	r3, [r7, #20]
+ 383 001a 23F00203 		bic	r3, r3, #2
+ 384 001e 7B61     		str	r3, [r7, #20]
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= i2cmod;
+ 385              		.loc 1 129 9
+ 386 0020 7A69     		ldr	r2, [r7, #20]
+ 387 0022 BB68     		ldr	r3, [r7, #8]
+ 388 0024 1343     		orrs	r3, r3, r2
+ 389 0026 7B61     		str	r3, [r7, #20]
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) = ctl;
+ 390              		.loc 1 130 5
+ 391 0028 FB68     		ldr	r3, [r7, #12]
+ 392              		.loc 1 130 26
+ 393 002a 7A69     		ldr	r2, [r7, #20]
+ 394 002c 1A60     		str	r2, [r3]
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* configure address */
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_SADDR0(i2c_periph) = (addformat|addr);
+ 395              		.loc 1 132 5
+ 396 002e FB68     		ldr	r3, [r7, #12]
+ 397 0030 0833     		adds	r3, r3, #8
+ 398 0032 1946     		mov	r1, r3
+ 399              		.loc 1 132 40
+ 400 0034 7A68     		ldr	r2, [r7, #4]
+ 401 0036 3B68     		ldr	r3, [r7]
+ 402 0038 1343     		orrs	r3, r3, r2
+ 403              		.loc 1 132 28
+ 404 003a 0B60     		str	r3, [r1]
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 405              		.loc 1 134 1
+ 406 003c 00BF     		nop
+ 407 003e 1C37     		adds	r7, r7, #28
+ 408              		.cfi_def_cfa_offset 4
+ 409 0040 BD46     		mov	sp, r7
+ 410              		.cfi_def_cfa_register 13
+ 411              		@ sp needed
+ 412 0042 80BC     		pop	{r7}
+ 413              		.cfi_restore 7
+ 414              		.cfi_def_cfa_offset 0
+ 415 0044 7047     		bx	lr
+ 416              		.cfi_endproc
+ 417              	.LFE125:
+ 419              		.section	.text.i2c_smbus_type_config,"ax",%progbits
+ 420              		.align	1
+ 421              		.global	i2c_smbus_type_config
+ 422              		.syntax unified
+ 423              		.thumb
+ 424              		.thumb_func
+ 425              		.fpu softvfp
+ 427              	i2c_smbus_type_config:
+ 428              	.LFB126:
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      SMBus type selection
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  ack:
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SMBUS_DEVICE: device
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SMBUS_HOST: host
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_smbus_type_config(uint32_t i2c_periph,uint32_t type)
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 429              		.loc 1 146 1
+ 430              		.cfi_startproc
+ 431              		@ args = 0, pretend = 0, frame = 8
+ 432              		@ frame_needed = 1, uses_anonymous_args = 0
+ 433              		@ link register save eliminated.
+ 434 0000 80B4     		push	{r7}
+ 435              		.cfi_def_cfa_offset 4
+ 436              		.cfi_offset 7, -4
+ 437 0002 83B0     		sub	sp, sp, #12
+ 438              		.cfi_def_cfa_offset 16
+ 439 0004 00AF     		add	r7, sp, #0
+ 440              		.cfi_def_cfa_register 7
+ 441 0006 7860     		str	r0, [r7, #4]
+ 442 0008 3960     		str	r1, [r7]
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(I2C_SMBUS_HOST == type){
+ 443              		.loc 1 147 7
+ 444 000a 3B68     		ldr	r3, [r7]
+ 445 000c 082B     		cmp	r3, #8
+ 446 000e 06D1     		bne	.L25
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****        I2C_CTL0(i2c_periph) |= I2C_CTL0_SMBSEL;  
+ 447              		.loc 1 148 29
+ 448 0010 7B68     		ldr	r3, [r7, #4]
+ 449 0012 1A68     		ldr	r2, [r3]
+ 450 0014 7B68     		ldr	r3, [r7, #4]
+ 451 0016 42F00802 		orr	r2, r2, #8
+ 452 001a 1A60     		str	r2, [r3]
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else{
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****        I2C_CTL0(i2c_periph) &= ~(I2C_CTL0_SMBSEL);  
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     } 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 453              		.loc 1 152 1
+ 454 001c 05E0     		b	.L27
+ 455              	.L25:
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     } 
+ 456              		.loc 1 150 29
+ 457 001e 7B68     		ldr	r3, [r7, #4]
+ 458 0020 1A68     		ldr	r2, [r3]
+ 459 0022 7B68     		ldr	r3, [r7, #4]
+ 460 0024 22F00802 		bic	r2, r2, #8
+ 461 0028 1A60     		str	r2, [r3]
+ 462              	.L27:
+ 463              		.loc 1 152 1
+ 464 002a 00BF     		nop
+ 465 002c 0C37     		adds	r7, r7, #12
+ 466              		.cfi_def_cfa_offset 4
+ 467 002e BD46     		mov	sp, r7
+ 468              		.cfi_def_cfa_register 13
+ 469              		@ sp needed
+ 470 0030 80BC     		pop	{r7}
+ 471              		.cfi_restore 7
+ 472              		.cfi_def_cfa_offset 0
+ 473 0032 7047     		bx	lr
+ 474              		.cfi_endproc
+ 475              	.LFE126:
+ 477              		.section	.text.i2c_ack_config,"ax",%progbits
+ 478              		.align	1
+ 479              		.global	i2c_ack_config
+ 480              		.syntax unified
+ 481              		.thumb
+ 482              		.thumb_func
+ 483              		.fpu softvfp
+ 485              	i2c_ack_config:
+ 486              	.LFB127:
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      whether or not to send an ACK
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  ack:
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ACK_ENABLE: ACK will be sent  
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ACK_DISABLE: ACK will not be sent    
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_ack_config(uint32_t i2c_periph,uint8_t ack)
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 487              		.loc 1 164 1
+ 488              		.cfi_startproc
+ 489              		@ args = 0, pretend = 0, frame = 8
+ 490              		@ frame_needed = 1, uses_anonymous_args = 0
+ 491              		@ link register save eliminated.
+ 492 0000 80B4     		push	{r7}
+ 493              		.cfi_def_cfa_offset 4
+ 494              		.cfi_offset 7, -4
+ 495 0002 83B0     		sub	sp, sp, #12
+ 496              		.cfi_def_cfa_offset 16
+ 497 0004 00AF     		add	r7, sp, #0
+ 498              		.cfi_def_cfa_register 7
+ 499 0006 7860     		str	r0, [r7, #4]
+ 500 0008 0B46     		mov	r3, r1
+ 501 000a FB70     		strb	r3, [r7, #3]
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(I2C_ACK_ENABLE == ack){
+ 502              		.loc 1 165 7
+ 503 000c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 504 000e 012B     		cmp	r3, #1
+ 505 0010 06D1     		bne	.L29
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****        I2C_CTL0(i2c_periph) |= I2C_CTL0_ACKEN;  
+ 506              		.loc 1 166 29
+ 507 0012 7B68     		ldr	r3, [r7, #4]
+ 508 0014 1A68     		ldr	r2, [r3]
+ 509 0016 7B68     		ldr	r3, [r7, #4]
+ 510 0018 42F48062 		orr	r2, r2, #1024
+ 511 001c 1A60     		str	r2, [r3]
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else{
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****        I2C_CTL0(i2c_periph) &= ~(I2C_CTL0_ACKEN);  
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     } 
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 512              		.loc 1 170 1
+ 513 001e 05E0     		b	.L31
+ 514              	.L29:
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     } 
+ 515              		.loc 1 168 29
+ 516 0020 7B68     		ldr	r3, [r7, #4]
+ 517 0022 1A68     		ldr	r2, [r3]
+ 518 0024 7B68     		ldr	r3, [r7, #4]
+ 519 0026 22F48062 		bic	r2, r2, #1024
+ 520 002a 1A60     		str	r2, [r3]
+ 521              	.L31:
+ 522              		.loc 1 170 1
+ 523 002c 00BF     		nop
+ 524 002e 0C37     		adds	r7, r7, #12
+ 525              		.cfi_def_cfa_offset 4
+ 526 0030 BD46     		mov	sp, r7
+ 527              		.cfi_def_cfa_register 13
+ 528              		@ sp needed
+ 529 0032 80BC     		pop	{r7}
+ 530              		.cfi_restore 7
+ 531              		.cfi_def_cfa_offset 0
+ 532 0034 7047     		bx	lr
+ 533              		.cfi_endproc
+ 534              	.LFE127:
+ 536              		.section	.text.i2c_ackpos_config,"ax",%progbits
+ 537              		.align	1
+ 538              		.global	i2c_ackpos_config
+ 539              		.syntax unified
+ 540              		.thumb
+ 541              		.thumb_func
+ 542              		.fpu softvfp
+ 544              	i2c_ackpos_config:
+ 545              	.LFB128:
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      I2C POAP position configure
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  pos:
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ACK_ENABLE: ACK will be sent  
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ACK_DISABLE: ACK will not be sent
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_ackpos_config(uint32_t i2c_periph,uint8_t pos)
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 546              		.loc 1 182 1
+ 547              		.cfi_startproc
+ 548              		@ args = 0, pretend = 0, frame = 8
+ 549              		@ frame_needed = 1, uses_anonymous_args = 0
+ 550              		@ link register save eliminated.
+ 551 0000 80B4     		push	{r7}
+ 552              		.cfi_def_cfa_offset 4
+ 553              		.cfi_offset 7, -4
+ 554 0002 83B0     		sub	sp, sp, #12
+ 555              		.cfi_def_cfa_offset 16
+ 556 0004 00AF     		add	r7, sp, #0
+ 557              		.cfi_def_cfa_register 7
+ 558 0006 7860     		str	r0, [r7, #4]
+ 559 0008 0B46     		mov	r3, r1
+ 560 000a FB70     		strb	r3, [r7, #3]
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* configure i2c POAP position */
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(I2C_ACKPOS_NEXT == pos){
+ 561              		.loc 1 184 7
+ 562 000c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 563 000e 002B     		cmp	r3, #0
+ 564 0010 06D1     		bne	.L33
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****        I2C_CTL0(i2c_periph) |= I2C_CTL0_POAP;  
+ 565              		.loc 1 185 29
+ 566 0012 7B68     		ldr	r3, [r7, #4]
+ 567 0014 1A68     		ldr	r2, [r3]
+ 568 0016 7B68     		ldr	r3, [r7, #4]
+ 569 0018 42F40062 		orr	r2, r2, #2048
+ 570 001c 1A60     		str	r2, [r3]
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else{
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****        I2C_CTL0(i2c_periph) &= ~(I2C_CTL0_POAP);  
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     } 
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 571              		.loc 1 190 1
+ 572 001e 05E0     		b	.L35
+ 573              	.L33:
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     } 
+ 574              		.loc 1 187 29
+ 575 0020 7B68     		ldr	r3, [r7, #4]
+ 576 0022 1A68     		ldr	r2, [r3]
+ 577 0024 7B68     		ldr	r3, [r7, #4]
+ 578 0026 22F40062 		bic	r2, r2, #2048
+ 579 002a 1A60     		str	r2, [r3]
+ 580              	.L35:
+ 581              		.loc 1 190 1
+ 582 002c 00BF     		nop
+ 583 002e 0C37     		adds	r7, r7, #12
+ 584              		.cfi_def_cfa_offset 4
+ 585 0030 BD46     		mov	sp, r7
+ 586              		.cfi_def_cfa_register 13
+ 587              		@ sp needed
+ 588 0032 80BC     		pop	{r7}
+ 589              		.cfi_restore 7
+ 590              		.cfi_def_cfa_offset 0
+ 591 0034 7047     		bx	lr
+ 592              		.cfi_endproc
+ 593              	.LFE128:
+ 595              		.section	.text.i2c_master_addressing,"ax",%progbits
+ 596              		.align	1
+ 597              		.global	i2c_master_addressing
+ 598              		.syntax unified
+ 599              		.thumb
+ 600              		.thumb_func
+ 601              		.fpu softvfp
+ 603              	i2c_master_addressing:
+ 604              	.LFB129:
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      master send slave address
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  addr: slave address  
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  trandirection: transmitter or receiver
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_TRANSMITTER: transmitter  
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_RECEIVER:    receiver  
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_master_addressing(uint32_t i2c_periph,uint8_t addr,uint32_t trandirection)
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 605              		.loc 1 203 1
+ 606              		.cfi_startproc
+ 607              		@ args = 0, pretend = 0, frame = 16
+ 608              		@ frame_needed = 1, uses_anonymous_args = 0
+ 609              		@ link register save eliminated.
+ 610 0000 80B4     		push	{r7}
+ 611              		.cfi_def_cfa_offset 4
+ 612              		.cfi_offset 7, -4
+ 613 0002 85B0     		sub	sp, sp, #20
+ 614              		.cfi_def_cfa_offset 24
+ 615 0004 00AF     		add	r7, sp, #0
+ 616              		.cfi_def_cfa_register 7
+ 617 0006 F860     		str	r0, [r7, #12]
+ 618 0008 0B46     		mov	r3, r1
+ 619 000a 7A60     		str	r2, [r7, #4]
+ 620 000c FB72     		strb	r3, [r7, #11]
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(I2C_TRANSMITTER==trandirection){
+ 621              		.loc 1 204 7
+ 622 000e 7B68     		ldr	r3, [r7, #4]
+ 623 0010 13F1020F 		cmn	r3, #2
+ 624 0014 04D1     		bne	.L37
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         addr = (uint8_t)((uint32_t)addr & I2C_TRANSMITTER);
+ 625              		.loc 1 205 14
+ 626 0016 FB7A     		ldrb	r3, [r7, #11]
+ 627 0018 23F00103 		bic	r3, r3, #1
+ 628 001c FB72     		strb	r3, [r7, #11]
+ 629 001e 03E0     		b	.L38
+ 630              	.L37:
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else{
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         addr = (uint8_t)((uint32_t)addr|I2C_RECEIVER);
+ 631              		.loc 1 207 14
+ 632 0020 FB7A     		ldrb	r3, [r7, #11]
+ 633 0022 43F00103 		orr	r3, r3, #1
+ 634 0026 FB72     		strb	r3, [r7, #11]
+ 635              	.L38:
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_DATA(i2c_periph) = addr;
+ 636              		.loc 1 209 5
+ 637 0028 FB68     		ldr	r3, [r7, #12]
+ 638 002a 1033     		adds	r3, r3, #16
+ 639 002c 1A46     		mov	r2, r3
+ 640              		.loc 1 209 26
+ 641 002e FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
+ 642 0030 1360     		str	r3, [r2]
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 643              		.loc 1 210 1
+ 644 0032 00BF     		nop
+ 645 0034 1437     		adds	r7, r7, #20
+ 646              		.cfi_def_cfa_offset 4
+ 647 0036 BD46     		mov	sp, r7
+ 648              		.cfi_def_cfa_register 13
+ 649              		@ sp needed
+ 650 0038 80BC     		pop	{r7}
+ 651              		.cfi_restore 7
+ 652              		.cfi_def_cfa_offset 0
+ 653 003a 7047     		bx	lr
+ 654              		.cfi_endproc
+ 655              	.LFE129:
+ 657              		.section	.text.i2c_dualaddr_enable,"ax",%progbits
+ 658              		.align	1
+ 659              		.global	i2c_dualaddr_enable
+ 660              		.syntax unified
+ 661              		.thumb
+ 662              		.thumb_func
+ 663              		.fpu softvfp
+ 665              	i2c_dualaddr_enable:
+ 666              	.LFB130:
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      dual-address mode switch
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  dualaddr:
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DUADEN_DISABLE: dual-address mode disabled  
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DUADEN_ENABLE: dual-address mode enabled
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_dualaddr_enable(uint32_t i2c_periph,uint8_t dualaddr)
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 667              		.loc 1 222 1
+ 668              		.cfi_startproc
+ 669              		@ args = 0, pretend = 0, frame = 8
+ 670              		@ frame_needed = 1, uses_anonymous_args = 0
+ 671              		@ link register save eliminated.
+ 672 0000 80B4     		push	{r7}
+ 673              		.cfi_def_cfa_offset 4
+ 674              		.cfi_offset 7, -4
+ 675 0002 83B0     		sub	sp, sp, #12
+ 676              		.cfi_def_cfa_offset 16
+ 677 0004 00AF     		add	r7, sp, #0
+ 678              		.cfi_def_cfa_register 7
+ 679 0006 7860     		str	r0, [r7, #4]
+ 680 0008 0B46     		mov	r3, r1
+ 681 000a FB70     		strb	r3, [r7, #3]
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(I2C_DUADEN_ENABLE == dualaddr){
+ 682              		.loc 1 223 7
+ 683 000c FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 684 000e 012B     		cmp	r3, #1
+ 685 0010 08D1     		bne	.L40
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****        I2C_SADDR1(i2c_periph) |= I2C_SADDR1_DUADEN;  
+ 686              		.loc 1 224 31
+ 687 0012 7B68     		ldr	r3, [r7, #4]
+ 688 0014 0C33     		adds	r3, r3, #12
+ 689 0016 1B68     		ldr	r3, [r3]
+ 690 0018 7A68     		ldr	r2, [r7, #4]
+ 691 001a 0C32     		adds	r2, r2, #12
+ 692 001c 43F00103 		orr	r3, r3, #1
+ 693 0020 1360     		str	r3, [r2]
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else{
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****        I2C_SADDR1(i2c_periph) &= ~(I2C_SADDR1_DUADEN);  
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }        
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 694              		.loc 1 228 1
+ 695 0022 07E0     		b	.L42
+ 696              	.L40:
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }        
+ 697              		.loc 1 226 31
+ 698 0024 7B68     		ldr	r3, [r7, #4]
+ 699 0026 0C33     		adds	r3, r3, #12
+ 700 0028 1B68     		ldr	r3, [r3]
+ 701 002a 7A68     		ldr	r2, [r7, #4]
+ 702 002c 0C32     		adds	r2, r2, #12
+ 703 002e 23F00103 		bic	r3, r3, #1
+ 704 0032 1360     		str	r3, [r2]
+ 705              	.L42:
+ 706              		.loc 1 228 1
+ 707 0034 00BF     		nop
+ 708 0036 0C37     		adds	r7, r7, #12
+ 709              		.cfi_def_cfa_offset 4
+ 710 0038 BD46     		mov	sp, r7
+ 711              		.cfi_def_cfa_register 13
+ 712              		@ sp needed
+ 713 003a 80BC     		pop	{r7}
+ 714              		.cfi_restore 7
+ 715              		.cfi_def_cfa_offset 0
+ 716 003c 7047     		bx	lr
+ 717              		.cfi_endproc
+ 718              	.LFE130:
+ 720              		.section	.text.i2c_enable,"ax",%progbits
+ 721              		.align	1
+ 722              		.global	i2c_enable
+ 723              		.syntax unified
+ 724              		.thumb
+ 725              		.thumb_func
+ 726              		.fpu softvfp
+ 728              	i2c_enable:
+ 729              	.LFB131:
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      enable i2c
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2) 
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_enable(uint32_t i2c_periph)
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 730              		.loc 1 237 1
+ 731              		.cfi_startproc
+ 732              		@ args = 0, pretend = 0, frame = 8
+ 733              		@ frame_needed = 1, uses_anonymous_args = 0
+ 734              		@ link register save eliminated.
+ 735 0000 80B4     		push	{r7}
+ 736              		.cfi_def_cfa_offset 4
+ 737              		.cfi_offset 7, -4
+ 738 0002 83B0     		sub	sp, sp, #12
+ 739              		.cfi_def_cfa_offset 16
+ 740 0004 00AF     		add	r7, sp, #0
+ 741              		.cfi_def_cfa_register 7
+ 742 0006 7860     		str	r0, [r7, #4]
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) |= I2C_CTL0_I2CEN;
+ 743              		.loc 1 238 26
+ 744 0008 7B68     		ldr	r3, [r7, #4]
+ 745 000a 1A68     		ldr	r2, [r3]
+ 746 000c 7B68     		ldr	r3, [r7, #4]
+ 747 000e 42F00102 		orr	r2, r2, #1
+ 748 0012 1A60     		str	r2, [r3]
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 749              		.loc 1 239 1
+ 750 0014 00BF     		nop
+ 751 0016 0C37     		adds	r7, r7, #12
+ 752              		.cfi_def_cfa_offset 4
+ 753 0018 BD46     		mov	sp, r7
+ 754              		.cfi_def_cfa_register 13
+ 755              		@ sp needed
+ 756 001a 80BC     		pop	{r7}
+ 757              		.cfi_restore 7
+ 758              		.cfi_def_cfa_offset 0
+ 759 001c 7047     		bx	lr
+ 760              		.cfi_endproc
+ 761              	.LFE131:
+ 763              		.section	.text.i2c_disable,"ax",%progbits
+ 764              		.align	1
+ 765              		.global	i2c_disable
+ 766              		.syntax unified
+ 767              		.thumb
+ 768              		.thumb_func
+ 769              		.fpu softvfp
+ 771              	i2c_disable:
+ 772              	.LFB132:
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      disable i2c
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2) 
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_disable(uint32_t i2c_periph)
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 773              		.loc 1 248 1
+ 774              		.cfi_startproc
+ 775              		@ args = 0, pretend = 0, frame = 8
+ 776              		@ frame_needed = 1, uses_anonymous_args = 0
+ 777              		@ link register save eliminated.
+ 778 0000 80B4     		push	{r7}
+ 779              		.cfi_def_cfa_offset 4
+ 780              		.cfi_offset 7, -4
+ 781 0002 83B0     		sub	sp, sp, #12
+ 782              		.cfi_def_cfa_offset 16
+ 783 0004 00AF     		add	r7, sp, #0
+ 784              		.cfi_def_cfa_register 7
+ 785 0006 7860     		str	r0, [r7, #4]
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) &= ~(I2C_CTL0_I2CEN);
+ 786              		.loc 1 249 26
+ 787 0008 7B68     		ldr	r3, [r7, #4]
+ 788 000a 1A68     		ldr	r2, [r3]
+ 789 000c 7B68     		ldr	r3, [r7, #4]
+ 790 000e 22F00102 		bic	r2, r2, #1
+ 791 0012 1A60     		str	r2, [r3]
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 792              		.loc 1 251 1
+ 793 0014 00BF     		nop
+ 794 0016 0C37     		adds	r7, r7, #12
+ 795              		.cfi_def_cfa_offset 4
+ 796 0018 BD46     		mov	sp, r7
+ 797              		.cfi_def_cfa_register 13
+ 798              		@ sp needed
+ 799 001a 80BC     		pop	{r7}
+ 800              		.cfi_restore 7
+ 801              		.cfi_def_cfa_offset 0
+ 802 001c 7047     		bx	lr
+ 803              		.cfi_endproc
+ 804              	.LFE132:
+ 806              		.section	.text.i2c_start_on_bus,"ax",%progbits
+ 807              		.align	1
+ 808              		.global	i2c_start_on_bus
+ 809              		.syntax unified
+ 810              		.thumb
+ 811              		.thumb_func
+ 812              		.fpu softvfp
+ 814              	i2c_start_on_bus:
+ 815              	.LFB133:
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      generate a START condition on I2C bus
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_start_on_bus(uint32_t i2c_periph)
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 816              		.loc 1 260 1
+ 817              		.cfi_startproc
+ 818              		@ args = 0, pretend = 0, frame = 8
+ 819              		@ frame_needed = 1, uses_anonymous_args = 0
+ 820              		@ link register save eliminated.
+ 821 0000 80B4     		push	{r7}
+ 822              		.cfi_def_cfa_offset 4
+ 823              		.cfi_offset 7, -4
+ 824 0002 83B0     		sub	sp, sp, #12
+ 825              		.cfi_def_cfa_offset 16
+ 826 0004 00AF     		add	r7, sp, #0
+ 827              		.cfi_def_cfa_register 7
+ 828 0006 7860     		str	r0, [r7, #4]
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) |= I2C_CTL0_START;
+ 829              		.loc 1 261 26
+ 830 0008 7B68     		ldr	r3, [r7, #4]
+ 831 000a 1A68     		ldr	r2, [r3]
+ 832 000c 7B68     		ldr	r3, [r7, #4]
+ 833 000e 42F48072 		orr	r2, r2, #256
+ 834 0012 1A60     		str	r2, [r3]
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 835              		.loc 1 262 1
+ 836 0014 00BF     		nop
+ 837 0016 0C37     		adds	r7, r7, #12
+ 838              		.cfi_def_cfa_offset 4
+ 839 0018 BD46     		mov	sp, r7
+ 840              		.cfi_def_cfa_register 13
+ 841              		@ sp needed
+ 842 001a 80BC     		pop	{r7}
+ 843              		.cfi_restore 7
+ 844              		.cfi_def_cfa_offset 0
+ 845 001c 7047     		bx	lr
+ 846              		.cfi_endproc
+ 847              	.LFE133:
+ 849              		.section	.text.i2c_stop_on_bus,"ax",%progbits
+ 850              		.align	1
+ 851              		.global	i2c_stop_on_bus
+ 852              		.syntax unified
+ 853              		.thumb
+ 854              		.thumb_func
+ 855              		.fpu softvfp
+ 857              	i2c_stop_on_bus:
+ 858              	.LFB134:
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      generate a STOP condition on I2C bus
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_stop_on_bus(uint32_t i2c_periph)
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 859              		.loc 1 271 1
+ 860              		.cfi_startproc
+ 861              		@ args = 0, pretend = 0, frame = 8
+ 862              		@ frame_needed = 1, uses_anonymous_args = 0
+ 863              		@ link register save eliminated.
+ 864 0000 80B4     		push	{r7}
+ 865              		.cfi_def_cfa_offset 4
+ 866              		.cfi_offset 7, -4
+ 867 0002 83B0     		sub	sp, sp, #12
+ 868              		.cfi_def_cfa_offset 16
+ 869 0004 00AF     		add	r7, sp, #0
+ 870              		.cfi_def_cfa_register 7
+ 871 0006 7860     		str	r0, [r7, #4]
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) |= I2C_CTL0_STOP;
+ 872              		.loc 1 272 26
+ 873 0008 7B68     		ldr	r3, [r7, #4]
+ 874 000a 1A68     		ldr	r2, [r3]
+ 875 000c 7B68     		ldr	r3, [r7, #4]
+ 876 000e 42F40072 		orr	r2, r2, #512
+ 877 0012 1A60     		str	r2, [r3]
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 878              		.loc 1 273 1
+ 879 0014 00BF     		nop
+ 880 0016 0C37     		adds	r7, r7, #12
+ 881              		.cfi_def_cfa_offset 4
+ 882 0018 BD46     		mov	sp, r7
+ 883              		.cfi_def_cfa_register 13
+ 884              		@ sp needed
+ 885 001a 80BC     		pop	{r7}
+ 886              		.cfi_restore 7
+ 887              		.cfi_def_cfa_offset 0
+ 888 001c 7047     		bx	lr
+ 889              		.cfi_endproc
+ 890              	.LFE134:
+ 892              		.section	.text.i2c_transmit_data,"ax",%progbits
+ 893              		.align	1
+ 894              		.global	i2c_transmit_data
+ 895              		.syntax unified
+ 896              		.thumb
+ 897              		.thumb_func
+ 898              		.fpu softvfp
+ 900              	i2c_transmit_data:
+ 901              	.LFB135:
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      i2c transmit data function
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  data: data of transmission 
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_transmit_data(uint32_t i2c_periph,uint8_t data)
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 902              		.loc 1 283 1
+ 903              		.cfi_startproc
+ 904              		@ args = 0, pretend = 0, frame = 8
+ 905              		@ frame_needed = 1, uses_anonymous_args = 0
+ 906              		@ link register save eliminated.
+ 907 0000 80B4     		push	{r7}
+ 908              		.cfi_def_cfa_offset 4
+ 909              		.cfi_offset 7, -4
+ 910 0002 83B0     		sub	sp, sp, #12
+ 911              		.cfi_def_cfa_offset 16
+ 912 0004 00AF     		add	r7, sp, #0
+ 913              		.cfi_def_cfa_register 7
+ 914 0006 7860     		str	r0, [r7, #4]
+ 915 0008 0B46     		mov	r3, r1
+ 916 000a FB70     		strb	r3, [r7, #3]
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_DATA(i2c_periph) = data;
+ 917              		.loc 1 284 5
+ 918 000c 7B68     		ldr	r3, [r7, #4]
+ 919 000e 1033     		adds	r3, r3, #16
+ 920 0010 1A46     		mov	r2, r3
+ 921              		.loc 1 284 26
+ 922 0012 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 923 0014 1360     		str	r3, [r2]
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 924              		.loc 1 285 1
+ 925 0016 00BF     		nop
+ 926 0018 0C37     		adds	r7, r7, #12
+ 927              		.cfi_def_cfa_offset 4
+ 928 001a BD46     		mov	sp, r7
+ 929              		.cfi_def_cfa_register 13
+ 930              		@ sp needed
+ 931 001c 80BC     		pop	{r7}
+ 932              		.cfi_restore 7
+ 933              		.cfi_def_cfa_offset 0
+ 934 001e 7047     		bx	lr
+ 935              		.cfi_endproc
+ 936              	.LFE135:
+ 938              		.section	.text.i2c_receive_data,"ax",%progbits
+ 939              		.align	1
+ 940              		.global	i2c_receive_data
+ 941              		.syntax unified
+ 942              		.thumb
+ 943              		.thumb_func
+ 944              		.fpu softvfp
+ 946              	i2c_receive_data:
+ 947              	.LFB136:
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      i2c receive data function
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     data of received
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** uint8_t i2c_receive_data(uint32_t i2c_periph)
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 948              		.loc 1 294 1
+ 949              		.cfi_startproc
+ 950              		@ args = 0, pretend = 0, frame = 8
+ 951              		@ frame_needed = 1, uses_anonymous_args = 0
+ 952              		@ link register save eliminated.
+ 953 0000 80B4     		push	{r7}
+ 954              		.cfi_def_cfa_offset 4
+ 955              		.cfi_offset 7, -4
+ 956 0002 83B0     		sub	sp, sp, #12
+ 957              		.cfi_def_cfa_offset 16
+ 958 0004 00AF     		add	r7, sp, #0
+ 959              		.cfi_def_cfa_register 7
+ 960 0006 7860     		str	r0, [r7, #4]
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     return (uint8_t)I2C_DATA(i2c_periph); 
+ 961              		.loc 1 295 21
+ 962 0008 7B68     		ldr	r3, [r7, #4]
+ 963 000a 1033     		adds	r3, r3, #16
+ 964 000c 1B68     		ldr	r3, [r3]
+ 965              		.loc 1 295 12
+ 966 000e DBB2     		uxtb	r3, r3
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 967              		.loc 1 296 1
+ 968 0010 1846     		mov	r0, r3
+ 969 0012 0C37     		adds	r7, r7, #12
+ 970              		.cfi_def_cfa_offset 4
+ 971 0014 BD46     		mov	sp, r7
+ 972              		.cfi_def_cfa_register 13
+ 973              		@ sp needed
+ 974 0016 80BC     		pop	{r7}
+ 975              		.cfi_restore 7
+ 976              		.cfi_def_cfa_offset 0
+ 977 0018 7047     		bx	lr
+ 978              		.cfi_endproc
+ 979              	.LFE136:
+ 981              		.section	.text.i2c_dma_enable,"ax",%progbits
+ 982              		.align	1
+ 983              		.global	i2c_dma_enable
+ 984              		.syntax unified
+ 985              		.thumb
+ 986              		.thumb_func
+ 987              		.fpu softvfp
+ 989              	i2c_dma_enable:
+ 990              	.LFB137:
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      I2C DMA mode enable
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  dmastste: 
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DMA_ON: DMA mode enabled
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DMA_OFF: DMA mode disabled
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_dma_enable(uint32_t i2c_periph,uint32_t dmastste)
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 991              		.loc 1 308 1
+ 992              		.cfi_startproc
+ 993              		@ args = 0, pretend = 0, frame = 16
+ 994              		@ frame_needed = 1, uses_anonymous_args = 0
+ 995              		@ link register save eliminated.
+ 996 0000 80B4     		push	{r7}
+ 997              		.cfi_def_cfa_offset 4
+ 998              		.cfi_offset 7, -4
+ 999 0002 85B0     		sub	sp, sp, #20
+ 1000              		.cfi_def_cfa_offset 24
+ 1001 0004 00AF     		add	r7, sp, #0
+ 1002              		.cfi_def_cfa_register 7
+ 1003 0006 7860     		str	r0, [r7, #4]
+ 1004 0008 3960     		str	r1, [r7]
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* configure i2c DMA function */
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1005              		.loc 1 310 14
+ 1006 000a 0023     		movs	r3, #0
+ 1007 000c FB60     		str	r3, [r7, #12]
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL1(i2c_periph);
+ 1008              		.loc 1 311 11
+ 1009 000e 7B68     		ldr	r3, [r7, #4]
+ 1010 0010 0433     		adds	r3, r3, #4
+ 1011              		.loc 1 311 9
+ 1012 0012 1B68     		ldr	r3, [r3]
+ 1013 0014 FB60     		str	r3, [r7, #12]
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL1_DMAON); 
+ 1014              		.loc 1 312 9
+ 1015 0016 FB68     		ldr	r3, [r7, #12]
+ 1016 0018 23F40063 		bic	r3, r3, #2048
+ 1017 001c FB60     		str	r3, [r7, #12]
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= dmastste;
+ 1018              		.loc 1 313 9
+ 1019 001e FA68     		ldr	r2, [r7, #12]
+ 1020 0020 3B68     		ldr	r3, [r7]
+ 1021 0022 1343     		orrs	r3, r3, r2
+ 1022 0024 FB60     		str	r3, [r7, #12]
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL1(i2c_periph) = ctl;
+ 1023              		.loc 1 314 5
+ 1024 0026 7B68     		ldr	r3, [r7, #4]
+ 1025 0028 0433     		adds	r3, r3, #4
+ 1026 002a 1A46     		mov	r2, r3
+ 1027              		.loc 1 314 26
+ 1028 002c FB68     		ldr	r3, [r7, #12]
+ 1029 002e 1360     		str	r3, [r2]
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1030              		.loc 1 316 1
+ 1031 0030 00BF     		nop
+ 1032 0032 1437     		adds	r7, r7, #20
+ 1033              		.cfi_def_cfa_offset 4
+ 1034 0034 BD46     		mov	sp, r7
+ 1035              		.cfi_def_cfa_register 13
+ 1036              		@ sp needed
+ 1037 0036 80BC     		pop	{r7}
+ 1038              		.cfi_restore 7
+ 1039              		.cfi_def_cfa_offset 0
+ 1040 0038 7047     		bx	lr
+ 1041              		.cfi_endproc
+ 1042              	.LFE137:
+ 1044              		.section	.text.i2c_dma_last_transfer_enable,"ax",%progbits
+ 1045              		.align	1
+ 1046              		.global	i2c_dma_last_transfer_enable
+ 1047              		.syntax unified
+ 1048              		.thumb
+ 1049              		.thumb_func
+ 1050              		.fpu softvfp
+ 1052              	i2c_dma_last_transfer_enable:
+ 1053              	.LFB138:
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      flag indicating DMA last transfer
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  dmastste: 
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DMALST_ON: next DMA EOT is the last transfer
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DMALST_OFF: next DMA EOT is not the last transfer
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_dma_last_transfer_enable(uint32_t i2c_periph,uint32_t dmalast)
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1054              		.loc 1 328 1
+ 1055              		.cfi_startproc
+ 1056              		@ args = 0, pretend = 0, frame = 16
+ 1057              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1058              		@ link register save eliminated.
+ 1059 0000 80B4     		push	{r7}
+ 1060              		.cfi_def_cfa_offset 4
+ 1061              		.cfi_offset 7, -4
+ 1062 0002 85B0     		sub	sp, sp, #20
+ 1063              		.cfi_def_cfa_offset 24
+ 1064 0004 00AF     		add	r7, sp, #0
+ 1065              		.cfi_def_cfa_register 7
+ 1066 0006 7860     		str	r0, [r7, #4]
+ 1067 0008 3960     		str	r1, [r7]
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* configure DMA last transfer */
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1068              		.loc 1 330 14
+ 1069 000a 0023     		movs	r3, #0
+ 1070 000c FB60     		str	r3, [r7, #12]
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL1(i2c_periph);
+ 1071              		.loc 1 331 11
+ 1072 000e 7B68     		ldr	r3, [r7, #4]
+ 1073 0010 0433     		adds	r3, r3, #4
+ 1074              		.loc 1 331 9
+ 1075 0012 1B68     		ldr	r3, [r3]
+ 1076 0014 FB60     		str	r3, [r7, #12]
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL1_DMALST); 
+ 1077              		.loc 1 332 9
+ 1078 0016 FB68     		ldr	r3, [r7, #12]
+ 1079 0018 23F48053 		bic	r3, r3, #4096
+ 1080 001c FB60     		str	r3, [r7, #12]
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= dmalast;
+ 1081              		.loc 1 333 9
+ 1082 001e FA68     		ldr	r2, [r7, #12]
+ 1083 0020 3B68     		ldr	r3, [r7]
+ 1084 0022 1343     		orrs	r3, r3, r2
+ 1085 0024 FB60     		str	r3, [r7, #12]
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL1(i2c_periph) = ctl;
+ 1086              		.loc 1 334 5
+ 1087 0026 7B68     		ldr	r3, [r7, #4]
+ 1088 0028 0433     		adds	r3, r3, #4
+ 1089 002a 1A46     		mov	r2, r3
+ 1090              		.loc 1 334 26
+ 1091 002c FB68     		ldr	r3, [r7, #12]
+ 1092 002e 1360     		str	r3, [r2]
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1093              		.loc 1 336 1
+ 1094 0030 00BF     		nop
+ 1095 0032 1437     		adds	r7, r7, #20
+ 1096              		.cfi_def_cfa_offset 4
+ 1097 0034 BD46     		mov	sp, r7
+ 1098              		.cfi_def_cfa_register 13
+ 1099              		@ sp needed
+ 1100 0036 80BC     		pop	{r7}
+ 1101              		.cfi_restore 7
+ 1102              		.cfi_def_cfa_offset 0
+ 1103 0038 7047     		bx	lr
+ 1104              		.cfi_endproc
+ 1105              	.LFE138:
+ 1107              		.section	.text.i2c_stretch_scl_low_config,"ax",%progbits
+ 1108              		.align	1
+ 1109              		.global	i2c_stretch_scl_low_config
+ 1110              		.syntax unified
+ 1111              		.thumb
+ 1112              		.thumb_func
+ 1113              		.fpu softvfp
+ 1115              	i2c_stretch_scl_low_config:
+ 1116              	.LFB139:
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      whether to stretch SCL low when data is not ready in slave mode 
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  stretchpara:
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SCLSTRETCH_ENABLE: SCL stretching is enabled
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SCLSTRETCH_DISABLE: SCL stretching is disabled
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_stretch_scl_low_config(uint32_t i2c_periph,uint32_t stretchpara)
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1117              		.loc 1 348 1
+ 1118              		.cfi_startproc
+ 1119              		@ args = 0, pretend = 0, frame = 16
+ 1120              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1121              		@ link register save eliminated.
+ 1122 0000 80B4     		push	{r7}
+ 1123              		.cfi_def_cfa_offset 4
+ 1124              		.cfi_offset 7, -4
+ 1125 0002 85B0     		sub	sp, sp, #20
+ 1126              		.cfi_def_cfa_offset 24
+ 1127 0004 00AF     		add	r7, sp, #0
+ 1128              		.cfi_def_cfa_register 7
+ 1129 0006 7860     		str	r0, [r7, #4]
+ 1130 0008 3960     		str	r1, [r7]
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* configure I2C SCL strerching enable or disable */
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1131              		.loc 1 350 14
+ 1132 000a 0023     		movs	r3, #0
+ 1133 000c FB60     		str	r3, [r7, #12]
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL0(i2c_periph);
+ 1134              		.loc 1 351 11
+ 1135 000e 7B68     		ldr	r3, [r7, #4]
+ 1136              		.loc 1 351 9
+ 1137 0010 1B68     		ldr	r3, [r3]
+ 1138 0012 FB60     		str	r3, [r7, #12]
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL0_DISSTRC); 
+ 1139              		.loc 1 352 9
+ 1140 0014 FB68     		ldr	r3, [r7, #12]
+ 1141 0016 23F08003 		bic	r3, r3, #128
+ 1142 001a FB60     		str	r3, [r7, #12]
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= stretchpara;
+ 1143              		.loc 1 353 9
+ 1144 001c FA68     		ldr	r2, [r7, #12]
+ 1145 001e 3B68     		ldr	r3, [r7]
+ 1146 0020 1343     		orrs	r3, r3, r2
+ 1147 0022 FB60     		str	r3, [r7, #12]
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) = ctl;
+ 1148              		.loc 1 354 5
+ 1149 0024 7B68     		ldr	r3, [r7, #4]
+ 1150              		.loc 1 354 26
+ 1151 0026 FA68     		ldr	r2, [r7, #12]
+ 1152 0028 1A60     		str	r2, [r3]
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1153              		.loc 1 355 1
+ 1154 002a 00BF     		nop
+ 1155 002c 1437     		adds	r7, r7, #20
+ 1156              		.cfi_def_cfa_offset 4
+ 1157 002e BD46     		mov	sp, r7
+ 1158              		.cfi_def_cfa_register 13
+ 1159              		@ sp needed
+ 1160 0030 80BC     		pop	{r7}
+ 1161              		.cfi_restore 7
+ 1162              		.cfi_def_cfa_offset 0
+ 1163 0032 7047     		bx	lr
+ 1164              		.cfi_endproc
+ 1165              	.LFE139:
+ 1167              		.section	.text.i2c_slave_response_to_gcall_config,"ax",%progbits
+ 1168              		.align	1
+ 1169              		.global	i2c_slave_response_to_gcall_config
+ 1170              		.syntax unified
+ 1171              		.thumb
+ 1172              		.thumb_func
+ 1173              		.fpu softvfp
+ 1175              	i2c_slave_response_to_gcall_config:
+ 1176              	.LFB140:
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      whether or not to response to a general Cal 
+ 359:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  gcallpara:
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_GCEN_ENABLE: slave will response to a general call
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_GCEN_DISABLE: slave will not response to a general call
+ 363:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 364:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 365:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 366:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_slave_response_to_gcall_config(uint32_t i2c_periph, uint32_t gcallpara)
+ 367:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1177              		.loc 1 367 1
+ 1178              		.cfi_startproc
+ 1179              		@ args = 0, pretend = 0, frame = 16
+ 1180              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1181              		@ link register save eliminated.
+ 1182 0000 80B4     		push	{r7}
+ 1183              		.cfi_def_cfa_offset 4
+ 1184              		.cfi_offset 7, -4
+ 1185 0002 85B0     		sub	sp, sp, #20
+ 1186              		.cfi_def_cfa_offset 24
+ 1187 0004 00AF     		add	r7, sp, #0
+ 1188              		.cfi_def_cfa_register 7
+ 1189 0006 7860     		str	r0, [r7, #4]
+ 1190 0008 3960     		str	r1, [r7]
+ 368:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* configure slave response to a general call enable or disable */
+ 369:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1191              		.loc 1 369 14
+ 1192 000a 0023     		movs	r3, #0
+ 1193 000c FB60     		str	r3, [r7, #12]
+ 370:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL0(i2c_periph);
+ 1194              		.loc 1 370 11
+ 1195 000e 7B68     		ldr	r3, [r7, #4]
+ 1196              		.loc 1 370 9
+ 1197 0010 1B68     		ldr	r3, [r3]
+ 1198 0012 FB60     		str	r3, [r7, #12]
+ 371:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL0_GCEN); 
+ 1199              		.loc 1 371 9
+ 1200 0014 FB68     		ldr	r3, [r7, #12]
+ 1201 0016 23F04003 		bic	r3, r3, #64
+ 1202 001a FB60     		str	r3, [r7, #12]
+ 372:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= gcallpara;
+ 1203              		.loc 1 372 9
+ 1204 001c FA68     		ldr	r2, [r7, #12]
+ 1205 001e 3B68     		ldr	r3, [r7]
+ 1206 0020 1343     		orrs	r3, r3, r2
+ 1207 0022 FB60     		str	r3, [r7, #12]
+ 373:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) = ctl;
+ 1208              		.loc 1 373 5
+ 1209 0024 7B68     		ldr	r3, [r7, #4]
+ 1210              		.loc 1 373 26
+ 1211 0026 FA68     		ldr	r2, [r7, #12]
+ 1212 0028 1A60     		str	r2, [r3]
+ 374:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1213              		.loc 1 374 1
+ 1214 002a 00BF     		nop
+ 1215 002c 1437     		adds	r7, r7, #20
+ 1216              		.cfi_def_cfa_offset 4
+ 1217 002e BD46     		mov	sp, r7
+ 1218              		.cfi_def_cfa_register 13
+ 1219              		@ sp needed
+ 1220 0030 80BC     		pop	{r7}
+ 1221              		.cfi_restore 7
+ 1222              		.cfi_def_cfa_offset 0
+ 1223 0032 7047     		bx	lr
+ 1224              		.cfi_endproc
+ 1225              	.LFE140:
+ 1227              		.section	.text.i2c_software_reset_config,"ax",%progbits
+ 1228              		.align	1
+ 1229              		.global	i2c_software_reset_config
+ 1230              		.syntax unified
+ 1231              		.thumb
+ 1232              		.thumb_func
+ 1233              		.fpu softvfp
+ 1235              	i2c_software_reset_config:
+ 1236              	.LFB141:
+ 375:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 376:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 377:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      software reset I2C 
+ 378:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 379:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  sreset:
+ 380:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SRESET_SET: I2C is under reset
+ 381:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SRESET_RESET: I2C is not under reset
+ 382:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 383:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 384:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 385:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_software_reset_config(uint32_t i2c_periph, uint32_t sreset)
+ 386:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1237              		.loc 1 386 1
+ 1238              		.cfi_startproc
+ 1239              		@ args = 0, pretend = 0, frame = 16
+ 1240              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1241              		@ link register save eliminated.
+ 1242 0000 80B4     		push	{r7}
+ 1243              		.cfi_def_cfa_offset 4
+ 1244              		.cfi_offset 7, -4
+ 1245 0002 85B0     		sub	sp, sp, #20
+ 1246              		.cfi_def_cfa_offset 24
+ 1247 0004 00AF     		add	r7, sp, #0
+ 1248              		.cfi_def_cfa_register 7
+ 1249 0006 7860     		str	r0, [r7, #4]
+ 1250 0008 3960     		str	r1, [r7]
+ 387:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* modify CTL0 and configure software reset I2C state */
+ 388:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1251              		.loc 1 388 14
+ 1252 000a 0023     		movs	r3, #0
+ 1253 000c FB60     		str	r3, [r7, #12]
+ 389:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL0(i2c_periph);
+ 1254              		.loc 1 389 11
+ 1255 000e 7B68     		ldr	r3, [r7, #4]
+ 1256              		.loc 1 389 9
+ 1257 0010 1B68     		ldr	r3, [r3]
+ 1258 0012 FB60     		str	r3, [r7, #12]
+ 390:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL0_SRESET); 
+ 1259              		.loc 1 390 9
+ 1260 0014 FB68     		ldr	r3, [r7, #12]
+ 1261 0016 23F40043 		bic	r3, r3, #32768
+ 1262 001a FB60     		str	r3, [r7, #12]
+ 391:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= sreset;
+ 1263              		.loc 1 391 9
+ 1264 001c FA68     		ldr	r2, [r7, #12]
+ 1265 001e 3B68     		ldr	r3, [r7]
+ 1266 0020 1343     		orrs	r3, r3, r2
+ 1267 0022 FB60     		str	r3, [r7, #12]
+ 392:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) = ctl;
+ 1268              		.loc 1 392 5
+ 1269 0024 7B68     		ldr	r3, [r7, #4]
+ 1270              		.loc 1 392 26
+ 1271 0026 FA68     		ldr	r2, [r7, #12]
+ 1272 0028 1A60     		str	r2, [r3]
+ 393:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1273              		.loc 1 393 1
+ 1274 002a 00BF     		nop
+ 1275 002c 1437     		adds	r7, r7, #20
+ 1276              		.cfi_def_cfa_offset 4
+ 1277 002e BD46     		mov	sp, r7
+ 1278              		.cfi_def_cfa_register 13
+ 1279              		@ sp needed
+ 1280 0030 80BC     		pop	{r7}
+ 1281              		.cfi_restore 7
+ 1282              		.cfi_def_cfa_offset 0
+ 1283 0032 7047     		bx	lr
+ 1284              		.cfi_endproc
+ 1285              	.LFE141:
+ 1287              		.section	.text.i2c_flag_get,"ax",%progbits
+ 1288              		.align	1
+ 1289              		.global	i2c_flag_get
+ 1290              		.syntax unified
+ 1291              		.thumb
+ 1292              		.thumb_func
+ 1293              		.fpu softvfp
+ 1295              	i2c_flag_get:
+ 1296              	.LFB142:
+ 394:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 395:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 396:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      check i2c state
+ 397:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 398:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  state:
+ 399:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SBSEND: start condition send out 
+ 400:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ADDSEND: address is sent in master mode or received and matches in slave mode
+ 401:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_BTC: byte transmission finishes
+ 402:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ADD10SEND: header of 10-bit address is sent in master mode
+ 403:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_STPDET: etop condition detected in slave mode
+ 404:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_RBNE: I2C_DATA is not Empty during receiving
+ 405:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_TBE: I2C_DATA is empty during transmitting
+ 406:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_BERR: a bus error occurs indication a unexpected start or stop condition on I
+ 407:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_LOSTARB: arbitration lost in master mode
+ 408:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_AERR: acknowledge error
+ 409:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_OUERR: over-run or under-run situation occurs in slave mode
+ 410:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_PECERR: PEC error when receiving data
+ 411:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SMBTO: timeout signal in SMBus mode
+ 412:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SMBALT: SMBus alert status
+ 413:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_MASTER: a flag indicating whether I2C block is in master or slave mode
+ 414:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_I2CBSY: busy flag
+ 415:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_TRS: whether the I2C is a transmitter or a receiver
+ 416:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_RXGC: general call address (00h) received
+ 417:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DEFSMB: default address of SMBus device
+ 418:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_HSTSMB: SMBus host header detected in slave mode
+ 419:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_DUMODF: dual flag in slave mode indicating which address is matched in dual-a
+ 420:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 421:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     state of i2c
+ 422:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 423:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** FlagStatus i2c_flag_get(uint32_t i2c_periph,uint32_t state )
+ 424:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1297              		.loc 1 424 1
+ 1298              		.cfi_startproc
+ 1299              		@ args = 0, pretend = 0, frame = 16
+ 1300              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1301              		@ link register save eliminated.
+ 1302 0000 80B4     		push	{r7}
+ 1303              		.cfi_def_cfa_offset 4
+ 1304              		.cfi_offset 7, -4
+ 1305 0002 85B0     		sub	sp, sp, #20
+ 1306              		.cfi_def_cfa_offset 24
+ 1307 0004 00AF     		add	r7, sp, #0
+ 1308              		.cfi_def_cfa_register 7
+ 1309 0006 7860     		str	r0, [r7, #4]
+ 1310 0008 3960     		str	r1, [r7]
+ 425:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t reg = 0U;
+ 1311              		.loc 1 425 14
+ 1312 000a 0023     		movs	r3, #0
+ 1313 000c BB60     		str	r3, [r7, #8]
+ 426:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     FlagStatus regstate = RESET;
+ 1314              		.loc 1 426 16
+ 1315 000e 0023     		movs	r3, #0
+ 1316 0010 FB73     		strb	r3, [r7, #15]
+ 427:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* get the state in which register */
+ 428:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     reg = (BIT(31) & state);
+ 1317              		.loc 1 428 9
+ 1318 0012 3B68     		ldr	r3, [r7]
+ 1319 0014 03F00043 		and	r3, r3, #-2147483648
+ 1320 0018 BB60     		str	r3, [r7, #8]
+ 429:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if((BIT(31) == reg)){
+ 1321              		.loc 1 429 7
+ 1322 001a BB68     		ldr	r3, [r7, #8]
+ 1323 001c B3F1004F 		cmp	r3, #-2147483648
+ 1324 0020 0DD1     		bne	.L56
+ 430:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if((I2C_STAT1(i2c_periph)&(state & I2C_STATE_MASK))){
+ 1325              		.loc 1 430 13
+ 1326 0022 7B68     		ldr	r3, [r7, #4]
+ 1327 0024 1833     		adds	r3, r3, #24
+ 1328              		.loc 1 430 34
+ 1329 0026 1A68     		ldr	r2, [r3]
+ 1330 0028 3B68     		ldr	r3, [r7]
+ 1331 002a 1340     		ands	r3, r3, r2
+ 1332 002c 9BB2     		uxth	r3, r3
+ 1333              		.loc 1 430 11
+ 1334 002e 002B     		cmp	r3, #0
+ 1335 0030 02D0     		beq	.L57
+ 431:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             regstate = SET;
+ 1336              		.loc 1 431 22
+ 1337 0032 0123     		movs	r3, #1
+ 1338 0034 FB73     		strb	r3, [r7, #15]
+ 1339 0036 0FE0     		b	.L58
+ 1340              	.L57:
+ 432:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }else{
+ 433:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             regstate = RESET;
+ 1341              		.loc 1 433 22
+ 1342 0038 0023     		movs	r3, #0
+ 1343 003a FB73     		strb	r3, [r7, #15]
+ 1344 003c 0CE0     		b	.L58
+ 1345              	.L56:
+ 434:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }
+ 435:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else{
+ 436:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         if((I2C_STAT0(i2c_periph)&(state & I2C_STATE_MASK))){
+ 1346              		.loc 1 436 13
+ 1347 003e 7B68     		ldr	r3, [r7, #4]
+ 1348 0040 1433     		adds	r3, r3, #20
+ 1349              		.loc 1 436 34
+ 1350 0042 1A68     		ldr	r2, [r3]
+ 1351 0044 3B68     		ldr	r3, [r7]
+ 1352 0046 1340     		ands	r3, r3, r2
+ 1353 0048 9BB2     		uxth	r3, r3
+ 1354              		.loc 1 436 11
+ 1355 004a 002B     		cmp	r3, #0
+ 1356 004c 02D0     		beq	.L59
+ 437:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             regstate = SET;
+ 1357              		.loc 1 437 22
+ 1358 004e 0123     		movs	r3, #1
+ 1359 0050 FB73     		strb	r3, [r7, #15]
+ 1360 0052 01E0     		b	.L58
+ 1361              	.L59:
+ 438:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }else{
+ 439:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****             regstate = RESET;
+ 1362              		.loc 1 439 22
+ 1363 0054 0023     		movs	r3, #0
+ 1364 0056 FB73     		strb	r3, [r7, #15]
+ 1365              	.L58:
+ 440:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         }        
+ 441:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 442:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* return the state */
+ 443:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     return regstate;
+ 1366              		.loc 1 443 12
+ 1367 0058 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 444:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1368              		.loc 1 444 1
+ 1369 005a 1846     		mov	r0, r3
+ 1370 005c 1437     		adds	r7, r7, #20
+ 1371              		.cfi_def_cfa_offset 4
+ 1372 005e BD46     		mov	sp, r7
+ 1373              		.cfi_def_cfa_register 13
+ 1374              		@ sp needed
+ 1375 0060 80BC     		pop	{r7}
+ 1376              		.cfi_restore 7
+ 1377              		.cfi_def_cfa_offset 0
+ 1378 0062 7047     		bx	lr
+ 1379              		.cfi_endproc
+ 1380              	.LFE142:
+ 1382              		.section	.text.i2c_flag_clear,"ax",%progbits
+ 1383              		.align	1
+ 1384              		.global	i2c_flag_clear
+ 1385              		.syntax unified
+ 1386              		.thumb
+ 1387              		.thumb_func
+ 1388              		.fpu softvfp
+ 1390              	i2c_flag_clear:
+ 1391              	.LFB143:
+ 445:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 446:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 447:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      clear i2c state
+ 448:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 449:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  state: state type 
+ 450:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_STAT0_SMBALT: SMBus Alert status
+ 451:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_STAT0_SMBTO: timeout signal in SMBus mode
+ 452:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_STAT0_PECERR: PEC error when receiving data
+ 453:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_STAT0_OUERR: over-run or under-run situation occurs in slave mode    
+ 454:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_STAT0_AERR: acknowledge error
+ 455:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_STAT0_LOSTARB: arbitration lost in master mode   
+ 456:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_STAT0_BERR: a bus error   
+ 457:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_STAT0_ADDSEND: cleared by reading I2C_STAT0 and reading I2C_STAT1
+ 458:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 459:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 460:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 461:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_flag_clear(uint32_t i2c_periph,uint32_t state)
+ 462:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1392              		.loc 1 462 1
+ 1393              		.cfi_startproc
+ 1394              		@ args = 0, pretend = 0, frame = 8
+ 1395              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1396              		@ link register save eliminated.
+ 1397 0000 80B4     		push	{r7}
+ 1398              		.cfi_def_cfa_offset 4
+ 1399              		.cfi_offset 7, -4
+ 1400 0002 83B0     		sub	sp, sp, #12
+ 1401              		.cfi_def_cfa_offset 16
+ 1402 0004 00AF     		add	r7, sp, #0
+ 1403              		.cfi_def_cfa_register 7
+ 1404 0006 7860     		str	r0, [r7, #4]
+ 1405 0008 3960     		str	r1, [r7]
+ 463:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(I2C_STAT0_ADDSEND == state){
+ 1406              		.loc 1 463 7
+ 1407 000a 3B68     		ldr	r3, [r7]
+ 1408 000c 022B     		cmp	r3, #2
+ 1409 000e 06D1     		bne	.L62
+ 464:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         /* read I2C_STAT0 and then read I2C_STAT1 to clear ADDSEND */
+ 465:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         I2C_STAT0(i2c_periph);
+ 1410              		.loc 1 465 9
+ 1411 0010 7B68     		ldr	r3, [r7, #4]
+ 1412 0012 1433     		adds	r3, r3, #20
+ 1413 0014 1B68     		ldr	r3, [r3]
+ 466:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         I2C_STAT1(i2c_periph);
+ 1414              		.loc 1 466 9
+ 1415 0016 7B68     		ldr	r3, [r7, #4]
+ 1416 0018 1833     		adds	r3, r3, #24
+ 1417 001a 1B68     		ldr	r3, [r3]
+ 467:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else{
+ 468:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         I2C_STAT0(i2c_periph) &= ~(state);
+ 469:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 470:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1418              		.loc 1 470 1
+ 1419 001c 08E0     		b	.L64
+ 1420              	.L62:
+ 468:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 1421              		.loc 1 468 31
+ 1422 001e 7B68     		ldr	r3, [r7, #4]
+ 1423 0020 1433     		adds	r3, r3, #20
+ 1424 0022 1A68     		ldr	r2, [r3]
+ 468:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 1425              		.loc 1 468 34
+ 1426 0024 3B68     		ldr	r3, [r7]
+ 1427 0026 DB43     		mvns	r3, r3
+ 468:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 1428              		.loc 1 468 31
+ 1429 0028 7968     		ldr	r1, [r7, #4]
+ 1430 002a 1431     		adds	r1, r1, #20
+ 1431 002c 1340     		ands	r3, r3, r2
+ 1432 002e 0B60     		str	r3, [r1]
+ 1433              	.L64:
+ 1434              		.loc 1 470 1
+ 1435 0030 00BF     		nop
+ 1436 0032 0C37     		adds	r7, r7, #12
+ 1437              		.cfi_def_cfa_offset 4
+ 1438 0034 BD46     		mov	sp, r7
+ 1439              		.cfi_def_cfa_register 13
+ 1440              		@ sp needed
+ 1441 0036 80BC     		pop	{r7}
+ 1442              		.cfi_restore 7
+ 1443              		.cfi_def_cfa_offset 0
+ 1444 0038 7047     		bx	lr
+ 1445              		.cfi_endproc
+ 1446              	.LFE143:
+ 1448              		.section	.text.i2c_interrupt_enable,"ax",%progbits
+ 1449              		.align	1
+ 1450              		.global	i2c_interrupt_enable
+ 1451              		.syntax unified
+ 1452              		.thumb
+ 1453              		.thumb_func
+ 1454              		.fpu softvfp
+ 1456              	i2c_interrupt_enable:
+ 1457              	.LFB144:
+ 471:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 472:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 473:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      enable i2c interrupt
+ 474:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 475:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  inttype:      interrupt type 
+ 476:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_CTL1_ERRIE: error interrupt enable 
+ 477:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_CTL1_EVIE:  event interrupt enable 
+ 478:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_CTL1_BUFIE: buffer interrupt enable   
+ 479:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 480:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 481:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 482:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_interrupt_enable(uint32_t i2c_periph,uint32_t inttype)
+ 483:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1458              		.loc 1 483 1
+ 1459              		.cfi_startproc
+ 1460              		@ args = 0, pretend = 0, frame = 8
+ 1461              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1462              		@ link register save eliminated.
+ 1463 0000 80B4     		push	{r7}
+ 1464              		.cfi_def_cfa_offset 4
+ 1465              		.cfi_offset 7, -4
+ 1466 0002 83B0     		sub	sp, sp, #12
+ 1467              		.cfi_def_cfa_offset 16
+ 1468 0004 00AF     		add	r7, sp, #0
+ 1469              		.cfi_def_cfa_register 7
+ 1470 0006 7860     		str	r0, [r7, #4]
+ 1471 0008 3960     		str	r1, [r7]
+ 484:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL1(i2c_periph) |= (inttype);   
+ 1472              		.loc 1 484 26
+ 1473 000a 7B68     		ldr	r3, [r7, #4]
+ 1474 000c 0433     		adds	r3, r3, #4
+ 1475 000e 1A68     		ldr	r2, [r3]
+ 1476 0010 7B68     		ldr	r3, [r7, #4]
+ 1477 0012 0433     		adds	r3, r3, #4
+ 1478 0014 1946     		mov	r1, r3
+ 1479 0016 3B68     		ldr	r3, [r7]
+ 1480 0018 1343     		orrs	r3, r3, r2
+ 1481 001a 0B60     		str	r3, [r1]
+ 485:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1482              		.loc 1 485 1
+ 1483 001c 00BF     		nop
+ 1484 001e 0C37     		adds	r7, r7, #12
+ 1485              		.cfi_def_cfa_offset 4
+ 1486 0020 BD46     		mov	sp, r7
+ 1487              		.cfi_def_cfa_register 13
+ 1488              		@ sp needed
+ 1489 0022 80BC     		pop	{r7}
+ 1490              		.cfi_restore 7
+ 1491              		.cfi_def_cfa_offset 0
+ 1492 0024 7047     		bx	lr
+ 1493              		.cfi_endproc
+ 1494              	.LFE144:
+ 1496              		.section	.text.i2c_interrupt_disable,"ax",%progbits
+ 1497              		.align	1
+ 1498              		.global	i2c_interrupt_disable
+ 1499              		.syntax unified
+ 1500              		.thumb
+ 1501              		.thumb_func
+ 1502              		.fpu softvfp
+ 1504              	i2c_interrupt_disable:
+ 1505              	.LFB145:
+ 486:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 487:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 488:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      disable i2c interrupt
+ 489:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 490:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  inttype: interrupt type 
+ 491:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_CTL1_ERRIE: error interrupt enable 
+ 492:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_CTL1_EVIE: event interrupt enable 
+ 493:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_CTL1_BUFIE: buffer interrupt enable   
+ 494:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 495:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 496:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 497:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_interrupt_disable(uint32_t i2c_periph,uint32_t inttype)
+ 498:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1506              		.loc 1 498 1
+ 1507              		.cfi_startproc
+ 1508              		@ args = 0, pretend = 0, frame = 8
+ 1509              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1510              		@ link register save eliminated.
+ 1511 0000 80B4     		push	{r7}
+ 1512              		.cfi_def_cfa_offset 4
+ 1513              		.cfi_offset 7, -4
+ 1514 0002 83B0     		sub	sp, sp, #12
+ 1515              		.cfi_def_cfa_offset 16
+ 1516 0004 00AF     		add	r7, sp, #0
+ 1517              		.cfi_def_cfa_register 7
+ 1518 0006 7860     		str	r0, [r7, #4]
+ 1519 0008 3960     		str	r1, [r7]
+ 499:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL1(i2c_periph) &= ~(inttype);   
+ 1520              		.loc 1 499 26
+ 1521 000a 7B68     		ldr	r3, [r7, #4]
+ 1522 000c 0433     		adds	r3, r3, #4
+ 1523 000e 1A68     		ldr	r2, [r3]
+ 1524              		.loc 1 499 29
+ 1525 0010 3B68     		ldr	r3, [r7]
+ 1526 0012 DB43     		mvns	r3, r3
+ 1527              		.loc 1 499 26
+ 1528 0014 7968     		ldr	r1, [r7, #4]
+ 1529 0016 0431     		adds	r1, r1, #4
+ 1530 0018 1340     		ands	r3, r3, r2
+ 1531 001a 0B60     		str	r3, [r1]
+ 500:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1532              		.loc 1 500 1
+ 1533 001c 00BF     		nop
+ 1534 001e 0C37     		adds	r7, r7, #12
+ 1535              		.cfi_def_cfa_offset 4
+ 1536 0020 BD46     		mov	sp, r7
+ 1537              		.cfi_def_cfa_register 13
+ 1538              		@ sp needed
+ 1539 0022 80BC     		pop	{r7}
+ 1540              		.cfi_restore 7
+ 1541              		.cfi_def_cfa_offset 0
+ 1542 0024 7047     		bx	lr
+ 1543              		.cfi_endproc
+ 1544              	.LFE145:
+ 1546              		.section	.text.i2c_pec_enable,"ax",%progbits
+ 1547              		.align	1
+ 1548              		.global	i2c_pec_enable
+ 1549              		.syntax unified
+ 1550              		.thumb
+ 1551              		.thumb_func
+ 1552              		.fpu softvfp
+ 1554              	i2c_pec_enable:
+ 1555              	.LFB146:
+ 501:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 502:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 503:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      I2C PEC calculation on or off
+ 504:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 505:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  pecpara:
+ 506:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_PEC_ENABLE: PEC calculation on 
+ 507:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_PEC_DISABLE: PEC calculation off 
+ 508:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 509:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 510:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 511:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_pec_enable(uint32_t i2c_periph,uint32_t pecstate)
+ 512:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1556              		.loc 1 512 1
+ 1557              		.cfi_startproc
+ 1558              		@ args = 0, pretend = 0, frame = 16
+ 1559              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1560              		@ link register save eliminated.
+ 1561 0000 80B4     		push	{r7}
+ 1562              		.cfi_def_cfa_offset 4
+ 1563              		.cfi_offset 7, -4
+ 1564 0002 85B0     		sub	sp, sp, #20
+ 1565              		.cfi_def_cfa_offset 24
+ 1566 0004 00AF     		add	r7, sp, #0
+ 1567              		.cfi_def_cfa_register 7
+ 1568 0006 7860     		str	r0, [r7, #4]
+ 1569 0008 3960     		str	r1, [r7]
+ 513:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* on/off PEC calculation */
+ 514:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1570              		.loc 1 514 14
+ 1571 000a 0023     		movs	r3, #0
+ 1572 000c FB60     		str	r3, [r7, #12]
+ 515:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL0(i2c_periph);
+ 1573              		.loc 1 515 11
+ 1574 000e 7B68     		ldr	r3, [r7, #4]
+ 1575              		.loc 1 515 9
+ 1576 0010 1B68     		ldr	r3, [r3]
+ 1577 0012 FB60     		str	r3, [r7, #12]
+ 516:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL0_PECEN); 
+ 1578              		.loc 1 516 9
+ 1579 0014 FB68     		ldr	r3, [r7, #12]
+ 1580 0016 23F02003 		bic	r3, r3, #32
+ 1581 001a FB60     		str	r3, [r7, #12]
+ 517:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= pecstate;
+ 1582              		.loc 1 517 9
+ 1583 001c FA68     		ldr	r2, [r7, #12]
+ 1584 001e 3B68     		ldr	r3, [r7]
+ 1585 0020 1343     		orrs	r3, r3, r2
+ 1586 0022 FB60     		str	r3, [r7, #12]
+ 518:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) = ctl;
+ 1587              		.loc 1 518 5
+ 1588 0024 7B68     		ldr	r3, [r7, #4]
+ 1589              		.loc 1 518 26
+ 1590 0026 FA68     		ldr	r2, [r7, #12]
+ 1591 0028 1A60     		str	r2, [r3]
+ 519:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1592              		.loc 1 519 1
+ 1593 002a 00BF     		nop
+ 1594 002c 1437     		adds	r7, r7, #20
+ 1595              		.cfi_def_cfa_offset 4
+ 1596 002e BD46     		mov	sp, r7
+ 1597              		.cfi_def_cfa_register 13
+ 1598              		@ sp needed
+ 1599 0030 80BC     		pop	{r7}
+ 1600              		.cfi_restore 7
+ 1601              		.cfi_def_cfa_offset 0
+ 1602 0032 7047     		bx	lr
+ 1603              		.cfi_endproc
+ 1604              	.LFE146:
+ 1606              		.section	.text.i2c_pec_transfer_enable,"ax",%progbits
+ 1607              		.align	1
+ 1608              		.global	i2c_pec_transfer_enable
+ 1609              		.syntax unified
+ 1610              		.thumb
+ 1611              		.thumb_func
+ 1612              		.fpu softvfp
+ 1614              	i2c_pec_transfer_enable:
+ 1615              	.LFB147:
+ 520:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 521:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 522:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      I2C whether to transfer PEC value
+ 523:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 524:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  pecpara:
+ 525:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_PECTRANS_ENABLE: transfer PEC 
+ 526:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_PECTRANS_DISABLE: not transfer PEC 
+ 527:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 528:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 529:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 530:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_pec_transfer_enable(uint32_t i2c_periph,uint32_t pecpara)
+ 531:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1616              		.loc 1 531 1
+ 1617              		.cfi_startproc
+ 1618              		@ args = 0, pretend = 0, frame = 16
+ 1619              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1620              		@ link register save eliminated.
+ 1621 0000 80B4     		push	{r7}
+ 1622              		.cfi_def_cfa_offset 4
+ 1623              		.cfi_offset 7, -4
+ 1624 0002 85B0     		sub	sp, sp, #20
+ 1625              		.cfi_def_cfa_offset 24
+ 1626 0004 00AF     		add	r7, sp, #0
+ 1627              		.cfi_def_cfa_register 7
+ 1628 0006 7860     		str	r0, [r7, #4]
+ 1629 0008 3960     		str	r1, [r7]
+ 532:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* whether to transfer PEC */
+ 533:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1630              		.loc 1 533 14
+ 1631 000a 0023     		movs	r3, #0
+ 1632 000c FB60     		str	r3, [r7, #12]
+ 534:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL0(i2c_periph);
+ 1633              		.loc 1 534 11
+ 1634 000e 7B68     		ldr	r3, [r7, #4]
+ 1635              		.loc 1 534 9
+ 1636 0010 1B68     		ldr	r3, [r3]
+ 1637 0012 FB60     		str	r3, [r7, #12]
+ 535:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL0_PECTRANS); 
+ 1638              		.loc 1 535 9
+ 1639 0014 FB68     		ldr	r3, [r7, #12]
+ 1640 0016 23F48053 		bic	r3, r3, #4096
+ 1641 001a FB60     		str	r3, [r7, #12]
+ 536:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= pecpara;
+ 1642              		.loc 1 536 9
+ 1643 001c FA68     		ldr	r2, [r7, #12]
+ 1644 001e 3B68     		ldr	r3, [r7]
+ 1645 0020 1343     		orrs	r3, r3, r2
+ 1646 0022 FB60     		str	r3, [r7, #12]
+ 537:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) = ctl;
+ 1647              		.loc 1 537 5
+ 1648 0024 7B68     		ldr	r3, [r7, #4]
+ 1649              		.loc 1 537 26
+ 1650 0026 FA68     		ldr	r2, [r7, #12]
+ 1651 0028 1A60     		str	r2, [r3]
+ 538:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1652              		.loc 1 538 1
+ 1653 002a 00BF     		nop
+ 1654 002c 1437     		adds	r7, r7, #20
+ 1655              		.cfi_def_cfa_offset 4
+ 1656 002e BD46     		mov	sp, r7
+ 1657              		.cfi_def_cfa_register 13
+ 1658              		@ sp needed
+ 1659 0030 80BC     		pop	{r7}
+ 1660              		.cfi_restore 7
+ 1661              		.cfi_def_cfa_offset 0
+ 1662 0032 7047     		bx	lr
+ 1663              		.cfi_endproc
+ 1664              	.LFE147:
+ 1666              		.section	.text.i2c_pec_value,"ax",%progbits
+ 1667              		.align	1
+ 1668              		.global	i2c_pec_value
+ 1669              		.syntax unified
+ 1670              		.thumb
+ 1671              		.thumb_func
+ 1672              		.fpu softvfp
+ 1674              	i2c_pec_value:
+ 1675              	.LFB148:
+ 539:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 540:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 541:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      packet error checking value 
+ 542:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 543:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 544:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     PEC value
+ 545:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 546:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** uint8_t i2c_pec_value(uint32_t i2c_periph)
+ 547:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1676              		.loc 1 547 1
+ 1677              		.cfi_startproc
+ 1678              		@ args = 0, pretend = 0, frame = 8
+ 1679              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1680              		@ link register save eliminated.
+ 1681 0000 80B4     		push	{r7}
+ 1682              		.cfi_def_cfa_offset 4
+ 1683              		.cfi_offset 7, -4
+ 1684 0002 83B0     		sub	sp, sp, #12
+ 1685              		.cfi_def_cfa_offset 16
+ 1686 0004 00AF     		add	r7, sp, #0
+ 1687              		.cfi_def_cfa_register 7
+ 1688 0006 7860     		str	r0, [r7, #4]
+ 548:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     return  (uint8_t)((I2C_STAT1(i2c_periph) &I2C_STAT1_ECV)>>8);
+ 1689              		.loc 1 548 24
+ 1690 0008 7B68     		ldr	r3, [r7, #4]
+ 1691 000a 1833     		adds	r3, r3, #24
+ 1692 000c 1B68     		ldr	r3, [r3]
+ 1693              		.loc 1 548 61
+ 1694 000e 1B0A     		lsrs	r3, r3, #8
+ 1695              		.loc 1 548 13
+ 1696 0010 DBB2     		uxtb	r3, r3
+ 549:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1697              		.loc 1 549 1
+ 1698 0012 1846     		mov	r0, r3
+ 1699 0014 0C37     		adds	r7, r7, #12
+ 1700              		.cfi_def_cfa_offset 4
+ 1701 0016 BD46     		mov	sp, r7
+ 1702              		.cfi_def_cfa_register 13
+ 1703              		@ sp needed
+ 1704 0018 80BC     		pop	{r7}
+ 1705              		.cfi_restore 7
+ 1706              		.cfi_def_cfa_offset 0
+ 1707 001a 7047     		bx	lr
+ 1708              		.cfi_endproc
+ 1709              	.LFE148:
+ 1711              		.section	.text.i2c_smbus_alert_issue,"ax",%progbits
+ 1712              		.align	1
+ 1713              		.global	i2c_smbus_alert_issue
+ 1714              		.syntax unified
+ 1715              		.thumb
+ 1716              		.thumb_func
+ 1717              		.fpu softvfp
+ 1719              	i2c_smbus_alert_issue:
+ 1720              	.LFB149:
+ 550:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 551:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 552:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      I2C issue alert through SMBA pin 
+ 553:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 554:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  smbuspara:
+ 555:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SALTSEND_ENABLE: issue alert through SMBA pin 
+ 556:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_SALTSEND_DISABLE: not issue alert through SMBA pin 
+ 557:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 558:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 559:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 560:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_smbus_alert_issue(uint32_t i2c_periph,uint32_t smbuspara)
+ 561:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1721              		.loc 1 561 1
+ 1722              		.cfi_startproc
+ 1723              		@ args = 0, pretend = 0, frame = 16
+ 1724              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1725              		@ link register save eliminated.
+ 1726 0000 80B4     		push	{r7}
+ 1727              		.cfi_def_cfa_offset 4
+ 1728              		.cfi_offset 7, -4
+ 1729 0002 85B0     		sub	sp, sp, #20
+ 1730              		.cfi_def_cfa_offset 24
+ 1731 0004 00AF     		add	r7, sp, #0
+ 1732              		.cfi_def_cfa_register 7
+ 1733 0006 7860     		str	r0, [r7, #4]
+ 1734 0008 3960     		str	r1, [r7]
+ 562:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* issue alert through SMBA pin configure*/
+ 563:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1735              		.loc 1 563 14
+ 1736 000a 0023     		movs	r3, #0
+ 1737 000c FB60     		str	r3, [r7, #12]
+ 564:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL0(i2c_periph);
+ 1738              		.loc 1 564 11
+ 1739 000e 7B68     		ldr	r3, [r7, #4]
+ 1740              		.loc 1 564 9
+ 1741 0010 1B68     		ldr	r3, [r3]
+ 1742 0012 FB60     		str	r3, [r7, #12]
+ 565:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL0_SALT); 
+ 1743              		.loc 1 565 9
+ 1744 0014 FB68     		ldr	r3, [r7, #12]
+ 1745 0016 23F40053 		bic	r3, r3, #8192
+ 1746 001a FB60     		str	r3, [r7, #12]
+ 566:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= smbuspara;
+ 1747              		.loc 1 566 9
+ 1748 001c FA68     		ldr	r2, [r7, #12]
+ 1749 001e 3B68     		ldr	r3, [r7]
+ 1750 0020 1343     		orrs	r3, r3, r2
+ 1751 0022 FB60     		str	r3, [r7, #12]
+ 567:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) = ctl;
+ 1752              		.loc 1 567 5
+ 1753 0024 7B68     		ldr	r3, [r7, #4]
+ 1754              		.loc 1 567 26
+ 1755 0026 FA68     		ldr	r2, [r7, #12]
+ 1756 0028 1A60     		str	r2, [r3]
+ 568:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1757              		.loc 1 568 1
+ 1758 002a 00BF     		nop
+ 1759 002c 1437     		adds	r7, r7, #20
+ 1760              		.cfi_def_cfa_offset 4
+ 1761 002e BD46     		mov	sp, r7
+ 1762              		.cfi_def_cfa_register 13
+ 1763              		@ sp needed
+ 1764 0030 80BC     		pop	{r7}
+ 1765              		.cfi_restore 7
+ 1766              		.cfi_def_cfa_offset 0
+ 1767 0032 7047     		bx	lr
+ 1768              		.cfi_endproc
+ 1769              	.LFE149:
+ 1771              		.section	.text.i2c_smbus_arp_enable,"ax",%progbits
+ 1772              		.align	1
+ 1773              		.global	i2c_smbus_arp_enable
+ 1774              		.syntax unified
+ 1775              		.thumb
+ 1776              		.thumb_func
+ 1777              		.fpu softvfp
+ 1779              	i2c_smbus_arp_enable:
+ 1780              	.LFB150:
+ 569:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 570:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 571:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      I2C ARP protocol in SMBus switch enable or disable 
+ 572:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 573:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  smbuspara:
+ 574:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ARP_ENABLE: ARP is enabled 
+ 575:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \arg        I2C_ARP_DISABLE: ARP is disabled 
+ 576:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 577:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 578:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 579:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_smbus_arp_enable(uint32_t i2c_periph,uint32_t arpstate)
+ 580:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1781              		.loc 1 580 1
+ 1782              		.cfi_startproc
+ 1783              		@ args = 0, pretend = 0, frame = 16
+ 1784              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1785              		@ link register save eliminated.
+ 1786 0000 80B4     		push	{r7}
+ 1787              		.cfi_def_cfa_offset 4
+ 1788              		.cfi_offset 7, -4
+ 1789 0002 85B0     		sub	sp, sp, #20
+ 1790              		.cfi_def_cfa_offset 24
+ 1791 0004 00AF     		add	r7, sp, #0
+ 1792              		.cfi_def_cfa_register 7
+ 1793 0006 7860     		str	r0, [r7, #4]
+ 1794 0008 3960     		str	r1, [r7]
+ 581:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     /* enable or disable I2C ARP protocol*/
+ 582:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     uint32_t ctl = 0U;
+ 1795              		.loc 1 582 14
+ 1796 000a 0023     		movs	r3, #0
+ 1797 000c FB60     		str	r3, [r7, #12]
+ 583:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl = I2C_CTL0(i2c_periph);
+ 1798              		.loc 1 583 11
+ 1799 000e 7B68     		ldr	r3, [r7, #4]
+ 1800              		.loc 1 583 9
+ 1801 0010 1B68     		ldr	r3, [r3]
+ 1802 0012 FB60     		str	r3, [r7, #12]
+ 584:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl &= ~(I2C_CTL0_ARPEN); 
+ 1803              		.loc 1 584 9
+ 1804 0014 FB68     		ldr	r3, [r7, #12]
+ 1805 0016 23F01003 		bic	r3, r3, #16
+ 1806 001a FB60     		str	r3, [r7, #12]
+ 585:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     ctl |= arpstate;
+ 1807              		.loc 1 585 9
+ 1808 001c FA68     		ldr	r2, [r7, #12]
+ 1809 001e 3B68     		ldr	r3, [r7]
+ 1810 0020 1343     		orrs	r3, r3, r2
+ 1811 0022 FB60     		str	r3, [r7, #12]
+ 586:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_CTL0(i2c_periph) = ctl;
+ 1812              		.loc 1 586 5
+ 1813 0024 7B68     		ldr	r3, [r7, #4]
+ 1814              		.loc 1 586 26
+ 1815 0026 FA68     		ldr	r2, [r7, #12]
+ 1816 0028 1A60     		str	r2, [r3]
+ 587:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1817              		.loc 1 587 1
+ 1818 002a 00BF     		nop
+ 1819 002c 1437     		adds	r7, r7, #20
+ 1820              		.cfi_def_cfa_offset 4
+ 1821 002e BD46     		mov	sp, r7
+ 1822              		.cfi_def_cfa_register 13
+ 1823              		@ sp needed
+ 1824 0030 80BC     		pop	{r7}
+ 1825              		.cfi_restore 7
+ 1826              		.cfi_def_cfa_offset 0
+ 1827 0032 7047     		bx	lr
+ 1828              		.cfi_endproc
+ 1829              	.LFE150:
+ 1831              		.section	.text.i2c_analog_noise_filter_disable,"ax",%progbits
+ 1832              		.align	1
+ 1833              		.global	i2c_analog_noise_filter_disable
+ 1834              		.syntax unified
+ 1835              		.thumb
+ 1836              		.thumb_func
+ 1837              		.fpu softvfp
+ 1839              	i2c_analog_noise_filter_disable:
+ 1840              	.LFB151:
+ 588:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 589:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 590:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      analog noise filter disable
+ 591:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 592:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 593:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 594:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 595:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_analog_noise_filter_disable(uint32_t i2c_periph)
+ 596:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1841              		.loc 1 596 1
+ 1842              		.cfi_startproc
+ 1843              		@ args = 0, pretend = 0, frame = 8
+ 1844              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1845              		@ link register save eliminated.
+ 1846 0000 80B4     		push	{r7}
+ 1847              		.cfi_def_cfa_offset 4
+ 1848              		.cfi_offset 7, -4
+ 1849 0002 83B0     		sub	sp, sp, #12
+ 1850              		.cfi_def_cfa_offset 16
+ 1851 0004 00AF     		add	r7, sp, #0
+ 1852              		.cfi_def_cfa_register 7
+ 1853 0006 7860     		str	r0, [r7, #4]
+ 597:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_FCTL(i2c_periph) |= I2C_FCTL_AFD;  
+ 1854              		.loc 1 597 26
+ 1855 0008 7B68     		ldr	r3, [r7, #4]
+ 1856 000a 2433     		adds	r3, r3, #36
+ 1857 000c 1B68     		ldr	r3, [r3]
+ 1858 000e 7A68     		ldr	r2, [r7, #4]
+ 1859 0010 2432     		adds	r2, r2, #36
+ 1860 0012 43F01003 		orr	r3, r3, #16
+ 1861 0016 1360     		str	r3, [r2]
+ 598:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1862              		.loc 1 598 1
+ 1863 0018 00BF     		nop
+ 1864 001a 0C37     		adds	r7, r7, #12
+ 1865              		.cfi_def_cfa_offset 4
+ 1866 001c BD46     		mov	sp, r7
+ 1867              		.cfi_def_cfa_register 13
+ 1868              		@ sp needed
+ 1869 001e 80BC     		pop	{r7}
+ 1870              		.cfi_restore 7
+ 1871              		.cfi_def_cfa_offset 0
+ 1872 0020 7047     		bx	lr
+ 1873              		.cfi_endproc
+ 1874              	.LFE151:
+ 1876              		.section	.text.i2c_analog_noise_filter_enable,"ax",%progbits
+ 1877              		.align	1
+ 1878              		.global	i2c_analog_noise_filter_enable
+ 1879              		.syntax unified
+ 1880              		.thumb
+ 1881              		.thumb_func
+ 1882              		.fpu softvfp
+ 1884              	i2c_analog_noise_filter_enable:
+ 1885              	.LFB152:
+ 599:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 600:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 601:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      analog noise filter enable
+ 602:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 603:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 604:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 605:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 606:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_analog_noise_filter_enable(uint32_t i2c_periph)
+ 607:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1886              		.loc 1 607 1
+ 1887              		.cfi_startproc
+ 1888              		@ args = 0, pretend = 0, frame = 8
+ 1889              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1890              		@ link register save eliminated.
+ 1891 0000 80B4     		push	{r7}
+ 1892              		.cfi_def_cfa_offset 4
+ 1893              		.cfi_offset 7, -4
+ 1894 0002 83B0     		sub	sp, sp, #12
+ 1895              		.cfi_def_cfa_offset 16
+ 1896 0004 00AF     		add	r7, sp, #0
+ 1897              		.cfi_def_cfa_register 7
+ 1898 0006 7860     		str	r0, [r7, #4]
+ 608:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_FCTL(i2c_periph) &= ~(I2C_FCTL_AFD);  
+ 1899              		.loc 1 608 26
+ 1900 0008 7B68     		ldr	r3, [r7, #4]
+ 1901 000a 2433     		adds	r3, r3, #36
+ 1902 000c 1B68     		ldr	r3, [r3]
+ 1903 000e 7A68     		ldr	r2, [r7, #4]
+ 1904 0010 2432     		adds	r2, r2, #36
+ 1905 0012 23F01003 		bic	r3, r3, #16
+ 1906 0016 1360     		str	r3, [r2]
+ 609:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1907              		.loc 1 609 1
+ 1908 0018 00BF     		nop
+ 1909 001a 0C37     		adds	r7, r7, #12
+ 1910              		.cfi_def_cfa_offset 4
+ 1911 001c BD46     		mov	sp, r7
+ 1912              		.cfi_def_cfa_register 13
+ 1913              		@ sp needed
+ 1914 001e 80BC     		pop	{r7}
+ 1915              		.cfi_restore 7
+ 1916              		.cfi_def_cfa_offset 0
+ 1917 0020 7047     		bx	lr
+ 1918              		.cfi_endproc
+ 1919              	.LFE152:
+ 1921              		.section	.text.i2c_digital_noise_filter_config,"ax",%progbits
+ 1922              		.align	1
+ 1923              		.global	i2c_digital_noise_filter_config
+ 1924              		.syntax unified
+ 1925              		.thumb
+ 1926              		.thumb_func
+ 1927              		.fpu softvfp
+ 1929              	i2c_digital_noise_filter_config:
+ 1930              	.LFB153:
+ 610:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 611:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 612:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      digital noise filter configuration
+ 613:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 614:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  dfilterpara: refer to enum i2c_gcall_config_enum
+ 615:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 616:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 617:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 618:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_digital_noise_filter_config(uint32_t i2c_periph,i2c_digital_filter_enum dfilterpara)
+ 619:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1931              		.loc 1 619 1
+ 1932              		.cfi_startproc
+ 1933              		@ args = 0, pretend = 0, frame = 8
+ 1934              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1935              		@ link register save eliminated.
+ 1936 0000 80B4     		push	{r7}
+ 1937              		.cfi_def_cfa_offset 4
+ 1938              		.cfi_offset 7, -4
+ 1939 0002 83B0     		sub	sp, sp, #12
+ 1940              		.cfi_def_cfa_offset 16
+ 1941 0004 00AF     		add	r7, sp, #0
+ 1942              		.cfi_def_cfa_register 7
+ 1943 0006 7860     		str	r0, [r7, #4]
+ 1944 0008 0B46     		mov	r3, r1
+ 1945 000a FB70     		strb	r3, [r7, #3]
+ 620:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_FCTL(i2c_periph) |= dfilterpara;  
+ 1946              		.loc 1 620 26
+ 1947 000c 7B68     		ldr	r3, [r7, #4]
+ 1948 000e 2433     		adds	r3, r3, #36
+ 1949 0010 1A68     		ldr	r2, [r3]
+ 1950 0012 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
+ 1951 0014 7968     		ldr	r1, [r7, #4]
+ 1952 0016 2431     		adds	r1, r1, #36
+ 1953 0018 1343     		orrs	r3, r3, r2
+ 1954 001a 0B60     		str	r3, [r1]
+ 621:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 1955              		.loc 1 621 1
+ 1956 001c 00BF     		nop
+ 1957 001e 0C37     		adds	r7, r7, #12
+ 1958              		.cfi_def_cfa_offset 4
+ 1959 0020 BD46     		mov	sp, r7
+ 1960              		.cfi_def_cfa_register 13
+ 1961              		@ sp needed
+ 1962 0022 80BC     		pop	{r7}
+ 1963              		.cfi_restore 7
+ 1964              		.cfi_def_cfa_offset 0
+ 1965 0024 7047     		bx	lr
+ 1966              		.cfi_endproc
+ 1967              	.LFE153:
+ 1969              		.section	.text.i2c_sam_enable,"ax",%progbits
+ 1970              		.align	1
+ 1971              		.global	i2c_sam_enable
+ 1972              		.syntax unified
+ 1973              		.thumb
+ 1974              		.thumb_func
+ 1975              		.fpu softvfp
+ 1977              	i2c_sam_enable:
+ 1978              	.LFB154:
+ 622:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 623:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 624:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      enable SAM_V interface
+ 625:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 626:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 627:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 628:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 629:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_sam_enable(uint32_t i2c_periph)
+ 630:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 1979              		.loc 1 630 1
+ 1980              		.cfi_startproc
+ 1981              		@ args = 0, pretend = 0, frame = 8
+ 1982              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1983              		@ link register save eliminated.
+ 1984 0000 80B4     		push	{r7}
+ 1985              		.cfi_def_cfa_offset 4
+ 1986              		.cfi_offset 7, -4
+ 1987 0002 83B0     		sub	sp, sp, #12
+ 1988              		.cfi_def_cfa_offset 16
+ 1989 0004 00AF     		add	r7, sp, #0
+ 1990              		.cfi_def_cfa_register 7
+ 1991 0006 7860     		str	r0, [r7, #4]
+ 631:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_SAMCS(i2c_periph) |= I2C_SAMCS_SAMEN;  
+ 1992              		.loc 1 631 27
+ 1993 0008 7B68     		ldr	r3, [r7, #4]
+ 1994 000a 8033     		adds	r3, r3, #128
+ 1995 000c 1B68     		ldr	r3, [r3]
+ 1996 000e 7A68     		ldr	r2, [r7, #4]
+ 1997 0010 8032     		adds	r2, r2, #128
+ 1998 0012 43F00103 		orr	r3, r3, #1
+ 1999 0016 1360     		str	r3, [r2]
+ 632:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 2000              		.loc 1 632 1
+ 2001 0018 00BF     		nop
+ 2002 001a 0C37     		adds	r7, r7, #12
+ 2003              		.cfi_def_cfa_offset 4
+ 2004 001c BD46     		mov	sp, r7
+ 2005              		.cfi_def_cfa_register 13
+ 2006              		@ sp needed
+ 2007 001e 80BC     		pop	{r7}
+ 2008              		.cfi_restore 7
+ 2009              		.cfi_def_cfa_offset 0
+ 2010 0020 7047     		bx	lr
+ 2011              		.cfi_endproc
+ 2012              	.LFE154:
+ 2014              		.section	.text.i2c_sam_disable,"ax",%progbits
+ 2015              		.align	1
+ 2016              		.global	i2c_sam_disable
+ 2017              		.syntax unified
+ 2018              		.thumb
+ 2019              		.thumb_func
+ 2020              		.fpu softvfp
+ 2022              	i2c_sam_disable:
+ 2023              	.LFB155:
+ 633:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 634:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 635:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      disable SAM_V interface
+ 636:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 637:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 638:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 639:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 640:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_sam_disable(uint32_t i2c_periph)
+ 641:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 2024              		.loc 1 641 1
+ 2025              		.cfi_startproc
+ 2026              		@ args = 0, pretend = 0, frame = 8
+ 2027              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2028              		@ link register save eliminated.
+ 2029 0000 80B4     		push	{r7}
+ 2030              		.cfi_def_cfa_offset 4
+ 2031              		.cfi_offset 7, -4
+ 2032 0002 83B0     		sub	sp, sp, #12
+ 2033              		.cfi_def_cfa_offset 16
+ 2034 0004 00AF     		add	r7, sp, #0
+ 2035              		.cfi_def_cfa_register 7
+ 2036 0006 7860     		str	r0, [r7, #4]
+ 642:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_SAMCS(i2c_periph) &= ~(I2C_SAMCS_SAMEN);  
+ 2037              		.loc 1 642 27
+ 2038 0008 7B68     		ldr	r3, [r7, #4]
+ 2039 000a 8033     		adds	r3, r3, #128
+ 2040 000c 1B68     		ldr	r3, [r3]
+ 2041 000e 7A68     		ldr	r2, [r7, #4]
+ 2042 0010 8032     		adds	r2, r2, #128
+ 2043 0012 23F00103 		bic	r3, r3, #1
+ 2044 0016 1360     		str	r3, [r2]
+ 643:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 2045              		.loc 1 643 1
+ 2046 0018 00BF     		nop
+ 2047 001a 0C37     		adds	r7, r7, #12
+ 2048              		.cfi_def_cfa_offset 4
+ 2049 001c BD46     		mov	sp, r7
+ 2050              		.cfi_def_cfa_register 13
+ 2051              		@ sp needed
+ 2052 001e 80BC     		pop	{r7}
+ 2053              		.cfi_restore 7
+ 2054              		.cfi_def_cfa_offset 0
+ 2055 0020 7047     		bx	lr
+ 2056              		.cfi_endproc
+ 2057              	.LFE155:
+ 2059              		.section	.text.i2c_sam_timeout_enable,"ax",%progbits
+ 2060              		.align	1
+ 2061              		.global	i2c_sam_timeout_enable
+ 2062              		.syntax unified
+ 2063              		.thumb
+ 2064              		.thumb_func
+ 2065              		.fpu softvfp
+ 2067              	i2c_sam_timeout_enable:
+ 2068              	.LFB156:
+ 644:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 645:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 646:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      enable SAM_V interface timeout detect
+ 647:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 648:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 649:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 650:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 651:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_sam_timeout_enable(uint32_t i2c_periph)
+ 652:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 2069              		.loc 1 652 1
+ 2070              		.cfi_startproc
+ 2071              		@ args = 0, pretend = 0, frame = 8
+ 2072              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2073              		@ link register save eliminated.
+ 2074 0000 80B4     		push	{r7}
+ 2075              		.cfi_def_cfa_offset 4
+ 2076              		.cfi_offset 7, -4
+ 2077 0002 83B0     		sub	sp, sp, #12
+ 2078              		.cfi_def_cfa_offset 16
+ 2079 0004 00AF     		add	r7, sp, #0
+ 2080              		.cfi_def_cfa_register 7
+ 2081 0006 7860     		str	r0, [r7, #4]
+ 653:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_SAMCS(i2c_periph) |= I2C_SAMCS_STOEN;  
+ 2082              		.loc 1 653 27
+ 2083 0008 7B68     		ldr	r3, [r7, #4]
+ 2084 000a 8033     		adds	r3, r3, #128
+ 2085 000c 1B68     		ldr	r3, [r3]
+ 2086 000e 7A68     		ldr	r2, [r7, #4]
+ 2087 0010 8032     		adds	r2, r2, #128
+ 2088 0012 43F00203 		orr	r3, r3, #2
+ 2089 0016 1360     		str	r3, [r2]
+ 654:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 2090              		.loc 1 654 1
+ 2091 0018 00BF     		nop
+ 2092 001a 0C37     		adds	r7, r7, #12
+ 2093              		.cfi_def_cfa_offset 4
+ 2094 001c BD46     		mov	sp, r7
+ 2095              		.cfi_def_cfa_register 13
+ 2096              		@ sp needed
+ 2097 001e 80BC     		pop	{r7}
+ 2098              		.cfi_restore 7
+ 2099              		.cfi_def_cfa_offset 0
+ 2100 0020 7047     		bx	lr
+ 2101              		.cfi_endproc
+ 2102              	.LFE156:
+ 2104              		.section	.text.i2c_sam_timeout_disable,"ax",%progbits
+ 2105              		.align	1
+ 2106              		.global	i2c_sam_timeout_disable
+ 2107              		.syntax unified
+ 2108              		.thumb
+ 2109              		.thumb_func
+ 2110              		.fpu softvfp
+ 2112              	i2c_sam_timeout_disable:
+ 2113              	.LFB157:
+ 655:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 656:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 657:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      disable SAM_V interface timeout detect
+ 658:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 659:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 660:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 661:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 662:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_sam_timeout_disable(uint32_t i2c_periph)
+ 663:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 2114              		.loc 1 663 1
+ 2115              		.cfi_startproc
+ 2116              		@ args = 0, pretend = 0, frame = 8
+ 2117              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2118              		@ link register save eliminated.
+ 2119 0000 80B4     		push	{r7}
+ 2120              		.cfi_def_cfa_offset 4
+ 2121              		.cfi_offset 7, -4
+ 2122 0002 83B0     		sub	sp, sp, #12
+ 2123              		.cfi_def_cfa_offset 16
+ 2124 0004 00AF     		add	r7, sp, #0
+ 2125              		.cfi_def_cfa_register 7
+ 2126 0006 7860     		str	r0, [r7, #4]
+ 664:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_SAMCS(i2c_periph) &= ~(I2C_SAMCS_STOEN);  
+ 2127              		.loc 1 664 27
+ 2128 0008 7B68     		ldr	r3, [r7, #4]
+ 2129 000a 8033     		adds	r3, r3, #128
+ 2130 000c 1B68     		ldr	r3, [r3]
+ 2131 000e 7A68     		ldr	r2, [r7, #4]
+ 2132 0010 8032     		adds	r2, r2, #128
+ 2133 0012 23F00203 		bic	r3, r3, #2
+ 2134 0016 1360     		str	r3, [r2]
+ 665:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 2135              		.loc 1 665 1
+ 2136 0018 00BF     		nop
+ 2137 001a 0C37     		adds	r7, r7, #12
+ 2138              		.cfi_def_cfa_offset 4
+ 2139 001c BD46     		mov	sp, r7
+ 2140              		.cfi_def_cfa_register 13
+ 2141              		@ sp needed
+ 2142 001e 80BC     		pop	{r7}
+ 2143              		.cfi_restore 7
+ 2144              		.cfi_def_cfa_offset 0
+ 2145 0020 7047     		bx	lr
+ 2146              		.cfi_endproc
+ 2147              	.LFE157:
+ 2149              		.section	.text.i2c_sam_interrupt_enable,"ax",%progbits
+ 2150              		.align	1
+ 2151              		.global	i2c_sam_interrupt_enable
+ 2152              		.syntax unified
+ 2153              		.thumb
+ 2154              		.thumb_func
+ 2155              		.fpu softvfp
+ 2157              	i2c_sam_interrupt_enable:
+ 2158              	.LFB158:
+ 666:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 667:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 668:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      enable the specified I2C SAM interrupt
+ 669:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 670:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  inttype: interrupt type 
+ 671:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TFFIE: txframe fall interrupt
+ 672:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TFRIE: txframe rise interrupt
+ 673:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RFFIE: rxframe fall interrupt
+ 674:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RFRIE: rxframe rise interrupt   
+ 675:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out]  none
+ 676:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval      none
+ 677:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 678:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_sam_interrupt_enable(uint32_t i2c_periph,uint32_t inttype)
+ 679:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 2159              		.loc 1 679 1
+ 2160              		.cfi_startproc
+ 2161              		@ args = 0, pretend = 0, frame = 8
+ 2162              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2163              		@ link register save eliminated.
+ 2164 0000 80B4     		push	{r7}
+ 2165              		.cfi_def_cfa_offset 4
+ 2166              		.cfi_offset 7, -4
+ 2167 0002 83B0     		sub	sp, sp, #12
+ 2168              		.cfi_def_cfa_offset 16
+ 2169 0004 00AF     		add	r7, sp, #0
+ 2170              		.cfi_def_cfa_register 7
+ 2171 0006 7860     		str	r0, [r7, #4]
+ 2172 0008 3960     		str	r1, [r7]
+ 680:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_SAMCS(i2c_periph) |= (inttype);   
+ 2173              		.loc 1 680 27
+ 2174 000a 7B68     		ldr	r3, [r7, #4]
+ 2175 000c 8033     		adds	r3, r3, #128
+ 2176 000e 1A68     		ldr	r2, [r3]
+ 2177 0010 7B68     		ldr	r3, [r7, #4]
+ 2178 0012 8033     		adds	r3, r3, #128
+ 2179 0014 1946     		mov	r1, r3
+ 2180 0016 3B68     		ldr	r3, [r7]
+ 2181 0018 1343     		orrs	r3, r3, r2
+ 2182 001a 0B60     		str	r3, [r1]
+ 681:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 2183              		.loc 1 681 1
+ 2184 001c 00BF     		nop
+ 2185 001e 0C37     		adds	r7, r7, #12
+ 2186              		.cfi_def_cfa_offset 4
+ 2187 0020 BD46     		mov	sp, r7
+ 2188              		.cfi_def_cfa_register 13
+ 2189              		@ sp needed
+ 2190 0022 80BC     		pop	{r7}
+ 2191              		.cfi_restore 7
+ 2192              		.cfi_def_cfa_offset 0
+ 2193 0024 7047     		bx	lr
+ 2194              		.cfi_endproc
+ 2195              	.LFE158:
+ 2197              		.section	.text.i2c_sam_interrupt_disable,"ax",%progbits
+ 2198              		.align	1
+ 2199              		.global	i2c_sam_interrupt_disable
+ 2200              		.syntax unified
+ 2201              		.thumb
+ 2202              		.thumb_func
+ 2203              		.fpu softvfp
+ 2205              	i2c_sam_interrupt_disable:
+ 2206              	.LFB159:
+ 682:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 683:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 684:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      disable i2c interrupt
+ 685:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 686:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  inttype:      interrupt type 
+ 687:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TFFIE: txframe fall interrupt
+ 688:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TFRIE: txframe rise interrupt
+ 689:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RFFIE: rxframe fall interrupt
+ 690:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RFRIE: rxframe rise interrupt    
+ 691:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 692:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 693:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 694:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_sam_interrupt_disable(uint32_t i2c_periph,uint32_t inttype)
+ 695:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 2207              		.loc 1 695 1
+ 2208              		.cfi_startproc
+ 2209              		@ args = 0, pretend = 0, frame = 8
+ 2210              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2211              		@ link register save eliminated.
+ 2212 0000 80B4     		push	{r7}
+ 2213              		.cfi_def_cfa_offset 4
+ 2214              		.cfi_offset 7, -4
+ 2215 0002 83B0     		sub	sp, sp, #12
+ 2216              		.cfi_def_cfa_offset 16
+ 2217 0004 00AF     		add	r7, sp, #0
+ 2218              		.cfi_def_cfa_register 7
+ 2219 0006 7860     		str	r0, [r7, #4]
+ 2220 0008 3960     		str	r1, [r7]
+ 696:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_SAMCS(i2c_periph) &= ~(inttype);   
+ 2221              		.loc 1 696 27
+ 2222 000a 7B68     		ldr	r3, [r7, #4]
+ 2223 000c 8033     		adds	r3, r3, #128
+ 2224 000e 1A68     		ldr	r2, [r3]
+ 2225              		.loc 1 696 30
+ 2226 0010 3B68     		ldr	r3, [r7]
+ 2227 0012 DB43     		mvns	r3, r3
+ 2228              		.loc 1 696 27
+ 2229 0014 7968     		ldr	r1, [r7, #4]
+ 2230 0016 8031     		adds	r1, r1, #128
+ 2231 0018 1340     		ands	r3, r3, r2
+ 2232 001a 0B60     		str	r3, [r1]
+ 697:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 2233              		.loc 1 697 1
+ 2234 001c 00BF     		nop
+ 2235 001e 0C37     		adds	r7, r7, #12
+ 2236              		.cfi_def_cfa_offset 4
+ 2237 0020 BD46     		mov	sp, r7
+ 2238              		.cfi_def_cfa_register 13
+ 2239              		@ sp needed
+ 2240 0022 80BC     		pop	{r7}
+ 2241              		.cfi_restore 7
+ 2242              		.cfi_def_cfa_offset 0
+ 2243 0024 7047     		bx	lr
+ 2244              		.cfi_endproc
+ 2245              	.LFE159:
+ 2247              		.section	.text.i2c_sam_flag_get,"ax",%progbits
+ 2248              		.align	1
+ 2249              		.global	i2c_sam_flag_get
+ 2250              		.syntax unified
+ 2251              		.thumb
+ 2252              		.thumb_func
+ 2253              		.fpu softvfp
+ 2255              	i2c_sam_flag_get:
+ 2256              	.LFB160:
+ 698:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 699:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 700:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      check i2c SAM state
+ 701:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 702:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  samstate: state type 
+ 703:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TXF: level of txframe signal
+ 704:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RXF: level of rxframe signal
+ 705:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TFF: txframe fall flag
+ 706:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TFR: txframe rise flag    
+ 707:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RFF: rxframe fall flag
+ 708:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RFR: rxframe rise flag   
+ 709:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 710:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     state of i2c SAM
+ 711:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 712:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** FlagStatus i2c_sam_flag_get(uint32_t i2c_periph,uint32_t samstate)
+ 713:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 2257              		.loc 1 713 1
+ 2258              		.cfi_startproc
+ 2259              		@ args = 0, pretend = 0, frame = 16
+ 2260              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2261              		@ link register save eliminated.
+ 2262 0000 80B4     		push	{r7}
+ 2263              		.cfi_def_cfa_offset 4
+ 2264              		.cfi_offset 7, -4
+ 2265 0002 85B0     		sub	sp, sp, #20
+ 2266              		.cfi_def_cfa_offset 24
+ 2267 0004 00AF     		add	r7, sp, #0
+ 2268              		.cfi_def_cfa_register 7
+ 2269 0006 7860     		str	r0, [r7, #4]
+ 2270 0008 3960     		str	r1, [r7]
+ 714:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     FlagStatus reg = RESET;
+ 2271              		.loc 1 714 16
+ 2272 000a 0023     		movs	r3, #0
+ 2273 000c FB73     		strb	r3, [r7, #15]
+ 715:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     if(I2C_SAMCS(i2c_periph)&samstate){
+ 2274              		.loc 1 715 8
+ 2275 000e 7B68     		ldr	r3, [r7, #4]
+ 2276 0010 8033     		adds	r3, r3, #128
+ 2277 0012 1A68     		ldr	r2, [r3]
+ 2278              		.loc 1 715 29
+ 2279 0014 3B68     		ldr	r3, [r7]
+ 2280 0016 1340     		ands	r3, r3, r2
+ 2281              		.loc 1 715 7
+ 2282 0018 002B     		cmp	r3, #0
+ 2283 001a 02D0     		beq	.L83
+ 716:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         reg =SET;
+ 2284              		.loc 1 716 13
+ 2285 001c 0123     		movs	r3, #1
+ 2286 001e FB73     		strb	r3, [r7, #15]
+ 2287 0020 01E0     		b	.L84
+ 2288              	.L83:
+ 717:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }else{
+ 718:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****         reg =RESET; 
+ 2289              		.loc 1 718 13
+ 2290 0022 0023     		movs	r3, #0
+ 2291 0024 FB73     		strb	r3, [r7, #15]
+ 2292              	.L84:
+ 719:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     }
+ 720:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     return reg;
+ 2293              		.loc 1 720 12
+ 2294 0026 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 721:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 2295              		.loc 1 721 1
+ 2296 0028 1846     		mov	r0, r3
+ 2297 002a 1437     		adds	r7, r7, #20
+ 2298              		.cfi_def_cfa_offset 4
+ 2299 002c BD46     		mov	sp, r7
+ 2300              		.cfi_def_cfa_register 13
+ 2301              		@ sp needed
+ 2302 002e 80BC     		pop	{r7}
+ 2303              		.cfi_restore 7
+ 2304              		.cfi_def_cfa_offset 0
+ 2305 0030 7047     		bx	lr
+ 2306              		.cfi_endproc
+ 2307              	.LFE160:
+ 2309              		.section	.text.i2c_sam_flag_clear,"ax",%progbits
+ 2310              		.align	1
+ 2311              		.global	i2c_sam_flag_clear
+ 2312              		.syntax unified
+ 2313              		.thumb
+ 2314              		.thumb_func
+ 2315              		.fpu softvfp
+ 2317              	i2c_sam_flag_clear:
+ 2318              	.LFB161:
+ 722:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** 
+ 723:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** /*!
+ 724:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \brief      clear i2c SAM state
+ 725:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  i2c_periph: I2Cx(x=0,1,2)
+ 726:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[in]  samstate: state type 
+ 727:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TFF: txframe fall flag
+ 728:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_TFR: txframe rise flag    
+ 729:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RFF: rxframe fall flag
+ 730:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****       \@arg       I2C_SAMCS_RFR: rxframe rise flag   
+ 731:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \param[out] none
+ 732:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     \retval     none
+ 733:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** */
+ 734:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** void i2c_sam_flag_clear(uint32_t i2c_periph,uint32_t samstate)
+ 735:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** {
+ 2319              		.loc 1 735 1
+ 2320              		.cfi_startproc
+ 2321              		@ args = 0, pretend = 0, frame = 8
+ 2322              		@ frame_needed = 1, uses_anonymous_args = 0
+ 2323              		@ link register save eliminated.
+ 2324 0000 80B4     		push	{r7}
+ 2325              		.cfi_def_cfa_offset 4
+ 2326              		.cfi_offset 7, -4
+ 2327 0002 83B0     		sub	sp, sp, #12
+ 2328              		.cfi_def_cfa_offset 16
+ 2329 0004 00AF     		add	r7, sp, #0
+ 2330              		.cfi_def_cfa_register 7
+ 2331 0006 7860     		str	r0, [r7, #4]
+ 2332 0008 3960     		str	r1, [r7]
+ 736:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****     I2C_SAMCS(i2c_periph) &= ~(samstate);
+ 2333              		.loc 1 736 27
+ 2334 000a 7B68     		ldr	r3, [r7, #4]
+ 2335 000c 8033     		adds	r3, r3, #128
+ 2336 000e 1A68     		ldr	r2, [r3]
+ 2337              		.loc 1 736 30
+ 2338 0010 3B68     		ldr	r3, [r7]
+ 2339 0012 DB43     		mvns	r3, r3
+ 2340              		.loc 1 736 27
+ 2341 0014 7968     		ldr	r1, [r7, #4]
+ 2342 0016 8031     		adds	r1, r1, #128
+ 2343 0018 1340     		ands	r3, r3, r2
+ 2344 001a 0B60     		str	r3, [r1]
+ 737:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c ****   
+ 738:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_i2c.c **** }
+ 2345              		.loc 1 738 1
+ 2346 001c 00BF     		nop
+ 2347 001e 0C37     		adds	r7, r7, #12
+ 2348              		.cfi_def_cfa_offset 4
+ 2349 0020 BD46     		mov	sp, r7
+ 2350              		.cfi_def_cfa_register 13
+ 2351              		@ sp needed
+ 2352 0022 80BC     		pop	{r7}
+ 2353              		.cfi_restore 7
+ 2354              		.cfi_def_cfa_offset 0
+ 2355 0024 7047     		bx	lr
+ 2356              		.cfi_endproc
+ 2357              	.LFE161:
+ 2359              		.text
+ 2360              	.Letext0:
+ 2361              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 2362              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 2363              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 2364              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 2365              		.file 6 "../../CMSIS/gd32f4xx.h"
+ 2366              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+ 2367              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_i2c.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_i2c.c
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:16     .text.i2c_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:24     .text.i2c_deinit:00000000 i2c_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:101    .text.i2c_deinit:0000006c $d
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:108    .text.i2c_clock_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:115    .text.i2c_clock_config:00000000 i2c_clock_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:340    .text.i2c_clock_config:00000154 $d
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:348    .text.i2c_mode_addr_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:355    .text.i2c_mode_addr_config:00000000 i2c_mode_addr_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:420    .text.i2c_smbus_type_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:427    .text.i2c_smbus_type_config:00000000 i2c_smbus_type_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:478    .text.i2c_ack_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:485    .text.i2c_ack_config:00000000 i2c_ack_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:537    .text.i2c_ackpos_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:544    .text.i2c_ackpos_config:00000000 i2c_ackpos_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:596    .text.i2c_master_addressing:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:603    .text.i2c_master_addressing:00000000 i2c_master_addressing
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:658    .text.i2c_dualaddr_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:665    .text.i2c_dualaddr_enable:00000000 i2c_dualaddr_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:721    .text.i2c_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:728    .text.i2c_enable:00000000 i2c_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:764    .text.i2c_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:771    .text.i2c_disable:00000000 i2c_disable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:807    .text.i2c_start_on_bus:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:814    .text.i2c_start_on_bus:00000000 i2c_start_on_bus
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:850    .text.i2c_stop_on_bus:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:857    .text.i2c_stop_on_bus:00000000 i2c_stop_on_bus
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:893    .text.i2c_transmit_data:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:900    .text.i2c_transmit_data:00000000 i2c_transmit_data
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:939    .text.i2c_receive_data:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:946    .text.i2c_receive_data:00000000 i2c_receive_data
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:982    .text.i2c_dma_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:989    .text.i2c_dma_enable:00000000 i2c_dma_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1045   .text.i2c_dma_last_transfer_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1052   .text.i2c_dma_last_transfer_enable:00000000 i2c_dma_last_transfer_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1108   .text.i2c_stretch_scl_low_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1115   .text.i2c_stretch_scl_low_config:00000000 i2c_stretch_scl_low_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1168   .text.i2c_slave_response_to_gcall_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1175   .text.i2c_slave_response_to_gcall_config:00000000 i2c_slave_response_to_gcall_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1228   .text.i2c_software_reset_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1235   .text.i2c_software_reset_config:00000000 i2c_software_reset_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1288   .text.i2c_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1295   .text.i2c_flag_get:00000000 i2c_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1383   .text.i2c_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1390   .text.i2c_flag_clear:00000000 i2c_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1449   .text.i2c_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1456   .text.i2c_interrupt_enable:00000000 i2c_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1497   .text.i2c_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1504   .text.i2c_interrupt_disable:00000000 i2c_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1547   .text.i2c_pec_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1554   .text.i2c_pec_enable:00000000 i2c_pec_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1607   .text.i2c_pec_transfer_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1614   .text.i2c_pec_transfer_enable:00000000 i2c_pec_transfer_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1667   .text.i2c_pec_value:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1674   .text.i2c_pec_value:00000000 i2c_pec_value
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1712   .text.i2c_smbus_alert_issue:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1719   .text.i2c_smbus_alert_issue:00000000 i2c_smbus_alert_issue
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1772   .text.i2c_smbus_arp_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1779   .text.i2c_smbus_arp_enable:00000000 i2c_smbus_arp_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1832   .text.i2c_analog_noise_filter_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1839   .text.i2c_analog_noise_filter_disable:00000000 i2c_analog_noise_filter_disable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1877   .text.i2c_analog_noise_filter_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1884   .text.i2c_analog_noise_filter_enable:00000000 i2c_analog_noise_filter_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1922   .text.i2c_digital_noise_filter_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1929   .text.i2c_digital_noise_filter_config:00000000 i2c_digital_noise_filter_config
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1970   .text.i2c_sam_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:1977   .text.i2c_sam_enable:00000000 i2c_sam_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2015   .text.i2c_sam_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2022   .text.i2c_sam_disable:00000000 i2c_sam_disable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2060   .text.i2c_sam_timeout_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2067   .text.i2c_sam_timeout_enable:00000000 i2c_sam_timeout_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2105   .text.i2c_sam_timeout_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2112   .text.i2c_sam_timeout_disable:00000000 i2c_sam_timeout_disable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2150   .text.i2c_sam_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2157   .text.i2c_sam_interrupt_enable:00000000 i2c_sam_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2198   .text.i2c_sam_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2205   .text.i2c_sam_interrupt_disable:00000000 i2c_sam_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2248   .text.i2c_sam_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2255   .text.i2c_sam_flag_get:00000000 i2c_sam_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2310   .text.i2c_sam_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccnpAVfe.s:2317   .text.i2c_sam_flag_clear:00000000 i2c_sam_flag_clear
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_i2c.h.18.f15704549a232679a62e39d49857545c
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable
+rcu_clock_freq_get

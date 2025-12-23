@@ -1,0 +1,400 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_it.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.NMI_Handler,"ax",%progbits
+  16              		.align	1
+  17              		.global	NMI_Handler
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	NMI_Handler:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/gd32f4xx_it.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** #include "gd32f4xx_it.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void NMI_Handler(void)
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+  27              		.loc 1 27 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31              		@ link register save eliminated.
+  32 0000 80B4     		push	{r7}
+  33              		.cfi_def_cfa_offset 4
+  34              		.cfi_offset 7, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+  37              		.loc 1 28 1
+  38 0004 00BF     		nop
+  39 0006 BD46     		mov	sp, r7
+  40              		.cfi_def_cfa_register 13
+  41              		@ sp needed
+  42 0008 80BC     		pop	{r7}
+  43              		.cfi_restore 7
+  44              		.cfi_def_cfa_offset 0
+  45 000a 7047     		bx	lr
+  46              		.cfi_endproc
+  47              	.LFE123:
+  49              		.section	.text.HardFault_Handler,"ax",%progbits
+  50              		.align	1
+  51              		.global	HardFault_Handler
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	HardFault_Handler:
+  58              	.LFB124:
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void HardFault_Handler(void)
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+  59              		.loc 1 31 1
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 80B4     		push	{r7}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 7, -4
+  67 0002 00AF     		add	r7, sp, #0
+  68              		.cfi_def_cfa_register 7
+  69              	.L3:
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     while (1){
+  70              		.loc 1 33 11 discriminator 1
+  71 0004 FEE7     		b	.L3
+  72              		.cfi_endproc
+  73              	.LFE124:
+  75              		.section	.text.MemManage_Handler,"ax",%progbits
+  76              		.align	1
+  77              		.global	MemManage_Handler
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  81              		.fpu softvfp
+  83              	MemManage_Handler:
+  84              	.LFB125:
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     }
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void MemManage_Handler(void)
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+  85              		.loc 1 38 1
+  86              		.cfi_startproc
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 1, uses_anonymous_args = 0
+  89              		@ link register save eliminated.
+  90 0000 80B4     		push	{r7}
+  91              		.cfi_def_cfa_offset 4
+  92              		.cfi_offset 7, -4
+  93 0002 00AF     		add	r7, sp, #0
+  94              		.cfi_def_cfa_register 7
+  95              	.L5:
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     while (1){
+  96              		.loc 1 40 11 discriminator 1
+  97 0004 FEE7     		b	.L5
+  98              		.cfi_endproc
+  99              	.LFE125:
+ 101              		.section	.text.BusFault_Handler,"ax",%progbits
+ 102              		.align	1
+ 103              		.global	BusFault_Handler
+ 104              		.syntax unified
+ 105              		.thumb
+ 106              		.thumb_func
+ 107              		.fpu softvfp
+ 109              	BusFault_Handler:
+ 110              	.LFB126:
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     }
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void BusFault_Handler(void)
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+ 111              		.loc 1 45 1
+ 112              		.cfi_startproc
+ 113              		@ args = 0, pretend = 0, frame = 0
+ 114              		@ frame_needed = 1, uses_anonymous_args = 0
+ 115              		@ link register save eliminated.
+ 116 0000 80B4     		push	{r7}
+ 117              		.cfi_def_cfa_offset 4
+ 118              		.cfi_offset 7, -4
+ 119 0002 00AF     		add	r7, sp, #0
+ 120              		.cfi_def_cfa_register 7
+ 121              	.L7:
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     while (1){
+ 122              		.loc 1 47 11 discriminator 1
+ 123 0004 FEE7     		b	.L7
+ 124              		.cfi_endproc
+ 125              	.LFE126:
+ 127              		.section	.text.UsageFault_Handler,"ax",%progbits
+ 128              		.align	1
+ 129              		.global	UsageFault_Handler
+ 130              		.syntax unified
+ 131              		.thumb
+ 132              		.thumb_func
+ 133              		.fpu softvfp
+ 135              	UsageFault_Handler:
+ 136              	.LFB127:
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     }
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void UsageFault_Handler(void)
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+ 137              		.loc 1 52 1
+ 138              		.cfi_startproc
+ 139              		@ args = 0, pretend = 0, frame = 0
+ 140              		@ frame_needed = 1, uses_anonymous_args = 0
+ 141              		@ link register save eliminated.
+ 142 0000 80B4     		push	{r7}
+ 143              		.cfi_def_cfa_offset 4
+ 144              		.cfi_offset 7, -4
+ 145 0002 00AF     		add	r7, sp, #0
+ 146              		.cfi_def_cfa_register 7
+ 147              	.L9:
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     while (1){
+ 148              		.loc 1 54 11 discriminator 1
+ 149 0004 FEE7     		b	.L9
+ 150              		.cfi_endproc
+ 151              	.LFE127:
+ 153              		.section	.text.SVC_Handler,"ax",%progbits
+ 154              		.align	1
+ 155              		.global	SVC_Handler
+ 156              		.syntax unified
+ 157              		.thumb
+ 158              		.thumb_func
+ 159              		.fpu softvfp
+ 161              	SVC_Handler:
+ 162              	.LFB128:
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c ****     }
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void SVC_Handler(void)
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+ 163              		.loc 1 59 1
+ 164              		.cfi_startproc
+ 165              		@ args = 0, pretend = 0, frame = 0
+ 166              		@ frame_needed = 1, uses_anonymous_args = 0
+ 167              		@ link register save eliminated.
+ 168 0000 80B4     		push	{r7}
+ 169              		.cfi_def_cfa_offset 4
+ 170              		.cfi_offset 7, -4
+ 171 0002 00AF     		add	r7, sp, #0
+ 172              		.cfi_def_cfa_register 7
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+ 173              		.loc 1 60 1
+ 174 0004 00BF     		nop
+ 175 0006 BD46     		mov	sp, r7
+ 176              		.cfi_def_cfa_register 13
+ 177              		@ sp needed
+ 178 0008 80BC     		pop	{r7}
+ 179              		.cfi_restore 7
+ 180              		.cfi_def_cfa_offset 0
+ 181 000a 7047     		bx	lr
+ 182              		.cfi_endproc
+ 183              	.LFE128:
+ 185              		.section	.text.DebugMon_Handler,"ax",%progbits
+ 186              		.align	1
+ 187              		.global	DebugMon_Handler
+ 188              		.syntax unified
+ 189              		.thumb
+ 190              		.thumb_func
+ 191              		.fpu softvfp
+ 193              	DebugMon_Handler:
+ 194              	.LFB129:
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void DebugMon_Handler(void)
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+ 195              		.loc 1 63 1
+ 196              		.cfi_startproc
+ 197              		@ args = 0, pretend = 0, frame = 0
+ 198              		@ frame_needed = 1, uses_anonymous_args = 0
+ 199              		@ link register save eliminated.
+ 200 0000 80B4     		push	{r7}
+ 201              		.cfi_def_cfa_offset 4
+ 202              		.cfi_offset 7, -4
+ 203 0002 00AF     		add	r7, sp, #0
+ 204              		.cfi_def_cfa_register 7
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+ 205              		.loc 1 64 1
+ 206 0004 00BF     		nop
+ 207 0006 BD46     		mov	sp, r7
+ 208              		.cfi_def_cfa_register 13
+ 209              		@ sp needed
+ 210 0008 80BC     		pop	{r7}
+ 211              		.cfi_restore 7
+ 212              		.cfi_def_cfa_offset 0
+ 213 000a 7047     		bx	lr
+ 214              		.cfi_endproc
+ 215              	.LFE129:
+ 217              		.section	.text.PendSV_Handler,"ax",%progbits
+ 218              		.align	1
+ 219              		.global	PendSV_Handler
+ 220              		.syntax unified
+ 221              		.thumb
+ 222              		.thumb_func
+ 223              		.fpu softvfp
+ 225              	PendSV_Handler:
+ 226              	.LFB130:
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void PendSV_Handler(void)
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+ 227              		.loc 1 67 1
+ 228              		.cfi_startproc
+ 229              		@ args = 0, pretend = 0, frame = 0
+ 230              		@ frame_needed = 1, uses_anonymous_args = 0
+ 231              		@ link register save eliminated.
+ 232 0000 80B4     		push	{r7}
+ 233              		.cfi_def_cfa_offset 4
+ 234              		.cfi_offset 7, -4
+ 235 0002 00AF     		add	r7, sp, #0
+ 236              		.cfi_def_cfa_register 7
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+ 237              		.loc 1 68 1
+ 238 0004 00BF     		nop
+ 239 0006 BD46     		mov	sp, r7
+ 240              		.cfi_def_cfa_register 13
+ 241              		@ sp needed
+ 242 0008 80BC     		pop	{r7}
+ 243              		.cfi_restore 7
+ 244              		.cfi_def_cfa_offset 0
+ 245 000a 7047     		bx	lr
+ 246              		.cfi_endproc
+ 247              	.LFE130:
+ 249              		.section	.text.SysTick_Handler,"ax",%progbits
+ 250              		.align	1
+ 251              		.global	SysTick_Handler
+ 252              		.syntax unified
+ 253              		.thumb
+ 254              		.thumb_func
+ 255              		.fpu softvfp
+ 257              	SysTick_Handler:
+ 258              	.LFB131:
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** 
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** void SysTick_Handler(void)
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** {
+ 259              		.loc 1 71 1
+ 260              		.cfi_startproc
+ 261              		@ args = 0, pretend = 0, frame = 0
+ 262              		@ frame_needed = 1, uses_anonymous_args = 0
+ 263              		@ link register save eliminated.
+ 264 0000 80B4     		push	{r7}
+ 265              		.cfi_def_cfa_offset 4
+ 266              		.cfi_offset 7, -4
+ 267 0002 00AF     		add	r7, sp, #0
+ 268              		.cfi_def_cfa_register 7
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\gd32f4xx_it.c **** }
+ 269              		.loc 1 72 1
+ 270 0004 00BF     		nop
+ 271 0006 BD46     		mov	sp, r7
+ 272              		.cfi_def_cfa_register 13
+ 273              		@ sp needed
+ 274 0008 80BC     		pop	{r7}
+ 275              		.cfi_restore 7
+ 276              		.cfi_def_cfa_offset 0
+ 277 000a 7047     		bx	lr
+ 278              		.cfi_endproc
+ 279              	.LFE131:
+ 281              		.text
+ 282              	.Letext0:
+ 283              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 284              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 285              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 286              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_it.c
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:16     .text.NMI_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:24     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:50     .text.HardFault_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:57     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:76     .text.MemManage_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:83     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:102    .text.BusFault_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:109    .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:128    .text.UsageFault_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:135    .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:154    .text.SVC_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:161    .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:186    .text.DebugMon_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:193    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:218    .text.PendSV_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:225    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:250    .text.SysTick_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccMDVYh.s:257    .text.SysTick_Handler:00000000 SysTick_Handler
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+
+NO UNDEFINED SYMBOLS

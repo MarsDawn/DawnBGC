@@ -1,0 +1,33 @@
+!SESSION 2025-12-17 02:06:05.879 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 4 77 2025-12-17 02:09:54.348
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2025-12-17 02:09:54.348
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-12-17 02:09:54.348
+!MESSAGE C:\Users\leonardo\Desktop\Code\Github\DawnGBC overlaps the workspace location: C:\Users\leonardo\Desktop\Code\Github\DawnGBC
+!SESSION 2025-12-17 13:34:51.875 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.10
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/leonardo/Desktop/Code/Github/DawnGBC/
+
+!ENTRY org.eclipse.core.resources 4 77 2025-12-17 13:36:26.149
+!MESSAGE 项目描述无效。
+!SUBENTRY 1 unknown 0 0 2025-12-17 13:36:26.149
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-12-17 13:36:26.149
+!MESSAGE C:\Users\leonardo\Desktop\Code\Github\DawnGBC 与工作空间位置 C:\Users\leonardo\Desktop\Code\Github\DawnGBC 重叠
+
+!ENTRY org.eclipse.core.resources 4 77 2025-12-17 13:36:39.896
+!MESSAGE 项目描述无效。
+!SUBENTRY 1 unknown 0 0 2025-12-17 13:36:39.896
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2025-12-17 13:36:39.896
+!MESSAGE C:\Users\leonardo\Desktop\Code\Github\DawnGBC 与工作空间位置 C:\Users\leonardo\Desktop\Code\Github\DawnGBC 重叠

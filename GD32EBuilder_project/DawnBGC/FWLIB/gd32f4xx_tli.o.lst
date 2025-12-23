@@ -1,0 +1,2184 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"gd32f4xx_tli.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.tli_deinit,"ax",%progbits
+  16              		.align	1
+  17              		.global	tli_deinit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	tli_deinit:
+  25              	.LFB123:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_tli.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \file  gd32f4xx_tli.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief TLI driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     2016-08-15, V1.0.1, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** #include "gd32f4xx_tli.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      deinitialize TLI registers 
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+  27              		.loc 1 21 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     rcu_periph_reset_enable(RCU_TLIRST);
+  37              		.loc 1 22 5
+  38 0004 40F61A10 		movw	r0, #2330
+  39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     rcu_periph_reset_disable(RCU_TLIRST);
+  40              		.loc 1 23 5
+  41 000c 40F61A10 		movw	r0, #2330
+  42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+  43              		.loc 1 24 1
+  44 0014 00BF     		nop
+  45 0016 80BD     		pop	{r7, pc}
+  46              		.cfi_endproc
+  47              	.LFE123:
+  49              		.section	.text.tli_init,"ax",%progbits
+  50              		.align	1
+  51              		.global	tli_init
+  52              		.syntax unified
+  53              		.thumb
+  54              		.thumb_func
+  55              		.fpu softvfp
+  57              	tli_init:
+  58              	.LFB124:
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      initialize TLI display timing parameters 
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  tli_struct: the data needed to initialize tli.
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   synpsz_vpsz: size of the vertical synchronous pulse
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   synpsz_hpsz: size of the horizontal synchronous pulse
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   backpsz_vbpsz: size of the vertical back porch plus synchronous pulse 
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   backpsz_hbpsz: size of the horizontal back porch plus synchronous pulse
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   activesz_vasz: size of the vertical active area width plus back porch and synchro
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   activesz_hasz: size of the horizontal active area width plus back porch and synch
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   totalsz_vtsz: vertical total size of the display, including active area, back por
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   totalsz_htsz: vorizontal total size of the display, including active area, back p
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   backcolor_red: background value red
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   backcolor_green: background value green
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   backcolor_blue: background value blue
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   signalpolarity_hs: TLI_HSYN_ACTLIVE_LOW,TLI_HSYN_ACTLIVE_HIGHT
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   signalpolarity_vs: TLI_VSYN_ACTLIVE_LOW,TLI_VSYN_ACTLIVE_HIGHT
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   signalpolarity_de: TLI_DE_ACTLIVE_LOW,TLI_DE_ACTLIVE_HIGHT
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   signalpolarity_pixelck: TLI_PIXEL_CLOCK_TLI,TLI_PIXEL_CLOCK_INVERTEDTLI
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_init(tli_parameter_struct *tli_struct)
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+  59              		.loc 1 48 1
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 8
+  62              		@ frame_needed = 1, uses_anonymous_args = 0
+  63              		@ link register save eliminated.
+  64 0000 80B4     		push	{r7}
+  65              		.cfi_def_cfa_offset 4
+  66              		.cfi_offset 7, -4
+  67 0002 83B0     		sub	sp, sp, #12
+  68              		.cfi_def_cfa_offset 16
+  69 0004 00AF     		add	r7, sp, #0
+  70              		.cfi_def_cfa_register 7
+  71 0006 7860     		str	r0, [r7, #4]
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* synchronous pulse size configuration */
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_SPSZ &= ~(TLI_SPSZ_VPSZ|TLI_SPSZ_HPSZ);
+  72              		.loc 1 50 14
+  73 0008 324B     		ldr	r3, .L3
+  74 000a 1B68     		ldr	r3, [r3]
+  75 000c 314A     		ldr	r2, .L3
+  76 000e 03F0F023 		and	r3, r3, #-268374016
+  77 0012 1360     		str	r3, [r2]
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_SPSZ = (tli_struct->synpsz_vpsz|(tli_struct->synpsz_hpsz<<16U));
+  78              		.loc 1 51 27
+  79 0014 7B68     		ldr	r3, [r7, #4]
+  80 0016 1A68     		ldr	r2, [r3]
+  81              		.loc 1 51 52
+  82 0018 7B68     		ldr	r3, [r7, #4]
+  83 001a 5B68     		ldr	r3, [r3, #4]
+  84              		.loc 1 51 65
+  85 001c 1B04     		lsls	r3, r3, #16
+  86              		.loc 1 51 5
+  87 001e 2D49     		ldr	r1, .L3
+  88              		.loc 1 51 40
+  89 0020 1343     		orrs	r3, r3, r2
+  90              		.loc 1 51 14
+  91 0022 0B60     		str	r3, [r1]
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* back-porch size configuration */
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_BPSZ &= ~(TLI_BPSZ_VBPSZ|TLI_BPSZ_HBPSZ);
+  92              		.loc 1 53 14
+  93 0024 2C4B     		ldr	r3, .L3+4
+  94 0026 1B68     		ldr	r3, [r3]
+  95 0028 2B4A     		ldr	r2, .L3+4
+  96 002a 03F0F023 		and	r3, r3, #-268374016
+  97 002e 1360     		str	r3, [r2]
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_BPSZ = (tli_struct->backpsz_vbpsz|(tli_struct->backpsz_hbpsz<<16U));
+  98              		.loc 1 54 27
+  99 0030 7B68     		ldr	r3, [r7, #4]
+ 100 0032 9A68     		ldr	r2, [r3, #8]
+ 101              		.loc 1 54 54
+ 102 0034 7B68     		ldr	r3, [r7, #4]
+ 103 0036 DB68     		ldr	r3, [r3, #12]
+ 104              		.loc 1 54 69
+ 105 0038 1B04     		lsls	r3, r3, #16
+ 106              		.loc 1 54 5
+ 107 003a 2749     		ldr	r1, .L3+4
+ 108              		.loc 1 54 42
+ 109 003c 1343     		orrs	r3, r3, r2
+ 110              		.loc 1 54 14
+ 111 003e 0B60     		str	r3, [r1]
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* active size configuration */    
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_ASZ &= ~(TLI_ASZ_VASZ|TLI_ASZ_HASZ);
+ 112              		.loc 1 56 13
+ 113 0040 264B     		ldr	r3, .L3+8
+ 114 0042 1B68     		ldr	r3, [r3]
+ 115 0044 254A     		ldr	r2, .L3+8
+ 116 0046 03F0F023 		and	r3, r3, #-268374016
+ 117 004a 1360     		str	r3, [r2]
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_ASZ = (tli_struct->activesz_vasz|(tli_struct->activesz_hasz<<16U));
+ 118              		.loc 1 57 26
+ 119 004c 7B68     		ldr	r3, [r7, #4]
+ 120 004e 1A69     		ldr	r2, [r3, #16]
+ 121              		.loc 1 57 53
+ 122 0050 7B68     		ldr	r3, [r7, #4]
+ 123 0052 5B69     		ldr	r3, [r3, #20]
+ 124              		.loc 1 57 68
+ 125 0054 1B04     		lsls	r3, r3, #16
+ 126              		.loc 1 57 5
+ 127 0056 2149     		ldr	r1, .L3+8
+ 128              		.loc 1 57 41
+ 129 0058 1343     		orrs	r3, r3, r2
+ 130              		.loc 1 57 13
+ 131 005a 0B60     		str	r3, [r1]
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* total size configuration */    
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_TSZ &= ~(TLI_TSZ_VTSZ|TLI_TSZ_HTSZ);
+ 132              		.loc 1 59 13
+ 133 005c 204B     		ldr	r3, .L3+12
+ 134 005e 1B68     		ldr	r3, [r3]
+ 135 0060 1F4A     		ldr	r2, .L3+12
+ 136 0062 03F0F023 		and	r3, r3, #-268374016
+ 137 0066 1360     		str	r3, [r2]
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_TSZ = (tli_struct->totalsz_vtsz|(tli_struct->totalsz_htsz<<16U));
+ 138              		.loc 1 60 26
+ 139 0068 7B68     		ldr	r3, [r7, #4]
+ 140 006a 9A69     		ldr	r2, [r3, #24]
+ 141              		.loc 1 60 52
+ 142 006c 7B68     		ldr	r3, [r7, #4]
+ 143 006e DB69     		ldr	r3, [r3, #28]
+ 144              		.loc 1 60 66
+ 145 0070 1B04     		lsls	r3, r3, #16
+ 146              		.loc 1 60 5
+ 147 0072 1B49     		ldr	r1, .L3+12
+ 148              		.loc 1 60 40
+ 149 0074 1343     		orrs	r3, r3, r2
+ 150              		.loc 1 60 13
+ 151 0076 0B60     		str	r3, [r1]
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* background color configuration */    
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_BGC &= ~(TLI_BGC_BVB|(TLI_BGC_BVG)|(TLI_BGC_BVR));
+ 152              		.loc 1 62 13
+ 153 0078 1A4B     		ldr	r3, .L3+16
+ 154 007a 1B68     		ldr	r3, [r3]
+ 155 007c 194A     		ldr	r2, .L3+16
+ 156 007e 03F07F43 		and	r3, r3, #-16777216
+ 157 0082 1360     		str	r3, [r2]
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_BGC = (tli_struct->backcolor_blue|(tli_struct->backcolor_green<<8U)|(tli_struct->backcolor_
+ 158              		.loc 1 63 26
+ 159 0084 7B68     		ldr	r3, [r7, #4]
+ 160 0086 9A6A     		ldr	r2, [r3, #40]
+ 161              		.loc 1 63 54
+ 162 0088 7B68     		ldr	r3, [r7, #4]
+ 163 008a 5B6A     		ldr	r3, [r3, #36]
+ 164              		.loc 1 63 71
+ 165 008c 1B02     		lsls	r3, r3, #8
+ 166              		.loc 1 63 42
+ 167 008e 1A43     		orrs	r2, r2, r3
+ 168              		.loc 1 63 88
+ 169 0090 7B68     		ldr	r3, [r7, #4]
+ 170 0092 1B6A     		ldr	r3, [r3, #32]
+ 171              		.loc 1 63 103
+ 172 0094 1B04     		lsls	r3, r3, #16
+ 173              		.loc 1 63 5
+ 174 0096 1349     		ldr	r1, .L3+16
+ 175              		.loc 1 63 76
+ 176 0098 1343     		orrs	r3, r3, r2
+ 177              		.loc 1 63 13
+ 178 009a 0B60     		str	r3, [r1]
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_CTL &= ~(TLI_CTL_HPPS|TLI_CTL_VPPS|TLI_CTL_DEPS|TLI_CTL_CLKPS);
+ 179              		.loc 1 64 13
+ 180 009c 124B     		ldr	r3, .L3+20
+ 181 009e 1B68     		ldr	r3, [r3]
+ 182 00a0 114A     		ldr	r2, .L3+20
+ 183 00a2 23F07043 		bic	r3, r3, #-268435456
+ 184 00a6 1360     		str	r3, [r2]
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_CTL |= (tli_struct->signalpolarity_hs|tli_struct->signalpolarity_vs|\
+ 185              		.loc 1 65 13
+ 186 00a8 0F4B     		ldr	r3, .L3+20
+ 187 00aa 1A68     		ldr	r2, [r3]
+ 188              		.loc 1 65 27
+ 189 00ac 7B68     		ldr	r3, [r7, #4]
+ 190 00ae D96A     		ldr	r1, [r3, #44]
+ 191              		.loc 1 65 57
+ 192 00b0 7B68     		ldr	r3, [r7, #4]
+ 193 00b2 1B6B     		ldr	r3, [r3, #48]
+ 194              		.loc 1 65 46
+ 195 00b4 1943     		orrs	r1, r1, r3
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                 tli_struct->signalpolarity_de|tli_struct->signalpolarity_pixelck);
+ 196              		.loc 1 66 27
+ 197 00b6 7B68     		ldr	r3, [r7, #4]
+ 198 00b8 5B6B     		ldr	r3, [r3, #52]
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_CTL |= (tli_struct->signalpolarity_hs|tli_struct->signalpolarity_vs|\
+ 199              		.loc 1 65 76
+ 200 00ba 1943     		orrs	r1, r1, r3
+ 201              		.loc 1 66 57
+ 202 00bc 7B68     		ldr	r3, [r7, #4]
+ 203 00be 9B6B     		ldr	r3, [r3, #56]
+ 204              		.loc 1 66 46
+ 205 00c0 0B43     		orrs	r3, r3, r1
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_CTL |= (tli_struct->signalpolarity_hs|tli_struct->signalpolarity_vs|\
+ 206              		.loc 1 65 13
+ 207 00c2 0949     		ldr	r1, .L3+20
+ 208 00c4 1343     		orrs	r3, r3, r2
+ 209 00c6 0B60     		str	r3, [r1]
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 210              		.loc 1 68 1
+ 211 00c8 00BF     		nop
+ 212 00ca 0C37     		adds	r7, r7, #12
+ 213              		.cfi_def_cfa_offset 4
+ 214 00cc BD46     		mov	sp, r7
+ 215              		.cfi_def_cfa_register 13
+ 216              		@ sp needed
+ 217 00ce 80BC     		pop	{r7}
+ 218              		.cfi_restore 7
+ 219              		.cfi_def_cfa_offset 0
+ 220 00d0 7047     		bx	lr
+ 221              	.L4:
+ 222 00d2 00BF     		.align	2
+ 223              	.L3:
+ 224 00d4 08680140 		.word	1073833992
+ 225 00d8 0C680140 		.word	1073833996
+ 226 00dc 10680140 		.word	1073834000
+ 227 00e0 14680140 		.word	1073834004
+ 228 00e4 2C680140 		.word	1073834028
+ 229 00e8 18680140 		.word	1073834008
+ 230              		.cfi_endproc
+ 231              	.LFE124:
+ 233              		.section	.text.tli_dither_config,"ax",%progbits
+ 234              		.align	1
+ 235              		.global	tli_dither_config
+ 236              		.syntax unified
+ 237              		.thumb
+ 238              		.thumb_func
+ 239              		.fpu softvfp
+ 241              	tli_dither_config:
+ 242              	.LFB125:
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      dither function configure 
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  ditherstat: TLI_DITHER_ENABLE,TLI_DITHER_DISABLE
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_dither_config(uint8_t ditherstat)
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 243              		.loc 1 77 1
+ 244              		.cfi_startproc
+ 245              		@ args = 0, pretend = 0, frame = 8
+ 246              		@ frame_needed = 1, uses_anonymous_args = 0
+ 247              		@ link register save eliminated.
+ 248 0000 80B4     		push	{r7}
+ 249              		.cfi_def_cfa_offset 4
+ 250              		.cfi_offset 7, -4
+ 251 0002 83B0     		sub	sp, sp, #12
+ 252              		.cfi_def_cfa_offset 16
+ 253 0004 00AF     		add	r7, sp, #0
+ 254              		.cfi_def_cfa_register 7
+ 255 0006 0346     		mov	r3, r0
+ 256 0008 FB71     		strb	r3, [r7, #7]
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     if(TLI_DITHER_ENABLE == ditherstat){
+ 257              		.loc 1 78 7
+ 258 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 259 000c 012B     		cmp	r3, #1
+ 260 000e 06D1     		bne	.L6
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         TLI_CTL |= TLI_CTL_DFEN;
+ 261              		.loc 1 79 17
+ 262 0010 084B     		ldr	r3, .L9
+ 263 0012 1B68     		ldr	r3, [r3]
+ 264 0014 074A     		ldr	r2, .L9
+ 265 0016 43F48033 		orr	r3, r3, #65536
+ 266 001a 1360     		str	r3, [r2]
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }else{
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         TLI_CTL &= ~(TLI_CTL_DFEN);
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 267              		.loc 1 83 1
+ 268 001c 05E0     		b	.L8
+ 269              	.L6:
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }
+ 270              		.loc 1 81 17
+ 271 001e 054B     		ldr	r3, .L9
+ 272 0020 1B68     		ldr	r3, [r3]
+ 273 0022 044A     		ldr	r2, .L9
+ 274 0024 23F48033 		bic	r3, r3, #65536
+ 275 0028 1360     		str	r3, [r2]
+ 276              	.L8:
+ 277              		.loc 1 83 1
+ 278 002a 00BF     		nop
+ 279 002c 0C37     		adds	r7, r7, #12
+ 280              		.cfi_def_cfa_offset 4
+ 281 002e BD46     		mov	sp, r7
+ 282              		.cfi_def_cfa_register 13
+ 283              		@ sp needed
+ 284 0030 80BC     		pop	{r7}
+ 285              		.cfi_restore 7
+ 286              		.cfi_def_cfa_offset 0
+ 287 0032 7047     		bx	lr
+ 288              	.L10:
+ 289              		.align	2
+ 290              	.L9:
+ 291 0034 18680140 		.word	1073834008
+ 292              		.cfi_endproc
+ 293              	.LFE125:
+ 295              		.section	.text.tli_enable,"ax",%progbits
+ 296              		.align	1
+ 297              		.global	tli_enable
+ 298              		.syntax unified
+ 299              		.thumb
+ 300              		.thumb_func
+ 301              		.fpu softvfp
+ 303              	tli_enable:
+ 304              	.LFB126:
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI enable 
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  none.
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_enable(void)
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 305              		.loc 1 92 1
+ 306              		.cfi_startproc
+ 307              		@ args = 0, pretend = 0, frame = 0
+ 308              		@ frame_needed = 1, uses_anonymous_args = 0
+ 309              		@ link register save eliminated.
+ 310 0000 80B4     		push	{r7}
+ 311              		.cfi_def_cfa_offset 4
+ 312              		.cfi_offset 7, -4
+ 313 0002 00AF     		add	r7, sp, #0
+ 314              		.cfi_def_cfa_register 7
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_CTL |= TLI_CTL_TLIEN;
+ 315              		.loc 1 93 13
+ 316 0004 044B     		ldr	r3, .L12
+ 317 0006 1B68     		ldr	r3, [r3]
+ 318 0008 034A     		ldr	r2, .L12
+ 319 000a 43F00103 		orr	r3, r3, #1
+ 320 000e 1360     		str	r3, [r2]
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 321              		.loc 1 94 1
+ 322 0010 00BF     		nop
+ 323 0012 BD46     		mov	sp, r7
+ 324              		.cfi_def_cfa_register 13
+ 325              		@ sp needed
+ 326 0014 80BC     		pop	{r7}
+ 327              		.cfi_restore 7
+ 328              		.cfi_def_cfa_offset 0
+ 329 0016 7047     		bx	lr
+ 330              	.L13:
+ 331              		.align	2
+ 332              	.L12:
+ 333 0018 18680140 		.word	1073834008
+ 334              		.cfi_endproc
+ 335              	.LFE126:
+ 337              		.section	.text.tli_disable,"ax",%progbits
+ 338              		.align	1
+ 339              		.global	tli_disable
+ 340              		.syntax unified
+ 341              		.thumb
+ 342              		.thumb_func
+ 343              		.fpu softvfp
+ 345              	tli_disable:
+ 346              	.LFB127:
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI disable 
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  none.
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_disable(void)
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 347              		.loc 1 103 1
+ 348              		.cfi_startproc
+ 349              		@ args = 0, pretend = 0, frame = 0
+ 350              		@ frame_needed = 1, uses_anonymous_args = 0
+ 351              		@ link register save eliminated.
+ 352 0000 80B4     		push	{r7}
+ 353              		.cfi_def_cfa_offset 4
+ 354              		.cfi_offset 7, -4
+ 355 0002 00AF     		add	r7, sp, #0
+ 356              		.cfi_def_cfa_register 7
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_CTL &= ~(TLI_CTL_DFEN);
+ 357              		.loc 1 104 13
+ 358 0004 044B     		ldr	r3, .L15
+ 359 0006 1B68     		ldr	r3, [r3]
+ 360 0008 034A     		ldr	r2, .L15
+ 361 000a 23F48033 		bic	r3, r3, #65536
+ 362 000e 1360     		str	r3, [r2]
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 363              		.loc 1 105 1
+ 364 0010 00BF     		nop
+ 365 0012 BD46     		mov	sp, r7
+ 366              		.cfi_def_cfa_register 13
+ 367              		@ sp needed
+ 368 0014 80BC     		pop	{r7}
+ 369              		.cfi_restore 7
+ 370              		.cfi_def_cfa_offset 0
+ 371 0016 7047     		bx	lr
+ 372              	.L16:
+ 373              		.align	2
+ 374              	.L15:
+ 375 0018 18680140 		.word	1073834008
+ 376              		.cfi_endproc
+ 377              	.LFE127:
+ 379              		.section	.text.tli_reload_config,"ax",%progbits
+ 380              		.align	1
+ 381              		.global	tli_reload_config
+ 382              		.syntax unified
+ 383              		.thumb
+ 384              		.thumb_func
+ 385              		.fpu softvfp
+ 387              	tli_reload_config:
+ 388              	.LFB128:
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI reload layer configure 
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  reloadmod: TLI_FRAME_BLANK_RELOAD_EN,TLI_REQUEST_RELOAD_EN
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_reload_config(uint8_t reloadmod)
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 389              		.loc 1 114 1
+ 390              		.cfi_startproc
+ 391              		@ args = 0, pretend = 0, frame = 8
+ 392              		@ frame_needed = 1, uses_anonymous_args = 0
+ 393              		@ link register save eliminated.
+ 394 0000 80B4     		push	{r7}
+ 395              		.cfi_def_cfa_offset 4
+ 396              		.cfi_offset 7, -4
+ 397 0002 83B0     		sub	sp, sp, #12
+ 398              		.cfi_def_cfa_offset 16
+ 399 0004 00AF     		add	r7, sp, #0
+ 400              		.cfi_def_cfa_register 7
+ 401 0006 0346     		mov	r3, r0
+ 402 0008 FB71     		strb	r3, [r7, #7]
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     if(TLI_FRAME_BLANK_RELOAD_EN == reloadmod){
+ 403              		.loc 1 115 7
+ 404 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 405 000c 002B     		cmp	r3, #0
+ 406 000e 06D1     		bne	.L18
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         TLI_RL |= TLI_RL_FBR;
+ 407              		.loc 1 116 16
+ 408 0010 084B     		ldr	r3, .L21
+ 409 0012 1B68     		ldr	r3, [r3]
+ 410 0014 074A     		ldr	r2, .L21
+ 411 0016 43F00203 		orr	r3, r3, #2
+ 412 001a 1360     		str	r3, [r2]
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }else{
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         TLI_RL |= TLI_RL_RQR;
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 413              		.loc 1 120 1
+ 414 001c 05E0     		b	.L20
+ 415              	.L18:
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }
+ 416              		.loc 1 118 16
+ 417 001e 054B     		ldr	r3, .L21
+ 418 0020 1B68     		ldr	r3, [r3]
+ 419 0022 044A     		ldr	r2, .L21
+ 420 0024 43F00103 		orr	r3, r3, #1
+ 421 0028 1360     		str	r3, [r2]
+ 422              	.L20:
+ 423              		.loc 1 120 1
+ 424 002a 00BF     		nop
+ 425 002c 0C37     		adds	r7, r7, #12
+ 426              		.cfi_def_cfa_offset 4
+ 427 002e BD46     		mov	sp, r7
+ 428              		.cfi_def_cfa_register 13
+ 429              		@ sp needed
+ 430 0030 80BC     		pop	{r7}
+ 431              		.cfi_restore 7
+ 432              		.cfi_def_cfa_offset 0
+ 433 0032 7047     		bx	lr
+ 434              	.L22:
+ 435              		.align	2
+ 436              	.L21:
+ 437 0034 24680140 		.word	1073834020
+ 438              		.cfi_endproc
+ 439              	.LFE128:
+ 441              		.section	.text.tli_interrupt_enable,"ax",%progbits
+ 442              		.align	1
+ 443              		.global	tli_interrupt_enable
+ 444              		.syntax unified
+ 445              		.thumb
+ 446              		.thumb_func
+ 447              		.fpu softvfp
+ 449              	tli_interrupt_enable:
+ 450              	.LFB129:
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI interrupt enable 
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  inttype: TLI interrupt bits.
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTEN_LMIE: line mark interrupt 
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTEN_FEIE: FIFO error interrupt  
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTEN_TEIE: transaction error interrupt   
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTEN_LCRIE: layer configuration reloaded interrupt 
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_interrupt_enable(uint32_t inttype)
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 451              		.loc 1 133 1
+ 452              		.cfi_startproc
+ 453              		@ args = 0, pretend = 0, frame = 8
+ 454              		@ frame_needed = 1, uses_anonymous_args = 0
+ 455              		@ link register save eliminated.
+ 456 0000 80B4     		push	{r7}
+ 457              		.cfi_def_cfa_offset 4
+ 458              		.cfi_offset 7, -4
+ 459 0002 83B0     		sub	sp, sp, #12
+ 460              		.cfi_def_cfa_offset 16
+ 461 0004 00AF     		add	r7, sp, #0
+ 462              		.cfi_def_cfa_register 7
+ 463 0006 7860     		str	r0, [r7, #4]
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_INTEN |= (inttype);
+ 464              		.loc 1 134 15
+ 465 0008 054B     		ldr	r3, .L24
+ 466 000a 1A68     		ldr	r2, [r3]
+ 467 000c 0449     		ldr	r1, .L24
+ 468 000e 7B68     		ldr	r3, [r7, #4]
+ 469 0010 1343     		orrs	r3, r3, r2
+ 470 0012 0B60     		str	r3, [r1]
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 471              		.loc 1 135 1
+ 472 0014 00BF     		nop
+ 473 0016 0C37     		adds	r7, r7, #12
+ 474              		.cfi_def_cfa_offset 4
+ 475 0018 BD46     		mov	sp, r7
+ 476              		.cfi_def_cfa_register 13
+ 477              		@ sp needed
+ 478 001a 80BC     		pop	{r7}
+ 479              		.cfi_restore 7
+ 480              		.cfi_def_cfa_offset 0
+ 481 001c 7047     		bx	lr
+ 482              	.L25:
+ 483 001e 00BF     		.align	2
+ 484              	.L24:
+ 485 0020 34680140 		.word	1073834036
+ 486              		.cfi_endproc
+ 487              	.LFE129:
+ 489              		.section	.text.tli_interrupt_disable,"ax",%progbits
+ 490              		.align	1
+ 491              		.global	tli_interrupt_disable
+ 492              		.syntax unified
+ 493              		.thumb
+ 494              		.thumb_func
+ 495              		.fpu softvfp
+ 497              	tli_interrupt_disable:
+ 498              	.LFB130:
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI interrupt disable 
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  inttype: TLI interrupt bits.
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTEN_LMIE: line mark interrupt 
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTEN_FEIE: FIFO error interrupt  
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTEN_TEIE: transaction error interrupt   
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTEN_LCRIE: layer configuration reloaded interrupt 
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_interrupt_disable(uint32_t inttype)
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 499              		.loc 1 148 1
+ 500              		.cfi_startproc
+ 501              		@ args = 0, pretend = 0, frame = 8
+ 502              		@ frame_needed = 1, uses_anonymous_args = 0
+ 503              		@ link register save eliminated.
+ 504 0000 80B4     		push	{r7}
+ 505              		.cfi_def_cfa_offset 4
+ 506              		.cfi_offset 7, -4
+ 507 0002 83B0     		sub	sp, sp, #12
+ 508              		.cfi_def_cfa_offset 16
+ 509 0004 00AF     		add	r7, sp, #0
+ 510              		.cfi_def_cfa_register 7
+ 511 0006 7860     		str	r0, [r7, #4]
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_INTEN &= ~(inttype);
+ 512              		.loc 1 149 15
+ 513 0008 054B     		ldr	r3, .L27
+ 514 000a 1A68     		ldr	r2, [r3]
+ 515              		.loc 1 149 18
+ 516 000c 7B68     		ldr	r3, [r7, #4]
+ 517 000e DB43     		mvns	r3, r3
+ 518              		.loc 1 149 15
+ 519 0010 0349     		ldr	r1, .L27
+ 520 0012 1340     		ands	r3, r3, r2
+ 521 0014 0B60     		str	r3, [r1]
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 522              		.loc 1 150 1
+ 523 0016 00BF     		nop
+ 524 0018 0C37     		adds	r7, r7, #12
+ 525              		.cfi_def_cfa_offset 4
+ 526 001a BD46     		mov	sp, r7
+ 527              		.cfi_def_cfa_register 13
+ 528              		@ sp needed
+ 529 001c 80BC     		pop	{r7}
+ 530              		.cfi_restore 7
+ 531              		.cfi_def_cfa_offset 0
+ 532 001e 7047     		bx	lr
+ 533              	.L28:
+ 534              		.align	2
+ 535              	.L27:
+ 536 0020 34680140 		.word	1073834036
+ 537              		.cfi_endproc
+ 538              	.LFE130:
+ 540              		.section	.text.tli_interrupt_flag_get,"ax",%progbits
+ 541              		.align	1
+ 542              		.global	tli_interrupt_flag_get
+ 543              		.syntax unified
+ 544              		.thumb
+ 545              		.thumb_func
+ 546              		.fpu softvfp
+ 548              	tli_interrupt_flag_get:
+ 549              	.LFB131:
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      get TLI interrupt flag 
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  intflag: TLI interrupt flag bits.
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTF_LMF: line mark flag 
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTF_FEF: FIFO error flag  
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTF_TEF: transaction error flag   
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTF_LCRF: layer configuration reloaded flag 
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** FlagStatus tli_interrupt_flag_get(uint32_t intflag)
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 550              		.loc 1 163 1
+ 551              		.cfi_startproc
+ 552              		@ args = 0, pretend = 0, frame = 16
+ 553              		@ frame_needed = 1, uses_anonymous_args = 0
+ 554              		@ link register save eliminated.
+ 555 0000 80B4     		push	{r7}
+ 556              		.cfi_def_cfa_offset 4
+ 557              		.cfi_offset 7, -4
+ 558 0002 85B0     		sub	sp, sp, #20
+ 559              		.cfi_def_cfa_offset 24
+ 560 0004 00AF     		add	r7, sp, #0
+ 561              		.cfi_def_cfa_register 7
+ 562 0006 7860     		str	r0, [r7, #4]
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     uint32_t state;
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     state = TLI_INTF;
+ 563              		.loc 1 165 13
+ 564 0008 074B     		ldr	r3, .L32
+ 565              		.loc 1 165 11
+ 566 000a 1B68     		ldr	r3, [r3]
+ 567 000c FB60     		str	r3, [r7, #12]
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     if(state & intflag){
+ 568              		.loc 1 166 14
+ 569 000e FA68     		ldr	r2, [r7, #12]
+ 570 0010 7B68     		ldr	r3, [r7, #4]
+ 571 0012 1340     		ands	r3, r3, r2
+ 572              		.loc 1 166 7
+ 573 0014 002B     		cmp	r3, #0
+ 574 0016 01D0     		beq	.L30
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         return SET;
+ 575              		.loc 1 167 16
+ 576 0018 0123     		movs	r3, #1
+ 577 001a 00E0     		b	.L31
+ 578              	.L30:
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }else{
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         return RESET;
+ 579              		.loc 1 169 16
+ 580 001c 0023     		movs	r3, #0
+ 581              	.L31:
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 582              		.loc 1 171 1
+ 583 001e 1846     		mov	r0, r3
+ 584 0020 1437     		adds	r7, r7, #20
+ 585              		.cfi_def_cfa_offset 4
+ 586 0022 BD46     		mov	sp, r7
+ 587              		.cfi_def_cfa_register 13
+ 588              		@ sp needed
+ 589 0024 80BC     		pop	{r7}
+ 590              		.cfi_restore 7
+ 591              		.cfi_def_cfa_offset 0
+ 592 0026 7047     		bx	lr
+ 593              	.L33:
+ 594              		.align	2
+ 595              	.L32:
+ 596 0028 38680140 		.word	1073834040
+ 597              		.cfi_endproc
+ 598              	.LFE131:
+ 600              		.section	.text.tli_interrupt_flag_clear,"ax",%progbits
+ 601              		.align	1
+ 602              		.global	tli_interrupt_flag_clear
+ 603              		.syntax unified
+ 604              		.thumb
+ 605              		.thumb_func
+ 606              		.fpu softvfp
+ 608              	tli_interrupt_flag_clear:
+ 609              	.LFB132:
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      clear TLI interrupt flag 
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  intflag: TLI interrupt flag bits.
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTC_LMC: line mark flag 
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTC_FEC: FIFO error flag  
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTC_TEC: transaction error flag   
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_INTC_LCRC: layer configuration reloaded flag 
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_interrupt_flag_clear(uint32_t intflag)
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 610              		.loc 1 184 1
+ 611              		.cfi_startproc
+ 612              		@ args = 0, pretend = 0, frame = 8
+ 613              		@ frame_needed = 1, uses_anonymous_args = 0
+ 614              		@ link register save eliminated.
+ 615 0000 80B4     		push	{r7}
+ 616              		.cfi_def_cfa_offset 4
+ 617              		.cfi_offset 7, -4
+ 618 0002 83B0     		sub	sp, sp, #12
+ 619              		.cfi_def_cfa_offset 16
+ 620 0004 00AF     		add	r7, sp, #0
+ 621              		.cfi_def_cfa_register 7
+ 622 0006 7860     		str	r0, [r7, #4]
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_INTC |= (intflag);
+ 623              		.loc 1 185 14
+ 624 0008 054B     		ldr	r3, .L35
+ 625 000a 1A68     		ldr	r2, [r3]
+ 626 000c 0449     		ldr	r1, .L35
+ 627 000e 7B68     		ldr	r3, [r7, #4]
+ 628 0010 1343     		orrs	r3, r3, r2
+ 629 0012 0B60     		str	r3, [r1]
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 630              		.loc 1 186 1
+ 631 0014 00BF     		nop
+ 632 0016 0C37     		adds	r7, r7, #12
+ 633              		.cfi_def_cfa_offset 4
+ 634 0018 BD46     		mov	sp, r7
+ 635              		.cfi_def_cfa_register 13
+ 636              		@ sp needed
+ 637 001a 80BC     		pop	{r7}
+ 638              		.cfi_restore 7
+ 639              		.cfi_def_cfa_offset 0
+ 640 001c 7047     		bx	lr
+ 641              	.L36:
+ 642 001e 00BF     		.align	2
+ 643              	.L35:
+ 644 0020 3C680140 		.word	1073834044
+ 645              		.cfi_endproc
+ 646              	.LFE132:
+ 648              		.section	.text.tli_line_mark_set,"ax",%progbits
+ 649              		.align	1
+ 650              		.global	tli_line_mark_set
+ 651              		.syntax unified
+ 652              		.thumb
+ 653              		.thumb_func
+ 654              		.fpu softvfp
+ 656              	tli_line_mark_set:
+ 657              	.LFB133:
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      set line mark value 
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  linenum: line number. 
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_line_mark_set(uint32_t linenum)
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 658              		.loc 1 195 1
+ 659              		.cfi_startproc
+ 660              		@ args = 0, pretend = 0, frame = 8
+ 661              		@ frame_needed = 1, uses_anonymous_args = 0
+ 662              		@ link register save eliminated.
+ 663 0000 80B4     		push	{r7}
+ 664              		.cfi_def_cfa_offset 4
+ 665              		.cfi_offset 7, -4
+ 666 0002 83B0     		sub	sp, sp, #12
+ 667              		.cfi_def_cfa_offset 16
+ 668 0004 00AF     		add	r7, sp, #0
+ 669              		.cfi_def_cfa_register 7
+ 670 0006 7860     		str	r0, [r7, #4]
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LM &= ~(TLI_LM_LM);
+ 671              		.loc 1 196 12
+ 672 0008 074B     		ldr	r3, .L38
+ 673 000a 1B68     		ldr	r3, [r3]
+ 674 000c 064A     		ldr	r2, .L38
+ 675 000e 23F4FF63 		bic	r3, r3, #2040
+ 676 0012 23F00703 		bic	r3, r3, #7
+ 677 0016 1360     		str	r3, [r2]
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LM = linenum;
+ 678              		.loc 1 197 5
+ 679 0018 034A     		ldr	r2, .L38
+ 680              		.loc 1 197 12
+ 681 001a 7B68     		ldr	r3, [r7, #4]
+ 682 001c 1360     		str	r3, [r2]
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 683              		.loc 1 198 1
+ 684 001e 00BF     		nop
+ 685 0020 0C37     		adds	r7, r7, #12
+ 686              		.cfi_def_cfa_offset 4
+ 687 0022 BD46     		mov	sp, r7
+ 688              		.cfi_def_cfa_register 13
+ 689              		@ sp needed
+ 690 0024 80BC     		pop	{r7}
+ 691              		.cfi_restore 7
+ 692              		.cfi_def_cfa_offset 0
+ 693 0026 7047     		bx	lr
+ 694              	.L39:
+ 695              		.align	2
+ 696              	.L38:
+ 697 0028 40680140 		.word	1073834048
+ 698              		.cfi_endproc
+ 699              	.LFE133:
+ 701              		.section	.text.tli_current_pos_get,"ax",%progbits
+ 702              		.align	1
+ 703              		.global	tli_current_pos_get
+ 704              		.syntax unified
+ 705              		.thumb
+ 706              		.thumb_func
+ 707              		.fpu softvfp
+ 709              	tli_current_pos_get:
+ 710              	.LFB134:
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      get current displayed position 
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  none 
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** uint32_t tli_current_pos_get(void)
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 711              		.loc 1 207 1
+ 712              		.cfi_startproc
+ 713              		@ args = 0, pretend = 0, frame = 0
+ 714              		@ frame_needed = 1, uses_anonymous_args = 0
+ 715              		@ link register save eliminated.
+ 716 0000 80B4     		push	{r7}
+ 717              		.cfi_def_cfa_offset 4
+ 718              		.cfi_offset 7, -4
+ 719 0002 00AF     		add	r7, sp, #0
+ 720              		.cfi_def_cfa_register 7
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     return TLI_CPPOS;
+ 721              		.loc 1 208 12
+ 722 0004 024B     		ldr	r3, .L42
+ 723 0006 1B68     		ldr	r3, [r3]
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 724              		.loc 1 209 1
+ 725 0008 1846     		mov	r0, r3
+ 726 000a BD46     		mov	sp, r7
+ 727              		.cfi_def_cfa_register 13
+ 728              		@ sp needed
+ 729 000c 80BC     		pop	{r7}
+ 730              		.cfi_restore 7
+ 731              		.cfi_def_cfa_offset 0
+ 732 000e 7047     		bx	lr
+ 733              	.L43:
+ 734              		.align	2
+ 735              	.L42:
+ 736 0010 44680140 		.word	1073834052
+ 737              		.cfi_endproc
+ 738              	.LFE134:
+ 740              		.section	.text.tli_flag_get,"ax",%progbits
+ 741              		.align	1
+ 742              		.global	tli_flag_get
+ 743              		.syntax unified
+ 744              		.thumb
+ 745              		.thumb_func
+ 746              		.fpu softvfp
+ 748              	tli_flag_get:
+ 749              	.LFB135:
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      get TLI state 
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  state: TLI state.
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_STAT_VDE: current VDE state 
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_STAT_HDE: current HDE state
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_STAT_VS: current vs state
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****       \arg        TLI_STAT_HS: current hs state 
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** FlagStatus tli_flag_get(uint32_t state)
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 750              		.loc 1 223 1
+ 751              		.cfi_startproc
+ 752              		@ args = 0, pretend = 0, frame = 16
+ 753              		@ frame_needed = 1, uses_anonymous_args = 0
+ 754              		@ link register save eliminated.
+ 755 0000 80B4     		push	{r7}
+ 756              		.cfi_def_cfa_offset 4
+ 757              		.cfi_offset 7, -4
+ 758 0002 85B0     		sub	sp, sp, #20
+ 759              		.cfi_def_cfa_offset 24
+ 760 0004 00AF     		add	r7, sp, #0
+ 761              		.cfi_def_cfa_register 7
+ 762 0006 7860     		str	r0, [r7, #4]
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     uint32_t stat;
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     stat = TLI_STAT;
+ 763              		.loc 1 225 12
+ 764 0008 074B     		ldr	r3, .L47
+ 765              		.loc 1 225 10
+ 766 000a 1B68     		ldr	r3, [r3]
+ 767 000c FB60     		str	r3, [r7, #12]
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     if(state & stat){
+ 768              		.loc 1 226 14
+ 769 000e 7A68     		ldr	r2, [r7, #4]
+ 770 0010 FB68     		ldr	r3, [r7, #12]
+ 771 0012 1340     		ands	r3, r3, r2
+ 772              		.loc 1 226 7
+ 773 0014 002B     		cmp	r3, #0
+ 774 0016 01D0     		beq	.L45
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         return SET;
+ 775              		.loc 1 227 16
+ 776 0018 0123     		movs	r3, #1
+ 777 001a 00E0     		b	.L46
+ 778              	.L45:
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }else{
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         return RESET;
+ 779              		.loc 1 229 16
+ 780 001c 0023     		movs	r3, #0
+ 781              	.L46:
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 782              		.loc 1 231 1
+ 783 001e 1846     		mov	r0, r3
+ 784 0020 1437     		adds	r7, r7, #20
+ 785              		.cfi_def_cfa_offset 4
+ 786 0022 BD46     		mov	sp, r7
+ 787              		.cfi_def_cfa_register 13
+ 788              		@ sp needed
+ 789 0024 80BC     		pop	{r7}
+ 790              		.cfi_restore 7
+ 791              		.cfi_def_cfa_offset 0
+ 792 0026 7047     		bx	lr
+ 793              	.L48:
+ 794              		.align	2
+ 795              	.L47:
+ 796 0028 48680140 		.word	1073834056
+ 797              		.cfi_endproc
+ 798              	.LFE135:
+ 800              		.section	.text.tli_layer_enable,"ax",%progbits
+ 801              		.align	1
+ 802              		.global	tli_layer_enable
+ 803              		.syntax unified
+ 804              		.thumb
+ 805              		.thumb_func
+ 806              		.fpu softvfp
+ 808              	tli_layer_enable:
+ 809              	.LFB136:
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer enable 
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1).
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_layer_enable(uint32_t layerx)
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 810              		.loc 1 240 1
+ 811              		.cfi_startproc
+ 812              		@ args = 0, pretend = 0, frame = 8
+ 813              		@ frame_needed = 1, uses_anonymous_args = 0
+ 814              		@ link register save eliminated.
+ 815 0000 80B4     		push	{r7}
+ 816              		.cfi_def_cfa_offset 4
+ 817              		.cfi_offset 7, -4
+ 818 0002 83B0     		sub	sp, sp, #12
+ 819              		.cfi_def_cfa_offset 16
+ 820 0004 00AF     		add	r7, sp, #0
+ 821              		.cfi_def_cfa_register 7
+ 822 0006 7860     		str	r0, [r7, #4]
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxCTL(layerx) |= TLI_LxCTL_LEN;
+ 823              		.loc 1 241 23
+ 824 0008 7B68     		ldr	r3, [r7, #4]
+ 825 000a 8433     		adds	r3, r3, #132
+ 826 000c 1B68     		ldr	r3, [r3]
+ 827 000e 7A68     		ldr	r2, [r7, #4]
+ 828 0010 8432     		adds	r2, r2, #132
+ 829 0012 43F00103 		orr	r3, r3, #1
+ 830 0016 1360     		str	r3, [r2]
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 831              		.loc 1 242 1
+ 832 0018 00BF     		nop
+ 833 001a 0C37     		adds	r7, r7, #12
+ 834              		.cfi_def_cfa_offset 4
+ 835 001c BD46     		mov	sp, r7
+ 836              		.cfi_def_cfa_register 13
+ 837              		@ sp needed
+ 838 001e 80BC     		pop	{r7}
+ 839              		.cfi_restore 7
+ 840              		.cfi_def_cfa_offset 0
+ 841 0020 7047     		bx	lr
+ 842              		.cfi_endproc
+ 843              	.LFE136:
+ 845              		.section	.text.tli_layer_disable,"ax",%progbits
+ 846              		.align	1
+ 847              		.global	tli_layer_disable
+ 848              		.syntax unified
+ 849              		.thumb
+ 850              		.thumb_func
+ 851              		.fpu softvfp
+ 853              	tli_layer_disable:
+ 854              	.LFB137:
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer disable 
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1).
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_layer_disable(uint32_t layerx)
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 855              		.loc 1 251 1
+ 856              		.cfi_startproc
+ 857              		@ args = 0, pretend = 0, frame = 8
+ 858              		@ frame_needed = 1, uses_anonymous_args = 0
+ 859              		@ link register save eliminated.
+ 860 0000 80B4     		push	{r7}
+ 861              		.cfi_def_cfa_offset 4
+ 862              		.cfi_offset 7, -4
+ 863 0002 83B0     		sub	sp, sp, #12
+ 864              		.cfi_def_cfa_offset 16
+ 865 0004 00AF     		add	r7, sp, #0
+ 866              		.cfi_def_cfa_register 7
+ 867 0006 7860     		str	r0, [r7, #4]
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxCTL(layerx) &= ~(TLI_LxCTL_LEN);
+ 868              		.loc 1 252 23
+ 869 0008 7B68     		ldr	r3, [r7, #4]
+ 870 000a 8433     		adds	r3, r3, #132
+ 871 000c 1B68     		ldr	r3, [r3]
+ 872 000e 7A68     		ldr	r2, [r7, #4]
+ 873 0010 8432     		adds	r2, r2, #132
+ 874 0012 23F00103 		bic	r3, r3, #1
+ 875 0016 1360     		str	r3, [r2]
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 876              		.loc 1 253 1
+ 877 0018 00BF     		nop
+ 878 001a 0C37     		adds	r7, r7, #12
+ 879              		.cfi_def_cfa_offset 4
+ 880 001c BD46     		mov	sp, r7
+ 881              		.cfi_def_cfa_register 13
+ 882              		@ sp needed
+ 883 001e 80BC     		pop	{r7}
+ 884              		.cfi_restore 7
+ 885              		.cfi_def_cfa_offset 0
+ 886 0020 7047     		bx	lr
+ 887              		.cfi_endproc
+ 888              	.LFE137:
+ 890              		.section	.text.tli_color_key_enable,"ax",%progbits
+ 891              		.align	1
+ 892              		.global	tli_color_key_enable
+ 893              		.syntax unified
+ 894              		.thumb
+ 895              		.thumb_func
+ 896              		.fpu softvfp
+ 898              	tli_color_key_enable:
+ 899              	.LFB138:
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer color keying enable 
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1).
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_color_key_enable(uint32_t layerx)
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 900              		.loc 1 262 1
+ 901              		.cfi_startproc
+ 902              		@ args = 0, pretend = 0, frame = 8
+ 903              		@ frame_needed = 1, uses_anonymous_args = 0
+ 904              		@ link register save eliminated.
+ 905 0000 80B4     		push	{r7}
+ 906              		.cfi_def_cfa_offset 4
+ 907              		.cfi_offset 7, -4
+ 908 0002 83B0     		sub	sp, sp, #12
+ 909              		.cfi_def_cfa_offset 16
+ 910 0004 00AF     		add	r7, sp, #0
+ 911              		.cfi_def_cfa_register 7
+ 912 0006 7860     		str	r0, [r7, #4]
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxCTL(layerx) |= TLI_LxCTL_CKEYEN;
+ 913              		.loc 1 263 23
+ 914 0008 7B68     		ldr	r3, [r7, #4]
+ 915 000a 8433     		adds	r3, r3, #132
+ 916 000c 1B68     		ldr	r3, [r3]
+ 917 000e 7A68     		ldr	r2, [r7, #4]
+ 918 0010 8432     		adds	r2, r2, #132
+ 919 0012 43F00203 		orr	r3, r3, #2
+ 920 0016 1360     		str	r3, [r2]
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 921              		.loc 1 264 1
+ 922 0018 00BF     		nop
+ 923 001a 0C37     		adds	r7, r7, #12
+ 924              		.cfi_def_cfa_offset 4
+ 925 001c BD46     		mov	sp, r7
+ 926              		.cfi_def_cfa_register 13
+ 927              		@ sp needed
+ 928 001e 80BC     		pop	{r7}
+ 929              		.cfi_restore 7
+ 930              		.cfi_def_cfa_offset 0
+ 931 0020 7047     		bx	lr
+ 932              		.cfi_endproc
+ 933              	.LFE138:
+ 935              		.section	.text.tli_color_key_disable,"ax",%progbits
+ 936              		.align	1
+ 937              		.global	tli_color_key_disable
+ 938              		.syntax unified
+ 939              		.thumb
+ 940              		.thumb_func
+ 941              		.fpu softvfp
+ 943              	tli_color_key_disable:
+ 944              	.LFB139:
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer color keying disable 
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1).
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_color_key_disable(uint32_t layerx)
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 945              		.loc 1 273 1
+ 946              		.cfi_startproc
+ 947              		@ args = 0, pretend = 0, frame = 8
+ 948              		@ frame_needed = 1, uses_anonymous_args = 0
+ 949              		@ link register save eliminated.
+ 950 0000 80B4     		push	{r7}
+ 951              		.cfi_def_cfa_offset 4
+ 952              		.cfi_offset 7, -4
+ 953 0002 83B0     		sub	sp, sp, #12
+ 954              		.cfi_def_cfa_offset 16
+ 955 0004 00AF     		add	r7, sp, #0
+ 956              		.cfi_def_cfa_register 7
+ 957 0006 7860     		str	r0, [r7, #4]
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxCTL(layerx) &= ~(TLI_LxCTL_CKEYEN);
+ 958              		.loc 1 274 23
+ 959 0008 7B68     		ldr	r3, [r7, #4]
+ 960 000a 8433     		adds	r3, r3, #132
+ 961 000c 1B68     		ldr	r3, [r3]
+ 962 000e 7A68     		ldr	r2, [r7, #4]
+ 963 0010 8432     		adds	r2, r2, #132
+ 964 0012 23F00203 		bic	r3, r3, #2
+ 965 0016 1360     		str	r3, [r2]
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 966              		.loc 1 275 1
+ 967 0018 00BF     		nop
+ 968 001a 0C37     		adds	r7, r7, #12
+ 969              		.cfi_def_cfa_offset 4
+ 970 001c BD46     		mov	sp, r7
+ 971              		.cfi_def_cfa_register 13
+ 972              		@ sp needed
+ 973 001e 80BC     		pop	{r7}
+ 974              		.cfi_restore 7
+ 975              		.cfi_def_cfa_offset 0
+ 976 0020 7047     		bx	lr
+ 977              		.cfi_endproc
+ 978              	.LFE139:
+ 980              		.section	.text.tli_lut_enable,"ax",%progbits
+ 981              		.align	1
+ 982              		.global	tli_lut_enable
+ 983              		.syntax unified
+ 984              		.thumb
+ 985              		.thumb_func
+ 986              		.fpu softvfp
+ 988              	tli_lut_enable:
+ 989              	.LFB140:
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer LUT enable 
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1).
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_lut_enable(uint32_t layerx)
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 990              		.loc 1 284 1
+ 991              		.cfi_startproc
+ 992              		@ args = 0, pretend = 0, frame = 8
+ 993              		@ frame_needed = 1, uses_anonymous_args = 0
+ 994              		@ link register save eliminated.
+ 995 0000 80B4     		push	{r7}
+ 996              		.cfi_def_cfa_offset 4
+ 997              		.cfi_offset 7, -4
+ 998 0002 83B0     		sub	sp, sp, #12
+ 999              		.cfi_def_cfa_offset 16
+ 1000 0004 00AF     		add	r7, sp, #0
+ 1001              		.cfi_def_cfa_register 7
+ 1002 0006 7860     		str	r0, [r7, #4]
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxCTL(layerx) |= TLI_LxCTL_LUTEN;
+ 1003              		.loc 1 285 23
+ 1004 0008 7B68     		ldr	r3, [r7, #4]
+ 1005 000a 8433     		adds	r3, r3, #132
+ 1006 000c 1B68     		ldr	r3, [r3]
+ 1007 000e 7A68     		ldr	r2, [r7, #4]
+ 1008 0010 8432     		adds	r2, r2, #132
+ 1009 0012 43F01003 		orr	r3, r3, #16
+ 1010 0016 1360     		str	r3, [r2]
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 1011              		.loc 1 286 1
+ 1012 0018 00BF     		nop
+ 1013 001a 0C37     		adds	r7, r7, #12
+ 1014              		.cfi_def_cfa_offset 4
+ 1015 001c BD46     		mov	sp, r7
+ 1016              		.cfi_def_cfa_register 13
+ 1017              		@ sp needed
+ 1018 001e 80BC     		pop	{r7}
+ 1019              		.cfi_restore 7
+ 1020              		.cfi_def_cfa_offset 0
+ 1021 0020 7047     		bx	lr
+ 1022              		.cfi_endproc
+ 1023              	.LFE140:
+ 1025              		.section	.text.tli_lut_disable,"ax",%progbits
+ 1026              		.align	1
+ 1027              		.global	tli_lut_disable
+ 1028              		.syntax unified
+ 1029              		.thumb
+ 1030              		.thumb_func
+ 1031              		.fpu softvfp
+ 1033              	tli_lut_disable:
+ 1034              	.LFB141:
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer LUT disable 
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1).
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_lut_disable(uint32_t layerx)
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 1035              		.loc 1 295 1
+ 1036              		.cfi_startproc
+ 1037              		@ args = 0, pretend = 0, frame = 8
+ 1038              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1039              		@ link register save eliminated.
+ 1040 0000 80B4     		push	{r7}
+ 1041              		.cfi_def_cfa_offset 4
+ 1042              		.cfi_offset 7, -4
+ 1043 0002 83B0     		sub	sp, sp, #12
+ 1044              		.cfi_def_cfa_offset 16
+ 1045 0004 00AF     		add	r7, sp, #0
+ 1046              		.cfi_def_cfa_register 7
+ 1047 0006 7860     		str	r0, [r7, #4]
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxCTL(layerx) &= ~(TLI_LxCTL_LUTEN);
+ 1048              		.loc 1 296 23
+ 1049 0008 7B68     		ldr	r3, [r7, #4]
+ 1050 000a 8433     		adds	r3, r3, #132
+ 1051 000c 1B68     		ldr	r3, [r3]
+ 1052 000e 7A68     		ldr	r2, [r7, #4]
+ 1053 0010 8432     		adds	r2, r2, #132
+ 1054 0012 23F01003 		bic	r3, r3, #16
+ 1055 0016 1360     		str	r3, [r2]
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 1056              		.loc 1 297 1
+ 1057 0018 00BF     		nop
+ 1058 001a 0C37     		adds	r7, r7, #12
+ 1059              		.cfi_def_cfa_offset 4
+ 1060 001c BD46     		mov	sp, r7
+ 1061              		.cfi_def_cfa_register 13
+ 1062              		@ sp needed
+ 1063 001e 80BC     		pop	{r7}
+ 1064              		.cfi_restore 7
+ 1065              		.cfi_def_cfa_offset 0
+ 1066 0020 7047     		bx	lr
+ 1067              		.cfi_endproc
+ 1068              	.LFE141:
+ 1070              		.section	.text.tli_layer_init,"ax",%progbits
+ 1071              		.align	1
+ 1072              		.global	tli_layer_init
+ 1073              		.syntax unified
+ 1074              		.thumb
+ 1075              		.thumb_func
+ 1076              		.fpu softvfp
+ 1078              	tli_layer_init:
+ 1079              	.LFB142:
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer initialize 
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1)
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layer_struct: TLI Layer parameter struct
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_window_rightpos: window right position
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_window_leftpos: window left position
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_window_bottompos: window bottom position 
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_window_toppos: window top position
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_ppf: LAYER_PPF_ARGB8888,LAYER_PPF_RGB888,LAYER_PPF_RGB565,
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                                  LAYER_PPF_ARG1555,LAYER_PPF_ARGB4444,LAYER_PPF_L8,
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                                  LAYER_PPF_AL44,LAYER_PPF_AL88
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_sa: specified alpha
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_default_alpha: the default color alpha
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_default_red: the default color red
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_default_green: the default color green
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_default_blue: the default color blue
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_acf1: LAYER_ACF1_SA,LAYER_ACF1_PASA
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_acf2: LAYER_ACF2_SA,LAYER_ACF2_PASA
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_frame_bufaddr: frame buffer base address
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_frame_buf_stride_offset: frame buffer stride offset
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_frame_line_length: frame line length
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_frame_total_line_number: frame total line number
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_layer_init(uint32_t layerx,tli_layer_parameter_struct *layer_struct)
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 1080              		.loc 1 325 1
+ 1081              		.cfi_startproc
+ 1082              		@ args = 0, pretend = 0, frame = 8
+ 1083              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1084              		@ link register save eliminated.
+ 1085 0000 80B4     		push	{r7}
+ 1086              		.cfi_def_cfa_offset 4
+ 1087              		.cfi_offset 7, -4
+ 1088 0002 83B0     		sub	sp, sp, #12
+ 1089              		.cfi_def_cfa_offset 16
+ 1090 0004 00AF     		add	r7, sp, #0
+ 1091              		.cfi_def_cfa_register 7
+ 1092 0006 7860     		str	r0, [r7, #4]
+ 1093 0008 3960     		str	r1, [r7]
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer window horizontal position */
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxHPOS(layerx) &= ~(TLI_LxHPOS_WLP|(TLI_LxHPOS_WRP));
+ 1094              		.loc 1 327 24
+ 1095 000a 7B68     		ldr	r3, [r7, #4]
+ 1096 000c 8833     		adds	r3, r3, #136
+ 1097 000e 1B68     		ldr	r3, [r3]
+ 1098 0010 7A68     		ldr	r2, [r7, #4]
+ 1099 0012 8832     		adds	r2, r2, #136
+ 1100 0014 03F0F023 		and	r3, r3, #-268374016
+ 1101 0018 1360     		str	r3, [r2]
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxHPOS(layerx) = (layer_struct->layer_window_leftpos | (layer_struct->layer_window_rightpos
+ 1102              		.loc 1 328 39
+ 1103 001a 3B68     		ldr	r3, [r7]
+ 1104 001c 5A68     		ldr	r2, [r3, #4]
+ 1105              		.loc 1 328 77
+ 1106 001e 3B68     		ldr	r3, [r7]
+ 1107 0020 1B68     		ldr	r3, [r3]
+ 1108              		.loc 1 328 100
+ 1109 0022 1B04     		lsls	r3, r3, #16
+ 1110              		.loc 1 328 5
+ 1111 0024 7968     		ldr	r1, [r7, #4]
+ 1112 0026 8831     		adds	r1, r1, #136
+ 1113              		.loc 1 328 62
+ 1114 0028 1343     		orrs	r3, r3, r2
+ 1115              		.loc 1 328 24
+ 1116 002a 0B60     		str	r3, [r1]
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer window vertical position */
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxVPOS(layerx) &= ~(TLI_LxVPOS_WTP|(TLI_LxVPOS_WBP));
+ 1117              		.loc 1 330 24
+ 1118 002c 7B68     		ldr	r3, [r7, #4]
+ 1119 002e 8C33     		adds	r3, r3, #140
+ 1120 0030 1B68     		ldr	r3, [r3]
+ 1121 0032 7A68     		ldr	r2, [r7, #4]
+ 1122 0034 8C32     		adds	r2, r2, #140
+ 1123 0036 03F0F023 		and	r3, r3, #-268374016
+ 1124 003a 1360     		str	r3, [r2]
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxVPOS(layerx) = (layer_struct->layer_window_toppos |(layer_struct->layer_window_bottompos<
+ 1125              		.loc 1 331 39
+ 1126 003c 3B68     		ldr	r3, [r7]
+ 1127 003e DA68     		ldr	r2, [r3, #12]
+ 1128              		.loc 1 331 75
+ 1129 0040 3B68     		ldr	r3, [r7]
+ 1130 0042 9B68     		ldr	r3, [r3, #8]
+ 1131              		.loc 1 331 99
+ 1132 0044 1B04     		lsls	r3, r3, #16
+ 1133              		.loc 1 331 5
+ 1134 0046 7968     		ldr	r1, [r7, #4]
+ 1135 0048 8C31     		adds	r1, r1, #140
+ 1136              		.loc 1 331 61
+ 1137 004a 1343     		orrs	r3, r3, r2
+ 1138              		.loc 1 331 24
+ 1139 004c 0B60     		str	r3, [r1]
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer packeted pixel format */
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxPPF(layerx) &= ~(TLI_LxPPF_PPF);
+ 1140              		.loc 1 333 23
+ 1141 004e 7B68     		ldr	r3, [r7, #4]
+ 1142 0050 9433     		adds	r3, r3, #148
+ 1143 0052 1B68     		ldr	r3, [r3]
+ 1144 0054 7A68     		ldr	r2, [r7, #4]
+ 1145 0056 9432     		adds	r2, r2, #148
+ 1146 0058 23F00703 		bic	r3, r3, #7
+ 1147 005c 1360     		str	r3, [r2]
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxPPF(layerx) = layer_struct->layer_ppf;
+ 1148              		.loc 1 334 5
+ 1149 005e 7B68     		ldr	r3, [r7, #4]
+ 1150 0060 9433     		adds	r3, r3, #148
+ 1151 0062 1A46     		mov	r2, r3
+ 1152              		.loc 1 334 37
+ 1153 0064 3B68     		ldr	r3, [r7]
+ 1154 0066 1B69     		ldr	r3, [r3, #16]
+ 1155              		.loc 1 334 23
+ 1156 0068 1360     		str	r3, [r2]
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer specified alpha */
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxSA(layerx) &= ~(TLI_LxSA_SA);
+ 1157              		.loc 1 336 22
+ 1158 006a 7B68     		ldr	r3, [r7, #4]
+ 1159 006c 9833     		adds	r3, r3, #152
+ 1160 006e 1B68     		ldr	r3, [r3]
+ 1161 0070 7A68     		ldr	r2, [r7, #4]
+ 1162 0072 9832     		adds	r2, r2, #152
+ 1163 0074 23F0FF03 		bic	r3, r3, #255
+ 1164 0078 1360     		str	r3, [r2]
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxSA(layerx) = layer_struct->layer_sa;
+ 1165              		.loc 1 337 5
+ 1166 007a 7B68     		ldr	r3, [r7, #4]
+ 1167 007c 9833     		adds	r3, r3, #152
+ 1168 007e 1A46     		mov	r2, r3
+ 1169              		.loc 1 337 36
+ 1170 0080 3B68     		ldr	r3, [r7]
+ 1171 0082 5B69     		ldr	r3, [r3, #20]
+ 1172              		.loc 1 337 22
+ 1173 0084 1360     		str	r3, [r2]
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer default color */
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxDC(layerx) &= ~(TLI_LxDC_DCB|(TLI_LxDC_DCG)|(TLI_LxDC_DCR)|(TLI_LxDC_DCA));
+ 1174              		.loc 1 339 22
+ 1175 0086 7B68     		ldr	r3, [r7, #4]
+ 1176 0088 9C33     		adds	r3, r3, #156
+ 1177 008a 1B68     		ldr	r3, [r3]
+ 1178 008c 7B68     		ldr	r3, [r7, #4]
+ 1179 008e 9C33     		adds	r3, r3, #156
+ 1180 0090 1A46     		mov	r2, r3
+ 1181 0092 0023     		movs	r3, #0
+ 1182 0094 1360     		str	r3, [r2]
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxDC(layerx) = (layer_struct->layer_default_blue |(layer_struct->layer_default_green<<8U)
+ 1183              		.loc 1 340 37
+ 1184 0096 3B68     		ldr	r3, [r7]
+ 1185 0098 5A6A     		ldr	r2, [r3, #36]
+ 1186              		.loc 1 340 72
+ 1187 009a 3B68     		ldr	r3, [r7]
+ 1188 009c 1B6A     		ldr	r3, [r3, #32]
+ 1189              		.loc 1 340 93
+ 1190 009e 1B02     		lsls	r3, r3, #8
+ 1191              		.loc 1 340 58
+ 1192 00a0 1A43     		orrs	r2, r2, r3
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                                                                |(layer_struct->layer_default_red<<1
+ 1193              		.loc 1 341 78
+ 1194 00a2 3B68     		ldr	r3, [r7]
+ 1195 00a4 DB69     		ldr	r3, [r3, #28]
+ 1196              		.loc 1 341 97
+ 1197 00a6 1B04     		lsls	r3, r3, #16
+ 1198              		.loc 1 341 64
+ 1199 00a8 1A43     		orrs	r2, r2, r3
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                                                                |(layer_struct->layer_default_alpha<
+ 1200              		.loc 1 342 78
+ 1201 00aa 3B68     		ldr	r3, [r7]
+ 1202 00ac 9B69     		ldr	r3, [r3, #24]
+ 1203              		.loc 1 342 99
+ 1204 00ae 1B06     		lsls	r3, r3, #24
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxDC(layerx) = (layer_struct->layer_default_blue |(layer_struct->layer_default_green<<8U)
+ 1205              		.loc 1 340 5
+ 1206 00b0 7968     		ldr	r1, [r7, #4]
+ 1207 00b2 9C31     		adds	r1, r1, #156
+ 1208              		.loc 1 342 64
+ 1209 00b4 1343     		orrs	r3, r3, r2
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxDC(layerx) = (layer_struct->layer_default_blue |(layer_struct->layer_default_green<<8U)
+ 1210              		.loc 1 340 22
+ 1211 00b6 0B60     		str	r3, [r1]
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer alpha calculation factors */
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxBLEND(layerx) &= ~(TLI_LxBLEND_ACF2|(TLI_LxBLEND_ACF1));
+ 1212              		.loc 1 345 25
+ 1213 00b8 7B68     		ldr	r3, [r7, #4]
+ 1214 00ba A033     		adds	r3, r3, #160
+ 1215 00bc 1B68     		ldr	r3, [r3]
+ 1216 00be 7A68     		ldr	r2, [r7, #4]
+ 1217 00c0 A032     		adds	r2, r2, #160
+ 1218 00c2 23F4E063 		bic	r3, r3, #1792
+ 1219 00c6 23F00703 		bic	r3, r3, #7
+ 1220 00ca 1360     		str	r3, [r2]
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxBLEND(layerx) = ((layer_struct->layer_acf2)|(layer_struct->layer_acf1));
+ 1221              		.loc 1 346 41
+ 1222 00cc 3B68     		ldr	r3, [r7]
+ 1223 00ce DA6A     		ldr	r2, [r3, #44]
+ 1224              		.loc 1 346 68
+ 1225 00d0 3B68     		ldr	r3, [r7]
+ 1226 00d2 9B6A     		ldr	r3, [r3, #40]
+ 1227              		.loc 1 346 5
+ 1228 00d4 7968     		ldr	r1, [r7, #4]
+ 1229 00d6 A031     		adds	r1, r1, #160
+ 1230              		.loc 1 346 54
+ 1231 00d8 1343     		orrs	r3, r3, r2
+ 1232              		.loc 1 346 25
+ 1233 00da 0B60     		str	r3, [r1]
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer frame buffer base address */
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxFBADDR(layerx) &= ~(TLI_LxFBADDR_FBADD);
+ 1234              		.loc 1 348 26
+ 1235 00dc 7B68     		ldr	r3, [r7, #4]
+ 1236 00de AC33     		adds	r3, r3, #172
+ 1237 00e0 1B68     		ldr	r3, [r3]
+ 1238 00e2 7B68     		ldr	r3, [r7, #4]
+ 1239 00e4 AC33     		adds	r3, r3, #172
+ 1240 00e6 1A46     		mov	r2, r3
+ 1241 00e8 0023     		movs	r3, #0
+ 1242 00ea 1360     		str	r3, [r2]
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxFBADDR(layerx) = (layer_struct->layer_frame_bufaddr);
+ 1243              		.loc 1 349 5
+ 1244 00ec 7B68     		ldr	r3, [r7, #4]
+ 1245 00ee AC33     		adds	r3, r3, #172
+ 1246 00f0 1A46     		mov	r2, r3
+ 1247              		.loc 1 349 41
+ 1248 00f2 3B68     		ldr	r3, [r7]
+ 1249 00f4 1B6B     		ldr	r3, [r3, #48]
+ 1250              		.loc 1 349 26
+ 1251 00f6 1360     		str	r3, [r2]
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer frame line length */
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxFLLEN(layerx) &= ~(TLI_LxFLLEN_FLL|(TLI_LxFLLEN_STDOFF));
+ 1252              		.loc 1 351 25
+ 1253 00f8 7B68     		ldr	r3, [r7, #4]
+ 1254 00fa B033     		adds	r3, r3, #176
+ 1255 00fc 1B68     		ldr	r3, [r3]
+ 1256 00fe 7A68     		ldr	r2, [r7, #4]
+ 1257 0100 B032     		adds	r2, r2, #176
+ 1258 0102 03F0E023 		and	r3, r3, #-536813568
+ 1259 0106 1360     		str	r3, [r2]
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxFLLEN(layerx) = (layer_struct->layer_frame_line_length|(layer_struct->layer_frame_buf_str
+ 1260              		.loc 1 352 40
+ 1261 0108 3B68     		ldr	r3, [r7]
+ 1262 010a 9A6B     		ldr	r2, [r3, #56]
+ 1263              		.loc 1 352 79
+ 1264 010c 3B68     		ldr	r3, [r7]
+ 1265 010e 5B6B     		ldr	r3, [r3, #52]
+ 1266              		.loc 1 352 110
+ 1267 0110 1B04     		lsls	r3, r3, #16
+ 1268              		.loc 1 352 5
+ 1269 0112 7968     		ldr	r1, [r7, #4]
+ 1270 0114 B031     		adds	r1, r1, #176
+ 1271              		.loc 1 352 65
+ 1272 0116 1343     		orrs	r3, r3, r2
+ 1273              		.loc 1 352 25
+ 1274 0118 0B60     		str	r3, [r1]
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer frame buffer base address */
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxFBADDR(layerx) &= ~(TLI_LxFBADDR_FBADD);
+ 1275              		.loc 1 354 26
+ 1276 011a 7B68     		ldr	r3, [r7, #4]
+ 1277 011c AC33     		adds	r3, r3, #172
+ 1278 011e 1B68     		ldr	r3, [r3]
+ 1279 0120 7B68     		ldr	r3, [r7, #4]
+ 1280 0122 AC33     		adds	r3, r3, #172
+ 1281 0124 1A46     		mov	r2, r3
+ 1282 0126 0023     		movs	r3, #0
+ 1283 0128 1360     		str	r3, [r2]
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxFBADDR(layerx) = (layer_struct->layer_frame_bufaddr);
+ 1284              		.loc 1 355 5
+ 1285 012a 7B68     		ldr	r3, [r7, #4]
+ 1286 012c AC33     		adds	r3, r3, #172
+ 1287 012e 1A46     		mov	r2, r3
+ 1288              		.loc 1 355 41
+ 1289 0130 3B68     		ldr	r3, [r7]
+ 1290 0132 1B6B     		ldr	r3, [r3, #48]
+ 1291              		.loc 1 355 26
+ 1292 0134 1360     		str	r3, [r2]
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure layer frame total line number */
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxFTLN(layerx) &= ~(TLI_LxFTLN_FTLN); 
+ 1293              		.loc 1 357 24
+ 1294 0136 7B68     		ldr	r3, [r7, #4]
+ 1295 0138 B433     		adds	r3, r3, #180
+ 1296 013a 1B68     		ldr	r3, [r3]
+ 1297 013c 7A68     		ldr	r2, [r7, #4]
+ 1298 013e B432     		adds	r2, r2, #180
+ 1299 0140 23F4FF63 		bic	r3, r3, #2040
+ 1300 0144 23F00703 		bic	r3, r3, #7
+ 1301 0148 1360     		str	r3, [r2]
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxFTLN(layerx) = (layer_struct->layer_frame_total_line_number);
+ 1302              		.loc 1 358 5
+ 1303 014a 7B68     		ldr	r3, [r7, #4]
+ 1304 014c B433     		adds	r3, r3, #180
+ 1305 014e 1A46     		mov	r2, r3
+ 1306              		.loc 1 358 39
+ 1307 0150 3B68     		ldr	r3, [r7]
+ 1308 0152 DB6B     		ldr	r3, [r3, #60]
+ 1309              		.loc 1 358 24
+ 1310 0154 1360     		str	r3, [r2]
+ 359:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 1311              		.loc 1 360 1
+ 1312 0156 00BF     		nop
+ 1313 0158 0C37     		adds	r7, r7, #12
+ 1314              		.cfi_def_cfa_offset 4
+ 1315 015a BD46     		mov	sp, r7
+ 1316              		.cfi_def_cfa_register 13
+ 1317              		@ sp needed
+ 1318 015c 80BC     		pop	{r7}
+ 1319              		.cfi_restore 7
+ 1320              		.cfi_def_cfa_offset 0
+ 1321 015e 7047     		bx	lr
+ 1322              		.cfi_endproc
+ 1323              	.LFE142:
+ 1325              		.section	.text.tli_layer_window_offset_modify,"ax",%progbits
+ 1326              		.align	1
+ 1327              		.global	tli_layer_window_offset_modify
+ 1328              		.syntax unified
+ 1329              		.thumb
+ 1330              		.thumb_func
+ 1331              		.fpu softvfp
+ 1333              	tli_layer_window_offset_modify:
+ 1334              	.LFB143:
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 363:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      reconfigure window position 
+ 364:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1).
+ 365:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  offset_x: new horizontal offset .
+ 366:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  offset_y: new vertical offset.
+ 367:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 368:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 369:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 370:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_layer_window_offset_modify(uint32_t layerx,uint32_t offset_x,uint32_t offset_y)
+ 371:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 1335              		.loc 1 371 1
+ 1336              		.cfi_startproc
+ 1337              		@ args = 0, pretend = 0, frame = 40
+ 1338              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1339              		@ link register save eliminated.
+ 1340 0000 80B4     		push	{r7}
+ 1341              		.cfi_def_cfa_offset 4
+ 1342              		.cfi_offset 7, -4
+ 1343 0002 8BB0     		sub	sp, sp, #44
+ 1344              		.cfi_def_cfa_offset 48
+ 1345 0004 00AF     		add	r7, sp, #0
+ 1346              		.cfi_def_cfa_register 7
+ 1347 0006 F860     		str	r0, [r7, #12]
+ 1348 0008 B960     		str	r1, [r7, #8]
+ 1349 000a 7A60     		str	r2, [r7, #4]
+ 372:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* configure window start position */
+ 373:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     uint32_t layer_ppf,line_length,line_num,hstart,vstart;
+ 374:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxHPOS(layerx) &= ~(TLI_LxHPOS_WLP|(TLI_LxHPOS_WRP));
+ 1350              		.loc 1 374 24
+ 1351 000c FB68     		ldr	r3, [r7, #12]
+ 1352 000e 8833     		adds	r3, r3, #136
+ 1353 0010 1B68     		ldr	r3, [r3]
+ 1354 0012 FA68     		ldr	r2, [r7, #12]
+ 1355 0014 8832     		adds	r2, r2, #136
+ 1356 0016 03F0F023 		and	r3, r3, #-268374016
+ 1357 001a 1360     		str	r3, [r2]
+ 375:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxVPOS(layerx) &= ~(TLI_LxVPOS_WTP|(TLI_LxVPOS_WBP));
+ 1358              		.loc 1 375 24
+ 1359 001c FB68     		ldr	r3, [r7, #12]
+ 1360 001e 8C33     		adds	r3, r3, #140
+ 1361 0020 1B68     		ldr	r3, [r3]
+ 1362 0022 FA68     		ldr	r2, [r7, #12]
+ 1363 0024 8C32     		adds	r2, r2, #140
+ 1364 0026 03F0F023 		and	r3, r3, #-268374016
+ 1365 002a 1360     		str	r3, [r2]
+ 376:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     hstart = offset_x+(((TLI_BPSZ & TLI_BPSZ_HBPSZ)>>16U)+1U);
+ 1366              		.loc 1 376 26
+ 1367 002c 3A4B     		ldr	r3, .L65
+ 1368 002e 1B68     		ldr	r3, [r3]
+ 1369              		.loc 1 376 52
+ 1370 0030 1B0C     		lsrs	r3, r3, #16
+ 1371 0032 C3F30B02 		ubfx	r2, r3, #0, #12
+ 1372              		.loc 1 376 22
+ 1373 0036 BB68     		ldr	r3, [r7, #8]
+ 1374 0038 1344     		add	r3, r3, r2
+ 1375              		.loc 1 376 12
+ 1376 003a 0133     		adds	r3, r3, #1
+ 1377 003c 3B62     		str	r3, [r7, #32]
+ 377:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     vstart = offset_y+((TLI_BPSZ & TLI_BPSZ_VBPSZ)+1U);
+ 1378              		.loc 1 377 25
+ 1379 003e 364B     		ldr	r3, .L65
+ 1380 0040 1B68     		ldr	r3, [r3]
+ 1381              		.loc 1 377 34
+ 1382 0042 C3F30B02 		ubfx	r2, r3, #0, #12
+ 1383              		.loc 1 377 22
+ 1384 0046 7B68     		ldr	r3, [r7, #4]
+ 1385 0048 1344     		add	r3, r3, r2
+ 1386              		.loc 1 377 12
+ 1387 004a 0133     		adds	r3, r3, #1
+ 1388 004c FB61     		str	r3, [r7, #28]
+ 378:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     line_num = (TLI_LxFTLN(layerx) & TLI_LxFTLN_FTLN);
+ 1389              		.loc 1 378 17
+ 1390 004e FB68     		ldr	r3, [r7, #12]
+ 1391 0050 B433     		adds	r3, r3, #180
+ 1392 0052 1B68     		ldr	r3, [r3]
+ 1393              		.loc 1 378 14
+ 1394 0054 C3F30A03 		ubfx	r3, r3, #0, #11
+ 1395 0058 BB61     		str	r3, [r7, #24]
+ 379:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     layer_ppf = (TLI_LxPPF(layerx) & TLI_LxPPF_PPF);
+ 1396              		.loc 1 379 18
+ 1397 005a FB68     		ldr	r3, [r7, #12]
+ 1398 005c 9433     		adds	r3, r3, #148
+ 1399 005e 1B68     		ldr	r3, [r3]
+ 1400              		.loc 1 379 15
+ 1401 0060 03F00703 		and	r3, r3, #7
+ 1402 0064 7B61     		str	r3, [r7, #20]
+ 1403 0066 7B69     		ldr	r3, [r7, #20]
+ 1404 0068 072B     		cmp	r3, #7
+ 1405 006a 39D8     		bhi	.L64
+ 1406 006c 01A2     		adr	r2, .L59
+ 1407 006e 52F823F0 		ldr	pc, [r2, r3, lsl #2]
+ 1408 0072 00BF     		.p2align 2
+ 1409              	.L59:
+ 1410 0074 95000000 		.word	.L62+1
+ 1411 0078 A7000000 		.word	.L61+1
+ 1412 007c BF000000 		.word	.L58+1
+ 1413 0080 BF000000 		.word	.L58+1
+ 1414 0084 BF000000 		.word	.L58+1
+ 1415 0088 D1000000 		.word	.L60+1
+ 1416 008c D1000000 		.word	.L60+1
+ 1417 0090 BF000000 		.word	.L58+1
+ 1418              		.p2align 1
+ 1419              	.L62:
+ 380:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* the bytes of a line equal TLI_LxFLLEN_FLL bits value minus 3 */
+ 381:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     switch(layer_ppf){
+ 382:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     case LAYER_PPF_ARGB8888:
+ 383:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         /* each pixel includes 4bytes,when pixel format is ARGB8888 */
+ 384:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         line_length = (((TLI_LxFLLEN(layerx) & TLI_LxFLLEN_FLL)-3U)/4U);
+ 1420              		.loc 1 384 26
+ 1421 0094 FB68     		ldr	r3, [r7, #12]
+ 1422 0096 B033     		adds	r3, r3, #176
+ 1423 0098 1B68     		ldr	r3, [r3]
+ 1424              		.loc 1 384 46
+ 1425 009a C3F30C03 		ubfx	r3, r3, #0, #13
+ 1426              		.loc 1 384 64
+ 1427 009e 033B     		subs	r3, r3, #3
+ 1428              		.loc 1 384 21
+ 1429 00a0 9B08     		lsrs	r3, r3, #2
+ 1430 00a2 7B62     		str	r3, [r7, #36]
+ 385:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         break;
+ 1431              		.loc 1 385 9
+ 1432 00a4 1DE0     		b	.L63
+ 1433              	.L61:
+ 386:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     case LAYER_PPF_RGB888:
+ 387:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         /* each pixel includes 3bytes,when pixel format is RGB888 */
+ 388:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         line_length = (((TLI_LxFLLEN(layerx) & TLI_LxFLLEN_FLL)-3U)/3U);
+ 1434              		.loc 1 388 26
+ 1435 00a6 FB68     		ldr	r3, [r7, #12]
+ 1436 00a8 B033     		adds	r3, r3, #176
+ 1437 00aa 1B68     		ldr	r3, [r3]
+ 1438              		.loc 1 388 46
+ 1439 00ac C3F30C03 		ubfx	r3, r3, #0, #13
+ 1440              		.loc 1 388 64
+ 1441 00b0 033B     		subs	r3, r3, #3
+ 1442              		.loc 1 388 21
+ 1443 00b2 1A4A     		ldr	r2, .L65+4
+ 1444 00b4 A2FB0323 		umull	r2, r3, r2, r3
+ 1445 00b8 5B08     		lsrs	r3, r3, #1
+ 1446 00ba 7B62     		str	r3, [r7, #36]
+ 389:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         break;
+ 1447              		.loc 1 389 9
+ 1448 00bc 11E0     		b	.L63
+ 1449              	.L58:
+ 390:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     case LAYER_PPF_RGB565:
+ 391:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     case LAYER_PPF_ARGB1555:
+ 392:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     case LAYER_PPF_ARGB4444:
+ 393:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     case LAYER_PPF_AL88:
+ 394:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         /* each pixel includes 2bytes,when pixel format is RGB565,ARG1555,ARGB4444 or AL88 */
+ 395:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         line_length = (((TLI_LxFLLEN(layerx) & TLI_LxFLLEN_FLL)-3U)/2U);
+ 1450              		.loc 1 395 26
+ 1451 00be FB68     		ldr	r3, [r7, #12]
+ 1452 00c0 B033     		adds	r3, r3, #176
+ 1453 00c2 1B68     		ldr	r3, [r3]
+ 1454              		.loc 1 395 46
+ 1455 00c4 C3F30C03 		ubfx	r3, r3, #0, #13
+ 1456              		.loc 1 395 64
+ 1457 00c8 033B     		subs	r3, r3, #3
+ 1458              		.loc 1 395 21
+ 1459 00ca 5B08     		lsrs	r3, r3, #1
+ 1460 00cc 7B62     		str	r3, [r7, #36]
+ 396:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         break;
+ 1461              		.loc 1 396 9
+ 1462 00ce 08E0     		b	.L63
+ 1463              	.L60:
+ 397:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     case LAYER_PPF_L8:
+ 398:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     case LAYER_PPF_AL44:
+ 399:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         /* each pixel includes 1byte,when pixel format is L8 or AL44 */
+ 400:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         line_length = (((TLI_LxFLLEN(layerx) & TLI_LxFLLEN_FLL)-3U));
+ 1464              		.loc 1 400 26
+ 1465 00d0 FB68     		ldr	r3, [r7, #12]
+ 1466 00d2 B033     		adds	r3, r3, #176
+ 1467 00d4 1B68     		ldr	r3, [r3]
+ 1468              		.loc 1 400 46
+ 1469 00d6 C3F30C03 		ubfx	r3, r3, #0, #13
+ 1470              		.loc 1 400 21
+ 1471 00da 033B     		subs	r3, r3, #3
+ 1472 00dc 7B62     		str	r3, [r7, #36]
+ 401:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         break;
+ 1473              		.loc 1 401 9
+ 1474 00de 00E0     		b	.L63
+ 1475              	.L64:
+ 402:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     default:
+ 403:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****         break;
+ 1476              		.loc 1 403 9
+ 1477 00e0 00BF     		nop
+ 1478              	.L63:
+ 404:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     }
+ 405:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     /* reconfigure window position */
+ 406:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxHPOS(layerx) = (hstart|((hstart+line_length-1U)<<16U));
+ 1479              		.loc 1 406 42
+ 1480 00e2 3A6A     		ldr	r2, [r7, #32]
+ 1481 00e4 7B6A     		ldr	r3, [r7, #36]
+ 1482 00e6 1344     		add	r3, r3, r2
+ 1483              		.loc 1 406 54
+ 1484 00e8 013B     		subs	r3, r3, #1
+ 1485              		.loc 1 406 58
+ 1486 00ea 1A04     		lsls	r2, r3, #16
+ 1487              		.loc 1 406 5
+ 1488 00ec FB68     		ldr	r3, [r7, #12]
+ 1489 00ee 8833     		adds	r3, r3, #136
+ 1490 00f0 1946     		mov	r1, r3
+ 1491              		.loc 1 406 33
+ 1492 00f2 3B6A     		ldr	r3, [r7, #32]
+ 1493 00f4 1343     		orrs	r3, r3, r2
+ 1494              		.loc 1 406 24
+ 1495 00f6 0B60     		str	r3, [r1]
+ 407:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxVPOS(layerx) = (vstart|((vstart+line_num-1U)<<16U));
+ 1496              		.loc 1 407 42
+ 1497 00f8 FA69     		ldr	r2, [r7, #28]
+ 1498 00fa BB69     		ldr	r3, [r7, #24]
+ 1499 00fc 1344     		add	r3, r3, r2
+ 1500              		.loc 1 407 51
+ 1501 00fe 013B     		subs	r3, r3, #1
+ 1502              		.loc 1 407 55
+ 1503 0100 1A04     		lsls	r2, r3, #16
+ 1504              		.loc 1 407 5
+ 1505 0102 FB68     		ldr	r3, [r7, #12]
+ 1506 0104 8C33     		adds	r3, r3, #140
+ 1507 0106 1946     		mov	r1, r3
+ 1508              		.loc 1 407 33
+ 1509 0108 FB69     		ldr	r3, [r7, #28]
+ 1510 010a 1343     		orrs	r3, r3, r2
+ 1511              		.loc 1 407 24
+ 1512 010c 0B60     		str	r3, [r1]
+ 408:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     
+ 409:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     
+ 410:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 1513              		.loc 1 410 1
+ 1514 010e 00BF     		nop
+ 1515 0110 2C37     		adds	r7, r7, #44
+ 1516              		.cfi_def_cfa_offset 4
+ 1517 0112 BD46     		mov	sp, r7
+ 1518              		.cfi_def_cfa_register 13
+ 1519              		@ sp needed
+ 1520 0114 80BC     		pop	{r7}
+ 1521              		.cfi_restore 7
+ 1522              		.cfi_def_cfa_offset 0
+ 1523 0116 7047     		bx	lr
+ 1524              	.L66:
+ 1525              		.align	2
+ 1526              	.L65:
+ 1527 0118 0C680140 		.word	1073833996
+ 1528 011c ABAAAAAA 		.word	-1431655765
+ 1529              		.cfi_endproc
+ 1530              	.LFE143:
+ 1532              		.section	.text.tli_lut_init,"ax",%progbits
+ 1533              		.align	1
+ 1534              		.global	tli_lut_init
+ 1535              		.syntax unified
+ 1536              		.thumb
+ 1537              		.thumb_func
+ 1538              		.fpu softvfp
+ 1540              	tli_lut_init:
+ 1541              	.LFB144:
+ 411:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 412:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 413:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer lut initialize 
+ 414:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1)
+ 415:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  lut_struct: TLI layer LUT parameter struct
+ 416:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_table_addr: window right position
+ 417:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_lut_channel_red: window left position
+ 418:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_window_bottompos: window bottom position 
+ 419:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                   layer_window_toppos: window top position
+ 420:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 421:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 422:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 423:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_lut_init(uint32_t layerx,tli_layer_lut_parameter_struct *lut_struct)
+ 424:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 1542              		.loc 1 424 1
+ 1543              		.cfi_startproc
+ 1544              		@ args = 0, pretend = 0, frame = 8
+ 1545              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1546              		@ link register save eliminated.
+ 1547 0000 80B4     		push	{r7}
+ 1548              		.cfi_def_cfa_offset 4
+ 1549              		.cfi_offset 7, -4
+ 1550 0002 83B0     		sub	sp, sp, #12
+ 1551              		.cfi_def_cfa_offset 16
+ 1552 0004 00AF     		add	r7, sp, #0
+ 1553              		.cfi_def_cfa_register 7
+ 1554 0006 7860     		str	r0, [r7, #4]
+ 1555 0008 3960     		str	r1, [r7]
+ 425:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxLUT(layerx) &= ~(TLI_LxLUT_TB|TLI_LxLUT_TG|TLI_LxLUT_TR|TLI_LxLUT_TADD);
+ 1556              		.loc 1 425 23
+ 1557 000a 7B68     		ldr	r3, [r7, #4]
+ 1558 000c C433     		adds	r3, r3, #196
+ 1559 000e 1B68     		ldr	r3, [r3]
+ 1560 0010 7B68     		ldr	r3, [r7, #4]
+ 1561 0012 C433     		adds	r3, r3, #196
+ 1562 0014 1A46     		mov	r2, r3
+ 1563 0016 0023     		movs	r3, #0
+ 1564 0018 1360     		str	r3, [r2]
+ 426:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxLUT(layerx) = ((lut_struct->layer_lut_channel_blue)|(lut_struct->layer_lut_channel_green<
+ 1565              		.loc 1 426 37
+ 1566 001a 3B68     		ldr	r3, [r7]
+ 1567 001c DA68     		ldr	r2, [r3, #12]
+ 1568              		.loc 1 426 74
+ 1569 001e 3B68     		ldr	r3, [r7]
+ 1570 0020 9B68     		ldr	r3, [r3, #8]
+ 1571              		.loc 1 426 99
+ 1572 0022 1B02     		lsls	r3, r3, #8
+ 1573              		.loc 1 426 62
+ 1574 0024 1A43     		orrs	r2, r2, r3
+ 427:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                                                                    |(lut_struct->layer_lut_channel_
+ 1575              		.loc 1 427 80
+ 1576 0026 3B68     		ldr	r3, [r7]
+ 1577 0028 5B68     		ldr	r3, [r3, #4]
+ 1578              		.loc 1 427 103
+ 1579 002a 1904     		lsls	r1, r3, #16
+ 428:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                                                                    |(lut_struct->layer_table_addr<<
+ 1580              		.loc 1 428 80
+ 1581 002c 3B68     		ldr	r3, [r7]
+ 1582 002e 1B68     		ldr	r3, [r3]
+ 1583              		.loc 1 428 98
+ 1584 0030 1B06     		lsls	r3, r3, #24
+ 1585              		.loc 1 428 68
+ 1586 0032 0B43     		orrs	r3, r3, r1
+ 426:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxLUT(layerx) = ((lut_struct->layer_lut_channel_blue)|(lut_struct->layer_lut_channel_green<
+ 1587              		.loc 1 426 5
+ 1588 0034 7968     		ldr	r1, [r7, #4]
+ 1589 0036 C431     		adds	r1, r1, #196
+ 427:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****                                                                    |(lut_struct->layer_lut_channel_
+ 1590              		.loc 1 427 68
+ 1591 0038 1343     		orrs	r3, r3, r2
+ 426:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxLUT(layerx) = ((lut_struct->layer_lut_channel_blue)|(lut_struct->layer_lut_channel_green<
+ 1592              		.loc 1 426 23
+ 1593 003a 0B60     		str	r3, [r1]
+ 429:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 1594              		.loc 1 429 1
+ 1595 003c 00BF     		nop
+ 1596 003e 0C37     		adds	r7, r7, #12
+ 1597              		.cfi_def_cfa_offset 4
+ 1598 0040 BD46     		mov	sp, r7
+ 1599              		.cfi_def_cfa_register 13
+ 1600              		@ sp needed
+ 1601 0042 80BC     		pop	{r7}
+ 1602              		.cfi_restore 7
+ 1603              		.cfi_def_cfa_offset 0
+ 1604 0044 7047     		bx	lr
+ 1605              		.cfi_endproc
+ 1606              	.LFE144:
+ 1608              		.section	.text.tli_ckey_init,"ax",%progbits
+ 1609              		.align	1
+ 1610              		.global	tli_ckey_init
+ 1611              		.syntax unified
+ 1612              		.thumb
+ 1613              		.thumb_func
+ 1614              		.fpu softvfp
+ 1616              	tli_ckey_init:
+ 1617              	.LFB145:
+ 430:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** 
+ 431:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** /*!
+ 432:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \brief      TLI layer key initialize 
+ 433:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  layerx: LAYERx(x=0,1).
+ 434:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  redkey: color key red.
+ 435:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  greenkey: color key green 
+ 436:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[in]  bluekey: color key blue.
+ 437:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \param[out] none
+ 438:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     \retval     none
+ 439:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** */
+ 440:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** void tli_ckey_init(uint32_t layerx,uint32_t redkey,uint32_t greenkey,uint32_t bluekey)
+ 441:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** {
+ 1618              		.loc 1 441 1
+ 1619              		.cfi_startproc
+ 1620              		@ args = 0, pretend = 0, frame = 16
+ 1621              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1622              		@ link register save eliminated.
+ 1623 0000 80B4     		push	{r7}
+ 1624              		.cfi_def_cfa_offset 4
+ 1625              		.cfi_offset 7, -4
+ 1626 0002 85B0     		sub	sp, sp, #20
+ 1627              		.cfi_def_cfa_offset 24
+ 1628 0004 00AF     		add	r7, sp, #0
+ 1629              		.cfi_def_cfa_register 7
+ 1630 0006 F860     		str	r0, [r7, #12]
+ 1631 0008 B960     		str	r1, [r7, #8]
+ 1632 000a 7A60     		str	r2, [r7, #4]
+ 1633 000c 3B60     		str	r3, [r7]
+ 442:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c ****     TLI_LxCKEY(layerx) = ((bluekey)|(greenkey<<8U)|(redkey<<16U));
+ 1634              		.loc 1 442 46
+ 1635 000e 7B68     		ldr	r3, [r7, #4]
+ 1636 0010 1A02     		lsls	r2, r3, #8
+ 1637              		.loc 1 442 36
+ 1638 0012 3B68     		ldr	r3, [r7]
+ 1639 0014 1A43     		orrs	r2, r2, r3
+ 1640              		.loc 1 442 59
+ 1641 0016 BB68     		ldr	r3, [r7, #8]
+ 1642 0018 1B04     		lsls	r3, r3, #16
+ 1643              		.loc 1 442 5
+ 1644 001a F968     		ldr	r1, [r7, #12]
+ 1645 001c 9031     		adds	r1, r1, #144
+ 1646              		.loc 1 442 51
+ 1647 001e 1343     		orrs	r3, r3, r2
+ 1648              		.loc 1 442 24
+ 1649 0020 0B60     		str	r3, [r1]
+ 443:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_tli.c **** }
+ 1650              		.loc 1 443 1
+ 1651 0022 00BF     		nop
+ 1652 0024 1437     		adds	r7, r7, #20
+ 1653              		.cfi_def_cfa_offset 4
+ 1654 0026 BD46     		mov	sp, r7
+ 1655              		.cfi_def_cfa_register 13
+ 1656              		@ sp needed
+ 1657 0028 80BC     		pop	{r7}
+ 1658              		.cfi_restore 7
+ 1659              		.cfi_def_cfa_offset 0
+ 1660 002a 7047     		bx	lr
+ 1661              		.cfi_endproc
+ 1662              	.LFE145:
+ 1664              		.text
+ 1665              	.Letext0:
+ 1666              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1667              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1668              		.file 4 "../../CMSIS/DSP/Include/core_cm4.h"
+ 1669              		.file 5 "../../CMSIS/system_gd32f4xx.h"
+ 1670              		.file 6 "../../CMSIS/gd32f4xx.h"
+ 1671              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+ 1672              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_tli.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gd32f4xx_tli.c
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:16     .text.tli_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:24     .text.tli_deinit:00000000 tli_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:50     .text.tli_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:57     .text.tli_init:00000000 tli_init
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:224    .text.tli_init:000000d4 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:234    .text.tli_dither_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:241    .text.tli_dither_config:00000000 tli_dither_config
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:291    .text.tli_dither_config:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:296    .text.tli_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:303    .text.tli_enable:00000000 tli_enable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:333    .text.tli_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:338    .text.tli_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:345    .text.tli_disable:00000000 tli_disable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:375    .text.tli_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:380    .text.tli_reload_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:387    .text.tli_reload_config:00000000 tli_reload_config
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:437    .text.tli_reload_config:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:442    .text.tli_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:449    .text.tli_interrupt_enable:00000000 tli_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:485    .text.tli_interrupt_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:490    .text.tli_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:497    .text.tli_interrupt_disable:00000000 tli_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:536    .text.tli_interrupt_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:541    .text.tli_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:548    .text.tli_interrupt_flag_get:00000000 tli_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:596    .text.tli_interrupt_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:601    .text.tli_interrupt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:608    .text.tli_interrupt_flag_clear:00000000 tli_interrupt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:644    .text.tli_interrupt_flag_clear:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:649    .text.tli_line_mark_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:656    .text.tli_line_mark_set:00000000 tli_line_mark_set
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:697    .text.tli_line_mark_set:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:702    .text.tli_current_pos_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:709    .text.tli_current_pos_get:00000000 tli_current_pos_get
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:736    .text.tli_current_pos_get:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:741    .text.tli_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:748    .text.tli_flag_get:00000000 tli_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:796    .text.tli_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:801    .text.tli_layer_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:808    .text.tli_layer_enable:00000000 tli_layer_enable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:846    .text.tli_layer_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:853    .text.tli_layer_disable:00000000 tli_layer_disable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:891    .text.tli_color_key_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:898    .text.tli_color_key_enable:00000000 tli_color_key_enable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:936    .text.tli_color_key_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:943    .text.tli_color_key_disable:00000000 tli_color_key_disable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:981    .text.tli_lut_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:988    .text.tli_lut_enable:00000000 tli_lut_enable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1026   .text.tli_lut_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1033   .text.tli_lut_disable:00000000 tli_lut_disable
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1071   .text.tli_layer_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1078   .text.tli_layer_init:00000000 tli_layer_init
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1326   .text.tli_layer_window_offset_modify:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1333   .text.tli_layer_window_offset_modify:00000000 tli_layer_window_offset_modify
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1410   .text.tli_layer_window_offset_modify:00000074 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1418   .text.tli_layer_window_offset_modify:00000094 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1527   .text.tli_layer_window_offset_modify:00000118 $d
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1533   .text.tli_lut_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1540   .text.tli_lut_init:00000000 tli_lut_init
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1609   .text.tli_ckey_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccgZX5NZ.s:1616   .text.tli_ckey_init:00000000 tli_ckey_init
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.gd32f4xx_tli.h.18.e4b91602e92fb6b4032eaa7a3502d7c6
+
+UNDEFINED SYMBOLS
+rcu_periph_reset_enable
+rcu_periph_reset_disable

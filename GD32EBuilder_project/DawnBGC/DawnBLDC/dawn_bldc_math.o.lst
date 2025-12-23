@@ -1,0 +1,470 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"dawn_bldc_math.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.global	__aeabi_fadd
+  16              		.global	__aeabi_fmul
+  17              		.section	.text.BLDCClarke,"ax",%progbits
+  18              		.align	1
+  19              		.global	BLDCClarke
+  20              		.arch armv7e-m
+  21              		.syntax unified
+  22              		.thumb
+  23              		.thumb_func
+  24              		.fpu softvfp
+  26              	BLDCClarke:
+  27              	.LFB156:
+  28              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC/dawn_bldc_math.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** ParkStruct BLDCClarke(HallStruct HallStruct)
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** {
+  29              		.loc 1 26 1
+  30              		.cfi_startproc
+  31              		@ args = 0, pretend = 0, frame = 24
+  32              		@ frame_needed = 1, uses_anonymous_args = 0
+  33 0000 80B5     		push	{r7, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 86B0     		sub	sp, sp, #24
+  38              		.cfi_def_cfa_offset 32
+  39 0004 00AF     		add	r7, sp, #0
+  40              		.cfi_def_cfa_register 7
+  41 0006 F860     		str	r0, [r7, #12]
+  42 0008 3B1D     		adds	r3, r7, #4
+  43 000a 83E80600 		stm	r3, {r1, r2}
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     ParkStruct ABOut;
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     ABOut.A = HallStruct.X;
+  44              		.loc 1 29 25
+  45 000e 7B68     		ldr	r3, [r7, #4]	@ float
+  46              		.loc 1 29 13
+  47 0010 3B61     		str	r3, [r7, #16]	@ float
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     ABOut.B = ((HallStruct.X) + (HallStruct.Y) + (HallStruct.Y)) * 0.577f ;
+  48              		.loc 1 30 27
+  49 0012 7B68     		ldr	r3, [r7, #4]	@ float
+  50              		.loc 1 30 44
+  51 0014 BA68     		ldr	r2, [r7, #8]	@ float
+  52              		.loc 1 30 31
+  53 0016 1146     		mov	r1, r2
+  54 0018 1846     		mov	r0, r3
+  55 001a FFF7FEFF 		bl	__aeabi_fadd
+  56              	.LVL0:
+  57 001e 0346     		mov	r3, r0
+  58 0020 1A46     		mov	r2, r3
+  59              		.loc 1 30 61
+  60 0022 BB68     		ldr	r3, [r7, #8]	@ float
+  61              		.loc 1 30 48
+  62 0024 1946     		mov	r1, r3
+  63 0026 1046     		mov	r0, r2
+  64 0028 FFF7FEFF 		bl	__aeabi_fadd
+  65              	.LVL1:
+  66 002c 0346     		mov	r3, r0
+  67              		.loc 1 30 66
+  68 002e 0949     		ldr	r1, .L3
+  69 0030 1846     		mov	r0, r3
+  70 0032 FFF7FEFF 		bl	__aeabi_fmul
+  71              	.LVL2:
+  72 0036 0346     		mov	r3, r0
+  73              		.loc 1 30 13
+  74 0038 7B61     		str	r3, [r7, #20]	@ float
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     return ABOut;
+  75              		.loc 1 32 12
+  76 003a FB68     		ldr	r3, [r7, #12]
+  77 003c 1A46     		mov	r2, r3
+  78 003e 07F11003 		add	r3, r7, #16
+  79 0042 93E80300 		ldm	r3, {r0, r1}
+  80 0046 82E80300 		stm	r2, {r0, r1}
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** }
+  81              		.loc 1 33 1
+  82 004a F868     		ldr	r0, [r7, #12]
+  83 004c 1837     		adds	r7, r7, #24
+  84              		.cfi_def_cfa_offset 8
+  85 004e BD46     		mov	sp, r7
+  86              		.cfi_def_cfa_register 13
+  87              		@ sp needed
+  88 0050 80BD     		pop	{r7, pc}
+  89              	.L4:
+  90 0052 00BF     		.align	2
+  91              	.L3:
+  92 0054 46B6133F 		.word	1058256454
+  93              		.cfi_endproc
+  94              	.LFE156:
+  96              		.section	.text.BLDCPark,"ax",%progbits
+  97              		.align	1
+  98              		.global	BLDCPark
+  99              		.syntax unified
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.fpu softvfp
+ 104              	BLDCPark:
+ 105              	.LFB157:
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** QuadDirectStruct BLDCPark(ParkStruct ABIn, float Rad)
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** {
+ 106              		.loc 1 36 1
+ 107              		.cfi_startproc
+ 108              		@ args = 0, pretend = 0, frame = 24
+ 109              		@ frame_needed = 1, uses_anonymous_args = 0
+ 110 0000 B0B5     		push	{r4, r5, r7, lr}
+ 111              		.cfi_def_cfa_offset 16
+ 112              		.cfi_offset 4, -16
+ 113              		.cfi_offset 5, -12
+ 114              		.cfi_offset 7, -8
+ 115              		.cfi_offset 14, -4
+ 116 0002 86B0     		sub	sp, sp, #24
+ 117              		.cfi_def_cfa_offset 40
+ 118 0004 00AF     		add	r7, sp, #0
+ 119              		.cfi_def_cfa_register 7
+ 120 0006 F860     		str	r0, [r7, #12]
+ 121 0008 381D     		adds	r0, r7, #4
+ 122 000a 80E80600 		stm	r0, {r1, r2}
+ 123 000e 3B60     		str	r3, [r7]	@ float
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     QuadDirectStruct QuadDirectOut;
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     QuadDirectOut.Direct = (ABIn.A) * cosf(Rad) + (ABIn.B) * sinf(Rad);
+ 124              		.loc 1 39 33
+ 125 0010 7C68     		ldr	r4, [r7, #4]	@ float
+ 126              		.loc 1 39 39
+ 127 0012 3868     		ldr	r0, [r7]	@ float
+ 128 0014 FFF7FEFF 		bl	cosf
+ 129 0018 0346     		mov	r3, r0
+ 130              		.loc 1 39 37
+ 131 001a 1946     		mov	r1, r3
+ 132 001c 2046     		mov	r0, r4
+ 133 001e FFF7FEFF 		bl	__aeabi_fmul
+ 134              	.LVL3:
+ 135 0022 0346     		mov	r3, r0
+ 136 0024 1D46     		mov	r5, r3
+ 137              		.loc 1 39 56
+ 138 0026 BC68     		ldr	r4, [r7, #8]	@ float
+ 139              		.loc 1 39 62
+ 140 0028 3868     		ldr	r0, [r7]	@ float
+ 141 002a FFF7FEFF 		bl	sinf
+ 142 002e 0346     		mov	r3, r0
+ 143              		.loc 1 39 60
+ 144 0030 1946     		mov	r1, r3
+ 145 0032 2046     		mov	r0, r4
+ 146 0034 FFF7FEFF 		bl	__aeabi_fmul
+ 147              	.LVL4:
+ 148 0038 0346     		mov	r3, r0
+ 149              		.loc 1 39 49
+ 150 003a 1946     		mov	r1, r3
+ 151 003c 2846     		mov	r0, r5
+ 152 003e FFF7FEFF 		bl	__aeabi_fadd
+ 153              	.LVL5:
+ 154 0042 0346     		mov	r3, r0
+ 155              		.loc 1 39 26
+ 156 0044 3B61     		str	r3, [r7, #16]	@ float
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     QuadDirectOut.Quad = -(ABIn.A) * sinf(Rad) + (ABIn.B) * cosf(Rad);
+ 157              		.loc 1 40 32
+ 158 0046 7B68     		ldr	r3, [r7, #4]	@ float
+ 159              		.loc 1 40 26
+ 160 0048 83F00044 		eor	r4, r3, #-2147483648
+ 161              		.loc 1 40 38
+ 162 004c 3868     		ldr	r0, [r7]	@ float
+ 163 004e FFF7FEFF 		bl	sinf
+ 164 0052 0346     		mov	r3, r0
+ 165              		.loc 1 40 36
+ 166 0054 1946     		mov	r1, r3
+ 167 0056 2046     		mov	r0, r4
+ 168 0058 FFF7FEFF 		bl	__aeabi_fmul
+ 169              	.LVL6:
+ 170 005c 0346     		mov	r3, r0
+ 171 005e 1D46     		mov	r5, r3
+ 172              		.loc 1 40 55
+ 173 0060 BC68     		ldr	r4, [r7, #8]	@ float
+ 174              		.loc 1 40 61
+ 175 0062 3868     		ldr	r0, [r7]	@ float
+ 176 0064 FFF7FEFF 		bl	cosf
+ 177 0068 0346     		mov	r3, r0
+ 178              		.loc 1 40 59
+ 179 006a 1946     		mov	r1, r3
+ 180 006c 2046     		mov	r0, r4
+ 181 006e FFF7FEFF 		bl	__aeabi_fmul
+ 182              	.LVL7:
+ 183 0072 0346     		mov	r3, r0
+ 184              		.loc 1 40 48
+ 185 0074 1946     		mov	r1, r3
+ 186 0076 2846     		mov	r0, r5
+ 187 0078 FFF7FEFF 		bl	__aeabi_fadd
+ 188              	.LVL8:
+ 189 007c 0346     		mov	r3, r0
+ 190              		.loc 1 40 24
+ 191 007e 7B61     		str	r3, [r7, #20]	@ float
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     return QuadDirectOut;
+ 192              		.loc 1 42 12
+ 193 0080 FB68     		ldr	r3, [r7, #12]
+ 194 0082 1A46     		mov	r2, r3
+ 195 0084 07F11003 		add	r3, r7, #16
+ 196 0088 93E80300 		ldm	r3, {r0, r1}
+ 197 008c 82E80300 		stm	r2, {r0, r1}
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** }
+ 198              		.loc 1 43 1
+ 199 0090 F868     		ldr	r0, [r7, #12]
+ 200 0092 1837     		adds	r7, r7, #24
+ 201              		.cfi_def_cfa_offset 16
+ 202 0094 BD46     		mov	sp, r7
+ 203              		.cfi_def_cfa_register 13
+ 204              		@ sp needed
+ 205 0096 B0BD     		pop	{r4, r5, r7, pc}
+ 206              		.cfi_endproc
+ 207              	.LFE157:
+ 209              		.global	__aeabi_fsub
+ 210              		.section	.text.BLDCRevPark,"ax",%progbits
+ 211              		.align	1
+ 212              		.global	BLDCRevPark
+ 213              		.syntax unified
+ 214              		.thumb
+ 215              		.thumb_func
+ 216              		.fpu softvfp
+ 218              	BLDCRevPark:
+ 219              	.LFB158:
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** ParkStruct BLDCRevPark(QuadDirectStruct QuadDirect, float Rad)
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** {
+ 220              		.loc 1 46 1
+ 221              		.cfi_startproc
+ 222              		@ args = 0, pretend = 0, frame = 24
+ 223              		@ frame_needed = 1, uses_anonymous_args = 0
+ 224 0000 B0B5     		push	{r4, r5, r7, lr}
+ 225              		.cfi_def_cfa_offset 16
+ 226              		.cfi_offset 4, -16
+ 227              		.cfi_offset 5, -12
+ 228              		.cfi_offset 7, -8
+ 229              		.cfi_offset 14, -4
+ 230 0002 86B0     		sub	sp, sp, #24
+ 231              		.cfi_def_cfa_offset 40
+ 232 0004 00AF     		add	r7, sp, #0
+ 233              		.cfi_def_cfa_register 7
+ 234 0006 F860     		str	r0, [r7, #12]
+ 235 0008 381D     		adds	r0, r7, #4
+ 236 000a 80E80600 		stm	r0, {r1, r2}
+ 237 000e 3B60     		str	r3, [r7]	@ float
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     ParkStruct ABOut;
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     ABOut.A = (QuadDirect.Direct) * cosf(Rad) - (QuadDirect.Quad) * sinf(Rad);
+ 238              		.loc 1 49 26
+ 239 0010 7C68     		ldr	r4, [r7, #4]	@ float
+ 240              		.loc 1 49 37
+ 241 0012 3868     		ldr	r0, [r7]	@ float
+ 242 0014 FFF7FEFF 		bl	cosf
+ 243 0018 0346     		mov	r3, r0
+ 244              		.loc 1 49 35
+ 245 001a 1946     		mov	r1, r3
+ 246 001c 2046     		mov	r0, r4
+ 247 001e FFF7FEFF 		bl	__aeabi_fmul
+ 248              	.LVL9:
+ 249 0022 0346     		mov	r3, r0
+ 250 0024 1D46     		mov	r5, r3
+ 251              		.loc 1 49 60
+ 252 0026 BC68     		ldr	r4, [r7, #8]	@ float
+ 253              		.loc 1 49 69
+ 254 0028 3868     		ldr	r0, [r7]	@ float
+ 255 002a FFF7FEFF 		bl	sinf
+ 256 002e 0346     		mov	r3, r0
+ 257              		.loc 1 49 67
+ 258 0030 1946     		mov	r1, r3
+ 259 0032 2046     		mov	r0, r4
+ 260 0034 FFF7FEFF 		bl	__aeabi_fmul
+ 261              	.LVL10:
+ 262 0038 0346     		mov	r3, r0
+ 263              		.loc 1 49 47
+ 264 003a 1946     		mov	r1, r3
+ 265 003c 2846     		mov	r0, r5
+ 266 003e FFF7FEFF 		bl	__aeabi_fsub
+ 267              	.LVL11:
+ 268 0042 0346     		mov	r3, r0
+ 269              		.loc 1 49 13
+ 270 0044 3B61     		str	r3, [r7, #16]	@ float
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     ABOut.B = (QuadDirect.Direct) * sinf(Rad) + (QuadDirect.Quad) * cosf(Rad);
+ 271              		.loc 1 50 26
+ 272 0046 7C68     		ldr	r4, [r7, #4]	@ float
+ 273              		.loc 1 50 37
+ 274 0048 3868     		ldr	r0, [r7]	@ float
+ 275 004a FFF7FEFF 		bl	sinf
+ 276 004e 0346     		mov	r3, r0
+ 277              		.loc 1 50 35
+ 278 0050 1946     		mov	r1, r3
+ 279 0052 2046     		mov	r0, r4
+ 280 0054 FFF7FEFF 		bl	__aeabi_fmul
+ 281              	.LVL12:
+ 282 0058 0346     		mov	r3, r0
+ 283 005a 1D46     		mov	r5, r3
+ 284              		.loc 1 50 60
+ 285 005c BC68     		ldr	r4, [r7, #8]	@ float
+ 286              		.loc 1 50 69
+ 287 005e 3868     		ldr	r0, [r7]	@ float
+ 288 0060 FFF7FEFF 		bl	cosf
+ 289 0064 0346     		mov	r3, r0
+ 290              		.loc 1 50 67
+ 291 0066 1946     		mov	r1, r3
+ 292 0068 2046     		mov	r0, r4
+ 293 006a FFF7FEFF 		bl	__aeabi_fmul
+ 294              	.LVL13:
+ 295 006e 0346     		mov	r3, r0
+ 296              		.loc 1 50 47
+ 297 0070 1946     		mov	r1, r3
+ 298 0072 2846     		mov	r0, r5
+ 299 0074 FFF7FEFF 		bl	__aeabi_fadd
+ 300              	.LVL14:
+ 301 0078 0346     		mov	r3, r0
+ 302              		.loc 1 50 13
+ 303 007a 7B61     		str	r3, [r7, #20]	@ float
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** 
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c ****     return ABOut;
+ 304              		.loc 1 52 12
+ 305 007c FB68     		ldr	r3, [r7, #12]
+ 306 007e 1A46     		mov	r2, r3
+ 307 0080 07F11003 		add	r3, r7, #16
+ 308 0084 93E80300 		ldm	r3, {r0, r1}
+ 309 0088 82E80300 		stm	r2, {r0, r1}
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc_math.c **** }
+ 310              		.loc 1 53 1
+ 311 008c F868     		ldr	r0, [r7, #12]
+ 312 008e 1837     		adds	r7, r7, #24
+ 313              		.cfi_def_cfa_offset 16
+ 314 0090 BD46     		mov	sp, r7
+ 315              		.cfi_def_cfa_register 13
+ 316              		@ sp needed
+ 317 0092 B0BD     		pop	{r4, r5, r7, pc}
+ 318              		.cfi_endproc
+ 319              	.LFE158:
+ 321              		.text
+ 322              	.Letext0:
+ 323              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 324              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 325              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 326              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 327              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 328              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 329              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 330              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 331              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 332              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 333              		.file 12 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 334              		.file 13 "../../Dawn/DawnLib/dawn_lib.h"
+ 335              		.file 14 "../../Dawn/DawnBsp/timebase.h"
+ 336              		.file 15 "../../Dawn/DawnCom/unpack.h"
+ 337              		.file 16 "../../Dawn/DawnDevice/icm206xx.h"
+ 338              		.file 17 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 339              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 340              		.file 19 "../../Dawn/DawnMain/dawn_function.h"
+ 341              		.file 20 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 dawn_bldc_math.c
+C:\Users\leonardo\AppData\Local\Temp\cclnsawl.s:18     .text.BLDCClarke:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cclnsawl.s:26     .text.BLDCClarke:00000000 BLDCClarke
+C:\Users\leonardo\AppData\Local\Temp\cclnsawl.s:92     .text.BLDCClarke:00000054 $d
+C:\Users\leonardo\AppData\Local\Temp\cclnsawl.s:97     .text.BLDCPark:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cclnsawl.s:104    .text.BLDCPark:00000000 BLDCPark
+C:\Users\leonardo\AppData\Local\Temp\cclnsawl.s:211    .text.BLDCRevPark:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cclnsawl.s:218    .text.BLDCRevPark:00000000 BLDCRevPark
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+UNDEFINED SYMBOLS
+__aeabi_fadd
+__aeabi_fmul
+cosf
+sinf
+__aeabi_fsub

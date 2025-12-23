@@ -1,0 +1,952 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"dawn_main.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.SysLedInit,"ax",%progbits
+  16              		.align	1
+  17              		.global	SysLedInit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	SysLedInit:
+  25              	.LFB156:
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_main.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** void SysLedInit(void)
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** {
+  27              		.loc 1 27 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     rcu_periph_clock_enable(RCU_GPIOC);
+  37              		.loc 1 28 5
+  38 0004 40F60240 		movw	r0, #3074
+  39 0008 FFF7FEFF 		bl	rcu_periph_clock_enable
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     gpio_mode_set(GPIOC, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_12);
+  40              		.loc 1 29 5
+  41 000c 4FF48053 		mov	r3, #4096
+  42 0010 0022     		movs	r2, #0
+  43 0012 0121     		movs	r1, #1
+  44 0014 0848     		ldr	r0, .L2
+  45 0016 FFF7FEFF 		bl	gpio_mode_set
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_12);
+  46              		.loc 1 31 5
+  47 001a 4FF48053 		mov	r3, #4096
+  48 001e 0322     		movs	r2, #3
+  49 0020 0021     		movs	r1, #0
+  50 0022 0548     		ldr	r0, .L2
+  51 0024 FFF7FEFF 		bl	gpio_output_options_set
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     gpio_bit_set(GPIOC, GPIO_PIN_12);
+  52              		.loc 1 33 5
+  53 0028 4FF48051 		mov	r1, #4096
+  54 002c 0248     		ldr	r0, .L2
+  55 002e FFF7FEFF 		bl	gpio_bit_set
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** }
+  56              		.loc 1 34 1
+  57 0032 00BF     		nop
+  58 0034 80BD     		pop	{r7, pc}
+  59              	.L3:
+  60 0036 00BF     		.align	2
+  61              	.L2:
+  62 0038 00080240 		.word	1073874944
+  63              		.cfi_endproc
+  64              	.LFE156:
+  66              		.section	.text.SysLedCmd,"ax",%progbits
+  67              		.align	1
+  68              		.global	SysLedCmd
+  69              		.syntax unified
+  70              		.thumb
+  71              		.thumb_func
+  72              		.fpu softvfp
+  74              	SysLedCmd:
+  75              	.LFB157:
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** void SysLedCmd(ControlStatus cmd)
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** {
+  76              		.loc 1 37 1
+  77              		.cfi_startproc
+  78              		@ args = 0, pretend = 0, frame = 8
+  79              		@ frame_needed = 1, uses_anonymous_args = 0
+  80 0000 80B5     		push	{r7, lr}
+  81              		.cfi_def_cfa_offset 8
+  82              		.cfi_offset 7, -8
+  83              		.cfi_offset 14, -4
+  84 0002 82B0     		sub	sp, sp, #8
+  85              		.cfi_def_cfa_offset 16
+  86 0004 00AF     		add	r7, sp, #0
+  87              		.cfi_def_cfa_register 7
+  88 0006 0346     		mov	r3, r0
+  89 0008 FB71     		strb	r3, [r7, #7]
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     if (cmd == DISABLE)
+  90              		.loc 1 38 8
+  91 000a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  92 000c 002B     		cmp	r3, #0
+  93 000e 05D1     		bne	.L5
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     {
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****         gpio_bit_set(GPIOC, GPIO_PIN_12);
+  94              		.loc 1 40 9
+  95 0010 4FF48051 		mov	r1, #4096
+  96 0014 0648     		ldr	r0, .L8
+  97 0016 FFF7FEFF 		bl	gpio_bit_set
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     }
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     else
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     {
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****         gpio_bit_reset(GPIOC, GPIO_PIN_12);
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     }
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** }
+  98              		.loc 1 46 1
+  99 001a 04E0     		b	.L7
+ 100              	.L5:
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     }
+ 101              		.loc 1 44 9
+ 102 001c 4FF48051 		mov	r1, #4096
+ 103 0020 0348     		ldr	r0, .L8
+ 104 0022 FFF7FEFF 		bl	gpio_bit_reset
+ 105              	.L7:
+ 106              		.loc 1 46 1
+ 107 0026 00BF     		nop
+ 108 0028 0837     		adds	r7, r7, #8
+ 109              		.cfi_def_cfa_offset 8
+ 110 002a BD46     		mov	sp, r7
+ 111              		.cfi_def_cfa_register 13
+ 112              		@ sp needed
+ 113 002c 80BD     		pop	{r7, pc}
+ 114              	.L9:
+ 115 002e 00BF     		.align	2
+ 116              	.L8:
+ 117 0030 00080240 		.word	1073874944
+ 118              		.cfi_endproc
+ 119              	.LFE157:
+ 121              		.section	.text.main,"ax",%progbits
+ 122              		.align	1
+ 123              		.global	main
+ 124              		.syntax unified
+ 125              		.thumb
+ 126              		.thumb_func
+ 127              		.fpu softvfp
+ 129              	main:
+ 130              	.LFB158:
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** int main(void)
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** {
+ 131              		.loc 1 49 1
+ 132              		.cfi_startproc
+ 133              		@ args = 0, pretend = 0, frame = 16
+ 134              		@ frame_needed = 1, uses_anonymous_args = 0
+ 135 0000 80B5     		push	{r7, lr}
+ 136              		.cfi_def_cfa_offset 8
+ 137              		.cfi_offset 7, -8
+ 138              		.cfi_offset 14, -4
+ 139 0002 84B0     		sub	sp, sp, #16
+ 140              		.cfi_def_cfa_offset 24
+ 141 0004 00AF     		add	r7, sp, #0
+ 142              		.cfi_def_cfa_register 7
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     ControlStatus SysLedStatus = DISABLE;
+ 143              		.loc 1 51 19
+ 144 0006 0023     		movs	r3, #0
+ 145 0008 FB73     		strb	r3, [r7, #15]
+ 146 000a 0123     		movs	r3, #1
+ 147 000c 7B60     		str	r3, [r7, #4]
+ 148              	.LBB6:
+ 149              	.LBB7:
+ 150              		.file 2 "../../CMSIS/DSP/Include/core_cmFunc.h"
+   1:../../CMSIS/DSP/Include/core_cmFunc.h **** /**************************************************************************//**
+   2:../../CMSIS/DSP/Include/core_cmFunc.h ****  * @file     core_cmFunc.h
+   3:../../CMSIS/DSP/Include/core_cmFunc.h ****  * @brief    CMSIS Cortex-M Core Function Access Header File
+   4:../../CMSIS/DSP/Include/core_cmFunc.h ****  * @version  V4.10
+   5:../../CMSIS/DSP/Include/core_cmFunc.h ****  * @date     18. March 2015
+   6:../../CMSIS/DSP/Include/core_cmFunc.h ****  *
+   7:../../CMSIS/DSP/Include/core_cmFunc.h ****  * @note
+   8:../../CMSIS/DSP/Include/core_cmFunc.h ****  *
+   9:../../CMSIS/DSP/Include/core_cmFunc.h ****  ******************************************************************************/
+  10:../../CMSIS/DSP/Include/core_cmFunc.h **** /* Copyright (c) 2009 - 2015 ARM LIMITED
+  11:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  12:../../CMSIS/DSP/Include/core_cmFunc.h ****    All rights reserved.
+  13:../../CMSIS/DSP/Include/core_cmFunc.h ****    Redistribution and use in source and binary forms, with or without
+  14:../../CMSIS/DSP/Include/core_cmFunc.h ****    modification, are permitted provided that the following conditions are met:
+  15:../../CMSIS/DSP/Include/core_cmFunc.h ****    - Redistributions of source code must retain the above copyright
+  16:../../CMSIS/DSP/Include/core_cmFunc.h ****      notice, this list of conditions and the following disclaimer.
+  17:../../CMSIS/DSP/Include/core_cmFunc.h ****    - Redistributions in binary form must reproduce the above copyright
+  18:../../CMSIS/DSP/Include/core_cmFunc.h ****      notice, this list of conditions and the following disclaimer in the
+  19:../../CMSIS/DSP/Include/core_cmFunc.h ****      documentation and/or other materials provided with the distribution.
+  20:../../CMSIS/DSP/Include/core_cmFunc.h ****    - Neither the name of ARM nor the names of its contributors may be used
+  21:../../CMSIS/DSP/Include/core_cmFunc.h ****      to endorse or promote products derived from this software without
+  22:../../CMSIS/DSP/Include/core_cmFunc.h ****      specific prior written permission.
+  23:../../CMSIS/DSP/Include/core_cmFunc.h ****    *
+  24:../../CMSIS/DSP/Include/core_cmFunc.h ****    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  25:../../CMSIS/DSP/Include/core_cmFunc.h ****    AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  26:../../CMSIS/DSP/Include/core_cmFunc.h ****    IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  27:../../CMSIS/DSP/Include/core_cmFunc.h ****    ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDERS AND CONTRIBUTORS BE
+  28:../../CMSIS/DSP/Include/core_cmFunc.h ****    LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  29:../../CMSIS/DSP/Include/core_cmFunc.h ****    CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  30:../../CMSIS/DSP/Include/core_cmFunc.h ****    SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  31:../../CMSIS/DSP/Include/core_cmFunc.h ****    INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  32:../../CMSIS/DSP/Include/core_cmFunc.h ****    CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  33:../../CMSIS/DSP/Include/core_cmFunc.h ****    ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+  34:../../CMSIS/DSP/Include/core_cmFunc.h ****    POSSIBILITY OF SUCH DAMAGE.
+  35:../../CMSIS/DSP/Include/core_cmFunc.h ****    ---------------------------------------------------------------------------*/
+  36:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  37:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  38:../../CMSIS/DSP/Include/core_cmFunc.h **** #ifndef __CORE_CMFUNC_H
+  39:../../CMSIS/DSP/Include/core_cmFunc.h **** #define __CORE_CMFUNC_H
+  40:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  41:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  42:../../CMSIS/DSP/Include/core_cmFunc.h **** /* ###########################  Core Function Access  ########################### */
+  43:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \ingroup  CMSIS_Core_FunctionInterface
+  44:../../CMSIS/DSP/Include/core_cmFunc.h ****     \defgroup CMSIS_Core_RegAccFunctions CMSIS Core Register Access Functions
+  45:../../CMSIS/DSP/Include/core_cmFunc.h ****   @{
+  46:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+  47:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  48:../../CMSIS/DSP/Include/core_cmFunc.h **** #if   defined ( __CC_ARM ) /*------------------RealView Compiler -----------------*/
+  49:../../CMSIS/DSP/Include/core_cmFunc.h **** /* ARM armcc specific functions */
+  50:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  51:../../CMSIS/DSP/Include/core_cmFunc.h **** #if (__ARMCC_VERSION < 400677)
+  52:../../CMSIS/DSP/Include/core_cmFunc.h ****   #error "Please use ARM Compiler Toolchain V4.0.677 or later!"
+  53:../../CMSIS/DSP/Include/core_cmFunc.h **** #endif
+  54:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  55:../../CMSIS/DSP/Include/core_cmFunc.h **** /* intrinsic void __enable_irq();     */
+  56:../../CMSIS/DSP/Include/core_cmFunc.h **** /* intrinsic void __disable_irq();    */
+  57:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  58:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Control Register
+  59:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  60:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the content of the Control Register.
+  61:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  62:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               Control Register value
+  63:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+  64:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_CONTROL(void)
+  65:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+  66:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regControl         __ASM("control");
+  67:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regControl);
+  68:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+  69:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  70:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  71:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Control Register
+  72:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  73:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function writes the given value to the Control Register.
+  74:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  75:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    control  Control Register value to set
+  76:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+  77:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE void __set_CONTROL(uint32_t control)
+  78:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+  79:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regControl         __ASM("control");
+  80:../../CMSIS/DSP/Include/core_cmFunc.h ****   __regControl = control;
+  81:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+  82:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  83:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  84:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get IPSR Register
+  85:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  86:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the content of the IPSR Register.
+  87:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  88:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               IPSR Register value
+  89:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+  90:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_IPSR(void)
+  91:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+  92:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regIPSR          __ASM("ipsr");
+  93:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regIPSR);
+  94:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+  95:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  96:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  97:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get APSR Register
+  98:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+  99:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the content of the APSR Register.
+ 100:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 101:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               APSR Register value
+ 102:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 103:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_APSR(void)
+ 104:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 105:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regAPSR          __ASM("apsr");
+ 106:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regAPSR);
+ 107:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 108:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 109:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 110:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get xPSR Register
+ 111:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 112:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the content of the xPSR Register.
+ 113:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 114:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               xPSR Register value
+ 115:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 116:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_xPSR(void)
+ 117:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 118:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regXPSR          __ASM("xpsr");
+ 119:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regXPSR);
+ 120:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 121:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 122:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 123:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Process Stack Pointer
+ 124:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 125:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current value of the Process Stack Pointer (PSP).
+ 126:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 127:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               PSP Register value
+ 128:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 129:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_PSP(void)
+ 130:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 131:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regProcessStackPointer  __ASM("psp");
+ 132:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regProcessStackPointer);
+ 133:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 134:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 135:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 136:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Process Stack Pointer
+ 137:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 138:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Process Stack Pointer (PSP).
+ 139:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 140:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 141:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 142:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE void __set_PSP(uint32_t topOfProcStack)
+ 143:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 144:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regProcessStackPointer  __ASM("psp");
+ 145:../../CMSIS/DSP/Include/core_cmFunc.h ****   __regProcessStackPointer = topOfProcStack;
+ 146:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 147:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 148:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 149:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Main Stack Pointer
+ 150:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 151:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current value of the Main Stack Pointer (MSP).
+ 152:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 153:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               MSP Register value
+ 154:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 155:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_MSP(void)
+ 156:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 157:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regMainStackPointer     __ASM("msp");
+ 158:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regMainStackPointer);
+ 159:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 160:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 161:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 162:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Main Stack Pointer
+ 163:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 164:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Main Stack Pointer (MSP).
+ 165:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 166:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 167:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 168:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE void __set_MSP(uint32_t topOfMainStack)
+ 169:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 170:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regMainStackPointer     __ASM("msp");
+ 171:../../CMSIS/DSP/Include/core_cmFunc.h ****   __regMainStackPointer = topOfMainStack;
+ 172:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 173:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 174:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 175:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Priority Mask
+ 176:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 177:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current state of the priority mask bit from the Priority Mask Registe
+ 178:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 179:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               Priority Mask value
+ 180:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 181:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_PRIMASK(void)
+ 182:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 183:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regPriMask         __ASM("primask");
+ 184:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regPriMask);
+ 185:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 186:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 187:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 188:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Priority Mask
+ 189:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 190:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Priority Mask Register.
+ 191:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 192:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    priMask  Priority Mask
+ 193:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 194:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE void __set_PRIMASK(uint32_t priMask)
+ 195:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 196:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regPriMask         __ASM("primask");
+ 197:../../CMSIS/DSP/Include/core_cmFunc.h ****   __regPriMask = (priMask);
+ 198:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 199:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 200:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 201:../../CMSIS/DSP/Include/core_cmFunc.h **** #if       (__CORTEX_M >= 0x03) || (__CORTEX_SC >= 300)
+ 202:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 203:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Enable FIQ
+ 204:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 205:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function enables FIQ interrupts by clearing the F-bit in the CPSR.
+ 206:../../CMSIS/DSP/Include/core_cmFunc.h ****     Can only be executed in Privileged modes.
+ 207:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 208:../../CMSIS/DSP/Include/core_cmFunc.h **** #define __enable_fault_irq                __enable_fiq
+ 209:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 210:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 211:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Disable FIQ
+ 212:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 213:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function disables FIQ interrupts by setting the F-bit in the CPSR.
+ 214:../../CMSIS/DSP/Include/core_cmFunc.h ****     Can only be executed in Privileged modes.
+ 215:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 216:../../CMSIS/DSP/Include/core_cmFunc.h **** #define __disable_fault_irq               __disable_fiq
+ 217:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 218:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 219:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Base Priority
+ 220:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 221:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current value of the Base Priority register.
+ 222:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 223:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               Base Priority register value
+ 224:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 225:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t  __get_BASEPRI(void)
+ 226:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 227:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regBasePri         __ASM("basepri");
+ 228:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regBasePri);
+ 229:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 230:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 231:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 232:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Base Priority
+ 233:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 234:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Base Priority register.
+ 235:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 236:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    basePri  Base Priority value to set
+ 237:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 238:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE void __set_BASEPRI(uint32_t basePri)
+ 239:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 240:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regBasePri         __ASM("basepri");
+ 241:../../CMSIS/DSP/Include/core_cmFunc.h ****   __regBasePri = (basePri & 0xff);
+ 242:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 243:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 244:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 245:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Base Priority with condition
+ 246:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 247:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Base Priority register only if BASEPRI masking is 
+ 248:../../CMSIS/DSP/Include/core_cmFunc.h ****     or the new value increases the BASEPRI priority level.
+ 249:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 250:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    basePri  Base Priority value to set
+ 251:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 252:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE void __set_BASEPRI_MAX(uint32_t basePri)
+ 253:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 254:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regBasePriMax      __ASM("basepri_max");
+ 255:../../CMSIS/DSP/Include/core_cmFunc.h ****   __regBasePriMax = (basePri & 0xff);
+ 256:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 257:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 258:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 259:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Fault Mask
+ 260:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 261:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current value of the Fault Mask register.
+ 262:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 263:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               Fault Mask register value
+ 264:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 265:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_FAULTMASK(void)
+ 266:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 267:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regFaultMask       __ASM("faultmask");
+ 268:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regFaultMask);
+ 269:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 270:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 271:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 272:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Fault Mask
+ 273:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 274:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Fault Mask register.
+ 275:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 276:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    faultMask  Fault Mask value to set
+ 277:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 278:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE void __set_FAULTMASK(uint32_t faultMask)
+ 279:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 280:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regFaultMask       __ASM("faultmask");
+ 281:../../CMSIS/DSP/Include/core_cmFunc.h ****   __regFaultMask = (faultMask & (uint32_t)1);
+ 282:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 283:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 284:../../CMSIS/DSP/Include/core_cmFunc.h **** #endif /* (__CORTEX_M >= 0x03) || (__CORTEX_SC >= 300) */
+ 285:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 286:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 287:../../CMSIS/DSP/Include/core_cmFunc.h **** #if       (__CORTEX_M == 0x04) || (__CORTEX_M == 0x07)
+ 288:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 289:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get FPSCR
+ 290:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 291:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current value of the Floating Point Status/Control register.
+ 292:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 293:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               Floating Point Status/Control register value
+ 294:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 295:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE uint32_t __get_FPSCR(void)
+ 296:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 297:../../CMSIS/DSP/Include/core_cmFunc.h **** #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
+ 298:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regfpscr         __ASM("fpscr");
+ 299:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(__regfpscr);
+ 300:../../CMSIS/DSP/Include/core_cmFunc.h **** #else
+ 301:../../CMSIS/DSP/Include/core_cmFunc.h ****    return(0);
+ 302:../../CMSIS/DSP/Include/core_cmFunc.h **** #endif
+ 303:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 304:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 305:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 306:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set FPSCR
+ 307:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 308:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Floating Point Status/Control register.
+ 309:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 310:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    fpscr  Floating Point Status/Control value to set
+ 311:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 312:../../CMSIS/DSP/Include/core_cmFunc.h **** __STATIC_INLINE void __set_FPSCR(uint32_t fpscr)
+ 313:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 314:../../CMSIS/DSP/Include/core_cmFunc.h **** #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
+ 315:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t __regfpscr         __ASM("fpscr");
+ 316:../../CMSIS/DSP/Include/core_cmFunc.h ****   __regfpscr = (fpscr);
+ 317:../../CMSIS/DSP/Include/core_cmFunc.h **** #endif
+ 318:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 319:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 320:../../CMSIS/DSP/Include/core_cmFunc.h **** #endif /* (__CORTEX_M == 0x04) || (__CORTEX_M == 0x07) */
+ 321:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 322:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 323:../../CMSIS/DSP/Include/core_cmFunc.h **** #elif defined ( __GNUC__ ) /*------------------ GNU Compiler ---------------------*/
+ 324:../../CMSIS/DSP/Include/core_cmFunc.h **** /* GNU gcc specific functions */
+ 325:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 326:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Enable IRQ Interrupts
+ 327:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 328:../../CMSIS/DSP/Include/core_cmFunc.h ****   This function enables IRQ interrupts by clearing the I-bit in the CPSR.
+ 329:../../CMSIS/DSP/Include/core_cmFunc.h ****   Can only be executed in Privileged modes.
+ 330:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 331:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __enable_irq(void)
+ 332:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 333:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("cpsie i" : : : "memory");
+ 334:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 335:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 336:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 337:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Disable IRQ Interrupts
+ 338:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 339:../../CMSIS/DSP/Include/core_cmFunc.h ****   This function disables IRQ interrupts by setting the I-bit in the CPSR.
+ 340:../../CMSIS/DSP/Include/core_cmFunc.h ****   Can only be executed in Privileged modes.
+ 341:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 342:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __disable_irq(void)
+ 343:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 344:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("cpsid i" : : : "memory");
+ 345:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 346:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 347:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 348:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Control Register
+ 349:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 350:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the content of the Control Register.
+ 351:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 352:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               Control Register value
+ 353:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 354:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_CONTROL(void)
+ 355:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 356:../../CMSIS/DSP/Include/core_cmFunc.h ****   uint32_t result;
+ 357:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 358:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MRS %0, control" : "=r" (result) );
+ 359:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(result);
+ 360:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 361:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 362:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 363:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Control Register
+ 364:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 365:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function writes the given value to the Control Register.
+ 366:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 367:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    control  Control Register value to set
+ 368:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 369:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_CONTROL(uint32_t control)
+ 370:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 371:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MSR control, %0" : : "r" (control) : "memory");
+ 372:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 373:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 374:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 375:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get IPSR Register
+ 376:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 377:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the content of the IPSR Register.
+ 378:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 379:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               IPSR Register value
+ 380:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 381:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_IPSR(void)
+ 382:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 383:../../CMSIS/DSP/Include/core_cmFunc.h ****   uint32_t result;
+ 384:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 385:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MRS %0, ipsr" : "=r" (result) );
+ 386:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(result);
+ 387:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 388:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 389:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 390:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get APSR Register
+ 391:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 392:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the content of the APSR Register.
+ 393:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 394:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               APSR Register value
+ 395:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 396:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_APSR(void)
+ 397:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 398:../../CMSIS/DSP/Include/core_cmFunc.h ****   uint32_t result;
+ 399:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 400:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MRS %0, apsr" : "=r" (result) );
+ 401:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(result);
+ 402:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 403:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 404:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 405:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get xPSR Register
+ 406:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 407:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the content of the xPSR Register.
+ 408:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 409:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               xPSR Register value
+ 410:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 411:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_xPSR(void)
+ 412:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 413:../../CMSIS/DSP/Include/core_cmFunc.h ****   uint32_t result;
+ 414:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 415:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MRS %0, xpsr" : "=r" (result) );
+ 416:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(result);
+ 417:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 418:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 419:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 420:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Process Stack Pointer
+ 421:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 422:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current value of the Process Stack Pointer (PSP).
+ 423:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 424:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               PSP Register value
+ 425:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 426:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_PSP(void)
+ 427:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 428:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t result;
+ 429:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 430:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MRS %0, psp\n"  : "=r" (result) );
+ 431:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(result);
+ 432:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 433:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 434:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 435:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Process Stack Pointer
+ 436:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 437:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Process Stack Pointer (PSP).
+ 438:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 439:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    topOfProcStack  Process Stack Pointer value to set
+ 440:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 441:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_PSP(uint32_t topOfProcStack)
+ 442:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 443:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MSR psp, %0\n" : : "r" (topOfProcStack) : "sp");
+ 444:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 445:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 446:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 447:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Main Stack Pointer
+ 448:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 449:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current value of the Main Stack Pointer (MSP).
+ 450:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 451:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               MSP Register value
+ 452:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 453:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_MSP(void)
+ 454:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 455:../../CMSIS/DSP/Include/core_cmFunc.h ****   register uint32_t result;
+ 456:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 457:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MRS %0, msp\n" : "=r" (result) );
+ 458:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(result);
+ 459:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 460:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 461:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 462:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Main Stack Pointer
+ 463:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 464:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Main Stack Pointer (MSP).
+ 465:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 466:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    topOfMainStack  Main Stack Pointer value to set
+ 467:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 468:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_MSP(uint32_t topOfMainStack)
+ 469:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 470:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MSR msp, %0\n" : : "r" (topOfMainStack) : "sp");
+ 471:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 472:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 473:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 474:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Get Priority Mask
+ 475:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 476:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function returns the current state of the priority mask bit from the Priority Mask Registe
+ 477:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 478:../../CMSIS/DSP/Include/core_cmFunc.h ****     \return               Priority Mask value
+ 479:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 480:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE uint32_t __get_PRIMASK(void)
+ 481:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 482:../../CMSIS/DSP/Include/core_cmFunc.h ****   uint32_t result;
+ 483:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 484:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MRS %0, primask" : "=r" (result) );
+ 485:../../CMSIS/DSP/Include/core_cmFunc.h ****   return(result);
+ 486:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 487:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 488:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 489:../../CMSIS/DSP/Include/core_cmFunc.h **** /** \brief  Set Priority Mask
+ 490:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 491:../../CMSIS/DSP/Include/core_cmFunc.h ****     This function assigns the given value to the Priority Mask Register.
+ 492:../../CMSIS/DSP/Include/core_cmFunc.h **** 
+ 493:../../CMSIS/DSP/Include/core_cmFunc.h ****     \param [in]    priMask  Priority Mask
+ 494:../../CMSIS/DSP/Include/core_cmFunc.h ****  */
+ 495:../../CMSIS/DSP/Include/core_cmFunc.h **** __attribute__( ( always_inline ) ) __STATIC_INLINE void __set_PRIMASK(uint32_t priMask)
+ 496:../../CMSIS/DSP/Include/core_cmFunc.h **** {
+ 497:../../CMSIS/DSP/Include/core_cmFunc.h ****   __ASM volatile ("MSR primask, %0" : : "r" (priMask) : "memory");
+ 151              		.loc 2 497 3
+ 152 000e 7B68     		ldr	r3, [r7, #4]
+ 153              		.syntax unified
+ 154              	@ 497 "../../CMSIS/DSP/Include/core_cmFunc.h" 1
+ 155 0010 83F31088 		MSR primask, r3
+ 156              	@ 0 "" 2
+ 498:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 157              		.loc 2 498 1
+ 158              		.thumb
+ 159              		.syntax unified
+ 160 0014 00BF     		nop
+ 161              	.LBE7:
+ 162              	.LBE6:
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     __set_PRIMASK(1);
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     nvic_vector_table_set(NVIC_VECTTAB_FLASH, 0x20000);
+ 163              		.loc 1 57 5
+ 164 0016 4FF40031 		mov	r1, #131072
+ 165 001a 4FF00060 		mov	r0, #134217728
+ 166 001e FFF7FEFF 		bl	nvic_vector_table_set
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     nvic_priority_group_set(NVIC_PRIGROUP_PRE2_SUB2);
+ 167              		.loc 1 60 5
+ 168 0022 4FF4A060 		mov	r0, #1280
+ 169 0026 FFF7FEFF 		bl	nvic_priority_group_set
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     SystickInit();
+ 170              		.loc 1 63 5
+ 171 002a FFF7FEFF 		bl	SystickInit
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     SysLedInit();
+ 172              		.loc 1 66 5
+ 173 002e FFF7FEFF 		bl	SysLedInit
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     TimeBaseInit();
+ 174              		.loc 1 68 5
+ 175 0032 FFF7FEFF 		bl	TimeBaseInit
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     DebugUsartInit(115200);
+ 176              		.loc 1 71 5
+ 177 0036 4FF4E130 		mov	r0, #115200
+ 178 003a FFF7FEFF 		bl	DebugUsartInit
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     Icm206XXInit();
+ 179              		.loc 1 74 5
+ 180 003e FFF7FEFF 		bl	Icm206XXInit
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     GimbalInit();
+ 181              		.loc 1 77 5
+ 182 0042 FFF7FEFF 		bl	GimbalInit
+ 183 0046 0023     		movs	r3, #0
+ 184 0048 BB60     		str	r3, [r7, #8]
+ 185              	.LBB8:
+ 186              	.LBB9:
+ 497:../../CMSIS/DSP/Include/core_cmFunc.h **** }
+ 187              		.loc 2 497 3
+ 188 004a BB68     		ldr	r3, [r7, #8]
+ 189              		.syntax unified
+ 190              	@ 497 "../../CMSIS/DSP/Include/core_cmFunc.h" 1
+ 191 004c 83F31088 		MSR primask, r3
+ 192              	@ 0 "" 2
+ 193              		.loc 2 498 1
+ 194              		.thumb
+ 195              		.syntax unified
+ 196 0050 00BF     		nop
+ 197              	.LBE9:
+ 198              	.LBE8:
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     __set_PRIMASK(0);
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     TimeBaseStart(1000 / SYS_LED_TOGGLE_FREQ, &TimeOutArray[FREE_TIMEOUT_MODULE]);
+ 199              		.loc 1 85 5
+ 200 0052 0E49     		ldr	r1, .L13
+ 201 0054 FA20     		movs	r0, #250
+ 202 0056 FFF7FEFF 		bl	TimeBaseStart
+ 203              	.L12:
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     while (1)
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****     {
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****         
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****         FrameUnpack(&DebugUsartFrame);
+ 204              		.loc 1 90 9
+ 205 005a 0D48     		ldr	r0, .L13+4
+ 206 005c FFF7FEFF 		bl	FrameUnpack
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****         
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****         if (TimeBaseTimeOut(&TimeOutArray[FREE_TIMEOUT_MODULE]))
+ 207              		.loc 1 93 13
+ 208 0060 0A48     		ldr	r0, .L13
+ 209 0062 FFF7FEFF 		bl	TimeBaseTimeOut
+ 210 0066 0346     		mov	r3, r0
+ 211              		.loc 1 93 12
+ 212 0068 002B     		cmp	r3, #0
+ 213 006a F6D0     		beq	.L12
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****         {
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****             
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****             TimeBaseStart(1000 / SYS_LED_TOGGLE_FREQ, &TimeOutArray[FREE_TIMEOUT_MODULE]);
+ 214              		.loc 1 96 13
+ 215 006c 0749     		ldr	r1, .L13
+ 216 006e FA20     		movs	r0, #250
+ 217 0070 FFF7FEFF 		bl	TimeBaseStart
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****             SysLedStatus = (ControlStatus)!SysLedStatus;
+ 218              		.loc 1 97 28
+ 219 0074 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 220 0076 002B     		cmp	r3, #0
+ 221 0078 0CBF     		ite	eq
+ 222 007a 0123     		moveq	r3, #1
+ 223 007c 0023     		movne	r3, #0
+ 224 007e DBB2     		uxtb	r3, r3
+ 225              		.loc 1 97 26
+ 226 0080 FB73     		strb	r3, [r7, #15]
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c ****             SysLedCmd(SysLedStatus);
+ 227              		.loc 1 98 13
+ 228 0082 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 229 0084 1846     		mov	r0, r3
+ 230 0086 FFF7FEFF 		bl	SysLedCmd
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_main.c **** 
+ 231              		.loc 1 90 9
+ 232 008a E6E7     		b	.L12
+ 233              	.L14:
+ 234              		.align	2
+ 235              	.L13:
+ 236 008c 00000000 		.word	TimeOutArray
+ 237 0090 00000000 		.word	DebugUsartFrame
+ 238              		.cfi_endproc
+ 239              	.LFE158:
+ 241              		.text
+ 242              	.Letext0:
+ 243              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 244              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 245              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 246              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 247              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 248              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 249              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 250              		.file 10 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embed
+ 251              		.file 11 "../../CMSIS/DSP/Include/core_cm4.h"
+ 252              		.file 12 "../../CMSIS/system_gd32f4xx.h"
+ 253              		.file 13 "../../CMSIS/gd32f4xx.h"
+ 254              		.file 14 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
+ 255              		.file 15 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 256              		.file 16 "../../Dawn/DawnLib/dawn_lib.h"
+ 257              		.file 17 "../../Dawn/DawnBsp/timebase.h"
+ 258              		.file 18 "../../Dawn/DawnCom/unpack.h"
+ 259              		.file 19 "../../Dawn/DawnDevice/icm206xx.h"
+ 260              		.file 20 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 261              		.file 21 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 262              		.file 22 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.h"
+ 263              		.file 23 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 dawn_main.c
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:16     .text.SysLedInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:24     .text.SysLedInit:00000000 SysLedInit
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:62     .text.SysLedInit:00000038 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:67     .text.SysLedCmd:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:74     .text.SysLedCmd:00000000 SysLedCmd
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:117    .text.SysLedCmd:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:122    .text.main:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:129    .text.main:00000000 main
+C:\Users\leonardo\AppData\Local\Temp\cc0RRgHP.s:236    .text.main:0000008c $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+UNDEFINED SYMBOLS
+rcu_periph_clock_enable
+gpio_mode_set
+gpio_output_options_set
+gpio_bit_set
+gpio_bit_reset
+nvic_vector_table_set
+nvic_priority_group_set
+SystickInit
+TimeBaseInit
+DebugUsartInit
+Icm206XXInit
+GimbalInit
+TimeBaseStart
+FrameUnpack
+TimeBaseTimeOut
+TimeOutArray
+DebugUsartFrame
