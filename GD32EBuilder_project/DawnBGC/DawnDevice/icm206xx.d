@@ -1,5 +1,5 @@
 DawnDevice/icm206xx.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice/icm206xx.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice/icm206xx.c \
  ../../Dawn/DawnMain/includes.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \

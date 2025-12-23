@@ -1,11 +1,11 @@
 CMSIS/system_gd32f4xx.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/CMSIS/system_gd32f4xx.c \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/CMSIS/gd32f4xx.h \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS/system_gd32f4xx.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \
  ../../CMSIS/DSP/Include/core_cmFunc.h \
  ../../CMSIS/DSP/Include/core_cmSimd.h \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/CMSIS/system_gd32f4xx.h \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS/system_gd32f4xx.h \
  ../../Dawn/DawnMain/gd32f4xx_libopt.h \
  ../../Libraries/FWLIB/inc/gd32f4xx_rcu.h ../../CMSIS/gd32f4xx.h \
  ../../Libraries/FWLIB/inc/gd32f4xx_adc.h \
@@ -33,7 +33,7 @@ CMSIS/system_gd32f4xx.o: \
  ../../Libraries/FWLIB/inc/gd32f4xx_wwdgt.h \
  ../../Libraries/FWLIB/inc/gd32f4xx_misc.h
 
-C:/Users/leonardo/Desktop/Code/Github/DawnGBC/CMSIS/gd32f4xx.h:
+C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS/gd32f4xx.h:
 
 ../../CMSIS/DSP/Include/core_cm4.h:
 
@@ -43,7 +43,7 @@ C:/Users/leonardo/Desktop/Code/Github/DawnGBC/CMSIS/gd32f4xx.h:
 
 ../../CMSIS/DSP/Include/core_cmSimd.h:
 
-C:/Users/leonardo/Desktop/Code/Github/DawnGBC/CMSIS/system_gd32f4xx.h:
+C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS/system_gd32f4xx.h:
 
 ../../Dawn/DawnMain/gd32f4xx_libopt.h:
 

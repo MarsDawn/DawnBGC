@@ -1,5 +1,5 @@
 FWLIB/gd32f4xx_gpio.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_gpio.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_gpio.c \
  ../../Libraries/FWLIB/inc/gd32f4xx_gpio.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \

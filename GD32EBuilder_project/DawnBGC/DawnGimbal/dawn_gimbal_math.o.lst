@@ -27,34 +27,34 @@
   27              		.fpu softvfp
   29              	ACC2Euler:
   30              	.LFB156:
-  31              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal/dawn_gimbal_math.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** /*
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * Copyright (c) 2025 MarsDawn
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * Project repository:
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *     https://github.com/MarsDawn
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * This file is part of the DawnBGC project.
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * Redistribution and use in source or binary forms, with or without
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * modification, are permitted under the MIT License, provided that
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * this copyright notice and this permission notice are retained.
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * Licensed under the MIT License.
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * You may obtain a copy of the License at:
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *     https://opensource.org/licenses/MIT
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  */
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** #include "includes.h"
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void ACC2Euler(CartesianUnion *a, EulerStruct *e)
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+  31              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal/dawn_gimbal_math.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void ACC2Euler(CartesianUnion *a, EulerStruct *e)
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
   32              		.loc 1 27 1
   33              		.cfi_startproc
   34              		@ args = 0, pretend = 0, frame = 24
@@ -70,11 +70,11 @@
   44              		.cfi_def_cfa_register 7
   45 0006 7860     		str	r0, [r7, #4]
   46 0008 3960     		str	r1, [r7]
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float NormDiv = 0.0f;
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float NormDiv = 0.0f;
   47              		.loc 1 28 11
   48 000a 4FF00003 		mov	r3, #0
   49 000e 7B61     		str	r3, [r7, #20]	@ float
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float ax = 0.0f, ay = 0.0f, az = 0.0f;
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float ax = 0.0f, ay = 0.0f, az = 0.0f;
   50              		.loc 1 29 11
   51 0010 4FF00003 		mov	r3, #0
   52 0014 3B61     		str	r3, [r7, #16]	@ float
@@ -84,9 +84,9 @@
   56              		.loc 1 29 33
   57 001c 4FF00003 		mov	r3, #0
   58 0020 BB60     		str	r3, [r7, #8]	@ float
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     NormDiv = 1.0f / sqrtf((a->Data.X) * (a->Data.X) + (a->Data.Y) * (a->Data.Y) + (a->Data.Z) * (a
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     NormDiv = 1.0f / sqrtf((a->Data.X) * (a->Data.X) + (a->Data.Y) * (a->Data.Y) + (a->Data.Z) * (a
   59              		.loc 1 32 36
   60 0022 7B68     		ldr	r3, [r7, #4]
   61 0024 1A68     		ldr	r2, [r3]	@ float
@@ -147,7 +147,7 @@
  116              	.LVL5:
  117 0082 0346     		mov	r3, r0
  118 0084 7B61     		str	r3, [r7, #20]	@ float
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ax = (a->Data.X) * NormDiv;
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ax = (a->Data.X) * NormDiv;
  119              		.loc 1 33 18
  120 0086 7B68     		ldr	r3, [r7, #4]
  121 0088 1B68     		ldr	r3, [r3]	@ float
@@ -158,7 +158,7 @@
  126              	.LVL6:
  127 0092 0346     		mov	r3, r0
  128 0094 3B61     		str	r3, [r7, #16]	@ float
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ay = (a->Data.Y) * NormDiv;
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ay = (a->Data.Y) * NormDiv;
  129              		.loc 1 34 18
  130 0096 7B68     		ldr	r3, [r7, #4]
  131 0098 5B68     		ldr	r3, [r3, #4]	@ float
@@ -169,7 +169,7 @@
  136              	.LVL7:
  137 00a2 0346     		mov	r3, r0
  138 00a4 FB60     		str	r3, [r7, #12]	@ float
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     az = (a->Data.Z) * NormDiv;
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     az = (a->Data.Z) * NormDiv;
  139              		.loc 1 35 18
  140 00a6 7B68     		ldr	r3, [r7, #4]
  141 00a8 9B68     		ldr	r3, [r3, #8]	@ float
@@ -180,19 +180,19 @@
  146              	.LVL8:
  147 00b2 0346     		mov	r3, r0
  148 00b4 BB60     		str	r3, [r7, #8]	@ float
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     switch(e->Order)
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     switch(e->Order)
  149              		.loc 1 38 13
  150 00b6 3B68     		ldr	r3, [r7]
  151 00b8 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  152              		.loc 1 38 5
  153 00ba 002B     		cmp	r3, #0
  154 00bc 2ED1     		bne	.L2
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         case EULER_ORDER_ZXY:
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             if(ay > 0.9999f)
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         case EULER_ORDER_ZXY:
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             if(ay > 0.9999f)
  155              		.loc 1 42 15
  156 00be 1B49     		ldr	r1, .L13
  157 00c0 F868     		ldr	r0, [r7, #12]	@ float
@@ -201,33 +201,33 @@
  160 00c6 0346     		mov	r3, r0
  161 00c8 002B     		cmp	r3, #0
  162 00ca 07D0     		beq	.L10
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = PI * 0.5f;
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = PI * 0.5f;
  163              		.loc 1 44 25
  164 00cc 3B68     		ldr	r3, [r7]
  165 00ce 184A     		ldr	r2, .L13+4
  166 00d0 9A60     		str	r2, [r3, #8]	@ float
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
  167              		.loc 1 45 26
  168 00d2 3B68     		ldr	r3, [r7]
  169 00d4 4FF00002 		mov	r2, #0
  170 00d8 5A60     		str	r2, [r3, #4]	@ float
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             else if(ay < -0.9999f)
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = -PI * 0.5f;
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             else
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = asinf(ay);
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-ax, az);
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             else if(ay < -0.9999f)
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = -PI * 0.5f;
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             else
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = asinf(ay);
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-ax, az);
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
  171              		.loc 1 57 13
  172 00da 1EE0     		b	.L12
  173              	.L10:
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
  174              		.loc 1 47 20
  175 00dc 1549     		ldr	r1, .L13+8
  176 00de F868     		ldr	r0, [r7, #12]	@ float
@@ -236,12 +236,12 @@
  179 00e4 0346     		mov	r3, r0
  180 00e6 002B     		cmp	r3, #0
  181 00e8 07D0     		beq	.L11
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
  182              		.loc 1 49 25
  183 00ea 3B68     		ldr	r3, [r7]
  184 00ec 124A     		ldr	r2, .L13+12
  185 00ee 9A60     		str	r2, [r3, #8]	@ float
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
  186              		.loc 1 50 26
  187 00f0 3B68     		ldr	r3, [r7]
  188 00f2 4FF00002 		mov	r2, #0
@@ -249,16 +249,16 @@
  190              		.loc 1 57 13
  191 00f8 0FE0     		b	.L12
  192              	.L11:
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-ax, az);
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-ax, az);
  193              		.loc 1 54 27
  194 00fa F868     		ldr	r0, [r7, #12]	@ float
  195 00fc FFF7FEFF 		bl	asinf
  196 0100 0246     		mov	r2, r0
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-ax, az);
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-ax, az);
  197              		.loc 1 54 25
  198 0102 3B68     		ldr	r3, [r7]
  199 0104 9A60     		str	r2, [r3, #8]	@ float
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
  200              		.loc 1 55 28
  201 0106 3B69     		ldr	r3, [r7, #16]
  202 0108 83F00043 		eor	r3, r3, #-2147483648
@@ -266,7 +266,7 @@
  204 010e 1846     		mov	r0, r3
  205 0110 FFF7FEFF 		bl	atan2f
  206 0114 0246     		mov	r2, r0
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
  207              		.loc 1 55 26
  208 0116 3B68     		ldr	r3, [r7]
  209 0118 5A60     		str	r2, [r3, #4]	@ float
@@ -274,15 +274,15 @@
  211              		.loc 1 57 13
  212 011a 00BF     		nop
  213              	.L2:
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     e->Yaw = 0.0f;
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     e->Yaw = 0.0f;
  214              		.loc 1 61 12
  215 011c 3B68     		ldr	r3, [r7]
  216 011e 4FF00002 		mov	r2, #0
  217 0122 DA60     		str	r2, [r3, #12]	@ float
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  218              		.loc 1 62 1
  219 0124 00BF     		nop
  220 0126 1C37     		adds	r7, r7, #28
@@ -310,9 +310,9 @@
  243              		.fpu softvfp
  245              	Euler2Quat:
  246              	.LFB157:
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void Euler2Quat(EulerStruct *e, QuaternionStruct *q)
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void Euler2Quat(EulerStruct *e, QuaternionStruct *q)
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  247              		.loc 1 65 1
  248              		.cfi_startproc
  249              		@ args = 0, pretend = 0, frame = 48
@@ -328,7 +328,7 @@
  259              		.cfi_def_cfa_register 7
  260 0006 7860     		str	r0, [r7, #4]
  261 0008 3960     		str	r1, [r7]
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float Pitch = 0.0f, Roll = 0.0f, Yaw = 0.0f;
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float Pitch = 0.0f, Roll = 0.0f, Yaw = 0.0f;
  262              		.loc 1 66 11
  263 000a 4FF00003 		mov	r3, #0
  264 000e FB62     		str	r3, [r7, #44]	@ float
@@ -338,7 +338,7 @@
  268              		.loc 1 66 38
  269 0016 4FF00003 		mov	r3, #0
  270 001a 7B62     		str	r3, [r7, #36]	@ float
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float sp = 0.0f, cp = 0.0f, sr = 0.0f, cr = 0.0f, sy = 0.0f, cy = 0.0f;
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float sp = 0.0f, cp = 0.0f, sr = 0.0f, cr = 0.0f, sy = 0.0f, cy = 0.0f;
  271              		.loc 1 67 11
  272 001c 4FF00003 		mov	r3, #0
  273 0020 3B62     		str	r3, [r7, #32]	@ float
@@ -357,8 +357,8 @@
  286              		.loc 1 67 66
  287 003a 4FF00003 		mov	r3, #0
  288 003e FB60     		str	r3, [r7, #12]	@ float
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pitch = (e->Pitch) * 0.5f;
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pitch = (e->Pitch) * 0.5f;
  289              		.loc 1 69 15
  290 0040 7B68     		ldr	r3, [r7, #4]
  291 0042 5B68     		ldr	r3, [r3, #4]	@ float
@@ -369,7 +369,7 @@
  296              	.LVL11:
  297 004e 0346     		mov	r3, r0
  298 0050 FB62     		str	r3, [r7, #44]	@ float
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Roll = (e->Roll) * 0.5f;
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Roll = (e->Roll) * 0.5f;
  299              		.loc 1 70 14
  300 0052 7B68     		ldr	r3, [r7, #4]
  301 0054 9B68     		ldr	r3, [r3, #8]	@ float
@@ -380,7 +380,7 @@
  306              	.LVL12:
  307 0060 0346     		mov	r3, r0
  308 0062 BB62     		str	r3, [r7, #40]	@ float
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Yaw = (e->Yaw) * 0.5f;
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Yaw = (e->Yaw) * 0.5f;
  309              		.loc 1 71 13
  310 0064 7B68     		ldr	r3, [r7, #4]
  311 0066 DB68     		ldr	r3, [r3, #12]	@ float
@@ -391,48 +391,48 @@
  316              	.LVL13:
  317 0072 0346     		mov	r3, r0
  318 0074 7B62     		str	r3, [r7, #36]	@ float
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sp = sinf(Pitch);
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sp = sinf(Pitch);
  319              		.loc 1 73 10
  320 0076 F86A     		ldr	r0, [r7, #44]	@ float
  321 0078 FFF7FEFF 		bl	sinf
  322 007c 3862     		str	r0, [r7, #32]	@ float
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cp = cosf(Pitch);
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cp = cosf(Pitch);
  323              		.loc 1 74 10
  324 007e F86A     		ldr	r0, [r7, #44]	@ float
  325 0080 FFF7FEFF 		bl	cosf
  326 0084 F861     		str	r0, [r7, #28]	@ float
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sr = sinf(Roll);
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sr = sinf(Roll);
  327              		.loc 1 75 10
  328 0086 B86A     		ldr	r0, [r7, #40]	@ float
  329 0088 FFF7FEFF 		bl	sinf
  330 008c B861     		str	r0, [r7, #24]	@ float
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cr = cosf(Roll);
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cr = cosf(Roll);
  331              		.loc 1 76 10
  332 008e B86A     		ldr	r0, [r7, #40]	@ float
  333 0090 FFF7FEFF 		bl	cosf
  334 0094 7861     		str	r0, [r7, #20]	@ float
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sy = sinf(Yaw);
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sy = sinf(Yaw);
  335              		.loc 1 77 10
  336 0096 786A     		ldr	r0, [r7, #36]	@ float
  337 0098 FFF7FEFF 		bl	sinf
  338 009c 3861     		str	r0, [r7, #16]	@ float
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cy = cosf(Yaw);
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cy = cosf(Yaw);
  339              		.loc 1 78 10
  340 009e 786A     		ldr	r0, [r7, #36]	@ float
  341 00a0 FFF7FEFF 		bl	cosf
  342 00a4 F860     		str	r0, [r7, #12]	@ float
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     switch(e->Order)
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     switch(e->Order)
  343              		.loc 1 80 13
  344 00a6 7B68     		ldr	r3, [r7, #4]
  345 00a8 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  346              		.loc 1 80 5
  347 00aa 002B     		cmp	r3, #0
  348 00ac 74D1     		bne	.L18
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         case EULER_ORDER_ZXY:
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             q->q0 = cp * cr * cy - sp * sr * sy;
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         case EULER_ORDER_ZXY:
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             q->q0 = cp * cr * cy - sp * sr * sy;
  349              		.loc 1 83 24
  350 00ae 7969     		ldr	r1, [r7, #20]	@ float
  351 00b0 F869     		ldr	r0, [r7, #28]	@ float
@@ -468,7 +468,7 @@
  381              		.loc 1 83 19
  382 00e4 3B68     		ldr	r3, [r7]
  383 00e6 1A60     		str	r2, [r3]	@ float
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             q->q1 = cp * sr * cy - cr * sp * sy;
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             q->q1 = cp * sr * cy - cr * sp * sy;
  384              		.loc 1 84 24
  385 00e8 B969     		ldr	r1, [r7, #24]	@ float
  386 00ea F869     		ldr	r0, [r7, #28]	@ float
@@ -504,7 +504,7 @@
  416              		.loc 1 84 19
  417 011e 3B68     		ldr	r3, [r7]
  418 0120 5A60     		str	r2, [r3, #4]	@ float
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             q->q2 = cr * sp * cy + cp * sr * sy;
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             q->q2 = cr * sp * cy + cp * sr * sy;
  419              		.loc 1 85 24
  420 0122 396A     		ldr	r1, [r7, #32]	@ float
  421 0124 7869     		ldr	r0, [r7, #20]	@ float
@@ -540,7 +540,7 @@
  451              		.loc 1 85 19
  452 0158 3B68     		ldr	r3, [r7]
  453 015a 9A60     		str	r2, [r3, #8]	@ float
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             q->q3 = cp * cr * sy + sp * sr * cy;
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             q->q3 = cp * cr * sy + sp * sr * cy;
  454              		.loc 1 86 24
  455 015c 7969     		ldr	r1, [r7, #20]	@ float
  456 015e F869     		ldr	r0, [r7, #28]	@ float
@@ -576,18 +576,18 @@
  486              		.loc 1 86 19
  487 0192 3B68     		ldr	r3, [r7]
  488 0194 DA60     		str	r2, [r3, #12]	@ float
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
  489              		.loc 1 87 13
  490 0196 00E0     		b	.L17
  491              	.L18:
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         default:
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         default:
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
  492              		.loc 1 90 13
  493 0198 00BF     		nop
  494              	.L17:
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  495              		.loc 1 92 1
  496 019a 00BF     		nop
  497 019c 3437     		adds	r7, r7, #52
@@ -607,9 +607,9 @@
  512              		.fpu softvfp
  514              	Euler2DCM:
  515              	.LFB158:
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void Euler2DCM(EulerStruct *e, Matrix3X3Union *DCM )
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void Euler2DCM(EulerStruct *e, Matrix3X3Union *DCM )
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  516              		.loc 1 95 1
  517              		.cfi_startproc
  518              		@ args = 0, pretend = 0, frame = 32
@@ -625,7 +625,7 @@
  528              		.cfi_def_cfa_register 7
  529 0006 7860     		str	r0, [r7, #4]
  530 0008 3960     		str	r1, [r7]
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float sp = 0.0f, cp = 0.0f, sr = 0.0f, cr = 0.0f, sy = 0.0f, cy = 0.0f;
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float sp = 0.0f, cp = 0.0f, sr = 0.0f, cr = 0.0f, sy = 0.0f, cy = 0.0f;
  531              		.loc 1 96 11
  532 000a 4FF00003 		mov	r3, #0
  533 000e FB61     		str	r3, [r7, #28]	@ float
@@ -644,61 +644,61 @@
  546              		.loc 1 96 66
  547 0028 4FF00003 		mov	r3, #0
  548 002c BB60     		str	r3, [r7, #8]	@ float
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sp = sinf(e->Pitch);
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sp = sinf(e->Pitch);
  549              		.loc 1 98 10
  550 002e 7B68     		ldr	r3, [r7, #4]
  551 0030 5B68     		ldr	r3, [r3, #4]	@ float
  552 0032 1846     		mov	r0, r3
  553 0034 FFF7FEFF 		bl	sinf
  554 0038 F861     		str	r0, [r7, #28]	@ float
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cp = cosf(e->Pitch);
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cp = cosf(e->Pitch);
  555              		.loc 1 99 10
  556 003a 7B68     		ldr	r3, [r7, #4]
  557 003c 5B68     		ldr	r3, [r3, #4]	@ float
  558 003e 1846     		mov	r0, r3
  559 0040 FFF7FEFF 		bl	cosf
  560 0044 B861     		str	r0, [r7, #24]	@ float
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sr = sinf(e->Roll);
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sr = sinf(e->Roll);
  561              		.loc 1 100 10
  562 0046 7B68     		ldr	r3, [r7, #4]
  563 0048 9B68     		ldr	r3, [r3, #8]	@ float
  564 004a 1846     		mov	r0, r3
  565 004c FFF7FEFF 		bl	sinf
  566 0050 7861     		str	r0, [r7, #20]	@ float
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cr = cosf(e->Roll);
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cr = cosf(e->Roll);
  567              		.loc 1 101 10
  568 0052 7B68     		ldr	r3, [r7, #4]
  569 0054 9B68     		ldr	r3, [r3, #8]	@ float
  570 0056 1846     		mov	r0, r3
  571 0058 FFF7FEFF 		bl	cosf
  572 005c 3861     		str	r0, [r7, #16]	@ float
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sy = sinf(e->Yaw);
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sy = sinf(e->Yaw);
  573              		.loc 1 102 10
  574 005e 7B68     		ldr	r3, [r7, #4]
  575 0060 DB68     		ldr	r3, [r3, #12]	@ float
  576 0062 1846     		mov	r0, r3
  577 0064 FFF7FEFF 		bl	sinf
  578 0068 F860     		str	r0, [r7, #12]	@ float
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cy = cosf(e->Yaw);
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cy = cosf(e->Yaw);
  579              		.loc 1 103 10
  580 006a 7B68     		ldr	r3, [r7, #4]
  581 006c DB68     		ldr	r3, [r3, #12]	@ float
  582 006e 1846     		mov	r0, r3
  583 0070 FFF7FEFF 		bl	cosf
  584 0074 B860     		str	r0, [r7, #8]	@ float
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     switch(e->Order)
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     switch(e->Order)
  585              		.loc 1 105 13
  586 0076 7B68     		ldr	r3, [r7, #4]
  587 0078 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  588              		.loc 1 105 5
  589 007a 002B     		cmp	r3, #0
  590 007c 40F08A80 		bne	.L22
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         case EULER_ORDER_ZXY:
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A00 = cp * cy - sp * sr * sy;
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         case EULER_ORDER_ZXY:
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A00 = cp * cy - sp * sr * sy;
  591              		.loc 1 109 33
  592 0080 B968     		ldr	r1, [r7, #8]	@ float
  593 0082 B869     		ldr	r0, [r7, #24]	@ float
@@ -728,7 +728,7 @@
  617              		.loc 1 109 28
  618 00ac 3B68     		ldr	r3, [r7]
  619 00ae 1A60     		str	r2, [r3]	@ float
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A01 = cp * sy + cy * sp * sr;
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A01 = cp * sy + cy * sp * sr;
  620              		.loc 1 110 33
  621 00b0 F968     		ldr	r1, [r7, #12]	@ float
  622 00b2 B869     		ldr	r0, [r7, #24]	@ float
@@ -758,7 +758,7 @@
  646              		.loc 1 110 28
  647 00dc 3B68     		ldr	r3, [r7]
  648 00de 5A60     		str	r2, [r3, #4]	@ float
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A02 = -cr * sp;
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A02 = -cr * sp;
  649              		.loc 1 111 30
  650 00e0 3B69     		ldr	r3, [r7, #16]
  651 00e2 83F00043 		eor	r3, r3, #-2147483648
@@ -772,9 +772,9 @@
  659              		.loc 1 111 28
  660 00f2 3B68     		ldr	r3, [r7]
  661 00f4 9A60     		str	r2, [r3, #8]	@ float
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A10 = -cr * sy;
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A10 = -cr * sy;
  662              		.loc 1 114 30
  663 00f6 3B69     		ldr	r3, [r7, #16]
  664 00f8 83F00043 		eor	r3, r3, #-2147483648
@@ -788,7 +788,7 @@
  672              		.loc 1 114 28
  673 0108 3B68     		ldr	r3, [r7]
  674 010a DA60     		str	r2, [r3, #12]	@ float
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A11 = cr * cy;
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A11 = cr * cy;
  675              		.loc 1 115 33
  676 010c B968     		ldr	r1, [r7, #8]	@ float
  677 010e 3869     		ldr	r0, [r7, #16]	@ float
@@ -799,14 +799,14 @@
  682              		.loc 1 115 28
  683 0118 3B68     		ldr	r3, [r7]
  684 011a 1A61     		str	r2, [r3, #16]	@ float
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A12 = sr;
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A12 = sr;
  685              		.loc 1 116 28
  686 011c 3B68     		ldr	r3, [r7]
  687 011e 7A69     		ldr	r2, [r7, #20]	@ float
  688 0120 5A61     		str	r2, [r3, #20]	@ float
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A20 = cy * sp + cp * sr * sy;
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A20 = cy * sp + cp * sr * sy;
  689              		.loc 1 119 33
  690 0122 F969     		ldr	r1, [r7, #28]	@ float
  691 0124 B868     		ldr	r0, [r7, #8]	@ float
@@ -836,7 +836,7 @@
  715              		.loc 1 119 28
  716 014e 3B68     		ldr	r3, [r7]
  717 0150 9A61     		str	r2, [r3, #24]	@ float
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A21 = sp * sy - cp * cy * sr;
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A21 = sp * sy - cp * cy * sr;
  718              		.loc 1 120 33
  719 0152 F968     		ldr	r1, [r7, #12]	@ float
  720 0154 F869     		ldr	r0, [r7, #28]	@ float
@@ -866,7 +866,7 @@
  744              		.loc 1 120 28
  745 017e 3B68     		ldr	r3, [r7]
  746 0180 DA61     		str	r2, [r3, #28]	@ float
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A22 = cp * cr;
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             DCM ->Data.A22 = cp * cr;
  747              		.loc 1 121 33
  748 0182 3969     		ldr	r1, [r7, #16]	@ float
  749 0184 B869     		ldr	r0, [r7, #24]	@ float
@@ -877,18 +877,18 @@
  754              		.loc 1 121 28
  755 018e 3B68     		ldr	r3, [r7]
  756 0190 1A62     		str	r2, [r3, #32]	@ float
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
  757              		.loc 1 122 13
  758 0192 00E0     		b	.L21
  759              	.L22:
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         default:
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         default:
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
  760              		.loc 1 125 13
  761 0194 00BF     		nop
  762              	.L21:
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  763              		.loc 1 127 1
  764 0196 00BF     		nop
  765 0198 2437     		adds	r7, r7, #36
@@ -908,9 +908,9 @@
  780              		.fpu softvfp
  782              	Quat2Euler:
  783              	.LFB159:
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void Quat2Euler(QuaternionStruct *q, EulerStruct *e)
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void Quat2Euler(QuaternionStruct *q, EulerStruct *e)
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  784              		.loc 1 130 1
  785              		.cfi_startproc
  786              		@ args = 0, pretend = 0, frame = 48
@@ -926,7 +926,7 @@
  796              		.cfi_def_cfa_register 7
  797 0006 7860     		str	r0, [r7, #4]
  798 0008 3960     		str	r1, [r7]
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float A00 = 0.0f, A01 = 0.0f, A02 = 0.0f;
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float A00 = 0.0f, A01 = 0.0f, A02 = 0.0f;
  799              		.loc 1 131 11
  800 000a 4FF00003 		mov	r3, #0
  801 000e FB62     		str	r3, [r7, #44]	@ float
@@ -936,7 +936,7 @@
  805              		.loc 1 131 35
  806 0016 4FF00003 		mov	r3, #0
  807 001a 7B62     		str	r3, [r7, #36]	@ float
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float A10 = 0.0f, A11 = 0.0f, A12 = 0.0f;
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float A10 = 0.0f, A11 = 0.0f, A12 = 0.0f;
  808              		.loc 1 132 11
  809 001c 4FF00003 		mov	r3, #0
  810 0020 3B62     		str	r3, [r7, #32]	@ float
@@ -946,7 +946,7 @@
  814              		.loc 1 132 35
  815 0028 4FF00003 		mov	r3, #0
  816 002c BB61     		str	r3, [r7, #24]	@ float
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float A20 = 0.0f, A21 = 0.0f, A22 = 0.0f;
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float A20 = 0.0f, A21 = 0.0f, A22 = 0.0f;
  817              		.loc 1 133 11
  818 002e 4FF00003 		mov	r3, #0
  819 0032 7B61     		str	r3, [r7, #20]	@ float
@@ -956,18 +956,18 @@
  823              		.loc 1 133 35
  824 003a 4FF00003 		mov	r3, #0
  825 003e FB60     		str	r3, [r7, #12]	@ float
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     switch(e->Order)
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     switch(e->Order)
  826              		.loc 1 135 13
  827 0040 3B68     		ldr	r3, [r7]
  828 0042 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  829              		.loc 1 135 5
  830 0044 002B     		cmp	r3, #0
  831 0046 40F04581 		bne	.L35
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         case EULER_ORDER_ZXY:
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             A12 = 2.0f * ((q->q2) * (q->q3) + (q->q0) * (q->q1));
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         case EULER_ORDER_ZXY:
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             A12 = 2.0f * ((q->q2) * (q->q3) + (q->q0) * (q->q1));
  832              		.loc 1 139 29
  833 004a 7B68     		ldr	r3, [r7, #4]
  834 004c 9A68     		ldr	r2, [r3, #8]	@ float
@@ -1006,7 +1006,7 @@
  867              	.LVL57:
  868 0082 0346     		mov	r3, r0
  869 0084 BB61     		str	r3, [r7, #24]	@ float
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             if(A12 > 0.9999f)
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             if(A12 > 0.9999f)
  870              		.loc 1 140 15
  871 0086 9649     		ldr	r1, .L36
  872 0088 B869     		ldr	r0, [r7, #24]	@ float
@@ -1015,8 +1015,8 @@
  875 008e 0346     		mov	r3, r0
  876 0090 002B     		cmp	r3, #0
  877 0092 46D0     		beq	.L33
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A00 = 0.5f - ((q->q2) * (q->q2) + (q->q3) * (q->q3));
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A00 = 0.5f - ((q->q2) * (q->q2) + (q->q3) * (q->q3));
  878              		.loc 1 142 33
  879 0094 7B68     		ldr	r3, [r7, #4]
  880 0096 9A68     		ldr	r2, [r3, #8]	@ float
@@ -1055,7 +1055,7 @@
  913              	.LVL62:
  914 00ce 0346     		mov	r3, r0
  915 00d0 FB62     		str	r3, [r7, #44]	@ float
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  916              		.loc 1 143 26
  917 00d2 7B68     		ldr	r3, [r7, #4]
  918 00d4 5A68     		ldr	r2, [r3, #4]	@ float
@@ -1088,18 +1088,18 @@
  945              	.LVL65:
  946 0100 0346     		mov	r3, r0
  947 0102 BB62     		str	r3, [r7, #40]	@ float
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
- 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = PI * 0.5f;
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = PI * 0.5f;
  948              		.loc 1 145 25
  949 0104 3B68     		ldr	r3, [r7]
  950 0106 774A     		ldr	r2, .L36+4
  951 0108 9A60     		str	r2, [r3, #8]	@ float
- 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
  952              		.loc 1 146 26
  953 010a 3B68     		ldr	r3, [r7]
  954 010c 4FF00002 		mov	r2, #0
  955 0110 5A60     		str	r2, [r3, #4]	@ float
- 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(A01, A00);
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(A01, A00);
  956              		.loc 1 147 26
  957 0112 F96A     		ldr	r1, [r7, #44]	@ float
  958 0114 B86A     		ldr	r0, [r7, #40]	@ float
@@ -1108,32 +1108,32 @@
  961              		.loc 1 147 24
  962 011c 3B68     		ldr	r3, [r7]
  963 011e DA60     		str	r2, [r3, #12]	@ float
- 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             else if(A12 < -0.9999f)
- 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A00 = 0.5f - ((q->q2) * (q->q2) + (q->q3) * (q->q3));
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
- 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = -PI * 0.5f;
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(A01, A00);
- 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
- 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             else
- 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A02 = (q->q1) * (q->q3) - (q->q0) * (q->q2);
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
- 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = asinf(A12);
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-A02, A22);
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(-A10, A11);
- 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
- 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             else if(A12 < -0.9999f)
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A00 = 0.5f - ((q->q2) * (q->q2) + (q->q3) * (q->q3));
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = -PI * 0.5f;
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(A01, A00);
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             else
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A02 = (q->q1) * (q->q3) - (q->q0) * (q->q2);
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Roll = asinf(A12);
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-A02, A22);
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(-A10, A11);
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
  964              		.loc 1 169 13
  965 0120 D9E0     		b	.L30
  966              	.L33:
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
  967              		.loc 1 149 20
  968 0122 7149     		ldr	r1, .L36+8
  969 0124 B869     		ldr	r0, [r7, #24]	@ float
@@ -1142,15 +1142,15 @@
  972 012a 0346     		mov	r3, r0
  973 012c 002B     		cmp	r3, #0
  974 012e 46D0     		beq	.L34
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  975              		.loc 1 151 33
  976 0130 7B68     		ldr	r3, [r7, #4]
  977 0132 9A68     		ldr	r2, [r3, #8]	@ float
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  978              		.loc 1 151 43
  979 0134 7B68     		ldr	r3, [r7, #4]
  980 0136 9B68     		ldr	r3, [r3, #8]	@ float
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  981              		.loc 1 151 39
  982 0138 1946     		mov	r1, r3
  983 013a 1046     		mov	r0, r2
@@ -1158,29 +1158,29 @@
  985              	.LVL67:
  986 0140 0346     		mov	r3, r0
  987 0142 1C46     		mov	r4, r3
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  988              		.loc 1 151 53
  989 0144 7B68     		ldr	r3, [r7, #4]
  990 0146 DA68     		ldr	r2, [r3, #12]	@ float
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  991              		.loc 1 151 63
  992 0148 7B68     		ldr	r3, [r7, #4]
  993 014a DB68     		ldr	r3, [r3, #12]	@ float
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  994              		.loc 1 151 59
  995 014c 1946     		mov	r1, r3
  996 014e 1046     		mov	r0, r2
  997 0150 FFF7FEFF 		bl	__aeabi_fmul
  998              	.LVL68:
  999 0154 0346     		mov	r3, r0
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  1000              		.loc 1 151 49
  1001 0156 1946     		mov	r1, r3
  1002 0158 2046     		mov	r0, r4
  1003 015a FFF7FEFF 		bl	__aeabi_fadd
  1004              	.LVL69:
  1005 015e 0346     		mov	r3, r0
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A01 = ((q->q1) * (q->q2) + (q->q0) * (q->q3));
  1006              		.loc 1 151 21
  1007 0160 1946     		mov	r1, r3
  1008 0162 4FF07C50 		mov	r0, #1056964608
@@ -1188,15 +1188,15 @@
  1010              	.LVL70:
  1011 016a 0346     		mov	r3, r0
  1012 016c FB62     		str	r3, [r7, #44]	@ float
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1013              		.loc 1 152 26
  1014 016e 7B68     		ldr	r3, [r7, #4]
  1015 0170 5A68     		ldr	r2, [r3, #4]	@ float
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1016              		.loc 1 152 36
  1017 0172 7B68     		ldr	r3, [r7, #4]
  1018 0174 9B68     		ldr	r3, [r3, #8]	@ float
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1019              		.loc 1 152 32
  1020 0176 1946     		mov	r1, r3
  1021 0178 1046     		mov	r0, r2
@@ -1204,22 +1204,22 @@
  1023              	.LVL71:
  1024 017e 0346     		mov	r3, r0
  1025 0180 1C46     		mov	r4, r3
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1026              		.loc 1 152 46
  1027 0182 7B68     		ldr	r3, [r7, #4]
  1028 0184 1A68     		ldr	r2, [r3]	@ float
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1029              		.loc 1 152 56
  1030 0186 7B68     		ldr	r3, [r7, #4]
  1031 0188 DB68     		ldr	r3, [r3, #12]	@ float
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1032              		.loc 1 152 52
  1033 018a 1946     		mov	r1, r3
  1034 018c 1046     		mov	r0, r2
  1035 018e FFF7FEFF 		bl	__aeabi_fmul
  1036              	.LVL72:
  1037 0192 0346     		mov	r3, r0
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1038              		.loc 1 152 21
  1039 0194 1946     		mov	r1, r3
  1040 0196 2046     		mov	r0, r4
@@ -1227,38 +1227,38 @@
  1042              	.LVL73:
  1043 019c 0346     		mov	r3, r0
  1044 019e BB62     		str	r3, [r7, #40]	@ float
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = 0.0f;
  1045              		.loc 1 154 25
  1046 01a0 3B68     		ldr	r3, [r7]
  1047 01a2 524A     		ldr	r2, .L36+12
  1048 01a4 9A60     		str	r2, [r3, #8]	@ float
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(A01, A00);
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(A01, A00);
  1049              		.loc 1 155 26
  1050 01a6 3B68     		ldr	r3, [r7]
  1051 01a8 4FF00002 		mov	r2, #0
  1052 01ac 5A60     		str	r2, [r3, #4]	@ float
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
  1053              		.loc 1 156 26
  1054 01ae F96A     		ldr	r1, [r7, #44]	@ float
  1055 01b0 B86A     		ldr	r0, [r7, #40]	@ float
  1056 01b2 FFF7FEFF 		bl	atan2f
  1057 01b6 0246     		mov	r2, r0
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
  1058              		.loc 1 156 24
  1059 01b8 3B68     		ldr	r3, [r7]
  1060 01ba DA60     		str	r2, [r3, #12]	@ float
  1061              		.loc 1 169 13
  1062 01bc 8BE0     		b	.L30
  1063              	.L34:
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
  1064              		.loc 1 160 25
  1065 01be 7B68     		ldr	r3, [r7, #4]
  1066 01c0 5A68     		ldr	r2, [r3, #4]	@ float
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
  1067              		.loc 1 160 35
  1068 01c2 7B68     		ldr	r3, [r7, #4]
  1069 01c4 DB68     		ldr	r3, [r3, #12]	@ float
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
  1070              		.loc 1 160 31
  1071 01c6 1946     		mov	r1, r3
  1072 01c8 1046     		mov	r0, r2
@@ -1266,22 +1266,22 @@
  1074              	.LVL74:
  1075 01ce 0346     		mov	r3, r0
  1076 01d0 1C46     		mov	r4, r3
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
  1077              		.loc 1 160 45
  1078 01d2 7B68     		ldr	r3, [r7, #4]
  1079 01d4 1A68     		ldr	r2, [r3]	@ float
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
  1080              		.loc 1 160 55
  1081 01d6 7B68     		ldr	r3, [r7, #4]
  1082 01d8 9B68     		ldr	r3, [r3, #8]	@ float
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
  1083              		.loc 1 160 51
  1084 01da 1946     		mov	r1, r3
  1085 01dc 1046     		mov	r0, r2
  1086 01de FFF7FEFF 		bl	__aeabi_fmul
  1087              	.LVL75:
  1088 01e2 0346     		mov	r3, r0
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A10 = (q->q1) * (q->q2) - (q->q0) * (q->q3);
  1089              		.loc 1 160 21
  1090 01e4 1946     		mov	r1, r3
  1091 01e6 2046     		mov	r0, r4
@@ -1289,15 +1289,15 @@
  1093              	.LVL76:
  1094 01ec 0346     		mov	r3, r0
  1095 01ee 7B62     		str	r3, [r7, #36]	@ float
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
  1096              		.loc 1 161 25
  1097 01f0 7B68     		ldr	r3, [r7, #4]
  1098 01f2 5A68     		ldr	r2, [r3, #4]	@ float
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
  1099              		.loc 1 161 35
  1100 01f4 7B68     		ldr	r3, [r7, #4]
  1101 01f6 9B68     		ldr	r3, [r3, #8]	@ float
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
  1102              		.loc 1 161 31
  1103 01f8 1946     		mov	r1, r3
  1104 01fa 1046     		mov	r0, r2
@@ -1305,22 +1305,22 @@
  1106              	.LVL77:
  1107 0200 0346     		mov	r3, r0
  1108 0202 1C46     		mov	r4, r3
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
  1109              		.loc 1 161 45
  1110 0204 7B68     		ldr	r3, [r7, #4]
  1111 0206 1A68     		ldr	r2, [r3]	@ float
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
  1112              		.loc 1 161 55
  1113 0208 7B68     		ldr	r3, [r7, #4]
  1114 020a DB68     		ldr	r3, [r3, #12]	@ float
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
  1115              		.loc 1 161 51
  1116 020c 1946     		mov	r1, r3
  1117 020e 1046     		mov	r0, r2
  1118 0210 FFF7FEFF 		bl	__aeabi_fmul
  1119              	.LVL78:
  1120 0214 0346     		mov	r3, r0
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A11 = 0.5f - ((q->q1) * (q->q1) + (q->q3) * (q->q3));
  1121              		.loc 1 161 21
  1122 0216 1946     		mov	r1, r3
  1123 0218 2046     		mov	r0, r4
@@ -1328,15 +1328,15 @@
  1125              	.LVL79:
  1126 021e 0346     		mov	r3, r0
  1127 0220 3B62     		str	r3, [r7, #32]	@ float
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
  1128              		.loc 1 162 33
  1129 0222 7B68     		ldr	r3, [r7, #4]
  1130 0224 5A68     		ldr	r2, [r3, #4]	@ float
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
  1131              		.loc 1 162 43
  1132 0226 7B68     		ldr	r3, [r7, #4]
  1133 0228 5B68     		ldr	r3, [r3, #4]	@ float
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
  1134              		.loc 1 162 39
  1135 022a 1946     		mov	r1, r3
  1136 022c 1046     		mov	r0, r2
@@ -1344,29 +1344,29 @@
  1138              	.LVL80:
  1139 0232 0346     		mov	r3, r0
  1140 0234 1C46     		mov	r4, r3
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
  1141              		.loc 1 162 53
  1142 0236 7B68     		ldr	r3, [r7, #4]
  1143 0238 DA68     		ldr	r2, [r3, #12]	@ float
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
  1144              		.loc 1 162 63
  1145 023a 7B68     		ldr	r3, [r7, #4]
  1146 023c DB68     		ldr	r3, [r3, #12]	@ float
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
  1147              		.loc 1 162 59
  1148 023e 1946     		mov	r1, r3
  1149 0240 1046     		mov	r0, r2
  1150 0242 FFF7FEFF 		bl	__aeabi_fmul
  1151              	.LVL81:
  1152 0246 0346     		mov	r3, r0
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
  1153              		.loc 1 162 49
  1154 0248 1946     		mov	r1, r3
  1155 024a 2046     		mov	r0, r4
  1156 024c FFF7FEFF 		bl	__aeabi_fadd
  1157              	.LVL82:
  1158 0250 0346     		mov	r3, r0
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 A22 = 0.5f - ((q->q1) * (q->q1) + (q->q2) * (q->q2));
  1159              		.loc 1 162 21
  1160 0252 1946     		mov	r1, r3
  1161 0254 4FF07C50 		mov	r0, #1056964608
@@ -1374,15 +1374,15 @@
  1163              	.LVL83:
  1164 025c 0346     		mov	r3, r0
  1165 025e FB61     		str	r3, [r7, #28]	@ float
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1166              		.loc 1 163 33
  1167 0260 7B68     		ldr	r3, [r7, #4]
  1168 0262 5A68     		ldr	r2, [r3, #4]	@ float
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1169              		.loc 1 163 43
  1170 0264 7B68     		ldr	r3, [r7, #4]
  1171 0266 5B68     		ldr	r3, [r3, #4]	@ float
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1172              		.loc 1 163 39
  1173 0268 1946     		mov	r1, r3
  1174 026a 1046     		mov	r0, r2
@@ -1390,29 +1390,29 @@
  1176              	.LVL84:
  1177 0270 0346     		mov	r3, r0
  1178 0272 1C46     		mov	r4, r3
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1179              		.loc 1 163 53
  1180 0274 7B68     		ldr	r3, [r7, #4]
  1181 0276 9A68     		ldr	r2, [r3, #8]	@ float
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1182              		.loc 1 163 63
  1183 0278 7B68     		ldr	r3, [r7, #4]
  1184 027a 9B68     		ldr	r3, [r3, #8]	@ float
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1185              		.loc 1 163 59
  1186 027c 1946     		mov	r1, r3
  1187 027e 1046     		mov	r0, r2
  1188 0280 FFF7FEFF 		bl	__aeabi_fmul
  1189              	.LVL85:
  1190 0284 0346     		mov	r3, r0
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1191              		.loc 1 163 49
  1192 0286 1946     		mov	r1, r3
  1193 0288 2046     		mov	r0, r4
  1194 028a FFF7FEFF 		bl	__aeabi_fadd
  1195              	.LVL86:
  1196 028e 0346     		mov	r3, r0
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 
  1197              		.loc 1 163 21
  1198 0290 1946     		mov	r1, r3
  1199 0292 4FF07C50 		mov	r0, #1056964608
@@ -1420,16 +1420,16 @@
  1201              	.LVL87:
  1202 029a 0346     		mov	r3, r0
  1203 029c FB60     		str	r3, [r7, #12]	@ float
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-A02, A22);
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-A02, A22);
  1204              		.loc 1 165 27
  1205 029e B869     		ldr	r0, [r7, #24]	@ float
  1206 02a0 FFF7FEFF 		bl	asinf
  1207 02a4 0246     		mov	r2, r0
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-A02, A22);
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Pitch = atan2f(-A02, A22);
  1208              		.loc 1 165 25
  1209 02a6 3B68     		ldr	r3, [r7]
  1210 02a8 9A60     		str	r2, [r3, #8]	@ float
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(-A10, A11);
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(-A10, A11);
  1211              		.loc 1 166 28
  1212 02aa 7B6A     		ldr	r3, [r7, #36]
  1213 02ac 83F00043 		eor	r3, r3, #-2147483648
@@ -1437,11 +1437,11 @@
  1215 02b2 1846     		mov	r0, r3
  1216 02b4 FFF7FEFF 		bl	atan2f
  1217 02b8 0246     		mov	r2, r0
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(-A10, A11);
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 e->Yaw = atan2f(-A10, A11);
  1218              		.loc 1 166 26
  1219 02ba 3B68     		ldr	r3, [r7]
  1220 02bc 5A60     		str	r2, [r3, #4]	@ float
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
  1221              		.loc 1 167 26
  1222 02be 3B6A     		ldr	r3, [r7, #32]
  1223 02c0 83F00043 		eor	r3, r3, #-2147483648
@@ -1449,21 +1449,21 @@
  1225 02c6 1846     		mov	r0, r3
  1226 02c8 FFF7FEFF 		bl	atan2f
  1227 02cc 0246     		mov	r2, r0
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
  1228              		.loc 1 167 24
  1229 02ce 3B68     		ldr	r3, [r7]
  1230 02d0 DA60     		str	r2, [r3, #12]	@ float
  1231              		.loc 1 169 13
  1232 02d2 00E0     		b	.L30
  1233              	.L35:
- 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
- 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         default:
- 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         default:
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             break;
  1234              		.loc 1 172 13
  1235 02d4 00BF     		nop
  1236              	.L30:
- 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  1237              		.loc 1 174 1
  1238 02d6 00BF     		nop
  1239 02d8 3437     		adds	r7, r7, #52
@@ -1490,9 +1490,9 @@
  1261              		.fpu softvfp
  1263              	QuatNormalize:
  1264              	.LFB160:
- 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void QuatNormalize(QuaternionStruct *q, QuaternionStruct *QHat)
- 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void QuatNormalize(QuaternionStruct *q, QuaternionStruct *QHat)
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  1265              		.loc 1 177 1
  1266              		.cfi_startproc
  1267              		@ args = 0, pretend = 0, frame = 16
@@ -1508,12 +1508,12 @@
  1277              		.cfi_def_cfa_register 7
  1278 0006 7860     		str	r0, [r7, #4]
  1279 0008 3960     		str	r1, [r7]
- 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float NormDiv = 0.0f;
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float NormDiv = 0.0f;
  1280              		.loc 1 178 11
  1281 000a 4FF00003 		mov	r3, #0
  1282 000e FB60     		str	r3, [r7, #12]	@ float
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     NormDiv = sqrtf((q->q0) * (q->q0) + (q->q1) * (q->q1) + (q->q2) * (q->q2) + (q->q3) * (q->q3));
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     NormDiv = sqrtf((q->q0) * (q->q0) + (q->q1) * (q->q1) + (q->q2) * (q->q2) + (q->q3) * (q->q3));
  1283              		.loc 1 180 23
  1284 0010 7B68     		ldr	r3, [r7, #4]
  1285 0012 1A68     		ldr	r2, [r3]	@ float
@@ -1586,7 +1586,7 @@
  1352 007c 1846     		mov	r0, r3
  1353 007e FFF7FEFF 		bl	sqrtf
  1354 0082 F860     		str	r0, [r7, #12]	@ float
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     NormDiv = 1.0f / NormDiv;
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     NormDiv = 1.0f / NormDiv;
  1355              		.loc 1 181 13
  1356 0084 F968     		ldr	r1, [r7, #12]	@ float
  1357 0086 4FF07E50 		mov	r0, #1065353216
@@ -1594,8 +1594,8 @@
  1359              	.LVL95:
  1360 008e 0346     		mov	r3, r0
  1361 0090 FB60     		str	r3, [r7, #12]	@ float
- 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QHat->q0 = (q->q0) * NormDiv;
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QHat->q0 = (q->q0) * NormDiv;
  1362              		.loc 1 183 18
  1363 0092 7B68     		ldr	r3, [r7, #4]
  1364 0094 1B68     		ldr	r3, [r3]	@ float
@@ -1609,7 +1609,7 @@
  1372              		.loc 1 183 14
  1373 00a2 3B68     		ldr	r3, [r7]
  1374 00a4 1A60     		str	r2, [r3]	@ float
- 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QHat->q1 = (q->q1) * NormDiv;
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QHat->q1 = (q->q1) * NormDiv;
  1375              		.loc 1 184 18
  1376 00a6 7B68     		ldr	r3, [r7, #4]
  1377 00a8 5B68     		ldr	r3, [r3, #4]	@ float
@@ -1623,7 +1623,7 @@
  1385              		.loc 1 184 14
  1386 00b6 3B68     		ldr	r3, [r7]
  1387 00b8 5A60     		str	r2, [r3, #4]	@ float
- 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QHat->q2 = (q->q2) * NormDiv;
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QHat->q2 = (q->q2) * NormDiv;
  1388              		.loc 1 185 18
  1389 00ba 7B68     		ldr	r3, [r7, #4]
  1390 00bc 9B68     		ldr	r3, [r3, #8]	@ float
@@ -1637,7 +1637,7 @@
  1398              		.loc 1 185 14
  1399 00ca 3B68     		ldr	r3, [r7]
  1400 00cc 9A60     		str	r2, [r3, #8]	@ float
- 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QHat->q3 = (q->q3) * NormDiv;
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QHat->q3 = (q->q3) * NormDiv;
  1401              		.loc 1 186 18
  1402 00ce 7B68     		ldr	r3, [r7, #4]
  1403 00d0 DB68     		ldr	r3, [r3, #12]	@ float
@@ -1651,7 +1651,7 @@
  1411              		.loc 1 186 14
  1412 00de 3B68     		ldr	r3, [r7]
  1413 00e0 DA60     		str	r2, [r3, #12]	@ float
- 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  1414              		.loc 1 187 1
  1415 00e2 00BF     		nop
  1416 00e4 1437     		adds	r7, r7, #20
@@ -1671,9 +1671,9 @@
  1431              		.fpu softvfp
  1433              	CalcJacobianInv:
  1434              	.LFB161:
- 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void CalcJacobianInv(ArmUnion *Link, Matrix3X3Union *j)
- 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void CalcJacobianInv(ArmUnion *Link, Matrix3X3Union *j)
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  1435              		.loc 1 190 1
  1436              		.cfi_startproc
  1437              		@ args = 0, pretend = 0, frame = 32
@@ -1688,11 +1688,11 @@
  1446              		.cfi_def_cfa_register 7
  1447 0006 7860     		str	r0, [r7, #4]
  1448 0008 3960     		str	r1, [r7]
- 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float cm_div = 0;
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float cm_div = 0;
  1449              		.loc 1 191 11
  1450 000a 4FF00003 		mov	r3, #0
  1451 000e FB61     		str	r3, [r7, #28]	@ float
- 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float sm = 0.0f, cm = 0.0f, si = 0.0f, ci = 0.0f;
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float sm = 0.0f, cm = 0.0f, si = 0.0f, ci = 0.0f;
  1452              		.loc 1 192 11
  1453 0010 4FF00003 		mov	r3, #0
  1454 0014 BB61     		str	r3, [r7, #24]	@ float
@@ -1705,38 +1705,38 @@
  1461              		.loc 1 192 44
  1462 0022 4FF00003 		mov	r3, #0
  1463 0026 FB60     		str	r3, [r7, #12]	@ float
- 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sm = sinf(Link->Data.Middle);
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sm = sinf(Link->Data.Middle);
  1464              		.loc 1 194 10
  1465 0028 7B68     		ldr	r3, [r7, #4]
  1466 002a 1B68     		ldr	r3, [r3]	@ float
  1467 002c 1846     		mov	r0, r3
  1468 002e FFF7FEFF 		bl	sinf
  1469 0032 B861     		str	r0, [r7, #24]	@ float
- 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cm = cosf(Link->Data.Middle);
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cm = cosf(Link->Data.Middle);
  1470              		.loc 1 195 10
  1471 0034 7B68     		ldr	r3, [r7, #4]
  1472 0036 1B68     		ldr	r3, [r3]	@ float
  1473 0038 1846     		mov	r0, r3
  1474 003a FFF7FEFF 		bl	cosf
  1475 003e 7861     		str	r0, [r7, #20]	@ float
- 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     si = sinf(Link->Data.Small);
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     si = sinf(Link->Data.Small);
  1476              		.loc 1 196 10
  1477 0040 7B68     		ldr	r3, [r7, #4]
  1478 0042 9B68     		ldr	r3, [r3, #8]	@ float
  1479 0044 1846     		mov	r0, r3
  1480 0046 FFF7FEFF 		bl	sinf
  1481 004a 3861     		str	r0, [r7, #16]	@ float
- 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ci = cosf(Link->Data.Small);
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ci = cosf(Link->Data.Small);
  1482              		.loc 1 197 10
  1483 004c 7B68     		ldr	r3, [r7, #4]
  1484 004e 9B68     		ldr	r3, [r3, #8]	@ float
  1485 0050 1846     		mov	r0, r3
  1486 0052 FFF7FEFF 		bl	cosf
  1487 0056 F860     		str	r0, [r7, #12]	@ float
- 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cm_div = 1.0f / cm;
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cm_div = 1.0f / cm;
  1488              		.loc 1 200 12
  1489 0058 7969     		ldr	r1, [r7, #20]	@ float
  1490 005a 4FF07E50 		mov	r0, #1065353216
@@ -1744,9 +1744,9 @@
  1492              	.LVL100:
  1493 0062 0346     		mov	r3, r0
  1494 0064 FB61     		str	r3, [r7, #28]	@ float
- 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A00 = ci * cm_div;
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A00 = ci * cm_div;
  1495              		.loc 1 203 22
  1496 0066 F969     		ldr	r1, [r7, #28]	@ float
  1497 0068 F868     		ldr	r0, [r7, #12]	@ float
@@ -1757,12 +1757,12 @@
  1502              		.loc 1 203 17
  1503 0072 3B68     		ldr	r3, [r7]
  1504 0074 1A60     		str	r2, [r3]	@ float
- 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A01 = 0.0f;
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A01 = 0.0f;
  1505              		.loc 1 204 17
  1506 0076 3B68     		ldr	r3, [r7]
  1507 0078 4FF00002 		mov	r2, #0
  1508 007c 5A60     		str	r2, [r3, #4]	@ float
- 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A02 = si * cm_div;
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A02 = si * cm_div;
  1509              		.loc 1 205 22
  1510 007e F969     		ldr	r1, [r7, #28]	@ float
  1511 0080 3869     		ldr	r0, [r7, #16]	@ float
@@ -1773,28 +1773,28 @@
  1516              		.loc 1 205 17
  1517 008a 3B68     		ldr	r3, [r7]
  1518 008c 9A60     		str	r2, [r3, #8]	@ float
- 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A10 = -si;
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A10 = -si;
  1519              		.loc 1 208 19
  1520 008e 3B69     		ldr	r3, [r7, #16]
  1521 0090 83F00042 		eor	r2, r3, #-2147483648
  1522              		.loc 1 208 17
  1523 0094 3B68     		ldr	r3, [r7]
  1524 0096 DA60     		str	r2, [r3, #12]	@ float
- 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A11 = 0.0f;
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A11 = 0.0f;
  1525              		.loc 1 209 17
  1526 0098 3B68     		ldr	r3, [r7]
  1527 009a 4FF00002 		mov	r2, #0
  1528 009e 1A61     		str	r2, [r3, #16]	@ float
- 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A12 = ci;
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A12 = ci;
  1529              		.loc 1 210 17
  1530 00a0 3B68     		ldr	r3, [r7]
  1531 00a2 FA68     		ldr	r2, [r7, #12]	@ float
  1532 00a4 5A61     		str	r2, [r3, #20]	@ float
- 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A20 = ci * sm * cm_div;
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A20 = ci * sm * cm_div;
  1533              		.loc 1 213 22
  1534 00a6 B969     		ldr	r1, [r7, #24]	@ float
  1535 00a8 F868     		ldr	r0, [r7, #12]	@ float
@@ -1811,12 +1811,12 @@
  1546              		.loc 1 213 17
  1547 00bc 3B68     		ldr	r3, [r7]
  1548 00be 9A61     		str	r2, [r3, #24]	@ float
- 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A21 = 1.0f;
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A21 = 1.0f;
  1549              		.loc 1 214 17
  1550 00c0 3B68     		ldr	r3, [r7]
  1551 00c2 4FF07E52 		mov	r2, #1065353216
  1552 00c6 DA61     		str	r2, [r3, #28]	@ float
- 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A22 = si * sm * cm_div;
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A22 = si * sm * cm_div;
  1553              		.loc 1 215 22
  1554 00c8 B969     		ldr	r1, [r7, #24]	@ float
  1555 00ca 3869     		ldr	r0, [r7, #16]	@ float
@@ -1833,7 +1833,7 @@
  1566              		.loc 1 215 17
  1567 00de 3B68     		ldr	r3, [r7]
  1568 00e0 1A62     		str	r2, [r3, #32]	@ float
- 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  1569              		.loc 1 216 1
  1570 00e2 00BF     		nop
  1571 00e4 2037     		adds	r7, r7, #32
@@ -1853,9 +1853,9 @@
  1586              		.fpu softvfp
  1588              	CalcJacobianTrans:
  1589              	.LFB162:
- 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void CalcJacobianTrans(ArmUnion *Link, Matrix3X3Union *j)
- 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void CalcJacobianTrans(ArmUnion *Link, Matrix3X3Union *j)
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  1590              		.loc 1 219 1
  1591              		.cfi_startproc
  1592              		@ args = 0, pretend = 0, frame = 24
@@ -1870,7 +1870,7 @@
  1601              		.cfi_def_cfa_register 7
  1602 0006 7860     		str	r0, [r7, #4]
  1603 0008 3960     		str	r1, [r7]
- 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float sm = 0.0f, cm = 0.0f, si = 0.0f, ci = 0.0f;
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float sm = 0.0f, cm = 0.0f, si = 0.0f, ci = 0.0f;
  1604              		.loc 1 220 11
  1605 000a 4FF00003 		mov	r3, #0
  1606 000e 7B61     		str	r3, [r7, #20]	@ float
@@ -1883,38 +1883,38 @@
  1613              		.loc 1 220 44
  1614 001c 4FF00003 		mov	r3, #0
  1615 0020 BB60     		str	r3, [r7, #8]	@ float
- 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sm = sinf(Link->Data.Middle);
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     sm = sinf(Link->Data.Middle);
  1616              		.loc 1 222 10
  1617 0022 7B68     		ldr	r3, [r7, #4]
  1618 0024 1B68     		ldr	r3, [r3]	@ float
  1619 0026 1846     		mov	r0, r3
  1620 0028 FFF7FEFF 		bl	sinf
  1621 002c 7861     		str	r0, [r7, #20]	@ float
- 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cm = cosf(Link->Data.Middle);
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     cm = cosf(Link->Data.Middle);
  1622              		.loc 1 223 10
  1623 002e 7B68     		ldr	r3, [r7, #4]
  1624 0030 1B68     		ldr	r3, [r3]	@ float
  1625 0032 1846     		mov	r0, r3
  1626 0034 FFF7FEFF 		bl	cosf
  1627 0038 3861     		str	r0, [r7, #16]	@ float
- 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     si = sinf(Link->Data.Small);
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     si = sinf(Link->Data.Small);
  1628              		.loc 1 224 10
  1629 003a 7B68     		ldr	r3, [r7, #4]
  1630 003c 9B68     		ldr	r3, [r3, #8]	@ float
  1631 003e 1846     		mov	r0, r3
  1632 0040 FFF7FEFF 		bl	sinf
  1633 0044 F860     		str	r0, [r7, #12]	@ float
- 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ci = cosf(Link->Data.Small);
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ci = cosf(Link->Data.Small);
  1634              		.loc 1 225 10
  1635 0046 7B68     		ldr	r3, [r7, #4]
  1636 0048 9B68     		ldr	r3, [r3, #8]	@ float
  1637 004a 1846     		mov	r0, r3
  1638 004c FFF7FEFF 		bl	cosf
  1639 0050 B860     		str	r0, [r7, #8]	@ float
- 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A00 = ci * cm;
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A00 = ci * cm;
  1640              		.loc 1 228 22
  1641 0052 3969     		ldr	r1, [r7, #16]	@ float
  1642 0054 B868     		ldr	r0, [r7, #8]	@ float
@@ -1925,14 +1925,14 @@
  1647              		.loc 1 228 17
  1648 005e 3B68     		ldr	r3, [r7]
  1649 0060 1A60     		str	r2, [r3]	@ float
- 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A01 = -sm;
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A01 = -sm;
  1650              		.loc 1 229 19
  1651 0062 7B69     		ldr	r3, [r7, #20]
  1652 0064 83F00042 		eor	r2, r3, #-2147483648
  1653              		.loc 1 229 17
  1654 0068 3B68     		ldr	r3, [r7]
  1655 006a 5A60     		str	r2, [r3, #4]	@ float
- 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A02 = cm * si;
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A02 = cm * si;
  1656              		.loc 1 230 22
  1657 006c F968     		ldr	r1, [r7, #12]	@ float
  1658 006e 3869     		ldr	r0, [r7, #16]	@ float
@@ -1943,43 +1943,43 @@
  1663              		.loc 1 230 17
  1664 0078 3B68     		ldr	r3, [r7]
  1665 007a 9A60     		str	r2, [r3, #8]	@ float
- 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A10 = -si;
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A10 = -si;
  1666              		.loc 1 233 19
  1667 007c FB68     		ldr	r3, [r7, #12]
  1668 007e 83F00042 		eor	r2, r3, #-2147483648
  1669              		.loc 1 233 17
  1670 0082 3B68     		ldr	r3, [r7]
  1671 0084 DA60     		str	r2, [r3, #12]	@ float
- 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A11 = 0.0f;
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A11 = 0.0f;
  1672              		.loc 1 234 17
  1673 0086 3B68     		ldr	r3, [r7]
  1674 0088 4FF00002 		mov	r2, #0
  1675 008c 1A61     		str	r2, [r3, #16]	@ float
- 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A12 = ci;
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A12 = ci;
  1676              		.loc 1 235 17
  1677 008e 3B68     		ldr	r3, [r7]
  1678 0090 BA68     		ldr	r2, [r7, #8]	@ float
  1679 0092 5A61     		str	r2, [r3, #20]	@ float
- 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A20 = 0.0f;
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A20 = 0.0f;
  1680              		.loc 1 238 17
  1681 0094 3B68     		ldr	r3, [r7]
  1682 0096 4FF00002 		mov	r2, #0
  1683 009a 9A61     		str	r2, [r3, #24]	@ float
- 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A21 = 1.0f;
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A21 = 1.0f;
  1684              		.loc 1 239 17
  1685 009c 3B68     		ldr	r3, [r7]
  1686 009e 4FF07E52 		mov	r2, #1065353216
  1687 00a2 DA61     		str	r2, [r3, #28]	@ float
- 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A22 = 0.0f;
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     j->Data.A22 = 0.0f;
  1688              		.loc 1 240 17
  1689 00a4 3B68     		ldr	r3, [r7]
  1690 00a6 4FF00002 		mov	r2, #0
  1691 00aa 1A62     		str	r2, [r3, #32]	@ float
- 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  1692              		.loc 1 241 1
  1693 00ac 00BF     		nop
  1694 00ae 1837     		adds	r7, r7, #24
@@ -1999,11 +1999,11 @@
  1709              		.fpu softvfp
  1711              	MatrixAdd:
  1712              	.LFB163:
- 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void MatrixAdd(uint8_t ABRow, uint8_t ABCol, float *m_a, float *m_b, float *m_c)
- 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void MatrixAdd(uint8_t ABRow, uint8_t ABCol, float *m_a, float *m_b, float *m_c)
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  1713              		.loc 1 246 1
  1714              		.cfi_startproc
  1715              		@ args = 4, pretend = 0, frame = 24
@@ -2023,35 +2023,35 @@
  1729 000c FB73     		strb	r3, [r7, #15]
  1730 000e 0B46     		mov	r3, r1
  1731 0010 BB73     		strb	r3, [r7, #14]
- 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t i = 0, j = 0;
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t i = 0, j = 0;
  1732              		.loc 1 247 13
  1733 0012 0023     		movs	r3, #0
  1734 0014 FB75     		strb	r3, [r7, #23]
  1735              		.loc 1 247 20
  1736 0016 0023     		movs	r3, #0
  1737 0018 BB75     		strb	r3, [r7, #22]
- 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t Index = 0;
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t Index = 0;
  1738              		.loc 1 248 13
  1739 001a 0023     		movs	r3, #0
  1740 001c 7B75     		strb	r3, [r7, #21]
- 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     for(i = 0; i < ABRow; i++)
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     for(i = 0; i < ABRow; i++)
  1741              		.loc 1 250 11
  1742 001e 0023     		movs	r3, #0
  1743 0020 FB75     		strb	r3, [r7, #23]
  1744              		.loc 1 250 5
  1745 0022 26E0     		b	.L42
  1746              	.L45:
- 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         for(j = 0; j < ABCol; j++)
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         for(j = 0; j < ABCol; j++)
  1747              		.loc 1 252 15
  1748 0024 0023     		movs	r3, #0
  1749 0026 BB75     		strb	r3, [r7, #22]
  1750              		.loc 1 252 9
  1751 0028 1CE0     		b	.L43
  1752              	.L44:
- 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
- 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Index = i * ABCol + j;
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Index = i * ABCol + j;
  1753              		.loc 1 254 23 discriminator 3
  1754 002a FA7D     		ldrb	r2, [r7, #23]
  1755 002c BB7B     		ldrb	r3, [r7, #14]
@@ -2061,7 +2061,7 @@
  1759 0034 BB7D     		ldrb	r3, [r7, #22]
  1760 0036 1344     		add	r3, r3, r2
  1761 0038 7B75     		strb	r3, [r7, #21]
- 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             m_c[Index] = m_a[Index] + m_b[Index];
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             m_c[Index] = m_a[Index] + m_b[Index];
  1762              		.loc 1 255 29 discriminator 3
  1763 003a 7B7D     		ldrb	r3, [r7, #21]	@ zero_extendqisi2
  1764 003c 9B00     		lsls	r3, r3, #2
@@ -2085,33 +2085,33 @@
  1782 005a 0346     		mov	r3, r0
  1783              		.loc 1 255 24 discriminator 3
  1784 005c 2360     		str	r3, [r4]	@ float
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
  1785              		.loc 1 252 32 discriminator 3
  1786 005e BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
  1787 0060 0133     		adds	r3, r3, #1
  1788 0062 BB75     		strb	r3, [r7, #22]
  1789              	.L43:
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
  1790              		.loc 1 252 9 discriminator 1
  1791 0064 BA7D     		ldrb	r2, [r7, #22]	@ zero_extendqisi2
  1792 0066 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
  1793 0068 9A42     		cmp	r2, r3
  1794 006a DED3     		bcc	.L44
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
  1795              		.loc 1 250 28 discriminator 2
  1796 006c FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
  1797 006e 0133     		adds	r3, r3, #1
  1798 0070 FB75     		strb	r3, [r7, #23]
  1799              	.L42:
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
  1800              		.loc 1 250 5 discriminator 1
  1801 0072 FA7D     		ldrb	r2, [r7, #23]	@ zero_extendqisi2
  1802 0074 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  1803 0076 9A42     		cmp	r2, r3
  1804 0078 D4D3     		bcc	.L45
- 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
- 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  1805              		.loc 1 258 1
  1806 007a 00BF     		nop
  1807 007c 00BF     		nop
@@ -2132,9 +2132,9 @@
  1823              		.fpu softvfp
  1825              	MatrixSub:
  1826              	.LFB164:
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void MatrixSub(uint8_t ABRow, uint8_t ABCol, float *m_a, float *m_b, float *m_c)
- 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void MatrixSub(uint8_t ABRow, uint8_t ABCol, float *m_a, float *m_b, float *m_c)
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  1827              		.loc 1 261 1
  1828              		.cfi_startproc
  1829              		@ args = 4, pretend = 0, frame = 24
@@ -2154,35 +2154,35 @@
  1843 000c FB73     		strb	r3, [r7, #15]
  1844 000e 0B46     		mov	r3, r1
  1845 0010 BB73     		strb	r3, [r7, #14]
- 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t i = 0, j = 0;
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t i = 0, j = 0;
  1846              		.loc 1 262 13
  1847 0012 0023     		movs	r3, #0
  1848 0014 FB75     		strb	r3, [r7, #23]
  1849              		.loc 1 262 20
  1850 0016 0023     		movs	r3, #0
  1851 0018 BB75     		strb	r3, [r7, #22]
- 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t Index = 0;
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t Index = 0;
  1852              		.loc 1 263 13
  1853 001a 0023     		movs	r3, #0
  1854 001c 7B75     		strb	r3, [r7, #21]
- 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     for(i = 0; i < ABRow; i++)
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     for(i = 0; i < ABRow; i++)
  1855              		.loc 1 265 11
  1856 001e 0023     		movs	r3, #0
  1857 0020 FB75     		strb	r3, [r7, #23]
  1858              		.loc 1 265 5
  1859 0022 26E0     		b	.L47
  1860              	.L50:
- 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         for(j = 0; j < ABCol; j++)
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         for(j = 0; j < ABCol; j++)
  1861              		.loc 1 267 15
  1862 0024 0023     		movs	r3, #0
  1863 0026 BB75     		strb	r3, [r7, #22]
  1864              		.loc 1 267 9
  1865 0028 1CE0     		b	.L48
  1866              	.L49:
- 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
- 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Index = i * ABCol + j;
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Index = i * ABCol + j;
  1867              		.loc 1 269 23 discriminator 3
  1868 002a FA7D     		ldrb	r2, [r7, #23]
  1869 002c BB7B     		ldrb	r3, [r7, #14]
@@ -2192,7 +2192,7 @@
  1873 0034 BB7D     		ldrb	r3, [r7, #22]
  1874 0036 1344     		add	r3, r3, r2
  1875 0038 7B75     		strb	r3, [r7, #21]
- 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             m_c[Index] = m_a[Index] - m_b[Index];
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             m_c[Index] = m_a[Index] - m_b[Index];
  1876              		.loc 1 270 29 discriminator 3
  1877 003a 7B7D     		ldrb	r3, [r7, #21]	@ zero_extendqisi2
  1878 003c 9B00     		lsls	r3, r3, #2
@@ -2216,33 +2216,33 @@
  1896 005a 0346     		mov	r3, r0
  1897              		.loc 1 270 24 discriminator 3
  1898 005c 2360     		str	r3, [r4]	@ float
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
  1899              		.loc 1 267 32 discriminator 3
  1900 005e BB7D     		ldrb	r3, [r7, #22]	@ zero_extendqisi2
  1901 0060 0133     		adds	r3, r3, #1
  1902 0062 BB75     		strb	r3, [r7, #22]
  1903              	.L48:
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
  1904              		.loc 1 267 9 discriminator 1
  1905 0064 BA7D     		ldrb	r2, [r7, #22]	@ zero_extendqisi2
  1906 0066 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
  1907 0068 9A42     		cmp	r2, r3
  1908 006a DED3     		bcc	.L49
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
  1909              		.loc 1 265 28 discriminator 2
  1910 006c FB7D     		ldrb	r3, [r7, #23]	@ zero_extendqisi2
  1911 006e 0133     		adds	r3, r3, #1
  1912 0070 FB75     		strb	r3, [r7, #23]
  1913              	.L47:
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
  1914              		.loc 1 265 5 discriminator 1
  1915 0072 FA7D     		ldrb	r2, [r7, #23]	@ zero_extendqisi2
  1916 0074 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  1917 0076 9A42     		cmp	r2, r3
  1918 0078 D4D3     		bcc	.L50
- 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
- 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  1919              		.loc 1 273 1
  1920 007a 00BF     		nop
  1921 007c 00BF     		nop
@@ -2263,9 +2263,9 @@
  1937              		.fpu softvfp
  1939              	MatrixMultiply:
  1940              	.LFB165:
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void MatrixMultiply(uint8_t ARow, uint8_t AColBRow, uint8_t BCol, float *m_a, float *m_b, float *m_
- 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void MatrixMultiply(uint8_t ARow, uint8_t AColBRow, uint8_t BCol, float *m_a, float *m_b, float *m_
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  1941              		.loc 1 276 1
  1942              		.cfi_startproc
  1943              		@ args = 8, pretend = 0, frame = 16
@@ -2287,7 +2287,7 @@
  1959 000e BB71     		strb	r3, [r7, #6]
  1960 0010 1346     		mov	r3, r2
  1961 0012 7B71     		strb	r3, [r7, #5]
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t i = 0, j = 0, k = 0;
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     uint8_t i = 0, j = 0, k = 0;
  1962              		.loc 1 277 13
  1963 0014 0023     		movs	r3, #0
  1964 0016 FB73     		strb	r3, [r7, #15]
@@ -2297,8 +2297,8 @@
  1968              		.loc 1 277 27
  1969 001c 0023     		movs	r3, #0
  1970 001e 7B73     		strb	r3, [r7, #13]
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     memset((uint8_t*)m_c, 0, ARow * BCol * 4);
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     memset((uint8_t*)m_c, 0, ARow * BCol * 4);
  1971              		.loc 1 279 35
  1972 0020 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  1973 0022 7A79     		ldrb	r2, [r7, #5]	@ zero_extendqisi2
@@ -2310,31 +2310,31 @@
  1979 002c 0021     		movs	r1, #0
  1980 002e 786A     		ldr	r0, [r7, #36]
  1981 0030 FFF7FEFF 		bl	memset
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     for(i = 0; i < ARow; i++)
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     for(i = 0; i < ARow; i++)
  1982              		.loc 1 280 11
  1983 0034 0023     		movs	r3, #0
  1984 0036 FB73     		strb	r3, [r7, #15]
  1985              		.loc 1 280 5
  1986 0038 47E0     		b	.L52
  1987              	.L57:
- 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         for(j = 0; j < AColBRow; j++)
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         for(j = 0; j < AColBRow; j++)
  1988              		.loc 1 282 15
  1989 003a 0023     		movs	r3, #0
  1990 003c BB73     		strb	r3, [r7, #14]
  1991              		.loc 1 282 9
  1992 003e 3DE0     		b	.L53
  1993              	.L56:
- 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             for(k = 0; k < BCol; k++)
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             for(k = 0; k < BCol; k++)
  1994              		.loc 1 284 19
  1995 0040 0023     		movs	r3, #0
  1996 0042 7B73     		strb	r3, [r7, #13]
  1997              		.loc 1 284 13
  1998 0044 33E0     		b	.L54
  1999              	.L55:
- 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 m_c[i * BCol + k] += m_a[i * AColBRow + j] * m_b[j * BCol + k];
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****                 m_c[i * BCol + k] += m_a[i * AColBRow + j] * m_b[j * BCol + k];
  2000              		.loc 1 286 35 discriminator 3
  2001 0046 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  2002 0048 7A79     		ldrb	r2, [r7, #5]	@ zero_extendqisi2
@@ -2389,46 +2389,46 @@
  2051              	.LVL112:
  2052 00a4 0346     		mov	r3, r0
  2053 00a6 2360     		str	r3, [r4]	@ float
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
  2054              		.loc 1 284 35 discriminator 3
  2055 00a8 7B7B     		ldrb	r3, [r7, #13]	@ zero_extendqisi2
  2056 00aa 0133     		adds	r3, r3, #1
  2057 00ac 7B73     		strb	r3, [r7, #13]
  2058              	.L54:
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             {
  2059              		.loc 1 284 13 discriminator 1
  2060 00ae 7A7B     		ldrb	r2, [r7, #13]	@ zero_extendqisi2
  2061 00b0 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
  2062 00b2 9A42     		cmp	r2, r3
  2063 00b4 C7D3     		bcc	.L55
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
  2064              		.loc 1 282 35 discriminator 2
  2065 00b6 BB7B     		ldrb	r3, [r7, #14]	@ zero_extendqisi2
  2066 00b8 0133     		adds	r3, r3, #1
  2067 00ba BB73     		strb	r3, [r7, #14]
  2068              	.L53:
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
  2069              		.loc 1 282 9 discriminator 1
  2070 00bc BA7B     		ldrb	r2, [r7, #14]	@ zero_extendqisi2
  2071 00be BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  2072 00c0 9A42     		cmp	r2, r3
  2073 00c2 BDD3     		bcc	.L56
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
  2074              		.loc 1 280 27 discriminator 2
  2075 00c4 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
  2076 00c6 0133     		adds	r3, r3, #1
  2077 00c8 FB73     		strb	r3, [r7, #15]
  2078              	.L52:
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
  2079              		.loc 1 280 5 discriminator 1
  2080 00ca FA7B     		ldrb	r2, [r7, #15]	@ zero_extendqisi2
  2081 00cc FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  2082 00ce 9A42     		cmp	r2, r3
  2083 00d0 B3D3     		bcc	.L57
- 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
- 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             }
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2084              		.loc 1 290 1
  2085 00d2 00BF     		nop
  2086 00d4 00BF     		nop
@@ -2449,8 +2449,8 @@
  2102              		.fpu softvfp
  2104              	AttitudeUpdata:
  2105              	.LFB166:
- 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void AttitudeUpdata(void)
- 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void AttitudeUpdata(void)
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2106              		.loc 1 292 1
  2107              		.cfi_startproc
  2108              		@ args = 0, pretend = 0, frame = 24
@@ -2464,7 +2464,7 @@
  2116              		.cfi_def_cfa_offset 40
  2117 0004 00AF     		add	r7, sp, #0
  2118              		.cfi_def_cfa_register 7
- 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float DeltaQ0 = 0.0f, DeltaQ1 = 0.0f, DeltaQ2 = 0.0f, DeltaQ3 = 0.0f;
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float DeltaQ0 = 0.0f, DeltaQ1 = 0.0f, DeltaQ2 = 0.0f, DeltaQ3 = 0.0f;
  2119              		.loc 1 293 11
  2120 0006 4FF00003 		mov	r3, #0
  2121 000a 7B61     		str	r3, [r7, #20]	@ float
@@ -2477,13 +2477,13 @@
  2128              		.loc 1 293 59
  2129 0018 4FF00003 		mov	r3, #0
  2130 001c BB60     		str	r3, [r7, #8]	@ float
- 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float half_dt = 0.5f / CLOSELOOP_EXECUTE_FREQ;
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float half_dt = 0.5f / CLOSELOOP_EXECUTE_FREQ;
  2131              		.loc 1 294 11
  2132 001e 864B     		ldr	r3, .L59
  2133 0020 7B60     		str	r3, [r7, #4]	@ float
- 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaQ0 = (-(GimbalSystem.QuaternionPlane.q1) * (GimbalSystem.PlaneRadsCali.Data.X) - (GimbalSy
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaQ0 = (-(GimbalSystem.QuaternionPlane.q1) * (GimbalSystem.PlaneRadsCali.Data.X) - (GimbalSy
  2134              		.loc 1 297 46
  2135 0022 864B     		ldr	r3, .L59+4
  2136 0024 D3F8C430 		ldr	r3, [r3, #196]	@ float
@@ -2543,7 +2543,7 @@
  2190              	.LVL118:
  2191 0088 0346     		mov	r3, r0
  2192 008a 7B61     		str	r3, [r7, #20]	@ float
- 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaQ1 = ((GimbalSystem.QuaternionPlane.q0) * (GimbalSystem.PlaneRadsCali.Data.X) + (GimbalSys
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaQ1 = ((GimbalSystem.QuaternionPlane.q0) * (GimbalSystem.PlaneRadsCali.Data.X) + (GimbalSys
  2193              		.loc 1 298 45
  2194 008c 6B4B     		ldr	r3, .L59+4
  2195 008e D3F8C030 		ldr	r3, [r3, #192]	@ float
@@ -2601,7 +2601,7 @@
  2247              	.LVL124:
  2248 00ee 0346     		mov	r3, r0
  2249 00f0 3B61     		str	r3, [r7, #16]	@ float
- 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaQ2 = ((GimbalSystem.QuaternionPlane.q0) * (GimbalSystem.PlaneRadsCali.Data.Y) - (GimbalSys
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaQ2 = ((GimbalSystem.QuaternionPlane.q0) * (GimbalSystem.PlaneRadsCali.Data.Y) - (GimbalSys
  2250              		.loc 1 299 45
  2251 00f2 524B     		ldr	r3, .L59+4
  2252 00f4 D3F8C030 		ldr	r3, [r3, #192]	@ float
@@ -2659,7 +2659,7 @@
  2304              	.LVL130:
  2305 0154 0346     		mov	r3, r0
  2306 0156 FB60     		str	r3, [r7, #12]	@ float
- 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaQ3 = ((GimbalSystem.QuaternionPlane.q0) * (GimbalSystem.PlaneRadsCali.Data.Z) + (GimbalSys
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaQ3 = ((GimbalSystem.QuaternionPlane.q0) * (GimbalSystem.PlaneRadsCali.Data.Z) + (GimbalSys
  2307              		.loc 1 300 45
  2308 0158 384B     		ldr	r3, .L59+4
  2309 015a D3F8C030 		ldr	r3, [r3, #192]	@ float
@@ -2717,8 +2717,8 @@
  2361              	.LVL136:
  2362 01ba 0346     		mov	r3, r0
  2363 01bc BB60     		str	r3, [r7, #8]	@ float
- 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     GimbalSystem.QuaternionPlane.q0 += DeltaQ0;
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     GimbalSystem.QuaternionPlane.q0 += DeltaQ0;
  2364              		.loc 1 302 37
  2365 01be 1F4B     		ldr	r3, .L59+4
  2366 01c0 D3F8C030 		ldr	r3, [r3, #192]	@ float
@@ -2730,7 +2730,7 @@
  2372 01ce 1A46     		mov	r2, r3
  2373 01d0 1A4B     		ldr	r3, .L59+4
  2374 01d2 C3F8C020 		str	r2, [r3, #192]	@ float
- 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     GimbalSystem.QuaternionPlane.q1 += DeltaQ1;
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     GimbalSystem.QuaternionPlane.q1 += DeltaQ1;
  2375              		.loc 1 303 37
  2376 01d6 194B     		ldr	r3, .L59+4
  2377 01d8 D3F8C430 		ldr	r3, [r3, #196]	@ float
@@ -2742,7 +2742,7 @@
  2383 01e6 1A46     		mov	r2, r3
  2384 01e8 144B     		ldr	r3, .L59+4
  2385 01ea C3F8C420 		str	r2, [r3, #196]	@ float
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     GimbalSystem.QuaternionPlane.q2 += DeltaQ2;
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     GimbalSystem.QuaternionPlane.q2 += DeltaQ2;
  2386              		.loc 1 304 37
  2387 01ee 134B     		ldr	r3, .L59+4
  2388 01f0 D3F8C830 		ldr	r3, [r3, #200]	@ float
@@ -2754,7 +2754,7 @@
  2394 01fe 1A46     		mov	r2, r3
  2395 0200 0E4B     		ldr	r3, .L59+4
  2396 0202 C3F8C820 		str	r2, [r3, #200]	@ float
- 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     GimbalSystem.QuaternionPlane.q3 += DeltaQ3;
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     GimbalSystem.QuaternionPlane.q3 += DeltaQ3;
  2397              		.loc 1 305 37
  2398 0206 0D4B     		ldr	r3, .L59+4
  2399 0208 D3F8CC30 		ldr	r3, [r3, #204]	@ float
@@ -2766,21 +2766,21 @@
  2405 0216 1A46     		mov	r2, r3
  2406 0218 084B     		ldr	r3, .L59+4
  2407 021a C3F8CC20 		str	r2, [r3, #204]	@ float
- 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QuatNormalize(&GimbalSystem.QuaternionPlane, &GimbalSystem.QuaternionPlane);
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     QuatNormalize(&GimbalSystem.QuaternionPlane, &GimbalSystem.QuaternionPlane);
  2408              		.loc 1 308 5
  2409 021e 0849     		ldr	r1, .L59+8
  2410 0220 0748     		ldr	r0, .L59+8
  2411 0222 FFF7FEFF 		bl	QuatNormalize
- 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Quat2Euler(&GimbalSystem.QuaternionPlane, &GimbalSystem.GeoEulerQuat);
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Quat2Euler(&GimbalSystem.QuaternionPlane, &GimbalSystem.GeoEulerQuat);
  2412              		.loc 1 311 5
  2413 0226 0749     		ldr	r1, .L59+12
  2414 0228 0548     		ldr	r0, .L59+8
  2415 022a FFF7FEFF 		bl	Quat2Euler
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2416              		.loc 1 312 1
  2417 022e 00BF     		nop
  2418 0230 1C37     		adds	r7, r7, #28
@@ -2807,9 +2807,9 @@
  2440              		.fpu softvfp
  2442              	PidSetKp:
  2443              	.LFB167:
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetKp(float Kp, PidStruct *Pid)
- 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetKp(float Kp, PidStruct *Pid)
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2444              		.loc 1 315 1
  2445              		.cfi_startproc
  2446              		@ args = 0, pretend = 0, frame = 8
@@ -2824,12 +2824,12 @@
  2455              		.cfi_def_cfa_register 7
  2456 0006 7860     		str	r0, [r7, #4]	@ float
  2457 0008 3960     		str	r1, [r7]
- 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->Kp = Kp;
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->Kp = Kp;
  2458              		.loc 1 316 13
  2459 000a 3B68     		ldr	r3, [r7]
  2460 000c 7A68     		ldr	r2, [r7, #4]	@ float
  2461 000e 1A60     		str	r2, [r3]	@ float
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2462              		.loc 1 317 1
  2463 0010 00BF     		nop
  2464 0012 0C37     		adds	r7, r7, #12
@@ -2852,9 +2852,9 @@
  2482              		.fpu softvfp
  2484              	PidSetKi:
  2485              	.LFB168:
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetKi(float Ki, PidStruct *Pid)
- 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetKi(float Ki, PidStruct *Pid)
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2486              		.loc 1 320 1
  2487              		.cfi_startproc
  2488              		@ args = 0, pretend = 0, frame = 8
@@ -2869,12 +2869,12 @@
  2497              		.cfi_def_cfa_register 7
  2498 0006 7860     		str	r0, [r7, #4]	@ float
  2499 0008 3960     		str	r1, [r7]
- 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->Ki = Ki;
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->Ki = Ki;
  2500              		.loc 1 321 13
  2501 000a 3B68     		ldr	r3, [r7]
  2502 000c 7A68     		ldr	r2, [r7, #4]	@ float
  2503 000e 5A60     		str	r2, [r3, #4]	@ float
- 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2504              		.loc 1 322 1
  2505 0010 00BF     		nop
  2506 0012 0C37     		adds	r7, r7, #12
@@ -2897,9 +2897,9 @@
  2524              		.fpu softvfp
  2526              	PidSetIntegral:
  2527              	.LFB169:
- 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetIntegral(float Integral, PidStruct *Pid)
- 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetIntegral(float Integral, PidStruct *Pid)
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2528              		.loc 1 325 1
  2529              		.cfi_startproc
  2530              		@ args = 0, pretend = 0, frame = 8
@@ -2914,12 +2914,12 @@
  2539              		.cfi_def_cfa_register 7
  2540 0006 7860     		str	r0, [r7, #4]	@ float
  2541 0008 3960     		str	r1, [r7]
- 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->Integral = Integral;
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->Integral = Integral;
  2542              		.loc 1 326 19
  2543 000a 3B68     		ldr	r3, [r7]
  2544 000c 7A68     		ldr	r2, [r7, #4]	@ float
  2545 000e 9A60     		str	r2, [r3, #8]	@ float
- 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2546              		.loc 1 327 1
  2547 0010 00BF     		nop
  2548 0012 0C37     		adds	r7, r7, #12
@@ -2942,9 +2942,9 @@
  2566              		.fpu softvfp
  2568              	PidSetIntegralLimit:
  2569              	.LFB170:
- 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetIntegralLimit(float LimitMin, float LimitMax, PidStruct *Pid)
- 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetIntegralLimit(float LimitMin, float LimitMax, PidStruct *Pid)
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2570              		.loc 1 330 1
  2571              		.cfi_startproc
  2572              		@ args = 0, pretend = 0, frame = 16
@@ -2960,17 +2960,17 @@
  2582 0006 F860     		str	r0, [r7, #12]	@ float
  2583 0008 B960     		str	r1, [r7, #8]	@ float
  2584 000a 7A60     		str	r2, [r7, #4]
- 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->IntegralMin = LimitMin;
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->IntegralMin = LimitMin;
  2585              		.loc 1 331 22
  2586 000c 7B68     		ldr	r3, [r7, #4]
  2587 000e FA68     		ldr	r2, [r7, #12]	@ float
  2588 0010 DA60     		str	r2, [r3, #12]	@ float
- 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->IntegralMax = LimitMax;
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->IntegralMax = LimitMax;
  2589              		.loc 1 332 22
  2590 0012 7B68     		ldr	r3, [r7, #4]
  2591 0014 BA68     		ldr	r2, [r7, #8]	@ float
  2592 0016 1A61     		str	r2, [r3, #16]	@ float
- 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2593              		.loc 1 333 1
  2594 0018 00BF     		nop
  2595 001a 1437     		adds	r7, r7, #20
@@ -2993,9 +2993,9 @@
  2613              		.fpu softvfp
  2615              	PidSetKd:
  2616              	.LFB171:
- 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetKd(float Kd, PidStruct *Pid)
- 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetKd(float Kd, PidStruct *Pid)
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2617              		.loc 1 336 1
  2618              		.cfi_startproc
  2619              		@ args = 0, pretend = 0, frame = 8
@@ -3010,12 +3010,12 @@
  2628              		.cfi_def_cfa_register 7
  2629 0006 7860     		str	r0, [r7, #4]	@ float
  2630 0008 3960     		str	r1, [r7]
- 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->Kd = Kd;
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->Kd = Kd;
  2631              		.loc 1 337 13
  2632 000a 3B68     		ldr	r3, [r7]
  2633 000c 7A68     		ldr	r2, [r7, #4]	@ float
  2634 000e DA61     		str	r2, [r3, #28]	@ float
- 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2635              		.loc 1 338 1
  2636 0010 00BF     		nop
  2637 0012 0C37     		adds	r7, r7, #12
@@ -3038,9 +3038,9 @@
  2655              		.fpu softvfp
  2657              	PidSetKdFilterCoef:
  2658              	.LFB172:
- 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetKdFilterCoef(float FliterCoef, PidStruct *Pid)
- 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetKdFilterCoef(float FliterCoef, PidStruct *Pid)
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2659              		.loc 1 341 1
  2660              		.cfi_startproc
  2661              		@ args = 0, pretend = 0, frame = 8
@@ -3055,12 +3055,12 @@
  2670              		.cfi_def_cfa_register 7
  2671 0006 7860     		str	r0, [r7, #4]	@ float
  2672 0008 3960     		str	r1, [r7]
- 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->FliterCoef = FliterCoef;
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->FliterCoef = FliterCoef;
  2673              		.loc 1 342 21
  2674 000a 3B68     		ldr	r3, [r7]
  2675 000c 7A68     		ldr	r2, [r7, #4]	@ float
  2676 000e 5A62     		str	r2, [r3, #36]	@ float
- 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2677              		.loc 1 343 1
  2678 0010 00BF     		nop
  2679 0012 0C37     		adds	r7, r7, #12
@@ -3083,9 +3083,9 @@
  2697              		.fpu softvfp
  2699              	PidSetOldError:
  2700              	.LFB173:
- 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetOldError(float OldError, PidStruct *Pid)
- 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetOldError(float OldError, PidStruct *Pid)
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2701              		.loc 1 346 1
  2702              		.cfi_startproc
  2703              		@ args = 0, pretend = 0, frame = 8
@@ -3100,12 +3100,12 @@
  2712              		.cfi_def_cfa_register 7
  2713 0006 7860     		str	r0, [r7, #4]	@ float
  2714 0008 3960     		str	r1, [r7]
- 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->OldError = OldError;
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->OldError = OldError;
  2715              		.loc 1 347 19
  2716 000a 3B68     		ldr	r3, [r7]
  2717 000c 7A68     		ldr	r2, [r7, #4]	@ float
  2718 000e 1A62     		str	r2, [r3, #32]	@ float
- 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2719              		.loc 1 348 1
  2720 0010 00BF     		nop
  2721 0012 0C37     		adds	r7, r7, #12
@@ -3128,9 +3128,9 @@
  2739              		.fpu softvfp
  2741              	PidSetOutLimit:
  2742              	.LFB174:
- 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetOutLimit(float LimitMin, float LimitMax, PidStruct *Pid)
- 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** void PidSetOutLimit(float LimitMin, float LimitMax, PidStruct *Pid)
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2743              		.loc 1 351 1
  2744              		.cfi_startproc
  2745              		@ args = 0, pretend = 0, frame = 16
@@ -3146,17 +3146,17 @@
  2755 0006 F860     		str	r0, [r7, #12]	@ float
  2756 0008 B960     		str	r1, [r7, #8]	@ float
  2757 000a 7A60     		str	r2, [r7, #4]
- 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->OutLimitMin = LimitMin;
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->OutLimitMin = LimitMin;
  2758              		.loc 1 352 22
  2759 000c 7B68     		ldr	r3, [r7, #4]
  2760 000e FA68     		ldr	r2, [r7, #12]	@ float
  2761 0010 5A61     		str	r2, [r3, #20]	@ float
- 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->OutLimitMax = LimitMax;
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->OutLimitMax = LimitMax;
  2762              		.loc 1 353 22
  2763 0012 7B68     		ldr	r3, [r7, #4]
  2764 0014 BA68     		ldr	r2, [r7, #8]	@ float
  2765 0016 9A61     		str	r2, [r3, #24]	@ float
- 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  2766              		.loc 1 354 1
  2767 0018 00BF     		nop
  2768 001a 1437     		adds	r7, r7, #20
@@ -3180,9 +3180,9 @@
  2787              		.fpu softvfp
  2789              	PidControl:
  2790              	.LFB175:
- 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** float PidControl(float LimitMax, PidStruct *Pid)
- 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** float PidControl(float LimitMax, PidStruct *Pid)
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** {
  2791              		.loc 1 357 1
  2792              		.cfi_startproc
  2793              		@ args = 0, pretend = 0, frame = 32
@@ -3198,7 +3198,7 @@
  2803              		.cfi_def_cfa_register 7
  2804 0006 7860     		str	r0, [r7, #4]	@ float
  2805 0008 3960     		str	r1, [r7]
- 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float ProportionalTerm = 0.0f, IntegralTerm = 0.0f, IntegralSumTemp = 0.0f, Out = 0.0f;
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float ProportionalTerm = 0.0f, IntegralTerm = 0.0f, IntegralSumTemp = 0.0f, Out = 0.0f;
  2806              		.loc 1 358 11
  2807 000a 4FF00003 		mov	r3, #0
  2808 000e BB61     		str	r3, [r7, #24]	@ float
@@ -3211,16 +3211,16 @@
  2815              		.loc 1 358 81
  2816 001c 4FF00003 		mov	r3, #0
  2817 0020 FB61     		str	r3, [r7, #28]	@ float
- 359:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float FiffTerm = 0.0f, DeltaLimitMax = 0.0f;
+ 359:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     float FiffTerm = 0.0f, DeltaLimitMax = 0.0f;
  2818              		.loc 1 359 11
  2819 0022 4FF00003 		mov	r3, #0
  2820 0026 FB60     		str	r3, [r7, #12]	@ float
  2821              		.loc 1 359 28
  2822 0028 4FF00003 		mov	r3, #0
  2823 002c BB60     		str	r3, [r7, #8]	@ float
- 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ProportionalTerm = (Pid->Kp) * LimitMax;
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     ProportionalTerm = (Pid->Kp) * LimitMax;
  2824              		.loc 1 362 28
  2825 002e 3B68     		ldr	r3, [r7]
  2826 0030 1B68     		ldr	r3, [r3]	@ float
@@ -3231,9 +3231,9 @@
  2831              	.LVL141:
  2832 003a 0346     		mov	r3, r0
  2833 003c BB61     		str	r3, [r7, #24]	@ float
- 363:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 364:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 365:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     if((Pid->Ki) == 0)
+ 363:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 364:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 365:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     if((Pid->Ki) == 0)
  2834              		.loc 1 365 12
  2835 003e 3B68     		ldr	r3, [r7]
  2836 0040 5B68     		ldr	r3, [r3, #4]	@ float
@@ -3245,18 +3245,18 @@
  2842 004c 0346     		mov	r3, r0
  2843 004e 002B     		cmp	r3, #0
  2844 0050 04D0     		beq	.L87
- 366:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 367:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         Pid->Integral = 0;
+ 366:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 367:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         Pid->Integral = 0;
  2845              		.loc 1 367 23
  2846 0052 3B68     		ldr	r3, [r7]
  2847 0054 4FF00002 		mov	r2, #0
  2848 0058 9A60     		str	r2, [r3, #8]	@ float
  2849 005a 2EE0     		b	.L72
  2850              	.L87:
- 368:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 369:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     else
- 370:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 371:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         IntegralTerm = (Pid->Ki) * LimitMax;
+ 368:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 369:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     else
+ 370:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 371:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         IntegralTerm = (Pid->Ki) * LimitMax;
  2851              		.loc 1 371 28
  2852 005c 3B68     		ldr	r3, [r7]
  2853 005e 5B68     		ldr	r3, [r3, #4]	@ float
@@ -3267,7 +3267,7 @@
  2858              	.LVL143:
  2859 0068 0346     		mov	r3, r0
  2860 006a 7B61     		str	r3, [r7, #20]	@ float
- 372:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         IntegralSumTemp = (Pid->Integral) + IntegralTerm;
+ 372:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         IntegralSumTemp = (Pid->Integral) + IntegralTerm;
  2861              		.loc 1 372 31
  2862 006c 3B68     		ldr	r3, [r7]
  2863 006e 9B68     		ldr	r3, [r3, #8]	@ float
@@ -3278,9 +3278,9 @@
  2868              	.LVL144:
  2869 0078 0346     		mov	r3, r0
  2870 007a 3B61     		str	r3, [r7, #16]	@ float
- 373:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 374:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
- 375:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         if(IntegralSumTemp > (Pid->IntegralMax))
+ 373:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 374:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         
+ 375:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         if(IntegralSumTemp > (Pid->IntegralMax))
  2871              		.loc 1 375 34
  2872 007c 3B68     		ldr	r3, [r7]
  2873 007e 1B69     		ldr	r3, [r3, #16]	@ float
@@ -3292,8 +3292,8 @@
  2879 0088 0346     		mov	r3, r0
  2880 008a 002B     		cmp	r3, #0
  2881 008c 04D0     		beq	.L88
- 376:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
- 377:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Pid->Integral = Pid->IntegralMax;
+ 376:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 377:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Pid->Integral = Pid->IntegralMax;
  2882              		.loc 1 377 32
  2883 008e 3B68     		ldr	r3, [r7]
  2884 0090 1A69     		ldr	r2, [r3, #16]	@ float
@@ -3302,8 +3302,8 @@
  2887 0094 9A60     		str	r2, [r3, #8]	@ float
  2888 0096 10E0     		b	.L72
  2889              	.L88:
- 378:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
- 379:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         else if (IntegralSumTemp < (Pid->IntegralMin))
+ 378:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
+ 379:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         else if (IntegralSumTemp < (Pid->IntegralMin))
  2890              		.loc 1 379 40
  2891 0098 3B68     		ldr	r3, [r7]
  2892 009a DB68     		ldr	r3, [r3, #12]	@ float
@@ -3315,8 +3315,8 @@
  2898 00a4 0346     		mov	r3, r0
  2899 00a6 002B     		cmp	r3, #0
  2900 00a8 04D0     		beq	.L89
- 380:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
- 381:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Pid->Integral = Pid->IntegralMin;
+ 380:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 381:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Pid->Integral = Pid->IntegralMin;
  2901              		.loc 1 381 32
  2902 00aa 3B68     		ldr	r3, [r7]
  2903 00ac DA68     		ldr	r2, [r3, #12]	@ float
@@ -3325,20 +3325,20 @@
  2906 00b0 9A60     		str	r2, [r3, #8]	@ float
  2907 00b2 02E0     		b	.L72
  2908              	.L89:
- 382:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
- 383:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         else
- 384:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
- 385:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Pid->Integral = IntegralSumTemp;
+ 382:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
+ 383:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         else
+ 384:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         {
+ 385:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****             Pid->Integral = IntegralSumTemp;
  2909              		.loc 1 385 27
  2910 00b4 3B68     		ldr	r3, [r7]
  2911 00b6 3A69     		ldr	r2, [r7, #16]	@ float
  2912 00b8 9A60     		str	r2, [r3, #8]	@ float
  2913              	.L72:
- 386:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
- 387:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 388:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 389:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 390:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     LimitMax = ((Pid->FliterCoef) * (Pid->OldError) + (1.0f - (Pid->FliterCoef)) * LimitMax);
+ 386:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         }
+ 387:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 388:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 389:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 390:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     LimitMax = ((Pid->FliterCoef) * (Pid->OldError) + (1.0f - (Pid->FliterCoef)) * LimitMax);
  2914              		.loc 1 390 21
  2915 00ba 3B68     		ldr	r3, [r7]
  2916 00bc 5A6A     		ldr	r2, [r3, #36]	@ float
@@ -3374,7 +3374,7 @@
  2946              	.LVL150:
  2947 00f0 0346     		mov	r3, r0
  2948 00f2 7B60     		str	r3, [r7, #4]	@ float
- 391:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaLimitMax = LimitMax - (Pid->OldError);
+ 391:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     DeltaLimitMax = LimitMax - (Pid->OldError);
  2949              		.loc 1 391 36
  2950 00f4 3B68     		ldr	r3, [r7]
  2951 00f6 1B6A     		ldr	r3, [r3, #32]	@ float
@@ -3385,7 +3385,7 @@
  2956              	.LVL151:
  2957 0100 0346     		mov	r3, r0
  2958 0102 BB60     		str	r3, [r7, #8]	@ float
- 392:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     FiffTerm = (Pid->Kd) * DeltaLimitMax;
+ 392:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     FiffTerm = (Pid->Kd) * DeltaLimitMax;
  2959              		.loc 1 392 20
  2960 0104 3B68     		ldr	r3, [r7]
  2961 0106 DB69     		ldr	r3, [r3, #28]	@ float
@@ -3396,14 +3396,14 @@
  2966              	.LVL152:
  2967 0110 0346     		mov	r3, r0
  2968 0112 FB60     		str	r3, [r7, #12]	@ float
- 393:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->OldError = LimitMax;
+ 393:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Pid->OldError = LimitMax;
  2969              		.loc 1 393 19
  2970 0114 3B68     		ldr	r3, [r7]
  2971 0116 7A68     		ldr	r2, [r7, #4]	@ float
  2972 0118 1A62     		str	r2, [r3, #32]	@ float
- 394:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 395:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 396:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Out = ProportionalTerm + (Pid->Integral) + FiffTerm;
+ 394:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 395:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 396:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     Out = ProportionalTerm + (Pid->Integral) + FiffTerm;
  2973              		.loc 1 396 34
  2974 011a 3B68     		ldr	r3, [r7]
  2975 011c 9B68     		ldr	r3, [r3, #8]	@ float
@@ -3420,9 +3420,9 @@
  2986              	.LVL154:
  2987 0130 0346     		mov	r3, r0
  2988 0132 FB61     		str	r3, [r7, #28]	@ float
- 397:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 398:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
- 399:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     if(Out > (Pid->OutLimitMax))
+ 397:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 398:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     
+ 399:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     if(Out > (Pid->OutLimitMax))
  2989              		.loc 1 399 18
  2990 0134 3B68     		ldr	r3, [r7]
  2991 0136 9B69     		ldr	r3, [r3, #24]	@ float
@@ -3434,16 +3434,16 @@
  2997 0140 0346     		mov	r3, r0
  2998 0142 002B     		cmp	r3, #0
  2999 0144 03D0     		beq	.L90
- 400:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 401:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         Out = Pid->OutLimitMax;
+ 400:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 401:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         Out = Pid->OutLimitMax;
  3000              		.loc 1 401 13
  3001 0146 3B68     		ldr	r3, [r7]
  3002 0148 9B69     		ldr	r3, [r3, #24]	@ float
  3003 014a FB61     		str	r3, [r7, #28]	@ float
  3004 014c 0BE0     		b	.L79
  3005              	.L90:
- 402:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 403:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     else if(Out < (Pid->OutLimitMin))
+ 402:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 403:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     else if(Out < (Pid->OutLimitMin))
  3006              		.loc 1 403 23
  3007 014e 3B68     		ldr	r3, [r7]
  3008 0150 5B69     		ldr	r3, [r3, #20]	@ float
@@ -3455,19 +3455,19 @@
  3014 015a 0346     		mov	r3, r0
  3015 015c 002B     		cmp	r3, #0
  3016 015e 02D0     		beq	.L79
- 404:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
- 405:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         Out = Pid->OutLimitMin;
+ 404:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     {
+ 405:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****         Out = Pid->OutLimitMin;
  3017              		.loc 1 405 13
  3018 0160 3B68     		ldr	r3, [r7]
  3019 0162 5B69     		ldr	r3, [r3, #20]	@ float
  3020 0164 FB61     		str	r3, [r7, #28]	@ float
  3021              	.L79:
- 406:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
- 407:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
- 408:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     return Out;
+ 406:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     }
+ 407:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** 
+ 408:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c ****     return Out;
  3022              		.loc 1 408 12
  3023 0166 FB69     		ldr	r3, [r7, #28]	@ float
- 409:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
+ 409:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_math.c **** }
  3024              		.loc 1 409 1
  3025 0168 1846     		mov	r0, r3
  3026 016a 2437     		adds	r7, r7, #36
@@ -3501,49 +3501,49 @@
  3055              		.file 20 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_gimbal_math.c
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:21     .text.ACC2Euler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:29     .text.ACC2Euler:00000000 ACC2Euler
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:229    .text.ACC2Euler:0000012c $d
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:238    .text.Euler2Quat:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:245    .text.Euler2Quat:00000000 Euler2Quat
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:507    .text.Euler2DCM:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:514    .text.Euler2DCM:00000000 Euler2DCM
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:775    .text.Quat2Euler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:782    .text.Quat2Euler:00000000 Quat2Euler
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1248   .text.Quat2Euler:000002e0 $d
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1256   .text.QuatNormalize:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1263   .text.QuatNormalize:00000000 QuatNormalize
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1426   .text.CalcJacobianInv:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1433   .text.CalcJacobianInv:00000000 CalcJacobianInv
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1581   .text.CalcJacobianTrans:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1588   .text.CalcJacobianTrans:00000000 CalcJacobianTrans
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1704   .text.MatrixAdd:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1711   .text.MatrixAdd:00000000 MatrixAdd
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1818   .text.MatrixSub:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1825   .text.MatrixSub:00000000 MatrixSub
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1932   .text.MatrixMultiply:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:1939   .text.MatrixMultiply:00000000 MatrixMultiply
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2097   .text.AttitudeUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2104   .text.AttitudeUpdata:00000000 AttitudeUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2427   .text.AttitudeUpdata:00000238 $d
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2435   .text.PidSetKp:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2442   .text.PidSetKp:00000000 PidSetKp
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2477   .text.PidSetKi:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2484   .text.PidSetKi:00000000 PidSetKi
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2519   .text.PidSetIntegral:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2526   .text.PidSetIntegral:00000000 PidSetIntegral
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2561   .text.PidSetIntegralLimit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2568   .text.PidSetIntegralLimit:00000000 PidSetIntegralLimit
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2608   .text.PidSetKd:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2615   .text.PidSetKd:00000000 PidSetKd
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2650   .text.PidSetKdFilterCoef:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2657   .text.PidSetKdFilterCoef:00000000 PidSetKdFilterCoef
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2692   .text.PidSetOldError:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2699   .text.PidSetOldError:00000000 PidSetOldError
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2734   .text.PidSetOutLimit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2741   .text.PidSetOutLimit:00000000 PidSetOutLimit
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2782   .text.PidControl:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccswd4Xg.s:2789   .text.PidControl:00000000 PidControl
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:21     .text.ACC2Euler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:29     .text.ACC2Euler:00000000 ACC2Euler
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:229    .text.ACC2Euler:0000012c $d
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:238    .text.Euler2Quat:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:245    .text.Euler2Quat:00000000 Euler2Quat
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:507    .text.Euler2DCM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:514    .text.Euler2DCM:00000000 Euler2DCM
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:775    .text.Quat2Euler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:782    .text.Quat2Euler:00000000 Quat2Euler
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1248   .text.Quat2Euler:000002e0 $d
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1256   .text.QuatNormalize:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1263   .text.QuatNormalize:00000000 QuatNormalize
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1426   .text.CalcJacobianInv:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1433   .text.CalcJacobianInv:00000000 CalcJacobianInv
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1581   .text.CalcJacobianTrans:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1588   .text.CalcJacobianTrans:00000000 CalcJacobianTrans
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1704   .text.MatrixAdd:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1711   .text.MatrixAdd:00000000 MatrixAdd
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1818   .text.MatrixSub:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1825   .text.MatrixSub:00000000 MatrixSub
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1932   .text.MatrixMultiply:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1939   .text.MatrixMultiply:00000000 MatrixMultiply
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2097   .text.AttitudeUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2104   .text.AttitudeUpdata:00000000 AttitudeUpdata
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2427   .text.AttitudeUpdata:00000238 $d
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2435   .text.PidSetKp:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2442   .text.PidSetKp:00000000 PidSetKp
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2477   .text.PidSetKi:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2484   .text.PidSetKi:00000000 PidSetKi
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2519   .text.PidSetIntegral:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2526   .text.PidSetIntegral:00000000 PidSetIntegral
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2561   .text.PidSetIntegralLimit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2568   .text.PidSetIntegralLimit:00000000 PidSetIntegralLimit
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2608   .text.PidSetKd:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2615   .text.PidSetKd:00000000 PidSetKd
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2650   .text.PidSetKdFilterCoef:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2657   .text.PidSetKdFilterCoef:00000000 PidSetKdFilterCoef
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2692   .text.PidSetOldError:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2699   .text.PidSetOldError:00000000 PidSetOldError
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2734   .text.PidSetOutLimit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2741   .text.PidSetOutLimit:00000000 PidSetOutLimit
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2782   .text.PidControl:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2789   .text.PidControl:00000000 PidControl
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

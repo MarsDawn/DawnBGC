@@ -1,5 +1,5 @@
 FWLIB/gd32f4xx_iref.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_iref.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_iref.c \
  ../../Libraries/FWLIB/inc/gd32f4xx_iref.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \

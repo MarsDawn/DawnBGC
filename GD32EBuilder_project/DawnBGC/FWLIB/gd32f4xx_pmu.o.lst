@@ -22,28 +22,28 @@
   22              		.fpu softvfp
   24              	pmu_deinit:
   25              	.LFB123:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_pmu.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \file  gd32f4xx_pmu.c
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief PMU driver
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     Copyright (C) 2016 GigaDevice
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     2016-08-15, V1.0.1, firmware for GD32F4xx
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** #include "gd32f4xx_pmu.h"
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** #include "core_cm4.h"
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      reset PMU register
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_deinit(void)
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_pmu.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \file  gd32f4xx_pmu.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief PMU driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     2016-08-15, V1.0.1, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** #include "gd32f4xx_pmu.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** #include "core_cm4.h"
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      reset PMU register
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
   27              		.loc 1 21 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -54,16 +54,16 @@
   34              		.cfi_offset 14, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset PMU */
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     rcu_periph_reset_enable(RCU_PMURST);
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset PMU */
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     rcu_periph_reset_enable(RCU_PMURST);
   37              		.loc 1 23 5
   38 0004 40F61C00 		movw	r0, #2076
   39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     rcu_periph_reset_disable(RCU_PMURST);
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     rcu_periph_reset_disable(RCU_PMURST);
   40              		.loc 1 24 5
   41 000c 40F61C00 		movw	r0, #2076
   42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
   43              		.loc 1 25 1
   44 0014 00BF     		nop
   45 0016 80BD     		pop	{r7, pc}
@@ -78,23 +78,23 @@
   55              		.fpu softvfp
   57              	pmu_lvd_select:
   58              	.LFB124:
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      select low voltage detector threshold
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  lvdt_n:
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_0: voltage threshold is 2.2V
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_1: voltage threshold is 2.3V
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_2: voltage threshold is 2.4V
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_3: voltage threshold is 2.5V
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_4: voltage threshold is 2.6V
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_5: voltage threshold is 2.7V
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_6: voltage threshold is 2.8V
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_7: voltage threshold is 2.9V
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lvd_select(uint32_t lvdt_n)
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      select low voltage detector threshold
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  lvdt_n:
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_0: voltage threshold is 2.2V
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_1: voltage threshold is 2.3V
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_2: voltage threshold is 2.4V
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_3: voltage threshold is 2.5V
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_4: voltage threshold is 2.6V
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_5: voltage threshold is 2.7V
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_6: voltage threshold is 2.8V
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LVDT_7: voltage threshold is 2.9V
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lvd_select(uint32_t lvdt_n)
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
   59              		.loc 1 42 1
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 8
@@ -108,24 +108,24 @@
   69 0004 00AF     		add	r7, sp, #0
   70              		.cfi_def_cfa_register 7
   71 0006 7860     		str	r0, [r7, #4]
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* disable LVD */
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDEN;
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* disable LVD */
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDEN;
   72              		.loc 1 44 13
   73 0008 0E4B     		ldr	r3, .L3
   74 000a 1B68     		ldr	r3, [r3]
   75 000c 0D4A     		ldr	r2, .L3
   76 000e 23F01003 		bic	r3, r3, #16
   77 0012 1360     		str	r3, [r2]
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear LVDT bits */
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDT;
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear LVDT bits */
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDT;
   78              		.loc 1 46 13
   79 0014 0B4B     		ldr	r3, .L3
   80 0016 1B68     		ldr	r3, [r3]
   81 0018 0A4A     		ldr	r2, .L3
   82 001a 23F0E003 		bic	r3, r3, #224
   83 001e 1360     		str	r3, [r2]
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set LVDT bits according to pmu_lvdt_n */
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= lvdt_n;
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set LVDT bits according to pmu_lvdt_n */
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= lvdt_n;
   84              		.loc 1 48 13
   85 0020 084B     		ldr	r3, .L3
   86 0022 1A68     		ldr	r2, [r3]
@@ -133,15 +133,15 @@
   88 0026 7B68     		ldr	r3, [r7, #4]
   89 0028 1343     		orrs	r3, r3, r2
   90 002a 0B60     		str	r3, [r1]
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* enable LVD */
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_LVDEN;
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* enable LVD */
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_LVDEN;
   91              		.loc 1 50 13
   92 002c 054B     		ldr	r3, .L3
   93 002e 1B68     		ldr	r3, [r3]
   94 0030 044A     		ldr	r2, .L3
   95 0032 43F01003 		orr	r3, r3, #16
   96 0036 1360     		str	r3, [r2]
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
   97              		.loc 1 51 1
   98 0038 00BF     		nop
   99 003a 0C37     		adds	r7, r7, #12
@@ -168,19 +168,19 @@
  121              		.fpu softvfp
  123              	pmu_ldo_output_select:
  124              	.LFB125:
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      select LDO output voltage
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software when the main PLL closed, before closing PLL, change the s
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  ldo_output:
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_LOW: low-driver mode enable in deep-sleep mode
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_MID: low-driver mode disable in deep-sleep mode
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_HIGH: low-driver mode disable in deep-sleep mode
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_ldo_output_select(uint32_t ldo_output)
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      select LDO output voltage
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software when the main PLL closed, before closing PLL, change the s
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  ldo_output:
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_LOW: low-driver mode enable in deep-sleep mode
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_MID: low-driver mode disable in deep-sleep mode
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDOVS_HIGH: low-driver mode disable in deep-sleep mode
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_ldo_output_select(uint32_t ldo_output)
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  125              		.loc 1 64 1
  126              		.cfi_startproc
  127              		@ args = 0, pretend = 0, frame = 8
@@ -194,14 +194,14 @@
  135 0004 00AF     		add	r7, sp, #0
  136              		.cfi_def_cfa_register 7
  137 0006 7860     		str	r0, [r7, #4]
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDOVS;
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDOVS;
  138              		.loc 1 65 13
  139 0008 084B     		ldr	r3, .L6
  140 000a 1B68     		ldr	r3, [r3]
  141 000c 074A     		ldr	r2, .L6
  142 000e 23F44043 		bic	r3, r3, #49152
  143 0012 1360     		str	r3, [r2]
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= ldo_output;
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= ldo_output;
  144              		.loc 1 66 13
  145 0014 054B     		ldr	r3, .L6
  146 0016 1A68     		ldr	r2, [r3]
@@ -209,7 +209,7 @@
  148 001a 7B68     		ldr	r3, [r7, #4]
  149 001c 1343     		orrs	r3, r3, r2
  150 001e 0B60     		str	r3, [r1]
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  151              		.loc 1 67 1
  152 0020 00BF     		nop
  153 0022 0C37     		adds	r7, r7, #12
@@ -236,17 +236,17 @@
  175              		.fpu softvfp
  177              	pmu_low_driver_mode_enable:
  178              	.LFB126:
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable low-driver mode in deep-sleep mode
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  lowdr_mode:
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDRIVER_ENABLE: enable low-driver mode in deep-sleep mode
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDRIVER_DISABLE: disable low-driver mode in deep-sleep mode
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_low_driver_mode_enable(uint32_t lowdr_mode)
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable low-driver mode in deep-sleep mode
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  lowdr_mode:
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDRIVER_ENABLE: enable low-driver mode in deep-sleep mode
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDRIVER_DISABLE: disable low-driver mode in deep-sleep mode
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_low_driver_mode_enable(uint32_t lowdr_mode)
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  179              		.loc 1 78 1
  180              		.cfi_startproc
  181              		@ args = 0, pretend = 0, frame = 8
@@ -260,14 +260,14 @@
  189 0004 00AF     		add	r7, sp, #0
  190              		.cfi_def_cfa_register 7
  191 0006 7860     		str	r0, [r7, #4]
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDEN;
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDEN;
  192              		.loc 1 79 13
  193 0008 084B     		ldr	r3, .L9
  194 000a 1B68     		ldr	r3, [r3]
  195 000c 074A     		ldr	r2, .L9
  196 000e 23F44023 		bic	r3, r3, #786432
  197 0012 1360     		str	r3, [r2]
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= lowdr_mode;
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= lowdr_mode;
  198              		.loc 1 80 13
  199 0014 054B     		ldr	r3, .L9
  200 0016 1A68     		ldr	r2, [r3]
@@ -275,7 +275,7 @@
  202 001a 7B68     		ldr	r3, [r7, #4]
  203 001c 1343     		orrs	r3, r3, r2
  204 001e 0B60     		str	r3, [r1]
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  205              		.loc 1 81 1
  206 0020 00BF     		nop
  207 0022 0C37     		adds	r7, r7, #12
@@ -302,18 +302,18 @@
  229              		.fpu softvfp
  231              	pmu_highdriver_switch_select:
  232              	.LFB127:
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      switch high-driver mode
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software only when IRC16M or HXTAL used as system clock
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  highdr_switch:
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_HIGHDR_SWITCH_NONE: disable high-driver mode switch
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_HIGHDR_SWITCH_EN: enable high-driver mode switch
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_switch_select(uint32_t highdr_switch)
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      switch high-driver mode
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software only when IRC16M or HXTAL used as system clock
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  highdr_switch:
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_HIGHDR_SWITCH_NONE: disable high-driver mode switch
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_HIGHDR_SWITCH_EN: enable high-driver mode switch
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_switch_select(uint32_t highdr_switch)
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  233              		.loc 1 93 1
  234              		.cfi_startproc
  235              		@ args = 0, pretend = 0, frame = 8
@@ -327,8 +327,8 @@
  243 0004 00AF     		add	r7, sp, #0
  244              		.cfi_def_cfa_register 7
  245 0006 7860     		str	r0, [r7, #4]
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* wait for HDRF flag set */
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     while(SET != pmu_flag_get(PMU_FLAG_HDRF)){
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* wait for HDRF flag set */
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     while(SET != pmu_flag_get(PMU_FLAG_HDRF)){
  246              		.loc 1 95 10
  247 0008 00BF     		nop
  248              	.L12:
@@ -339,15 +339,15 @@
  253              		.loc 1 95 10 discriminator 1
  254 0014 012B     		cmp	r3, #1
  255 0016 F8D1     		bne	.L12
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_HDS;
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_HDS;
  256              		.loc 1 97 13
  257 0018 074B     		ldr	r3, .L13
  258 001a 1B68     		ldr	r3, [r3]
  259 001c 064A     		ldr	r2, .L13
  260 001e 23F40033 		bic	r3, r3, #131072
  261 0022 1360     		str	r3, [r2]
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= highdr_switch;
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= highdr_switch;
  262              		.loc 1 98 13
  263 0024 044B     		ldr	r3, .L13
  264 0026 1A68     		ldr	r2, [r3]
@@ -355,7 +355,7 @@
  266 002a 7B68     		ldr	r3, [r7, #4]
  267 002c 1343     		orrs	r3, r3, r2
  268 002e 0B60     		str	r3, [r1]
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  269              		.loc 1 99 1
  270 0030 00BF     		nop
  271 0032 0837     		adds	r7, r7, #8
@@ -379,16 +379,16 @@
  290              		.fpu softvfp
  292              	pmu_highdriver_mode_enable:
  293              	.LFB128:
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable high-driver mode
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software only when IRC16M or HXTAL used as system clock
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_mode_enable(void)
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable high-driver mode
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****                 this bit set by software only when IRC16M or HXTAL used as system clock
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_mode_enable(void)
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  294              		.loc 1 109 1
  295              		.cfi_startproc
  296              		@ args = 0, pretend = 0, frame = 0
@@ -399,14 +399,14 @@
  301              		.cfi_offset 7, -4
  302 0002 00AF     		add	r7, sp, #0
  303              		.cfi_def_cfa_register 7
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_HDEN;
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_HDEN;
  304              		.loc 1 110 13
  305 0004 044B     		ldr	r3, .L16
  306 0006 1B68     		ldr	r3, [r3]
  307 0008 034A     		ldr	r2, .L16
  308 000a 43F48033 		orr	r3, r3, #65536
  309 000e 1360     		str	r3, [r2]
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  310              		.loc 1 111 1
  311 0010 00BF     		nop
  312 0012 BD46     		mov	sp, r7
@@ -431,15 +431,15 @@
  332              		.fpu softvfp
  334              	pmu_highdriver_mode_disable:
  335              	.LFB129:
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable high-driver mode
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_mode_disable(void)
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable high-driver mode
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_highdriver_mode_disable(void)
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  336              		.loc 1 120 1
  337              		.cfi_startproc
  338              		@ args = 0, pretend = 0, frame = 0
@@ -450,14 +450,14 @@
  343              		.cfi_offset 7, -4
  344 0002 00AF     		add	r7, sp, #0
  345              		.cfi_def_cfa_register 7
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_HDEN;
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_HDEN;
  346              		.loc 1 121 13
  347 0004 044B     		ldr	r3, .L19
  348 0006 1B68     		ldr	r3, [r3]
  349 0008 034A     		ldr	r2, .L19
  350 000a 23F48033 		bic	r3, r3, #65536
  351 000e 1360     		str	r3, [r2]
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  352              		.loc 1 122 1
  353 0010 00BF     		nop
  354 0012 BD46     		mov	sp, r7
@@ -482,15 +482,15 @@
  374              		.fpu softvfp
  376              	pmu_lvd_disable:
  377              	.LFB130:
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable PMU lvd
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lvd_disable(void)
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable PMU lvd
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lvd_disable(void)
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  378              		.loc 1 131 1
  379              		.cfi_startproc
  380              		@ args = 0, pretend = 0, frame = 0
@@ -501,15 +501,15 @@
  385              		.cfi_offset 7, -4
  386 0002 00AF     		add	r7, sp, #0
  387              		.cfi_def_cfa_register 7
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* disable LVD */
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDEN;
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* disable LVD */
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LVDEN;
  388              		.loc 1 133 13
  389 0004 044B     		ldr	r3, .L22
  390 0006 1B68     		ldr	r3, [r3]
  391 0008 034A     		ldr	r2, .L22
  392 000a 23F01003 		bic	r3, r3, #16
  393 000e 1360     		str	r3, [r2]
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  394              		.loc 1 134 1
  395 0010 00BF     		nop
  396 0012 BD46     		mov	sp, r7
@@ -534,17 +534,17 @@
  416              		.fpu softvfp
  418              	pmu_lowdriver_lowpower_config:
  419              	.LFB131:
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      low-driver mode when use low power LDO
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  mode:
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_NORMALDR_LOWPWR:  normal driver when use low power LDO
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDR_LOWPWR:  low-driver mode enabled when LDEN is 11 and use low power LDO
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lowdriver_lowpower_config(uint32_t mode)
- 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      low-driver mode when use low power LDO
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  mode:
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_NORMALDR_LOWPWR:  normal driver when use low power LDO
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDR_LOWPWR:  low-driver mode enabled when LDEN is 11 and use low power LDO
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lowdriver_lowpower_config(uint32_t mode)
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  420              		.loc 1 145 1
  421              		.cfi_startproc
  422              		@ args = 0, pretend = 0, frame = 8
@@ -558,14 +558,14 @@
  430 0004 00AF     		add	r7, sp, #0
  431              		.cfi_def_cfa_register 7
  432 0006 7860     		str	r0, [r7, #4]
- 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDLP;
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDLP;
  433              		.loc 1 146 13
  434 0008 084B     		ldr	r3, .L25
  435 000a 1B68     		ldr	r3, [r3]
  436 000c 074A     		ldr	r2, .L25
  437 000e 23F48063 		bic	r3, r3, #1024
  438 0012 1360     		str	r3, [r2]
- 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= mode;
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= mode;
  439              		.loc 1 147 13
  440 0014 054B     		ldr	r3, .L25
  441 0016 1A68     		ldr	r2, [r3]
@@ -573,7 +573,7 @@
  443 001a 7B68     		ldr	r3, [r7, #4]
  444 001c 1343     		orrs	r3, r3, r2
  445 001e 0B60     		str	r3, [r1]
- 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  446              		.loc 1 148 1
  447 0020 00BF     		nop
  448 0022 0C37     		adds	r7, r7, #12
@@ -600,17 +600,17 @@
  470              		.fpu softvfp
  472              	pmu_lowdriver_normalpower_config:
  473              	.LFB132:
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      low-driver mode when use normal power LDO
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  mode:
- 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_NORMALDR_NORMALPWR:  normal driver when use low power LDO
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDR_NORMALPWR:  low-driver mode enabled when LDEN is 11 and use low power L
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lowdriver_normalpower_config(uint32_t mode)
- 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      low-driver mode when use normal power LDO
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  mode:
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_NORMALDR_NORMALPWR:  normal driver when use low power LDO
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LOWDR_NORMALPWR:  low-driver mode enabled when LDEN is 11 and use low power L
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_lowdriver_normalpower_config(uint32_t mode)
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  474              		.loc 1 159 1
  475              		.cfi_startproc
  476              		@ args = 0, pretend = 0, frame = 8
@@ -624,14 +624,14 @@
  484 0004 00AF     		add	r7, sp, #0
  485              		.cfi_def_cfa_register 7
  486 0006 7860     		str	r0, [r7, #4]
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDNP;
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_LDNP;
  487              		.loc 1 160 13
  488 0008 084B     		ldr	r3, .L28
  489 000a 1B68     		ldr	r3, [r3]
  490 000c 074A     		ldr	r2, .L28
  491 000e 23F40063 		bic	r3, r3, #2048
  492 0012 1360     		str	r3, [r2]
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= mode;
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= mode;
  493              		.loc 1 161 13
  494 0014 054B     		ldr	r3, .L28
  495 0016 1A68     		ldr	r2, [r3]
@@ -639,7 +639,7 @@
  497 001a 7B68     		ldr	r3, [r7, #4]
  498 001c 1343     		orrs	r3, r3, r2
  499 001e 0B60     		str	r3, [r1]
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  500              		.loc 1 162 1
  501 0020 00BF     		nop
  502 0022 0C37     		adds	r7, r7, #12
@@ -666,17 +666,17 @@
  524              		.fpu softvfp
  526              	pmu_to_sleepmode:
  527              	.LFB133:
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      PMU work at sleep mode
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  sleepmodecmd:
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
- 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
- 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_sleepmode(uint8_t sleepmodecmd)
- 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      PMU work at sleep mode
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  sleepmodecmd:
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_sleepmode(uint8_t sleepmodecmd)
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  528              		.loc 1 173 1
  529              		.cfi_startproc
  530              		@ args = 0, pretend = 0, frame = 8
@@ -691,17 +691,17 @@
  539              		.cfi_def_cfa_register 7
  540 0006 0346     		mov	r3, r0
  541 0008 FB71     		strb	r3, [r7, #7]
- 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear sleepdeep bit of Cortex-M4 system control register */
- 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR &= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear sleepdeep bit of Cortex-M4 system control register */
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR &= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);
  542              		.loc 1 175 14
  543 000a 094B     		ldr	r3, .L33
  544 000c 1B69     		ldr	r3, [r3, #16]
  545 000e 084A     		ldr	r2, .L33
  546 0010 23F00403 		bic	r3, r3, #4
  547 0014 1361     		str	r3, [r2, #16]
- 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
- 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter sleep mode */
- 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == sleepmodecmd){
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter sleep mode */
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == sleepmodecmd){
  548              		.loc 1 178 7
  549 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  550 0018 002B     		cmp	r3, #0
@@ -1176,11 +1176,11 @@
  578              	.L32:
  579              	.LBE21:
  580              	.LBE20:
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
- 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
- 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
- 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  581              		.loc 1 183 1
  582 0024 00BF     		nop
  583 0026 0C37     		adds	r7, r7, #12
@@ -1207,20 +1207,20 @@
  605              		.fpu softvfp
  607              	pmu_to_deepsleepmode:
  608              	.LFB134:
- 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      PMU work at deepsleep mode
- 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  ldo
- 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDO_NORMAL: LDO normal work when pmu enter deepsleep mode
- 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDO_LOWPOWER: LDO work at low power mode when pmu enter deepsleep mode
- 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  deepsleepmodecmd: 
- 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
- 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
- 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_deepsleepmode(uint32_t ldo,uint8_t deepsleepmodecmd)
- 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      PMU work at deepsleep mode
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  ldo
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDO_NORMAL: LDO normal work when pmu enter deepsleep mode
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_LDO_LOWPOWER: LDO work at low power mode when pmu enter deepsleep mode
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  deepsleepmodecmd: 
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_deepsleepmode(uint32_t ldo,uint8_t deepsleepmodecmd)
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  609              		.loc 1 197 1
  610              		.cfi_startproc
  611              		@ args = 0, pretend = 0, frame = 8
@@ -1236,17 +1236,17 @@
  621 0006 7860     		str	r0, [r7, #4]
  622 0008 0B46     		mov	r3, r1
  623 000a FB70     		strb	r3, [r7, #3]
- 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear stbmod and ldolp bits */
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~((uint32_t)(PMU_CTL_STBMOD | PMU_CTL_LDOLP));
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* clear stbmod and ldolp bits */
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~((uint32_t)(PMU_CTL_STBMOD | PMU_CTL_LDOLP));
  624              		.loc 1 199 13
  625 000c 134B     		ldr	r3, .L38
  626 000e 1B68     		ldr	r3, [r3]
  627 0010 124A     		ldr	r2, .L38
  628 0012 23F00303 		bic	r3, r3, #3
  629 0016 1360     		str	r3, [r2]
- 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
- 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set ldolp bit according to pmu_ldo */
- 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= ldo;
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set ldolp bit according to pmu_ldo */
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= ldo;
  630              		.loc 1 202 13
  631 0018 104B     		ldr	r3, .L38
  632 001a 1A68     		ldr	r2, [r3]
@@ -1254,18 +1254,18 @@
  634 001e 7B68     		ldr	r3, [r7, #4]
  635 0020 1343     		orrs	r3, r3, r2
  636 0022 0B60     		str	r3, [r1]
- 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
- 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set sleepdeep bit of Cortex-M4 system control register */
- 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set sleepdeep bit of Cortex-M4 system control register */
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
  637              		.loc 1 205 14
  638 0024 0E4B     		ldr	r3, .L38+4
  639 0026 1B69     		ldr	r3, [r3, #16]
  640 0028 0D4A     		ldr	r2, .L38+4
  641 002a 43F00403 		orr	r3, r3, #4
  642 002e 1361     		str	r3, [r2, #16]
- 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
- 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter deepsleep mode */
- 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == deepsleepmodecmd){
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter deepsleep mode */
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == deepsleepmodecmd){
  643              		.loc 1 208 7
  644 0030 FB78     		ldrb	r3, [r7, #3]	@ zero_extendqisi2
  645 0032 002B     		cmp	r3, #0
@@ -1340,21 +1340,21 @@
  698              	.L37:
  699              	.LBE29:
  700              	.LBE28:
- 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
- 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
- 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __SEV();
- 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
- 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
- 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
- 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset sleepdeep bit of Cortex-M4 system control register */
- 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR &= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __SEV();
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset sleepdeep bit of Cortex-M4 system control register */
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR &= ~((uint32_t)SCB_SCR_SLEEPDEEP_Msk);
  701              		.loc 1 216 14
  702 0046 064B     		ldr	r3, .L38+4
  703 0048 1B69     		ldr	r3, [r3, #16]
  704 004a 054A     		ldr	r2, .L38+4
  705 004c 23F00403 		bic	r3, r3, #4
  706 0050 1361     		str	r3, [r2, #16]
- 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  707              		.loc 1 217 1
  708 0052 00BF     		nop
  709 0054 0C37     		adds	r7, r7, #12
@@ -1382,17 +1382,17 @@
  732              		.fpu softvfp
  734              	pmu_to_standbymode:
  735              	.LFB135:
- 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      pmu work at standby mode
- 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  standbymodecmd:
- 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
- 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
- 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_standbymode(uint8_t standbymodecmd)
- 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      pmu work at standby mode
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  standbymodecmd:
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFI_CMD: use WFI command
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        WFE_CMD: use WFE command
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_to_standbymode(uint8_t standbymodecmd)
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  736              		.loc 1 228 1
  737              		.cfi_startproc
  738              		@ args = 0, pretend = 0, frame = 8
@@ -1407,35 +1407,35 @@
  747              		.cfi_def_cfa_register 7
  748 0006 0346     		mov	r3, r0
  749 0008 FB71     		strb	r3, [r7, #7]
- 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set sleepdeep bit of Cortex-M4 system control register */
- 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set sleepdeep bit of Cortex-M4 system control register */
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     SCB->SCR |= SCB_SCR_SLEEPDEEP_Msk;
  750              		.loc 1 230 14
  751 000a 0F4B     		ldr	r3, .L43
  752 000c 1B69     		ldr	r3, [r3, #16]
  753 000e 0E4A     		ldr	r2, .L43
  754 0010 43F00403 		orr	r3, r3, #4
  755 0014 1361     		str	r3, [r2, #16]
- 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set stbmod bit */
- 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_STBMOD;
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* set stbmod bit */
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_STBMOD;
  756              		.loc 1 233 13
  757 0016 0D4B     		ldr	r3, .L43+4
  758 0018 1B68     		ldr	r3, [r3]
  759 001a 0C4A     		ldr	r2, .L43+4
  760 001c 43F00203 		orr	r3, r3, #2
  761 0020 1360     		str	r3, [r2]
- 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         
- 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset wakeup flag */
- 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_WURST;
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* reset wakeup flag */
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_WURST;
  762              		.loc 1 236 13
  763 0022 0A4B     		ldr	r3, .L43+4
  764 0024 1B68     		ldr	r3, [r3]
  765 0026 094A     		ldr	r2, .L43+4
  766 0028 43F00403 		orr	r3, r3, #4
  767 002c 1360     		str	r3, [r2]
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
- 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter standby mode */
- 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == standbymodecmd){
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     /* select WFI or WFE command to enter standby mode */
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(WFI_CMD == standbymodecmd){
  768              		.loc 1 239 7
  769 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  770 0030 002B     		cmp	r3, #0
@@ -1472,11 +1472,11 @@
  797              	.L42:
  798              	.LBE33:
  799              	.LBE32:
- 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
- 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
- 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
- 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
- 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFI();
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         __WFE();
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  800              		.loc 1 244 1
  801 003c 00BF     		nop
  802 003e 0C37     		adds	r7, r7, #12
@@ -1504,17 +1504,17 @@
  825              		.fpu softvfp
  827              	pmu_backup_ldo_config:
  828              	.LFB136:
- 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      backup SRAM LDO on
- 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  bkp_ldo:
- 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_BLDOON_OFF: backup SRAM LDO closed
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_BLDOON_ON: open the backup SRAM LDO
- 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_ldo_config(uint32_t bkp_ldo)
- 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      backup SRAM LDO on
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  bkp_ldo:
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_BLDOON_OFF: backup SRAM LDO closed
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_BLDOON_ON: open the backup SRAM LDO
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_ldo_config(uint32_t bkp_ldo)
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  829              		.loc 1 255 1
  830              		.cfi_startproc
  831              		@ args = 0, pretend = 0, frame = 8
@@ -1528,14 +1528,14 @@
  839 0004 00AF     		add	r7, sp, #0
  840              		.cfi_def_cfa_register 7
  841 0006 7860     		str	r0, [r7, #4]
- 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS &= ~PMU_CS_BLDOON;
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS &= ~PMU_CS_BLDOON;
  842              		.loc 1 256 12
  843 0008 084B     		ldr	r3, .L46
  844 000a 1B68     		ldr	r3, [r3]
  845 000c 074A     		ldr	r2, .L46
  846 000e 23F40073 		bic	r3, r3, #512
  847 0012 1360     		str	r3, [r2]
- 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS |= bkp_ldo;
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS |= bkp_ldo;
  848              		.loc 1 257 12
  849 0014 054B     		ldr	r3, .L46
  850 0016 1A68     		ldr	r2, [r3]
@@ -1543,7 +1543,7 @@
  852 001a 7B68     		ldr	r3, [r7, #4]
  853 001c 1343     		orrs	r3, r3, r2
  854 001e 0B60     		str	r3, [r1]
- 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  855              		.loc 1 258 1
  856 0020 00BF     		nop
  857 0022 0C37     		adds	r7, r7, #12
@@ -1570,17 +1570,17 @@
  879              		.fpu softvfp
  881              	pmu_flag_reset:
  882              	.LFB137:
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      reset flag bit
- 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  flag_reset:
- 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_RESET_WAKEUP: reset wakeup flag
- 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_RESET_STANDBY: reset standby flag
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_flag_reset(uint32_t flag_reset)
- 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      reset flag bit
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  flag_reset:
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_RESET_WAKEUP: reset wakeup flag
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_RESET_STANDBY: reset standby flag
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_flag_reset(uint32_t flag_reset)
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  883              		.loc 1 269 1
  884              		.cfi_startproc
  885              		@ args = 0, pretend = 0, frame = 8
@@ -1594,7 +1594,7 @@
  893 0004 00AF     		add	r7, sp, #0
  894              		.cfi_def_cfa_register 7
  895 0006 7860     		str	r0, [r7, #4]
- 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     switch(flag_reset){
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     switch(flag_reset){
  896              		.loc 1 270 5
  897 0008 7B68     		ldr	r3, [r7, #4]
  898 000a 002B     		cmp	r3, #0
@@ -1602,43 +1602,43 @@
  900 000e 7B68     		ldr	r3, [r7, #4]
  901 0010 012B     		cmp	r3, #1
  902 0012 07D0     		beq	.L50
- 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_WAKEUP:
- 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         /* reset wakeup flag */
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         PMU_CTL |= PMU_CTL_WURST;
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
- 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_STANDBY:
- 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         /* reset standby flag */
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         PMU_CTL |= PMU_CTL_STBRST;
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
- 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     default :
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_WAKEUP:
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         /* reset wakeup flag */
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         PMU_CTL |= PMU_CTL_WURST;
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_STANDBY:
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         /* reset standby flag */
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         PMU_CTL |= PMU_CTL_STBRST;
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     default :
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
  903              		.loc 1 280 9
  904 0014 0DE0     		b	.L52
  905              	.L49:
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
  906              		.loc 1 273 17
  907 0016 094B     		ldr	r3, .L53
  908 0018 1B68     		ldr	r3, [r3]
  909 001a 084A     		ldr	r2, .L53
  910 001c 43F00403 		orr	r3, r3, #4
  911 0020 1360     		str	r3, [r2]
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_STANDBY:
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     case PMU_FLAG_RESET_STANDBY:
  912              		.loc 1 274 9
  913 0022 06E0     		b	.L52
  914              	.L50:
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         break;
  915              		.loc 1 277 17
  916 0024 054B     		ldr	r3, .L53
  917 0026 1B68     		ldr	r3, [r3]
  918 0028 044A     		ldr	r2, .L53
  919 002a 43F00803 		orr	r3, r3, #8
  920 002e 1360     		str	r3, [r2]
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     default :
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     default :
  921              		.loc 1 278 9
  922 0030 00BF     		nop
  923              	.L52:
- 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  924              		.loc 1 282 1
  925 0032 00BF     		nop
  926 0034 0C37     		adds	r7, r7, #12
@@ -1665,23 +1665,23 @@
  948              		.fpu softvfp
  950              	pmu_flag_get:
  951              	.LFB138:
- 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      get flag state
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  flag:
- 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_WAKEUP: wakeup flag
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_STANDBY: standby flag
- 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LVD: lvd flag
- 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_BLDORF: backup SRAM LDO ready flag
- 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LDOVSRF: LDO voltage select ready flag
- 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_HDRF: high-driver ready flag
- 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_HDSRF: high-driver switch ready flag
- 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LDRF: low-driver mode ready flag 
- 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     FlagStatus: SET or RESET
- 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** FlagStatus pmu_flag_get(uint32_t flag)
- 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      get flag state
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  flag:
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_WAKEUP: wakeup flag
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_STANDBY: standby flag
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LVD: lvd flag
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_BLDORF: backup SRAM LDO ready flag
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LDOVSRF: LDO voltage select ready flag
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_HDRF: high-driver ready flag
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_HDSRF: high-driver switch ready flag
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****       \arg        PMU_FLAG_LDRF: low-driver mode ready flag 
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     FlagStatus: SET or RESET
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** FlagStatus pmu_flag_get(uint32_t flag)
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  952              		.loc 1 299 1
  953              		.cfi_startproc
  954              		@ args = 0, pretend = 0, frame = 8
@@ -1695,7 +1695,7 @@
  962 0004 00AF     		add	r7, sp, #0
  963              		.cfi_def_cfa_register 7
  964 0006 7860     		str	r0, [r7, #4]
- 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(PMU_CS & flag){
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     if(PMU_CS & flag){
  965              		.loc 1 300 8
  966 0008 064B     		ldr	r3, .L58
  967 000a 1A68     		ldr	r2, [r3]
@@ -1705,18 +1705,18 @@
  971              		.loc 1 300 7
  972 0010 002B     		cmp	r3, #0
  973 0012 01D0     		beq	.L56
- 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         return  SET;
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         return  SET;
  974              		.loc 1 301 17
  975 0014 0123     		movs	r3, #1
  976 0016 00E0     		b	.L57
  977              	.L56:
- 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
- 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         return  RESET;
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }else{
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****         return  RESET;
  978              		.loc 1 303 17
  979 0018 0023     		movs	r3, #0
  980              	.L57:
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
- 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     }
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  981              		.loc 1 305 1
  982 001a 1846     		mov	r0, r3
  983 001c 0C37     		adds	r7, r7, #12
@@ -1743,15 +1743,15 @@
  1005              		.fpu softvfp
  1007              	pmu_backup_write_enable:
  1008              	.LFB139:
- 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable backup domain write
- 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
- 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_write_enable(void)
- 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable backup domain write
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_write_enable(void)
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  1009              		.loc 1 314 1
  1010              		.cfi_startproc
  1011              		@ args = 0, pretend = 0, frame = 0
@@ -1762,14 +1762,14 @@
  1016              		.cfi_offset 7, -4
  1017 0002 00AF     		add	r7, sp, #0
  1018              		.cfi_def_cfa_register 7
- 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_BKPWEN;
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL |= PMU_CTL_BKPWEN;
  1019              		.loc 1 315 13
  1020 0004 044B     		ldr	r3, .L61
  1021 0006 1B68     		ldr	r3, [r3]
  1022 0008 034A     		ldr	r2, .L61
  1023 000a 43F48073 		orr	r3, r3, #256
  1024 000e 1360     		str	r3, [r2]
- 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  1025              		.loc 1 316 1
  1026 0010 00BF     		nop
  1027 0012 BD46     		mov	sp, r7
@@ -1794,15 +1794,15 @@
  1047              		.fpu softvfp
  1049              	pmu_backup_write_disable:
  1050              	.LFB140:
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable backup domain write
- 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
- 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_write_disable(void)
- 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable backup domain write
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_backup_write_disable(void)
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  1051              		.loc 1 325 1
  1052              		.cfi_startproc
  1053              		@ args = 0, pretend = 0, frame = 0
@@ -1813,14 +1813,14 @@
  1058              		.cfi_offset 7, -4
  1059 0002 00AF     		add	r7, sp, #0
  1060              		.cfi_def_cfa_register 7
- 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_BKPWEN;
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CTL &= ~PMU_CTL_BKPWEN;
  1061              		.loc 1 326 13
  1062 0004 044B     		ldr	r3, .L64
  1063 0006 1B68     		ldr	r3, [r3]
  1064 0008 034A     		ldr	r2, .L64
  1065 000a 23F48073 		bic	r3, r3, #256
  1066 000e 1360     		str	r3, [r2]
- 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  1067              		.loc 1 327 1
  1068 0010 00BF     		nop
  1069 0012 BD46     		mov	sp, r7
@@ -1845,15 +1845,15 @@
  1089              		.fpu softvfp
  1091              	pmu_wakeup_pin_enable:
  1092              	.LFB141:
- 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable wakeup pin
- 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
- 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_wakeup_pin_enable(void)
- 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      enable wakeup pin
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_wakeup_pin_enable(void)
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  1093              		.loc 1 336 1
  1094              		.cfi_startproc
  1095              		@ args = 0, pretend = 0, frame = 0
@@ -1864,14 +1864,14 @@
  1100              		.cfi_offset 7, -4
  1101 0002 00AF     		add	r7, sp, #0
  1102              		.cfi_def_cfa_register 7
- 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS |= PMU_CS_WUPEN;
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS |= PMU_CS_WUPEN;
  1103              		.loc 1 337 12
  1104 0004 044B     		ldr	r3, .L67
  1105 0006 1B68     		ldr	r3, [r3]
  1106 0008 034A     		ldr	r2, .L67
  1107 000a 43F48073 		orr	r3, r3, #256
  1108 000e 1360     		str	r3, [r2]
- 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  1109              		.loc 1 338 1
  1110 0010 00BF     		nop
  1111 0012 BD46     		mov	sp, r7
@@ -1896,15 +1896,15 @@
  1131              		.fpu softvfp
  1133              	pmu_wakeup_pin_disable:
  1134              	.LFB142:
- 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
- 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
- 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable wakeup pin
- 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
- 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
- 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
- 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
- 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_wakeup_pin_disable(void)
- 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** 
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** /*!
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \brief      disable wakeup pin
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[in]  none
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \param[out] none
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     \retval     none
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** */
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** void pmu_wakeup_pin_disable(void)
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** {
  1135              		.loc 1 347 1
  1136              		.cfi_startproc
  1137              		@ args = 0, pretend = 0, frame = 0
@@ -1915,14 +1915,14 @@
  1142              		.cfi_offset 7, -4
  1143 0002 00AF     		add	r7, sp, #0
  1144              		.cfi_def_cfa_register 7
- 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS &= ~PMU_CS_WUPEN;
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c ****     PMU_CS &= ~PMU_CS_WUPEN;
  1145              		.loc 1 348 12
  1146 0004 044B     		ldr	r3, .L70
  1147 0006 1B68     		ldr	r3, [r3]
  1148 0008 034A     		ldr	r2, .L70
  1149 000a 23F48073 		bic	r3, r3, #256
  1150 000e 1360     		str	r3, [r2]
- 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_pmu.c **** }
  1151              		.loc 1 349 1
  1152 0010 00BF     		nop
  1153 0012 BD46     		mov	sp, r7
@@ -1948,65 +1948,65 @@
  1174              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_pmu.c
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:16     .text.pmu_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:24     .text.pmu_deinit:00000000 pmu_deinit
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:50     .text.pmu_lvd_select:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:57     .text.pmu_lvd_select:00000000 pmu_lvd_select
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:111    .text.pmu_lvd_select:00000044 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:116    .text.pmu_ldo_output_select:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:123    .text.pmu_ldo_output_select:00000000 pmu_ldo_output_select
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:165    .text.pmu_ldo_output_select:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:170    .text.pmu_low_driver_mode_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:177    .text.pmu_low_driver_mode_enable:00000000 pmu_low_driver_mode_enable
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:219    .text.pmu_low_driver_mode_enable:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:224    .text.pmu_highdriver_switch_select:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:231    .text.pmu_highdriver_switch_select:00000000 pmu_highdriver_switch_select
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:950    .text.pmu_flag_get:00000000 pmu_flag_get
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:280    .text.pmu_highdriver_switch_select:00000038 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:285    .text.pmu_highdriver_mode_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:292    .text.pmu_highdriver_mode_enable:00000000 pmu_highdriver_mode_enable
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:322    .text.pmu_highdriver_mode_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:327    .text.pmu_highdriver_mode_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:334    .text.pmu_highdriver_mode_disable:00000000 pmu_highdriver_mode_disable
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:364    .text.pmu_highdriver_mode_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:369    .text.pmu_lvd_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:376    .text.pmu_lvd_disable:00000000 pmu_lvd_disable
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:406    .text.pmu_lvd_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:411    .text.pmu_lowdriver_lowpower_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:418    .text.pmu_lowdriver_lowpower_config:00000000 pmu_lowdriver_lowpower_config
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:460    .text.pmu_lowdriver_lowpower_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:465    .text.pmu_lowdriver_normalpower_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:472    .text.pmu_lowdriver_normalpower_config:00000000 pmu_lowdriver_normalpower_config
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:514    .text.pmu_lowdriver_normalpower_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:519    .text.pmu_to_sleepmode:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:526    .text.pmu_to_sleepmode:00000000 pmu_to_sleepmode
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:595    .text.pmu_to_sleepmode:00000030 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:600    .text.pmu_to_deepsleepmode:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:607    .text.pmu_to_deepsleepmode:00000000 pmu_to_deepsleepmode
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:721    .text.pmu_to_deepsleepmode:0000005c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:727    .text.pmu_to_standbymode:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:734    .text.pmu_to_standbymode:00000000 pmu_to_standbymode
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:814    .text.pmu_to_standbymode:00000048 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:820    .text.pmu_backup_ldo_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:827    .text.pmu_backup_ldo_config:00000000 pmu_backup_ldo_config
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:869    .text.pmu_backup_ldo_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:874    .text.pmu_flag_reset:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:881    .text.pmu_flag_reset:00000000 pmu_flag_reset
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:938    .text.pmu_flag_reset:0000003c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:943    .text.pmu_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:995    .text.pmu_flag_get:00000024 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1000   .text.pmu_backup_write_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1007   .text.pmu_backup_write_enable:00000000 pmu_backup_write_enable
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1037   .text.pmu_backup_write_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1042   .text.pmu_backup_write_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1049   .text.pmu_backup_write_disable:00000000 pmu_backup_write_disable
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1079   .text.pmu_backup_write_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1084   .text.pmu_wakeup_pin_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1091   .text.pmu_wakeup_pin_enable:00000000 pmu_wakeup_pin_enable
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1121   .text.pmu_wakeup_pin_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1126   .text.pmu_wakeup_pin_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1133   .text.pmu_wakeup_pin_disable:00000000 pmu_wakeup_pin_disable
-C:\Users\leonardo\AppData\Local\Temp\cc1tAJ7H.s:1163   .text.pmu_wakeup_pin_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:16     .text.pmu_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:24     .text.pmu_deinit:00000000 pmu_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:50     .text.pmu_lvd_select:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:57     .text.pmu_lvd_select:00000000 pmu_lvd_select
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:111    .text.pmu_lvd_select:00000044 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:116    .text.pmu_ldo_output_select:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:123    .text.pmu_ldo_output_select:00000000 pmu_ldo_output_select
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:165    .text.pmu_ldo_output_select:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:170    .text.pmu_low_driver_mode_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:177    .text.pmu_low_driver_mode_enable:00000000 pmu_low_driver_mode_enable
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:219    .text.pmu_low_driver_mode_enable:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:224    .text.pmu_highdriver_switch_select:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:231    .text.pmu_highdriver_switch_select:00000000 pmu_highdriver_switch_select
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:950    .text.pmu_flag_get:00000000 pmu_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:280    .text.pmu_highdriver_switch_select:00000038 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:285    .text.pmu_highdriver_mode_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:292    .text.pmu_highdriver_mode_enable:00000000 pmu_highdriver_mode_enable
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:322    .text.pmu_highdriver_mode_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:327    .text.pmu_highdriver_mode_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:334    .text.pmu_highdriver_mode_disable:00000000 pmu_highdriver_mode_disable
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:364    .text.pmu_highdriver_mode_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:369    .text.pmu_lvd_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:376    .text.pmu_lvd_disable:00000000 pmu_lvd_disable
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:406    .text.pmu_lvd_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:411    .text.pmu_lowdriver_lowpower_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:418    .text.pmu_lowdriver_lowpower_config:00000000 pmu_lowdriver_lowpower_config
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:460    .text.pmu_lowdriver_lowpower_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:465    .text.pmu_lowdriver_normalpower_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:472    .text.pmu_lowdriver_normalpower_config:00000000 pmu_lowdriver_normalpower_config
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:514    .text.pmu_lowdriver_normalpower_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:519    .text.pmu_to_sleepmode:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:526    .text.pmu_to_sleepmode:00000000 pmu_to_sleepmode
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:595    .text.pmu_to_sleepmode:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:600    .text.pmu_to_deepsleepmode:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:607    .text.pmu_to_deepsleepmode:00000000 pmu_to_deepsleepmode
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:721    .text.pmu_to_deepsleepmode:0000005c $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:727    .text.pmu_to_standbymode:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:734    .text.pmu_to_standbymode:00000000 pmu_to_standbymode
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:814    .text.pmu_to_standbymode:00000048 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:820    .text.pmu_backup_ldo_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:827    .text.pmu_backup_ldo_config:00000000 pmu_backup_ldo_config
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:869    .text.pmu_backup_ldo_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:874    .text.pmu_flag_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:881    .text.pmu_flag_reset:00000000 pmu_flag_reset
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:938    .text.pmu_flag_reset:0000003c $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:943    .text.pmu_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:995    .text.pmu_flag_get:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1000   .text.pmu_backup_write_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1007   .text.pmu_backup_write_enable:00000000 pmu_backup_write_enable
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1037   .text.pmu_backup_write_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1042   .text.pmu_backup_write_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1049   .text.pmu_backup_write_disable:00000000 pmu_backup_write_disable
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1079   .text.pmu_backup_write_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1084   .text.pmu_wakeup_pin_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1091   .text.pmu_wakeup_pin_enable:00000000 pmu_wakeup_pin_enable
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1121   .text.pmu_wakeup_pin_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1126   .text.pmu_wakeup_pin_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1133   .text.pmu_wakeup_pin_disable:00000000 pmu_wakeup_pin_disable
+C:\Users\leonardo\AppData\Local\Temp\ccbN9udz.s:1163   .text.pmu_wakeup_pin_disable:00000018 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

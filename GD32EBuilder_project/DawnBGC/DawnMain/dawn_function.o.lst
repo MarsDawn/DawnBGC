@@ -36,48 +36,48 @@
   38              		.fpu softvfp
   40              	gimbal_business:
   41              	.LFB156:
-  42              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** /*
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * Copyright (c) 2025 MarsDawn
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * Project repository:
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *     https://github.com/MarsDawn
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * This file is part of the DawnBGC project.
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * Redistribution and use in source or binary forms, with or without
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * modification, are permitted under the MIT License, provided that
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * this copyright notice and this permission notice are retained.
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * Licensed under the MIT License.
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * You may obtain a copy of the License at:
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *     https://opensource.org/licenses/MIT
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  *
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****  */
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** #include "includes.h"
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** customer_operation_struct customer_operation =
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     {
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Pitch = ATTITUDE_MODE,
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Roll = ATTITUDE_MODE,
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Yaw = ANGLE_MODE,
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         .GeoEulerTraget =
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             {
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****                 .Order = EULER_ORDER_ZXY,
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****                 .Pitch = 0.0f,
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****                 .Roll = 0.0f,
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****                 .Yaw = 0.0f,
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             },
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** };
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** void gimbal_business(void)
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** {
+  42              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_function.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** customer_operation_struct customer_operation =
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     {
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Pitch = ATTITUDE_MODE,
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Roll = ATTITUDE_MODE,
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         .CtrlMode.Yaw = ANGLE_MODE,
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         .GeoEulerTraget =
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             {
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****                 .Order = EULER_ORDER_ZXY,
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****                 .Pitch = 0.0f,
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****                 .Roll = 0.0f,
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****                 .Yaw = 0.0f,
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             },
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** };
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** void gimbal_business(void)
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** {
   43              		.loc 1 41 1
   44              		.cfi_startproc
   45              		@ args = 0, pretend = 0, frame = 0
@@ -88,21 +88,21 @@
   50              		.cfi_offset 14, -4
   51 0002 00AF     		add	r7, sp, #0
   52              		.cfi_def_cfa_register 7
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     if (GimbalSystem.GimbalState == SYSTEM_STATUS)
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     if (GimbalSystem.GimbalState == SYSTEM_STATUS)
   53              		.loc 1 43 21
   54 0004 034B     		ldr	r3, .L4
   55 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
   56              		.loc 1 43 8
   57 0008 032B     		cmp	r3, #3
   58 000a 01D1     		bne	.L3
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     {
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         motor_stall_process();
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     {
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         motor_stall_process();
   59              		.loc 1 45 9
   60 000c FFF7FEFF 		bl	motor_stall_process
   61              	.L3:
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     }
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** }
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     }
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** }
   62              		.loc 1 47 1
   63 0010 00BF     		nop
   64 0012 80BD     		pop	{r7, pc}
@@ -126,8 +126,8 @@
   83              		.fpu softvfp
   85              	motor_stall_process:
   86              	.LFB157:
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** void motor_stall_process(void)
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** {
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** void motor_stall_process(void)
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** {
   87              		.loc 1 49 1
   88              		.cfi_startproc
   89              		@ args = 0, pretend = 0, frame = 0
@@ -140,12 +140,12 @@
   96              		.cfi_offset 14, -4
   97 0002 00AF     		add	r7, sp, #0
   98              		.cfi_def_cfa_register 7
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     static uint32_t StallTime = 0;
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     static uint8_t StallTimes = 0;
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     if (
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     static uint32_t StallTime = 0;
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     static uint8_t StallTimes = 0;
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     if (
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 
   99              		.loc 1 55 40
  100 0004 4B4B     		ldr	r3, .L15
  101 0006 D3F8E841 		ldr	r4, [r3, #488]	@ float
@@ -158,7 +158,7 @@
  108 0014 FFF7FEFF 		bl	__aeabi_fadd
  109              	.LVL0:
  110 0018 0346     		mov	r3, r0
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 
  111              		.loc 1 54 8
  112 001a 1946     		mov	r1, r3
  113 001c 2046     		mov	r0, r4
@@ -268,15 +268,15 @@
  217 00d8 002B     		cmp	r3, #0
  218 00da 24D0     		beq	.L14
  219              	.L7:
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     {
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         StallTime++;
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     {
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         StallTime++;
  220              		.loc 1 57 18
  221 00dc 174B     		ldr	r3, .L15+8
  222 00de 1B68     		ldr	r3, [r3]
  223 00e0 0133     		adds	r3, r3, #1
  224 00e2 164A     		ldr	r2, .L15+8
  225 00e4 1360     		str	r3, [r2]
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         if (StallTime > (5.0f * CLOSELOOP_EXECUTE_FREQ))
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         if (StallTime > (5.0f * CLOSELOOP_EXECUTE_FREQ))
  226              		.loc 1 58 23
  227 00e6 154B     		ldr	r3, .L15+8
  228 00e8 1B68     		ldr	r3, [r3]
@@ -292,15 +292,15 @@
  238 00fa 0346     		mov	r3, r0
  239 00fc 002B     		cmp	r3, #0
  240 00fe 16D0     		beq	.L12
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         {
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             StallTime = 0;
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         {
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             StallTime = 0;
  241              		.loc 1 61 23
  242 0100 0E4B     		ldr	r3, .L15+8
  243 0102 0022     		movs	r2, #0
  244 0104 1A60     		str	r2, [r3]
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             StallTimes++;
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             StallTimes++;
  245              		.loc 1 63 23
  246 0106 0F4B     		ldr	r3, .L15+16
  247 0108 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -308,32 +308,32 @@
  249 010c DAB2     		uxtb	r2, r3
  250 010e 0D4B     		ldr	r3, .L15+16
  251 0110 1A70     		strb	r2, [r3]
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** 
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCYaw);
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCYaw);
  252              		.loc 1 65 13
  253 0112 0D48     		ldr	r0, .L15+20
  254 0114 FFF7FEFF 		bl	ShutOffPWM
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCRoll);
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCRoll);
  255              		.loc 1 66 13
  256 0118 0C48     		ldr	r0, .L15+24
  257 011a FFF7FEFF 		bl	ShutOffPWM
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCPitch);
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             ShutOffPWM(&BLDCPitch);
  258              		.loc 1 67 13
  259 011e 0C48     		ldr	r0, .L15+28
  260 0120 FFF7FEFF 		bl	ShutOffPWM
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         {
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         {
  261              		.loc 1 58 12
  262 0124 03E0     		b	.L12
  263              	.L14:
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         }
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     }
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****     else
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c ****         StallTime = 0;
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         }
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     }
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     else
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         StallTime = 0;
  264              		.loc 1 71 19
  265 0126 054B     		ldr	r3, .L15+8
  266 0128 0022     		movs	r2, #0
  267 012a 1A60     		str	r2, [r3]
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain\dawn_function.c **** }
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** }
  268              		.loc 1 72 1
  269 012c 00BF     		nop
  270              	.L12:
@@ -379,22 +379,22 @@
  315              		.file 17 "../../Dawn/DawnDevice/icm206xx.h"
  316              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
  317              		.file 19 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
- 318              		.file 20 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.h"
+ 318              		.file 20 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_function.h"
  319              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_function.c
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:20     .data.customer_operation:00000000 customer_operation
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:17     .data.customer_operation:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:32     .text.gimbal_business:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:40     .text.gimbal_business:00000000 gimbal_business
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:85     .text.motor_stall_process:00000000 motor_stall_process
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:68     .text.gimbal_business:00000014 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:78     .text.motor_stall_process:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:276    .text.motor_stall_process:00000134 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:291    .bss.StallTime.11219:00000000 StallTime.11219
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:296    .bss.StallTimes.11220:00000000 StallTimes.11220
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:288    .bss.StallTime.11219:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8Xzjwu.s:297    .bss.StallTimes.11220:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:20     .data.customer_operation:00000000 customer_operation
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:17     .data.customer_operation:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:32     .text.gimbal_business:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:40     .text.gimbal_business:00000000 gimbal_business
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:85     .text.motor_stall_process:00000000 motor_stall_process
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:68     .text.gimbal_business:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:78     .text.motor_stall_process:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:276    .text.motor_stall_process:00000134 $d
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:291    .bss.StallTime.11219:00000000 StallTime.11219
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:296    .bss.StallTimes.11220:00000000 StallTimes.11220
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:288    .bss.StallTime.11219:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccWnD4Ao.s:297    .bss.StallTimes.11220:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

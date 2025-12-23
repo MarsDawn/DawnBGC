@@ -22,28 +22,28 @@
   22              		.fpu softvfp
   24              	iref_deinit:
   25              	.LFB123:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_iref.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \file  gd32f4xx_iref.c
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief IREF driver
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     Copyright (C) 2016 GigaDevice
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** #include "gd32f4xx_iref.h"
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      deinit IREF
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  none
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_deinit(void)
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_iref.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \file  gd32f4xx_iref.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief IREF driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** #include "gd32f4xx_iref.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      deinit IREF
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
   27              		.loc 1 21 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -54,15 +54,15 @@
   34              		.cfi_offset 14, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     rcu_periph_reset_enable(RCU_IREFRST);
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     rcu_periph_reset_enable(RCU_IREFRST);
   37              		.loc 1 22 5
   38 0004 43F61F00 		movw	r0, #14367
   39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     rcu_periph_reset_disable(RCU_IREFRST);
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     rcu_periph_reset_disable(RCU_IREFRST);
   40              		.loc 1 23 5
   41 000c 43F61F00 		movw	r0, #14367
   42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
   43              		.loc 1 24 1
   44 0014 00BF     		nop
   45 0016 80BD     		pop	{r7, pc}
@@ -77,15 +77,15 @@
   55              		.fpu softvfp
   57              	iref_enable:
   58              	.LFB124:
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      enable IREF
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  none
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_enable(void)
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      enable IREF
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  none
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_enable(void)
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
   59              		.loc 1 33 1
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 0
@@ -96,14 +96,14 @@
   66              		.cfi_offset 7, -4
   67 0002 00AF     		add	r7, sp, #0
   68              		.cfi_def_cfa_register 7
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= IREF_CTL_CREN;
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= IREF_CTL_CREN;
   69              		.loc 1 34 14
   70 0004 044B     		ldr	r3, .L3
   71 0006 1B68     		ldr	r3, [r3]
   72 0008 034A     		ldr	r2, .L3
   73 000a 43F40043 		orr	r3, r3, #32768
   74 000e 1360     		str	r3, [r2]
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
   75              		.loc 1 35 1
   76 0010 00BF     		nop
   77 0012 BD46     		mov	sp, r7
@@ -128,15 +128,15 @@
   97              		.fpu softvfp
   99              	iref_disable:
  100              	.LFB125:
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      disable IREF
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  none
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_disable(void)
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      disable IREF
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  none
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_disable(void)
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
  101              		.loc 1 44 1
  102              		.cfi_startproc
  103              		@ args = 0, pretend = 0, frame = 0
@@ -147,14 +147,14 @@
  108              		.cfi_offset 7, -4
  109 0002 00AF     		add	r7, sp, #0
  110              		.cfi_def_cfa_register 7
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_CREN;
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_CREN;
  111              		.loc 1 45 14
  112 0004 044B     		ldr	r3, .L6
  113 0006 1B68     		ldr	r3, [r3]
  114 0008 034A     		ldr	r2, .L6
  115 000a 23F40043 		bic	r3, r3, #32768
  116 000e 1360     		str	r3, [r2]
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
  117              		.loc 1 46 1
  118 0010 00BF     		nop
  119 0012 BD46     		mov	sp, r7
@@ -179,17 +179,17 @@
  139              		.fpu softvfp
  141              	iref_mode_set:
  142              	.LFB126:
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      set IREF mode
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  step
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_MODE_LOW_POWER: 1uA step
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_MODE_HIGH_CURRENT: 8uA step
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_mode_set(uint32_t step)
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      set IREF mode
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  step
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_MODE_LOW_POWER: 1uA step
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_MODE_HIGH_CURRENT: 8uA step
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_mode_set(uint32_t step)
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
  143              		.loc 1 57 1
  144              		.cfi_startproc
  145              		@ args = 0, pretend = 0, frame = 8
@@ -203,14 +203,14 @@
  153 0004 00AF     		add	r7, sp, #0
  154              		.cfi_def_cfa_register 7
  155 0006 7860     		str	r0, [r7, #4]
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_SSEL;
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_SSEL;
  156              		.loc 1 58 14
  157 0008 084B     		ldr	r3, .L9
  158 000a 1B68     		ldr	r3, [r3]
  159 000c 074A     		ldr	r2, .L9
  160 000e 23F48043 		bic	r3, r3, #16384
  161 0012 1360     		str	r3, [r2]
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= step;
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= step;
  162              		.loc 1 59 14
  163 0014 054B     		ldr	r3, .L9
  164 0016 1A68     		ldr	r2, [r3]
@@ -218,7 +218,7 @@
  166 001a 7B68     		ldr	r3, [r7, #4]
  167 001c 1343     		orrs	r3, r3, r2
  168 001e 0B60     		str	r3, [r1]
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
  169              		.loc 1 60 1
  170 0020 00BF     		nop
  171 0022 0C37     		adds	r7, r7, #12
@@ -245,16 +245,16 @@
  193              		.fpu softvfp
  195              	iref_precision_trim_value_set:
  196              	.LFB127:
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      set IREF precision_trim_value
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  precisiontrim
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_CUR_PRECISION_TRIM_X(x=0..31): (-15+ x)%
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_precision_trim_value_set(uint32_t precisiontrim)
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      set IREF precision_trim_value
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  precisiontrim
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_CUR_PRECISION_TRIM_X(x=0..31): (-15+ x)%
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_precision_trim_value_set(uint32_t precisiontrim)
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
  197              		.loc 1 70 1
  198              		.cfi_startproc
  199              		@ args = 0, pretend = 0, frame = 8
@@ -268,14 +268,14 @@
  207 0004 00AF     		add	r7, sp, #0
  208              		.cfi_def_cfa_register 7
  209 0006 7860     		str	r0, [r7, #4]
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_CPT;
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_CPT;
  210              		.loc 1 71 14
  211 0008 084B     		ldr	r3, .L12
  212 000a 1B68     		ldr	r3, [r3]
  213 000c 074A     		ldr	r2, .L12
  214 000e 23F4F853 		bic	r3, r3, #7936
  215 0012 1360     		str	r3, [r2]
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= precisiontrim;
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= precisiontrim;
  216              		.loc 1 72 14
  217 0014 054B     		ldr	r3, .L12
  218 0016 1A68     		ldr	r2, [r3]
@@ -283,7 +283,7 @@
  220 001a 7B68     		ldr	r3, [r7, #4]
  221 001c 1343     		orrs	r3, r3, r2
  222 001e 0B60     		str	r3, [r1]
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
  223              		.loc 1 73 1
  224 0020 00BF     		nop
  225 0022 0C37     		adds	r7, r7, #12
@@ -310,17 +310,17 @@
  247              		.fpu softvfp
  249              	iref_sink_set:
  250              	.LFB128:
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      set IREF sink mode
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  sinkmode
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_SOURCE_CURRENT : source current.
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_SINK_CURRENT: sink current
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_sink_set(uint32_t sinkmode)
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      set IREF sink mode
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  sinkmode
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_SOURCE_CURRENT : source current.
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_SINK_CURRENT: sink current
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_sink_set(uint32_t sinkmode)
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
  251              		.loc 1 84 1
  252              		.cfi_startproc
  253              		@ args = 0, pretend = 0, frame = 8
@@ -334,14 +334,14 @@
  261 0004 00AF     		add	r7, sp, #0
  262              		.cfi_def_cfa_register 7
  263 0006 7860     		str	r0, [r7, #4]
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_SCMOD;
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_SCMOD;
  264              		.loc 1 85 14
  265 0008 084B     		ldr	r3, .L15
  266 000a 1B68     		ldr	r3, [r3]
  267 000c 074A     		ldr	r2, .L15
  268 000e 23F08003 		bic	r3, r3, #128
  269 0012 1360     		str	r3, [r2]
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= sinkmode;
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= sinkmode;
  270              		.loc 1 86 14
  271 0014 054B     		ldr	r3, .L15
  272 0016 1A68     		ldr	r2, [r3]
@@ -349,7 +349,7 @@
  274 001a 7B68     		ldr	r3, [r7, #4]
  275 001c 1343     		orrs	r3, r3, r2
  276 001e 0B60     		str	r3, [r1]
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
  277              		.loc 1 87 1
  278 0020 00BF     		nop
  279 0022 0C37     		adds	r7, r7, #12
@@ -376,17 +376,17 @@
  301              		.fpu softvfp
  303              	iref_step_data_config:
  304              	.LFB129:
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      set IREF step data 
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  stepdata
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_CUR_STEP_DATA_X:(x=0..63): step*x
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_step_data_config(uint32_t stepdata)
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** /*!
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \brief      set IREF step data 
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[in]  stepdata
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****       \arg        IREF_CUR_STEP_DATA_X:(x=0..63): step*x
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \param[out] none
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     \retval     none
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** */
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** 
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** void iref_step_data_config(uint32_t stepdata)
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** {
  305              		.loc 1 98 1
  306              		.cfi_startproc
  307              		@ args = 0, pretend = 0, frame = 8
@@ -400,14 +400,14 @@
  315 0004 00AF     		add	r7, sp, #0
  316              		.cfi_def_cfa_register 7
  317 0006 7860     		str	r0, [r7, #4]
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_CSDT;
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL &= ~IREF_CTL_CSDT;
  318              		.loc 1 99 14
  319 0008 084B     		ldr	r3, .L18
  320 000a 1B68     		ldr	r3, [r3]
  321 000c 074A     		ldr	r2, .L18
  322 000e 23F03F03 		bic	r3, r3, #63
  323 0012 1360     		str	r3, [r2]
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= stepdata;
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c ****     IREF_CTL |= stepdata;
  324              		.loc 1 100 14
  325 0014 054B     		ldr	r3, .L18
  326 0016 1A68     		ldr	r2, [r3]
@@ -415,7 +415,7 @@
  328 001a 7B68     		ldr	r3, [r7, #4]
  329 001c 1343     		orrs	r3, r3, r2
  330 001e 0B60     		str	r3, [r1]
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_iref.c **** }
  331              		.loc 1 101 1
  332 0020 00BF     		nop
  333 0022 0C37     		adds	r7, r7, #12
@@ -442,26 +442,26 @@
  355              		.file 6 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_iref.c
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:16     .text.iref_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:24     .text.iref_deinit:00000000 iref_deinit
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:50     .text.iref_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:57     .text.iref_enable:00000000 iref_enable
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:87     .text.iref_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:92     .text.iref_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:99     .text.iref_disable:00000000 iref_disable
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:129    .text.iref_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:134    .text.iref_mode_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:141    .text.iref_mode_set:00000000 iref_mode_set
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:183    .text.iref_mode_set:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:188    .text.iref_precision_trim_value_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:195    .text.iref_precision_trim_value_set:00000000 iref_precision_trim_value_set
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:237    .text.iref_precision_trim_value_set:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:242    .text.iref_sink_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:249    .text.iref_sink_set:00000000 iref_sink_set
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:291    .text.iref_sink_set:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:296    .text.iref_step_data_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:303    .text.iref_step_data_config:00000000 iref_step_data_config
-C:\Users\leonardo\AppData\Local\Temp\ccUMiE0d.s:345    .text.iref_step_data_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:16     .text.iref_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:24     .text.iref_deinit:00000000 iref_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:50     .text.iref_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:57     .text.iref_enable:00000000 iref_enable
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:87     .text.iref_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:92     .text.iref_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:99     .text.iref_disable:00000000 iref_disable
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:129    .text.iref_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:134    .text.iref_mode_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:141    .text.iref_mode_set:00000000 iref_mode_set
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:183    .text.iref_mode_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:188    .text.iref_precision_trim_value_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:195    .text.iref_precision_trim_value_set:00000000 iref_precision_trim_value_set
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:237    .text.iref_precision_trim_value_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:242    .text.iref_sink_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:249    .text.iref_sink_set:00000000 iref_sink_set
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:291    .text.iref_sink_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:296    .text.iref_step_data_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:303    .text.iref_step_data_config:00000000 iref_step_data_config
+C:\Users\leonardo\AppData\Local\Temp\ccNsJWhi.s:345    .text.iref_step_data_config:0000002c $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

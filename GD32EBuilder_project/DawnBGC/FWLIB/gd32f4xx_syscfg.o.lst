@@ -22,28 +22,28 @@
   22              		.fpu softvfp
   24              	syscfg_deinit:
   25              	.LFB123:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_syscfg.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \file  gd32f4xx_syscfg.c
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief SYSCFG driver
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     Copyright (C) 2016 GigaDevice
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** #include "gd32f4xx_syscfg.h"
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      reset the SYSCFG registers
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  none
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_deinit(void)
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_syscfg.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \file  gd32f4xx_syscfg.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief SYSCFG driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** #include "gd32f4xx_syscfg.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      reset the SYSCFG registers
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
   27              		.loc 1 21 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -54,15 +54,15 @@
   34              		.cfi_offset 14, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     rcu_periph_reset_enable(RCU_SYSCFGRST);
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     rcu_periph_reset_enable(RCU_SYSCFGRST);
   37              		.loc 1 22 5
   38 0004 40F60E10 		movw	r0, #2318
   39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     rcu_periph_reset_disable(RCU_SYSCFGRST);
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     rcu_periph_reset_disable(RCU_SYSCFGRST);
   40              		.loc 1 23 5
   41 000c 40F60E10 		movw	r0, #2318
   42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
   43              		.loc 1 24 1
   44 0014 00BF     		nop
   45 0016 80BD     		pop	{r7, pc}
@@ -77,20 +77,20 @@
   55              		.fpu softvfp
   57              	syscfg_bootmode_config:
   58              	.LFB124:
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      configure the boot mode 
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_bootmode: selects the memory remapping
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_FLASH: main flash memory (0x08000000~0x083BFFFF) is mapped at add
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_BOOTLOADER: boot loader (0x1FFF0000 - 0x1FFF77FF) is mapped at ad
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_EXMC_SRAM: SRAM/NOR 0 and 1 of EXMC (0x60000000~0x67FFFFFF) is ma
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_SRAM: SRAM0 of on-chip SRAM (0x20000000~0x2001BFFF) is mapped at 
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_EXMC_SDRAM: SDRAM bank0 of EXMC (0xC0000000~0xC7FFFFFF) is mapped
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_bootmode_config(uint8_t syscfg_bootmode)
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      configure the boot mode 
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_bootmode: selects the memory remapping
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_FLASH: main flash memory (0x08000000~0x083BFFFF) is mapped at add
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_BOOTLOADER: boot loader (0x1FFF0000 - 0x1FFF77FF) is mapped at ad
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_EXMC_SRAM: SRAM/NOR 0 and 1 of EXMC (0x60000000~0x67FFFFFF) is ma
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_SRAM: SRAM0 of on-chip SRAM (0x20000000~0x2001BFFF) is mapped at 
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_BOOTMODE_EXMC_SDRAM: SDRAM bank0 of EXMC (0xC0000000~0xC7FFFFFF) is mapped
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_bootmode_config(uint8_t syscfg_bootmode)
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
   59              		.loc 1 38 1
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 8
@@ -105,15 +105,15 @@
   70              		.cfi_def_cfa_register 7
   71 0006 0346     		mov	r3, r0
   72 0008 FB71     		strb	r3, [r7, #7]
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the SYSCFG_CFG0_BOOT_MODE bit and set according to syscfg_bootmode */
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG0 &= ~SYSCFG_CFG0_BOOT_MODE;
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the SYSCFG_CFG0_BOOT_MODE bit and set according to syscfg_bootmode */
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG0 &= ~SYSCFG_CFG0_BOOT_MODE;
   73              		.loc 1 40 17
   74 000a 084B     		ldr	r3, .L3
   75 000c 1B68     		ldr	r3, [r3]
   76 000e 074A     		ldr	r2, .L3
   77 0010 23F00703 		bic	r3, r3, #7
   78 0014 1360     		str	r3, [r2]
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG0 |= (uint32_t)syscfg_bootmode;
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG0 |= (uint32_t)syscfg_bootmode;
   79              		.loc 1 41 17
   80 0016 054B     		ldr	r3, .L3
   81 0018 1A68     		ldr	r2, [r3]
@@ -123,7 +123,7 @@
   85 001c 0349     		ldr	r1, .L3
   86 001e 1343     		orrs	r3, r3, r2
   87 0020 0B60     		str	r3, [r1]
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
   88              		.loc 1 42 1
   89 0022 00BF     		nop
   90 0024 0C37     		adds	r7, r7, #12
@@ -150,17 +150,17 @@
  112              		.fpu softvfp
  114              	syscfg_fmc_swap_config:
  115              	.LFB125:
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      FMC memory mapping swap
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_fmc_swap: selects the interal flash bank swapping
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_FMC_SWP_BANK0: bank 0 is mapped at address 0x08000000 and bank 1 is mapped
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_FMC_SWP_BANK1: bank 1 is mapped at address 0x08000000 and bank 0 is mapped
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_fmc_swap_config(uint32_t syscfg_fmc_swap)
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      FMC memory mapping swap
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_fmc_swap: selects the interal flash bank swapping
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_FMC_SWP_BANK0: bank 0 is mapped at address 0x08000000 and bank 1 is mapped
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_FMC_SWP_BANK1: bank 1 is mapped at address 0x08000000 and bank 0 is mapped
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_fmc_swap_config(uint32_t syscfg_fmc_swap)
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
  116              		.loc 1 53 1
  117              		.cfi_startproc
  118              		@ args = 0, pretend = 0, frame = 16
@@ -174,20 +174,20 @@
  126 0004 00AF     		add	r7, sp, #0
  127              		.cfi_def_cfa_register 7
  128 0006 7860     		str	r0, [r7, #4]
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t reg;
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg = SYSCFG_CFG0;
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t reg;
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg = SYSCFG_CFG0;
  129              		.loc 1 55 11
  130 0008 084B     		ldr	r3, .L6
  131              		.loc 1 55 9
  132 000a 1B68     		ldr	r3, [r3]
  133 000c FB60     		str	r3, [r7, #12]
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the FMC_SWP bit and set according to syscfg_fmc_swap */
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg &= ~SYSCFG_CFG0_FMC_SWP;
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the FMC_SWP bit and set according to syscfg_fmc_swap */
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg &= ~SYSCFG_CFG0_FMC_SWP;
  134              		.loc 1 57 9
  135 000e FB68     		ldr	r3, [r7, #12]
  136 0010 23F48073 		bic	r3, r3, #256
  137 0014 FB60     		str	r3, [r7, #12]
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG0 = (reg | syscfg_fmc_swap);
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG0 = (reg | syscfg_fmc_swap);
  138              		.loc 1 58 5
  139 0016 0549     		ldr	r1, .L6
  140              		.loc 1 58 24
@@ -196,7 +196,7 @@
  143 001c 1343     		orrs	r3, r3, r2
  144              		.loc 1 58 17
  145 001e 0B60     		str	r3, [r1]
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
  146              		.loc 1 59 1
  147 0020 00BF     		nop
  148 0022 1437     		adds	r7, r7, #20
@@ -223,17 +223,17 @@
  170              		.fpu softvfp
  172              	syscfg_exmc_swap_config:
  173              	.LFB126:
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      EXMC memory mapping swap
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_exmc_swap: selects the memories in EXMC swapping
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_EXMC_SWP_ENABLE: SDRAM bank 0 and bank 1 are swapped with NAND bank 1 and 
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_EXMC_SWP_DISABLE: no memory mapping swap
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_exmc_swap_config(uint32_t syscfg_exmc_swap)
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      EXMC memory mapping swap
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_exmc_swap: selects the memories in EXMC swapping
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_EXMC_SWP_ENABLE: SDRAM bank 0 and bank 1 are swapped with NAND bank 1 and 
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_EXMC_SWP_DISABLE: no memory mapping swap
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_exmc_swap_config(uint32_t syscfg_exmc_swap)
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
  174              		.loc 1 70 1
  175              		.cfi_startproc
  176              		@ args = 0, pretend = 0, frame = 16
@@ -247,21 +247,21 @@
  184 0004 00AF     		add	r7, sp, #0
  185              		.cfi_def_cfa_register 7
  186 0006 7860     		str	r0, [r7, #4]
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t reg;
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg = SYSCFG_CFG0;
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t reg;
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg = SYSCFG_CFG0;
  187              		.loc 1 73 11
  188 0008 084B     		ldr	r3, .L9
  189              		.loc 1 73 9
  190 000a 1B68     		ldr	r3, [r3]
  191 000c FB60     		str	r3, [r7, #12]
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the SYSCFG_CFG0_EXMC_SWP bits and set according to syscfg_exmc_swap */
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg &= ~SYSCFG_CFG0_EXMC_SWP;
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the SYSCFG_CFG0_EXMC_SWP bits and set according to syscfg_exmc_swap */
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg &= ~SYSCFG_CFG0_EXMC_SWP;
  192              		.loc 1 75 9
  193 000e FB68     		ldr	r3, [r7, #12]
  194 0010 23F44063 		bic	r3, r3, #3072
  195 0014 FB60     		str	r3, [r7, #12]
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG0 = (reg | syscfg_exmc_swap);
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG0 = (reg | syscfg_exmc_swap);
  196              		.loc 1 76 5
  197 0016 0549     		ldr	r1, .L9
  198              		.loc 1 76 24
@@ -270,7 +270,7 @@
  201 001c 1343     		orrs	r3, r3, r2
  202              		.loc 1 76 17
  203 001e 0B60     		str	r3, [r1]
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
  204              		.loc 1 77 1
  205 0020 00BF     		nop
  206 0022 1437     		adds	r7, r7, #20
@@ -297,18 +297,18 @@
  228              		.fpu softvfp
  230              	syscfg_exti_line_config:
  231              	.LFB127:
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      configure the GPIO pin as EXTI Line
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  exti_port: specify the GPIO port used in EXTI
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        EXTI_SOURCE_GPIOx(x = A,B,C,D,E,F,G,H,I): EXTI GPIO port
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  exti_pin: specify the EXTI line
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        EXTI_SOURCE_PINx(x = 0..15): EXTI GPIO pin
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_exti_line_config(uint8_t exti_port, uint8_t exti_pin)
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      configure the GPIO pin as EXTI Line
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  exti_port: specify the GPIO port used in EXTI
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        EXTI_SOURCE_GPIOx(x = A,B,C,D,E,F,G,H,I): EXTI GPIO port
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  exti_pin: specify the EXTI line
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        EXTI_SOURCE_PINx(x = 0..15): EXTI GPIO pin
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_exti_line_config(uint8_t exti_port, uint8_t exti_pin)
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
  232              		.loc 1 89 1
  233              		.cfi_startproc
  234              		@ args = 0, pretend = 0, frame = 16
@@ -326,7 +326,7 @@
  246 000a FB71     		strb	r3, [r7, #7]
  247 000c 1346     		mov	r3, r2
  248 000e BB71     		strb	r3, [r7, #6]
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t clear_exti_mask = ~((uint32_t)EXTI_SS_MASK << (EXTI_SS_MSTEP(exti_pin)));
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t clear_exti_mask = ~((uint32_t)EXTI_SS_MASK << (EXTI_SS_MSTEP(exti_pin)));
  249              		.loc 1 90 61
  250 0010 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  251 0012 03F00303 		and	r3, r3, #3
@@ -337,7 +337,7 @@
  256              		.loc 1 90 14
  257 001e DB43     		mvns	r3, r3
  258 0020 FB60     		str	r3, [r7, #12]
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t config_exti_mask = ((uint32_t)exti_port) << (EXTI_SS_MSTEP(exti_pin));
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t config_exti_mask = ((uint32_t)exti_port) << (EXTI_SS_MSTEP(exti_pin));
  259              		.loc 1 91 34
  260 0022 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
  261              		.loc 1 91 59
@@ -347,8 +347,8 @@
  265              		.loc 1 91 14
  266 002c 02FA03F3 		lsl	r3, r2, r3
  267 0030 BB60     		str	r3, [r7, #8]
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     switch(exti_pin/EXTI_SS_JSTEP){
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     switch(exti_pin/EXTI_SS_JSTEP){
  268              		.loc 1 93 20
  269 0032 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  270 0034 9B08     		lsrs	r3, r3, #2
@@ -365,9 +365,9 @@
  281 0050 A3000000 		.word	.L13+1
  282              		.p2align 1
  283              	.L17:
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     case EXTISS0:
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* clear EXTI source line(0..3) */
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS0 &= clear_exti_mask;
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     case EXTISS0:
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* clear EXTI source line(0..3) */
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS0 &= clear_exti_mask;
  284              		.loc 1 96 24
  285 0054 1C4B     		ldr	r3, .L20
  286 0056 1A68     		ldr	r2, [r3]
@@ -375,8 +375,8 @@
  288 005a FB68     		ldr	r3, [r7, #12]
  289 005c 1340     		ands	r3, r3, r2
  290 005e 0B60     		str	r3, [r1]
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* configure EXTI soure line(0..3) */
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS0 |= config_exti_mask;
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* configure EXTI soure line(0..3) */
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS0 |= config_exti_mask;
  291              		.loc 1 98 24
  292 0060 194B     		ldr	r3, .L20
  293 0062 1A68     		ldr	r2, [r3]
@@ -384,13 +384,13 @@
  295 0066 BB68     		ldr	r3, [r7, #8]
  296 0068 1343     		orrs	r3, r3, r2
  297 006a 0B60     		str	r3, [r1]
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
  298              		.loc 1 99 9
  299 006c 27E0     		b	.L18
  300              	.L16:
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     case EXTISS1:
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* clear EXTI soure line(4..7) */
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS1 &= clear_exti_mask;
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     case EXTISS1:
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* clear EXTI soure line(4..7) */
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS1 &= clear_exti_mask;
  301              		.loc 1 102 24
  302 006e 174B     		ldr	r3, .L20+4
  303 0070 1A68     		ldr	r2, [r3]
@@ -398,8 +398,8 @@
  305 0074 FB68     		ldr	r3, [r7, #12]
  306 0076 1340     		ands	r3, r3, r2
  307 0078 0B60     		str	r3, [r1]
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* configure EXTI soure line(4..7) */
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS1 |= config_exti_mask;
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* configure EXTI soure line(4..7) */
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS1 |= config_exti_mask;
  308              		.loc 1 104 24
  309 007a 144B     		ldr	r3, .L20+4
  310 007c 1A68     		ldr	r2, [r3]
@@ -407,13 +407,13 @@
  312 0080 BB68     		ldr	r3, [r7, #8]
  313 0082 1343     		orrs	r3, r3, r2
  314 0084 0B60     		str	r3, [r1]
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
  315              		.loc 1 105 9
  316 0086 1AE0     		b	.L18
  317              	.L15:
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     case EXTISS2:
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* clear EXTI soure line(8..11) */
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS2 &= clear_exti_mask;
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     case EXTISS2:
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* clear EXTI soure line(8..11) */
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS2 &= clear_exti_mask;
  318              		.loc 1 108 24
  319 0088 114B     		ldr	r3, .L20+8
  320 008a 1A68     		ldr	r2, [r3]
@@ -421,8 +421,8 @@
  322 008e FB68     		ldr	r3, [r7, #12]
  323 0090 1340     		ands	r3, r3, r2
  324 0092 0B60     		str	r3, [r1]
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* configure EXTI soure line(8..11) */
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS2 |= config_exti_mask;
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* configure EXTI soure line(8..11) */
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS2 |= config_exti_mask;
  325              		.loc 1 110 24
  326 0094 0E4B     		ldr	r3, .L20+8
  327 0096 1A68     		ldr	r2, [r3]
@@ -430,13 +430,13 @@
  329 009a BB68     		ldr	r3, [r7, #8]
  330 009c 1343     		orrs	r3, r3, r2
  331 009e 0B60     		str	r3, [r1]
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
  332              		.loc 1 111 9
  333 00a0 0DE0     		b	.L18
  334              	.L13:
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     case EXTISS3:
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* clear EXTI soure line(12..15) */
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS3 &= clear_exti_mask;
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     case EXTISS3:
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* clear EXTI soure line(12..15) */
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS3 &= clear_exti_mask;
  335              		.loc 1 114 24
  336 00a2 0C4B     		ldr	r3, .L20+12
  337 00a4 1A68     		ldr	r2, [r3]
@@ -444,8 +444,8 @@
  339 00a8 FB68     		ldr	r3, [r7, #12]
  340 00aa 1340     		ands	r3, r3, r2
  341 00ac 0B60     		str	r3, [r1]
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* configure EXTI soure line(12..15) */
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS3 |= config_exti_mask;
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         /* configure EXTI soure line(12..15) */
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         SYSCFG_EXTISS3 |= config_exti_mask;
  342              		.loc 1 116 24
  343 00ae 094B     		ldr	r3, .L20+12
  344 00b0 1A68     		ldr	r2, [r3]
@@ -453,17 +453,17 @@
  346 00b4 BB68     		ldr	r3, [r7, #8]
  347 00b6 1343     		orrs	r3, r3, r2
  348 00b8 0B60     		str	r3, [r1]
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
  349              		.loc 1 117 9
  350 00ba 00E0     		b	.L18
  351              	.L19:
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     default:
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     default:
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         break;
  352              		.loc 1 119 9
  353 00bc 00BF     		nop
  354              	.L18:
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     }
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     }
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
  355              		.loc 1 121 1
  356 00be 00BF     		nop
  357 00c0 1437     		adds	r7, r7, #20
@@ -493,17 +493,17 @@
  382              		.fpu softvfp
  384              	syscfg_enet_phy_interface_config:
  385              	.LFB128:
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      configure the PHY interface for the ethernet MAC
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_enet_phy_interface: specifies the media interface mode.
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_ENET_PHY_MII: MII mode is selected
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_ENET_PHY_RMII: RMII mode is selected 
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_enet_phy_interface_config(uint32_t syscfg_enet_phy_interface)
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** { 
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      configure the PHY interface for the ethernet MAC
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_enet_phy_interface: specifies the media interface mode.
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_ENET_PHY_MII: MII mode is selected
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_ENET_PHY_RMII: RMII mode is selected 
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_enet_phy_interface_config(uint32_t syscfg_enet_phy_interface)
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** { 
  386              		.loc 1 132 1
  387              		.cfi_startproc
  388              		@ args = 0, pretend = 0, frame = 16
@@ -517,21 +517,21 @@
  396 0004 00AF     		add	r7, sp, #0
  397              		.cfi_def_cfa_register 7
  398 0006 7860     		str	r0, [r7, #4]
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t reg;
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg = SYSCFG_CFG1;
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t reg;
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg = SYSCFG_CFG1;
  399              		.loc 1 135 11
  400 0008 084B     		ldr	r3, .L23
  401              		.loc 1 135 9
  402 000a 1B68     		ldr	r3, [r3]
  403 000c FB60     		str	r3, [r7, #12]
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the ENET_PHY_SEL bit and set according to syscfg_enet_phy_interface */
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg &= ~SYSCFG_CFG1_ENET_PHY_SEL;
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the ENET_PHY_SEL bit and set according to syscfg_enet_phy_interface */
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg &= ~SYSCFG_CFG1_ENET_PHY_SEL;
  404              		.loc 1 137 9
  405 000e FB68     		ldr	r3, [r7, #12]
  406 0010 23F40003 		bic	r3, r3, #8388608
  407 0014 FB60     		str	r3, [r7, #12]
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG1 = (reg | syscfg_enet_phy_interface);
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CFG1 = (reg | syscfg_enet_phy_interface);
  408              		.loc 1 138 5
  409 0016 0549     		ldr	r1, .L23
  410              		.loc 1 138 24
@@ -540,7 +540,7 @@
  413 001c 1343     		orrs	r3, r3, r2
  414              		.loc 1 138 17
  415 001e 0B60     		str	r3, [r1]
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
  416              		.loc 1 139 1
  417 0020 00BF     		nop
  418 0022 1437     		adds	r7, r7, #20
@@ -567,17 +567,17 @@
  440              		.fpu softvfp
  442              	syscfg_compensation_config:
  443              	.LFB129:
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      configure the I/O compensation cell
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_compensation: specifies the I/O compensation cell mode
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_COMPENSATION_ENABLE: I/O compensation cell is enabled
- 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_COMPENSATION_DISABLE: I/O compensation cell is disabled
- 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
- 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
- 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_compensation_config(uint32_t syscfg_compensation) 
- 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      configure the I/O compensation cell
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  syscfg_compensation: specifies the I/O compensation cell mode
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_COMPENSATION_ENABLE: I/O compensation cell is enabled
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****       \arg        SYSCFG_COMPENSATION_DISABLE: I/O compensation cell is disabled
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     none
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** */
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** void syscfg_compensation_config(uint32_t syscfg_compensation) 
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
  444              		.loc 1 150 1
  445              		.cfi_startproc
  446              		@ args = 0, pretend = 0, frame = 16
@@ -591,21 +591,21 @@
  454 0004 00AF     		add	r7, sp, #0
  455              		.cfi_def_cfa_register 7
  456 0006 7860     		str	r0, [r7, #4]
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t reg;
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
- 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg = SYSCFG_CPSCTL;
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     uint32_t reg;
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg = SYSCFG_CPSCTL;
  457              		.loc 1 153 11
  458 0008 084B     		ldr	r3, .L26
  459              		.loc 1 153 9
  460 000a 1B68     		ldr	r3, [r3]
  461 000c FB60     		str	r3, [r7, #12]
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the SYSCFG_CPSCTL_CPS_EN bit and set according to syscfg_compensation */
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg &= ~SYSCFG_CPSCTL_CPS_EN;
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     /* reset the SYSCFG_CPSCTL_CPS_EN bit and set according to syscfg_compensation */
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     reg &= ~SYSCFG_CPSCTL_CPS_EN;
  462              		.loc 1 155 9
  463 000e FB68     		ldr	r3, [r7, #12]
  464 0010 23F00103 		bic	r3, r3, #1
  465 0014 FB60     		str	r3, [r7, #12]
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CPSCTL = (reg | syscfg_compensation);
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     SYSCFG_CPSCTL = (reg | syscfg_compensation);
  466              		.loc 1 156 5
  467 0016 0549     		ldr	r1, .L26
  468              		.loc 1 156 26
@@ -614,7 +614,7 @@
  471 001c 1343     		orrs	r3, r3, r2
  472              		.loc 1 156 19
  473 001e 0B60     		str	r3, [r1]
- 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
  474              		.loc 1 157 1
  475 0020 00BF     		nop
  476 0022 1437     		adds	r7, r7, #20
@@ -641,15 +641,15 @@
  498              		.fpu softvfp
  500              	syscfg_flag_get:
  501              	.LFB130:
- 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
- 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      checks whether the I/O compensation cell ready flag is set or not
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  none
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     FlagStatus: SET or RESET
- 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****   */
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** FlagStatus syscfg_flag_get(void)
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** 
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** /*!
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \brief      checks whether the I/O compensation cell ready flag is set or not
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[in]  none
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \param[out] none
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     \retval     FlagStatus: SET or RESET
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****   */
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** FlagStatus syscfg_flag_get(void)
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** {
  502              		.loc 1 166 1
  503              		.cfi_startproc
  504              		@ args = 0, pretend = 0, frame = 0
@@ -660,7 +660,7 @@
  509              		.cfi_offset 7, -4
  510 0002 00AF     		add	r7, sp, #0
  511              		.cfi_def_cfa_register 7
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     if(((uint32_t)RESET) != (SYSCFG_CPSCTL & SYSCFG_CPSCTL_CPS_RDY)){
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     if(((uint32_t)RESET) != (SYSCFG_CPSCTL & SYSCFG_CPSCTL_CPS_RDY)){
  512              		.loc 1 167 30
  513 0004 064B     		ldr	r3, .L31
  514 0006 1B68     		ldr	r3, [r3]
@@ -669,18 +669,18 @@
  517              		.loc 1 167 7
  518 000c 002B     		cmp	r3, #0
  519 000e 01D0     		beq	.L29
- 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         return SET;
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         return SET;
  520              		.loc 1 168 16
  521 0010 0123     		movs	r3, #1
  522 0012 00E0     		b	.L30
  523              	.L29:
- 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     }else{
- 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         return RESET;
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     }else{
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****         return RESET;
  524              		.loc 1 170 16
  525 0014 0023     		movs	r3, #0
  526              	.L30:
- 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     }
- 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c ****     }
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_syscfg.c **** }
  527              		.loc 1 172 1
  528 0016 1846     		mov	r0, r3
  529 0018 BD46     		mov	sp, r7
@@ -706,31 +706,31 @@
  550              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_syscfg.c
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:16     .text.syscfg_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:24     .text.syscfg_deinit:00000000 syscfg_deinit
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:50     .text.syscfg_bootmode_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:57     .text.syscfg_bootmode_config:00000000 syscfg_bootmode_config
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:102    .text.syscfg_bootmode_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:107    .text.syscfg_fmc_swap_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:114    .text.syscfg_fmc_swap_config:00000000 syscfg_fmc_swap_config
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:160    .text.syscfg_fmc_swap_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:165    .text.syscfg_exmc_swap_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:172    .text.syscfg_exmc_swap_config:00000000 syscfg_exmc_swap_config
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:218    .text.syscfg_exmc_swap_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:223    .text.syscfg_exti_line_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:230    .text.syscfg_exti_line_config:00000000 syscfg_exti_line_config
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:278    .text.syscfg_exti_line_config:00000044 $d
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:282    .text.syscfg_exti_line_config:00000054 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:369    .text.syscfg_exti_line_config:000000c8 $d
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:377    .text.syscfg_enet_phy_interface_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:384    .text.syscfg_enet_phy_interface_config:00000000 syscfg_enet_phy_interface_config
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:430    .text.syscfg_enet_phy_interface_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:435    .text.syscfg_compensation_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:442    .text.syscfg_compensation_config:00000000 syscfg_compensation_config
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:488    .text.syscfg_compensation_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:493    .text.syscfg_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:500    .text.syscfg_flag_get:00000000 syscfg_flag_get
-C:\Users\leonardo\AppData\Local\Temp\cc9RBFVa.s:539    .text.syscfg_flag_get:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:16     .text.syscfg_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:24     .text.syscfg_deinit:00000000 syscfg_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:50     .text.syscfg_bootmode_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:57     .text.syscfg_bootmode_config:00000000 syscfg_bootmode_config
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:102    .text.syscfg_bootmode_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:107    .text.syscfg_fmc_swap_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:114    .text.syscfg_fmc_swap_config:00000000 syscfg_fmc_swap_config
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:160    .text.syscfg_fmc_swap_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:165    .text.syscfg_exmc_swap_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:172    .text.syscfg_exmc_swap_config:00000000 syscfg_exmc_swap_config
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:218    .text.syscfg_exmc_swap_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:223    .text.syscfg_exti_line_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:230    .text.syscfg_exti_line_config:00000000 syscfg_exti_line_config
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:278    .text.syscfg_exti_line_config:00000044 $d
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:282    .text.syscfg_exti_line_config:00000054 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:369    .text.syscfg_exti_line_config:000000c8 $d
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:377    .text.syscfg_enet_phy_interface_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:384    .text.syscfg_enet_phy_interface_config:00000000 syscfg_enet_phy_interface_config
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:430    .text.syscfg_enet_phy_interface_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:435    .text.syscfg_compensation_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:442    .text.syscfg_compensation_config:00000000 syscfg_compensation_config
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:488    .text.syscfg_compensation_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:493    .text.syscfg_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:500    .text.syscfg_flag_get:00000000 syscfg_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccBIiD1O.s:539    .text.syscfg_flag_get:00000020 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

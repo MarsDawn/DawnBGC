@@ -1,5 +1,5 @@
 DawnGimbal/dawn_gimbal_math.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal/dawn_gimbal_math.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal/dawn_gimbal_math.c \
  ../../Dawn/DawnMain/includes.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \

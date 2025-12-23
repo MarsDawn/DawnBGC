@@ -22,28 +22,28 @@
   22              		.fpu softvfp
   24              	dbg_id_get:
   25              	.LFB123:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_dbg.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \file  gd32f4xx_dbg.c
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief DBG driver
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     Copyright (C) 2016 GigaDevice
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** #include "gd32f4xx_dbg.h"
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      read DBG_ID code register
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  none
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     DBG_ID code
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** uint32_t dbg_id_get(void)
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_dbg.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \file  gd32f4xx_dbg.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief DBG driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** #include "gd32f4xx_dbg.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      read DBG_ID code register
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     DBG_ID code
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** uint32_t dbg_id_get(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
   27              		.loc 1 21 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -54,11 +54,11 @@
   34              		.cfi_offset 7, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     return DBG_ID;
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     return DBG_ID;
   37              		.loc 1 22 12
   38 0004 024B     		ldr	r3, .L3
   39 0006 1B68     		ldr	r3, [r3]
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
   40              		.loc 1 23 1
   41 0008 1846     		mov	r0, r3
   42 000a BD46     		mov	sp, r7
@@ -83,19 +83,19 @@
   62              		.fpu softvfp
   64              	dbg_low_power_enable:
   65              	.LFB124:
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      enable low power behavior when the mcu is in debug mode
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  dbg_low_power:
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****                 this parameter can be any combination of the following values:
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: keep debugger connection during sleep mode
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: keep debugger connection during deepsleep mode
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: keep debugger connection during standby mode
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_low_power_enable(uint32_t dbg_low_power)
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      enable low power behavior when the mcu is in debug mode
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  dbg_low_power:
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****                 this parameter can be any combination of the following values:
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: keep debugger connection during sleep mode
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: keep debugger connection during deepsleep mode
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: keep debugger connection during standby mode
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_low_power_enable(uint32_t dbg_low_power)
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
   66              		.loc 1 36 1
   67              		.cfi_startproc
   68              		@ args = 0, pretend = 0, frame = 8
@@ -109,7 +109,7 @@
   76 0004 00AF     		add	r7, sp, #0
   77              		.cfi_def_cfa_register 7
   78 0006 7860     		str	r0, [r7, #4]
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 |= dbg_low_power;
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 |= dbg_low_power;
   79              		.loc 1 37 14
   80 0008 054B     		ldr	r3, .L6
   81 000a 1A68     		ldr	r2, [r3]
@@ -117,7 +117,7 @@
   83 000e 7B68     		ldr	r3, [r7, #4]
   84 0010 1343     		orrs	r3, r3, r2
   85 0012 0B60     		str	r3, [r1]
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
   86              		.loc 1 38 1
   87 0014 00BF     		nop
   88 0016 0C37     		adds	r7, r7, #12
@@ -144,19 +144,19 @@
  110              		.fpu softvfp
  112              	dbg_low_power_disable:
  113              	.LFB125:
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      disable low power behavior when the mcu is in debug mode
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  dbg_low_power:
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****                 this parameter can be any combination of the following values:
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: donot keep debugger connection during sleep mode
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: donot keep debugger connection during deepsleep mode
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: donot keep debugger connection during standby mode
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_low_power_disable(uint32_t dbg_low_power)
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      disable low power behavior when the mcu is in debug mode
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  dbg_low_power:
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****                 this parameter can be any combination of the following values:
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_SLEEP: donot keep debugger connection during sleep mode
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_DEEPSLEEP: donot keep debugger connection during deepsleep mode
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        DBG_LOW_POWER_STANDBY: donot keep debugger connection during standby mode
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_low_power_disable(uint32_t dbg_low_power)
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
  114              		.loc 1 51 1
  115              		.cfi_startproc
  116              		@ args = 0, pretend = 0, frame = 8
@@ -170,7 +170,7 @@
  124 0004 00AF     		add	r7, sp, #0
  125              		.cfi_def_cfa_register 7
  126 0006 7860     		str	r0, [r7, #4]
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 &= ~dbg_low_power;
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 &= ~dbg_low_power;
  127              		.loc 1 52 14
  128 0008 054B     		ldr	r3, .L9
  129 000a 1A68     		ldr	r2, [r3]
@@ -181,7 +181,7 @@
  134 0010 0349     		ldr	r1, .L9
  135 0012 1340     		ands	r3, r3, r2
  136 0014 0B60     		str	r3, [r1]
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
  137              		.loc 1 53 1
  138 0016 00BF     		nop
  139 0018 0C37     		adds	r7, r7, #12
@@ -208,15 +208,15 @@
  161              		.fpu softvfp
  163              	dbg_periph_enable:
  164              	.LFB126:
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      enable peripheral behavior when the mcu is in debug mode
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  dbg_periph: dbg_periph_enum
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_periph_enable(dbg_periph_enum dbg_periph)
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      enable peripheral behavior when the mcu is in debug mode
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  dbg_periph: dbg_periph_enum
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_periph_enable(dbg_periph_enum dbg_periph)
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
  165              		.loc 1 62 1
  166              		.cfi_startproc
  167              		@ args = 0, pretend = 0, frame = 8
@@ -230,14 +230,14 @@
  175 0004 00AF     		add	r7, sp, #0
  176              		.cfi_def_cfa_register 7
  177 0006 7860     		str	r0, [r7, #4]
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     if(RESET == ((uint32_t)dbg_periph & BIT(30))){
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     if(RESET == ((uint32_t)dbg_periph & BIT(30))){
  178              		.loc 1 63 39
  179 0008 7B68     		ldr	r3, [r7, #4]
  180 000a 03F08043 		and	r3, r3, #1073741824
  181              		.loc 1 63 7
  182 000e 002B     		cmp	r3, #0
  183 0010 06D1     		bne	.L12
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****         DBG_CTL1 |= (uint32_t)dbg_periph;
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****         DBG_CTL1 |= (uint32_t)dbg_periph;
  184              		.loc 1 64 18
  185 0012 0A4B     		ldr	r3, .L15
  186 0014 1A68     		ldr	r2, [r3]
@@ -245,23 +245,23 @@
  188 0018 7B68     		ldr	r3, [r7, #4]
  189 001a 1343     		orrs	r3, r3, r2
  190 001c 0B60     		str	r3, [r1]
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }else{
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****         DBG_CTL2 |= ((uint32_t)dbg_periph & (~BIT(30)));
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }        
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }else{
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****         DBG_CTL2 |= ((uint32_t)dbg_periph & (~BIT(30)));
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }        
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
  191              		.loc 1 69 1
  192 001e 07E0     		b	.L14
  193              	.L12:
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }        
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }        
  194              		.loc 1 66 18
  195 0020 074B     		ldr	r3, .L15+4
  196 0022 1A68     		ldr	r2, [r3]
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }        
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }        
  197              		.loc 1 66 43
  198 0024 7B68     		ldr	r3, [r7, #4]
  199 0026 23F08043 		bic	r3, r3, #1073741824
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }        
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }        
  200              		.loc 1 66 18
  201 002a 0549     		ldr	r1, .L15+4
  202 002c 1343     		orrs	r3, r3, r2
@@ -294,15 +294,15 @@
  230              		.fpu softvfp
  232              	dbg_periph_disable:
  233              	.LFB127:
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      disable peripheral behavior when the mcu is in debug mode
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  dbg_periph: dbg_periph_enum
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_periph_disable(dbg_periph_enum dbg_periph)
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      disable peripheral behavior when the mcu is in debug mode
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  dbg_periph: dbg_periph_enum
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_periph_disable(dbg_periph_enum dbg_periph)
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
  234              		.loc 1 78 1
  235              		.cfi_startproc
  236              		@ args = 0, pretend = 0, frame = 8
@@ -316,14 +316,14 @@
  244 0004 00AF     		add	r7, sp, #0
  245              		.cfi_def_cfa_register 7
  246 0006 7860     		str	r0, [r7, #4]
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     if(RESET == ((uint32_t)dbg_periph & BIT(30))){
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     if(RESET == ((uint32_t)dbg_periph & BIT(30))){
  247              		.loc 1 79 39
  248 0008 7B68     		ldr	r3, [r7, #4]
  249 000a 03F08043 		and	r3, r3, #1073741824
  250              		.loc 1 79 7
  251 000e 002B     		cmp	r3, #0
  252 0010 07D1     		bne	.L18
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****         DBG_CTL1 &= ~(uint32_t)dbg_periph;
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****         DBG_CTL1 &= ~(uint32_t)dbg_periph;
  253              		.loc 1 80 18
  254 0012 0B4B     		ldr	r3, .L21
  255 0014 1A68     		ldr	r2, [r3]
@@ -334,25 +334,25 @@
  260 001a 0949     		ldr	r1, .L21
  261 001c 1340     		ands	r3, r3, r2
  262 001e 0B60     		str	r3, [r1]
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }else{
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****         DBG_CTL2 &= ~((uint32_t)dbg_periph & (~BIT(30)));
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }else{
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****         DBG_CTL2 &= ~((uint32_t)dbg_periph & (~BIT(30)));
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
  263              		.loc 1 84 1
  264 0020 08E0     		b	.L20
  265              	.L18:
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
  266              		.loc 1 82 18
  267 0022 084B     		ldr	r3, .L21+4
  268 0024 1A68     		ldr	r2, [r3]
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
  269              		.loc 1 82 44
  270 0026 7B68     		ldr	r3, [r7, #4]
  271 0028 23F08043 		bic	r3, r3, #1073741824
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
  272              		.loc 1 82 21
  273 002c DB43     		mvns	r3, r3
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     }  
  274              		.loc 1 82 18
  275 002e 0549     		ldr	r1, .L21+4
  276 0030 1340     		ands	r3, r3, r2
@@ -385,15 +385,15 @@
  304              		.fpu softvfp
  306              	dbg_trace_pin_enable:
  307              	.LFB128:
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      enable trace pin assignment
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  none
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_trace_pin_enable(void)
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      enable trace pin assignment
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  none
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_trace_pin_enable(void)
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
  308              		.loc 1 93 1
  309              		.cfi_startproc
  310              		@ args = 0, pretend = 0, frame = 0
@@ -404,14 +404,14 @@
  315              		.cfi_offset 7, -4
  316 0002 00AF     		add	r7, sp, #0
  317              		.cfi_def_cfa_register 7
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 |= DBG_CTL0_TRACE_IOEN;
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 |= DBG_CTL0_TRACE_IOEN;
  318              		.loc 1 94 14
  319 0004 044B     		ldr	r3, .L24
  320 0006 1B68     		ldr	r3, [r3]
  321 0008 034A     		ldr	r2, .L24
  322 000a 43F02003 		orr	r3, r3, #32
  323 000e 1360     		str	r3, [r2]
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
  324              		.loc 1 95 1
  325 0010 00BF     		nop
  326 0012 BD46     		mov	sp, r7
@@ -436,15 +436,15 @@
  346              		.fpu softvfp
  348              	dbg_trace_pin_disable:
  349              	.LFB129:
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      disable trace pin assignment
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  none
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_trace_pin_disable(void)
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      disable trace pin assignment
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  none
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_trace_pin_disable(void)
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
  350              		.loc 1 104 1
  351              		.cfi_startproc
  352              		@ args = 0, pretend = 0, frame = 0
@@ -455,14 +455,14 @@
  357              		.cfi_offset 7, -4
  358 0002 00AF     		add	r7, sp, #0
  359              		.cfi_def_cfa_register 7
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 &= ~DBG_CTL0_TRACE_IOEN;
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 &= ~DBG_CTL0_TRACE_IOEN;
  360              		.loc 1 105 14
  361 0004 044B     		ldr	r3, .L27
  362 0006 1B68     		ldr	r3, [r3]
  363 0008 034A     		ldr	r2, .L27
  364 000a 23F02003 		bic	r3, r3, #32
  365 000e 1360     		str	r3, [r2]
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
  366              		.loc 1 106 1
  367 0010 00BF     		nop
  368 0012 BD46     		mov	sp, r7
@@ -487,19 +487,19 @@
  388              		.fpu softvfp
  390              	dbg_trace_pin_mode_set:
  391              	.LFB130:
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      trace pin mode selection 
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  trace_mode:
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        TRACE_MODE_ASYNC: trace pin used for async mode 
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        TRACE_MODE_SYNC_DATASIZE_1: trace pin used for sync mode and data size is 1
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        TRACE_MODE_SYNC_DATASIZE_2: trace pin used for sync mode and data size is 2
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        TRACE_MODE_SYNC_DATASIZE_4: trace pin used for sync mode and data size is 4
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_trace_pin_mode_set(uint32_t trace_mode)
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** 
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** /*!
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \brief      trace pin mode selection 
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[in]  trace_mode:
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        TRACE_MODE_ASYNC: trace pin used for async mode 
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        TRACE_MODE_SYNC_DATASIZE_1: trace pin used for sync mode and data size is 1
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        TRACE_MODE_SYNC_DATASIZE_2: trace pin used for sync mode and data size is 2
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****       \arg        TRACE_MODE_SYNC_DATASIZE_4: trace pin used for sync mode and data size is 4
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \param[out] none
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     \retval     none
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** */
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** void dbg_trace_pin_mode_set(uint32_t trace_mode)
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** {
  392              		.loc 1 119 1
  393              		.cfi_startproc
  394              		@ args = 0, pretend = 0, frame = 8
@@ -513,14 +513,14 @@
  402 0004 00AF     		add	r7, sp, #0
  403              		.cfi_def_cfa_register 7
  404 0006 7860     		str	r0, [r7, #4]
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 &= ~DBG_CTL0_TRACE_MODE;
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 &= ~DBG_CTL0_TRACE_MODE;
  405              		.loc 1 120 14
  406 0008 084B     		ldr	r3, .L30
  407 000a 1B68     		ldr	r3, [r3]
  408 000c 074A     		ldr	r2, .L30
  409 000e 23F0C003 		bic	r3, r3, #192
  410 0012 1360     		str	r3, [r2]
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 |= trace_mode;
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c ****     DBG_CTL0 |= trace_mode;
  411              		.loc 1 121 14
  412 0014 054B     		ldr	r3, .L30
  413 0016 1A68     		ldr	r2, [r3]
@@ -528,7 +528,7 @@
  415 001a 7B68     		ldr	r3, [r7, #4]
  416 001c 1343     		orrs	r3, r3, r2
  417 001e 0B60     		str	r3, [r1]
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_dbg.c **** }
  418              		.loc 1 122 1
  419 0020 00BF     		nop
  420 0022 0C37     		adds	r7, r7, #12
@@ -556,30 +556,30 @@
  443              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_dbg.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_dbg.c
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:16     .text.dbg_id_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:24     .text.dbg_id_get:00000000 dbg_id_get
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:52     .text.dbg_id_get:00000010 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:57     .text.dbg_low_power_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:64     .text.dbg_low_power_enable:00000000 dbg_low_power_enable
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:100    .text.dbg_low_power_enable:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:105    .text.dbg_low_power_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:112    .text.dbg_low_power_disable:00000000 dbg_low_power_disable
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:151    .text.dbg_low_power_disable:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:156    .text.dbg_periph_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:163    .text.dbg_periph_enable:00000000 dbg_periph_enable
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:219    .text.dbg_periph_enable:0000003c $d
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:225    .text.dbg_periph_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:232    .text.dbg_periph_disable:00000000 dbg_periph_disable
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:293    .text.dbg_periph_disable:00000040 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:299    .text.dbg_trace_pin_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:306    .text.dbg_trace_pin_enable:00000000 dbg_trace_pin_enable
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:336    .text.dbg_trace_pin_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:341    .text.dbg_trace_pin_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:348    .text.dbg_trace_pin_disable:00000000 dbg_trace_pin_disable
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:378    .text.dbg_trace_pin_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:383    .text.dbg_trace_pin_mode_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:390    .text.dbg_trace_pin_mode_set:00000000 dbg_trace_pin_mode_set
-C:\Users\leonardo\AppData\Local\Temp\ccUDeo8x.s:432    .text.dbg_trace_pin_mode_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:16     .text.dbg_id_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:24     .text.dbg_id_get:00000000 dbg_id_get
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:52     .text.dbg_id_get:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:57     .text.dbg_low_power_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:64     .text.dbg_low_power_enable:00000000 dbg_low_power_enable
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:100    .text.dbg_low_power_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:105    .text.dbg_low_power_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:112    .text.dbg_low_power_disable:00000000 dbg_low_power_disable
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:151    .text.dbg_low_power_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:156    .text.dbg_periph_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:163    .text.dbg_periph_enable:00000000 dbg_periph_enable
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:219    .text.dbg_periph_enable:0000003c $d
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:225    .text.dbg_periph_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:232    .text.dbg_periph_disable:00000000 dbg_periph_disable
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:293    .text.dbg_periph_disable:00000040 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:299    .text.dbg_trace_pin_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:306    .text.dbg_trace_pin_enable:00000000 dbg_trace_pin_enable
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:336    .text.dbg_trace_pin_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:341    .text.dbg_trace_pin_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:348    .text.dbg_trace_pin_disable:00000000 dbg_trace_pin_disable
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:378    .text.dbg_trace_pin_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:383    .text.dbg_trace_pin_mode_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:390    .text.dbg_trace_pin_mode_set:00000000 dbg_trace_pin_mode_set
+C:\Users\leonardo\AppData\Local\Temp\cc0CwH7z.s:432    .text.dbg_trace_pin_mode_set:0000002c $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

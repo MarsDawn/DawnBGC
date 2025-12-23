@@ -22,28 +22,28 @@
   22              		.fpu softvfp
   24              	trng_deinit:
   25              	.LFB123:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_trng.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \file  gd32f4xx_trng.c
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief TRNG driver
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     Copyright (C) 2016 GigaDevice
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** #include "gd32f4xx_trng.h"
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      deinitialize the TRNG
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_deinit(void)
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_trng.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \file  gd32f4xx_trng.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief TRNG driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** #include "gd32f4xx_trng.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      deinitialize the TRNG
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
   27              		.loc 1 21 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -54,15 +54,15 @@
   34              		.cfi_offset 14, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     rcu_periph_reset_enable(RCU_TRNGRST);
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     rcu_periph_reset_enable(RCU_TRNGRST);
   37              		.loc 1 22 5
   38 0004 40F20650 		movw	r0, #1286
   39 0008 FFF7FEFF 		bl	rcu_periph_reset_enable
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     rcu_periph_reset_disable(RCU_TRNGRST);
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     rcu_periph_reset_disable(RCU_TRNGRST);
   40              		.loc 1 23 5
   41 000c 40F20650 		movw	r0, #1286
   42 0010 FFF7FEFF 		bl	rcu_periph_reset_disable
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
   43              		.loc 1 24 1
   44 0014 00BF     		nop
   45 0016 80BD     		pop	{r7, pc}
@@ -77,15 +77,15 @@
   55              		.fpu softvfp
   57              	trng_enable:
   58              	.LFB124:
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      enable the TRNG interface
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_enable(void)
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      enable the TRNG interface
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_enable(void)
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
   59              		.loc 1 33 1
   60              		.cfi_startproc
   61              		@ args = 0, pretend = 0, frame = 0
@@ -96,14 +96,14 @@
   66              		.cfi_offset 7, -4
   67 0002 00AF     		add	r7, sp, #0
   68              		.cfi_def_cfa_register 7
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_CTL |= TRNG_CTL_TRNGEN;
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_CTL |= TRNG_CTL_TRNGEN;
   69              		.loc 1 34 14
   70 0004 044B     		ldr	r3, .L3
   71 0006 1B68     		ldr	r3, [r3]
   72 0008 034A     		ldr	r2, .L3
   73 000a 43F00403 		orr	r3, r3, #4
   74 000e 1360     		str	r3, [r2]
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
   75              		.loc 1 35 1
   76 0010 00BF     		nop
   77 0012 BD46     		mov	sp, r7
@@ -128,15 +128,15 @@
   97              		.fpu softvfp
   99              	trng_disable:
  100              	.LFB125:
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      disable the TRNG interface
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_disable(void)
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      disable the TRNG interface
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_disable(void)
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
  101              		.loc 1 44 1
  102              		.cfi_startproc
  103              		@ args = 0, pretend = 0, frame = 0
@@ -147,14 +147,14 @@
  108              		.cfi_offset 7, -4
  109 0002 00AF     		add	r7, sp, #0
  110              		.cfi_def_cfa_register 7
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_CTL &= ~TRNG_CTL_TRNGEN;
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_CTL &= ~TRNG_CTL_TRNGEN;
  111              		.loc 1 45 14
  112 0004 044B     		ldr	r3, .L6
  113 0006 1B68     		ldr	r3, [r3]
  114 0008 034A     		ldr	r2, .L6
  115 000a 23F00403 		bic	r3, r3, #4
  116 000e 1360     		str	r3, [r2]
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
  117              		.loc 1 46 1
  118 0010 00BF     		nop
  119 0012 BD46     		mov	sp, r7
@@ -179,15 +179,15 @@
  139              		.fpu softvfp
  141              	trng_get_true_random_data:
  142              	.LFB126:
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      get the true random data
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     the generated random data
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** uint32_t trng_get_true_random_data(void)
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      get the true random data
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     the generated random data
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** uint32_t trng_get_true_random_data(void)
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
  143              		.loc 1 55 1
  144              		.cfi_startproc
  145              		@ args = 0, pretend = 0, frame = 0
@@ -198,11 +198,11 @@
  150              		.cfi_offset 7, -4
  151 0002 00AF     		add	r7, sp, #0
  152              		.cfi_def_cfa_register 7
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     return (TRNG_DATA);
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     return (TRNG_DATA);
  153              		.loc 1 56 13
  154 0004 024B     		ldr	r3, .L10
  155 0006 1B68     		ldr	r3, [r3]
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
  156              		.loc 1 57 1
  157 0008 1846     		mov	r0, r3
  158 000a BD46     		mov	sp, r7
@@ -227,19 +227,19 @@
  178              		.fpu softvfp
  180              	trng_flag_get:
  181              	.LFB127:
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      get the trng status flags
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  flag: trng status flag, refer to trng_flag_enum
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****                 only one parameter can be selected which is shown as below:
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_DRDY: Random Data ready status
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_CECS: Clock error current status
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_SECS: Seed error current status
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     FlagStatus: SET or RESET
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** FlagStatus trng_flag_get(trng_flag_enum flag)
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      get the trng status flags
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  flag: trng status flag, refer to trng_flag_enum
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****                 only one parameter can be selected which is shown as below:
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_DRDY: Random Data ready status
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_CECS: Clock error current status
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_SECS: Seed error current status
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     FlagStatus: SET or RESET
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** FlagStatus trng_flag_get(trng_flag_enum flag)
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
  182              		.loc 1 70 1
  183              		.cfi_startproc
  184              		@ args = 0, pretend = 0, frame = 8
@@ -254,7 +254,7 @@
  193              		.cfi_def_cfa_register 7
  194 0006 0346     		mov	r3, r0
  195 0008 FB71     		strb	r3, [r7, #7]
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     if(RESET != (TRNG_STAT & flag)){
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     if(RESET != (TRNG_STAT & flag)){
  196              		.loc 1 71 18
  197 000a 074B     		ldr	r3, .L15
  198 000c 1A68     		ldr	r2, [r3]
@@ -264,18 +264,18 @@
  202              		.loc 1 71 7
  203 0012 002B     		cmp	r3, #0
  204 0014 01D0     		beq	.L13
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****         return SET;
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****         return SET;
  205              		.loc 1 72 16
  206 0016 0123     		movs	r3, #1
  207 0018 00E0     		b	.L14
  208              	.L13:
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     }else{
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****         return RESET;
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     }else{
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****         return RESET;
  209              		.loc 1 74 16
  210 001a 0023     		movs	r3, #0
  211              	.L14:
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     }
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     }
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
  212              		.loc 1 76 1
  213 001c 1846     		mov	r0, r3
  214 001e 0C37     		adds	r7, r7, #12
@@ -302,18 +302,18 @@
  236              		.fpu softvfp
  238              	trng_flag_clear:
  239              	.LFB128:
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      clear the trng status flags
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  flag: the special status flag
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****                 only one parameter can be selected which is shown as below:
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_CECS: Clock error current status
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_SECS: Seed error current status
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_flag_clear(trng_flag_enum flag)
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      clear the trng status flags
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  flag: the special status flag
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****                 only one parameter can be selected which is shown as below:
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_CECS: Clock error current status
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_FLAG_SECS: Seed error current status
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_flag_clear(trng_flag_enum flag)
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
  240              		.loc 1 88 1
  241              		.cfi_startproc
  242              		@ args = 0, pretend = 0, frame = 8
@@ -328,7 +328,7 @@
  251              		.cfi_def_cfa_register 7
  252 0006 0346     		mov	r3, r0
  253 0008 FB71     		strb	r3, [r7, #7]
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_STAT &= ~(uint32_t)flag;
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_STAT &= ~(uint32_t)flag;
  254              		.loc 1 89 15
  255 000a 064B     		ldr	r3, .L18
  256 000c 1A68     		ldr	r2, [r3]
@@ -340,7 +340,7 @@
  262 0012 0449     		ldr	r1, .L18
  263 0014 1340     		ands	r3, r3, r2
  264 0016 0B60     		str	r3, [r1]
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
  265              		.loc 1 90 1
  266 0018 00BF     		nop
  267 001a 0C37     		adds	r7, r7, #12
@@ -367,15 +367,15 @@
  289              		.fpu softvfp
  291              	trng_interrupt_enable:
  292              	.LFB129:
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      enable the TRNG interrupt
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_interrupt_enable(void) 
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      enable the TRNG interrupt
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_interrupt_enable(void) 
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
  293              		.loc 1 99 1
  294              		.cfi_startproc
  295              		@ args = 0, pretend = 0, frame = 0
@@ -386,14 +386,14 @@
  300              		.cfi_offset 7, -4
  301 0002 00AF     		add	r7, sp, #0
  302              		.cfi_def_cfa_register 7
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_CTL |= TRNG_CTL_IE;
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_CTL |= TRNG_CTL_IE;
  303              		.loc 1 100 14
  304 0004 044B     		ldr	r3, .L21
  305 0006 1B68     		ldr	r3, [r3]
  306 0008 034A     		ldr	r2, .L21
  307 000a 43F00803 		orr	r3, r3, #8
  308 000e 1360     		str	r3, [r2]
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
  309              		.loc 1 101 1
  310 0010 00BF     		nop
  311 0012 BD46     		mov	sp, r7
@@ -418,15 +418,15 @@
  331              		.fpu softvfp
  333              	trng_interrupt_disable:
  334              	.LFB130:
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      disable the TRNG interrupt
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_interrupt_disable(void)
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      disable the TRNG interrupt
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  none
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_interrupt_disable(void)
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
  335              		.loc 1 110 1
  336              		.cfi_startproc
  337              		@ args = 0, pretend = 0, frame = 0
@@ -437,14 +437,14 @@
  342              		.cfi_offset 7, -4
  343 0002 00AF     		add	r7, sp, #0
  344              		.cfi_def_cfa_register 7
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_CTL &= ~TRNG_CTL_IE;
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_CTL &= ~TRNG_CTL_IE;
  345              		.loc 1 111 14
  346 0004 044B     		ldr	r3, .L24
  347 0006 1B68     		ldr	r3, [r3]
  348 0008 034A     		ldr	r2, .L24
  349 000a 23F00803 		bic	r3, r3, #8
  350 000e 1360     		str	r3, [r2]
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
  351              		.loc 1 112 1
  352 0010 00BF     		nop
  353 0012 BD46     		mov	sp, r7
@@ -469,18 +469,18 @@
  373              		.fpu softvfp
  375              	trng_interrupt_flag_get:
  376              	.LFB131:
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      get the trng interrupt flags
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  int_flag: trng interrupt flag, refer to trng_int_flag_enum
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****                 only one parameter can be selected which is shown as below:
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_INT_FLAG_CEIF: clock error interrupt flag
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_INT_FLAG_SEIF: Seed error interrupt flag
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     FlagStatus: SET or RESET
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** FlagStatus trng_interrupt_flag_get(trng_int_flag_enum int_flag)
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      get the trng interrupt flags
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  int_flag: trng interrupt flag, refer to trng_int_flag_enum
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****                 only one parameter can be selected which is shown as below:
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_INT_FLAG_CEIF: clock error interrupt flag
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_INT_FLAG_SEIF: Seed error interrupt flag
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     FlagStatus: SET or RESET
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** FlagStatus trng_interrupt_flag_get(trng_int_flag_enum int_flag)
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
  377              		.loc 1 124 1
  378              		.cfi_startproc
  379              		@ args = 0, pretend = 0, frame = 8
@@ -495,7 +495,7 @@
  388              		.cfi_def_cfa_register 7
  389 0006 0346     		mov	r3, r0
  390 0008 FB71     		strb	r3, [r7, #7]
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     if(RESET != (TRNG_STAT & int_flag)){
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     if(RESET != (TRNG_STAT & int_flag)){
  391              		.loc 1 125 18
  392 000a 074B     		ldr	r3, .L29
  393 000c 1A68     		ldr	r2, [r3]
@@ -505,18 +505,18 @@
  397              		.loc 1 125 7
  398 0012 002B     		cmp	r3, #0
  399 0014 01D0     		beq	.L27
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****         return SET;
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****         return SET;
  400              		.loc 1 126 16
  401 0016 0123     		movs	r3, #1
  402 0018 00E0     		b	.L28
  403              	.L27:
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     }else{
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****         return RESET;
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     }else{
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****         return RESET;
  404              		.loc 1 128 16
  405 001a 0023     		movs	r3, #0
  406              	.L28:
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     }
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     }
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
  407              		.loc 1 130 1
  408 001c 1846     		mov	r0, r3
  409 001e 0C37     		adds	r7, r7, #12
@@ -543,18 +543,18 @@
  431              		.fpu softvfp
  433              	trng_interrupt_flag_clear:
  434              	.LFB132:
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      clear the trng interrupt flags
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  int_flag: trng interrupt flag, refer to trng_int_flag_enum
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****                 only one parameter can be selected which is shown as below:
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_INT_FLAG_CEIF: clock error interrupt flag
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_INT_FLAG_SEIF: Seed error interrupt flag
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_interrupt_flag_clear(trng_int_flag_enum int_flag)
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** 
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** /*!
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \brief      clear the trng interrupt flags
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[in]  int_flag: trng interrupt flag, refer to trng_int_flag_enum
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****                 only one parameter can be selected which is shown as below:
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_INT_FLAG_CEIF: clock error interrupt flag
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****       \arg        TRNG_INT_FLAG_SEIF: Seed error interrupt flag
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \param[out] none
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     \retval     none
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** */
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** void trng_interrupt_flag_clear(trng_int_flag_enum int_flag)
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** {
  435              		.loc 1 142 1
  436              		.cfi_startproc
  437              		@ args = 0, pretend = 0, frame = 8
@@ -569,7 +569,7 @@
  446              		.cfi_def_cfa_register 7
  447 0006 0346     		mov	r3, r0
  448 0008 FB71     		strb	r3, [r7, #7]
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_STAT &= ~(uint32_t)int_flag;
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c ****     TRNG_STAT &= ~(uint32_t)int_flag;
  449              		.loc 1 143 15
  450 000a 064B     		ldr	r3, .L32
  451 000c 1A68     		ldr	r2, [r3]
@@ -581,7 +581,7 @@
  457 0012 0449     		ldr	r1, .L32
  458 0014 1340     		ands	r3, r3, r2
  459 0016 0B60     		str	r3, [r1]
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_trng.c **** }
  460              		.loc 1 144 1
  461 0018 00BF     		nop
  462 001a 0C37     		adds	r7, r7, #12
@@ -610,35 +610,35 @@
  486              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_trng.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_trng.c
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:16     .text.trng_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:24     .text.trng_deinit:00000000 trng_deinit
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:50     .text.trng_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:57     .text.trng_enable:00000000 trng_enable
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:87     .text.trng_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:92     .text.trng_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:99     .text.trng_disable:00000000 trng_disable
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:129    .text.trng_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:134    .text.trng_get_true_random_data:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:141    .text.trng_get_true_random_data:00000000 trng_get_true_random_data
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:168    .text.trng_get_true_random_data:00000010 $d
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:173    .text.trng_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:180    .text.trng_flag_get:00000000 trng_flag_get
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:226    .text.trng_flag_get:00000028 $d
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:231    .text.trng_flag_clear:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:238    .text.trng_flag_clear:00000000 trng_flag_clear
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:279    .text.trng_flag_clear:00000024 $d
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:284    .text.trng_interrupt_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:291    .text.trng_interrupt_enable:00000000 trng_interrupt_enable
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:321    .text.trng_interrupt_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:326    .text.trng_interrupt_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:333    .text.trng_interrupt_disable:00000000 trng_interrupt_disable
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:363    .text.trng_interrupt_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:368    .text.trng_interrupt_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:375    .text.trng_interrupt_flag_get:00000000 trng_interrupt_flag_get
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:421    .text.trng_interrupt_flag_get:00000028 $d
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:426    .text.trng_interrupt_flag_clear:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:433    .text.trng_interrupt_flag_clear:00000000 trng_interrupt_flag_clear
-C:\Users\leonardo\AppData\Local\Temp\cchftvRs.s:474    .text.trng_interrupt_flag_clear:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:16     .text.trng_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:24     .text.trng_deinit:00000000 trng_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:50     .text.trng_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:57     .text.trng_enable:00000000 trng_enable
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:87     .text.trng_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:92     .text.trng_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:99     .text.trng_disable:00000000 trng_disable
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:129    .text.trng_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:134    .text.trng_get_true_random_data:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:141    .text.trng_get_true_random_data:00000000 trng_get_true_random_data
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:168    .text.trng_get_true_random_data:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:173    .text.trng_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:180    .text.trng_flag_get:00000000 trng_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:226    .text.trng_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:231    .text.trng_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:238    .text.trng_flag_clear:00000000 trng_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:279    .text.trng_flag_clear:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:284    .text.trng_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:291    .text.trng_interrupt_enable:00000000 trng_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:321    .text.trng_interrupt_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:326    .text.trng_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:333    .text.trng_interrupt_disable:00000000 trng_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:363    .text.trng_interrupt_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:368    .text.trng_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:375    .text.trng_interrupt_flag_get:00000000 trng_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:421    .text.trng_interrupt_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:426    .text.trng_interrupt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:433    .text.trng_interrupt_flag_clear:00000000 trng_interrupt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:474    .text.trng_interrupt_flag_clear:00000024 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

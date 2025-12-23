@@ -22,28 +22,28 @@
   22              		.fpu softvfp
   24              	crc_deinit:
   25              	.LFB123:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_crc.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \file  gd32f4xx_crc.c
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief CRC driver
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     Copyright (C) 2016 GigaDevice
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** #include "gd32f4xx_crc.h"
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      deinit CRC calculation unit
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  none
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     none
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** void crc_deinit(void)
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_crc.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \file  gd32f4xx_crc.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief CRC driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** #include "gd32f4xx_crc.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      deinit CRC calculation unit
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  none
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** void crc_deinit(void)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
   27              		.loc 1 21 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -54,25 +54,25 @@
   34              		.cfi_offset 7, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_DATA  = (uint32_t)0xFFFFFFFFU;
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_DATA  = (uint32_t)0xFFFFFFFFU;
   37              		.loc 1 22 5
   38 0004 064B     		ldr	r3, .L2
   39              		.loc 1 22 15
   40 0006 4FF0FF32 		mov	r2, #-1
   41 000a 1A60     		str	r2, [r3]
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_FDATA = (uint32_t)0x00000000U;
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_FDATA = (uint32_t)0x00000000U;
   42              		.loc 1 23 5
   43 000c 054B     		ldr	r3, .L2+4
   44              		.loc 1 23 15
   45 000e 0022     		movs	r2, #0
   46 0010 1A60     		str	r2, [r3]
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_CTL   = CRC_CTL_RST;
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_CTL   = CRC_CTL_RST;
   47              		.loc 1 24 5
   48 0012 054B     		ldr	r3, .L2+8
   49              		.loc 1 24 15
   50 0014 0122     		movs	r2, #1
   51 0016 1A60     		str	r2, [r3]
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
   52              		.loc 1 25 1
   53 0018 00BF     		nop
   54 001a BD46     		mov	sp, r7
@@ -99,15 +99,15 @@
   76              		.fpu softvfp
   78              	crc_data_register_reset:
   79              	.LFB124:
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      reset data register to the value of initializaiton data register
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  none
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     none
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** void crc_data_register_reset(void)
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      reset data register to the value of initializaiton data register
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  none
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     none
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** void crc_data_register_reset(void)
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
   80              		.loc 1 34 1
   81              		.cfi_startproc
   82              		@ args = 0, pretend = 0, frame = 0
@@ -118,14 +118,14 @@
   87              		.cfi_offset 7, -4
   88 0002 00AF     		add	r7, sp, #0
   89              		.cfi_def_cfa_register 7
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_CTL |= (uint32_t)CRC_CTL_RST;
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_CTL |= (uint32_t)CRC_CTL_RST;
   90              		.loc 1 35 13
   91 0004 044B     		ldr	r3, .L5
   92 0006 1B68     		ldr	r3, [r3]
   93 0008 034A     		ldr	r2, .L5
   94 000a 43F00103 		orr	r3, r3, #1
   95 000e 1360     		str	r3, [r2]
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
   96              		.loc 1 36 1
   97 0010 00BF     		nop
   98 0012 BD46     		mov	sp, r7
@@ -150,15 +150,15 @@
  118              		.fpu softvfp
  120              	crc_data_register_read:
  121              	.LFB125:
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      read the data register 
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  none
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     32-bit value of the data register
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** uint32_t crc_data_register_read(void)
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      read the data register 
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  none
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     32-bit value of the data register
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** uint32_t crc_data_register_read(void)
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
  122              		.loc 1 45 1
  123              		.cfi_startproc
  124              		@ args = 0, pretend = 0, frame = 8
@@ -171,17 +171,17 @@
  131              		.cfi_def_cfa_offset 16
  132 0004 00AF     		add	r7, sp, #0
  133              		.cfi_def_cfa_register 7
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     uint32_t data;
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     data = CRC_DATA;
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     uint32_t data;
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     data = CRC_DATA;
  134              		.loc 1 47 12
  135 0006 044B     		ldr	r3, .L9
  136              		.loc 1 47 10
  137 0008 1B68     		ldr	r3, [r3]
  138 000a 7B60     		str	r3, [r7, #4]
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     return (data);
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     return (data);
  139              		.loc 1 48 12
  140 000c 7B68     		ldr	r3, [r7, #4]
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
  141              		.loc 1 49 1
  142 000e 1846     		mov	r0, r3
  143 0010 0C37     		adds	r7, r7, #12
@@ -208,15 +208,15 @@
  165              		.fpu softvfp
  167              	crc_free_data_register_read:
  168              	.LFB126:
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      read the free data register
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  none
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     8-bit value of the free data register
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** uint8_t crc_free_data_register_read(void)
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      read the free data register
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  none
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     8-bit value of the free data register
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** uint8_t crc_free_data_register_read(void)
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
  169              		.loc 1 58 1
  170              		.cfi_startproc
  171              		@ args = 0, pretend = 0, frame = 8
@@ -229,17 +229,17 @@
  178              		.cfi_def_cfa_offset 16
  179 0004 00AF     		add	r7, sp, #0
  180              		.cfi_def_cfa_register 7
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     uint8_t fdata;
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     fdata = (uint8_t)CRC_FDATA;
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     uint8_t fdata;
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     fdata = (uint8_t)CRC_FDATA;
  181              		.loc 1 60 22
  182 0006 044B     		ldr	r3, .L13
  183 0008 1B68     		ldr	r3, [r3]
  184              		.loc 1 60 11
  185 000a FB71     		strb	r3, [r7, #7]
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     return (fdata);
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     return (fdata);
  186              		.loc 1 61 12
  187 000c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
  188              		.loc 1 62 1
  189 000e 1846     		mov	r0, r3
  190 0010 0C37     		adds	r7, r7, #12
@@ -266,15 +266,15 @@
  212              		.fpu softvfp
  214              	crc_free_data_register_write:
  215              	.LFB127:
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      write the free data register
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  free_data: specify 8-bit data
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     none
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** void crc_free_data_register_write(uint8_t free_data)
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      write the free data register
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  free_data: specify 8-bit data
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     none
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** void crc_free_data_register_write(uint8_t free_data)
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
  216              		.loc 1 71 1
  217              		.cfi_startproc
  218              		@ args = 0, pretend = 0, frame = 8
@@ -289,14 +289,14 @@
  227              		.cfi_def_cfa_register 7
  228 0006 0346     		mov	r3, r0
  229 0008 FB71     		strb	r3, [r7, #7]
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_FDATA = (uint32_t)free_data;
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_FDATA = (uint32_t)free_data;
  230              		.loc 1 72 5
  231 000a 044A     		ldr	r2, .L16
  232              		.loc 1 72 17
  233 000c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  234              		.loc 1 72 15
  235 000e 1360     		str	r3, [r2]
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
  236              		.loc 1 73 1
  237 0010 00BF     		nop
  238 0012 0C37     		adds	r7, r7, #12
@@ -323,15 +323,15 @@
  260              		.fpu softvfp
  262              	crc_single_data_calculate:
  263              	.LFB128:
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      CRC calculate a 32-bit data
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  sdata: specify 32-bit data
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     32-bit CRC calculate value
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** uint32_t crc_single_data_calculate(uint32_t sdata)
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      CRC calculate a 32-bit data
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  sdata: specify 32-bit data
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     32-bit CRC calculate value
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** uint32_t crc_single_data_calculate(uint32_t sdata)
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
  264              		.loc 1 82 1
  265              		.cfi_startproc
  266              		@ args = 0, pretend = 0, frame = 8
@@ -345,17 +345,17 @@
  274 0004 00AF     		add	r7, sp, #0
  275              		.cfi_def_cfa_register 7
  276 0006 7860     		str	r0, [r7, #4]
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_DATA = sdata;
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     CRC_DATA = sdata;
  277              		.loc 1 83 5
  278 0008 044A     		ldr	r2, .L20
  279              		.loc 1 83 14
  280 000a 7B68     		ldr	r3, [r7, #4]
  281 000c 1360     		str	r3, [r2]
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     return (CRC_DATA);
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     return (CRC_DATA);
  282              		.loc 1 84 13
  283 000e 034B     		ldr	r3, .L20
  284 0010 1B68     		ldr	r3, [r3]
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
  285              		.loc 1 85 1
  286 0012 1846     		mov	r0, r3
  287 0014 0C37     		adds	r7, r7, #12
@@ -382,16 +382,16 @@
  309              		.fpu softvfp
  311              	crc_block_data_calculate:
  312              	.LFB129:
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      CRC calculate a 32-bit data array
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  array: pointer to an array of 32 bit data words
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  size: size of the array
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     32-bit CRC calculate value
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** uint32_t crc_block_data_calculate(uint32_t array[], uint32_t size)
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** 
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** /*!
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \brief      CRC calculate a 32-bit data array
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  array: pointer to an array of 32 bit data words
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[in]  size: size of the array
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \param[out] none
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     \retval     32-bit CRC calculate value
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** */
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** uint32_t crc_block_data_calculate(uint32_t array[], uint32_t size)
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** {
  313              		.loc 1 95 1
  314              		.cfi_startproc
  315              		@ args = 0, pretend = 0, frame = 16
@@ -406,15 +406,15 @@
  324              		.cfi_def_cfa_register 7
  325 0006 7860     		str	r0, [r7, #4]
  326 0008 3960     		str	r1, [r7]
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     uint32_t index;
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     for(index = 0U; index < size; index++){
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     uint32_t index;
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     for(index = 0U; index < size; index++){
  327              		.loc 1 97 15
  328 000a 0023     		movs	r3, #0
  329 000c FB60     		str	r3, [r7, #12]
  330              		.loc 1 97 5
  331 000e 09E0     		b	.L23
  332              	.L24:
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****         CRC_DATA = array[index];
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****         CRC_DATA = array[index];
  333              		.loc 1 98 25 discriminator 3
  334 0010 FB68     		ldr	r3, [r7, #12]
  335 0012 9B00     		lsls	r3, r3, #2
@@ -426,24 +426,24 @@
  341 001a 1B68     		ldr	r3, [r3]
  342              		.loc 1 98 18 discriminator 3
  343 001c 1360     		str	r3, [r2]
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****         CRC_DATA = array[index];
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****         CRC_DATA = array[index];
  344              		.loc 1 97 40 discriminator 3
  345 001e FB68     		ldr	r3, [r7, #12]
  346 0020 0133     		adds	r3, r3, #1
  347 0022 FB60     		str	r3, [r7, #12]
  348              	.L23:
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****         CRC_DATA = array[index];
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****         CRC_DATA = array[index];
  349              		.loc 1 97 5 discriminator 1
  350 0024 FA68     		ldr	r2, [r7, #12]
  351 0026 3B68     		ldr	r3, [r7]
  352 0028 9A42     		cmp	r2, r3
  353 002a F1D3     		bcc	.L24
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     }
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     return (CRC_DATA);
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     }
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c ****     return (CRC_DATA);
  354              		.loc 1 100 13
  355 002c 034B     		ldr	r3, .L26
  356 002e 1B68     		ldr	r3, [r3]
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_crc.c **** }
  357              		.loc 1 101 1
  358 0030 1846     		mov	r0, r3
  359 0032 1437     		adds	r7, r7, #20
@@ -469,27 +469,27 @@
  380              		.file 5 "../../CMSIS/system_gd32f4xx.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_crc.c
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:16     .text.crc_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:24     .text.crc_deinit:00000000 crc_deinit
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:64     .text.crc_deinit:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:71     .text.crc_data_register_reset:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:78     .text.crc_data_register_reset:00000000 crc_data_register_reset
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:108    .text.crc_data_register_reset:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:113    .text.crc_data_register_read:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:120    .text.crc_data_register_read:00000000 crc_data_register_read
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:155    .text.crc_data_register_read:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:160    .text.crc_free_data_register_read:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:167    .text.crc_free_data_register_read:00000000 crc_free_data_register_read
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:202    .text.crc_free_data_register_read:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:207    .text.crc_free_data_register_write:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:214    .text.crc_free_data_register_write:00000000 crc_free_data_register_write
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:250    .text.crc_free_data_register_write:0000001c $d
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:255    .text.crc_single_data_calculate:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:262    .text.crc_single_data_calculate:00000000 crc_single_data_calculate
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:299    .text.crc_single_data_calculate:0000001c $d
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:304    .text.crc_block_data_calculate:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:311    .text.crc_block_data_calculate:00000000 crc_block_data_calculate
-C:\Users\leonardo\AppData\Local\Temp\ccSIc2lk.s:371    .text.crc_block_data_calculate:0000003c $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:16     .text.crc_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:24     .text.crc_deinit:00000000 crc_deinit
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:64     .text.crc_deinit:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:71     .text.crc_data_register_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:78     .text.crc_data_register_reset:00000000 crc_data_register_reset
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:108    .text.crc_data_register_reset:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:113    .text.crc_data_register_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:120    .text.crc_data_register_read:00000000 crc_data_register_read
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:155    .text.crc_data_register_read:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:160    .text.crc_free_data_register_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:167    .text.crc_free_data_register_read:00000000 crc_free_data_register_read
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:202    .text.crc_free_data_register_read:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:207    .text.crc_free_data_register_write:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:214    .text.crc_free_data_register_write:00000000 crc_free_data_register_write
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:250    .text.crc_free_data_register_write:0000001c $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:255    .text.crc_single_data_calculate:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:262    .text.crc_single_data_calculate:00000000 crc_single_data_calculate
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:299    .text.crc_single_data_calculate:0000001c $d
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:304    .text.crc_block_data_calculate:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:311    .text.crc_block_data_calculate:00000000 crc_block_data_calculate
+C:\Users\leonardo\AppData\Local\Temp\cc8Uu9Es.s:371    .text.crc_block_data_calculate:0000003c $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

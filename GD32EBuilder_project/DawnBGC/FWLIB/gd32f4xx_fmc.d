@@ -1,5 +1,5 @@
 FWLIB/gd32f4xx_fmc.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_fmc.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_fmc.c \
  ../../Libraries/FWLIB/inc/gd32f4xx_fmc.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \

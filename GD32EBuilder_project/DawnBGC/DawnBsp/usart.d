@@ -1,5 +1,5 @@
 DawnBsp/usart.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp/usart.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp/usart.c \
  ../../Dawn/DawnMain/includes.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \
@@ -43,7 +43,7 @@ DawnBsp/usart.o: \
  ../../Dawn/DawnBLDC/dawn_bldc_math.h ../../Dawn/DawnBsp/gpio.h \
  ../../Dawn/DawnSys/wdg.h ../../Dawn/DawnSys/systick.h \
  ../../Dawn/DawnSys/flash.h \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp/usart.h
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp/usart.h
 
 ../../Dawn/DawnMain/includes.h:
 
@@ -151,4 +151,4 @@ DawnBsp/usart.o: \
 
 ../../Dawn/DawnSys/flash.h:
 
-C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp/usart.h:
+C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp/usart.h:

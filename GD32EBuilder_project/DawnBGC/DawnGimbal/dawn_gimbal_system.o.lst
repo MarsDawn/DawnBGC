@@ -22,39 +22,39 @@
   22              		.fpu softvfp
   24              	GimbalInit:
   25              	.LFB156:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal/dawn_gimbal_system.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** /*
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * Copyright (c) 2025 MarsDawn
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * Project repository:
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *     https://github.com/MarsDawn
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * This file is part of the DawnBGC project.
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * Redistribution and use in source or binary forms, with or without
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * modification, are permitted under the MIT License, provided that
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * this copyright notice and this permission notice are retained.
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * Licensed under the MIT License.
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * You may obtain a copy of the License at:
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *     https://opensource.org/licenses/MIT
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  */
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** #include "includes.h"
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void BLDCUpdata(void);
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void IMUUpdata(void);
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static uint8_t CheckBLDCStatus(void);
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void BLDCTorqueUpdata(void);
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static float AngleRadsLimit(float AngleErr, float RadsRef, float MaxACC);
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** void GimbalInit(void)
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal/dawn_gimbal_system.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void BLDCUpdata(void);
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void IMUUpdata(void);
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static uint8_t CheckBLDCStatus(void);
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void BLDCTorqueUpdata(void);
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static float AngleRadsLimit(float AngleErr, float RadsRef, float MaxACC);
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** void GimbalInit(void)
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
   27              		.loc 1 32 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -65,10 +65,10 @@
   34              		.cfi_offset 14, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCInit();
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCInit();
   37              		.loc 1 33 5
   38 0004 FFF7FEFF 		bl	BLDCInit
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
   39              		.loc 1 34 1
   40 0008 00BF     		nop
   41 000a 80BD     		pop	{r7, pc}
@@ -89,11 +89,11 @@
   57              		.fpu softvfp
   59              	GimbalWork:
   60              	.LFB157:
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** Matrix3X3Union local_ArmDCM_trans;
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** void GimbalWork(void)
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** Matrix3X3Union local_ArmDCM_trans;
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** void GimbalWork(void)
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
   61              		.loc 1 39 1
   62              		.cfi_startproc
   63              		@ args = 0, pretend = 0, frame = 8
@@ -107,26 +107,26 @@
   71              		.cfi_def_cfa_offset 32
   72 0004 02AF     		add	r7, sp, #8
   73              		.cfi_def_cfa 7, 24
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     uint8_t i = 0, j = 0;
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     uint8_t i = 0, j = 0;
   74              		.loc 1 40 13
   75 0006 0023     		movs	r3, #0
   76 0008 FB71     		strb	r3, [r7, #7]
   77              		.loc 1 40 20
   78 000a 0023     		movs	r3, #0
   79 000c BB71     		strb	r3, [r7, #6]
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCUpdata();
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCUpdata();
   80              		.loc 1 44 5
   81 000e FFF7FEFF 		bl	BLDCUpdata
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     IMUUpdata();
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     IMUUpdata();
   82              		.loc 1 47 5
   83 0012 FFF7FEFF 		bl	IMUUpdata
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     MatrixSub(3, 1, &GimbalSystem.PlaneRadsRaw.Ele[0], &GimbalSystem.PlaneRadsBias.Ele[0], &GimbalS
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     MatrixSub(3, 1, &GimbalSystem.PlaneRadsRaw.Ele[0], &GimbalSystem.PlaneRadsBias.Ele[0], &GimbalS
   84              		.loc 1 49 5
   85 0016 AB4B     		ldr	r3, .L54
   86 0018 0093     		str	r3, [sp]
@@ -135,46 +135,46 @@
   89 001e 0121     		movs	r1, #1
   90 0020 0320     		movs	r0, #3
   91 0022 FFF7FEFF 		bl	MatrixSub
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACC.Data.X = GimbalSystem.PlaneACCRaw.Data.X;
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACC.Data.X = GimbalSystem.PlaneACCRaw.Data.X;
   92              		.loc 1 51 65
   93 0026 AA4B     		ldr	r3, .L54+12
   94 0028 D3F8E830 		ldr	r3, [r3, #232]	@ float
   95              		.loc 1 51 34
   96 002c A84A     		ldr	r2, .L54+12
   97 002e C2F8F430 		str	r3, [r2, #244]	@ float
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACC.Data.Y = GimbalSystem.PlaneACCRaw.Data.Y;
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACC.Data.Y = GimbalSystem.PlaneACCRaw.Data.Y;
   98              		.loc 1 52 65
   99 0032 A74B     		ldr	r3, .L54+12
  100 0034 D3F8EC30 		ldr	r3, [r3, #236]	@ float
  101              		.loc 1 52 34
  102 0038 A54A     		ldr	r2, .L54+12
  103 003a C2F8F830 		str	r3, [r2, #248]	@ float
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACC.Data.Z = GimbalSystem.PlaneACCRaw.Data.Z;
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACC.Data.Z = GimbalSystem.PlaneACCRaw.Data.Z;
  104              		.loc 1 53 65
  105 003e A44B     		ldr	r3, .L54+12
  106 0040 D3F8F030 		ldr	r3, [r3, #240]	@ float
  107              		.loc 1 53 34
  108 0044 A24A     		ldr	r2, .L54+12
  109 0046 C2F8FC30 		str	r3, [r2, #252]	@ float
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     AttitudeUpdata();
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     AttitudeUpdata();
  110              		.loc 1 56 5
  111 004a FFF7FEFF 		bl	AttitudeUpdata
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     ACC2Euler(&GimbalSystem.PlaneACC, &GimbalSystem.GeoEulerACC);
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     ACC2Euler(&GimbalSystem.PlaneACC, &GimbalSystem.GeoEulerACC);
  112              		.loc 1 59 5
  113 004e A149     		ldr	r1, .L54+16
  114 0050 A148     		ldr	r0, .L54+20
  115 0052 FFF7FEFF 		bl	ACC2Euler
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     AttitudeCali();
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     AttitudeCali();
  116              		.loc 1 60 5
  117 0056 FFF7FEFF 		bl	AttitudeCali
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     MatrixMultiply(3, 3, 1, &GimbalSystem.JacbState.Ele[0], &GimbalSystem.PlaneRadsCali.Ele[0], &Gi
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     MatrixMultiply(3, 3, 1, &GimbalSystem.JacbState.Ele[0], &GimbalSystem.PlaneRadsCali.Ele[0], &Gi
  118              		.loc 1 63 5
  119 005a A04B     		ldr	r3, .L54+24
  120 005c 0193     		str	r3, [sp, #4]
@@ -185,13 +185,13 @@
  125 0066 0321     		movs	r1, #3
  126 0068 0320     		movs	r0, #3
  127 006a FFF7FEFF 		bl	MatrixMultiply
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     switch (GimbalSystem.GimbalState)
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     switch (GimbalSystem.GimbalState)
  128              		.loc 1 70 25
  129 006e 984B     		ldr	r3, .L54+12
  130 0070 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -207,9 +207,9 @@
  140 008c 1D010000 		.word	.L4+1
  141              		.p2align 1
  142              	.L8:
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     case IMU_STATUS:
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if (((GimbalSystem.PlaneACCRaw.Data.X) != 0.0f) && ((GimbalSystem.PlaneRadsRaw.Data.X) != 0
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     case IMU_STATUS:
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if (((GimbalSystem.PlaneACCRaw.Data.X) != 0.0f) && ((GimbalSystem.PlaneRadsRaw.Data.X) != 0
  143              		.loc 1 73 44
  144 0090 8F4B     		ldr	r3, .L54+12
  145 0092 D3F8E830 		ldr	r3, [r3, #232]	@ float
@@ -221,18 +221,18 @@
  151 00a0 0346     		mov	r3, r0
  152 00a2 002B     		cmp	r3, #0
  153 00a4 00D0     		beq	.L37
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.GimbalState = BLDC_STATUS;
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.GimbalState = BLDC_STATUS;
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
  154              		.loc 1 77 9
  155 00a6 0DE2     		b	.L12
  156              	.L37:
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
  157              		.loc 1 73 92 discriminator 1
  158 00a8 894B     		ldr	r3, .L54+12
  159 00aa D3F80C31 		ldr	r3, [r3, #268]	@ float
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
  160              		.loc 1 73 57 discriminator 1
  161 00ae 4FF00001 		mov	r1, #0
  162 00b2 1846     		mov	r0, r3
@@ -244,7 +244,7 @@
  168              		.loc 1 77 9 discriminator 1
  169 00be 01E2     		b	.L12
  170              	.L38:
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
  171              		.loc 1 75 38
  172 00c0 834B     		ldr	r3, .L54+12
  173 00c2 0122     		movs	r2, #1
@@ -252,83 +252,83 @@
  175              		.loc 1 77 9
  176 00c6 FDE1     		b	.L12
  177              	.L7:
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     case BLDC_STATUS:
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if (CheckBLDCStatus())
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     case BLDC_STATUS:
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if (CheckBLDCStatus())
  178              		.loc 1 80 13
  179 00c8 FFF7FEFF 		bl	CheckBLDCStatus
  180 00cc 0346     		mov	r3, r0
  181              		.loc 1 80 12
  182 00ce 002B     		cmp	r3, #0
  183 00d0 00F0F581 		beq	.L52
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.GimbalState = ATTITUDE_STATUS;
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.GimbalState = ATTITUDE_STATUS;
  184              		.loc 1 82 38
  185 00d4 7E4B     		ldr	r3, .L54+12
  186 00d6 0222     		movs	r2, #2
  187 00d8 1A70     		strb	r2, [r3]
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
  188              		.loc 1 84 9
  189 00da F0E1     		b	.L52
  190              	.L6:
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     case ATTITUDE_STATUS:
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if (GimbalSystem.RestartFlag)
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     case ATTITUDE_STATUS:
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if (GimbalSystem.RestartFlag)
  191              		.loc 1 87 25
  192 00dc 7C4B     		ldr	r3, .L54+12
  193 00de 1B7D     		ldrb	r3, [r3, #20]	@ zero_extendqisi2
  194              		.loc 1 87 12
  195 00e0 002B     		cmp	r3, #0
  196 00e2 00F0EE81 		beq	.L53
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.RestartFlag = FALSE;
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.RestartFlag = FALSE;
  197              		.loc 1 89 38
  198 00e6 7A4B     		ldr	r3, .L54+12
  199 00e8 0022     		movs	r2, #0
  200 00ea 1A75     		strb	r2, [r3, #20]
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             ACC2Euler(&GimbalSystem.PlaneACC, &GimbalSystem.GeoEulerACC);
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             ACC2Euler(&GimbalSystem.PlaneACC, &GimbalSystem.GeoEulerACC);
  201              		.loc 1 92 13
  202 00ec 7949     		ldr	r1, .L54+16
  203 00ee 7A48     		ldr	r0, .L54+20
  204 00f0 FFF7FEFF 		bl	ACC2Euler
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             Euler2Quat(&GimbalSystem.GeoEulerACC, &GimbalSystem.QuaternionPlane);
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             Euler2Quat(&GimbalSystem.GeoEulerACC, &GimbalSystem.QuaternionPlane);
  205              		.loc 1 93 13
  206 00f4 7C49     		ldr	r1, .L54+36
  207 00f6 7748     		ldr	r0, .L54+16
  208 00f8 FFF7FEFF 		bl	Euler2Quat
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.PlaneAttitudePID.IntegralX = 0.0f;
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.PlaneAttitudePID.IntegralX = 0.0f;
  209              		.loc 1 94 53
  210 00fc 744B     		ldr	r3, .L54+12
  211 00fe 4FF00002 		mov	r2, #0
  212 0102 5A64     		str	r2, [r3, #68]	@ float
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.PlaneAttitudePID.IntegralZ = 0.0f;
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.PlaneAttitudePID.IntegralZ = 0.0f;
  213              		.loc 1 95 53
  214 0104 724B     		ldr	r3, .L54+12
  215 0106 4FF00002 		mov	r2, #0
  216 010a DA64     		str	r2, [r3, #76]	@ float
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.PlaneAttitudePID.IntegralY = 0.0f;
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.PlaneAttitudePID.IntegralY = 0.0f;
  217              		.loc 1 96 53
  218 010c 704B     		ldr	r3, .L54+12
  219 010e 4FF00002 		mov	r2, #0
  220 0112 9A64     		str	r2, [r3, #72]	@ float
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.GimbalState = SYSTEM_STATUS;
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.GimbalState = SYSTEM_STATUS;
  221              		.loc 1 98 38
  222 0114 6E4B     		ldr	r3, .L54+12
  223 0116 0322     		movs	r2, #3
  224 0118 1A70     		strb	r2, [r3]
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
  225              		.loc 1 100 9
  226 011a D2E1     		b	.L53
  227              	.L4:
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     case SYSTEM_STATUS:
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.GeoEulerErr.Data.Y = (GimbalSystem.GeoEulerTraget.Pitch) + (GimbalSystem.GeoEu
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     case SYSTEM_STATUS:
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.GeoEulerErr.Data.Y = (GimbalSystem.GeoEulerTraget.Pitch) + (GimbalSystem.GeoEu
  228              		.loc 1 104 71
  229 011c 6C4B     		ldr	r3, .L54+12
  230 011e D3F89430 		ldr	r3, [r3, #148]	@ float
@@ -355,7 +355,7 @@
  251              		.loc 1 104 41
  252 0146 624B     		ldr	r3, .L54+12
  253 0148 C3F8D420 		str	r2, [r3, #212]	@ float
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.GeoEulerErr.Data.X = (GimbalSystem.GeoEulerTraget.Roll) + (GimbalSystem.GeoEul
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.GeoEulerErr.Data.X = (GimbalSystem.GeoEulerTraget.Roll) + (GimbalSystem.GeoEul
  254              		.loc 1 105 71
  255 014c 604B     		ldr	r3, .L54+12
  256 014e D3F89830 		ldr	r3, [r3, #152]	@ float
@@ -382,16 +382,16 @@
  277              		.loc 1 105 41
  278 0176 564B     		ldr	r3, .L54+12
  279 0178 C3F8D020 		str	r2, [r3, #208]	@ float
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         for (i = 0; i < 3; i++)
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         for (i = 0; i < 3; i++)
  280              		.loc 1 107 16
  281 017c 0023     		movs	r3, #0
  282 017e FB71     		strb	r3, [r7, #7]
  283              		.loc 1 107 9
  284 0180 27E0     		b	.L15
  285              	.L20:
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             if (GimbalSystem.GeoEulerErr.Ele[i] > MAX_ANGLE_ERR)
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             if (GimbalSystem.GeoEulerErr.Ele[i] > MAX_ANGLE_ERR)
  286              		.loc 1 109 45
  287 0182 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  288 0184 524A     		ldr	r2, .L54+12
@@ -405,8 +405,8 @@
  296 0194 0346     		mov	r3, r0
  297 0196 002B     		cmp	r3, #0
  298 0198 06D0     		beq	.L47
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             {
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                 GimbalSystem.GeoEulerErr.Ele[i] = MAX_ANGLE_ERR;
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             {
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                 GimbalSystem.GeoEulerErr.Ele[i] = MAX_ANGLE_ERR;
  299              		.loc 1 111 45
  300 019a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  301              		.loc 1 111 49
@@ -416,8 +416,8 @@
  305 01a2 42F82310 		str	r1, [r2, r3, lsl #2]	@ float
  306 01a6 11E0     		b	.L18
  307              	.L47:
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             }
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             else if (GimbalSystem.GeoEulerErr.Ele[i] < -MAX_ANGLE_ERR)
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             }
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             else if (GimbalSystem.GeoEulerErr.Ele[i] < -MAX_ANGLE_ERR)
  308              		.loc 1 113 50
  309 01a8 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  310 01aa 494A     		ldr	r2, .L54+12
@@ -431,8 +431,8 @@
  318 01ba 0346     		mov	r3, r0
  319 01bc 002B     		cmp	r3, #0
  320 01be 05D0     		beq	.L18
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             {
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                 GimbalSystem.GeoEulerErr.Ele[i] = -MAX_ANGLE_ERR;
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             {
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                 GimbalSystem.GeoEulerErr.Ele[i] = -MAX_ANGLE_ERR;
  321              		.loc 1 115 45
  322 01c0 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  323              		.loc 1 115 49
@@ -441,22 +441,22 @@
  326 01c6 4A49     		ldr	r1, .L54+44
  327 01c8 42F82310 		str	r1, [r2, r3, lsl #2]	@ float
  328              	.L18:
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
  329              		.loc 1 107 29 discriminator 2
  330 01cc FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  331 01ce 0133     		adds	r3, r3, #1
  332 01d0 FB71     		strb	r3, [r7, #7]
  333              	.L15:
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
  334              		.loc 1 107 9 discriminator 1
  335 01d2 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  336 01d4 022B     		cmp	r3, #2
  337 01d6 D4D9     		bls	.L20
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             }
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         MatrixMultiply(3, 3, 1, &GimbalSystem.CameraDCM.Ele[0], &GimbalSystem.GeoEulerErr.Ele[0], &
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             }
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         MatrixMultiply(3, 3, 1, &GimbalSystem.CameraDCM.Ele[0], &GimbalSystem.GeoEulerErr.Ele[0], &
  338              		.loc 1 120 9
  339 01d8 464B     		ldr	r3, .L54+48
  340 01da 0193     		str	r3, [sp, #4]
@@ -467,7 +467,7 @@
  345 01e4 0321     		movs	r1, #3
  346 01e6 0320     		movs	r0, #3
  347 01e8 FFF7FEFF 		bl	MatrixMultiply
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         MatrixMultiply(3, 3, 1, &GimbalSystem.JacbState.Ele[0], &GimbalSystem.PlaneEulerErr.Ele[0],
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         MatrixMultiply(3, 3, 1, &GimbalSystem.JacbState.Ele[0], &GimbalSystem.PlaneEulerErr.Ele[0],
  348              		.loc 1 121 9
  349 01ec 444B     		ldr	r3, .L54+60
  350 01ee 0193     		str	r3, [sp, #4]
@@ -478,9 +478,9 @@
  355 01f8 0321     		movs	r1, #3
  356 01fa 0320     		movs	r0, #3
  357 01fc FFF7FEFF 		bl	MatrixMultiply
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if ((GimbalSystem.CtrlMode.Pitch) == ANGLE_MODE)
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if ((GimbalSystem.CtrlMode.Pitch) == ANGLE_MODE)
  358              		.loc 1 124 35
  359 0200 334B     		ldr	r3, .L54+12
  360 0202 9B68     		ldr	r3, [r3, #8]	@ float
@@ -492,9 +492,9 @@
  366 020e 0346     		mov	r3, r0
  367 0210 002B     		cmp	r3, #0
  368 0212 1ED0     		beq	.L48
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngleErr.Data.Small = (GimbalSystem.GeoEulerTraget.Pitch) + (GimbalSyst
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngleErr.Data.Small = (GimbalSystem.GeoEulerTraget.Pitch) + (GimbalSyst
  369              		.loc 1 127 79
  370 0214 2E4B     		ldr	r3, .L54+12
  371 0216 D3F89430 		ldr	r3, [r3, #148]	@ float
@@ -521,7 +521,7 @@
  392              		.loc 1 127 49
  393 023e 244B     		ldr	r3, .L54+12
  394 0240 C3F85021 		str	r2, [r3, #336]	@ float
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Small.Kp = GimbalSystem.ArmAnglePIDKpAngle.Data.Small;
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Small.Kp = GimbalSystem.ArmAnglePIDKpAngle.Data.Small;
  395              		.loc 1 128 90
  396 0244 224B     		ldr	r3, .L54+12
  397 0246 D3F89432 		ldr	r3, [r3, #660]	@ float
@@ -530,8 +530,8 @@
  400 024c C2F8F432 		str	r3, [r2, #756]	@ float
  401 0250 0FE0     		b	.L23
  402              	.L48:
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         else if ((GimbalSystem.CtrlMode.Pitch) == ATTITUDE_MODE)
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         else if ((GimbalSystem.CtrlMode.Pitch) == ATTITUDE_MODE)
  403              		.loc 1 130 40
  404 0252 1F4B     		ldr	r3, .L54+12
  405 0254 9B68     		ldr	r3, [r3, #8]	@ float
@@ -543,10 +543,10 @@
  411 0260 0346     		mov	r3, r0
  412 0262 002B     		cmp	r3, #0
  413 0264 05D0     		beq	.L23
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Small.Kp = GimbalSystem.ArmAnglePIDKpAttitude.Data.Small;
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Small.Kp = GimbalSystem.ArmAnglePIDKpAttitude.Data.Small;
  414              		.loc 1 134 93
  415 0266 1A4B     		ldr	r3, .L54+12
  416 0268 D3F88832 		ldr	r3, [r3, #648]	@ float
@@ -554,10 +554,10 @@
  418 026c 184A     		ldr	r2, .L54+12
  419 026e C2F8F432 		str	r3, [r2, #756]	@ float
  420              	.L23:
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if ((GimbalSystem.CtrlMode.Roll) == ANGLE_MODE)
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if ((GimbalSystem.CtrlMode.Roll) == ANGLE_MODE)
  421              		.loc 1 138 35
  422 0272 174B     		ldr	r3, .L54+12
  423 0274 DB68     		ldr	r3, [r3, #12]	@ float
@@ -569,9 +569,9 @@
  429 0280 0346     		mov	r3, r0
  430 0282 002B     		cmp	r3, #0
  431 0284 3ED0     		beq	.L49
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngleErr.Data.Middle = (GimbalSystem.GeoEulerTraget.Roll) + (GimbalSyst
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngleErr.Data.Middle = (GimbalSystem.GeoEulerTraget.Roll) + (GimbalSyst
  432              		.loc 1 141 80
  433 0286 124B     		ldr	r3, .L54+12
  434 0288 D3F89830 		ldr	r3, [r3, #152]	@ float
@@ -598,7 +598,7 @@
  455              		.loc 1 141 50
  456 02b0 074B     		ldr	r3, .L54+12
  457 02b2 C3F84821 		str	r2, [r3, #328]	@ float
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Middle.Kp = GimbalSystem.ArmAnglePIDKpAngle.Data.Middle;
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Middle.Kp = GimbalSystem.ArmAnglePIDKpAngle.Data.Middle;
  458              		.loc 1 142 91
  459 02b6 064B     		ldr	r3, .L54+12
  460 02b8 D3F88C32 		ldr	r3, [r3, #652]	@ float
@@ -626,8 +626,8 @@
  482 02fc 14020000 		.word	GimbalSystem+532
  483 0300 48010000 		.word	GimbalSystem+328
  484              	.L49:
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         else if ((GimbalSystem.CtrlMode.Roll) == ATTITUDE_MODE)
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         else if ((GimbalSystem.CtrlMode.Roll) == ATTITUDE_MODE)
  485              		.loc 1 144 40
  486 0304 7E4B     		ldr	r3, .L56
  487 0306 DB68     		ldr	r3, [r3, #12]	@ float
@@ -639,10 +639,10 @@
  493 0312 0346     		mov	r3, r0
  494 0314 002B     		cmp	r3, #0
  495 0316 05D0     		beq	.L27
- 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Middle.Kp = GimbalSystem.ArmAnglePIDKpAttitude.Data.Middl
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Middle.Kp = GimbalSystem.ArmAnglePIDKpAttitude.Data.Middl
  496              		.loc 1 148 94
  497 0318 794B     		ldr	r3, .L56
  498 031a D3F88032 		ldr	r3, [r3, #640]	@ float
@@ -650,10 +650,10 @@
  500 031e 784A     		ldr	r2, .L56
  501 0320 C2F8A432 		str	r3, [r2, #676]	@ float
  502              	.L27:
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if ((GimbalSystem.CtrlMode.Yaw) == ANGLE_MODE)
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if ((GimbalSystem.CtrlMode.Yaw) == ANGLE_MODE)
  503              		.loc 1 152 35
  504 0324 764B     		ldr	r3, .L56
  505 0326 1B69     		ldr	r3, [r3, #16]	@ float
@@ -665,9 +665,9 @@
  511 0332 0346     		mov	r3, r0
  512 0334 002B     		cmp	r3, #0
  513 0336 1ED0     		beq	.L50
- 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngleErr.Data.Latge = (GimbalSystem.GeoEulerTraget.Yaw) + (GimbalSystem
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngleErr.Data.Latge = (GimbalSystem.GeoEulerTraget.Yaw) + (GimbalSystem
  514              		.loc 1 155 79
  515 0338 714B     		ldr	r3, .L56
  516 033a D3F89C30 		ldr	r3, [r3, #156]	@ float
@@ -694,11 +694,11 @@
  537              		.loc 1 155 49
  538 0362 674B     		ldr	r3, .L56
  539 0364 C3F84C21 		str	r2, [r3, #332]	@ float
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Latge.Kp = GimbalSystem.ArmAnglePIDKpAngle.Data.Latge;
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Latge.Kp = GimbalSystem.ArmAnglePIDKpAngle.Data.Latge;
  540              		.loc 1 160 90
  541 0368 654B     		ldr	r3, .L56
  542 036a D3F89032 		ldr	r3, [r3, #656]	@ float
@@ -707,8 +707,8 @@
  545 0370 C2F8CC32 		str	r3, [r2, #716]	@ float
  546 0374 0FE0     		b	.L31
  547              	.L50:
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         else if ((GimbalSystem.CtrlMode.Yaw) == ATTITUDE_MODE)
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         else if ((GimbalSystem.CtrlMode.Yaw) == ATTITUDE_MODE)
  548              		.loc 1 162 40
  549 0376 624B     		ldr	r3, .L56
  550 0378 1B69     		ldr	r3, [r3, #16]	@ float
@@ -720,8 +720,8 @@
  556 0384 0346     		mov	r3, r0
  557 0386 002B     		cmp	r3, #0
  558 0388 05D0     		beq	.L31
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Latge.Kp = GimbalSystem.ArmAnglePIDKpAttitude.Data.Latge;
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAnglePID.Data.Latge.Kp = GimbalSystem.ArmAnglePIDKpAttitude.Data.Latge;
  559              		.loc 1 164 93
  560 038a 5D4B     		ldr	r3, .L56
  561 038c D3F88432 		ldr	r3, [r3, #644]	@ float
@@ -729,10 +729,10 @@
  563 0390 5B4A     		ldr	r2, .L56
  564 0392 C2F8CC32 		str	r3, [r2, #716]	@ float
  565              	.L31:
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.ArmRads.Data.Latge = GimbalSystem.ArmRadsRaw.Data.Latge + GimbalSystem.ArmRads
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.ArmRads.Data.Latge = GimbalSystem.ArmRadsRaw.Data.Latge + GimbalSystem.ArmRads
  566              		.loc 1 168 71
  567 0396 5A4B     		ldr	r3, .L56
  568 0398 D3F8C431 		ldr	r3, [r3, #452]	@ float
@@ -749,23 +749,23 @@
  579              		.loc 1 168 41
  580 03ae 544B     		ldr	r3, .L56
  581 03b0 C3F8D021 		str	r2, [r3, #464]	@ float
- 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.ArmRads.Data.Small = GimbalSystem.ArmRadsRaw.Data.Small;
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.ArmRads.Data.Small = GimbalSystem.ArmRadsRaw.Data.Small;
  582              		.loc 1 169 71
  583 03b4 524B     		ldr	r3, .L56
  584 03b6 D3F8C831 		ldr	r3, [r3, #456]	@ float
  585              		.loc 1 169 41
  586 03ba 514A     		ldr	r2, .L56
  587 03bc C2F8D431 		str	r3, [r2, #468]	@ float
- 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.ArmRads.Data.Middle = GimbalSystem.ArmRadsRaw.Data.Middle;
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.ArmRads.Data.Middle = GimbalSystem.ArmRadsRaw.Data.Middle;
  588              		.loc 1 170 72
  589 03c0 4F4B     		ldr	r3, .L56
  590 03c2 D3F8C031 		ldr	r3, [r3, #448]	@ float
  591              		.loc 1 170 42
  592 03c6 4E4A     		ldr	r2, .L56
  593 03c8 C2F8CC31 		str	r3, [r2, #460]	@ float
- 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         MatrixAdd(3, 1, &GimbalSystem.ArmAngle.Ele[0], &GimbalSystem.ArmAngleErr.Ele[0], &GimbalSys
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         MatrixAdd(3, 1, &GimbalSystem.ArmAngle.Ele[0], &GimbalSystem.ArmAngleErr.Ele[0], &GimbalSys
  594              		.loc 1 173 9
  595 03cc 4D4B     		ldr	r3, .L56+4
  596 03ce 0093     		str	r3, [sp]
@@ -774,20 +774,20 @@
  599 03d4 0121     		movs	r1, #1
  600 03d6 0320     		movs	r0, #3
  601 03d8 FFF7FEFF 		bl	MatrixAdd
- 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         for (i = 0; i < 3; i++)
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         for (i = 0; i < 3; i++)
  602              		.loc 1 179 16
  603 03dc 0023     		movs	r3, #0
  604 03de FB71     		strb	r3, [r7, #7]
  605              		.loc 1 179 9
  606 03e0 67E0     		b	.L33
  607              	.L34:
- 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmRadsRef.Ele[i] = PidControl((GimbalSystem.ArmAngleRef.Ele[i]) - (Gimbal
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmRadsRef.Ele[i] = PidControl((GimbalSystem.ArmAngleRef.Ele[i]) - (Gimbal
  608              		.loc 1 181 86 discriminator 3
  609 03e2 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  610 03e4 464A     		ldr	r2, .L56
@@ -807,10 +807,10 @@
  624              	.LVL21:
  625 0400 0346     		mov	r3, r0
  626 0402 1846     		mov	r0, r3
- 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
  627              		.loc 1 182 81 discriminator 3
  628 0404 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
  629              		.loc 1 181 46 discriminator 3
  630 0406 1346     		mov	r3, r2
  631 0408 9B00     		lsls	r3, r3, #2
@@ -820,22 +820,22 @@
  635 0412 3B4A     		ldr	r2, .L56
  636 0414 1344     		add	r3, r3, r2
  637 0416 0433     		adds	r3, r3, #4
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
  638              		.loc 1 181 40 discriminator 3
  639 0418 FC79     		ldrb	r4, [r7, #7]	@ zero_extendqisi2
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
  640              		.loc 1 181 46 discriminator 3
  641 041a 1946     		mov	r1, r3
  642 041c FFF7FEFF 		bl	PidControl
  643 0420 0246     		mov	r2, r0
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                    &GimbalSystem.ArmAnglePID.Ele[i]);
  644              		.loc 1 181 44 discriminator 3
  645 0422 3749     		ldr	r1, .L56
  646 0424 04F16A03 		add	r3, r4, #106
  647 0428 41F82320 		str	r2, [r1, r3, lsl #2]	@ float
- 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmRadsRef.Ele[i] = AngleRadsLimit(GimbalSystem.ArmAngleErr.Ele[i],
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmRadsRef.Ele[i] = AngleRadsLimit(GimbalSystem.ArmAngleErr.Ele[i],
  648              		.loc 1 185 46 discriminator 3
  649 042c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  650 042e 344A     		ldr	r2, .L56
@@ -861,20 +861,20 @@
  670 0456 2A49     		ldr	r1, .L56
  671 0458 04F16A03 		add	r3, r4, #106
  672 045c 41F82320 		str	r2, [r1, r3, lsl #2]	@ float
- 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                     GimbalSystem.ArmRadsRef.Ele[i],
- 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                     GimbalSystem.ArmRadsRefACCMax.Ele[i]);
- 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmTorqueRef.Ele[i] = PidControl(GimbalSystem.ArmRadsRef.Ele[i] - GimbalSy
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                     GimbalSystem.ArmRadsRef.Ele[i],
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                     GimbalSystem.ArmRadsRefACCMax.Ele[i]);
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmTorqueRef.Ele[i] = PidControl(GimbalSystem.ArmRadsRef.Ele[i] - GimbalSy
  673              		.loc 1 199 86 discriminator 3
  674 0460 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  675 0462 274A     		ldr	r2, .L56
@@ -894,10 +894,10 @@
  689              	.LVL22:
  690 047e 0346     		mov	r3, r0
  691 0480 1846     		mov	r0, r3
- 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
  692              		.loc 1 200 85 discriminator 3
  693 0482 FA79     		ldrb	r2, [r7, #7]	@ zero_extendqisi2
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
  694              		.loc 1 199 48 discriminator 3
  695 0484 1346     		mov	r3, r2
  696 0486 9B00     		lsls	r3, r3, #2
@@ -907,104 +907,104 @@
  700 0490 1B4A     		ldr	r2, .L56
  701 0492 1344     		add	r3, r3, r2
  702 0494 0433     		adds	r3, r3, #4
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
  703              		.loc 1 199 42 discriminator 3
  704 0496 FC79     		ldrb	r4, [r7, #7]	@ zero_extendqisi2
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
  705              		.loc 1 199 48 discriminator 3
  706 0498 1946     		mov	r1, r3
  707 049a FFF7FEFF 		bl	PidControl
  708 049e 0246     		mov	r2, r0
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****                                                         &GimbalSystem.ArmRadsPID.Ele[i]);
  709              		.loc 1 199 46 discriminator 3
  710 04a0 1749     		ldr	r1, .L56
  711 04a2 04F17803 		add	r3, r4, #120
  712 04a6 9B00     		lsls	r3, r3, #2
  713 04a8 0B44     		add	r3, r3, r1
  714 04aa 5A60     		str	r2, [r3, #4]	@ float
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
  715              		.loc 1 179 29 discriminator 3
  716 04ac FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  717 04ae 0133     		adds	r3, r3, #1
  718 04b0 FB71     		strb	r3, [r7, #7]
  719              	.L33:
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
  720              		.loc 1 179 9 discriminator 1
  721 04b2 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  722 04b4 022B     		cmp	r3, #2
  723 04b6 94D9     		bls	.L34
- 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
  724              		.loc 1 202 9
  725 04b8 04E0     		b	.L12
  726              	.L51:
- 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     default:
- 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     default:
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         break;
  727              		.loc 1 205 9
  728 04ba 00BF     		nop
  729 04bc 02E0     		b	.L12
  730              	.L52:
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
  731              		.loc 1 84 9
  732 04be 00BF     		nop
  733 04c0 00E0     		b	.L12
  734              	.L53:
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
  735              		.loc 1 100 9
  736 04c2 00BF     		nop
  737              	.L12:
- 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
- 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCTorqueUpdata();
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCTorqueUpdata();
  738              		.loc 1 209 5
  739 04c4 FFF7FEFF 		bl	BLDCTorqueUpdata
- 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
- 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.GeoEulerQuat.Yaw = 0.0f;
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.GeoEulerQuat.Yaw = 0.0f;
  740              		.loc 1 212 35
  741 04c8 0D4B     		ldr	r3, .L56
  742 04ca 4FF00002 		mov	r2, #0
  743 04ce C3F88C20 		str	r2, [r3, #140]	@ float
- 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     Euler2DCM(&GimbalSystem.GeoEulerQuat, &GimbalSystem.CameraDCM);
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     Euler2DCM(&GimbalSystem.GeoEulerQuat, &GimbalSystem.CameraDCM);
  744              		.loc 1 213 5
  745 04d2 0F49     		ldr	r1, .L56+16
  746 04d4 0F48     		ldr	r0, .L56+20
  747 04d6 FFF7FEFF 		bl	Euler2DCM
- 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
- 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (GimbalSystem.JacbInv)
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (GimbalSystem.JacbInv)
  748              		.loc 1 216 21
  749 04da 094B     		ldr	r3, .L56
  750 04dc 5B7D     		ldrb	r3, [r3, #21]	@ zero_extendqisi2
  751              		.loc 1 216 8
  752 04de 002B     		cmp	r3, #0
  753 04e0 04D0     		beq	.L35
- 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         CalcJacobianInv(&GimbalSystem.ArmAngle, &GimbalSystem.JacbState);
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         CalcJacobianInv(&GimbalSystem.ArmAngle, &GimbalSystem.JacbState);
  754              		.loc 1 218 9
  755 04e2 0D49     		ldr	r1, .L56+24
  756 04e4 0948     		ldr	r0, .L56+12
  757 04e6 FFF7FEFF 		bl	CalcJacobianInv
  758 04ea 03E0     		b	.L36
  759              	.L35:
- 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else
- 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         CalcJacobianTrans(&GimbalSystem.ArmAngle, &GimbalSystem.JacbState);
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         CalcJacobianTrans(&GimbalSystem.ArmAngle, &GimbalSystem.JacbState);
  760              		.loc 1 222 9
  761 04ec 0A49     		ldr	r1, .L56+24
  762 04ee 0748     		ldr	r0, .L56+12
  763 04f0 FFF7FEFF 		bl	CalcJacobianTrans
  764              	.L36:
- 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
- 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     gimbal_business();
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     gimbal_business();
  765              		.loc 1 226 5
  766 04f4 FFF7FEFF 		bl	gimbal_business
- 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
  767              		.loc 1 227 1
  768 04f8 00BF     		nop
  769 04fa 0C37     		adds	r7, r7, #12
@@ -1034,9 +1034,9 @@
  794              		.fpu softvfp
  796              	BLDCUpdata:
  797              	.LFB158:
- 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void BLDCUpdata(void)
- 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void BLDCUpdata(void)
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
  798              		.loc 1 230 1
  799              		.cfi_startproc
  800              		@ args = 0, pretend = 0, frame = 8
@@ -1050,12 +1050,12 @@
  808              		.cfi_def_cfa_offset 24
  809 0004 00AF     		add	r7, sp, #0
  810              		.cfi_def_cfa_register 7
- 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     uint8_t i = 0;
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     uint8_t i = 0;
  811              		.loc 1 231 13
  812 0006 0023     		movs	r3, #0
  813 0008 FB71     		strb	r3, [r7, #7]
- 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.ArmAngle.Data.Latge = (BLDCYaw.BLDCRac) * (GimbalSystem.ArmDir.Data.Latge);
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.ArmAngle.Data.Latge = (BLDCYaw.BLDCRac) * (GimbalSystem.ArmDir.Data.Latge);
  814              		.loc 1 233 48
  815 000a 4A4B     		ldr	r3, .L68
  816 000c D3F88030 		ldr	r3, [r3, #128]	@ float
@@ -1072,7 +1072,7 @@
  827              		.loc 1 233 38
  828 0022 454B     		ldr	r3, .L68+4
  829 0024 C3F85821 		str	r2, [r3, #344]	@ float
- 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.ArmAngle.Data.Middle = (BLDCRoll.BLDCRac) * (GimbalSystem.ArmDir.Data.Middle);
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.ArmAngle.Data.Middle = (BLDCRoll.BLDCRac) * (GimbalSystem.ArmDir.Data.Middle);
  830              		.loc 1 234 50
  831 0028 444B     		ldr	r3, .L68+8
  832 002a D3F88030 		ldr	r3, [r3, #128]	@ float
@@ -1089,7 +1089,7 @@
  843              		.loc 1 234 39
  844 0040 3D4B     		ldr	r3, .L68+4
  845 0042 C3F85421 		str	r2, [r3, #340]	@ float
- 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.ArmAngle.Data.Small = (BLDCPitch.BLDCRac) * (GimbalSystem.ArmDir.Data.Small);
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.ArmAngle.Data.Small = (BLDCPitch.BLDCRac) * (GimbalSystem.ArmDir.Data.Small);
  846              		.loc 1 235 50
  847 0046 3E4B     		ldr	r3, .L68+12
  848 0048 D3F88030 		ldr	r3, [r3, #128]	@ float
@@ -1106,16 +1106,16 @@
  859              		.loc 1 235 38
  860 005e 364B     		ldr	r3, .L68+4
  861 0060 C3F85C21 		str	r2, [r3, #348]	@ float
- 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     for (i = 0; i < 3; i++)
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     for (i = 0; i < 3; i++)
  862              		.loc 1 237 12
  863 0064 0023     		movs	r3, #0
  864 0066 FB71     		strb	r3, [r7, #7]
  865              		.loc 1 237 5
  866 0068 5BE0     		b	.L59
  867              	.L64:
- 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.ArmAngle.Ele[i] -= GimbalSystem.ArmAngleOffset.Ele[i];
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         GimbalSystem.ArmAngle.Ele[i] -= GimbalSystem.ArmAngleOffset.Ele[i];
  868              		.loc 1 239 38
  869 006a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  870 006c 324A     		ldr	r2, .L68+4
@@ -1141,8 +1141,8 @@
  890 0094 9B00     		lsls	r3, r3, #2
  891 0096 1344     		add	r3, r3, r2
  892 0098 5960     		str	r1, [r3, #4]	@ float
- 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if ((GimbalSystem.ArmAngle.Ele[i]) < -2.0f * PI)
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         if ((GimbalSystem.ArmAngle.Ele[i]) < -2.0f * PI)
  893              		.loc 1 241 39
  894 009a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  895 009c 264A     		ldr	r2, .L68+4
@@ -1158,8 +1158,8 @@
  905 00ae 0346     		mov	r3, r0
  906 00b0 002B     		cmp	r3, #0
  907 00b2 13D0     		beq	.L67
- 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngle.Ele[i] += 2.0f * PI;
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngle.Ele[i] += 2.0f * PI;
  908              		.loc 1 243 42
  909 00b4 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  910 00b6 204A     		ldr	r2, .L68+4
@@ -1181,8 +1181,8 @@
  926 00d8 5960     		str	r1, [r3, #4]	@ float
  927 00da 1FE0     		b	.L62
  928              	.L67:
- 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         else if ((GimbalSystem.ArmAngle.Ele[i]) > 2.0f * PI)
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         else if ((GimbalSystem.ArmAngle.Ele[i]) > 2.0f * PI)
  929              		.loc 1 245 44
  930 00dc FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  931 00de 164A     		ldr	r2, .L68+4
@@ -1198,8 +1198,8 @@
  941 00f0 0346     		mov	r3, r0
  942 00f2 002B     		cmp	r3, #0
  943 00f4 12D0     		beq	.L62
- 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
- 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngle.Ele[i] -= 2.0f * PI;
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         {
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****             GimbalSystem.ArmAngle.Ele[i] -= 2.0f * PI;
  944              		.loc 1 247 42
  945 00f6 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  946 00f8 0F4A     		ldr	r2, .L68+4
@@ -1220,20 +1220,20 @@
  961 0118 1344     		add	r3, r3, r2
  962 011a 5960     		str	r1, [r3, #4]	@ float
  963              	.L62:
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
  964              		.loc 1 237 25 discriminator 2
  965 011c FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  966 011e 0133     		adds	r3, r3, #1
  967 0120 FB71     		strb	r3, [r7, #7]
  968              	.L59:
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
  969              		.loc 1 237 5 discriminator 1
  970 0122 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  971 0124 022B     		cmp	r3, #2
  972 0126 A0D9     		bls	.L64
- 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
- 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         }
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
  973              		.loc 1 250 1
  974 0128 00BF     		nop
  975 012a 00BF     		nop
@@ -1262,8 +1262,8 @@
  999              		.fpu softvfp
  1001              	IMUUpdata:
  1002              	.LFB159:
- 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void IMUUpdata(void)
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void IMUUpdata(void)
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
  1003              		.loc 1 252 1
  1004              		.cfi_startproc
  1005              		@ args = 0, pretend = 0, frame = 0
@@ -1274,7 +1274,7 @@
  1010              		.cfi_offset 7, -4
  1011 0002 00AF     		add	r7, sp, #0
  1012              		.cfi_def_cfa_register 7
- 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.X = -Icm206XXData.FGyroZ;
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.X = -Icm206XXData.FGyroZ;
  1013              		.loc 1 253 53
  1014 0004 134B     		ldr	r3, .L71
  1015 0006 9B6A     		ldr	r3, [r3, #40]	@ float
@@ -1283,7 +1283,7 @@
  1018              		.loc 1 253 38
  1019 000c 124A     		ldr	r2, .L71+4
  1020 000e C2F80C31 		str	r3, [r2, #268]	@ float
- 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.Y = -Icm206XXData.FGyroY;
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.Y = -Icm206XXData.FGyroY;
  1021              		.loc 1 254 53
  1022 0012 104B     		ldr	r3, .L71
  1023 0014 5B6A     		ldr	r3, [r3, #36]	@ float
@@ -1292,7 +1292,7 @@
  1026              		.loc 1 254 38
  1027 001a 0F4A     		ldr	r2, .L71+4
  1028 001c C2F81031 		str	r3, [r2, #272]	@ float
- 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.Z = -Icm206XXData.FGyroX;
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.Z = -Icm206XXData.FGyroX;
  1029              		.loc 1 255 53
  1030 0020 0C4B     		ldr	r3, .L71
  1031 0022 1B6A     		ldr	r3, [r3, #32]	@ float
@@ -1301,29 +1301,29 @@
  1034              		.loc 1 255 38
  1035 0028 0B4A     		ldr	r2, .L71+4
  1036 002a C2F81431 		str	r3, [r2, #276]	@ float
- 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.X = Icm206XXData.FAccZ;
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.X = Icm206XXData.FAccZ;
  1037              		.loc 1 257 51
  1038 002e 094B     		ldr	r3, .L71
  1039 0030 9B69     		ldr	r3, [r3, #24]	@ float
  1040              		.loc 1 257 37
  1041 0032 094A     		ldr	r2, .L71+4
  1042 0034 C2F8E830 		str	r3, [r2, #232]	@ float
- 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.Y = Icm206XXData.FAccY;
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.Y = Icm206XXData.FAccY;
  1043              		.loc 1 258 51
  1044 0038 064B     		ldr	r3, .L71
  1045 003a 5B69     		ldr	r3, [r3, #20]	@ float
  1046              		.loc 1 258 37
  1047 003c 064A     		ldr	r2, .L71+4
  1048 003e C2F8EC30 		str	r3, [r2, #236]	@ float
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.Z = Icm206XXData.FAccX;
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.Z = Icm206XXData.FAccX;
  1049              		.loc 1 259 51
  1050 0042 044B     		ldr	r3, .L71
  1051 0044 1B69     		ldr	r3, [r3, #16]	@ float
  1052              		.loc 1 259 37
  1053 0046 044A     		ldr	r2, .L71+4
  1054 0048 C2F8F030 		str	r3, [r2, #240]	@ float
- 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
  1055              		.loc 1 260 1
  1056 004c 00BF     		nop
  1057 004e BD46     		mov	sp, r7
@@ -1348,9 +1348,9 @@
  1077              		.fpu softvfp
  1079              	CheckBLDCStatus:
  1080              	.LFB160:
- 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static uint8_t CheckBLDCStatus(void)
- 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static uint8_t CheckBLDCStatus(void)
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
  1081              		.loc 1 263 1
  1082              		.cfi_startproc
  1083              		@ args = 0, pretend = 0, frame = 0
@@ -1361,7 +1361,7 @@
  1088              		.cfi_offset 7, -4
  1089 0002 00AF     		add	r7, sp, #0
  1090              		.cfi_def_cfa_register 7
- 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if ((BLDCYaw.StateCheck) && (BLDCRoll.StateCheck) && (BLDCPitch.StateCheck))
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if ((BLDCYaw.StateCheck) && (BLDCRoll.StateCheck) && (BLDCPitch.StateCheck))
  1091              		.loc 1 264 17
  1092 0004 094B     		ldr	r3, .L76
  1093 0006 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
@@ -1380,22 +1380,22 @@
  1106              		.loc 1 264 55 discriminator 2
  1107 0018 002B     		cmp	r3, #0
  1108 001a 01D0     		beq	.L74
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         return TRUE;
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         return TRUE;
  1109              		.loc 1 267 16
  1110 001c 0123     		movs	r3, #1
  1111 001e 00E0     		b	.L75
  1112              	.L74:
- 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else
- 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         return FALSE;
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         return FALSE;
  1113              		.loc 1 271 16
  1114 0020 0023     		movs	r3, #0
  1115              	.L75:
- 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
  1116              		.loc 1 273 1
  1117 0022 1846     		mov	r0, r3
  1118 0024 BD46     		mov	sp, r7
@@ -1421,8 +1421,8 @@
  1139              		.fpu softvfp
  1141              	BLDCTorqueUpdata:
  1142              	.LFB161:
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void BLDCTorqueUpdata(void)
- 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static void BLDCTorqueUpdata(void)
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
  1143              		.loc 1 275 1
  1144              		.cfi_startproc
  1145              		@ args = 0, pretend = 0, frame = 0
@@ -1433,8 +1433,8 @@
  1150              		.cfi_offset 14, -4
  1151 0002 00AF     		add	r7, sp, #0
  1152              		.cfi_def_cfa_register 7
- 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
  1153              		.loc 1 277 54
  1154 0004 234B     		ldr	r3, .L83
  1155 0006 D3F8E831 		ldr	r3, [r3, #488]	@ float
@@ -1451,7 +1451,7 @@
  1166              		.loc 1 277 21
  1167 001c 1E4B     		ldr	r3, .L83+4
  1168 001e DA67     		str	r2, [r3, #124]	@ float
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middle);
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middle);
  1169              		.loc 1 278 55
  1170 0020 1C4B     		ldr	r3, .L83
  1171 0022 D3F8E431 		ldr	r3, [r3, #484]	@ float
@@ -1468,7 +1468,7 @@
  1182              		.loc 1 278 22
  1183 0038 184B     		ldr	r3, .L83+8
  1184 003a DA67     		str	r2, [r3, #124]	@ float
- 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small);
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small);
  1185              		.loc 1 279 56
  1186 003c 154B     		ldr	r3, .L83
  1187 003e D3F8EC31 		ldr	r3, [r3, #492]	@ float
@@ -1485,64 +1485,64 @@
  1198              		.loc 1 279 23
  1199 0054 124B     		ldr	r3, .L83+12
  1200 0056 DA67     		str	r2, [r3, #124]	@ float
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (!BLDCYaw.StateCheck)
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (!BLDCYaw.StateCheck)
  1201              		.loc 1 282 17
  1202 0058 0F4B     		ldr	r3, .L83+4
  1203 005a 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
  1204              		.loc 1 282 8
  1205 005c 002B     		cmp	r3, #0
  1206 005e 03D1     		bne	.L79
- 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCYaw);
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCYaw);
  1207              		.loc 1 284 9
  1208 0060 0D48     		ldr	r0, .L83+4
  1209 0062 FFF7FEFF 		bl	BLDCCali
- 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else if (!BLDCRoll.StateCheck)
- 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCYaw);
- 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCRoll);
- 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else
- 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCYaw);
- 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCRoll);
- 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCPitch);
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else if (!BLDCRoll.StateCheck)
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCYaw);
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCRoll);
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCYaw);
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCRoll);
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCPitch);
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
  1210              		.loc 1 297 1
  1211 0066 13E0     		b	.L82
  1212              	.L79:
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
  1213              		.loc 1 286 23
  1214 0068 0C4B     		ldr	r3, .L83+8
  1215 006a 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
  1216              		.loc 1 286 13
  1217 006c 002B     		cmp	r3, #0
  1218 006e 06D1     		bne	.L81
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCRoll);
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCRoll);
  1219              		.loc 1 288 9
  1220 0070 0948     		ldr	r0, .L83+4
  1221 0072 FFF7FEFF 		bl	BLDCCali
- 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
  1222              		.loc 1 289 9
  1223 0076 0948     		ldr	r0, .L83+8
  1224 0078 FFF7FEFF 		bl	BLDCCali
  1225              		.loc 1 297 1
  1226 007c 08E0     		b	.L82
  1227              	.L81:
- 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCRoll);
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCRoll);
  1228              		.loc 1 293 9
  1229 007e 0648     		ldr	r0, .L83+4
  1230 0080 FFF7FEFF 		bl	BLDCCali
- 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCPitch);
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         BLDCCali(&BLDCPitch);
  1231              		.loc 1 294 9
  1232 0084 0548     		ldr	r0, .L83+8
  1233 0086 FFF7FEFF 		bl	BLDCCali
- 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
  1234              		.loc 1 295 9
  1235 008a 0548     		ldr	r0, .L83+12
  1236 008c FFF7FEFF 		bl	BLDCCali
@@ -1567,9 +1567,9 @@
  1256              		.fpu softvfp
  1258              	AngleRadsLimit:
  1259              	.LFB162:
- 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static float AngleRadsLimit(float AngleErr, float RadsRef, float MaxACC)
- 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static float AngleRadsLimit(float AngleErr, float RadsRef, float MaxACC)
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
  1260              		.loc 1 300 1
  1261              		.cfi_startproc
  1262              		@ args = 0, pretend = 0, frame = 24
@@ -1585,12 +1585,12 @@
  1272 0006 F860     		str	r0, [r7, #12]	@ float
  1273 0008 B960     		str	r1, [r7, #8]	@ float
  1274 000a 7A60     		str	r2, [r7, #4]	@ float
- 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     float MaxRads = 0.0f;
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     float MaxRads = 0.0f;
  1275              		.loc 1 301 11
  1276 000c 4FF00003 		mov	r3, #0
  1277 0010 7B61     		str	r3, [r7, #20]	@ float
- 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (AngleErr < 0.0f)
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (AngleErr < 0.0f)
  1278              		.loc 1 303 8
  1279 0012 4FF00001 		mov	r1, #0
  1280 0016 F868     		ldr	r0, [r7, #12]	@ float
@@ -1599,15 +1599,15 @@
  1283 001c 0346     		mov	r3, r0
  1284 001e 002B     		cmp	r3, #0
  1285 0020 03D0     		beq	.L86
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         AngleErr = -AngleErr;
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         AngleErr = -AngleErr;
  1286              		.loc 1 305 18
  1287 0022 FB68     		ldr	r3, [r7, #12]
  1288 0024 83F00043 		eor	r3, r3, #-2147483648
  1289 0028 FB60     		str	r3, [r7, #12]	@ float
  1290              	.L86:
- 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     MaxRads = sqrtf(2.0f * AngleErr * MaxACC);
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     MaxRads = sqrtf(2.0f * AngleErr * MaxACC);
  1291              		.loc 1 307 26
  1292 002a FB68     		ldr	r3, [r7, #12]	@ float
  1293 002c 1946     		mov	r1, r3
@@ -1624,8 +1624,8 @@
  1304 0040 1846     		mov	r0, r3
  1305 0042 FFF7FEFF 		bl	sqrtf
  1306 0046 7861     		str	r0, [r7, #20]	@ float
- 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (RadsRef > MaxRads)
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (RadsRef > MaxRads)
  1307              		.loc 1 309 8
  1308 0048 7969     		ldr	r1, [r7, #20]	@ float
  1309 004a B868     		ldr	r0, [r7, #8]	@ float
@@ -1634,15 +1634,15 @@
  1312 0050 0346     		mov	r3, r0
  1313 0052 002B     		cmp	r3, #0
  1314 0054 02D0     		beq	.L96
- 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         RadsRef = MaxRads;
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         RadsRef = MaxRads;
  1315              		.loc 1 311 17
  1316 0056 7B69     		ldr	r3, [r7, #20]	@ float
  1317 0058 BB60     		str	r3, [r7, #8]	@ float
  1318 005a 0DE0     		b	.L90
  1319              	.L96:
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else if (RadsRef < -MaxRads)
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else if (RadsRef < -MaxRads)
  1320              		.loc 1 313 24
  1321 005c 7B69     		ldr	r3, [r7, #20]
  1322 005e 83F00043 		eor	r3, r3, #-2147483648
@@ -1654,19 +1654,19 @@
  1328 006a 0346     		mov	r3, r0
  1329 006c 002B     		cmp	r3, #0
  1330 006e 03D0     		beq	.L90
- 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         RadsRef = -MaxRads;
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         RadsRef = -MaxRads;
  1331              		.loc 1 315 17
  1332 0070 7B69     		ldr	r3, [r7, #20]
  1333 0072 83F00043 		eor	r3, r3, #-2147483648
  1334 0076 BB60     		str	r3, [r7, #8]	@ float
  1335              	.L90:
- 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     return RadsRef;
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     return RadsRef;
  1336              		.loc 1 318 12
  1337 0078 BB68     		ldr	r3, [r7, #8]	@ float
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
  1338              		.loc 1 319 1
  1339 007a 1846     		mov	r0, r3
  1340 007c 1837     		adds	r7, r7, #24
@@ -1701,30 +1701,30 @@
  1370              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_gimbal_system.c
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:16     .text.GimbalInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:24     .text.GimbalInit:00000000 GimbalInit
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:16     .text.GimbalInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:24     .text.GimbalInit:00000000 GimbalInit
                             *COM*:00000024 local_ArmDCM_trans
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:52     .text.GimbalWork:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:59     .text.GimbalWork:00000000 GimbalWork
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:796    .text.BLDCUpdata:00000000 BLDCUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1001   .text.IMUUpdata:00000000 IMUUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:137    .text.GimbalWork:00000080 $d
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:141    .text.GimbalWork:00000090 $t
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1079   .text.CheckBLDCStatus:00000000 CheckBLDCStatus
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:468    .text.GimbalWork:000002c4 $d
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:486    .text.GimbalWork:00000304 $t
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1258   .text.AngleRadsLimit:00000000 AngleRadsLimit
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1141   .text.BLDCTorqueUpdata:00000000 BLDCTorqueUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:778    .text.GimbalWork:00000500 $d
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:790    .text.BLDCUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:985    .text.BLDCUpdata:00000134 $d
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:995    .text.IMUUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1067   .text.IMUUpdata:00000054 $d
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1073   .text.CheckBLDCStatus:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1128   .text.CheckBLDCStatus:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1135   .text.BLDCTorqueUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1244   .text.BLDCTorqueUpdata:00000094 $d
-C:\Users\leonardo\AppData\Local\Temp\ccQaSLwk.s:1252   .text.AngleRadsLimit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:52     .text.GimbalWork:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:59     .text.GimbalWork:00000000 GimbalWork
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:796    .text.BLDCUpdata:00000000 BLDCUpdata
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1001   .text.IMUUpdata:00000000 IMUUpdata
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:137    .text.GimbalWork:00000080 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:141    .text.GimbalWork:00000090 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1079   .text.CheckBLDCStatus:00000000 CheckBLDCStatus
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:468    .text.GimbalWork:000002c4 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:486    .text.GimbalWork:00000304 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1258   .text.AngleRadsLimit:00000000 AngleRadsLimit
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1141   .text.BLDCTorqueUpdata:00000000 BLDCTorqueUpdata
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:778    .text.GimbalWork:00000500 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:790    .text.BLDCUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:985    .text.BLDCUpdata:00000134 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:995    .text.IMUUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1067   .text.IMUUpdata:00000054 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1073   .text.CheckBLDCStatus:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1128   .text.CheckBLDCStatus:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1135   .text.BLDCTorqueUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1244   .text.BLDCTorqueUpdata:00000094 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSLAIMY.s:1252   .text.AngleRadsLimit:00000000 $t
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

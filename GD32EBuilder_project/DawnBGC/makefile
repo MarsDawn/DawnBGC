@@ -65,10 +65,10 @@ all: main-build
 main-build: DawnBGC.elf secondary-outputs
 
 # 工具调用
-DawnBGC.elf: $(OBJS) $(USER_OBJS) C:\Users\leonardo\Desktop\Code\Github\DawnGBC\GD32EBuilder_project\ldscripts\gd32f4xx_flash.ld makefile $(OPTIONAL_TOOL_DEPS)
+DawnBGC.elf: $(OBJS) $(USER_OBJS) C:\Users\leonardo\Desktop\Code\Github\DawnBGC\GD32EBuilder_project\ldscripts\gd32f4xx_flash.ld makefile $(OPTIONAL_TOOL_DEPS)
 	@echo '正在构建目标： $@'
 	@echo '正在调用： GD ARM MCU Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3  -T gd32f4xx_flash.ld -Xlinker --gc-sections -L"../ldscripts" -L"C:/Users/leonardo/Desktop/Code/Github/DawnGBC/GD32EBuilder_project\dawn_lib" -Wl,-Map,"DawnBGC.map" --specs=nano.specs --specs=nosys.specs -o "DawnBGC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lDawnBGC
+	arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3  -T gd32f4xx_flash.ld -Xlinker --gc-sections -L"../ldscripts" -L"C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib" -Wl,-Map,"DawnBGC.map" --specs=nano.specs --specs=nosys.specs -o "DawnBGC.elf" @"objects.list" $(USER_OBJS) $(LIBS) -lDawnBGC
 	@echo '已结束构建目标： $@'
 	@echo ' '
 

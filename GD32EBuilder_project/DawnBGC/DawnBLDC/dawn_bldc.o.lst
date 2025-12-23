@@ -22,34 +22,34 @@
   22              		.fpu softvfp
   24              	BLDCInit:
   25              	.LFB156:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC/dawn_bldc.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** /*
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * Copyright (c) 2025 MarsDawn
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * Project repository:
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *     https://github.com/MarsDawn
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * This file is part of the DawnBGC project.
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * Redistribution and use in source or binary forms, with or without
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * modification, are permitted under the MIT License, provided that
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * this copyright notice and this permission notice are retained.
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * Licensed under the MIT License.
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * You may obtain a copy of the License at:
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *     https://opensource.org/licenses/MIT
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  *
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****  */
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** #include "includes.h"
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void BLDCInit(void)
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC/dawn_bldc.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void BLDCInit(void)
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
   27              		.loc 1 27 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
@@ -60,23 +60,23 @@
   34              		.cfi_offset 14, -4
   35 0002 00AF     		add	r7, sp, #0
   36              		.cfi_def_cfa_register 7
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCGpioInit();
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCGpioInit();
   37              		.loc 1 28 5
   38 0004 FFF7FEFF 		bl	BLDCGpioInit
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     TurnOnPWM(&BLDCYaw);
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     TurnOnPWM(&BLDCYaw);
   39              		.loc 1 30 5
   40 0008 0548     		ldr	r0, .L2
   41 000a FFF7FEFF 		bl	TurnOnPWM
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     TurnOnPWM(&BLDCRoll);
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     TurnOnPWM(&BLDCRoll);
   42              		.loc 1 31 5
   43 000e 0548     		ldr	r0, .L2+4
   44 0010 FFF7FEFF 		bl	TurnOnPWM
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     TurnOnPWM(&BLDCPitch);
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     TurnOnPWM(&BLDCPitch);
   45              		.loc 1 32 5
   46 0014 0448     		ldr	r0, .L2+8
   47 0016 FFF7FEFF 		bl	TurnOnPWM
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
   48              		.loc 1 33 1
   49 001a 00BF     		nop
   50 001c 80BD     		pop	{r7, pc}
@@ -98,10 +98,10 @@
   67              		.fpu softvfp
   69              	BLDCStallState:
   70              	.LFB157:
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** uint8_t BLDCStallState(BLDCStruct *BLDCStruct)
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** uint8_t BLDCStallState(BLDCStruct *BLDCStruct)
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
   71              		.loc 1 37 1
   72              		.cfi_startproc
   73              		@ args = 0, pretend = 0, frame = 8
@@ -115,7 +115,7 @@
   81 0004 00AF     		add	r7, sp, #0
   82              		.cfi_def_cfa_register 7
   83 0006 7860     		str	r0, [r7, #4]
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     if ((fabs(BLDCStruct->Speed) < (BLDCStruct->StallSpeed)) && (BLDCStruct->HomingMaxFlag) || (fab
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     if ((fabs(BLDCStruct->Speed) < (BLDCStruct->StallSpeed)) && (BLDCStruct->HomingMaxFlag) || (fab
   84              		.loc 1 38 25
   85 0008 7B68     		ldr	r3, [r7, #4]
   86 000a D3F88C30 		ldr	r3, [r3, #140]	@ float
@@ -162,9 +162,9 @@
  127 0050 002B     		cmp	r3, #0
  128 0052 15D0     		beq	.L8
  129              	.L7:
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         if ((BLDCStruct->StallTime) < (BLDCStruct->StallWaitTime))
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         if ((BLDCStruct->StallTime) < (BLDCStruct->StallWaitTime))
  130              		.loc 1 41 24
  131 0054 7B68     		ldr	r3, [r7, #4]
  132 0056 9B6C     		ldr	r3, [r3, #72]
@@ -175,8 +175,8 @@
  137              		.loc 1 41 12
  138 005e 9A42     		cmp	r2, r3
  139 0060 09D2     		bcs	.L10
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->StallTime++;
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->StallTime++;
  140              		.loc 1 43 23
  141 0062 7B68     		ldr	r3, [r7, #4]
  142 0064 9B6C     		ldr	r3, [r3, #72]
@@ -184,33 +184,33 @@
  144 0066 5A1C     		adds	r2, r3, #1
  145 0068 7B68     		ldr	r3, [r7, #4]
  146 006a 9A64     		str	r2, [r3, #72]
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->StallFlag = FALSE;
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->StallFlag = FALSE;
  147              		.loc 1 44 35
  148 006c 7B68     		ldr	r3, [r7, #4]
  149 006e 0022     		movs	r2, #0
  150 0070 83F85420 		strb	r2, [r3, #84]
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
  151              		.loc 1 41 12
  152 0074 14E0     		b	.L12
  153              	.L10:
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         }
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         else
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->StallFlag = TRUE;
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         }
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         else
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->StallFlag = TRUE;
  154              		.loc 1 48 35
  155 0076 7B68     		ldr	r3, [r7, #4]
  156 0078 0122     		movs	r2, #1
  157 007a 83F85420 		strb	r2, [r3, #84]
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
  158              		.loc 1 41 12
  159 007e 0FE0     		b	.L12
  160              	.L8:
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         }
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     else
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->StallTime--;
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         }
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     else
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->StallTime--;
  161              		.loc 1 54 19
  162 0080 7B68     		ldr	r3, [r7, #4]
  163 0082 9B6C     		ldr	r3, [r3, #72]
@@ -218,35 +218,35 @@
  165 0084 5A1E     		subs	r2, r3, #1
  166 0086 7B68     		ldr	r3, [r7, #4]
  167 0088 9A64     		str	r2, [r3, #72]
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         if ((BLDCStruct->StallTime) < 0)
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         if ((BLDCStruct->StallTime) < 0)
  168              		.loc 1 55 24
  169 008a 7B68     		ldr	r3, [r7, #4]
  170 008c 9B6C     		ldr	r3, [r3, #72]
  171              		.loc 1 55 12
  172 008e 002B     		cmp	r3, #0
  173 0090 02DA     		bge	.L13
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->StallTime = 0;
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->StallTime = 0;
  174              		.loc 1 57 35
  175 0092 7B68     		ldr	r3, [r7, #4]
  176 0094 0022     		movs	r2, #0
  177 0096 9A64     		str	r2, [r3, #72]
  178              	.L13:
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         }
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->StallFlag = FALSE;
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         }
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->StallFlag = FALSE;
  179              		.loc 1 60 31
  180 0098 7B68     		ldr	r3, [r7, #4]
  181 009a 0022     		movs	r2, #0
  182 009c 83F85420 		strb	r2, [r3, #84]
  183              	.L12:
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     return BLDCStruct->StallFlag;
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     return BLDCStruct->StallFlag;
  184              		.loc 1 63 22
  185 00a0 7B68     		ldr	r3, [r7, #4]
  186 00a2 93F85430 		ldrb	r3, [r3, #84]	@ zero_extendqisi2
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  187              		.loc 1 64 1
  188 00a6 1846     		mov	r0, r3
  189 00a8 0837     		adds	r7, r7, #8
@@ -269,9 +269,9 @@
  207              		.fpu softvfp
  209              	ArmQuadCcw:
  210              	.LFB158:
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void ArmQuadCcw(BLDCStruct *BLDCStruct)
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void ArmQuadCcw(BLDCStruct *BLDCStruct)
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  211              		.loc 1 67 1
  212              		.cfi_startproc
  213              		@ args = 0, pretend = 0, frame = 8
@@ -286,12 +286,12 @@
  222 0004 00AF     		add	r7, sp, #0
  223              		.cfi_def_cfa_register 7
  224 0006 7860     		str	r0, [r7, #4]
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->QuadDirectStruct.Direct= 0.0f;
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->QuadDirectStruct.Direct= 0.0f;
  225              		.loc 1 68 40
  226 0008 7B68     		ldr	r3, [r7, #4]
  227 000a 4FF00002 		mov	r2, #0
  228 000e 5A63     		str	r2, [r3, #52]	@ float
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     if ((BLDCStruct->QuadDirectStruct.Quad) > (BLDCStruct->HomingCCwQuad))
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     if ((BLDCStruct->QuadDirectStruct.Quad) > (BLDCStruct->HomingCCwQuad))
  229              		.loc 1 69 38
  230 0010 7B68     		ldr	r3, [r7, #4]
  231 0012 9A6B     		ldr	r2, [r3, #56]	@ float
@@ -306,8 +306,8 @@
  240 0020 0346     		mov	r3, r0
  241 0022 002B     		cmp	r3, #0
  242 0024 2CD0     		beq	.L25
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         if ((BLDCStruct->QuadDirectStruct.Quad) > (BLDCStruct->HomingCCwQuad) * (BLDCStruct->BangHo
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         if ((BLDCStruct->QuadDirectStruct.Quad) > (BLDCStruct->HomingCCwQuad) * (BLDCStruct->BangHo
  243              		.loc 1 71 42
  244 0026 7B68     		ldr	r3, [r7, #4]
  245 0028 9C6B     		ldr	r4, [r3, #56]	@ float
@@ -331,9 +331,9 @@
  263 0044 0346     		mov	r3, r0
  264 0046 002B     		cmp	r3, #0
  265 0048 0BD0     		beq	.L20
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->QuadDirectStruct.Quad = (BLDCStruct->HomingCCwQuad) * (BLDCStruct->BangHomi
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->QuadDirectStruct.Quad = (BLDCStruct->HomingCCwQuad) * (BLDCStruct->BangHomi
  266              		.loc 1 74 60
  267 004a 7B68     		ldr	r3, [r7, #4]
  268 004c 5A6C     		ldr	r2, [r3, #68]	@ float
@@ -351,13 +351,13 @@
  280 005e 7B68     		ldr	r3, [r7, #4]
  281 0060 9A63     		str	r2, [r3, #56]	@ float
  282              	.L20:
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         }
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->HomingMaxFlag = FALSE;
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         }
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->HomingMaxFlag = FALSE;
  283              		.loc 1 76 35
  284 0062 7B68     		ldr	r3, [r7, #4]
  285 0064 0022     		movs	r2, #0
  286 0066 83F83D20 		strb	r2, [r3, #61]
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad -= 3;
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad -= 3;
  287              		.loc 1 77 43
  288 006a 7B68     		ldr	r3, [r7, #4]
  289 006c 9B6B     		ldr	r3, [r3, #56]	@ float
@@ -369,27 +369,27 @@
  295 0078 1A46     		mov	r2, r3
  296 007a 7B68     		ldr	r3, [r7, #4]
  297 007c 9A63     		str	r2, [r3, #56]	@ float
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         ;
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     else
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->HomingMaxFlag = TRUE;
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->HomingCCwQuad;
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         ;
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     else
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->HomingMaxFlag = TRUE;
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->HomingCCwQuad;
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  298              		.loc 1 85 1
  299 007e 07E0     		b	.L26
  300              	.L25:
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->HomingCCwQuad;
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->HomingCCwQuad;
  301              		.loc 1 82 35
  302 0080 7B68     		ldr	r3, [r7, #4]
  303 0082 0122     		movs	r2, #1
  304 0084 83F83D20 		strb	r2, [r3, #61]
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
  305              		.loc 1 83 55
  306 0088 7B68     		ldr	r3, [r7, #4]
  307 008a 5A6C     		ldr	r2, [r3, #68]	@ float
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
  308              		.loc 1 83 43
  309 008c 7B68     		ldr	r3, [r7, #4]
  310 008e 9A63     		str	r2, [r3, #56]	@ float
@@ -418,9 +418,9 @@
  334              		.fpu softvfp
  336              	ArmQuadCw:
  337              	.LFB159:
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void ArmQuadCw(BLDCStruct *BLDCStruct)
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void ArmQuadCw(BLDCStruct *BLDCStruct)
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  338              		.loc 1 88 1
  339              		.cfi_startproc
  340              		@ args = 0, pretend = 0, frame = 8
@@ -435,12 +435,12 @@
  349 0004 00AF     		add	r7, sp, #0
  350              		.cfi_def_cfa_register 7
  351 0006 7860     		str	r0, [r7, #4]
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->QuadDirectStruct.Direct= 0.0f;
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->QuadDirectStruct.Direct= 0.0f;
  352              		.loc 1 89 40
  353 0008 7B68     		ldr	r3, [r7, #4]
  354 000a 4FF00002 		mov	r2, #0
  355 000e 5A63     		str	r2, [r3, #52]	@ float
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     if ((BLDCStruct->QuadDirectStruct.Quad) < (BLDCStruct->HomingCwQuad))
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     if ((BLDCStruct->QuadDirectStruct.Quad) < (BLDCStruct->HomingCwQuad))
  356              		.loc 1 90 38
  357 0010 7B68     		ldr	r3, [r7, #4]
  358 0012 9A6B     		ldr	r2, [r3, #56]	@ float
@@ -455,8 +455,8 @@
  367 0020 0346     		mov	r3, r0
  368 0022 002B     		cmp	r3, #0
  369 0024 2CD0     		beq	.L37
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         if ((BLDCStruct->QuadDirectStruct.Quad) < (BLDCStruct->HomingCwQuad) * (BLDCStruct->BangHom
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         if ((BLDCStruct->QuadDirectStruct.Quad) < (BLDCStruct->HomingCwQuad) * (BLDCStruct->BangHom
  370              		.loc 1 92 42
  371 0026 7B68     		ldr	r3, [r7, #4]
  372 0028 9C6B     		ldr	r4, [r3, #56]	@ float
@@ -480,9 +480,9 @@
  390 0044 0346     		mov	r3, r0
  391 0046 002B     		cmp	r3, #0
  392 0048 0BD0     		beq	.L32
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->QuadDirectStruct.Quad = (BLDCStruct->HomingCwQuad) * (BLDCStruct->BangHomin
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->QuadDirectStruct.Quad = (BLDCStruct->HomingCwQuad) * (BLDCStruct->BangHomin
  393              		.loc 1 95 60
  394 004a 7B68     		ldr	r3, [r7, #4]
  395 004c 1A6C     		ldr	r2, [r3, #64]	@ float
@@ -500,14 +500,14 @@
  407 005e 7B68     		ldr	r3, [r7, #4]
  408 0060 9A63     		str	r2, [r3, #56]	@ float
  409              	.L32:
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         }
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->HomingMaxFlag = FALSE;
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         }
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->HomingMaxFlag = FALSE;
  410              		.loc 1 97 35
  411 0062 7B68     		ldr	r3, [r7, #4]
  412 0064 0022     		movs	r2, #0
  413 0066 83F83D20 		strb	r2, [r3, #61]
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad += 3;
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad += 3;
  414              		.loc 1 99 43
  415 006a 7B68     		ldr	r3, [r7, #4]
  416 006c 9B6B     		ldr	r3, [r3, #56]	@ float
@@ -519,27 +519,27 @@
  422 0078 1A46     		mov	r2, r3
  423 007a 7B68     		ldr	r3, [r7, #4]
  424 007c 9A63     		str	r2, [r3, #56]	@ float
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         ;
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     else
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->HomingMaxFlag = TRUE;
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->HomingCwQuad;
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         ;
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     else
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->HomingMaxFlag = TRUE;
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->HomingCwQuad;
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  425              		.loc 1 107 1
  426 007e 07E0     		b	.L38
  427              	.L37:
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->HomingCwQuad;
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->HomingCwQuad;
  428              		.loc 1 104 35
  429 0080 7B68     		ldr	r3, [r7, #4]
  430 0082 0122     		movs	r2, #1
  431 0084 83F83D20 		strb	r2, [r3, #61]
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
  432              		.loc 1 105 55
  433 0088 7B68     		ldr	r3, [r7, #4]
  434 008a 1A6C     		ldr	r2, [r3, #64]	@ float
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
  435              		.loc 1 105 43
  436 008c 7B68     		ldr	r3, [r7, #4]
  437 008e 9A63     		str	r2, [r3, #56]	@ float
@@ -569,8 +569,8 @@
  462              		.fpu softvfp
  464              	CleanBLDCAngle:
  465              	.LFB160:
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void CleanBLDCAngle(BLDCStruct *BLDCStruct)
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void CleanBLDCAngle(BLDCStruct *BLDCStruct)
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  466              		.loc 1 109 1
  467              		.cfi_startproc
  468              		@ args = 0, pretend = 0, frame = 8
@@ -585,7 +585,7 @@
  477 0004 00AF     		add	r7, sp, #0
  478              		.cfi_def_cfa_register 7
  479 0006 7860     		str	r0, [r7, #4]
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->CalcAnglesRadRes = fmodf((BLDCStruct->CalcAnglesRadRes), 2.0f * PI);
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->CalcAnglesRadRes = fmodf((BLDCStruct->CalcAnglesRadRes), 2.0f * PI);
  480              		.loc 1 110 36
  481 0008 7B68     		ldr	r3, [r7, #4]
  482 000a D3F8A430 		ldr	r3, [r3, #164]	@ float
@@ -596,7 +596,7 @@
  487              		.loc 1 110 34
  488 0018 7B68     		ldr	r3, [r7, #4]
  489 001a C3F8A420 		str	r2, [r3, #164]	@ float
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     if ((BLDCStruct->CalcAnglesRadRes) < 0.0f)
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     if ((BLDCStruct->CalcAnglesRadRes) < 0.0f)
  490              		.loc 1 111 20
  491 001e 7B68     		ldr	r3, [r7, #4]
  492 0020 D3F8A430 		ldr	r3, [r3, #164]	@ float
@@ -608,8 +608,8 @@
  498 002e 0346     		mov	r3, r0
  499 0030 002B     		cmp	r3, #0
  500 0032 0BD0     		beq	.L42
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->CalcAnglesRadRes += 2.0f * PI;
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->CalcAnglesRadRes += 2.0f * PI;
  501              		.loc 1 113 38
  502 0034 7B68     		ldr	r3, [r7, #4]
  503 0036 D3F8A430 		ldr	r3, [r3, #164]	@ float
@@ -622,8 +622,8 @@
  510 0046 7B68     		ldr	r3, [r7, #4]
  511 0048 C3F8A420 		str	r2, [r3, #164]	@ float
  512              	.L42:
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->HomingCcwRad = (BLDCStruct->CalcAnglesRadRes) / (BLDCStruct->PoleDouble);
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->HomingCcwRad = (BLDCStruct->CalcAnglesRadRes) / (BLDCStruct->PoleDouble);
  513              		.loc 1 115 43
  514 004c 7B68     		ldr	r3, [r7, #4]
  515 004e D3F8A440 		ldr	r4, [r3, #164]	@ float
@@ -644,8 +644,8 @@
  530              		.loc 1 115 30
  531 006a 7B68     		ldr	r3, [r7, #4]
  532 006c 5A67     		str	r2, [r3, #116]	@ float
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->ArmCCwERad = fmodf((BLDCStruct->CalcAnglesRadRes), 2.0f * PI);
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->ArmCCwERad = fmodf((BLDCStruct->CalcAnglesRadRes), 2.0f * PI);
  533              		.loc 1 117 30
  534 006e 7B68     		ldr	r3, [r7, #4]
  535 0070 D3F8A430 		ldr	r3, [r3, #164]	@ float
@@ -656,13 +656,13 @@
  540              		.loc 1 117 28
  541 007e 7B68     		ldr	r3, [r7, #4]
  542 0080 DA66     		str	r2, [r3, #108]	@ float
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BangCCwFlag = TRUE;
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BangCCwFlag = TRUE;
  543              		.loc 1 119 29
  544 0082 7B68     		ldr	r3, [r7, #4]
  545 0084 0122     		movs	r2, #1
  546 0086 83F85620 		strb	r2, [r3, #86]
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->QuadDirectStruct.Quad = (BLDCStruct->HomingCwQuad) * 0.5f;
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->QuadDirectStruct.Quad = (BLDCStruct->HomingCwQuad) * 0.5f;
  547              		.loc 1 120 52
  548 008a 7B68     		ldr	r3, [r7, #4]
  549 008c 1B6C     		ldr	r3, [r3, #64]	@ float
@@ -676,7 +676,7 @@
  557              		.loc 1 120 39
  558 009c 7B68     		ldr	r3, [r7, #4]
  559 009e 9A63     		str	r2, [r3, #56]	@ float
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  560              		.loc 1 121 1
  561 00a0 00BF     		nop
  562 00a2 0C37     		adds	r7, r7, #12
@@ -705,8 +705,8 @@
  586              		.fpu softvfp
  588              	BLDCAngleCal:
  589              	.LFB161:
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void BLDCAngleCal(BLDCStruct *BLDCStruct)
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void BLDCAngleCal(BLDCStruct *BLDCStruct)
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  590              		.loc 1 123 1
  591              		.cfi_startproc
  592              		@ args = 0, pretend = 0, frame = 8
@@ -724,8 +724,8 @@
  604 0006 00AF     		add	r7, sp, #0
  605              		.cfi_def_cfa_register 7
  606 0008 7860     		str	r0, [r7, #4]
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->HomingCwRad = (BLDCStruct->CalcAnglesRadRes) / (BLDCStruct->PoleDouble);
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->HomingCwRad = (BLDCStruct->CalcAnglesRadRes) / (BLDCStruct->PoleDouble);
  607              		.loc 1 125 42
  608 000a 7B68     		ldr	r3, [r7, #4]
  609 000c D3F8A440 		ldr	r4, [r3, #164]	@ float
@@ -746,8 +746,8 @@
  624              		.loc 1 125 29
  625 0028 7B68     		ldr	r3, [r7, #4]
  626 002a 1A67     		str	r2, [r3, #112]	@ float
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->ArmCwERad = fmodf((BLDCStruct->CalcAnglesRadRes), 2.0f * PI);
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->ArmCwERad = fmodf((BLDCStruct->CalcAnglesRadRes), 2.0f * PI);
  627              		.loc 1 127 29
  628 002c 7B68     		ldr	r3, [r7, #4]
  629 002e D3F8A430 		ldr	r3, [r3, #164]	@ float
@@ -758,9 +758,9 @@
  634              		.loc 1 127 27
  635 003c 7B68     		ldr	r3, [r7, #4]
  636 003e 9A66     		str	r2, [r3, #104]	@ float
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BLDCRacOffsetCoe = (BLDCStruct->HomingCcwRad) + ((BLDCStruct->HomingCwRad) - (BLDCS
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BLDCRacOffsetCoe = (BLDCStruct->HomingCcwRad) + ((BLDCStruct->HomingCwRad) - (BLDCS
  637              		.loc 1 130 47
  638 0040 7B68     		ldr	r3, [r7, #4]
  639 0042 5B6F     		ldr	r3, [r3, #116]	@ float
@@ -844,35 +844,35 @@
  717              		.loc 1 130 34
  718 00ca 7B68     		ldr	r3, [r7, #4]
  719 00cc C3F88820 		str	r2, [r3, #136]	@ float
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BLDCRacOffset = BLDCStruct->BLDCRacOffsetCoe;
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BLDCRacOffset = BLDCStruct->BLDCRacOffsetCoe;
  720              		.loc 1 131 43
  721 00d0 7B68     		ldr	r3, [r7, #4]
  722 00d2 D3F88820 		ldr	r2, [r3, #136]	@ float
  723              		.loc 1 131 31
  724 00d6 7B68     		ldr	r3, [r7, #4]
  725 00d8 C3F88420 		str	r2, [r3, #132]	@ float
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->QuadDirectStruct.Quad = 0.0f;
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->QuadDirectStruct.Quad = 0.0f;
  726              		.loc 1 132 39
  727 00dc 7B68     		ldr	r3, [r7, #4]
  728 00de 4FF00002 		mov	r2, #0
  729 00e2 9A63     		str	r2, [r3, #56]	@ float
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->StateCheck = 1;
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->StateCheck = 1;
  730              		.loc 1 133 28
  731 00e4 7B68     		ldr	r3, [r7, #4]
  732 00e6 0122     		movs	r2, #1
  733 00e8 1A76     		strb	r2, [r3, #24]
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BangCCwFlag = FALSE;
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BangCCwFlag = FALSE;
  734              		.loc 1 135 29
  735 00ea 7B68     		ldr	r3, [r7, #4]
  736 00ec 0022     		movs	r2, #0
  737 00ee 83F85620 		strb	r2, [r3, #86]
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BangCwFlag = FALSE;
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->BangCwFlag = FALSE;
  738              		.loc 1 136 28
  739 00f2 7B68     		ldr	r3, [r7, #4]
  740 00f4 0022     		movs	r2, #0
  741 00f6 83F85520 		strb	r2, [r3, #85]
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  742              		.loc 1 137 1
  743 00fa 00BF     		nop
  744 00fc 0837     		adds	r7, r7, #8
@@ -896,9 +896,9 @@
  763              		.fpu softvfp
  765              	BLDCCali:
  766              	.LFB162:
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void BLDCCali(BLDCStruct *BLDCStruct)
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void BLDCCali(BLDCStruct *BLDCStruct)
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  767              		.loc 1 140 1
  768              		.cfi_startproc
  769              		@ args = 0, pretend = 0, frame = 16
@@ -913,12 +913,12 @@
  778 0004 00AF     		add	r7, sp, #0
  779              		.cfi_def_cfa_register 7
  780 0006 F860     		str	r0, [r7, #12]
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     static uint8_t StannTimes = 0;
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     HallDataRead(BLDCStruct);
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     static uint8_t StannTimes = 0;
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     HallDataRead(BLDCStruct);
  781              		.loc 1 142 5
  782 0008 F868     		ldr	r0, [r7, #12]
  783 000a FFF7FEFF 		bl	HallDataRead
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->ParkStruct = BLDCClarke(BLDCStruct->HallStruct);
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->ParkStruct = BLDCClarke(BLDCStruct->HallStruct);
  784              		.loc 1 143 30
  785 000e FC68     		ldr	r4, [r7, #12]
  786 0010 3846     		mov	r0, r7
@@ -930,37 +930,37 @@
  792 0022 3A46     		mov	r2, r7
  793 0024 92E80300 		ldm	r2, {r0, r1}
  794 0028 83E80300 		stm	r3, {r0, r1}
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCEAngle(BLDCStruct);
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCEAngle(BLDCStruct);
  795              		.loc 1 144 5
  796 002c F868     		ldr	r0, [r7, #12]
  797 002e FFF7FEFF 		bl	BLDCEAngle
- 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     if (!BLDCStruct->StateCheck)
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     if (!BLDCStruct->StateCheck)
  798              		.loc 1 146 20
  799 0032 FB68     		ldr	r3, [r7, #12]
  800 0034 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
  801              		.loc 1 146 8
  802 0036 002B     		cmp	r3, #0
  803 0038 4CD1     		bne	.L51
- 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         if (BLDCStruct->BangCCwFlag == FALSE)
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         if (BLDCStruct->BangCCwFlag == FALSE)
  804              		.loc 1 151 23
  805 003a FB68     		ldr	r3, [r7, #12]
  806 003c 93F85630 		ldrb	r3, [r3, #86]	@ zero_extendqisi2
  807              		.loc 1 151 12
  808 0040 002B     		cmp	r3, #0
  809 0042 22D1     		bne	.L52
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
- 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             ArmQuadCcw(BLDCStruct);
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             ArmQuadCcw(BLDCStruct);
  810              		.loc 1 154 13
  811 0044 F868     		ldr	r0, [r7, #12]
  812 0046 FFF7FEFF 		bl	ArmQuadCcw
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             if (BLDCStallState(BLDCStruct))
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             if (BLDCStallState(BLDCStruct))
  813              		.loc 1 156 17
  814 004a F868     		ldr	r0, [r7, #12]
  815 004c FFF7FEFF 		bl	BLDCStallState
@@ -968,17 +968,17 @@
  817              		.loc 1 156 16
  818 0052 002B     		cmp	r3, #0
  819 0054 2CD0     		beq	.L53
- 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             {
- 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 
- 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 BLDCStruct->StallTime = 0;
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             {
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 BLDCStruct->StallTime = 0;
  820              		.loc 1 159 39
  821 0056 FB68     		ldr	r3, [r7, #12]
  822 0058 0022     		movs	r2, #0
  823 005a 9A64     		str	r2, [r3, #72]
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 StannTimes++;
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 StannTimes++;
  824              		.loc 1 163 27
  825 005c 2F4B     		ldr	r3, .L56
  826 005e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -986,46 +986,46 @@
  828 0062 DAB2     		uxtb	r2, r3
  829 0064 2D4B     		ldr	r3, .L56
  830 0066 1A70     		strb	r2, [r3]
- 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 if (StannTimes > 6)
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 if (StannTimes > 6)
  831              		.loc 1 164 32
  832 0068 2C4B     		ldr	r3, .L56
  833 006a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  834              		.loc 1 164 20
  835 006c 062B     		cmp	r3, #6
  836 006e 08D9     		bls	.L54
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 {
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                     ShutOffPWM(&BLDCYaw);
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 {
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                     ShutOffPWM(&BLDCYaw);
  837              		.loc 1 166 21
  838 0070 2B48     		ldr	r0, .L56+4
  839 0072 FFF7FEFF 		bl	ShutOffPWM
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                     ShutOffPWM(&BLDCRoll);
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                     ShutOffPWM(&BLDCRoll);
  840              		.loc 1 167 21
  841 0076 2B48     		ldr	r0, .L56+8
  842 0078 FFF7FEFF 		bl	ShutOffPWM
- 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                     ShutOffPWM(&BLDCPitch);
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                     ShutOffPWM(&BLDCPitch);
  843              		.loc 1 168 21
  844 007c 2A48     		ldr	r0, .L56+12
  845 007e FFF7FEFF 		bl	ShutOffPWM
  846              	.L54:
- 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 }
- 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 
- 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 CleanBLDCAngle(BLDCStruct);
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 }
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 CleanBLDCAngle(BLDCStruct);
  847              		.loc 1 172 17
  848 0082 F868     		ldr	r0, [r7, #12]
  849 0084 FFF7FEFF 		bl	CleanBLDCAngle
  850 0088 12E0     		b	.L53
  851              	.L52:
- 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             }
- 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         }
- 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         else
- 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         {
- 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
- 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             ArmQuadCw(BLDCStruct);
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             }
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         }
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         else
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         {
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             ArmQuadCw(BLDCStruct);
  852              		.loc 1 178 13
  853 008a F868     		ldr	r0, [r7, #12]
  854 008c FFF7FEFF 		bl	ArmQuadCw
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             if (BLDCStallState(BLDCStruct))
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             if (BLDCStallState(BLDCStruct))
  855              		.loc 1 179 17
  856 0090 F868     		ldr	r0, [r7, #12]
  857 0092 FFF7FEFF 		bl	BLDCStallState
@@ -1033,27 +1033,27 @@
  859              		.loc 1 179 16
  860 0098 002B     		cmp	r3, #0
  861 009a 09D0     		beq	.L53
- 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             {
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 
- 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 BLDCStruct->StallTime = 0;
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             {
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 BLDCStruct->StallTime = 0;
  862              		.loc 1 182 39
  863 009c FB68     		ldr	r3, [r7, #12]
  864 009e 0022     		movs	r2, #0
  865 00a0 9A64     		str	r2, [r3, #72]
- 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 BLDCStruct->BangCwFlag = TRUE;
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 BLDCStruct->BangCwFlag = TRUE;
  866              		.loc 1 184 40
  867 00a2 FB68     		ldr	r3, [r7, #12]
  868 00a4 0122     		movs	r2, #1
  869 00a6 83F85520 		strb	r2, [r3, #85]
- 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 BLDCAngleCal(BLDCStruct);
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 BLDCAngleCal(BLDCStruct);
  870              		.loc 1 185 17
  871 00aa F868     		ldr	r0, [r7, #12]
  872 00ac FFF7FEFF 		bl	BLDCAngleCal
  873              	.L53:
- 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             }
- 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         }
- 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->VoltStrict = BLDCRevPark(BLDCStruct->QuadDirectStruct, BLDCStruct->ERad);
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             }
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         }
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->VoltStrict = BLDCRevPark(BLDCStruct->QuadDirectStruct, BLDCStruct->ERad);
  874              		.loc 1 188 34
  875 00b0 FB68     		ldr	r3, [r7, #12]
  876 00b2 D3F89430 		ldr	r3, [r3, #148]	@ float
@@ -1069,31 +1069,31 @@
  886 00ce 83E80300 		stm	r3, {r0, r1}
  887 00d2 1CE0     		b	.L55
  888              	.L51:
- 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     else if (BLDCStruct->StateCheck)
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     else if (BLDCStruct->StateCheck)
  889              		.loc 1 190 24
  890 00d4 FB68     		ldr	r3, [r7, #12]
  891 00d6 1B7E     		ldrb	r3, [r3, #24]	@ zero_extendqisi2
  892              		.loc 1 190 13
  893 00d8 002B     		cmp	r3, #0
  894 00da 18D0     		beq	.L55
- 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Direct= BLDCStruct->DirectOut;
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Direct= BLDCStruct->DirectOut;
  895              		.loc 1 193 56
  896 00dc FB68     		ldr	r3, [r7, #12]
  897 00de 9A6F     		ldr	r2, [r3, #120]	@ float
  898              		.loc 1 193 44
  899 00e0 FB68     		ldr	r3, [r7, #12]
  900 00e2 5A63     		str	r2, [r3, #52]	@ float
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->QuadOut;
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->QuadDirectStruct.Quad = BLDCStruct->QuadOut;
  901              		.loc 1 194 55
  902 00e4 FB68     		ldr	r3, [r7, #12]
  903 00e6 DA6F     		ldr	r2, [r3, #124]	@ float
  904              		.loc 1 194 43
  905 00e8 FB68     		ldr	r3, [r7, #12]
  906 00ea 9A63     		str	r2, [r3, #56]	@ float
- 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->VoltStrict = BLDCRevPark(BLDCStruct->QuadDirectStruct, BLDCStruct->ERad);
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         BLDCStruct->VoltStrict = BLDCRevPark(BLDCStruct->QuadDirectStruct, BLDCStruct->ERad);
  907              		.loc 1 195 34
  908 00ec FB68     		ldr	r3, [r7, #12]
  909 00ee D3F89430 		ldr	r3, [r3, #148]	@ float
@@ -1108,14 +1108,14 @@
  918 0106 92E80300 		ldm	r2, {r0, r1}
  919 010a 83E80300 		stm	r3, {r0, r1}
  920              	.L55:
- 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCSvpwm(BLDCStruct);
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCSvpwm(BLDCStruct);
  921              		.loc 1 199 5
  922 010e F868     		ldr	r0, [r7, #12]
  923 0110 FFF7FEFF 		bl	BLDCSvpwm
- 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  924              		.loc 1 200 1
  925 0114 00BF     		nop
  926 0116 1437     		adds	r7, r7, #20
@@ -1144,8 +1144,8 @@
  950              		.fpu softvfp
  952              	BLDCSvpwm:
  953              	.LFB163:
- 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void BLDCSvpwm(BLDCStruct *BLDCStruct)
- 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void BLDCSvpwm(BLDCStruct *BLDCStruct)
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  954              		.loc 1 202 1
  955              		.cfi_startproc
  956              		@ args = 0, pretend = 0, frame = 32
@@ -1159,11 +1159,11 @@
  964 0004 00AF     		add	r7, sp, #0
  965              		.cfi_def_cfa_register 7
  966 0006 7860     		str	r0, [r7, #4]
- 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     uint8_t Sector = 0;
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     uint8_t Sector = 0;
  967              		.loc 1 203 13
  968 0008 0023     		movs	r3, #0
  969 000a FB77     		strb	r3, [r7, #31]
- 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     int16_t X = 0, Y = 0, Z = 0, A = 0, B  = 0, t = 0;
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     int16_t X = 0, Y = 0, Z = 0, A = 0, B  = 0, t = 0;
  970              		.loc 1 204 13
  971 000c 0023     		movs	r3, #0
  972 000e BB83     		strh	r3, [r7, #28]	@ movhi
@@ -1182,7 +1182,7 @@
  985              		.loc 1 204 49
  986 0020 0023     		movs	r3, #0
  987 0022 BB81     		strh	r3, [r7, #12]	@ movhi
- 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     uint16_t PhaseA = 0, PhaseB = 0, PhaseC = 0;
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     uint16_t PhaseA = 0, PhaseB = 0, PhaseC = 0;
  988              		.loc 1 205 14
  989 0024 0023     		movs	r3, #0
  990 0026 FB82     		strh	r3, [r7, #22]	@ movhi
@@ -1192,8 +1192,8 @@
  994              		.loc 1 205 38
  995 002c 0023     		movs	r3, #0
  996 002e 7B82     		strh	r3, [r7, #18]	@ movhi
- 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     A = ((int32_t)(BLDCStruct->VoltStrict.A) * T_SQRT3 ) >> 16;
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     A = ((int32_t)(BLDCStruct->VoltStrict.A) * T_SQRT3 ) >> 16;
  997              		.loc 1 207 42
  998 0030 7B68     		ldr	r3, [r7, #4]
  999 0032 DB6A     		ldr	r3, [r3, #44]	@ float
@@ -1209,7 +1209,7 @@
  1009 0044 1B14     		asrs	r3, r3, #16
  1010              		.loc 1 207 7
  1011 0046 3B82     		strh	r3, [r7, #16]	@ movhi
- 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     B  = ((int32_t)(BLDCStruct->VoltStrict.B) * T) >> 16;
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     B  = ((int32_t)(BLDCStruct->VoltStrict.B) * T) >> 16;
  1012              		.loc 1 208 43
  1013 0048 7B68     		ldr	r3, [r7, #4]
  1014 004a 1B6B     		ldr	r3, [r3, #48]	@ float
@@ -1225,12 +1225,12 @@
  1024 005c 1B14     		asrs	r3, r3, #16
  1025              		.loc 1 208 8
  1026 005e FB81     		strh	r3, [r7, #14]	@ movhi
- 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     X = B ;
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     X = B ;
  1027              		.loc 1 210 7
  1028 0060 FB89     		ldrh	r3, [r7, #14]	@ movhi
  1029 0062 BB83     		strh	r3, [r7, #28]	@ movhi
- 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     Y = (B  + A) >> 1;
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     Y = (B  + A) >> 1;
  1030              		.loc 1 211 13
  1031 0064 B7F90E20 		ldrsh	r2, [r7, #14]
  1032 0068 B7F91030 		ldrsh	r3, [r7, #16]
@@ -1239,7 +1239,7 @@
  1035 006e 5B10     		asrs	r3, r3, #1
  1036              		.loc 1 211 7
  1037 0070 7B83     		strh	r3, [r7, #26]	@ movhi
- 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     Z = (B  - A) >> 1;
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     Z = (B  - A) >> 1;
  1038              		.loc 1 212 13
  1039 0072 B7F90E20 		ldrsh	r2, [r7, #14]
  1040 0076 B7F91030 		ldrsh	r3, [r7, #16]
@@ -1248,22 +1248,22 @@
  1043 007c 5B10     		asrs	r3, r3, #1
  1044              		.loc 1 212 7
  1045 007e 3B83     		strh	r3, [r7, #24]	@ movhi
- 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     if(B  >= 0)
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     if(B  >= 0)
  1046              		.loc 1 214 7
  1047 0080 B7F90E30 		ldrsh	r3, [r7, #14]
  1048 0084 002B     		cmp	r3, #0
  1049 0086 02DB     		blt	.L59
- 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         Sector += 1;
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         Sector += 1;
  1050              		.loc 1 216 16
  1051 0088 FB7F     		ldrb	r3, [r7, #31]
  1052 008a 0133     		adds	r3, r3, #1
  1053 008c FB77     		strb	r3, [r7, #31]
  1054              	.L59:
- 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     if((A - B ) >= 0)
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     if((A - B ) >= 0)
  1055              		.loc 1 219 11
  1056 008e B7F91020 		ldrsh	r2, [r7, #16]
  1057 0092 B7F90E30 		ldrsh	r3, [r7, #14]
@@ -1271,16 +1271,16 @@
  1059              		.loc 1 219 7
  1060 0098 002B     		cmp	r3, #0
  1061 009a 02DB     		blt	.L60
- 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         Sector += 2;
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         Sector += 2;
  1062              		.loc 1 221 16
  1063 009c FB7F     		ldrb	r3, [r7, #31]
  1064 009e 0233     		adds	r3, r3, #2
  1065 00a0 FB77     		strb	r3, [r7, #31]
  1066              	.L60:
- 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     if((A + B ) < 0)
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     if((A + B ) < 0)
  1067              		.loc 1 224 11
  1068 00a2 B7F91020 		ldrsh	r2, [r7, #16]
  1069 00a6 B7F90E30 		ldrsh	r3, [r7, #14]
@@ -1288,16 +1288,16 @@
  1071              		.loc 1 224 7
  1072 00ac 002B     		cmp	r3, #0
  1073 00ae 02DA     		bge	.L61
- 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         Sector += 4;
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         Sector += 4;
  1074              		.loc 1 226 16
  1075 00b0 FB7F     		ldrb	r3, [r7, #31]
  1076 00b2 0433     		adds	r3, r3, #4
  1077 00b4 FB77     		strb	r3, [r7, #31]
  1078              	.L61:
- 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(Sector)
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(Sector)
  1079              		.loc 1 229 5
  1080 00b6 FB7F     		ldrb	r3, [r7, #31]	@ zero_extendqisi2
  1081 00b8 013B     		subs	r3, r3, #1
@@ -1315,9 +1315,9 @@
  1093 00dc 7F030000 		.word	.L63+1
  1094              		.p2align 1
  1095              	.L69:
- 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case SECTOR_1:
- 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             t = Z + Y;
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case SECTOR_1:
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             t = Z + Y;
  1096              		.loc 1 232 19
  1097 00e0 3A8B     		ldrh	r2, [r7, #24]
  1098 00e2 7B8B     		ldrh	r3, [r7, #26]
@@ -1325,14 +1325,14 @@
  1100 00e6 9BB2     		uxth	r3, r3
  1101              		.loc 1 232 15
  1102 00e8 BB81     		strh	r3, [r7, #12]	@ movhi
- 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
  1103              		.loc 1 233 15
  1104 00ea B7F90C30 		ldrsh	r3, [r7, #12]
  1105 00ee 40F2E242 		movw	r2, #1250
  1106 00f2 9342     		cmp	r3, r2
  1107 00f4 15DD     		ble	.L70
- 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             {
- 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 Z = (int32_t)Z * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             {
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 Z = (int32_t)Z * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1108              		.loc 1 235 21
  1109 00f6 B7F91830 		ldrsh	r3, [r7, #24]
  1110              		.loc 1 235 32
@@ -1344,7 +1344,7 @@
  1116 0106 92FBF3F3 		sdiv	r3, r2, r3
  1117              		.loc 1 235 19
  1118 010a 3B83     		strh	r3, [r7, #24]	@ movhi
- 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 Y = (int32_t)Y * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 Y = (int32_t)Y * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1119              		.loc 1 236 21
  1120 010c B7F91A30 		ldrsh	r3, [r7, #26]
  1121              		.loc 1 236 32
@@ -1357,8 +1357,8 @@
  1128              		.loc 1 236 19
  1129 0120 7B83     		strh	r3, [r7, #26]	@ movhi
  1130              	.L70:
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             }
- 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = (T_QUARTER) - (Z + Y) * 0.5f;
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             }
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = (T_QUARTER) - (Z + Y) * 0.5f;
  1131              		.loc 1 238 39
  1132 0122 B7F91820 		ldrsh	r2, [r7, #24]
  1133 0126 B7F91A30 		ldrsh	r3, [r7, #26]
@@ -1385,27 +1385,27 @@
  1154              	.LVL34:
  1155 0150 0346     		mov	r3, r0
  1156 0152 BB82     		strh	r3, [r7, #20]	@ movhi
- 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = PhaseB + Z;
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = PhaseB + Z;
  1157              		.loc 1 239 29
  1158 0154 3A8B     		ldrh	r2, [r7, #24]
  1159              		.loc 1 239 20
  1160 0156 BB8A     		ldrh	r3, [r7, #20]	@ movhi
  1161 0158 1344     		add	r3, r3, r2
  1162 015a FB82     		strh	r3, [r7, #22]	@ movhi
- 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = PhaseA + Y;
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = PhaseA + Y;
  1163              		.loc 1 240 29
  1164 015c 7A8B     		ldrh	r2, [r7, #26]
  1165              		.loc 1 240 20
  1166 015e FB8A     		ldrh	r3, [r7, #22]	@ movhi
  1167 0160 1344     		add	r3, r3, r2
  1168 0162 7B82     		strh	r3, [r7, #18]	@ movhi
- 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1169              		.loc 1 241 13
  1170 0164 52E1     		b	.L71
  1171              	.L68:
- 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_2:
- 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             t = Y + (-X);
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_2:
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             t = Y + (-X);
  1172              		.loc 1 244 19
  1173 0166 7A8B     		ldrh	r2, [r7, #26]
  1174 0168 BB8B     		ldrh	r3, [r7, #28]
@@ -1413,14 +1413,14 @@
  1176 016c 9BB2     		uxth	r3, r3
  1177              		.loc 1 244 15
  1178 016e BB81     		strh	r3, [r7, #12]	@ movhi
- 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
  1179              		.loc 1 245 15
  1180 0170 B7F90C30 		ldrsh	r3, [r7, #12]
  1181 0174 40F2E242 		movw	r2, #1250
  1182 0178 9342     		cmp	r3, r2
  1183 017a 15DD     		ble	.L72
- 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             {
- 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 Y = (int32_t)Y * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             {
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 Y = (int32_t)Y * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1184              		.loc 1 247 21
  1185 017c B7F91A30 		ldrsh	r3, [r7, #26]
  1186              		.loc 1 247 32
@@ -1432,7 +1432,7 @@
  1192 018c 92FBF3F3 		sdiv	r3, r2, r3
  1193              		.loc 1 247 19
  1194 0190 7B83     		strh	r3, [r7, #26]	@ movhi
- 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 X = (int32_t)X * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 X = (int32_t)X * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1195              		.loc 1 248 21
  1196 0192 B7F91C30 		ldrsh	r3, [r7, #28]
  1197              		.loc 1 248 32
@@ -1445,8 +1445,8 @@
  1204              		.loc 1 248 19
  1205 01a6 BB83     		strh	r3, [r7, #28]	@ movhi
  1206              	.L72:
- 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             }
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = (T_QUARTER) - (Y + (-X)) * 0.5f;
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             }
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = (T_QUARTER) - (Y + (-X)) * 0.5f;
  1207              		.loc 1 250 39
  1208 01a8 B7F91A20 		ldrsh	r2, [r7, #26]
  1209 01ac B7F91C30 		ldrsh	r3, [r7, #28]
@@ -1473,27 +1473,27 @@
  1230              	.LVL38:
  1231 01d6 0346     		mov	r3, r0
  1232 01d8 FB82     		strh	r3, [r7, #22]	@ movhi
- 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = PhaseA + Y;
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = PhaseA + Y;
  1233              		.loc 1 251 29
  1234 01da 7A8B     		ldrh	r2, [r7, #26]
  1235              		.loc 1 251 20
  1236 01dc FB8A     		ldrh	r3, [r7, #22]	@ movhi
  1237 01de 1344     		add	r3, r3, r2
  1238 01e0 7B82     		strh	r3, [r7, #18]	@ movhi
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = PhaseC + (-X);
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = PhaseC + (-X);
  1239              		.loc 1 252 29
  1240 01e2 BB8B     		ldrh	r3, [r7, #28]
  1241              		.loc 1 252 20
  1242 01e4 7A8A     		ldrh	r2, [r7, #18]	@ movhi
  1243 01e6 D31A     		subs	r3, r2, r3
  1244 01e8 BB82     		strh	r3, [r7, #20]	@ movhi
- 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1245              		.loc 1 253 13
  1246 01ea 0FE1     		b	.L71
  1247              	.L67:
- 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_3:
- 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             t = (-Z) + X;
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_3:
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             t = (-Z) + X;
  1248              		.loc 1 256 22
  1249 01ec BA8B     		ldrh	r2, [r7, #28]
  1250 01ee 3B8B     		ldrh	r3, [r7, #24]
@@ -1501,14 +1501,14 @@
  1252 01f2 9BB2     		uxth	r3, r3
  1253              		.loc 1 256 15
  1254 01f4 BB81     		strh	r3, [r7, #12]	@ movhi
- 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
  1255              		.loc 1 257 15
  1256 01f6 B7F90C30 		ldrsh	r3, [r7, #12]
  1257 01fa 40F2E242 		movw	r2, #1250
  1258 01fe 9342     		cmp	r3, r2
  1259 0200 15DD     		ble	.L73
- 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             {
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 Z = (int32_t)Z * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             {
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 Z = (int32_t)Z * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1260              		.loc 1 259 21
  1261 0202 B7F91830 		ldrsh	r3, [r7, #24]
  1262              		.loc 1 259 32
@@ -1520,7 +1520,7 @@
  1268 0212 92FBF3F3 		sdiv	r3, r2, r3
  1269              		.loc 1 259 19
  1270 0216 3B83     		strh	r3, [r7, #24]	@ movhi
- 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 X = (int32_t)X * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 X = (int32_t)X * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1271              		.loc 1 260 21
  1272 0218 B7F91C30 		ldrsh	r3, [r7, #28]
  1273              		.loc 1 260 32
@@ -1533,8 +1533,8 @@
  1280              		.loc 1 260 19
  1281 022c BB83     		strh	r3, [r7, #28]	@ movhi
  1282              	.L73:
- 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             }
- 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = (T_QUARTER) - ((-Z) + X) * 0.5f;
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             }
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = (T_QUARTER) - ((-Z) + X) * 0.5f;
  1283              		.loc 1 262 42
  1284 022e B7F91C20 		ldrsh	r2, [r7, #28]
  1285 0232 B7F91830 		ldrsh	r3, [r7, #24]
@@ -1561,27 +1561,27 @@
  1306              	.LVL42:
  1307 025c 0346     		mov	r3, r0
  1308 025e FB82     		strh	r3, [r7, #22]	@ movhi
- 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = PhaseA + (-Z);
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = PhaseA + (-Z);
  1309              		.loc 1 263 29
  1310 0260 3B8B     		ldrh	r3, [r7, #24]
  1311              		.loc 1 263 20
  1312 0262 FA8A     		ldrh	r2, [r7, #22]	@ movhi
  1313 0264 D31A     		subs	r3, r2, r3
  1314 0266 BB82     		strh	r3, [r7, #20]	@ movhi
- 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = PhaseB + X;
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = PhaseB + X;
  1315              		.loc 1 264 29
  1316 0268 BA8B     		ldrh	r2, [r7, #28]
  1317              		.loc 1 264 20
  1318 026a BB8A     		ldrh	r3, [r7, #20]	@ movhi
  1319 026c 1344     		add	r3, r3, r2
  1320 026e 7B82     		strh	r3, [r7, #18]	@ movhi
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1321              		.loc 1 265 13
  1322 0270 CCE0     		b	.L71
  1323              	.L66:
- 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_4:
- 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             t = (-X) + Z;
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_4:
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             t = (-X) + Z;
  1324              		.loc 1 268 22
  1325 0272 3A8B     		ldrh	r2, [r7, #24]
  1326 0274 BB8B     		ldrh	r3, [r7, #28]
@@ -1589,14 +1589,14 @@
  1328 0278 9BB2     		uxth	r3, r3
  1329              		.loc 1 268 15
  1330 027a BB81     		strh	r3, [r7, #12]	@ movhi
- 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
  1331              		.loc 1 269 15
  1332 027c B7F90C30 		ldrsh	r3, [r7, #12]
  1333 0280 40F2E242 		movw	r2, #1250
  1334 0284 9342     		cmp	r3, r2
  1335 0286 15DD     		ble	.L74
- 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             {
- 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 X = (int32_t)X * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             {
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 X = (int32_t)X * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1336              		.loc 1 271 21
  1337 0288 B7F91C30 		ldrsh	r3, [r7, #28]
  1338              		.loc 1 271 32
@@ -1608,7 +1608,7 @@
  1344 0298 92FBF3F3 		sdiv	r3, r2, r3
  1345              		.loc 1 271 19
  1346 029c BB83     		strh	r3, [r7, #28]	@ movhi
- 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 Z= (int32_t)Z * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 Z= (int32_t)Z * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1347              		.loc 1 272 20
  1348 029e B7F91830 		ldrsh	r3, [r7, #24]
  1349              		.loc 1 272 31
@@ -1621,8 +1621,8 @@
  1356              		.loc 1 272 18
  1357 02b2 3B83     		strh	r3, [r7, #24]	@ movhi
  1358              	.L74:
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             }
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = (T_QUARTER) - ((-X) + Z) * 0.5f;
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             }
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = (T_QUARTER) - ((-X) + Z) * 0.5f;
  1359              		.loc 1 274 42
  1360 02b4 B7F91820 		ldrsh	r2, [r7, #24]
  1361 02b8 B7F91C30 		ldrsh	r3, [r7, #28]
@@ -1649,27 +1649,27 @@
  1382              	.LVL46:
  1383 02e2 0346     		mov	r3, r0
  1384 02e4 7B82     		strh	r3, [r7, #18]	@ movhi
- 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = PhaseC + (-X);
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = PhaseC + (-X);
  1385              		.loc 1 275 29
  1386 02e6 BB8B     		ldrh	r3, [r7, #28]
  1387              		.loc 1 275 20
  1388 02e8 7A8A     		ldrh	r2, [r7, #18]	@ movhi
  1389 02ea D31A     		subs	r3, r2, r3
  1390 02ec BB82     		strh	r3, [r7, #20]	@ movhi
- 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = PhaseB + Z;
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = PhaseB + Z;
  1391              		.loc 1 276 29
  1392 02ee 3A8B     		ldrh	r2, [r7, #24]
  1393              		.loc 1 276 20
  1394 02f0 BB8A     		ldrh	r3, [r7, #20]	@ movhi
  1395 02f2 1344     		add	r3, r3, r2
  1396 02f4 FB82     		strh	r3, [r7, #22]	@ movhi
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1397              		.loc 1 277 13
  1398 02f6 89E0     		b	.L71
  1399              	.L65:
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_5:
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             t = X + (-Y);
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_5:
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             t = X + (-Y);
  1400              		.loc 1 280 19
  1401 02f8 BA8B     		ldrh	r2, [r7, #28]
  1402 02fa 7B8B     		ldrh	r3, [r7, #26]
@@ -1677,14 +1677,14 @@
  1404 02fe 9BB2     		uxth	r3, r3
  1405              		.loc 1 280 15
  1406 0300 BB81     		strh	r3, [r7, #12]	@ movhi
- 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
  1407              		.loc 1 281 15
  1408 0302 B7F90C30 		ldrsh	r3, [r7, #12]
  1409 0306 40F2E242 		movw	r2, #1250
  1410 030a 9342     		cmp	r3, r2
  1411 030c 15DD     		ble	.L75
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             {
- 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 X = (int32_t)X * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             {
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 X = (int32_t)X * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1412              		.loc 1 283 21
  1413 030e B7F91C30 		ldrsh	r3, [r7, #28]
  1414              		.loc 1 283 32
@@ -1696,7 +1696,7 @@
  1420 031e 92FBF3F3 		sdiv	r3, r2, r3
  1421              		.loc 1 283 19
  1422 0322 BB83     		strh	r3, [r7, #28]	@ movhi
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 Y = (int32_t)Y * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 Y = (int32_t)Y * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1423              		.loc 1 284 21
  1424 0324 B7F91A30 		ldrsh	r3, [r7, #26]
  1425              		.loc 1 284 32
@@ -1709,8 +1709,8 @@
  1432              		.loc 1 284 19
  1433 0338 7B83     		strh	r3, [r7, #26]	@ movhi
  1434              	.L75:
- 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             }
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = (T_QUARTER) - (X + (-Y)) * 0.5f;
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             }
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = (T_QUARTER) - (X + (-Y)) * 0.5f;
  1435              		.loc 1 286 39
  1436 033a B7F91C20 		ldrsh	r2, [r7, #28]
  1437 033e B7F91A30 		ldrsh	r3, [r7, #26]
@@ -1737,27 +1737,27 @@
  1458              	.LVL50:
  1459 0368 0346     		mov	r3, r0
  1460 036a BB82     		strh	r3, [r7, #20]	@ movhi
- 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = PhaseB + X;
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = PhaseB + X;
  1461              		.loc 1 287 29
  1462 036c BA8B     		ldrh	r2, [r7, #28]
  1463              		.loc 1 287 20
  1464 036e BB8A     		ldrh	r3, [r7, #20]	@ movhi
  1465 0370 1344     		add	r3, r3, r2
  1466 0372 7B82     		strh	r3, [r7, #18]	@ movhi
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = PhaseC + (-Y);
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = PhaseC + (-Y);
  1467              		.loc 1 288 29
  1468 0374 7B8B     		ldrh	r3, [r7, #26]
  1469              		.loc 1 288 20
  1470 0376 7A8A     		ldrh	r2, [r7, #18]	@ movhi
  1471 0378 D31A     		subs	r3, r2, r3
  1472 037a FB82     		strh	r3, [r7, #22]	@ movhi
- 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1473              		.loc 1 289 13
  1474 037c 46E0     		b	.L71
  1475              	.L63:
- 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_6:
- 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             t = (-Y) + (-Z);
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****          case SECTOR_6:
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             t = (-Y) + (-Z);
  1476              		.loc 1 292 22
  1477 037e 7B8B     		ldrh	r3, [r7, #26]
  1478 0380 5B42     		rsbs	r3, r3, #0
@@ -1767,14 +1767,14 @@
  1482 0388 9BB2     		uxth	r3, r3
  1483              		.loc 1 292 15
  1484 038a BB81     		strh	r3, [r7, #12]	@ movhi
- 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             if(t > T_MAX_LIMIT)
  1485              		.loc 1 293 15
  1486 038c B7F90C30 		ldrsh	r3, [r7, #12]
  1487 0390 40F2E242 		movw	r2, #1250
  1488 0394 9342     		cmp	r3, r2
  1489 0396 15DD     		ble	.L76
- 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             {
- 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 Y = (int32_t)Y * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             {
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 Y = (int32_t)Y * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1490              		.loc 1 295 21
  1491 0398 B7F91A30 		ldrsh	r3, [r7, #26]
  1492              		.loc 1 295 32
@@ -1786,7 +1786,7 @@
  1498 03a8 92FBF3F3 		sdiv	r3, r2, r3
  1499              		.loc 1 295 19
  1500 03ac 7B83     		strh	r3, [r7, #26]	@ movhi
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****                 Z = (int32_t)Z * (int32_t)T_MAX_LIMIT / (int32_t)t;
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****                 Z = (int32_t)Z * (int32_t)T_MAX_LIMIT / (int32_t)t;
  1501              		.loc 1 296 21
  1502 03ae B7F91830 		ldrsh	r3, [r7, #24]
  1503              		.loc 1 296 32
@@ -1799,8 +1799,8 @@
  1510              		.loc 1 296 19
  1511 03c2 3B83     		strh	r3, [r7, #24]	@ movhi
  1512              	.L76:
- 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             }
- 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = (T_QUARTER) - ((-Y) + (-Z)) * 0.5f;
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             }
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseC = (T_QUARTER) - ((-Y) + (-Z)) * 0.5f;
  1513              		.loc 1 298 38
  1514 03c4 B7F91A30 		ldrsh	r3, [r7, #26]
  1515 03c8 5A42     		rsbs	r2, r3, #0
@@ -1829,33 +1829,33 @@
  1538              	.LVL54:
  1539 03f4 0346     		mov	r3, r0
  1540 03f6 7B82     		strh	r3, [r7, #18]	@ movhi
- 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = PhaseC + (-Y);
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseA = PhaseC + (-Y);
  1541              		.loc 1 299 29
  1542 03f8 7B8B     		ldrh	r3, [r7, #26]
  1543              		.loc 1 299 20
  1544 03fa 7A8A     		ldrh	r2, [r7, #18]	@ movhi
  1545 03fc D31A     		subs	r3, r2, r3
  1546 03fe FB82     		strh	r3, [r7, #22]	@ movhi
- 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = PhaseA + (-Z);
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             PhaseB = PhaseA + (-Z);
  1547              		.loc 1 300 29
  1548 0400 3B8B     		ldrh	r3, [r7, #24]
  1549              		.loc 1 300 20
  1550 0402 FA8A     		ldrh	r2, [r7, #22]	@ movhi
  1551 0404 D31A     		subs	r3, r2, r3
  1552 0406 BB82     		strh	r3, [r7, #20]	@ movhi
- 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1553              		.loc 1 301 13
  1554 0408 00E0     		b	.L71
  1555              	.L81:
- 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         default:
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         default:
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1556              		.loc 1 304 13
  1557 040a 00BF     		nop
  1558              	.L71:
- 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(BLDCStruct->BLDCId)
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(BLDCStruct->BLDCId)
  1559              		.loc 1 307 22
  1560 040c 7B68     		ldr	r3, [r7, #4]
  1561 040e 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -1868,27 +1868,27 @@
  1568 041a 19D0     		beq	.L79
  1569 041c 012B     		cmp	r3, #1
  1570 041e 0DD0     		beq	.L80
- 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_YAW:
- 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 						TIMER_CH0CV(TIMER0) = PhaseB;
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = PhaseC;
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = PhaseA;    
- 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;					
- 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 				
- 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_ROLL:
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER1) = PhaseA;
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = PhaseC;
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = PhaseB;
- 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
- 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
- 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_PITCH:
- 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER7) = PhaseC;
- 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = PhaseB;
- 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = PhaseA;
- 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
- 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_YAW:
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 						TIMER_CH0CV(TIMER0) = PhaseB;
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = PhaseC;
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = PhaseA;    
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;					
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 				
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_ROLL:
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER1) = PhaseA;
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = PhaseC;
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = PhaseB;
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_PITCH:
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER7) = PhaseC;
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = PhaseB;
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = PhaseA;
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  1571              		.loc 1 328 1
  1572 0420 20E0     		b	.L82
  1573              	.L84:
@@ -1896,78 +1896,78 @@
  1575              	.L83:
  1576 0424 00401C44 		.word	1142702080
  1577              	.L77:
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = PhaseC;
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = PhaseC;
  1578              		.loc 1 311 7
  1579 0428 104A     		ldr	r2, .L85
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = PhaseC;
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = PhaseC;
  1580              		.loc 1 311 27
  1581 042a BB8A     		ldrh	r3, [r7, #20]
  1582 042c 1360     		str	r3, [r2]
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = PhaseA;    
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = PhaseA;    
  1583              		.loc 1 312 13
  1584 042e 104A     		ldr	r2, .L85+4
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = PhaseA;    
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = PhaseA;    
  1585              		.loc 1 312 33
  1586 0430 7B8A     		ldrh	r3, [r7, #18]
  1587 0432 1360     		str	r3, [r2]
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;					
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;					
  1588              		.loc 1 313 13
  1589 0434 0F4A     		ldr	r2, .L85+8
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;					
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;					
  1590              		.loc 1 313 33
  1591 0436 FB8A     		ldrh	r3, [r7, #22]
  1592 0438 1360     		str	r3, [r2]
- 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 				
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 				
  1593              		.loc 1 314 13
  1594 043a 13E0     		b	.L78
  1595              	.L80:
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = PhaseC;
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = PhaseC;
  1596              		.loc 1 317 13
  1597 043c 0E4A     		ldr	r2, .L85+12
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = PhaseC;
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = PhaseC;
  1598              		.loc 1 317 33
  1599 043e FB8A     		ldrh	r3, [r7, #22]
  1600 0440 1360     		str	r3, [r2]
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = PhaseB;
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = PhaseB;
  1601              		.loc 1 318 13
  1602 0442 0E4A     		ldr	r2, .L85+16
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = PhaseB;
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = PhaseB;
  1603              		.loc 1 318 33
  1604 0444 7B8A     		ldrh	r3, [r7, #18]
  1605 0446 1360     		str	r3, [r2]
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1606              		.loc 1 319 13
  1607 0448 0D4A     		ldr	r2, .L85+20
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1608              		.loc 1 319 33
  1609 044a BB8A     		ldrh	r3, [r7, #20]
  1610 044c 1360     		str	r3, [r2]
- 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
  1611              		.loc 1 320 13
  1612 044e 09E0     		b	.L78
  1613              	.L79:
- 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = PhaseB;
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = PhaseB;
  1614              		.loc 1 323 13
  1615 0450 0C4A     		ldr	r2, .L85+24
- 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = PhaseB;
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = PhaseB;
  1616              		.loc 1 323 33
  1617 0452 7B8A     		ldrh	r3, [r7, #18]
  1618 0454 1360     		str	r3, [r2]
- 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = PhaseA;
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = PhaseA;
  1619              		.loc 1 324 13
  1620 0456 0C4A     		ldr	r2, .L85+28
- 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = PhaseA;
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = PhaseA;
  1621              		.loc 1 324 33
  1622 0458 BB8A     		ldrh	r3, [r7, #20]
  1623 045a 1360     		str	r3, [r2]
- 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1624              		.loc 1 325 13
  1625 045c 0B4A     		ldr	r2, .L85+32
- 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1626              		.loc 1 325 33
  1627 045e FB8A     		ldrh	r3, [r7, #22]
  1628 0460 1360     		str	r3, [r2]
- 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
  1629              		.loc 1 326 13
  1630 0462 00BF     		nop
  1631              	.L78:
@@ -2003,9 +2003,9 @@
  1662              		.fpu softvfp
  1664              	TurnOnPWM:
  1665              	.LFB164:
- 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void TurnOnPWM(BLDCStruct *BLDCStruct)
- 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void TurnOnPWM(BLDCStruct *BLDCStruct)
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  1666              		.loc 1 331 1
  1667              		.cfi_startproc
  1668              		@ args = 0, pretend = 0, frame = 8
@@ -2019,7 +2019,7 @@
  1676 0004 00AF     		add	r7, sp, #0
  1677              		.cfi_def_cfa_register 7
  1678 0006 7860     		str	r0, [r7, #4]
- 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(BLDCStruct->BLDCId)
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(BLDCStruct->BLDCId)
  1679              		.loc 1 332 22
  1680 0008 7B68     		ldr	r3, [r7, #4]
  1681 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -2032,168 +2032,168 @@
  1688 0016 3DD0     		beq	.L90
  1689 0018 012B     		cmp	r3, #1
  1690 001a 1CD0     		beq	.L91
- 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_YAW:
- 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
- 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
- 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
- 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
- 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_ENABLE);
- 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_ENABLE);
- 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_ENABLE);
- 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
- 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
- 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_ROLL:
- 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
- 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
- 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
- 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
- 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_ENABLE);
- 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_ENABLE);
- 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_ENABLE);
- 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
- 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
- 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_PITCH:
- 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
- 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
- 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
- 359:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
- 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_0, TIMER_CCX_ENABLE);
- 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_ENABLE);
- 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_ENABLE);
- 363:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
- 364:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 365:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_YAW:
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_ENABLE);
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_ENABLE);
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_ROLL:
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_ENABLE);
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_ENABLE);
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_PITCH:
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH0CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
+ 359:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_0, TIMER_CCX_ENABLE);
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_ENABLE);
+ 363:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 364:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 365:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  1691              		.loc 1 365 1
  1692 001c 56E0     		b	.L92
  1693              	.L88:
- 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
  1694              		.loc 1 335 13
  1695 001e 2D4B     		ldr	r3, .L93
- 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
  1696              		.loc 1 335 33
  1697 0020 40F27122 		movw	r2, #625
  1698 0024 1A60     		str	r2, [r3]
- 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
  1699              		.loc 1 336 13
  1700 0026 2C4B     		ldr	r3, .L93+4
- 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER0) = HALF_PWM_PERIOD * 0.5f;
  1701              		.loc 1 336 33
  1702 0028 40F27122 		movw	r2, #625
  1703 002c 1A60     		str	r2, [r3]
- 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
  1704              		.loc 1 337 13
  1705 002e 2B4B     		ldr	r3, .L93+8
- 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
  1706              		.loc 1 337 33
  1707 0030 40F27122 		movw	r2, #625
  1708 0034 1A60     		str	r2, [r3]
- 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_ENABLE);
  1709              		.loc 1 339 13
  1710 0036 0122     		movs	r2, #1
  1711 0038 0021     		movs	r1, #0
  1712 003a 2948     		ldr	r0, .L93+12
  1713 003c FFF7FEFF 		bl	timer_channel_output_state_config
- 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_ENABLE);
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_ENABLE);
  1714              		.loc 1 340 13
  1715 0040 0122     		movs	r2, #1
  1716 0042 0121     		movs	r1, #1
  1717 0044 2648     		ldr	r0, .L93+12
  1718 0046 FFF7FEFF 		bl	timer_channel_output_state_config
- 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1719              		.loc 1 341 13
  1720 004a 0122     		movs	r2, #1
  1721 004c 0221     		movs	r1, #2
  1722 004e 2448     		ldr	r0, .L93+12
  1723 0050 FFF7FEFF 		bl	timer_channel_output_state_config
- 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
  1724              		.loc 1 342 13
  1725 0054 3AE0     		b	.L89
  1726              	.L91:
- 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
  1727              		.loc 1 346 13
  1728 0056 234B     		ldr	r3, .L93+16
- 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
  1729              		.loc 1 346 33
  1730 0058 40F27122 		movw	r2, #625
  1731 005c 1A60     		str	r2, [r3]
- 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
  1732              		.loc 1 347 13
  1733 005e 224B     		ldr	r3, .L93+20
- 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER1) = HALF_PWM_PERIOD * 0.5f;
  1734              		.loc 1 347 33
  1735 0060 40F27122 		movw	r2, #625
  1736 0064 1A60     		str	r2, [r3]
- 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
  1737              		.loc 1 348 13
  1738 0066 214B     		ldr	r3, .L93+24
- 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
  1739              		.loc 1 348 33
  1740 0068 40F27122 		movw	r2, #625
  1741 006c 1A60     		str	r2, [r3]
- 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_ENABLE);
  1742              		.loc 1 350 13
  1743 006e 0122     		movs	r2, #1
  1744 0070 0021     		movs	r1, #0
  1745 0072 4FF08040 		mov	r0, #1073741824
  1746 0076 FFF7FEFF 		bl	timer_channel_output_state_config
- 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_ENABLE);
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_ENABLE);
  1747              		.loc 1 351 13
  1748 007a 0122     		movs	r2, #1
  1749 007c 0121     		movs	r1, #1
  1750 007e 4FF08040 		mov	r0, #1073741824
  1751 0082 FFF7FEFF 		bl	timer_channel_output_state_config
- 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1752              		.loc 1 352 13
  1753 0086 0122     		movs	r2, #1
  1754 0088 0221     		movs	r1, #2
  1755 008a 4FF08040 		mov	r0, #1073741824
  1756 008e FFF7FEFF 		bl	timer_channel_output_state_config
- 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
  1757              		.loc 1 353 13
  1758 0092 1BE0     		b	.L89
  1759              	.L90:
- 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
  1760              		.loc 1 356 13
  1761 0094 164B     		ldr	r3, .L93+28
- 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH1CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
  1762              		.loc 1 356 33
  1763 0096 40F27122 		movw	r2, #625
  1764 009a 1A60     		str	r2, [r3]
- 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
  1765              		.loc 1 357 13
  1766 009c 154B     		ldr	r3, .L93+32
- 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             TIMER_CH2CV(TIMER7) = HALF_PWM_PERIOD * 0.5f;
  1767              		.loc 1 357 33
  1768 009e 40F27122 		movw	r2, #625
  1769 00a2 1A60     		str	r2, [r3]
- 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
  1770              		.loc 1 358 13
  1771 00a4 144B     		ldr	r3, .L93+36
- 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             
  1772              		.loc 1 358 33
  1773 00a6 40F27122 		movw	r2, #625
  1774 00aa 1A60     		str	r2, [r3]
- 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_ENABLE);
  1775              		.loc 1 360 13
  1776 00ac 0122     		movs	r2, #1
  1777 00ae 0021     		movs	r1, #0
  1778 00b0 1248     		ldr	r0, .L93+40
  1779 00b2 FFF7FEFF 		bl	timer_channel_output_state_config
- 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_ENABLE);
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_ENABLE);
  1780              		.loc 1 361 13
  1781 00b6 0122     		movs	r2, #1
  1782 00b8 0121     		movs	r1, #1
  1783 00ba 1048     		ldr	r0, .L93+40
  1784 00bc FFF7FEFF 		bl	timer_channel_output_state_config
- 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1785              		.loc 1 362 13
  1786 00c0 0122     		movs	r2, #1
  1787 00c2 0221     		movs	r1, #2
  1788 00c4 0D48     		ldr	r0, .L93+40
  1789 00c6 FFF7FEFF 		bl	timer_channel_output_state_config
- 363:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 363:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
  1790              		.loc 1 363 13
  1791 00ca 00BF     		nop
  1792              	.L89:
@@ -2231,9 +2231,9 @@
  1825              		.fpu softvfp
  1827              	ShutOffPWM:
  1828              	.LFB165:
- 366:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 367:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void ShutOffPWM(BLDCStruct *BLDCStruct)
- 368:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+ 366:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 367:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void ShutOffPWM(BLDCStruct *BLDCStruct)
+ 368:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  1829              		.loc 1 368 1
  1830              		.cfi_startproc
  1831              		@ args = 0, pretend = 0, frame = 8
@@ -2247,7 +2247,7 @@
  1839 0004 00AF     		add	r7, sp, #0
  1840              		.cfi_def_cfa_register 7
  1841 0006 7860     		str	r0, [r7, #4]
- 369:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(BLDCStruct->BLDCId)
+ 369:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(BLDCStruct->BLDCId)
  1842              		.loc 1 369 22
  1843 0008 7B68     		ldr	r3, [r7, #4]
  1844 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -2260,92 +2260,92 @@
  1851 0016 25D0     		beq	.L98
  1852 0018 012B     		cmp	r3, #1
  1853 001a 10D0     		beq	.L99
- 370:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 371:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_YAW:
- 372:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
- 373:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
- 374:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
- 375:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
- 376:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
- 377:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_ROLL:
- 378:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
- 379:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
- 380:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
- 381:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
- 382:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
- 383:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_PITCH:
- 384:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_0, TIMER_CCX_DISABLE);
- 385:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_DISABLE);
- 386:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_DISABLE);
- 387:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
- 388:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 389:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+ 370:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 371:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_YAW:
+ 372:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 373:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 374:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 375:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 376:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 377:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_ROLL:
+ 378:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 379:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 380:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 381:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 382:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 383:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_PITCH:
+ 384:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 385:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 386:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 387:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 388:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 389:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  1854              		.loc 1 389 1
  1855 001c 32E0     		b	.L100
  1856              	.L96:
- 372:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 372:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
  1857              		.loc 1 372 13
  1858 001e 0022     		movs	r2, #0
  1859 0020 0021     		movs	r1, #0
  1860 0022 1A48     		ldr	r0, .L101
  1861 0024 FFF7FEFF 		bl	timer_channel_output_state_config
- 373:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 373:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
  1862              		.loc 1 373 13
  1863 0028 0022     		movs	r2, #0
  1864 002a 0121     		movs	r1, #1
  1865 002c 1748     		ldr	r0, .L101
  1866 002e FFF7FEFF 		bl	timer_channel_output_state_config
- 374:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 374:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1867              		.loc 1 374 13
  1868 0032 0022     		movs	r2, #0
  1869 0034 0221     		movs	r1, #2
  1870 0036 1548     		ldr	r0, .L101
  1871 0038 FFF7FEFF 		bl	timer_channel_output_state_config
- 375:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 375:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
  1872              		.loc 1 375 13
  1873 003c 22E0     		b	.L97
  1874              	.L99:
- 378:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 378:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
  1875              		.loc 1 378 13
  1876 003e 0022     		movs	r2, #0
  1877 0040 0021     		movs	r1, #0
  1878 0042 4FF08040 		mov	r0, #1073741824
  1879 0046 FFF7FEFF 		bl	timer_channel_output_state_config
- 379:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 379:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
  1880              		.loc 1 379 13
  1881 004a 0022     		movs	r2, #0
  1882 004c 0121     		movs	r1, #1
  1883 004e 4FF08040 		mov	r0, #1073741824
  1884 0052 FFF7FEFF 		bl	timer_channel_output_state_config
- 380:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 380:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1885              		.loc 1 380 13
  1886 0056 0022     		movs	r2, #0
  1887 0058 0221     		movs	r1, #2
  1888 005a 4FF08040 		mov	r0, #1073741824
  1889 005e FFF7FEFF 		bl	timer_channel_output_state_config
- 381:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 381:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
  1890              		.loc 1 381 13
  1891 0062 0FE0     		b	.L97
  1892              	.L98:
- 384:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 384:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_DISABLE);
  1893              		.loc 1 384 13
  1894 0064 0022     		movs	r2, #0
  1895 0066 0021     		movs	r1, #0
  1896 0068 0948     		ldr	r0, .L101+4
  1897 006a FFF7FEFF 		bl	timer_channel_output_state_config
- 385:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 385:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_DISABLE);
  1898              		.loc 1 385 13
  1899 006e 0022     		movs	r2, #0
  1900 0070 0121     		movs	r1, #1
  1901 0072 0748     		ldr	r0, .L101+4
  1902 0074 FFF7FEFF 		bl	timer_channel_output_state_config
- 386:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 386:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1903              		.loc 1 386 13
  1904 0078 0022     		movs	r2, #0
  1905 007a 0221     		movs	r1, #2
  1906 007c 0448     		ldr	r0, .L101+4
  1907 007e FFF7FEFF 		bl	timer_channel_output_state_config
- 387:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 387:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
  1908              		.loc 1 387 13
  1909 0082 00BF     		nop
  1910              	.L97:
@@ -2374,9 +2374,9 @@
  1934              		.fpu softvfp
  1936              	HallDataRead:
  1937              	.LFB166:
- 390:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 
- 391:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** void HallDataRead(BLDCStruct *BLDCStruct)
- 392:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** {
+ 390:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 
+ 391:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** void HallDataRead(BLDCStruct *BLDCStruct)
+ 392:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** {
  1938              		.loc 1 392 1
  1939              		.cfi_startproc
  1940              		@ args = 0, pretend = 0, frame = 8
@@ -2390,7 +2390,7 @@
  1948 0004 00AF     		add	r7, sp, #0
  1949              		.cfi_def_cfa_register 7
  1950 0006 7860     		str	r0, [r7, #4]
- 393:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(BLDCStruct->BLDCId)
+ 393:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     switch(BLDCStruct->BLDCId)
  1951              		.loc 1 393 22
  1952 0008 7B68     		ldr	r3, [r7, #4]
  1953 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -2405,9 +2405,9 @@
  1962 001a 0CD0     		beq	.L107
  1963 001c 23E0     		b	.L105
  1964              	.L104:
- 394:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     {
- 395:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_YAW:
- 396:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcY = (uint16_t)AdcDate[1];
+ 394:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     {
+ 395:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_YAW:
+ 396:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcY = (uint16_t)AdcDate[1];
  1965              		.loc 1 396 53
  1966 001e 264B     		ldr	r3, .L108
  1967 0020 5B68     		ldr	r3, [r3, #4]
@@ -2416,7 +2416,7 @@
  1970              		.loc 1 396 34
  1971 0024 7B68     		ldr	r3, [r7, #4]
  1972 0026 9A80     		strh	r2, [r3, #4]	@ movhi
- 397:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcX = (AdcDate[1]) >> 16;
+ 397:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcX = (AdcDate[1]) >> 16;
  1973              		.loc 1 397 44
  1974 0028 234B     		ldr	r3, .L108
  1975 002a 5B68     		ldr	r3, [r3, #4]
@@ -2426,13 +2426,13 @@
  1979 002e 1AB2     		sxth	r2, r3
  1980 0030 7B68     		ldr	r3, [r7, #4]
  1981 0032 5A80     		strh	r2, [r3, #2]	@ movhi
- 398:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 398:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  1982              		.loc 1 398 13
  1983 0034 17E0     		b	.L105
  1984              	.L107:
- 399:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
- 400:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_ROLL:
- 401:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcY = (uint16_t)AdcDate[0];
+ 399:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 400:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_ROLL:
+ 401:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcY = (uint16_t)AdcDate[0];
  1985              		.loc 1 401 53
  1986 0036 204B     		ldr	r3, .L108
  1987 0038 1B68     		ldr	r3, [r3]
@@ -2441,7 +2441,7 @@
  1990              		.loc 1 401 34
  1991 003c 7B68     		ldr	r3, [r7, #4]
  1992 003e 9A80     		strh	r2, [r3, #4]	@ movhi
- 402:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcX = (AdcDate[0]) >> 16;
+ 402:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcX = (AdcDate[0]) >> 16;
  1993              		.loc 1 402 44
  1994 0040 1D4B     		ldr	r3, .L108
  1995 0042 1B68     		ldr	r3, [r3]
@@ -2451,13 +2451,13 @@
  1999 0046 1AB2     		sxth	r2, r3
  2000 0048 7B68     		ldr	r3, [r7, #4]
  2001 004a 5A80     		strh	r2, [r3, #2]	@ movhi
- 403:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 403:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  2002              		.loc 1 403 13
  2003 004c 0BE0     		b	.L105
  2004              	.L106:
- 404:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         
- 405:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_PITCH:
- 406:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcX = (uint16_t)AdcDate[2];
+ 404:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         
+ 405:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****         case BLDC_ID_PITCH:
+ 406:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcX = (uint16_t)AdcDate[2];
  2005              		.loc 1 406 53
  2006 004e 1A4B     		ldr	r3, .L108
  2007 0050 9B68     		ldr	r3, [r3, #8]
@@ -2466,7 +2466,7 @@
  2010              		.loc 1 406 34
  2011 0054 7B68     		ldr	r3, [r7, #4]
  2012 0056 5A80     		strh	r2, [r3, #2]	@ movhi
- 407:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcY = (AdcDate[2]) >> 16;
+ 407:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             BLDCStruct->HallAdcY = (AdcDate[2]) >> 16;
  2013              		.loc 1 407 44
  2014 0058 174B     		ldr	r3, .L108
  2015 005a 9B68     		ldr	r3, [r3, #8]
@@ -2476,13 +2476,13 @@
  2019 005e 1AB2     		sxth	r2, r3
  2020 0060 7B68     		ldr	r3, [r7, #4]
  2021 0062 9A80     		strh	r2, [r3, #4]	@ movhi
- 408:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
+ 408:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****             break;
  2022              		.loc 1 408 13
  2023 0064 00BF     		nop
  2024              	.L105:
- 409:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     }
- 410:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     
- 411:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->HallStruct.X = (BLDCStruct->HallAdcX) - (BLDCStruct->HallOffsetX);
+ 409:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     }
+ 410:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     
+ 411:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->HallStruct.X = (BLDCStruct->HallAdcX) - (BLDCStruct->HallOffsetX);
  2025              		.loc 1 411 43
  2026 0066 7B68     		ldr	r3, [r7, #4]
  2027 0068 B3F90230 		ldrsh	r3, [r3, #2]
@@ -2499,7 +2499,7 @@
  2038 007c 0246     		mov	r2, r0
  2039 007e 7B68     		ldr	r3, [r7, #4]
  2040 0080 DA61     		str	r2, [r3, #28]	@ float
- 412:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->HallStruct.Y = ((BLDCStruct->HallAdcY) - (BLDCStruct->HallOffsetY)) * (BLDCStruct->
+ 412:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c ****     BLDCStruct->HallStruct.Y = ((BLDCStruct->HallAdcY) - (BLDCStruct->HallOffsetY)) * (BLDCStruct->
  2041              		.loc 1 412 44
  2042 0082 7B68     		ldr	r3, [r7, #4]
  2043 0084 B3F90430 		ldrsh	r3, [r3, #4]
@@ -2527,8 +2527,8 @@
  2065              		.loc 1 412 30
  2066 00aa 7B68     		ldr	r3, [r7, #4]
  2067 00ac 1A62     		str	r2, [r3, #32]	@ float
- 413:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** 	
- 414:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC\dawn_bldc.c **** }
+ 413:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** 	
+ 414:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC\dawn_bldc.c **** }
  2068              		.loc 1 414 1
  2069 00ae 00BF     		nop
  2070 00b0 0837     		adds	r7, r7, #8
@@ -2570,44 +2570,44 @@
  2109              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_bldc.c
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:16     .text.BLDCInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:24     .text.BLDCInit:00000000 BLDCInit
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1664   .text.TurnOnPWM:00000000 TurnOnPWM
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:54     .text.BLDCInit:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:62     .text.BLDCStallState:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:69     .text.BLDCStallState:00000000 BLDCStallState
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:202    .text.ArmQuadCcw:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:209    .text.ArmQuadCcw:00000000 ArmQuadCcw
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:323    .text.ArmQuadCcw:00000098 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:329    .text.ArmQuadCw:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:336    .text.ArmQuadCw:00000000 ArmQuadCw
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:450    .text.ArmQuadCw:00000098 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:457    .text.CleanBLDCAngle:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:464    .text.CleanBLDCAngle:00000000 CleanBLDCAngle
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:571    .text.CleanBLDCAngle:000000a8 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:581    .text.BLDCAngleCal:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:588    .text.BLDCAngleCal:00000000 BLDCAngleCal
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:753    .text.BLDCAngleCal:00000104 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:758    .text.BLDCCali:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:765    .text.BLDCCali:00000000 BLDCCali
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1936   .text.HallDataRead:00000000 HallDataRead
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1827   .text.ShutOffPWM:00000000 ShutOffPWM
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:952    .text.BLDCSvpwm:00000000 BLDCSvpwm
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:935    .text.BLDCCali:0000011c $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:2086   .bss.StannTimes.11233:00000000 StannTimes.11233
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:945    .text.BLDCSvpwm:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1088   .text.BLDCSvpwm:000000c8 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1094   .text.BLDCSvpwm:000000e0 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1576   .text.BLDCSvpwm:00000424 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1579   .text.BLDCSvpwm:00000428 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1644   .text.BLDCSvpwm:0000046c $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1657   .text.TurnOnPWM:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1805   .text.TurnOnPWM:000000d4 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1820   .text.ShutOffPWM:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1923   .text.ShutOffPWM:0000008c $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:1929   .text.HallDataRead:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:2079   .text.HallDataRead:000000b8 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjaBCjg.s:2087   .bss.StannTimes.11233:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:16     .text.BLDCInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:24     .text.BLDCInit:00000000 BLDCInit
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1664   .text.TurnOnPWM:00000000 TurnOnPWM
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:54     .text.BLDCInit:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:62     .text.BLDCStallState:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:69     .text.BLDCStallState:00000000 BLDCStallState
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:202    .text.ArmQuadCcw:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:209    .text.ArmQuadCcw:00000000 ArmQuadCcw
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:323    .text.ArmQuadCcw:00000098 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:329    .text.ArmQuadCw:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:336    .text.ArmQuadCw:00000000 ArmQuadCw
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:450    .text.ArmQuadCw:00000098 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:457    .text.CleanBLDCAngle:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:464    .text.CleanBLDCAngle:00000000 CleanBLDCAngle
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:571    .text.CleanBLDCAngle:000000a8 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:581    .text.BLDCAngleCal:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:588    .text.BLDCAngleCal:00000000 BLDCAngleCal
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:753    .text.BLDCAngleCal:00000104 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:758    .text.BLDCCali:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:765    .text.BLDCCali:00000000 BLDCCali
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1936   .text.HallDataRead:00000000 HallDataRead
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1827   .text.ShutOffPWM:00000000 ShutOffPWM
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:952    .text.BLDCSvpwm:00000000 BLDCSvpwm
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:935    .text.BLDCCali:0000011c $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:2086   .bss.StannTimes.11233:00000000 StannTimes.11233
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:945    .text.BLDCSvpwm:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1088   .text.BLDCSvpwm:000000c8 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1094   .text.BLDCSvpwm:000000e0 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1576   .text.BLDCSvpwm:00000424 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1579   .text.BLDCSvpwm:00000428 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1644   .text.BLDCSvpwm:0000046c $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1657   .text.TurnOnPWM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1805   .text.TurnOnPWM:000000d4 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1820   .text.ShutOffPWM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1923   .text.ShutOffPWM:0000008c $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1929   .text.HallDataRead:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:2079   .text.HallDataRead:000000b8 $d
+C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:2087   .bss.StannTimes.11233:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

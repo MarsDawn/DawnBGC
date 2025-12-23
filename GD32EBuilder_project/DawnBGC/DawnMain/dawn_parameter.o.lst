@@ -230,13 +230,13 @@
  192              		.file 16 "../../Dawn/DawnDevice/icm206xx.h"
  193              		.file 17 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
  194              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
- 195              		.file 19 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.h"
+ 195              		.file 19 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_function.h"
  196              		.file 20 "../../Dawn/DawnBsp/gpio.h"
- 197              		.file 21 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_parameter.c"
+ 197              		.file 21 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_parameter.c"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_parameter.c
-C:\Users\leonardo\AppData\Local\Temp\ccw6iShV.s:20     .data.GimbalSystem:00000000 GimbalSystem
-C:\Users\leonardo\AppData\Local\Temp\ccw6iShV.s:17     .data.GimbalSystem:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMgG2TH.s:20     .data.GimbalSystem:00000000 GimbalSystem
+C:\Users\leonardo\AppData\Local\Temp\ccMgG2TH.s:17     .data.GimbalSystem:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

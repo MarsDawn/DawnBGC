@@ -1,6 +1,6 @@
 DawnMain/gd32f4xx_it.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/gd32f4xx_it.c \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/gd32f4xx_it.h \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/gd32f4xx_it.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/gd32f4xx_it.h \
  ../../CMSIS/gd32f4xx.h ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \
  ../../CMSIS/DSP/Include/core_cmFunc.h \
@@ -32,7 +32,7 @@ DawnMain/gd32f4xx_it.o: \
  ../../Libraries/FWLIB/inc/gd32f4xx_wwdgt.h \
  ../../Libraries/FWLIB/inc/gd32f4xx_misc.h
 
-C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/gd32f4xx_it.h:
+C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/gd32f4xx_it.h:
 
 ../../CMSIS/gd32f4xx.h:
 

@@ -1,5 +1,5 @@
 DawnBsp/timebase.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBsp/timebase.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp/timebase.c \
  ../../Dawn/DawnMain/includes.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \

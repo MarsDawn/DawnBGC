@@ -48,83 +48,83 @@
   51              		.fpu softvfp
   53              	SPI0ReadWriteBytes:
   54              	.LFB156:
-  55              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice/icm206xx.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** /*
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * Copyright (c) 2025 MarsDawn
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * Project repository:
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *     https://github.com/MarsDawn
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * This file is part of the DawnBGC project.
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * Redistribution and use in source or binary forms, with or without
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * modification, are permitted under the MIT License, provided that
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * this copyright notice and this permission notice are retained.
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * Licensed under the MIT License.
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * You may obtain a copy of the License at:
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *     https://opensource.org/licenses/MIT
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  *
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****  */
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #include "includes.h"
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define SMPLRT_DIV                               ((uint16_t)0x19)
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define CONFIG                                   ((uint16_t)0x1a)
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define GYRO_CONFIG                              ((uint16_t)0x1b)
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_CONFIG                             ((uint16_t)0x1c)
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_CONFIG2                            ((uint16_t)0x1d)
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define INT_CFG                                  ((uint16_t)0x37)
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define INT_ENABLE                               ((uint16_t)0x38)
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_XOUT_H                             ((uint16_t)0x3b)
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_XOUT_L                             ((uint16_t)0x3c)
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_YOUT_H                             ((uint16_t)0x3d)
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_YOUT_L                             ((uint16_t)0x3e)
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_ZOUT_H                             ((uint16_t)0x3f)
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_ZOUT_L                             ((uint16_t)0x40)
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define TEMP_OUT_H                               ((uint16_t)0x41)
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define TEMP_OUT_L                               ((uint16_t)0x42)
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define GyroXOUT_H                              ((uint16_t)0x43)
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define GyroXOUT_L                              ((uint16_t)0x44)
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define GyroYOUT_H                              ((uint16_t)0x45)
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define GyroYOUT_L                              ((uint16_t)0x46)
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define GyroZOUT_H                              ((uint16_t)0x47)
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define GyroZOUT_L                              ((uint16_t)0x48)
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define SIGNAL_PATH_RESET                        ((uint16_t)0x68)
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define USER_CTRL                                ((uint16_t)0x6a)
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define PWR_MGMT_1                               ((uint16_t)0x6b)
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define WHOAMI                                 ((uint16_t)0x75)
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ICM206XX_DATA_AVRG_CNTS                   ((uint8_t)4)
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ICM206XX_CS_HIGH()                        gpio_bit_set(GPIOD, GPIO_PIN_2)
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** #define ICM206XX_CS_LOW()                         gpio_bit_reset(GPIOD, GPIO_PIN_2)
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** Icm206XXDataStruct Icm206XXData;
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** volatile static uint8_t Icm206XXRegData = 0;
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXRxBufIndex = 0;
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXRxBuf[15] = {0};
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXTxBufGyro[7] =
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     0xc3, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** };
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXTxBufGyroTemp[15] =
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     0xbb, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** };
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** static uint8_t SPI0ReadWriteBytes(uint8_t TxData)
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
+  55              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice/icm206xx.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** /*
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * Copyright (c) 2025 MarsDawn
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * Project repository:
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *     https://github.com/MarsDawn
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * This file is part of the DawnBGC project.
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * Redistribution and use in source or binary forms, with or without
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * modification, are permitted under the MIT License, provided that
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * this copyright notice and this permission notice are retained.
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * Licensed under the MIT License.
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * You may obtain a copy of the License at:
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *     https://opensource.org/licenses/MIT
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  *
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****  */
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #include "includes.h"
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define SMPLRT_DIV                               ((uint16_t)0x19)
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define CONFIG                                   ((uint16_t)0x1a)
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define GYRO_CONFIG                              ((uint16_t)0x1b)
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_CONFIG                             ((uint16_t)0x1c)
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_CONFIG2                            ((uint16_t)0x1d)
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define INT_CFG                                  ((uint16_t)0x37)
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define INT_ENABLE                               ((uint16_t)0x38)
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_XOUT_H                             ((uint16_t)0x3b)
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_XOUT_L                             ((uint16_t)0x3c)
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_YOUT_H                             ((uint16_t)0x3d)
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_YOUT_L                             ((uint16_t)0x3e)
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_ZOUT_H                             ((uint16_t)0x3f)
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ACCEL_ZOUT_L                             ((uint16_t)0x40)
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define TEMP_OUT_H                               ((uint16_t)0x41)
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define TEMP_OUT_L                               ((uint16_t)0x42)
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define GyroXOUT_H                              ((uint16_t)0x43)
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define GyroXOUT_L                              ((uint16_t)0x44)
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define GyroYOUT_H                              ((uint16_t)0x45)
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define GyroYOUT_L                              ((uint16_t)0x46)
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define GyroZOUT_H                              ((uint16_t)0x47)
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define GyroZOUT_L                              ((uint16_t)0x48)
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define SIGNAL_PATH_RESET                        ((uint16_t)0x68)
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define USER_CTRL                                ((uint16_t)0x6a)
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define PWR_MGMT_1                               ((uint16_t)0x6b)
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define WHOAMI                                 ((uint16_t)0x75)
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ICM206XX_DATA_AVRG_CNTS                   ((uint8_t)4)
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ICM206XX_CS_HIGH()                        gpio_bit_set(GPIOD, GPIO_PIN_2)
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** #define ICM206XX_CS_LOW()                         gpio_bit_reset(GPIOD, GPIO_PIN_2)
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** Icm206XXDataStruct Icm206XXData;
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** volatile static uint8_t Icm206XXRegData = 0;
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXRxBufIndex = 0;
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXRxBuf[15] = {0};
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXTxBufGyro[7] =
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     0xc3, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** };
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXTxBufGyroTemp[15] =
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     0xbb, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** };
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** static uint8_t SPI0ReadWriteBytes(uint8_t TxData)
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
   56              		.loc 1 76 1
   57              		.cfi_startproc
   58              		@ args = 0, pretend = 0, frame = 16
@@ -139,100 +139,100 @@
   67              		.cfi_def_cfa_register 7
   68 0006 0346     		mov	r3, r0
   69 0008 FB71     		strb	r3, [r7, #7]
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     uint16_t i = 0;
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     uint16_t i = 0;
   70              		.loc 1 77 14
   71 000a 0023     		movs	r3, #0
   72 000c FB81     		strh	r3, [r7, #14]	@ movhi
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     while(spi_i2s_flag_get(SPI0, SPI_FLAG_TBE) == RESET)
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     while(spi_i2s_flag_get(SPI0, SPI_FLAG_TBE) == RESET)
   73              		.loc 1 79 10
   74 000e 09E0     		b	.L2
   75              	.L4:
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         i++;
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         i++;
   76              		.loc 1 81 10
   77 0010 FB89     		ldrh	r3, [r7, #14]
   78 0012 0133     		adds	r3, r3, #1
   79 0014 FB81     		strh	r3, [r7, #14]	@ movhi
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         if(i > 5000)
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         if(i > 5000)
   80              		.loc 1 82 11
   81 0016 FB89     		ldrh	r3, [r7, #14]
   82 0018 41F28832 		movw	r2, #5000
   83 001c 9342     		cmp	r3, r2
   84 001e 01D9     		bls	.L2
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         {
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             return 0;
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         {
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             return 0;
   85              		.loc 1 84 20
   86 0020 0023     		movs	r3, #0
   87 0022 25E0     		b	.L3
   88              	.L2:
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
   89              		.loc 1 79 11
   90 0024 0221     		movs	r1, #2
   91 0026 1448     		ldr	r0, .L7
   92 0028 FFF7FEFF 		bl	spi_i2s_flag_get
   93 002c 0346     		mov	r3, r0
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
   94              		.loc 1 79 10
   95 002e 002B     		cmp	r3, #0
   96 0030 EED0     		beq	.L4
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         }
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     };
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_i2s_data_transmit(SPI0, TxData);
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         }
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     };
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_i2s_data_transmit(SPI0, TxData);
   97              		.loc 1 87 5
   98 0032 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
   99 0034 9BB2     		uxth	r3, r3
  100 0036 1946     		mov	r1, r3
  101 0038 0F48     		ldr	r0, .L7
  102 003a FFF7FEFF 		bl	spi_i2s_data_transmit
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     i = 0;
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     i = 0;
  103              		.loc 1 89 7
  104 003e 0023     		movs	r3, #0
  105 0040 FB81     		strh	r3, [r7, #14]	@ movhi
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     while(spi_i2s_flag_get(SPI0, SPI_FLAG_RBNE) == RESET)
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     while(spi_i2s_flag_get(SPI0, SPI_FLAG_RBNE) == RESET)
  106              		.loc 1 90 10
  107 0042 09E0     		b	.L5
  108              	.L6:
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         i++;
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         i++;
  109              		.loc 1 92 10
  110 0044 FB89     		ldrh	r3, [r7, #14]
  111 0046 0133     		adds	r3, r3, #1
  112 0048 FB81     		strh	r3, [r7, #14]	@ movhi
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         if(i > 5000)
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         if(i > 5000)
  113              		.loc 1 93 11
  114 004a FB89     		ldrh	r3, [r7, #14]
  115 004c 41F28832 		movw	r2, #5000
  116 0050 9342     		cmp	r3, r2
  117 0052 01D9     		bls	.L5
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         {
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             return 0;
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         {
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             return 0;
  118              		.loc 1 95 20
  119 0054 0023     		movs	r3, #0
  120 0056 0BE0     		b	.L3
  121              	.L5:
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
  122              		.loc 1 90 11
  123 0058 0121     		movs	r1, #1
  124 005a 0748     		ldr	r0, .L7
  125 005c FFF7FEFF 		bl	spi_i2s_flag_get
  126 0060 0346     		mov	r3, r0
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
  127              		.loc 1 90 10
  128 0062 002B     		cmp	r3, #0
  129 0064 EED0     		beq	.L6
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         }
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     };
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     return spi_i2s_data_receive(SPI0);
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         }
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     };
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     return spi_i2s_data_receive(SPI0);
  130              		.loc 1 99 12
  131 0066 0448     		ldr	r0, .L7
  132 0068 FFF7FEFF 		bl	spi_i2s_data_receive
  133 006c 0346     		mov	r3, r0
  134 006e DBB2     		uxtb	r3, r3
  135              	.L3:
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** }
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** }
  136              		.loc 1 100 1
  137 0070 1846     		mov	r0, r3
  138 0072 1037     		adds	r7, r7, #16
@@ -255,9 +255,9 @@
  156              		.fpu softvfp
  158              	Icm206XXWriteByte:
  159              	.LFB157:
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** static void Icm206XXWriteByte(uint8_t add, uint8_t TxData)
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** static void Icm206XXWriteByte(uint8_t add, uint8_t TxData)
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
  160              		.loc 1 103 1
  161              		.cfi_startproc
  162              		@ args = 0, pretend = 0, frame = 8
@@ -275,27 +275,27 @@
  174 000a FB71     		strb	r3, [r7, #7]
  175 000c 1346     		mov	r3, r2
  176 000e BB71     		strb	r3, [r7, #6]
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_LOW();
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_LOW();
  177              		.loc 1 104 5
  178 0010 0421     		movs	r1, #4
  179 0012 0948     		ldr	r0, .L10
  180 0014 FFF7FEFF 		bl	gpio_bit_reset
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     SPI0ReadWriteBytes(add);
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     SPI0ReadWriteBytes(add);
  181              		.loc 1 105 5
  182 0018 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  183 001a 1846     		mov	r0, r3
  184 001c FFF7FEFF 		bl	SPI0ReadWriteBytes
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     SPI0ReadWriteBytes(TxData);
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     SPI0ReadWriteBytes(TxData);
  185              		.loc 1 106 5
  186 0020 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
  187 0022 1846     		mov	r0, r3
  188 0024 FFF7FEFF 		bl	SPI0ReadWriteBytes
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_HIGH();
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_HIGH();
  189              		.loc 1 107 5
  190 0028 0421     		movs	r1, #4
  191 002a 0348     		ldr	r0, .L10
  192 002c FFF7FEFF 		bl	gpio_bit_set
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** }
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** }
  193              		.loc 1 108 1
  194 0030 00BF     		nop
  195 0032 0837     		adds	r7, r7, #8
@@ -318,9 +318,9 @@
  213              		.fpu softvfp
  215              	Icm206XXReadByte:
  216              	.LFB158:
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXReadByte(uint8_t add)
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** static uint8_t Icm206XXReadByte(uint8_t add)
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
  217              		.loc 1 111 1
  218              		.cfi_startproc
  219              		@ args = 0, pretend = 0, frame = 16
@@ -335,39 +335,39 @@
  228              		.cfi_def_cfa_register 7
  229 0006 0346     		mov	r3, r0
  230 0008 FB71     		strb	r3, [r7, #7]
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     uint8_t data = 0;
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     uint8_t data = 0;
  231              		.loc 1 112 13
  232 000a 0023     		movs	r3, #0
  233 000c FB73     		strb	r3, [r7, #15]
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_LOW();
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_LOW();
  234              		.loc 1 114 5
  235 000e 0421     		movs	r1, #4
  236 0010 0B48     		ldr	r0, .L14
  237 0012 FFF7FEFF 		bl	gpio_bit_reset
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     SPI0ReadWriteBytes(0x80|add);
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     SPI0ReadWriteBytes(0x80|add);
  238              		.loc 1 115 5
  239 0016 FB79     		ldrb	r3, [r7, #7]
  240 0018 63F07F03 		orn	r3, r3, #127
  241 001c DBB2     		uxtb	r3, r3
  242 001e 1846     		mov	r0, r3
  243 0020 FFF7FEFF 		bl	SPI0ReadWriteBytes
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     data = SPI0ReadWriteBytes(0xff);
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     data = SPI0ReadWriteBytes(0xff);
  244              		.loc 1 116 12
  245 0024 FF20     		movs	r0, #255
  246 0026 FFF7FEFF 		bl	SPI0ReadWriteBytes
  247 002a 0346     		mov	r3, r0
  248 002c FB73     		strb	r3, [r7, #15]
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_HIGH();
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_HIGH();
  249              		.loc 1 117 5
  250 002e 0421     		movs	r1, #4
  251 0030 0348     		ldr	r0, .L14
  252 0032 FFF7FEFF 		bl	gpio_bit_set
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     return data;
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     return data;
  253              		.loc 1 119 12
  254 0036 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** }
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** }
  255              		.loc 1 120 1
  256 0038 1846     		mov	r0, r3
  257 003a 1037     		adds	r7, r7, #16
@@ -395,10 +395,10 @@
  282              		.fpu softvfp
  284              	Icm206XXInit:
  285              	.LFB159:
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** uint8_t icA206xx_debug_data = 0;
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** void Icm206XXInit(void)
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** uint8_t icA206xx_debug_data = 0;
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** void Icm206XXInit(void)
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
  286              		.loc 1 124 1
  287              		.cfi_startproc
  288              		@ args = 0, pretend = 0, frame = 80
@@ -413,156 +413,156 @@
  297              		.cfi_def_cfa_offset 128
  298 0004 08AF     		add	r7, sp, #32
  299              		.cfi_def_cfa 7, 96
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_parameter_struct timer_initpara;
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_parameter_struct spi_init_struct;
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_single_data_parameter_struct dma_init_struct;
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_GPIOD);
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_parameter_struct timer_initpara;
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_parameter_struct spi_init_struct;
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_single_data_parameter_struct dma_init_struct;
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_GPIOD);
  300              		.loc 1 129 5
  301 0006 40F60340 		movw	r0, #3075
  302 000a FFF7FEFF 		bl	rcu_periph_clock_enable
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_GPIOB);
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_GPIOB);
  303              		.loc 1 130 5
  304 000e 40F60140 		movw	r0, #3073
  305 0012 FFF7FEFF 		bl	rcu_periph_clock_enable
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_GPIOC);
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_GPIOC);
  306              		.loc 1 131 5
  307 0016 40F60240 		movw	r0, #3074
  308 001a FFF7FEFF 		bl	rcu_periph_clock_enable
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_SPI0);
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_SPI0);
  309              		.loc 1 132 5
  310 001e 41F20C10 		movw	r0, #4364
  311 0022 FFF7FEFF 		bl	rcu_periph_clock_enable
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_DMA1);
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_DMA1);
  312              		.loc 1 133 5
  313 0026 40F61640 		movw	r0, #3094
  314 002a FFF7FEFF 		bl	rcu_periph_clock_enable
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_TIMER12);
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     rcu_periph_clock_enable(RCU_TIMER12);
  315              		.loc 1 134 5
  316 002e 41F20700 		movw	r0, #4103
  317 0032 FFF7FEFF 		bl	rcu_periph_clock_enable
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     rcu_timer_clock_prescaler_config(RCU_TIMER_PSC_MUL4);
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     rcu_timer_clock_prescaler_config(RCU_TIMER_PSC_MUL4);
  318              		.loc 1 135 5
  319 0036 4FF08070 		mov	r0, #16777216
  320 003a FFF7FEFF 		bl	rcu_timer_clock_prescaler_config
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     gpio_af_set(GPIOB, GPIO_AF_5, GPIO_PIN_3|GPIO_PIN_4| GPIO_PIN_5);
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     gpio_af_set(GPIOB, GPIO_AF_5, GPIO_PIN_3|GPIO_PIN_4| GPIO_PIN_5);
  321              		.loc 1 138 5
  322 003e 3822     		movs	r2, #56
  323 0040 0521     		movs	r1, #5
  324 0042 A648     		ldr	r0, .L17
  325 0044 FFF7FEFF 		bl	gpio_af_set
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_PULLUP, GPIO_PIN_3|GPIO_PIN_4| GPIO_PIN_5);
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_PULLUP, GPIO_PIN_3|GPIO_PIN_4| GPIO_PIN_5);
  326              		.loc 1 139 5
  327 0048 3823     		movs	r3, #56
  328 004a 0122     		movs	r2, #1
  329 004c 0221     		movs	r1, #2
  330 004e A348     		ldr	r0, .L17
  331 0050 FFF7FEFF 		bl	gpio_mode_set
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_3|GPIO_PIN_4| GPIO_P
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_3|GPIO_PIN_4| GPIO_P
  332              		.loc 1 140 5
  333 0054 3823     		movs	r3, #56
  334 0056 0322     		movs	r2, #3
  335 0058 0021     		movs	r1, #0
  336 005a A048     		ldr	r0, .L17
  337 005c FFF7FEFF 		bl	gpio_output_options_set
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     gpio_mode_set(GPIOD, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_2);
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     gpio_mode_set(GPIOD, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_2);
  338              		.loc 1 143 5
  339 0060 0423     		movs	r3, #4
  340 0062 0022     		movs	r2, #0
  341 0064 0121     		movs	r1, #1
  342 0066 9E48     		ldr	r0, .L17+4
  343 0068 FFF7FEFF 		bl	gpio_mode_set
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     gpio_output_options_set(GPIOD, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_2);
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     gpio_output_options_set(GPIOD, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_2);
  344              		.loc 1 144 5
  345 006c 0423     		movs	r3, #4
  346 006e 0322     		movs	r2, #3
  347 0070 0021     		movs	r1, #0
  348 0072 9B48     		ldr	r0, .L17+4
  349 0074 FFF7FEFF 		bl	gpio_output_options_set
- 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     gpio_bit_set(GPIOD, GPIO_PIN_2);
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     gpio_bit_set(GPIOD, GPIO_PIN_2);
  350              		.loc 1 145 5
  351 0078 0421     		movs	r1, #4
  352 007a 9948     		ldr	r0, .L17+4
  353 007c FFF7FEFF 		bl	gpio_bit_set
- 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****                                 
- 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     gpio_mode_set(GPIOC, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_0);
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****                                 
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     gpio_mode_set(GPIOC, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_0);
  354              		.loc 1 148 5
  355 0080 0123     		movs	r3, #1
  356 0082 0122     		movs	r2, #1
  357 0084 0021     		movs	r1, #0
  358 0086 9748     		ldr	r0, .L17+8
  359 0088 FFF7FEFF 		bl	gpio_mode_set
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     syscfg_exti_line_config(EXTI_SOURCE_GPIOC, EXTI_SOURCE_PIN0);
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     syscfg_exti_line_config(EXTI_SOURCE_GPIOC, EXTI_SOURCE_PIN0);
  360              		.loc 1 149 5
  361 008c 0021     		movs	r1, #0
  362 008e 0220     		movs	r0, #2
  363 0090 FFF7FEFF 		bl	syscfg_exti_line_config
- 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     exti_init(EXTI_0, EXTI_INTERRUPT, EXTI_TRIG_FALLING);
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     exti_init(EXTI_0, EXTI_INTERRUPT, EXTI_TRIG_FALLING);
  364              		.loc 1 150 5
  365 0094 0122     		movs	r2, #1
  366 0096 0021     		movs	r1, #0
  367 0098 0120     		movs	r0, #1
  368 009a FFF7FEFF 		bl	exti_init
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     exti_interrupt_flag_clear(EXTI_0);
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     exti_interrupt_flag_clear(EXTI_0);
  369              		.loc 1 151 5
  370 009e 0120     		movs	r0, #1
  371 00a0 FFF7FEFF 		bl	exti_interrupt_flag_clear
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     nvic_irq_enable(EXTI0_IRQn, ICM206XX_INT_PRE_PRIORITY, ICM206XX_INT_SUB_PRIORITY);
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     nvic_irq_enable(EXTI0_IRQn, ICM206XX_INT_PRE_PRIORITY, ICM206XX_INT_SUB_PRIORITY);
  372              		.loc 1 152 5
  373 00a4 0022     		movs	r2, #0
  374 00a6 0121     		movs	r1, #1
  375 00a8 0620     		movs	r0, #6
  376 00aa FFF7FEFF 		bl	nvic_irq_enable
- 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_deinit(DMA1, DMA_CH3);   
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_deinit(DMA1, DMA_CH3);   
  377              		.loc 1 155 5
  378 00ae 0321     		movs	r1, #3
  379 00b0 8D48     		ldr	r0, .L17+12
  380 00b2 FFF7FEFF 		bl	dma_deinit
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_addr = (uint32_t)&SPI_DATA(SPI0);
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_addr = (uint32_t)&SPI_DATA(SPI0);
  381              		.loc 1 156 33
  382 00b6 8D4B     		ldr	r3, .L17+16
  383 00b8 3B60     		str	r3, [r7]
- 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.memory0_addr = (uint32_t)Icm206XXTxBufGyro;
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.memory0_addr = (uint32_t)Icm206XXTxBufGyro;
  384              		.loc 1 157 36
  385 00ba 8D4B     		ldr	r3, .L17+20
  386              		.loc 1 157 34
  387 00bc BB60     		str	r3, [r7, #8]
- 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.direction = DMA_MEMORY_TO_PERIPH;
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.direction = DMA_MEMORY_TO_PERIPH;
  388              		.loc 1 158 31
  389 00be 4023     		movs	r3, #64
  390 00c0 BB61     		str	r3, [r7, #24]
- 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.number = 7;
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.number = 7;
  391              		.loc 1 159 28
  392 00c2 0723     		movs	r3, #7
  393 00c4 FB61     		str	r3, [r7, #28]
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
  394              		.loc 1 160 32
  395 00c6 0123     		movs	r3, #1
  396 00c8 7B60     		str	r3, [r7, #4]
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
  397              		.loc 1 161 32
  398 00ca 0023     		movs	r3, #0
  399 00cc FB60     		str	r3, [r7, #12]
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_memory_width = DMA_PERIPH_WIDTH_8BIT;
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_memory_width = DMA_PERIPH_WIDTH_8BIT;
  400              		.loc 1 162 41
  401 00ce 0023     		movs	r3, #0
  402 00d0 3B61     		str	r3, [r7, #16]
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.circular_mode = DMA_CIRCULAR_MODE_DISABLE;
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.circular_mode = DMA_CIRCULAR_MODE_DISABLE;
  403              		.loc 1 163 35
  404 00d2 0123     		movs	r3, #1
  405 00d4 7B61     		str	r3, [r7, #20]
- 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
  406              		.loc 1 164 30
  407 00d6 4FF44033 		mov	r3, #196608
  408 00da 3B62     		str	r3, [r7, #32]
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_single_data_mode_init(DMA1, DMA_CH3, dma_init_struct);
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_single_data_mode_init(DMA1, DMA_CH3, dma_init_struct);
  409              		.loc 1 165 5
  410 00dc 6D46     		mov	r5, sp
  411 00de 07F10804 		add	r4, r7, #8
@@ -575,57 +575,57 @@
  418 00f2 0321     		movs	r1, #3
  419 00f4 7C48     		ldr	r0, .L17+12
  420 00f6 FFF7FEFF 		bl	dma_single_data_mode_init
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_subperipheral_select(DMA1, DMA_CH3, DMA_SUBPERI3);
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_subperipheral_select(DMA1, DMA_CH3, DMA_SUBPERI3);
  421              		.loc 1 166 5
  422 00fa 0322     		movs	r2, #3
  423 00fc 0321     		movs	r1, #3
  424 00fe 7A48     		ldr	r0, .L17+12
  425 0100 FFF7FEFF 		bl	dma_channel_subperipheral_select
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_deinit(DMA1, DMA_CH2);   
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_deinit(DMA1, DMA_CH2);   
  426              		.loc 1 169 5
  427 0104 0221     		movs	r1, #2
  428 0106 7848     		ldr	r0, .L17+12
  429 0108 FFF7FEFF 		bl	dma_deinit
- 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_addr = (uint32_t)&SPI_DATA(SPI0);
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_addr = (uint32_t)&SPI_DATA(SPI0);
  430              		.loc 1 170 33
  431 010c 774B     		ldr	r3, .L17+16
  432 010e 3B60     		str	r3, [r7]
- 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.memory0_addr = (uint32_t)Icm206XXRxBuf;
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.memory0_addr = (uint32_t)Icm206XXRxBuf;
  433              		.loc 1 171 36
  434 0110 784B     		ldr	r3, .L17+24
  435              		.loc 1 171 34
  436 0112 BB60     		str	r3, [r7, #8]
- 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.direction = DMA_PERIPH_TO_MEMORY;
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.direction = DMA_PERIPH_TO_MEMORY;
  437              		.loc 1 172 31
  438 0114 0023     		movs	r3, #0
  439 0116 BB61     		str	r3, [r7, #24]
- 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.number = 7;
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.number = 7;
  440              		.loc 1 173 28
  441 0118 0723     		movs	r3, #7
  442 011a FB61     		str	r3, [r7, #28]
- 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
  443              		.loc 1 174 32
  444 011c 0123     		movs	r3, #1
  445 011e 7B60     		str	r3, [r7, #4]
- 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
  446              		.loc 1 175 32
  447 0120 0023     		movs	r3, #0
  448 0122 FB60     		str	r3, [r7, #12]
- 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_memory_width = DMA_PERIPH_WIDTH_8BIT;
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.periph_memory_width = DMA_PERIPH_WIDTH_8BIT;
  449              		.loc 1 176 41
  450 0124 0023     		movs	r3, #0
  451 0126 3B61     		str	r3, [r7, #16]
- 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.circular_mode = DMA_CIRCULAR_MODE_DISABLE;
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.circular_mode = DMA_CIRCULAR_MODE_DISABLE;
  452              		.loc 1 177 35
  453 0128 0123     		movs	r3, #1
  454 012a 7B61     		str	r3, [r7, #20]
- 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
  455              		.loc 1 178 30
  456 012c 4FF44033 		mov	r3, #196608
  457 0130 3B62     		str	r3, [r7, #32]
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_single_data_mode_init(DMA1, DMA_CH2, dma_init_struct);
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_single_data_mode_init(DMA1, DMA_CH2, dma_init_struct);
  458              		.loc 1 179 5
  459 0132 6D46     		mov	r5, sp
  460 0134 07F10804 		add	r4, r7, #8
@@ -638,92 +638,92 @@
  467 0148 0221     		movs	r1, #2
  468 014a 6748     		ldr	r0, .L17+12
  469 014c FFF7FEFF 		bl	dma_single_data_mode_init
- 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_subperipheral_select(DMA1, DMA_CH2, DMA_SUBPERI3);
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_subperipheral_select(DMA1, DMA_CH2, DMA_SUBPERI3);
  470              		.loc 1 180 5
  471 0150 0322     		movs	r2, #3
  472 0152 0221     		movs	r1, #2
  473 0154 6448     		ldr	r0, .L17+12
  474 0156 FFF7FEFF 		bl	dma_channel_subperipheral_select
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_interrupt_flag_clear(DMA1, DMA_CH2, DMA_CHXCTL_FTFIE);
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_interrupt_flag_clear(DMA1, DMA_CH2, DMA_CHXCTL_FTFIE);
  475              		.loc 1 182 5
  476 015a 1022     		movs	r2, #16
  477 015c 0221     		movs	r1, #2
  478 015e 6248     		ldr	r0, .L17+12
  479 0160 FFF7FEFF 		bl	dma_interrupt_flag_clear
- 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_interrupt_enable(DMA1, DMA_CH2, DMA_CHXCTL_FTFIE);
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_interrupt_enable(DMA1, DMA_CH2, DMA_CHXCTL_FTFIE);
  480              		.loc 1 183 5
  481 0164 1022     		movs	r2, #16
  482 0166 0221     		movs	r1, #2
  483 0168 5F48     		ldr	r0, .L17+12
  484 016a FFF7FEFF 		bl	dma_interrupt_enable
- 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     nvic_irq_enable(DMA1_Channel2_IRQn, DMA_RX_PRE_PRIORITY, DMA_RX_SUB_PRIORITY);
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     nvic_irq_enable(DMA1_Channel2_IRQn, DMA_RX_PRE_PRIORITY, DMA_RX_SUB_PRIORITY);
  485              		.loc 1 184 5
  486 016e 0022     		movs	r2, #0
  487 0170 0121     		movs	r1, #1
  488 0172 3A20     		movs	r0, #58
  489 0174 FFF7FEFF 		bl	nvic_irq_enable
- 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.trans_mode = SPI_TRANSMODE_FULLDUPLEX;
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.trans_mode = SPI_TRANSMODE_FULLDUPLEX;
  490              		.loc 1 187 32
  491 0178 0023     		movs	r3, #0
  492 017a BB62     		str	r3, [r7, #40]
- 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.device_mode = SPI_MASTER;
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.device_mode = SPI_MASTER;
  493              		.loc 1 188 33
  494 017c 4FF48273 		mov	r3, #260
  495 0180 7B62     		str	r3, [r7, #36]
- 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.frame_size = SPI_FRAMESIZE_8BIT;
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.frame_size = SPI_FRAMESIZE_8BIT;
  496              		.loc 1 189 32
  497 0182 0023     		movs	r3, #0
  498 0184 FB62     		str	r3, [r7, #44]
- 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.clock_polarity_phase = SPI_CK_PL_HIGH_PH_2EDGE;
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.clock_polarity_phase = SPI_CK_PL_HIGH_PH_2EDGE;
  499              		.loc 1 190 42
  500 0186 0323     		movs	r3, #3
  501 0188 BB63     		str	r3, [r7, #56]
- 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.nss = SPI_NSS_SOFT;
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.nss = SPI_NSS_SOFT;
  502              		.loc 1 191 25
  503 018a 4FF40073 		mov	r3, #512
  504 018e 3B63     		str	r3, [r7, #48]
- 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.prescale = SPI_PSC_256;                     
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.prescale = SPI_PSC_256;                     
  505              		.loc 1 192 30
  506 0190 3823     		movs	r3, #56
  507 0192 FB63     		str	r3, [r7, #60]
- 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.endian = SPI_ENDIAN_MSB;
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.endian = SPI_ENDIAN_MSB;
  508              		.loc 1 193 28
  509 0194 0023     		movs	r3, #0
  510 0196 7B63     		str	r3, [r7, #52]
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init(SPI0, &spi_init_struct);
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init(SPI0, &spi_init_struct);
  511              		.loc 1 194 5
  512 0198 07F12403 		add	r3, r7, #36
  513 019c 1946     		mov	r1, r3
  514 019e 5648     		ldr	r0, .L17+28
  515 01a0 FFF7FEFF 		bl	spi_init
- 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_crc_polynomial_set(SPI0,7);
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_crc_polynomial_set(SPI0,7);
  516              		.loc 1 196 5
  517 01a4 0721     		movs	r1, #7
  518 01a6 5448     		ldr	r0, .L17+28
  519 01a8 FFF7FEFF 		bl	spi_crc_polynomial_set
- 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_dma_enable(SPI0, SPI_DMA_TRANSMIT);
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_dma_enable(SPI0, SPI_DMA_TRANSMIT);
  520              		.loc 1 198 5
  521 01ac 0021     		movs	r1, #0
  522 01ae 5248     		ldr	r0, .L17+28
  523 01b0 FFF7FEFF 		bl	spi_dma_enable
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_dma_enable(SPI0, SPI_DMA_RECEIVE);
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_dma_enable(SPI0, SPI_DMA_RECEIVE);
  524              		.loc 1 199 5
  525 01b4 0121     		movs	r1, #1
  526 01b6 5048     		ldr	r0, .L17+28
  527 01b8 FFF7FEFF 		bl	spi_dma_enable
- 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_enable(SPI0);
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_enable(SPI0);
  528              		.loc 1 201 5
  529 01bc 4E48     		ldr	r0, .L17+28
  530 01be FFF7FEFF 		bl	spi_enable
- 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXData.WhoAmI = Icm206XXReadByte(WHOAMI);
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXData.WhoAmI = Icm206XXReadByte(WHOAMI);
  531              		.loc 1 204 27
  532 01c2 7520     		movs	r0, #117
  533 01c4 FFF7FEFF 		bl	Icm206XXReadByte
@@ -732,41 +732,41 @@
  536              		.loc 1 204 25
  537 01cc 4B4B     		ldr	r3, .L17+32
  538 01ce 83F83820 		strb	r2, [r3, #56]
- 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(10);
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(10);
  539              		.loc 1 205 5
  540 01d2 0A20     		movs	r0, #10
  541 01d4 FFF7FEFF 		bl	systick_dly_ms
- 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(PWR_MGMT_1, 0x80);
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(PWR_MGMT_1, 0x80);
  542              		.loc 1 207 5
  543 01d8 8021     		movs	r1, #128
  544 01da 6B20     		movs	r0, #107
  545 01dc FFF7FEFF 		bl	Icm206XXWriteByte
- 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
  546              		.loc 1 208 5
  547 01e0 6420     		movs	r0, #100
  548 01e2 FFF7FEFF 		bl	systick_dly_ms
- 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(PWR_MGMT_1, 0x00);
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(PWR_MGMT_1, 0x00);
  549              		.loc 1 209 5
  550 01e6 0021     		movs	r1, #0
  551 01e8 6B20     		movs	r0, #107
  552 01ea FFF7FEFF 		bl	Icm206XXWriteByte
- 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
  553              		.loc 1 210 5
  554 01ee 6420     		movs	r0, #100
  555 01f0 FFF7FEFF 		bl	systick_dly_ms
- 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(GYRO_CONFIG, 0x12);      
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(GYRO_CONFIG, 0x12);      
  556              		.loc 1 213 5
  557 01f4 1221     		movs	r1, #18
  558 01f6 1B20     		movs	r0, #27
  559 01f8 FFF7FEFF 		bl	Icm206XXWriteByte
- 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
  560              		.loc 1 214 5
  561 01fc 6420     		movs	r0, #100
  562 01fe FFF7FEFF 		bl	systick_dly_ms
- 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXRegData = Icm206XXReadByte(GYRO_CONFIG);
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXRegData = Icm206XXReadByte(GYRO_CONFIG);
  563              		.loc 1 215 23
  564 0202 1B20     		movs	r0, #27
  565 0204 FFF7FEFF 		bl	Icm206XXReadByte
@@ -775,21 +775,21 @@
  568              		.loc 1 215 21
  569 020c 3C4B     		ldr	r3, .L17+36
  570 020e 1A70     		strb	r2, [r3]
- 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(10);
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(10);
  571              		.loc 1 216 5
  572 0210 0A20     		movs	r0, #10
  573 0212 FFF7FEFF 		bl	systick_dly_ms
- 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(ACCEL_CONFIG, 0x08);    
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(ACCEL_CONFIG, 0x08);    
  574              		.loc 1 218 5
  575 0216 0821     		movs	r1, #8
  576 0218 1C20     		movs	r0, #28
  577 021a FFF7FEFF 		bl	Icm206XXWriteByte
- 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
  578              		.loc 1 219 5
  579 021e 6420     		movs	r0, #100
  580 0220 FFF7FEFF 		bl	systick_dly_ms
- 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXRegData = Icm206XXReadByte(ACCEL_CONFIG);
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXRegData = Icm206XXReadByte(ACCEL_CONFIG);
  581              		.loc 1 220 23
  582 0224 1C20     		movs	r0, #28
  583 0226 FFF7FEFF 		bl	Icm206XXReadByte
@@ -798,21 +798,21 @@
  586              		.loc 1 220 21
  587 022e 344B     		ldr	r3, .L17+36
  588 0230 1A70     		strb	r2, [r3]
- 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(10);
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(10);
  589              		.loc 1 221 5
  590 0232 0A20     		movs	r0, #10
  591 0234 FFF7FEFF 		bl	systick_dly_ms
- 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(ACCEL_CONFIG2, 0x00);   
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXWriteByte(ACCEL_CONFIG2, 0x00);   
  592              		.loc 1 223 5
  593 0238 0021     		movs	r1, #0
  594 023a 1D20     		movs	r0, #29
  595 023c FFF7FEFF 		bl	Icm206XXWriteByte
- 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(100);
  596              		.loc 1 224 5
  597 0240 6420     		movs	r0, #100
  598 0242 FFF7FEFF 		bl	systick_dly_ms
- 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXRegData = Icm206XXReadByte(ACCEL_CONFIG2);
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXRegData = Icm206XXReadByte(ACCEL_CONFIG2);
  599              		.loc 1 225 23
  600 0246 1D20     		movs	r0, #29
  601 0248 FFF7FEFF 		bl	Icm206XXReadByte
@@ -821,97 +821,97 @@
  604              		.loc 1 225 21
  605 0250 2B4B     		ldr	r3, .L17+36
  606 0252 1A70     		strb	r2, [r3]
- 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(10);
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     systick_dly_ms(10);
  607              		.loc 1 226 5
  608 0254 0A20     		movs	r0, #10
  609 0256 FFF7FEFF 		bl	systick_dly_ms
- 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.prescale = SPI_PSC_8;                     
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init_struct.prescale = SPI_PSC_8;                     
  610              		.loc 1 229 30
  611 025a 1023     		movs	r3, #16
  612 025c FB63     		str	r3, [r7, #60]
- 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     spi_init(SPI0, &spi_init_struct);
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     spi_init(SPI0, &spi_init_struct);
  613              		.loc 1 230 5
  614 025e 07F12403 		add	r3, r7, #36
  615 0262 1946     		mov	r1, r3
  616 0264 2448     		ldr	r0, .L17+28
  617 0266 FFF7FEFF 		bl	spi_init
- 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXData.AccScale = 1.0f / 8192.0f;
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXData.AccScale = 1.0f / 8192.0f;
  618              		.loc 1 233 27
  619 026a 244B     		ldr	r3, .L17+32
  620 026c 4FF06452 		mov	r2, #956301312
  621 0270 DA62     		str	r2, [r3, #44]	@ float
- 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXData.GyroScale = 1.0f / 32.8f * (PI / 180.0f);
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXData.GyroScale = 1.0f / 32.8f * (PI / 180.0f);
  622              		.loc 1 234 28
  623 0272 224B     		ldr	r3, .L17+32
  624 0274 234A     		ldr	r2, .L17+40
  625 0276 1A63     		str	r2, [r3, #48]	@ float
- 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXData.TempScale = 1.0f / 333.87f;
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     Icm206XXData.TempScale = 1.0f / 333.87f;
  626              		.loc 1 235 28
  627 0278 204B     		ldr	r3, .L17+32
  628 027a 234A     		ldr	r2, .L17+44
  629 027c 5A63     		str	r2, [r3, #52]	@ float
- 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_deinit(TIMER12);
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_deinit(TIMER12);
  630              		.loc 1 238 5
  631 027e 2348     		ldr	r0, .L17+48
  632 0280 FFF7FEFF 		bl	timer_deinit
- 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.prescaler = 0;
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.prescaler = 0;
  633              		.loc 1 239 30
  634 0284 0023     		movs	r3, #0
  635 0286 A7F84030 		strh	r3, [r7, #64]	@ movhi
- 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.alignedmode = TIMER_COUNTER_EDGE;
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.alignedmode = TIMER_COUNTER_EDGE;
  636              		.loc 1 240 32
  637 028a 0023     		movs	r3, #0
  638 028c A7F84230 		strh	r3, [r7, #66]	@ movhi
- 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.counterdirection = TIMER_COUNTER_UP;
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.counterdirection = TIMER_COUNTER_UP;
  639              		.loc 1 241 37
  640 0290 0023     		movs	r3, #0
  641 0292 A7F84430 		strh	r3, [r7, #68]	@ movhi
- 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.period = SYSTERM_CLK / 16000 - 1;
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.period = SYSTERM_CLK / 16000 - 1;
  642              		.loc 1 242 27
  643 0296 43F2D303 		movw	r3, #12499
  644 029a BB64     		str	r3, [r7, #72]
- 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.clockdivision = TIMER_CKDIV_DIV1;
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.clockdivision = TIMER_CKDIV_DIV1;
  645              		.loc 1 243 34
  646 029c 0023     		movs	r3, #0
  647 029e A7F84C30 		strh	r3, [r7, #76]	@ movhi
- 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.repetitioncounter = 0;
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_initpara.repetitioncounter = 0;
  648              		.loc 1 244 38
  649 02a2 0023     		movs	r3, #0
  650 02a4 87F84E30 		strb	r3, [r7, #78]
- 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_init(TIMER12, &timer_initpara);
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_init(TIMER12, &timer_initpara);
  651              		.loc 1 245 5
  652 02a8 07F14003 		add	r3, r7, #64
  653 02ac 1946     		mov	r1, r3
  654 02ae 1748     		ldr	r0, .L17+48
  655 02b0 FFF7FEFF 		bl	timer_init
- 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     nvic_irq_enable(TIMER7_UP_TIMER12_IRQn, ICM206XX_INT_PRE_PRIORITY, ICM206XX_INT_SUB_PRIORITY);
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     nvic_irq_enable(TIMER7_UP_TIMER12_IRQn, ICM206XX_INT_PRE_PRIORITY, ICM206XX_INT_SUB_PRIORITY);
  656              		.loc 1 247 5
  657 02b4 0022     		movs	r2, #0
  658 02b6 0121     		movs	r1, #1
  659 02b8 2C20     		movs	r0, #44
  660 02ba FFF7FEFF 		bl	nvic_irq_enable
- 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_interrupt_enable(TIMER12, TIMER_INT_UP);
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_interrupt_enable(TIMER12, TIMER_INT_UP);
  661              		.loc 1 248 5
  662 02be 0121     		movs	r1, #1
  663 02c0 1248     		ldr	r0, .L17+48
  664 02c2 FFF7FEFF 		bl	timer_interrupt_enable
- 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_counter_value_config(TIMER12 , 0);
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_counter_value_config(TIMER12 , 0);
  665              		.loc 1 249 5
  666 02c6 0021     		movs	r1, #0
  667 02c8 1048     		ldr	r0, .L17+48
  668 02ca FFF7FEFF 		bl	timer_counter_value_config
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_enable(TIMER12);
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_enable(TIMER12);
  669              		.loc 1 250 5
  670 02ce 0F48     		ldr	r0, .L17+48
  671 02d0 FFF7FEFF 		bl	timer_enable
- 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** }
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** }
  672              		.loc 1 251 1
  673 02d4 00BF     		nop
  674 02d6 5037     		adds	r7, r7, #80
@@ -947,9 +947,9 @@
  705              		.fpu softvfp
  707              	TIMER7_UP_TIMER12_IRQHandler:
  708              	.LFB160:
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** void TIMER7_UP_TIMER12_IRQHandler(void)
- 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** void TIMER7_UP_TIMER12_IRQHandler(void)
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
  709              		.loc 1 254 1
  710              		.cfi_startproc
  711              		@ args = 0, pretend = 0, frame = 0
@@ -960,13 +960,13 @@
  716              		.cfi_offset 14, -4
  717 0002 00AF     		add	r7, sp, #0
  718              		.cfi_def_cfa_register 7
- 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     timer_interrupt_flag_clear(TIMER12, TIMER_INT_UP);
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     timer_interrupt_flag_clear(TIMER12, TIMER_INT_UP);
  719              		.loc 1 255 5
  720 0004 0121     		movs	r1, #1
  721 0006 1E48     		ldr	r0, .L25
  722 0008 FFF7FEFF 		bl	timer_interrupt_flag_clear
- 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     if(DMA_CHCNT(DMA1, DMA_CH2) != DMA_CHCNT(DMA1, DMA_CH3))
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     if(DMA_CHCNT(DMA1, DMA_CH2) != DMA_CHCNT(DMA1, DMA_CH3))
  723              		.loc 1 257 8
  724 000c 1D4B     		ldr	r3, .L25+4
  725 000e 1A68     		ldr	r2, [r3]
@@ -976,57 +976,57 @@
  729              		.loc 1 257 7
  730 0014 9A42     		cmp	r2, r3
  731 0016 31D1     		bne	.L24
- 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         return;
- 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     }
- 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_LOW();
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         return;
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     }
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     ICM206XX_CS_LOW();
  732              		.loc 1 262 5
  733 0018 0421     		movs	r1, #4
  734 001a 1C48     		ldr	r0, .L25+12
  735 001c FFF7FEFF 		bl	gpio_bit_reset
- 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_disable(DMA1, DMA_CH3);
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_disable(DMA1, DMA_CH3);
  736              		.loc 1 264 5
  737 0020 0321     		movs	r1, #3
  738 0022 1B48     		ldr	r0, .L25+16
  739 0024 FFF7FEFF 		bl	dma_channel_disable
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_disable(DMA1, DMA_CH2);
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_disable(DMA1, DMA_CH2);
  740              		.loc 1 265 5
  741 0028 0221     		movs	r1, #2
  742 002a 1948     		ldr	r0, .L25+16
  743 002c FFF7FEFF 		bl	dma_channel_disable
- 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****    if(Icm206XXRxBufIndex == (ICM206XX_DATA_AVRG_CNTS - 1))
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****    if(Icm206XXRxBufIndex == (ICM206XX_DATA_AVRG_CNTS - 1))
  744              		.loc 1 267 26
  745 0030 184B     		ldr	r3, .L25+20
  746 0032 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  747              		.loc 1 267 6
  748 0034 032B     		cmp	r3, #3
  749 0036 0CD1     		bne	.L22
- 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
- 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHM0ADDR(DMA1, DMA_CH2) = (uint32_t)Icm206XXRxBuf;
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHM0ADDR(DMA1, DMA_CH2) = (uint32_t)Icm206XXRxBuf;
  750              		.loc 1 269 9
  751 0038 174B     		ldr	r3, .L25+24
  752              		.loc 1 269 39
  753 003a 184A     		ldr	r2, .L25+28
  754              		.loc 1 269 37
  755 003c 1A60     		str	r2, [r3]
- 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHCNT(DMA1, DMA_CH2) = 15;
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHCNT(DMA1, DMA_CH2) = 15;
  756              		.loc 1 270 9
  757 003e 114B     		ldr	r3, .L25+4
  758              		.loc 1 270 34
  759 0040 0F22     		movs	r2, #15
  760 0042 1A60     		str	r2, [r3]
- 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHM0ADDR(DMA1, DMA_CH3) = (uint32_t)Icm206XXTxBufGyroTemp;
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHM0ADDR(DMA1, DMA_CH3) = (uint32_t)Icm206XXTxBufGyroTemp;
  761              		.loc 1 272 9
  762 0044 164B     		ldr	r3, .L25+32
  763              		.loc 1 272 39
  764 0046 174A     		ldr	r2, .L25+36
  765              		.loc 1 272 37
  766 0048 1A60     		str	r2, [r3]
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHCNT(DMA1, DMA_CH3) = 15;
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHCNT(DMA1, DMA_CH3) = 15;
  767              		.loc 1 273 9
  768 004a 0F4B     		ldr	r3, .L25+8
  769              		.loc 1 273 34
@@ -1034,56 +1034,56 @@
  771 004e 1A60     		str	r2, [r3]
  772 0050 0BE0     		b	.L23
  773              	.L22:
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     }
- 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     else
- 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHM0ADDR(DMA1, DMA_CH2) = (uint32_t)Icm206XXRxBuf;
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     }
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     else
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHM0ADDR(DMA1, DMA_CH2) = (uint32_t)Icm206XXRxBuf;
  774              		.loc 1 277 9
  775 0052 114B     		ldr	r3, .L25+24
  776              		.loc 1 277 39
  777 0054 114A     		ldr	r2, .L25+28
  778              		.loc 1 277 37
  779 0056 1A60     		str	r2, [r3]
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHCNT(DMA1, DMA_CH2) = 7;
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHCNT(DMA1, DMA_CH2) = 7;
  780              		.loc 1 278 9
  781 0058 0A4B     		ldr	r3, .L25+4
  782              		.loc 1 278 34
  783 005a 0722     		movs	r2, #7
  784 005c 1A60     		str	r2, [r3]
- 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHM0ADDR(DMA1, DMA_CH3) = (uint32_t)Icm206XXTxBufGyro;
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHM0ADDR(DMA1, DMA_CH3) = (uint32_t)Icm206XXTxBufGyro;
  785              		.loc 1 280 9
  786 005e 104B     		ldr	r3, .L25+32
  787              		.loc 1 280 39
  788 0060 114A     		ldr	r2, .L25+40
  789              		.loc 1 280 37
  790 0062 1A60     		str	r2, [r3]
- 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHCNT(DMA1, DMA_CH3) = 7;
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         DMA_CHCNT(DMA1, DMA_CH3) = 7;
  791              		.loc 1 281 9
  792 0064 084B     		ldr	r3, .L25+8
  793              		.loc 1 281 34
  794 0066 0722     		movs	r2, #7
  795 0068 1A60     		str	r2, [r3]
  796              	.L23:
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     }
- 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_enable(DMA1, DMA_CH3);
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     }
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_enable(DMA1, DMA_CH3);
  797              		.loc 1 284 5
  798 006a 0321     		movs	r1, #3
  799 006c 0848     		ldr	r0, .L25+16
  800 006e FFF7FEFF 		bl	dma_channel_enable
- 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_enable(DMA1, DMA_CH2);
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     dma_channel_enable(DMA1, DMA_CH2);
  801              		.loc 1 285 5
  802 0072 0221     		movs	r1, #2
  803 0074 0648     		ldr	r0, .L25+16
  804 0076 FFF7FEFF 		bl	dma_channel_enable
  805 007a 00E0     		b	.L19
  806              	.L24:
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     }
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     }
  807              		.loc 1 259 9
  808 007c 00BF     		nop
  809              	.L19:
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** }
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** }
  810              		.loc 1 286 1
  811 007e 80BD     		pop	{r7, pc}
  812              	.L26:
@@ -1114,9 +1114,9 @@
  838              		.fpu softvfp
  840              	DMA1_Channel2_IRQHandler:
  841              	.LFB161:
- 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** void DMA1_Channel2_IRQHandler(void)
- 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** void DMA1_Channel2_IRQHandler(void)
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
  842              		.loc 1 289 1
  843              		.cfi_startproc
  844              		@ args = 0, pretend = 0, frame = 8
@@ -1129,8 +1129,8 @@
  851              		.cfi_def_cfa_offset 16
  852 0004 00AF     		add	r7, sp, #0
  853              		.cfi_def_cfa_register 7
- 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     static int32_t GyroXSum = 0, GyroYSum = 0, GyroZSum = 0;
- 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     int16_t GyroX = 0, GyroY = 0, GyroZ = 0;
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     static int32_t GyroXSum = 0, GyroYSum = 0, GyroZSum = 0;
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     int16_t GyroX = 0, GyroY = 0, GyroZ = 0;
  854              		.loc 1 291 13
  855 0006 0023     		movs	r3, #0
  856 0008 FB80     		strh	r3, [r7, #6]	@ movhi
@@ -1140,8 +1140,8 @@
  860              		.loc 1 291 35
  861 000e 0023     		movs	r3, #0
  862 0010 7B80     		strh	r3, [r7, #2]	@ movhi
- 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     if(dma_interrupt_flag_get(DMA1, DMA_CH2, DMA_INTF_FTFIF) == SET)
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     if(dma_interrupt_flag_get(DMA1, DMA_CH2, DMA_INTF_FTFIF) == SET)
  863              		.loc 1 293 8
  864 0012 2022     		movs	r2, #32
  865 0014 0221     		movs	r1, #2
@@ -1151,21 +1151,21 @@
  869              		.loc 1 293 7
  870 001e 012B     		cmp	r3, #1
  871 0020 40F06C81 		bne	.L34
- 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     {
- 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         dma_interrupt_flag_clear(DMA1, DMA_CH2, DMA_INTC_FTFIFC);
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     {
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         dma_interrupt_flag_clear(DMA1, DMA_CH2, DMA_INTC_FTFIFC);
  872              		.loc 1 295 9
  873 0024 2022     		movs	r2, #32
  874 0026 0221     		movs	r1, #2
  875 0028 2448     		ldr	r0, .L35
  876 002a FFF7FEFF 		bl	dma_interrupt_flag_clear
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         dma_interrupt_flag_clear(DMA1, DMA_CH3, DMA_INTC_FTFIFC);
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         dma_interrupt_flag_clear(DMA1, DMA_CH3, DMA_INTC_FTFIFC);
  877              		.loc 1 296 9
  878 002e 2022     		movs	r2, #32
  879 0030 0321     		movs	r1, #3
  880 0032 2248     		ldr	r0, .L35
  881 0034 FFF7FEFF 		bl	dma_interrupt_flag_clear
- 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         Icm206XXRxBufIndex++;
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         Icm206XXRxBufIndex++;
  882              		.loc 1 298 27
  883 0038 214B     		ldr	r3, .L35+4
  884 003a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
@@ -1173,16 +1173,16 @@
  886 003e DAB2     		uxtb	r2, r3
  887 0040 1F4B     		ldr	r3, .L35+4
  888 0042 1A70     		strb	r2, [r3]
- 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         
- 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         if(Icm206XXRxBufIndex < ICM206XX_DATA_AVRG_CNTS)
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         if(Icm206XXRxBufIndex < ICM206XX_DATA_AVRG_CNTS)
  889              		.loc 1 300 31
  890 0044 1E4B     		ldr	r3, .L35+4
  891 0046 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  892              		.loc 1 300 11
  893 0048 032B     		cmp	r3, #3
  894 004a 43D8     		bhi	.L29
- 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         {
- 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroX = (Icm206XXRxBuf[10]<<8) + Icm206XXRxBuf[11];
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         {
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroX = (Icm206XXRxBuf[10]<<8) + Icm206XXRxBuf[11];
  895              		.loc 1 302 35
  896 004c 1D4B     		ldr	r3, .L35+8
  897 004e 9B7A     		ldrb	r3, [r3, #10]	@ zero_extendqisi2
@@ -1199,7 +1199,7 @@
  908 005e 9BB2     		uxth	r3, r3
  909              		.loc 1 302 19
  910 0060 FB80     		strh	r3, [r7, #6]	@ movhi
- 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroY = (Icm206XXRxBuf[12]<<8) + Icm206XXRxBuf[13];
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroY = (Icm206XXRxBuf[12]<<8) + Icm206XXRxBuf[13];
  911              		.loc 1 303 35
  912 0062 184B     		ldr	r3, .L35+8
  913 0064 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
@@ -1216,7 +1216,7 @@
  924 0074 9BB2     		uxth	r3, r3
  925              		.loc 1 303 19
  926 0076 BB80     		strh	r3, [r7, #4]	@ movhi
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroZ = (Icm206XXRxBuf[14]<<8) + Icm206XXRxBuf[0];
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroZ = (Icm206XXRxBuf[14]<<8) + Icm206XXRxBuf[0];
  927              		.loc 1 304 35
  928 0078 124B     		ldr	r3, .L35+8
  929 007a 9B7B     		ldrb	r3, [r3, #14]	@ zero_extendqisi2
@@ -1233,8 +1233,8 @@
  940 008a 9BB2     		uxth	r3, r3
  941              		.loc 1 304 19
  942 008c 7B80     		strh	r3, [r7, #2]	@ movhi
- 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroXSum += GyroX;
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroXSum += GyroX;
  943              		.loc 1 306 22
  944 008e B7F90620 		ldrsh	r2, [r7, #6]
  945 0092 0D4B     		ldr	r3, .L35+12
@@ -1242,7 +1242,7 @@
  947 0096 1344     		add	r3, r3, r2
  948 0098 0B4A     		ldr	r2, .L35+12
  949 009a 1360     		str	r3, [r2]
- 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroYSum += GyroY;
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroYSum += GyroY;
  950              		.loc 1 307 22
  951 009c B7F90420 		ldrsh	r2, [r7, #4]
  952 00a0 0A4B     		ldr	r3, .L35+16
@@ -1250,7 +1250,7 @@
  954 00a4 1344     		add	r3, r3, r2
  955 00a6 094A     		ldr	r2, .L35+16
  956 00a8 1360     		str	r3, [r2]
- 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroZSum += GyroZ;
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroZSum += GyroZ;
  957              		.loc 1 308 22
  958 00aa B7F90220 		ldrsh	r2, [r7, #2]
  959 00ae 084B     		ldr	r3, .L35+20
@@ -1269,16 +1269,16 @@
  972 00cc 00000000 		.word	GyroYSum.11250
  973 00d0 00000000 		.word	GyroZSum.11251
  974              	.L29:
- 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         }
- 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         else
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         {
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXRxBufIndex = 0;
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         }
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         else
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         {
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXRxBufIndex = 0;
  975              		.loc 1 312 32
  976 00d4 8B4B     		ldr	r3, .L37
  977 00d6 0022     		movs	r2, #0
  978 00d8 1A70     		strb	r2, [r3]
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroX = (Icm206XXRxBuf[10]<<8) + Icm206XXRxBuf[11];
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroX = (Icm206XXRxBuf[10]<<8) + Icm206XXRxBuf[11];
  979              		.loc 1 314 35
  980 00da 8B4B     		ldr	r3, .L37+4
  981 00dc 9B7A     		ldrb	r3, [r3, #10]	@ zero_extendqisi2
@@ -1295,7 +1295,7 @@
  992 00ec 9BB2     		uxth	r3, r3
  993              		.loc 1 314 19
  994 00ee FB80     		strh	r3, [r7, #6]	@ movhi
- 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroY = (Icm206XXRxBuf[12]<<8) + Icm206XXRxBuf[13];
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroY = (Icm206XXRxBuf[12]<<8) + Icm206XXRxBuf[13];
  995              		.loc 1 315 35
  996 00f0 854B     		ldr	r3, .L37+4
  997 00f2 1B7B     		ldrb	r3, [r3, #12]	@ zero_extendqisi2
@@ -1312,7 +1312,7 @@
  1008 0102 9BB2     		uxth	r3, r3
  1009              		.loc 1 315 19
  1010 0104 BB80     		strh	r3, [r7, #4]	@ movhi
- 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroZ = (Icm206XXRxBuf[14]<<8) + Icm206XXRxBuf[0];
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroZ = (Icm206XXRxBuf[14]<<8) + Icm206XXRxBuf[0];
  1011              		.loc 1 316 35
  1012 0106 804B     		ldr	r3, .L37+4
  1013 0108 9B7B     		ldrb	r3, [r3, #14]	@ zero_extendqisi2
@@ -1329,8 +1329,8 @@
  1024 0118 9BB2     		uxth	r3, r3
  1025              		.loc 1 316 19
  1026 011a 7B80     		strh	r3, [r7, #2]	@ movhi
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroXSum += GyroX;
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroXSum += GyroX;
  1027              		.loc 1 318 22
  1028 011c B7F90620 		ldrsh	r2, [r7, #6]
  1029 0120 7A4B     		ldr	r3, .L37+8
@@ -1338,7 +1338,7 @@
  1031 0124 1344     		add	r3, r3, r2
  1032 0126 794A     		ldr	r2, .L37+8
  1033 0128 1360     		str	r3, [r2]
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroYSum += GyroY;
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroYSum += GyroY;
  1034              		.loc 1 319 22
  1035 012a B7F90420 		ldrsh	r2, [r7, #4]
  1036 012e 784B     		ldr	r3, .L37+12
@@ -1346,7 +1346,7 @@
  1038 0132 1344     		add	r3, r3, r2
  1039 0134 764A     		ldr	r2, .L37+12
  1040 0136 1360     		str	r3, [r2]
- 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroZSum += GyroZ;
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroZSum += GyroZ;
  1041              		.loc 1 320 22
  1042 0138 B7F90220 		ldrsh	r2, [r7, #2]
  1043 013c 754B     		ldr	r3, .L37+16
@@ -1354,8 +1354,8 @@
  1045 0140 1344     		add	r3, r3, r2
  1046 0142 744A     		ldr	r2, .L37+16
  1047 0144 1360     		str	r3, [r2]
- 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HGyroX = GyroXSum / ICM206XX_DATA_AVRG_CNTS;
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HGyroX = GyroXSum / ICM206XX_DATA_AVRG_CNTS;
  1048              		.loc 1 322 44
  1049 0146 714B     		ldr	r3, .L37+8
  1050 0148 1B68     		ldr	r3, [r3]
@@ -1368,7 +1368,7 @@
  1057 0152 1AB2     		sxth	r2, r3
  1058 0154 704B     		ldr	r3, .L37+20
  1059 0156 1A81     		strh	r2, [r3, #8]	@ movhi
- 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HGyroY = GyroYSum / ICM206XX_DATA_AVRG_CNTS;
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HGyroY = GyroYSum / ICM206XX_DATA_AVRG_CNTS;
  1060              		.loc 1 323 44
  1061 0158 6D4B     		ldr	r3, .L37+12
  1062 015a 1B68     		ldr	r3, [r3]
@@ -1381,7 +1381,7 @@
  1069 0164 1AB2     		sxth	r2, r3
  1070 0166 6C4B     		ldr	r3, .L37+20
  1071 0168 5A81     		strh	r2, [r3, #10]	@ movhi
- 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HGyroZ = GyroZSum / ICM206XX_DATA_AVRG_CNTS;
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HGyroZ = GyroZSum / ICM206XX_DATA_AVRG_CNTS;
  1072              		.loc 1 324 44
  1073 016a 6A4B     		ldr	r3, .L37+16
  1074 016c 1B68     		ldr	r3, [r3]
@@ -1394,8 +1394,8 @@
  1081 0176 1AB2     		sxth	r2, r3
  1082 0178 674B     		ldr	r3, .L37+20
  1083 017a 9A81     		strh	r2, [r3, #12]	@ movhi
- 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HTemp = (Icm206XXRxBuf[8]<<8) + Icm206XXRxBuf[9];
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HTemp = (Icm206XXRxBuf[8]<<8) + Icm206XXRxBuf[9];
  1084              		.loc 1 326 48
  1085 017c 624B     		ldr	r3, .L37+4
  1086 017e 1B7A     		ldrb	r3, [r3, #8]	@ zero_extendqisi2
@@ -1414,8 +1414,8 @@
  1099              		.loc 1 326 32
  1100 0192 614B     		ldr	r3, .L37+20
  1101 0194 DA80     		strh	r2, [r3, #6]	@ movhi
- 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HAccX = (Icm206XXRxBuf[2]<<8) + Icm206XXRxBuf[3];
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HAccX = (Icm206XXRxBuf[2]<<8) + Icm206XXRxBuf[3];
  1102              		.loc 1 328 48
  1103 0196 5C4B     		ldr	r3, .L37+4
  1104 0198 9B78     		ldrb	r3, [r3, #2]	@ zero_extendqisi2
@@ -1434,7 +1434,7 @@
  1117              		.loc 1 328 32
  1118 01ac 5A4B     		ldr	r3, .L37+20
  1119 01ae 1A80     		strh	r2, [r3]	@ movhi
- 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HAccY = (Icm206XXRxBuf[4]<<8) + Icm206XXRxBuf[5];
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HAccY = (Icm206XXRxBuf[4]<<8) + Icm206XXRxBuf[5];
  1120              		.loc 1 329 48
  1121 01b0 554B     		ldr	r3, .L37+4
  1122 01b2 1B79     		ldrb	r3, [r3, #4]	@ zero_extendqisi2
@@ -1453,7 +1453,7 @@
  1135              		.loc 1 329 32
  1136 01c6 544B     		ldr	r3, .L37+20
  1137 01c8 5A80     		strh	r2, [r3, #2]	@ movhi
- 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HAccZ = (Icm206XXRxBuf[6]<<8) + Icm206XXRxBuf[7];
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.HAccZ = (Icm206XXRxBuf[6]<<8) + Icm206XXRxBuf[7];
  1138              		.loc 1 330 48
  1139 01ca 4F4B     		ldr	r3, .L37+4
  1140 01cc 9B79     		ldrb	r3, [r3, #6]	@ zero_extendqisi2
@@ -1472,25 +1472,25 @@
  1153              		.loc 1 330 32
  1154 01e0 4D4B     		ldr	r3, .L37+20
  1155 01e2 9A80     		strh	r2, [r3, #4]	@ movhi
- 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroXSum = 0;
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroXSum = 0;
  1156              		.loc 1 332 22
  1157 01e4 494B     		ldr	r3, .L37+8
  1158 01e6 0022     		movs	r2, #0
  1159 01e8 1A60     		str	r2, [r3]
- 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroYSum = 0;
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroYSum = 0;
  1160              		.loc 1 333 22
  1161 01ea 494B     		ldr	r3, .L37+12
  1162 01ec 0022     		movs	r2, #0
  1163 01ee 1A60     		str	r2, [r3]
- 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             GyroZSum = 0;
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             GyroZSum = 0;
  1164              		.loc 1 334 22
  1165 01f0 484B     		ldr	r3, .L37+16
  1166 01f2 0022     		movs	r2, #0
  1167 01f4 1A60     		str	r2, [r3]
- 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FAccX = (Icm206XXData.HAccX) * (Icm206XXData.AccScale);
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FAccX = (Icm206XXData.HAccX) * (Icm206XXData.AccScale);
  1168              		.loc 1 337 47
  1169 01f6 484B     		ldr	r3, .L37+20
  1170 01f8 B3F90030 		ldrsh	r3, [r3]
@@ -1512,7 +1512,7 @@
  1186              		.loc 1 337 32
  1187 0214 404B     		ldr	r3, .L37+20
  1188 0216 1A61     		str	r2, [r3, #16]	@ float
- 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FAccY = (Icm206XXData.HAccY) * (Icm206XXData.AccScale);
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FAccY = (Icm206XXData.HAccY) * (Icm206XXData.AccScale);
  1189              		.loc 1 338 47
  1190 0218 3F4B     		ldr	r3, .L37+20
  1191 021a B3F90230 		ldrsh	r3, [r3, #2]
@@ -1534,7 +1534,7 @@
  1207              		.loc 1 338 32
  1208 0236 384B     		ldr	r3, .L37+20
  1209 0238 5A61     		str	r2, [r3, #20]	@ float
- 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FAccZ = (Icm206XXData.HAccZ) * (Icm206XXData.AccScale);
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FAccZ = (Icm206XXData.HAccZ) * (Icm206XXData.AccScale);
  1210              		.loc 1 339 47
  1211 023a 374B     		ldr	r3, .L37+20
  1212 023c B3F90430 		ldrsh	r3, [r3, #4]
@@ -1556,8 +1556,8 @@
  1228              		.loc 1 339 32
  1229 0258 2F4B     		ldr	r3, .L37+20
  1230 025a 9A61     		str	r2, [r3, #24]	@ float
- 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FTemp = 21.0f + (Icm206XXData.HTemp) * (Icm206XXData.TempScale);
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FTemp = 21.0f + (Icm206XXData.HTemp) * (Icm206XXData.TempScale);
  1231              		.loc 1 341 55
  1232 025c 2E4B     		ldr	r3, .L37+20
  1233 025e B3F90630 		ldrsh	r3, [r3, #6]
@@ -1585,8 +1585,8 @@
  1255              		.loc 1 341 32
  1256 0284 244B     		ldr	r3, .L37+20
  1257 0286 DA61     		str	r2, [r3, #28]	@ float
- 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FGyroX = (Icm206XXData.HGyroX) * (Icm206XXData.GyroScale);
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FGyroX = (Icm206XXData.HGyroX) * (Icm206XXData.GyroScale);
  1258              		.loc 1 343 48
  1259 0288 234B     		ldr	r3, .L37+20
  1260 028a B3F90830 		ldrsh	r3, [r3, #8]
@@ -1608,7 +1608,7 @@
  1276              		.loc 1 343 33
  1277 02a6 1C4B     		ldr	r3, .L37+20
  1278 02a8 1A62     		str	r2, [r3, #32]	@ float
- 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FGyroY = (Icm206XXData.HGyroY) * (Icm206XXData.GyroScale);
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FGyroY = (Icm206XXData.HGyroY) * (Icm206XXData.GyroScale);
  1279              		.loc 1 344 48
  1280 02aa 1B4B     		ldr	r3, .L37+20
  1281 02ac B3F90A30 		ldrsh	r3, [r3, #10]
@@ -1630,7 +1630,7 @@
  1297              		.loc 1 344 33
  1298 02c8 134B     		ldr	r3, .L37+20
  1299 02ca 5A62     		str	r2, [r3, #36]	@ float
- 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FGyroZ = (Icm206XXData.HGyroZ) * (Icm206XXData.GyroScale);
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             Icm206XXData.FGyroZ = (Icm206XXData.HGyroZ) * (Icm206XXData.GyroScale);
  1300              		.loc 1 345 48
  1301 02cc 124B     		ldr	r3, .L37+20
  1302 02ce B3F90C30 		ldrsh	r3, [r3, #12]
@@ -1652,22 +1652,22 @@
  1318              		.loc 1 345 33
  1319 02ea 0B4B     		ldr	r3, .L37+20
  1320 02ec 9A62     		str	r2, [r3, #40]	@ float
- 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             
- 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****             exti_software_interrupt_enable(EXTI_0);
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****             exti_software_interrupt_enable(EXTI_0);
  1321              		.loc 1 347 13
  1322 02ee 0120     		movs	r0, #1
  1323 02f0 FFF7FEFF 		bl	exti_software_interrupt_enable
  1324              	.L30:
- 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         }
- 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****         ICM206XX_CS_HIGH();
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         }
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****         ICM206XX_CS_HIGH();
  1325              		.loc 1 350 9
  1326 02f4 0421     		movs	r1, #4
  1327 02f6 0A48     		ldr	r0, .L37+28
  1328 02f8 FFF7FEFF 		bl	gpio_bit_set
  1329              	.L34:
- 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     }
- 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** }
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     }
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** }
  1330              		.loc 1 352 1
  1331 02fc 00BF     		nop
  1332 02fe 0837     		adds	r7, r7, #8
@@ -1698,9 +1698,9 @@
  1358              		.fpu softvfp
  1360              	EXTI0_IRQHandler:
  1361              	.LFB162:
- 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** void EXTI0_IRQHandler(void)
- 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** {
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** void EXTI0_IRQHandler(void)
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** {
  1362              		.loc 1 355 1
  1363              		.cfi_startproc
  1364              		@ args = 0, pretend = 0, frame = 0
@@ -1711,18 +1711,18 @@
  1369              		.cfi_offset 14, -4
  1370 0002 00AF     		add	r7, sp, #0
  1371              		.cfi_def_cfa_register 7
- 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     exti_interrupt_flag_clear(EXTI_0);
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     exti_interrupt_flag_clear(EXTI_0);
  1372              		.loc 1 356 5
  1373 0004 0120     		movs	r0, #1
  1374 0006 FFF7FEFF 		bl	exti_interrupt_flag_clear
- 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** 
- 358:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     GimbalWork();
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** 
+ 358:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     GimbalWork();
  1375              		.loc 1 358 5
  1376 000a FFF7FEFF 		bl	GimbalWork
- 359:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 360:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 361:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c ****     
- 362:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnDevice\icm206xx.c **** }
+ 359:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 360:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 361:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c ****     
+ 362:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnDevice\icm206xx.c **** }
  1377              		.loc 1 362 1
  1378 000e 00BF     		nop
  1379 0010 80BD     		pop	{r7, pc}
@@ -1770,46 +1770,46 @@
 DEFINED SYMBOLS
                             *ABS*:00000000 icm206xx.c
                             *COM*:0000003c Icm206XXData
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:19     .bss.Icm206XXRegData:00000000 Icm206XXRegData
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:20     .bss.Icm206XXRegData:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:24     .bss.Icm206XXRxBufIndex:00000000 Icm206XXRxBufIndex
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:25     .bss.Icm206XXRxBufIndex:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:27     .bss.Icm206XXRxBuf:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:30     .bss.Icm206XXRxBuf:00000000 Icm206XXRxBuf
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:33     .data.Icm206XXTxBufGyro:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:36     .data.Icm206XXTxBufGyro:00000000 Icm206XXTxBufGyro
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:39     .data.Icm206XXTxBufGyroTemp:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:42     .data.Icm206XXTxBufGyroTemp:00000000 Icm206XXTxBufGyroTemp
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:46     .text.SPI0ReadWriteBytes:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:53     .text.SPI0ReadWriteBytes:00000000 SPI0ReadWriteBytes
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:147    .text.SPI0ReadWriteBytes:00000078 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:152    .text.Icm206XXWriteByte:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:158    .text.Icm206XXWriteByte:00000000 Icm206XXWriteByte
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:204    .text.Icm206XXWriteByte:00000038 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:209    .text.Icm206XXReadByte:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:215    .text.Icm206XXReadByte:00000000 Icm206XXReadByte
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:266    .text.Icm206XXReadByte:00000040 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:274    .bss.icA206xx_debug_data:00000000 icA206xx_debug_data
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:275    .bss.icA206xx_debug_data:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:277    .text.Icm206XXInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:284    .text.Icm206XXInit:00000000 Icm206XXInit
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:683    .text.Icm206XXInit:000002dc $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:700    .text.TIMER7_UP_TIMER12_IRQHandler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:707    .text.TIMER7_UP_TIMER12_IRQHandler:00000000 TIMER7_UP_TIMER12_IRQHandler
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:815    .text.TIMER7_UP_TIMER12_IRQHandler:00000080 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:833    .text.DMA1_Channel2_IRQHandler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:840    .text.DMA1_Channel2_IRQHandler:00000000 DMA1_Channel2_IRQHandler
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:968    .text.DMA1_Channel2_IRQHandler:000000bc $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1387   .bss.GyroXSum.11249:00000000 GyroXSum.11249
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1393   .bss.GyroYSum.11250:00000000 GyroYSum.11250
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1399   .bss.GyroZSum.11251:00000000 GyroZSum.11251
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:976    .text.DMA1_Channel2_IRQHandler:000000d4 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1341   .text.DMA1_Channel2_IRQHandler:00000304 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1353   .text.EXTI0_IRQHandler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1360   .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1384   .bss.GyroXSum.11249:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1390   .bss.GyroYSum.11250:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvPc1ou.s:1396   .bss.GyroZSum.11251:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:19     .bss.Icm206XXRegData:00000000 Icm206XXRegData
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:20     .bss.Icm206XXRegData:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:24     .bss.Icm206XXRxBufIndex:00000000 Icm206XXRxBufIndex
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:25     .bss.Icm206XXRxBufIndex:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:27     .bss.Icm206XXRxBuf:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:30     .bss.Icm206XXRxBuf:00000000 Icm206XXRxBuf
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:33     .data.Icm206XXTxBufGyro:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:36     .data.Icm206XXTxBufGyro:00000000 Icm206XXTxBufGyro
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:39     .data.Icm206XXTxBufGyroTemp:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:42     .data.Icm206XXTxBufGyroTemp:00000000 Icm206XXTxBufGyroTemp
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:46     .text.SPI0ReadWriteBytes:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:53     .text.SPI0ReadWriteBytes:00000000 SPI0ReadWriteBytes
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:147    .text.SPI0ReadWriteBytes:00000078 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:152    .text.Icm206XXWriteByte:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:158    .text.Icm206XXWriteByte:00000000 Icm206XXWriteByte
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:204    .text.Icm206XXWriteByte:00000038 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:209    .text.Icm206XXReadByte:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:215    .text.Icm206XXReadByte:00000000 Icm206XXReadByte
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:266    .text.Icm206XXReadByte:00000040 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:274    .bss.icA206xx_debug_data:00000000 icA206xx_debug_data
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:275    .bss.icA206xx_debug_data:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:277    .text.Icm206XXInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:284    .text.Icm206XXInit:00000000 Icm206XXInit
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:683    .text.Icm206XXInit:000002dc $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:700    .text.TIMER7_UP_TIMER12_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:707    .text.TIMER7_UP_TIMER12_IRQHandler:00000000 TIMER7_UP_TIMER12_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:815    .text.TIMER7_UP_TIMER12_IRQHandler:00000080 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:833    .text.DMA1_Channel2_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:840    .text.DMA1_Channel2_IRQHandler:00000000 DMA1_Channel2_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:968    .text.DMA1_Channel2_IRQHandler:000000bc $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1387   .bss.GyroXSum.11249:00000000 GyroXSum.11249
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1393   .bss.GyroYSum.11250:00000000 GyroYSum.11250
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1399   .bss.GyroZSum.11251:00000000 GyroZSum.11251
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:976    .text.DMA1_Channel2_IRQHandler:000000d4 $t
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1341   .text.DMA1_Channel2_IRQHandler:00000304 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1353   .text.EXTI0_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1360   .text.EXTI0_IRQHandler:00000000 EXTI0_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1384   .bss.GyroXSum.11249:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1390   .bss.GyroYSum.11250:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccMiVVcZ.s:1396   .bss.GyroZSum.11251:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

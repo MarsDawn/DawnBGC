@@ -1,6 +1,6 @@
 DawnMain/dawn_parameter.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_parameter.c \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/includes.h \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_parameter.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/includes.h \
  ../../CMSIS/gd32f4xx.h ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \
  ../../CMSIS/DSP/Include/core_cmFunc.h \
@@ -33,11 +33,11 @@ DawnMain/dawn_parameter.o: \
  ../../Libraries/FWLIB/inc/gd32f4xx_misc.h \
  ../../CMSIS/DSP/Include/arm_math.h ../../CMSIS/DSP/Include/core_cm4.h \
  ../../Dawn/DawnLib/dawn_lib.h ../../Dawn/DawnBLDC/dawn_bldc_math.h \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_main.h \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_main.h \
  ../../Dawn/DawnBsp/usart.h ../../Dawn/DawnBsp/timebase.h \
  ../../Dawn/DawnCom/crc.h ../../Dawn/DawnCom/unpack.h \
  ../../Dawn/DawnDevice/icm206xx.h \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.h \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_function.h \
  ../../Dawn/DawnGimbal/dawn_gimbal_system.h \
  ../../Dawn/DawnGimbal/dawn_gimbal_math.h \
  ../../Dawn/DawnGimbal/dawn_gimbal_math.h ../../Dawn/DawnBLDC/dawn_bldc.h \
@@ -45,7 +45,7 @@ DawnMain/dawn_parameter.o: \
  ../../Dawn/DawnSys/wdg.h ../../Dawn/DawnSys/systick.h \
  ../../Dawn/DawnSys/flash.h
 
-C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/includes.h:
+C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/includes.h:
 
 ../../CMSIS/gd32f4xx.h:
 
@@ -119,7 +119,7 @@ C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/includes.h:
 
 ../../Dawn/DawnBLDC/dawn_bldc_math.h:
 
-C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_main.h:
+C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_main.h:
 
 ../../Dawn/DawnBsp/usart.h:
 
@@ -131,7 +131,7 @@ C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_main.h:
 
 ../../Dawn/DawnDevice/icm206xx.h:
 
-C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnMain/dawn_function.h:
+C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_function.h:
 
 ../../Dawn/DawnGimbal/dawn_gimbal_system.h:
 

@@ -1,5 +1,5 @@
 DawnBLDC/dawn_bldc.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnBLDC/dawn_bldc.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBLDC/dawn_bldc.c \
  ../../Dawn/DawnMain/includes.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \

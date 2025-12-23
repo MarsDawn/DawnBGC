@@ -22,28 +22,28 @@
   22              		.fpu softvfp
   24              	gpio_deinit:
   25              	.LFB123:
-  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src/gd32f4xx_gpio.c"
-   1:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
-   2:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \file  gd32f4xx_gpio.c
-   3:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief GPIO driver
-   4:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
-   5:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
-   6:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*
-   7:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     Copyright (C) 2016 GigaDevice
-   8:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
-   9:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
-  10:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
-  11:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
-  12:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** #include "gd32f4xx_gpio.h"
-  13:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
-  14:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
-  15:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      reset GPIO port
-  16:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I)
-  17:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
-  18:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
-  19:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
-  20:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_deinit(uint32_t gpio_periph)
-  21:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+  26              		.file 1 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src/gd32f4xx_gpio.c"
+   1:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+   2:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \file  gd32f4xx_gpio.c
+   3:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief GPIO driver
+   4:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+   5:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+   6:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*
+   7:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     Copyright (C) 2016 GigaDevice
+   8:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+   9:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     2016-08-15, V1.0.0, firmware for GD32F4xx
+  10:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+  11:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+  12:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** #include "gd32f4xx_gpio.h"
+  13:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+  14:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+  15:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      reset GPIO port
+  16:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I)
+  17:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+  18:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+  19:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+  20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_deinit(uint32_t gpio_periph)
+  21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
   27              		.loc 1 21 1
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 8
@@ -57,7 +57,7 @@
   37 0004 00AF     		add	r7, sp, #0
   38              		.cfi_def_cfa_register 7
   39 0006 7860     		str	r0, [r7, #4]
-  22:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     switch(gpio_periph){
+  22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     switch(gpio_periph){
   40              		.loc 1 22 5
   41 0008 7B68     		ldr	r3, [r7, #4]
   42 000a 4C4A     		ldr	r2, .L14
@@ -123,169 +123,169 @@
  102 0088 344A     		ldr	r2, .L14+32
  103 008a 9342     		cmp	r3, r2
  104 008c 09D0     		beq	.L11
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOA:
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOA */
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOARST);
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOB:
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOB */
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOBRST);
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOC:
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOC */
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOCRST);
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOD:
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOD */
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIODRST);
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOE:
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOE */
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOERST);
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOF:
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOF */
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOFRST);
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOFRST);
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOG:
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOG */
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOGRST);
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOGRST);
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOH:
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOH */
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOHRST);
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOHRST);
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOI:
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOI */
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOIRST);
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOIRST);
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     default:
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOA:
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOA */
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOARST);
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOB:
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOB */
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOBRST);
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOC:
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOC */
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOCRST);
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOD:
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOD */
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIODRST);
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOE:
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOE */
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOERST);
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOF:
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOF */
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOFRST);
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOFRST);
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOG:
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOG */
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOGRST);
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOGRST);
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOH:
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOH */
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOHRST);
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOHRST);
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOI:
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         /* reset GPIOI */
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_enable(RCU_GPIOIRST);
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOIRST);
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     default:
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  105              		.loc 1 69 9
  106 008e 50E0     		b	.L13
  107              	.L10:
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOARST);
  108              		.loc 1 25 9
  109 0090 4FF48060 		mov	r0, #1024
  110 0094 FFF7FEFF 		bl	rcu_periph_reset_enable
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  111              		.loc 1 26 9
  112 0098 4FF48060 		mov	r0, #1024
  113 009c FFF7FEFF 		bl	rcu_periph_reset_disable
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOB:
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOB:
  114              		.loc 1 27 9
  115 00a0 48E0     		b	.L12
  116              	.L11:
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOBRST);
  117              		.loc 1 30 9
  118 00a2 40F20140 		movw	r0, #1025
  119 00a6 FFF7FEFF 		bl	rcu_periph_reset_enable
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  120              		.loc 1 31 9
  121 00aa 40F20140 		movw	r0, #1025
  122 00ae FFF7FEFF 		bl	rcu_periph_reset_disable
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOC:
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOC:
  123              		.loc 1 32 9
  124 00b2 3FE0     		b	.L12
  125              	.L9:
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOCRST);
  126              		.loc 1 35 9
  127 00b4 40F20240 		movw	r0, #1026
  128 00b8 FFF7FEFF 		bl	rcu_periph_reset_enable
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  129              		.loc 1 36 9
  130 00bc 40F20240 		movw	r0, #1026
  131 00c0 FFF7FEFF 		bl	rcu_periph_reset_disable
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOD:
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOD:
  132              		.loc 1 37 9
  133 00c4 36E0     		b	.L12
  134              	.L8:
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIODRST);
  135              		.loc 1 40 9
  136 00c6 40F20340 		movw	r0, #1027
  137 00ca FFF7FEFF 		bl	rcu_periph_reset_enable
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  138              		.loc 1 41 9
  139 00ce 40F20340 		movw	r0, #1027
  140 00d2 FFF7FEFF 		bl	rcu_periph_reset_disable
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOE:
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOE:
  141              		.loc 1 42 9
  142 00d6 2DE0     		b	.L12
  143              	.L7:
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOERST);
  144              		.loc 1 45 9
  145 00d8 40F20440 		movw	r0, #1028
  146 00dc FFF7FEFF 		bl	rcu_periph_reset_enable
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  147              		.loc 1 46 9
  148 00e0 40F20440 		movw	r0, #1028
  149 00e4 FFF7FEFF 		bl	rcu_periph_reset_disable
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOF:
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOF:
  150              		.loc 1 47 9
  151 00e8 24E0     		b	.L12
  152              	.L6:
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOFRST);
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOFRST);
  153              		.loc 1 50 9
  154 00ea 40F20540 		movw	r0, #1029
  155 00ee FFF7FEFF 		bl	rcu_periph_reset_enable
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  156              		.loc 1 51 9
  157 00f2 40F20540 		movw	r0, #1029
  158 00f6 FFF7FEFF 		bl	rcu_periph_reset_disable
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOG:
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOG:
  159              		.loc 1 52 9
  160 00fa 1BE0     		b	.L12
  161              	.L5:
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOGRST);
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOGRST);
  162              		.loc 1 55 9
  163 00fc 40F20640 		movw	r0, #1030
  164 0100 FFF7FEFF 		bl	rcu_periph_reset_enable
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  165              		.loc 1 56 9
  166 0104 40F20640 		movw	r0, #1030
  167 0108 FFF7FEFF 		bl	rcu_periph_reset_disable
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOH:
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOH:
  168              		.loc 1 57 9
  169 010c 12E0     		b	.L12
  170              	.L4:
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOHRST);
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOHRST);
  171              		.loc 1 60 9
  172 010e 40F20740 		movw	r0, #1031
  173 0112 FFF7FEFF 		bl	rcu_periph_reset_enable
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  174              		.loc 1 61 9
  175 0116 40F20740 		movw	r0, #1031
  176 011a FFF7FEFF 		bl	rcu_periph_reset_disable
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOI:
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     case GPIOI:
  177              		.loc 1 62 9
  178 011e 09E0     		b	.L12
  179              	.L2:
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOIRST);
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         rcu_periph_reset_disable(RCU_GPIOIRST);
  180              		.loc 1 65 9
  181 0120 4FF48160 		mov	r0, #1032
  182 0124 FFF7FEFF 		bl	rcu_periph_reset_enable
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         break;
  183              		.loc 1 66 9
  184 0128 4FF48160 		mov	r0, #1032
  185 012c FFF7FEFF 		bl	rcu_periph_reset_disable
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     default:
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     default:
  186              		.loc 1 67 9
  187 0130 00E0     		b	.L12
  188              	.L13:
  189              		.loc 1 69 9
  190 0132 00BF     		nop
  191              	.L12:
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  192              		.loc 1 71 1
  193 0134 00BF     		nop
  194 0136 0837     		adds	r7, r7, #8
@@ -317,25 +317,25 @@
  221              		.fpu softvfp
  223              	gpio_mode_set:
  224              	.LFB124:
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      set GPIO output mode
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  mode: GPIO pin mode
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_MODE_INPUT: input mode
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_MODE_OUTPUT: output mode
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_MODE_AF: alternate function mode
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_MODE_ANALOG: analog mode
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pull_up_down: GPIO pin with pull-up or pull-down resistor
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_PUPD_NONE: without weak pull-up and pull-down resistors
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_PUPD_PULLUP: with weak pull-up resistor
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_PUPD_PULLDOWN:with weak pull-down resistor
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_mode_set(uint32_t gpio_periph,uint32_t mode,uint32_t pull_up_down,uint32_t pin)
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      set GPIO output mode
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  mode: GPIO pin mode
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_MODE_INPUT: input mode
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_MODE_OUTPUT: output mode
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_MODE_AF: alternate function mode
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_MODE_ANALOG: analog mode
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pull_up_down: GPIO pin with pull-up or pull-down resistor
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_PUPD_NONE: without weak pull-up and pull-down resistors
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_PUPD_PULLUP: with weak pull-up resistor
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_PUPD_PULLDOWN:with weak pull-down resistor
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_mode_set(uint32_t gpio_periph,uint32_t mode,uint32_t pull_up_down,uint32_t pin)
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  225              		.loc 1 90 1
  226              		.cfi_startproc
  227              		@ args = 0, pretend = 0, frame = 32
@@ -352,31 +352,31 @@
  238 0008 B960     		str	r1, [r7, #8]
  239 000a 7A60     		str	r2, [r7, #4]
  240 000c 3B60     		str	r3, [r7]
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint16_t i;
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint32_t ctl, pupd;
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     ctl = GPIO_CTL(gpio_periph);
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint16_t i;
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint32_t ctl, pupd;
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     ctl = GPIO_CTL(gpio_periph);
  241              		.loc 1 94 11
  242 000e FB68     		ldr	r3, [r7, #12]
  243              		.loc 1 94 9
  244 0010 1B68     		ldr	r3, [r3]
  245 0012 BB61     		str	r3, [r7, #24]
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     pupd = GPIO_PUD(gpio_periph);
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     pupd = GPIO_PUD(gpio_periph);
  246              		.loc 1 95 12
  247 0014 FB68     		ldr	r3, [r7, #12]
  248 0016 0C33     		adds	r3, r3, #12
  249              		.loc 1 95 10
  250 0018 1B68     		ldr	r3, [r3]
  251 001a 7B61     		str	r3, [r7, #20]
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     for(i = 0U;i < 16U;i++){
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     for(i = 0U;i < 16U;i++){
  252              		.loc 1 97 11
  253 001c 0023     		movs	r3, #0
  254 001e FB83     		strh	r3, [r7, #30]	@ movhi
  255              		.loc 1 97 5
  256 0020 2BE0     		b	.L17
  257              	.L19:
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  258              		.loc 1 98 16
  259 0022 FB8B     		ldrh	r3, [r7, #30]
  260 0024 0122     		movs	r2, #1
@@ -387,8 +387,8 @@
  265              		.loc 1 98 11
  266 002c 002B     		cmp	r3, #0
  267 002e 21D0     		beq	.L18
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin mode bits */
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             ctl &= ~GPIO_MODE_MASK(i);
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin mode bits */
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             ctl &= ~GPIO_MODE_MASK(i);
  268              		.loc 1 100 21
  269 0030 FB8B     		ldrh	r3, [r7, #30]
  270 0032 5B00     		lsls	r3, r3, #1
@@ -400,8 +400,8 @@
  276 003c BA69     		ldr	r2, [r7, #24]
  277 003e 1340     		ands	r3, r3, r2
  278 0040 BB61     		str	r3, [r7, #24]
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* set the specified pin mode bits */
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             ctl |= GPIO_MODE_SET(i, mode);
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* set the specified pin mode bits */
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             ctl |= GPIO_MODE_SET(i, mode);
  279              		.loc 1 102 20
  280 0042 FB8B     		ldrh	r3, [r7, #30]
  281 0044 5B00     		lsls	r3, r3, #1
@@ -411,9 +411,9 @@
  285 004c BA69     		ldr	r2, [r7, #24]
  286 004e 1343     		orrs	r3, r3, r2
  287 0050 BB61     		str	r3, [r7, #24]
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin pupd bits */
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             pupd &= ~GPIO_PUPD_MASK(i);
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin pupd bits */
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             pupd &= ~GPIO_PUPD_MASK(i);
  288              		.loc 1 105 22
  289 0052 FB8B     		ldrh	r3, [r7, #30]
  290 0054 5B00     		lsls	r3, r3, #1
@@ -425,8 +425,8 @@
  296 005e 7A69     		ldr	r2, [r7, #20]
  297 0060 1340     		ands	r3, r3, r2
  298 0062 7B61     		str	r3, [r7, #20]
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* set the specified pin pupd bits */
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             pupd |= GPIO_PUPD_SET(i, pull_up_down);
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* set the specified pin pupd bits */
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             pupd |= GPIO_PUPD_SET(i, pull_up_down);
  299              		.loc 1 107 21
  300 0064 FB8B     		ldrh	r3, [r7, #30]
  301 0066 5B00     		lsls	r3, r3, #1
@@ -437,27 +437,27 @@
  306 0070 1343     		orrs	r3, r3, r2
  307 0072 7B61     		str	r3, [r7, #20]
  308              	.L18:
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  309              		.loc 1 97 25 discriminator 2
  310 0074 FB8B     		ldrh	r3, [r7, #30]
  311 0076 0133     		adds	r3, r3, #1
  312 0078 FB83     		strh	r3, [r7, #30]	@ movhi
  313              	.L17:
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  314              		.loc 1 97 5 discriminator 1
  315 007a FB8B     		ldrh	r3, [r7, #30]
  316 007c 0F2B     		cmp	r3, #15
  317 007e D0D9     		bls	.L19
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         }
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_CTL(gpio_periph) = ctl;
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         }
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_CTL(gpio_periph) = ctl;
  318              		.loc 1 111 5
  319 0080 FB68     		ldr	r3, [r7, #12]
  320              		.loc 1 111 27
  321 0082 BA69     		ldr	r2, [r7, #24]
  322 0084 1A60     		str	r2, [r3]
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_PUD(gpio_periph) = pupd;
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_PUD(gpio_periph) = pupd;
  323              		.loc 1 112 5
  324 0086 FB68     		ldr	r3, [r7, #12]
  325 0088 0C33     		adds	r3, r3, #12
@@ -465,7 +465,7 @@
  327              		.loc 1 112 27
  328 008c 7B69     		ldr	r3, [r7, #20]
  329 008e 1360     		str	r3, [r2]
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  330              		.loc 1 113 1
  331 0090 00BF     		nop
  332 0092 2437     		adds	r7, r7, #36
@@ -488,24 +488,24 @@
  350              		.fpu softvfp
  352              	gpio_output_options_set:
  353              	.LFB125:
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      set GPIO output type and speed
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  otype: GPIO pin output mode
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OTYPE_PP: push pull mode
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OTYPE_OD: open drain mode
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  speed: GPIO pin output max speed
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OSPEED_2MHZ: output max speed 2M 
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OSPEED_25MHZ: output max speed 25M 
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OSPEED_50MHZ: output max speed 50M
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OSPEED_200MHZ: output max speed 200M
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_output_options_set(uint32_t gpio_periph,uint8_t otype,uint32_t speed,uint32_t pin)
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      set GPIO output type and speed
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  otype: GPIO pin output mode
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OTYPE_PP: push pull mode
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OTYPE_OD: open drain mode
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  speed: GPIO pin output max speed
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OSPEED_2MHZ: output max speed 2M 
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OSPEED_25MHZ: output max speed 25M 
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OSPEED_50MHZ: output max speed 50M
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_OSPEED_200MHZ: output max speed 200M
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_output_options_set(uint32_t gpio_periph,uint8_t otype,uint32_t speed,uint32_t pin)
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  354              		.loc 1 131 1
  355              		.cfi_startproc
  356              		@ args = 0, pretend = 0, frame = 24
@@ -523,15 +523,15 @@
  368 000a 3B60     		str	r3, [r7]
  369 000c 0B46     		mov	r3, r1
  370 000e FB72     		strb	r3, [r7, #11]
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint16_t i;
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint32_t ospeedr;
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     if(0x1U == otype){
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint16_t i;
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint32_t ospeedr;
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     if(0x1U == otype){
  371              		.loc 1 135 7
  372 0010 FB7A     		ldrb	r3, [r7, #11]	@ zero_extendqisi2
  373 0012 012B     		cmp	r3, #1
  374 0014 09D1     		bne	.L21
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         GPIO_OMODE(gpio_periph) |= (uint32_t)pin;
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         GPIO_OMODE(gpio_periph) |= (uint32_t)pin;
  375              		.loc 1 136 33
  376 0016 FB68     		ldr	r3, [r7, #12]
  377 0018 0433     		adds	r3, r3, #4
@@ -544,8 +544,8 @@
  384 0026 0B60     		str	r3, [r1]
  385 0028 08E0     		b	.L22
  386              	.L21:
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }else{
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         GPIO_OMODE(gpio_periph) &= (uint32_t)(~pin);
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }else{
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         GPIO_OMODE(gpio_periph) &= (uint32_t)(~pin);
  387              		.loc 1 138 33
  388 002a FB68     		ldr	r3, [r7, #12]
  389 002c 0433     		adds	r3, r3, #4
@@ -559,25 +559,25 @@
  397 0038 1340     		ands	r3, r3, r2
  398 003a 0B60     		str	r3, [r1]
  399              	.L22:
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     /* get the specified pin output speed bits value */
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     ospeedr = GPIO_OSPD(gpio_periph);
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     /* get the specified pin output speed bits value */
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     ospeedr = GPIO_OSPD(gpio_periph);
  400              		.loc 1 142 15
  401 003c FB68     		ldr	r3, [r7, #12]
  402 003e 0833     		adds	r3, r3, #8
  403              		.loc 1 142 13
  404 0040 1B68     		ldr	r3, [r3]
  405 0042 3B61     		str	r3, [r7, #16]
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     for(i = 0U;i < 16U;i++){
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     for(i = 0U;i < 16U;i++){
  406              		.loc 1 144 11
  407 0044 0023     		movs	r3, #0
  408 0046 FB82     		strh	r3, [r7, #22]	@ movhi
  409              		.loc 1 144 5
  410 0048 1AE0     		b	.L23
  411              	.L25:
- 145:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  412              		.loc 1 145 16
  413 004a FB8A     		ldrh	r3, [r7, #22]
  414 004c 0122     		movs	r2, #1
@@ -588,8 +588,8 @@
  419              		.loc 1 145 11
  420 0054 002B     		cmp	r3, #0
  421 0056 10D0     		beq	.L24
- 146:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin output speed bits */
- 147:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             ospeedr &= ~GPIO_OSPEED_MASK(i);
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin output speed bits */
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             ospeedr &= ~GPIO_OSPEED_MASK(i);
  422              		.loc 1 147 25
  423 0058 FB8A     		ldrh	r3, [r7, #22]
  424 005a 5B00     		lsls	r3, r3, #1
@@ -601,8 +601,8 @@
  430 0064 3A69     		ldr	r2, [r7, #16]
  431 0066 1340     		ands	r3, r3, r2
  432 0068 3B61     		str	r3, [r7, #16]
- 148:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* set the specified pin output speed bits */
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             ospeedr |= GPIO_OSPEED_SET(i,speed);
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* set the specified pin output speed bits */
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             ospeedr |= GPIO_OSPEED_SET(i,speed);
  433              		.loc 1 149 24
  434 006a FB8A     		ldrh	r3, [r7, #22]
  435 006c 5B00     		lsls	r3, r3, #1
@@ -613,20 +613,20 @@
  440 0076 1343     		orrs	r3, r3, r2
  441 0078 3B61     		str	r3, [r7, #16]
  442              	.L24:
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  443              		.loc 1 144 25 discriminator 2
  444 007a FB8A     		ldrh	r3, [r7, #22]
  445 007c 0133     		adds	r3, r3, #1
  446 007e FB82     		strh	r3, [r7, #22]	@ movhi
  447              	.L23:
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  448              		.loc 1 144 5 discriminator 1
  449 0080 FB8A     		ldrh	r3, [r7, #22]
  450 0082 0F2B     		cmp	r3, #15
  451 0084 E1D9     		bls	.L25
- 150:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         }
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_OSPD(gpio_periph) = ospeedr;
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         }
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_OSPD(gpio_periph) = ospeedr;
  452              		.loc 1 152 5
  453 0086 FB68     		ldr	r3, [r7, #12]
  454 0088 0833     		adds	r3, r3, #8
@@ -634,7 +634,7 @@
  456              		.loc 1 152 28
  457 008c 3B69     		ldr	r3, [r7, #16]
  458 008e 1360     		str	r3, [r2]
- 153:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  459              		.loc 1 153 1
  460 0090 00BF     		nop
  461 0092 1C37     		adds	r7, r7, #28
@@ -657,16 +657,16 @@
  479              		.fpu softvfp
  481              	gpio_bit_set:
  482              	.LFB126:
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      set GPIO pin
- 157:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 158:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 159:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_bit_set(uint32_t gpio_periph,uint32_t pin)
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      set GPIO pin
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_bit_set(uint32_t gpio_periph,uint32_t pin)
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  483              		.loc 1 163 1
  484              		.cfi_startproc
  485              		@ args = 0, pretend = 0, frame = 8
@@ -681,7 +681,7 @@
  494              		.cfi_def_cfa_register 7
  495 0006 7860     		str	r0, [r7, #4]
  496 0008 3960     		str	r1, [r7]
- 164:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_BOP(gpio_periph) = (uint32_t)pin;
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_BOP(gpio_periph) = (uint32_t)pin;
  497              		.loc 1 164 5
  498 000a 7B68     		ldr	r3, [r7, #4]
  499 000c 1833     		adds	r3, r3, #24
@@ -689,7 +689,7 @@
  501              		.loc 1 164 27
  502 0010 3B68     		ldr	r3, [r7]
  503 0012 1360     		str	r3, [r2]
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  504              		.loc 1 165 1
  505 0014 00BF     		nop
  506 0016 0C37     		adds	r7, r7, #12
@@ -712,16 +712,16 @@
  524              		.fpu softvfp
  526              	gpio_bit_reset:
  527              	.LFB127:
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 168:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      reset GPIO pin
- 169:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 170:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 171:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 172:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 173:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 174:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_bit_reset(uint32_t gpio_periph,uint32_t pin)
- 175:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      reset GPIO pin
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_bit_reset(uint32_t gpio_periph,uint32_t pin)
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  528              		.loc 1 175 1
  529              		.cfi_startproc
  530              		@ args = 0, pretend = 0, frame = 8
@@ -736,7 +736,7 @@
  539              		.cfi_def_cfa_register 7
  540 0006 7860     		str	r0, [r7, #4]
  541 0008 3960     		str	r1, [r7]
- 176:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_BC(gpio_periph) = (uint32_t)pin;
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_BC(gpio_periph) = (uint32_t)pin;
  542              		.loc 1 176 5
  543 000a 7B68     		ldr	r3, [r7, #4]
  544 000c 2833     		adds	r3, r3, #40
@@ -744,7 +744,7 @@
  546              		.loc 1 176 26
  547 0010 3B68     		ldr	r3, [r7]
  548 0012 1360     		str	r3, [r2]
- 177:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  549              		.loc 1 177 1
  550 0014 00BF     		nop
  551 0016 0C37     		adds	r7, r7, #12
@@ -767,19 +767,19 @@
  569              		.fpu softvfp
  571              	gpio_bit_write:
  572              	.LFB128:
- 178:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 180:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      write data to the specified GPIO pin
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 182:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 183:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  bit_value: SET or RESET
- 184:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        RESET: clear the port pin
- 185:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        SET: set the port pin
- 186:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 187:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 188:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 189:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_bit_write(uint32_t gpio_periph,uint32_t pin,bit_status bit_value)
- 190:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      write data to the specified GPIO pin
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  bit_value: SET or RESET
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        RESET: clear the port pin
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        SET: set the port pin
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_bit_write(uint32_t gpio_periph,uint32_t pin,bit_status bit_value)
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  573              		.loc 1 190 1
  574              		.cfi_startproc
  575              		@ args = 0, pretend = 0, frame = 16
@@ -796,12 +796,12 @@
  586 0008 B960     		str	r1, [r7, #8]
  587 000a 1346     		mov	r3, r2
  588 000c FB71     		strb	r3, [r7, #7]
- 191:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     if(RESET != bit_value){
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     if(RESET != bit_value){
  589              		.loc 1 191 7
  590 000e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
  591 0010 002B     		cmp	r3, #0
  592 0012 05D0     		beq	.L29
- 192:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         GPIO_BOP(gpio_periph) = (uint32_t)pin;
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         GPIO_BOP(gpio_periph) = (uint32_t)pin;
  593              		.loc 1 192 9
  594 0014 FB68     		ldr	r3, [r7, #12]
  595 0016 1833     		adds	r3, r3, #24
@@ -809,19 +809,19 @@
  597              		.loc 1 192 31
  598 001a BB68     		ldr	r3, [r7, #8]
  599 001c 1360     		str	r3, [r2]
- 193:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }else{
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         GPIO_BC(gpio_periph) = (uint32_t)pin;
- 195:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
- 196:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }else{
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         GPIO_BC(gpio_periph) = (uint32_t)pin;
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  600              		.loc 1 196 1
  601 001e 04E0     		b	.L31
  602              	.L29:
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
  603              		.loc 1 194 9
  604 0020 FB68     		ldr	r3, [r7, #12]
  605 0022 2833     		adds	r3, r3, #40
  606 0024 1A46     		mov	r2, r3
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
  607              		.loc 1 194 30
  608 0026 BB68     		ldr	r3, [r7, #8]
  609 0028 1360     		str	r3, [r2]
@@ -848,16 +848,16 @@
  631              		.fpu softvfp
  633              	gpio_port_write:
  634              	.LFB129:
- 197:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 198:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      write data to the specified GPIO port
- 200:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 201:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  data: specify the value to be written to the port output data register
- 202:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 203:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 204:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 205:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_port_write(uint32_t gpio_periph,uint16_t data)
- 206:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      write data to the specified GPIO port
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  data: specify the value to be written to the port output data register
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_port_write(uint32_t gpio_periph,uint16_t data)
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  635              		.loc 1 206 1
  636              		.cfi_startproc
  637              		@ args = 0, pretend = 0, frame = 8
@@ -873,7 +873,7 @@
  647 0006 7860     		str	r0, [r7, #4]
  648 0008 0B46     		mov	r3, r1
  649 000a 7B80     		strh	r3, [r7, #2]	@ movhi
- 207:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_OCTL(gpio_periph) = (uint32_t)data;
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_OCTL(gpio_periph) = (uint32_t)data;
  650              		.loc 1 207 5
  651 000c 7B68     		ldr	r3, [r7, #4]
  652 000e 1433     		adds	r3, r3, #20
@@ -882,7 +882,7 @@
  655 0012 7B88     		ldrh	r3, [r7, #2]
  656              		.loc 1 207 28
  657 0014 1360     		str	r3, [r2]
- 208:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  658              		.loc 1 208 1
  659 0016 00BF     		nop
  660 0018 0C37     		adds	r7, r7, #12
@@ -905,16 +905,16 @@
  678              		.fpu softvfp
  680              	gpio_input_bit_get:
  681              	.LFB130:
- 209:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 210:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 211:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      get GPIO pin input status
- 212:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 213:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 214:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 215:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     input state of gpio pin: SET or RESET
- 216:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 217:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** FlagStatus gpio_input_bit_get(uint32_t gpio_periph,uint32_t pin)
- 218:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      get GPIO pin input status
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     input state of gpio pin: SET or RESET
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** FlagStatus gpio_input_bit_get(uint32_t gpio_periph,uint32_t pin)
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  682              		.loc 1 218 1
  683              		.cfi_startproc
  684              		@ args = 0, pretend = 0, frame = 8
@@ -929,7 +929,7 @@
  693              		.cfi_def_cfa_register 7
  694 0006 7860     		str	r0, [r7, #4]
  695 0008 3960     		str	r1, [r7]
- 219:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     if((uint32_t)RESET != (GPIO_ISTAT(gpio_periph)&(pin))){
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     if((uint32_t)RESET != (GPIO_ISTAT(gpio_periph)&(pin))){
  696              		.loc 1 219 28
  697 000a 7B68     		ldr	r3, [r7, #4]
  698 000c 1033     		adds	r3, r3, #16
@@ -940,18 +940,18 @@
  703              		.loc 1 219 7
  704 0014 002B     		cmp	r3, #0
  705 0016 01D0     		beq	.L34
- 220:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         return SET; 
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         return SET; 
  706              		.loc 1 220 16
  707 0018 0123     		movs	r3, #1
  708 001a 00E0     		b	.L35
  709              	.L34:
- 221:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }else{
- 222:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         return RESET;
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }else{
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         return RESET;
  710              		.loc 1 222 16
  711 001c 0023     		movs	r3, #0
  712              	.L35:
- 223:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
- 224:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  713              		.loc 1 224 1
  714 001e 1846     		mov	r0, r3
  715 0020 0C37     		adds	r7, r7, #12
@@ -974,15 +974,15 @@
  733              		.fpu softvfp
  735              	gpio_input_port_get:
  736              	.LFB131:
- 225:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 226:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 227:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      get GPIO port input status
- 228:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 229:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 230:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     input state of gpio all pins
- 231:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 232:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** uint16_t gpio_input_port_get(uint32_t gpio_periph)
- 233:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      get GPIO port input status
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     input state of gpio all pins
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** uint16_t gpio_input_port_get(uint32_t gpio_periph)
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  737              		.loc 1 233 1
  738              		.cfi_startproc
  739              		@ args = 0, pretend = 0, frame = 8
@@ -996,14 +996,14 @@
  747 0004 00AF     		add	r7, sp, #0
  748              		.cfi_def_cfa_register 7
  749 0006 7860     		str	r0, [r7, #4]
- 234:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     return (uint16_t)(GPIO_ISTAT(gpio_periph));
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     return (uint16_t)(GPIO_ISTAT(gpio_periph));
  750              		.loc 1 234 23
  751 0008 7B68     		ldr	r3, [r7, #4]
  752 000a 1033     		adds	r3, r3, #16
  753 000c 1B68     		ldr	r3, [r3]
  754              		.loc 1 234 12
  755 000e 9BB2     		uxth	r3, r3
- 235:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  756              		.loc 1 235 1
  757 0010 1846     		mov	r0, r3
  758 0012 0C37     		adds	r7, r7, #12
@@ -1026,16 +1026,16 @@
  776              		.fpu softvfp
  778              	gpio_output_bit_get:
  779              	.LFB132:
- 236:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 238:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      get GPIO pin output status
- 239:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 240:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 241:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 242:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     output state of gpio pin: SET or RESET
- 243:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 244:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** FlagStatus gpio_output_bit_get(uint32_t gpio_periph,uint32_t pin)
- 245:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      get GPIO pin output status
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     output state of gpio pin: SET or RESET
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** FlagStatus gpio_output_bit_get(uint32_t gpio_periph,uint32_t pin)
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  780              		.loc 1 245 1
  781              		.cfi_startproc
  782              		@ args = 0, pretend = 0, frame = 8
@@ -1050,7 +1050,7 @@
  791              		.cfi_def_cfa_register 7
  792 0006 7860     		str	r0, [r7, #4]
  793 0008 3960     		str	r1, [r7]
- 246:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     if((uint32_t)RESET !=(GPIO_OCTL(gpio_periph)&(pin))){
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     if((uint32_t)RESET !=(GPIO_OCTL(gpio_periph)&(pin))){
  794              		.loc 1 246 27
  795 000a 7B68     		ldr	r3, [r7, #4]
  796 000c 1433     		adds	r3, r3, #20
@@ -1061,18 +1061,18 @@
  801              		.loc 1 246 7
  802 0014 002B     		cmp	r3, #0
  803 0016 01D0     		beq	.L39
- 247:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         return SET;
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         return SET;
  804              		.loc 1 247 16
  805 0018 0123     		movs	r3, #1
  806 001a 00E0     		b	.L40
  807              	.L39:
- 248:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }else{
- 249:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         return RESET;
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }else{
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         return RESET;
  808              		.loc 1 249 16
  809 001c 0023     		movs	r3, #0
  810              	.L40:
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
- 251:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  811              		.loc 1 251 1
  812 001e 1846     		mov	r0, r3
  813 0020 0C37     		adds	r7, r7, #12
@@ -1095,15 +1095,15 @@
  831              		.fpu softvfp
  833              	gpio_output_port_get:
  834              	.LFB133:
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 253:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 254:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      get GPIO port output status
- 255:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 256:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 257:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     output state of gpio all pins
- 258:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** uint16_t gpio_output_port_get(uint32_t gpio_periph)
- 260:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      get GPIO port output status
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     output state of gpio all pins
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** uint16_t gpio_output_port_get(uint32_t gpio_periph)
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  835              		.loc 1 260 1
  836              		.cfi_startproc
  837              		@ args = 0, pretend = 0, frame = 8
@@ -1117,14 +1117,14 @@
  845 0004 00AF     		add	r7, sp, #0
  846              		.cfi_def_cfa_register 7
  847 0006 7860     		str	r0, [r7, #4]
- 261:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     return ((uint16_t)GPIO_OCTL(gpio_periph));
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     return ((uint16_t)GPIO_OCTL(gpio_periph));
  848              		.loc 1 261 23
  849 0008 7B68     		ldr	r3, [r7, #4]
  850 000a 1433     		adds	r3, r3, #20
  851 000c 1B68     		ldr	r3, [r3]
  852              		.loc 1 261 13
  853 000e 9BB2     		uxth	r3, r3
- 262:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  854              		.loc 1 262 1
  855 0010 1846     		mov	r0, r3
  856 0012 0C37     		adds	r7, r7, #12
@@ -1147,33 +1147,33 @@
  874              		.fpu softvfp
  876              	gpio_af_set:
  877              	.LFB134:
- 263:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 264:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      set GPIO alternate function
- 266:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  alt_func_num: gpio pin af function
- 268:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_0: SYSTEM
- 269:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_1: TIMER0, TIMER1
- 270:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_2: TIMER2, TIMER3, TIMER4
- 271:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_3: TIMER7, TIMER8, TIMER9, TIMER10
- 272:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_4: I2C0, I2C1, I2C2
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_5: SPI0, SPI1, SPI2, SPI3, SPI4, SPI5
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_6: SPI1, SPI2, SAI0 
- 275:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_7: USART0, USART1, USART2
- 276:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_8: UART3, UART4, USART5, UART6, UART7
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_9: CAN0, CAN1, TLI, TIMER11, TIMER12, TIMER13
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_10: USB_FS, USB_HS
- 279:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_11: ENET
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_12: FMC, SDIO, USB_HS
- 281:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_13: DCI
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_14: TLI
- 283:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_15: EVENTOUT
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 285:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 287:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_af_set(uint32_t gpio_periph,uint32_t alt_func_num,uint32_t pin)
- 289:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      set GPIO alternate function
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  alt_func_num: gpio pin af function
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_0: SYSTEM
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_1: TIMER0, TIMER1
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_2: TIMER2, TIMER3, TIMER4
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_3: TIMER7, TIMER8, TIMER9, TIMER10
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_4: I2C0, I2C1, I2C2
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_5: SPI0, SPI1, SPI2, SPI3, SPI4, SPI5
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_6: SPI1, SPI2, SAI0 
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_7: USART0, USART1, USART2
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_8: UART3, UART4, USART5, UART6, UART7
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_9: CAN0, CAN1, TLI, TIMER11, TIMER12, TIMER13
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_10: USB_FS, USB_HS
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_11: ENET
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_12: FMC, SDIO, USB_HS
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_13: DCI
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_14: TLI
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****       \arg        GPIO_AF_15: EVENTOUT
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_af_set(uint32_t gpio_periph,uint32_t alt_func_num,uint32_t pin)
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  878              		.loc 1 289 1
  879              		.cfi_startproc
  880              		@ args = 0, pretend = 0, frame = 32
@@ -1189,32 +1189,32 @@
  890 0006 F860     		str	r0, [r7, #12]
  891 0008 B960     		str	r1, [r7, #8]
  892 000a 7A60     		str	r2, [r7, #4]
- 290:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint16_t i;
- 291:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint32_t afrl, afrh;
- 292:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 293:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     afrl = GPIO_AFSEL0(gpio_periph);
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint16_t i;
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint32_t afrl, afrh;
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     afrl = GPIO_AFSEL0(gpio_periph);
  893              		.loc 1 293 12
  894 000c FB68     		ldr	r3, [r7, #12]
  895 000e 2033     		adds	r3, r3, #32
  896              		.loc 1 293 10
  897 0010 1B68     		ldr	r3, [r3]
  898 0012 BB61     		str	r3, [r7, #24]
- 294:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     afrh = GPIO_AFSEL1(gpio_periph);
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     afrh = GPIO_AFSEL1(gpio_periph);
  899              		.loc 1 294 12
  900 0014 FB68     		ldr	r3, [r7, #12]
  901 0016 2433     		adds	r3, r3, #36
  902              		.loc 1 294 10
  903 0018 1B68     		ldr	r3, [r3]
  904 001a 7B61     		str	r3, [r7, #20]
- 295:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     for(i = 0U;i < 8U;i++){
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     for(i = 0U;i < 8U;i++){
  905              		.loc 1 296 11
  906 001c 0023     		movs	r3, #0
  907 001e FB83     		strh	r3, [r7, #30]	@ movhi
  908              		.loc 1 296 5
  909 0020 1AE0     		b	.L44
  910              	.L46:
- 297:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  911              		.loc 1 297 16
  912 0022 FB8B     		ldrh	r3, [r7, #30]
  913 0024 0122     		movs	r2, #1
@@ -1225,8 +1225,8 @@
  918              		.loc 1 297 11
  919 002c 002B     		cmp	r3, #0
  920 002e 10D0     		beq	.L45
- 298:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin alternate function bits */
- 299:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             afrl &= ~GPIO_AFR_MASK(i);
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin alternate function bits */
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             afrl &= ~GPIO_AFR_MASK(i);
  921              		.loc 1 299 22
  922 0030 FB8B     		ldrh	r3, [r7, #30]
  923 0032 9B00     		lsls	r3, r3, #2
@@ -1238,7 +1238,7 @@
  929 003c BA69     		ldr	r2, [r7, #24]
  930 003e 1340     		ands	r3, r3, r2
  931 0040 BB61     		str	r3, [r7, #24]
- 300:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             afrl |= GPIO_AFR_SET(i,alt_func_num);
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             afrl |= GPIO_AFR_SET(i,alt_func_num);
  932              		.loc 1 300 21
  933 0042 FB8B     		ldrh	r3, [r7, #30]
  934 0044 9B00     		lsls	r3, r3, #2
@@ -1249,28 +1249,28 @@
  939 004e 1343     		orrs	r3, r3, r2
  940 0050 BB61     		str	r3, [r7, #24]
  941              	.L45:
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  942              		.loc 1 296 24 discriminator 2
  943 0052 FB8B     		ldrh	r3, [r7, #30]
  944 0054 0133     		adds	r3, r3, #1
  945 0056 FB83     		strh	r3, [r7, #30]	@ movhi
  946              	.L44:
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  947              		.loc 1 296 5 discriminator 1
  948 0058 FB8B     		ldrh	r3, [r7, #30]
  949 005a 072B     		cmp	r3, #7
  950 005c E1D9     		bls	.L46
- 301:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         }
- 302:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
- 303:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     for(i = 8U;i < 16U;i++){
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         }
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     for(i = 8U;i < 16U;i++){
  951              		.loc 1 304 11
  952 005e 0823     		movs	r3, #8
  953 0060 FB83     		strh	r3, [r7, #30]	@ movhi
  954              		.loc 1 304 5
  955 0062 1CE0     		b	.L47
  956              	.L49:
- 305:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  957              		.loc 1 305 16
  958 0064 FB8B     		ldrh	r3, [r7, #30]
  959 0066 0122     		movs	r2, #1
@@ -1281,8 +1281,8 @@
  964              		.loc 1 305 11
  965 006e 002B     		cmp	r3, #0
  966 0070 12D0     		beq	.L48
- 306:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin alternate function bits */
- 307:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             afrh &= ~GPIO_AFR_MASK(i - 8U);
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             /* clear the specified pin alternate function bits */
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             afrh &= ~GPIO_AFR_MASK(i - 8U);
  967              		.loc 1 307 22
  968 0072 FB8B     		ldrh	r3, [r7, #30]
  969 0074 083B     		subs	r3, r3, #8
@@ -1295,7 +1295,7 @@
  976 0080 7A69     		ldr	r2, [r7, #20]
  977 0082 1340     		ands	r3, r3, r2
  978 0084 7B61     		str	r3, [r7, #20]
- 308:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             afrh |= GPIO_AFR_SET(i - 8U,alt_func_num);
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****             afrh |= GPIO_AFR_SET(i - 8U,alt_func_num);
  979              		.loc 1 308 21
  980 0086 FB8B     		ldrh	r3, [r7, #30]
  981 0088 083B     		subs	r3, r3, #8
@@ -1307,21 +1307,21 @@
  987 0094 1343     		orrs	r3, r3, r2
  988 0096 7B61     		str	r3, [r7, #20]
  989              	.L48:
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  990              		.loc 1 304 25 discriminator 2
  991 0098 FB8B     		ldrh	r3, [r7, #30]
  992 009a 0133     		adds	r3, r3, #1
  993 009c FB83     		strh	r3, [r7, #30]	@ movhi
  994              	.L47:
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         if((1U << i) & pin){
  995              		.loc 1 304 5 discriminator 1
  996 009e FB8B     		ldrh	r3, [r7, #30]
  997 00a0 0F2B     		cmp	r3, #15
  998 00a2 DFD9     		bls	.L49
- 309:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         }
- 310:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_AFSEL0(gpio_periph) = afrl;
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****         }
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     }
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_AFSEL0(gpio_periph) = afrl;
  999              		.loc 1 312 5
  1000 00a4 FB68     		ldr	r3, [r7, #12]
  1001 00a6 2033     		adds	r3, r3, #32
@@ -1329,7 +1329,7 @@
  1003              		.loc 1 312 30
  1004 00aa BB69     		ldr	r3, [r7, #24]
  1005 00ac 1360     		str	r3, [r2]
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_AFSEL1(gpio_periph) = afrh;
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_AFSEL1(gpio_periph) = afrh;
  1006              		.loc 1 313 5
  1007 00ae FB68     		ldr	r3, [r7, #12]
  1008 00b0 2433     		adds	r3, r3, #36
@@ -1337,7 +1337,7 @@
  1010              		.loc 1 313 30
  1011 00b4 7B69     		ldr	r3, [r7, #20]
  1012 00b6 1360     		str	r3, [r2]
- 314:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  1013              		.loc 1 314 1
  1014 00b8 00BF     		nop
  1015 00ba 2437     		adds	r7, r7, #36
@@ -1360,16 +1360,16 @@
  1033              		.fpu softvfp
  1035              	gpio_pin_lock:
  1036              	.LFB135:
- 315:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 316:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      lock GPIO pin
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 320:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 321:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 322:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 323:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_pin_lock(uint32_t gpio_periph,uint32_t pin)
- 324:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 315:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      lock GPIO pin
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_pin_lock(uint32_t gpio_periph,uint32_t pin)
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  1037              		.loc 1 324 1
  1038              		.cfi_startproc
  1039              		@ args = 0, pretend = 0, frame = 16
@@ -1384,19 +1384,19 @@
  1048              		.cfi_def_cfa_register 7
  1049 0006 7860     		str	r0, [r7, #4]
  1050 0008 3960     		str	r1, [r7]
- 325:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint32_t lock = 0x00010000U;
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     uint32_t lock = 0x00010000U;
  1051              		.loc 1 325 14
  1052 000a 4FF48033 		mov	r3, #65536
  1053 000e FB60     		str	r3, [r7, #12]
- 326:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     lock |= pin;
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     lock |= pin;
  1054              		.loc 1 326 10
  1055 0010 FA68     		ldr	r2, [r7, #12]
  1056 0012 3B68     		ldr	r3, [r7]
  1057 0014 1343     		orrs	r3, r3, r2
  1058 0016 FB60     		str	r3, [r7, #12]
- 327:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 328:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     /* lock key writing sequence: write 1->write 0->write 1->read 0->read 1 */
- 329:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)lock;
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     /* lock key writing sequence: write 1->write 0->write 1->read 0->read 1 */
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)lock;
  1059              		.loc 1 329 5
  1060 0018 7B68     		ldr	r3, [r7, #4]
  1061 001a 1C33     		adds	r3, r3, #28
@@ -1404,7 +1404,7 @@
  1063              		.loc 1 329 28
  1064 001e FB68     		ldr	r3, [r7, #12]
  1065 0020 1360     		str	r3, [r2]
- 330:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)pin;
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)pin;
  1066              		.loc 1 330 5
  1067 0022 7B68     		ldr	r3, [r7, #4]
  1068 0024 1C33     		adds	r3, r3, #28
@@ -1412,7 +1412,7 @@
  1070              		.loc 1 330 28
  1071 0028 3B68     		ldr	r3, [r7]
  1072 002a 1360     		str	r3, [r2]
- 331:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)lock;
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_LOCK(gpio_periph) = (uint32_t)lock;
  1073              		.loc 1 331 5
  1074 002c 7B68     		ldr	r3, [r7, #4]
  1075 002e 1C33     		adds	r3, r3, #28
@@ -1420,21 +1420,21 @@
  1077              		.loc 1 331 28
  1078 0032 FB68     		ldr	r3, [r7, #12]
  1079 0034 1360     		str	r3, [r2]
- 332:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     lock = GPIO_LOCK(gpio_periph);
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     lock = GPIO_LOCK(gpio_periph);
  1080              		.loc 1 332 12
  1081 0036 7B68     		ldr	r3, [r7, #4]
  1082 0038 1C33     		adds	r3, r3, #28
  1083              		.loc 1 332 10
  1084 003a 1B68     		ldr	r3, [r3]
  1085 003c FB60     		str	r3, [r7, #12]
- 333:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     lock = GPIO_LOCK(gpio_periph);
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     lock = GPIO_LOCK(gpio_periph);
  1086              		.loc 1 333 12
  1087 003e 7B68     		ldr	r3, [r7, #4]
  1088 0040 1C33     		adds	r3, r3, #28
  1089              		.loc 1 333 10
  1090 0042 1B68     		ldr	r3, [r3]
  1091 0044 FB60     		str	r3, [r7, #12]
- 334:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  1092              		.loc 1 334 1
  1093 0046 00BF     		nop
  1094 0048 1437     		adds	r7, r7, #20
@@ -1457,16 +1457,16 @@
  1112              		.fpu softvfp
  1114              	gpio_bit_toggle:
  1115              	.LFB136:
- 335:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 336:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 337:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      toggle GPIO pin status
- 338:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
- 339:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
- 340:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 341:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 342:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 343:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_bit_toggle(uint32_t gpio_periph,uint32_t pin)
- 344:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 335:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 336:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 337:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      toggle GPIO pin status
+ 338:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I) 
+ 339:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  pin: GPIO_PIN_x(x=0..15), GPIO_PIN_ALL
+ 340:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 341:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 342:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 343:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_bit_toggle(uint32_t gpio_periph,uint32_t pin)
+ 344:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  1116              		.loc 1 344 1
  1117              		.cfi_startproc
  1118              		@ args = 0, pretend = 0, frame = 8
@@ -1481,7 +1481,7 @@
  1127              		.cfi_def_cfa_register 7
  1128 0006 7860     		str	r0, [r7, #4]
  1129 0008 3960     		str	r1, [r7]
- 345:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_TG(gpio_periph) = (uint32_t)pin;
+ 345:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_TG(gpio_periph) = (uint32_t)pin;
  1130              		.loc 1 345 5
  1131 000a 7B68     		ldr	r3, [r7, #4]
  1132 000c 2C33     		adds	r3, r3, #44
@@ -1489,7 +1489,7 @@
  1134              		.loc 1 345 26
  1135 0010 3B68     		ldr	r3, [r7]
  1136 0012 1360     		str	r3, [r2]
- 346:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 346:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  1137              		.loc 1 346 1
  1138 0014 00BF     		nop
  1139 0016 0C37     		adds	r7, r7, #12
@@ -1512,15 +1512,15 @@
  1157              		.fpu softvfp
  1159              	gpio_port_toggle:
  1160              	.LFB137:
- 347:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
- 348:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
- 349:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      toggle GPIO port status
- 350:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I)
- 351:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
- 352:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
- 353:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
- 354:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_port_toggle(uint32_t gpio_periph)
- 355:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
+ 347:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** 
+ 348:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** /*!
+ 349:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \brief      toggle GPIO port status
+ 350:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[in]  gpio_periph: GPIOx(x = A,B,C,D,E,F,G,H,I)
+ 351:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \param[out] none
+ 352:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     \retval     none
+ 353:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** */
+ 354:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** void gpio_port_toggle(uint32_t gpio_periph)
+ 355:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** {
  1161              		.loc 1 355 1
  1162              		.cfi_startproc
  1163              		@ args = 0, pretend = 0, frame = 8
@@ -1534,7 +1534,7 @@
  1171 0004 00AF     		add	r7, sp, #0
  1172              		.cfi_def_cfa_register 7
  1173 0006 7860     		str	r0, [r7, #4]
- 356:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_TG(gpio_periph) = 0x0000FFFFU;
+ 356:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c ****     GPIO_TG(gpio_periph) = 0x0000FFFFU;
  1174              		.loc 1 356 5
  1175 0008 7B68     		ldr	r3, [r7, #4]
  1176 000a 2C33     		adds	r3, r3, #44
@@ -1542,7 +1542,7 @@
  1178              		.loc 1 356 26
  1179 000e 4FF6FF73 		movw	r3, #65535
  1180 0012 1360     		str	r3, [r2]
- 357:C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
+ 357:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Libraries/FWLIB/src\gd32f4xx_gpio.c **** }
  1181              		.loc 1 357 1
  1182 0014 00BF     		nop
  1183 0016 0C37     		adds	r7, r7, #12
@@ -1567,37 +1567,37 @@
  1203              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_gpio.c
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:16     .text.gpio_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:24     .text.gpio_deinit:00000000 gpio_deinit
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:203    .text.gpio_deinit:0000013c $d
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:216    .text.gpio_mode_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:223    .text.gpio_mode_set:00000000 gpio_mode_set
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:345    .text.gpio_output_options_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:352    .text.gpio_output_options_set:00000000 gpio_output_options_set
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:474    .text.gpio_bit_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:481    .text.gpio_bit_set:00000000 gpio_bit_set
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:519    .text.gpio_bit_reset:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:526    .text.gpio_bit_reset:00000000 gpio_bit_reset
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:564    .text.gpio_bit_write:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:571    .text.gpio_bit_write:00000000 gpio_bit_write
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:626    .text.gpio_port_write:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:633    .text.gpio_port_write:00000000 gpio_port_write
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:673    .text.gpio_input_bit_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:680    .text.gpio_input_bit_get:00000000 gpio_input_bit_get
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:728    .text.gpio_input_port_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:735    .text.gpio_input_port_get:00000000 gpio_input_port_get
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:771    .text.gpio_output_bit_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:778    .text.gpio_output_bit_get:00000000 gpio_output_bit_get
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:826    .text.gpio_output_port_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:833    .text.gpio_output_port_get:00000000 gpio_output_port_get
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:869    .text.gpio_af_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:876    .text.gpio_af_set:00000000 gpio_af_set
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:1028   .text.gpio_pin_lock:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:1035   .text.gpio_pin_lock:00000000 gpio_pin_lock
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:1107   .text.gpio_bit_toggle:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:1114   .text.gpio_bit_toggle:00000000 gpio_bit_toggle
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:1152   .text.gpio_port_toggle:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccZJnaRe.s:1159   .text.gpio_port_toggle:00000000 gpio_port_toggle
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:16     .text.gpio_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:24     .text.gpio_deinit:00000000 gpio_deinit
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:203    .text.gpio_deinit:0000013c $d
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:216    .text.gpio_mode_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:223    .text.gpio_mode_set:00000000 gpio_mode_set
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:345    .text.gpio_output_options_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:352    .text.gpio_output_options_set:00000000 gpio_output_options_set
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:474    .text.gpio_bit_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:481    .text.gpio_bit_set:00000000 gpio_bit_set
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:519    .text.gpio_bit_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:526    .text.gpio_bit_reset:00000000 gpio_bit_reset
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:564    .text.gpio_bit_write:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:571    .text.gpio_bit_write:00000000 gpio_bit_write
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:626    .text.gpio_port_write:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:633    .text.gpio_port_write:00000000 gpio_port_write
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:673    .text.gpio_input_bit_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:680    .text.gpio_input_bit_get:00000000 gpio_input_bit_get
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:728    .text.gpio_input_port_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:735    .text.gpio_input_port_get:00000000 gpio_input_port_get
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:771    .text.gpio_output_bit_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:778    .text.gpio_output_bit_get:00000000 gpio_output_bit_get
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:826    .text.gpio_output_port_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:833    .text.gpio_output_port_get:00000000 gpio_output_port_get
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:869    .text.gpio_af_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:876    .text.gpio_af_set:00000000 gpio_af_set
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:1028   .text.gpio_pin_lock:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:1035   .text.gpio_pin_lock:00000000 gpio_pin_lock
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:1107   .text.gpio_bit_toggle:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:1114   .text.gpio_bit_toggle:00000000 gpio_bit_toggle
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:1152   .text.gpio_port_toggle:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cczYURx8.s:1159   .text.gpio_port_toggle:00000000 gpio_port_toggle
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

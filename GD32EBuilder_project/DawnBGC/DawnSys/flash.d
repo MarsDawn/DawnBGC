@@ -1,5 +1,5 @@
 DawnSys/flash.o: \
- C:/Users/leonardo/Desktop/Code/Github/DawnGBC/Dawn/DawnSys/flash.c \
+ C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnSys/flash.c \
  ../../Dawn/DawnMain/includes.h ../../CMSIS/gd32f4xx.h \
  ../../CMSIS/DSP/Include/core_cm4.h \
  ../../CMSIS/DSP/Include/core_cmInstr.h \
