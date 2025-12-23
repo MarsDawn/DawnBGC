@@ -35,7 +35,7 @@ DawnBGC currently includes the following major components:
 - **IAP (In-Application Programming) online firmware upgrade mechanism**  
 - Embedded implementation based on **32-bit GD32F405 microcontrollers**  
 - Modular and extensible design for easy porting and secondary development  
-
+- Free IDE **GD32 Embedded Builder** [(Download)](https://www.gd32mcu.com/download/agree/box_id/15/document_id/552/path_type/1)
 ### Supported Features
 
 - ✔ Linear Hall sensor motors  
