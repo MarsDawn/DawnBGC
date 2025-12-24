@@ -2,8 +2,8 @@
 
 **Open-Source BGC (Brushless Gimbal Controller) Project**
 
-## How to build in your PC 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LDTULsnp9VM?si=x8lHK7bw_7ZQBUXz" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## How to build in your PC ⇩⇩⇩
+[![Video Title](https://img.youtube.com/vi/LDTULsnp9VM/0.jpg)](https://youtu.be/LDTULsnp9VM?si=x8lHK7bw_7ZQBUXz)
 
 ## Background
 
