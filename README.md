@@ -4,7 +4,7 @@
 
 ## Background
 
-Many years ago, open-source ecosystems for UAV flight control systems had already become mature and highly active. From attitude estimation and state estimation to control and navigation, related technologies have been continuously reused and evolved within the community. However, the **gimbal stabilizer (BGC) system**, which is highly coupled with flight controllers and equally critical, still lacks a **complete, engineering-oriented, and sustainably evolving open-source implementation**.
+Many years ago, open-source ecosystems for UAV flight control systems had already become mature and highly active. From attitude estimation and state estimation to control and navigation, related technologies have been continuously reused and evolved within the community. However, the **BGC (Brushless Gimbal Controller)**, which is highly coupled with flight controllers and equally critical, still lacks a **complete, engineering-oriented, and sustainably evolving open-source implementation**.
 
 Most existing mainstream BGC solutions are dominated by commercial companies or closed organizations. Their core designs, control architectures, and engineering experiences are rarely fully disclosed. This situation, to some extent, limits the expansion of gimbal technology beyond UAV applications and raises the barrier for researchers and developers to perform secondary development and system integration.
 
