@@ -2,6 +2,9 @@
 
 **Open-Source BGC (Brushless Gimbal Controller) Project**
 
+## How to build in your PC 
+[![Video Title](https://img.youtube.com/vi/LDTULsnp9VM/0.jpg)](https://youtu.be/LDTULsnp9VM?si=x8lHK7bw_7ZQBUXz)
+
 ## Background
 
 Many years ago, open-source ecosystems for UAV flight control systems had already become mature and highly active. From attitude estimation and state estimation to control and navigation, related technologies have been continuously reused and evolved within the community. However, the **BGC (Brushless Gimbal Controller)**, which is highly coupled with flight controllers and equally critical, still lacks a **complete, engineering-oriented, and sustainably evolving open-source implementation**.
