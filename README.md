@@ -80,8 +80,7 @@ Although this is an amateur project, I made attempts to collaborate with numerou
 
 If you would like to quickly verify functionality or conduct demonstration tests, you may obtain validated reference hardware through the following link:
 
-- 👉[**GUC-PRO(USBCamera)**](https://shop471460667.taobao.com/?spm=pc_detail.30350276.shop_block.dshopinfo.357366d4Ofp51t)
-
+- 👉[**GUC-PRO(USBCamera)**](https://shop471460667.taobao.com/?spm=pc_detail.30350276.shop_block.dshopinfo.357366d4Ofp51t) or [**MarsMotor@outlook.com**](mailto:MarsMotor@outlook.com?subject=Purchase%20Order&body=**Buyer%20Details**%0D%0A%0D%0A-%20Name/Company%3A%20%5BInsert%20Name%2FCompany%5D%0D%0A-%20Address%3A%20%5BInsert%20Full%20Address%5D%0D%0A-%20Product%20Type%3A%20%5BInsert%20Product%20Name%2FModel%5D%0D%0A-%20Quantity%3A%20%5BInsert%20Quantity%5D%0D%0A-%20Additional%20Requirements%3A%20%5BInsert%20Special%20Requests%5D%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BInsert%20Your%20Name%5D)
 ---
 
 ## ⚠ Safety Notice
