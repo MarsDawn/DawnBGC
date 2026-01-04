@@ -388,13 +388,13 @@
  341              		.file 20 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_bldc_math.c
-C:\Users\leonardo\AppData\Local\Temp\ccOREXpb.s:18     .text.BLDCClarke:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccOREXpb.s:26     .text.BLDCClarke:00000000 BLDCClarke
-C:\Users\leonardo\AppData\Local\Temp\ccOREXpb.s:92     .text.BLDCClarke:00000054 $d
-C:\Users\leonardo\AppData\Local\Temp\ccOREXpb.s:97     .text.BLDCPark:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccOREXpb.s:104    .text.BLDCPark:00000000 BLDCPark
-C:\Users\leonardo\AppData\Local\Temp\ccOREXpb.s:211    .text.BLDCRevPark:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccOREXpb.s:218    .text.BLDCRevPark:00000000 BLDCRevPark
+C:\Users\leonardo\AppData\Local\Temp\ccuJ6XR3.s:18     .text.BLDCClarke:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccuJ6XR3.s:26     .text.BLDCClarke:00000000 BLDCClarke
+C:\Users\leonardo\AppData\Local\Temp\ccuJ6XR3.s:92     .text.BLDCClarke:00000054 $d
+C:\Users\leonardo\AppData\Local\Temp\ccuJ6XR3.s:97     .text.BLDCPark:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccuJ6XR3.s:104    .text.BLDCPark:00000000 BLDCPark
+C:\Users\leonardo\AppData\Local\Temp\ccuJ6XR3.s:211    .text.BLDCRevPark:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccuJ6XR3.s:218    .text.BLDCRevPark:00000000 BLDCRevPark
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
