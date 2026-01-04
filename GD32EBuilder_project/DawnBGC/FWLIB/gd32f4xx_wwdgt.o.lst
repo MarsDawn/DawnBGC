@@ -498,26 +498,26 @@
  390              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_wwdgt.c
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:16     .text.wwdgt_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:24     .text.wwdgt_deinit:00000000 wwdgt_deinit
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:50     .text.wwdgt_counter_update:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:57     .text.wwdgt_counter_update:00000000 wwdgt_counter_update
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:108    .text.wwdgt_counter_update:00000034 $d
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:113    .text.wwdgt_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:120    .text.wwdgt_enable:00000000 wwdgt_enable
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:150    .text.wwdgt_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:155    .text.wwdgt_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:162    .text.wwdgt_config:00000000 wwdgt_config
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:243    .text.wwdgt_config:00000068 $d
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:249    .text.wwdgt_interrupt_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:256    .text.wwdgt_interrupt_enable:00000000 wwdgt_interrupt_enable
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:286    .text.wwdgt_interrupt_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:291    .text.wwdgt_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:298    .text.wwdgt_flag_get:00000000 wwdgt_flag_get
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:337    .text.wwdgt_flag_get:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:342    .text.wwdgt_flag_clear:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:349    .text.wwdgt_flag_clear:00000000 wwdgt_flag_clear
-C:\Users\leonardo\AppData\Local\Temp\ccurOqW2.s:379    .text.wwdgt_flag_clear:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:16     .text.wwdgt_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:24     .text.wwdgt_deinit:00000000 wwdgt_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:50     .text.wwdgt_counter_update:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:57     .text.wwdgt_counter_update:00000000 wwdgt_counter_update
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:108    .text.wwdgt_counter_update:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:113    .text.wwdgt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:120    .text.wwdgt_enable:00000000 wwdgt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:150    .text.wwdgt_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:155    .text.wwdgt_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:162    .text.wwdgt_config:00000000 wwdgt_config
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:243    .text.wwdgt_config:00000068 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:249    .text.wwdgt_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:256    .text.wwdgt_interrupt_enable:00000000 wwdgt_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:286    .text.wwdgt_interrupt_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:291    .text.wwdgt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:298    .text.wwdgt_flag_get:00000000 wwdgt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:337    .text.wwdgt_flag_get:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:342    .text.wwdgt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:349    .text.wwdgt_flag_clear:00000000 wwdgt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\ccDLemNz.s:379    .text.wwdgt_flag_clear:00000018 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

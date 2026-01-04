@@ -453,21 +453,21 @@
  343              		.file 6 "../../CMSIS/gd32f4xx.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_fwdgt.c
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:16     .text.fwdgt_write_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:24     .text.fwdgt_write_disable:00000000 fwdgt_write_disable
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:54     .text.fwdgt_write_disable:00000014 $d
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:59     .text.fwdgt_counter_reload:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:66     .text.fwdgt_counter_reload:00000000 fwdgt_counter_reload
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:95     .text.fwdgt_counter_reload:00000014 $d
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:100    .text.fwdgt_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:107    .text.fwdgt_enable:00000000 fwdgt_enable
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:136    .text.fwdgt_enable:00000014 $d
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:141    .text.fwdgt_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:148    .text.fwdgt_config:00000000 fwdgt_config
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:271    .text.fwdgt_config:00000094 $d
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:280    .text.fwdgt_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:287    .text.fwdgt_flag_get:00000000 fwdgt_flag_get
-C:\Users\leonardo\AppData\Local\Temp\ccCQXsqF.s:333    .text.fwdgt_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:16     .text.fwdgt_write_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:24     .text.fwdgt_write_disable:00000000 fwdgt_write_disable
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:54     .text.fwdgt_write_disable:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:59     .text.fwdgt_counter_reload:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:66     .text.fwdgt_counter_reload:00000000 fwdgt_counter_reload
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:95     .text.fwdgt_counter_reload:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:100    .text.fwdgt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:107    .text.fwdgt_enable:00000000 fwdgt_enable
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:136    .text.fwdgt_enable:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:141    .text.fwdgt_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:148    .text.fwdgt_config:00000000 fwdgt_config
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:271    .text.fwdgt_config:00000094 $d
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:280    .text.fwdgt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:287    .text.fwdgt_flag_get:00000000 fwdgt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccG4noWY.s:333    .text.fwdgt_flag_get:00000028 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

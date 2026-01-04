@@ -1737,33 +1737,33 @@
  1439              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_gimbal_system.c
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:16     .text.GimbalInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:24     .text.GimbalInit:00000000 GimbalInit
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:16     .text.GimbalInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:24     .text.GimbalInit:00000000 GimbalInit
                             *COM*:00000024 local_ArmDCM_trans
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:52     .text.GimbalWork:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:59     .text.GimbalWork:00000000 GimbalWork
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:796    .text.BLDCUpdata:00000000 BLDCUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1001   .text.IMUUpdata:00000000 IMUUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:137    .text.GimbalWork:00000080 $d
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:141    .text.GimbalWork:00000090 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1079   .text.CheckBLDCStatus:00000000 CheckBLDCStatus
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:468    .text.GimbalWork:000002c4 $d
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:486    .text.GimbalWork:00000304 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1327   .text.AngleRadsLimit:00000000 AngleRadsLimit
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1141   .text.BDCTorqueUpdata:00000000 BDCTorqueUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:778    .text.GimbalWork:00000500 $d
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:790    .text.BLDCUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:985    .text.BLDCUpdata:00000134 $d
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:995    .text.IMUUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1067   .text.IMUUpdata:00000054 $d
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1073   .text.CheckBLDCStatus:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1128   .text.CheckBLDCStatus:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1135   .text.BDCTorqueUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1197   .text.BDCTorqueUpdata:0000004c $d
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1204   .text.BLDCTorqueUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1210   .text.BLDCTorqueUpdata:00000000 BLDCTorqueUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1313   .text.BLDCTorqueUpdata:00000094 $d
-C:\Users\leonardo\AppData\Local\Temp\ccus4bVo.s:1321   .text.AngleRadsLimit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:52     .text.GimbalWork:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:59     .text.GimbalWork:00000000 GimbalWork
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:796    .text.BLDCUpdata:00000000 BLDCUpdata
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1001   .text.IMUUpdata:00000000 IMUUpdata
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:137    .text.GimbalWork:00000080 $d
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:141    .text.GimbalWork:00000090 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1079   .text.CheckBLDCStatus:00000000 CheckBLDCStatus
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:468    .text.GimbalWork:000002c4 $d
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:486    .text.GimbalWork:00000304 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1327   .text.AngleRadsLimit:00000000 AngleRadsLimit
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1141   .text.BDCTorqueUpdata:00000000 BDCTorqueUpdata
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:778    .text.GimbalWork:00000500 $d
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:790    .text.BLDCUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:985    .text.BLDCUpdata:00000134 $d
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:995    .text.IMUUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1067   .text.IMUUpdata:00000054 $d
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1073   .text.CheckBLDCStatus:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1128   .text.CheckBLDCStatus:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1135   .text.BDCTorqueUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1197   .text.BDCTorqueUpdata:0000004c $d
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1204   .text.BLDCTorqueUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1210   .text.BLDCTorqueUpdata:00000000 BLDCTorqueUpdata
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1313   .text.BLDCTorqueUpdata:00000094 $d
+C:\Users\leonardo\AppData\Local\Temp\cccldQ9T.s:1321   .text.AngleRadsLimit:00000000 $t
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

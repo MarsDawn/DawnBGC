@@ -845,23 +845,23 @@
  607              		.file 20 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_bdc.c
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:16     .text.BDCInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:24     .text.BDCInit:00000000 BDCInit
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:333    .text.BDC_TurnOnPWM:00000000 BDC_TurnOnPWM
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:54     .text.BDCInit:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:61     .text.BDC_MapMagToCcr:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:67     .text.BDC_MapMagToCcr:00000000 BDC_MapMagToCcr
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:126    .text.BDC_MapMagToCcr:00000044 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:131    .text.BDC_ApplySlowDecayDualPwm:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:137    .text.BDC_ApplySlowDecayDualPwm:00000000 BDC_ApplySlowDecayDualPwm
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:205    .text.BDCpwm:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:212    .text.BDCpwm:00000000 BDCpwm
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:316    .text.BDCpwm:00000084 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:326    .text.BDC_TurnOnPWM:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:446    .text.BDC_TurnOnPWM:00000094 $d
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:457    .text.BDC_ShutOffPWM:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:464    .text.BDC_ShutOffPWM:00000000 BDC_ShutOffPWM
-C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:577    .text.BDC_ShutOffPWM:00000094 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:16     .text.BDCInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:24     .text.BDCInit:00000000 BDCInit
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:333    .text.BDC_TurnOnPWM:00000000 BDC_TurnOnPWM
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:54     .text.BDCInit:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:61     .text.BDC_MapMagToCcr:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:67     .text.BDC_MapMagToCcr:00000000 BDC_MapMagToCcr
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:126    .text.BDC_MapMagToCcr:00000044 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:131    .text.BDC_ApplySlowDecayDualPwm:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:137    .text.BDC_ApplySlowDecayDualPwm:00000000 BDC_ApplySlowDecayDualPwm
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:205    .text.BDCpwm:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:212    .text.BDCpwm:00000000 BDCpwm
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:316    .text.BDCpwm:00000084 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:326    .text.BDC_TurnOnPWM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:446    .text.BDC_TurnOnPWM:00000094 $d
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:457    .text.BDC_ShutOffPWM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:464    .text.BDC_ShutOffPWM:00000000 BDC_ShutOffPWM
+C:\Users\leonardo\AppData\Local\Temp\cc0z9T2u.s:577    .text.BDC_ShutOffPWM:00000094 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

@@ -1485,22 +1485,22 @@
  1172              		.file 24 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:20     .bss.CAPTURE_PWM_TIME_UP:00000000 CAPTURE_PWM_TIME_UP
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:17     .bss.CAPTURE_PWM_TIME_UP:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:27     .bss.CAPTURE_PWM_TIME_ALL:00000000 CAPTURE_PWM_TIME_ALL
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:24     .bss.CAPTURE_PWM_TIME_ALL:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:34     .bss.CAPTURE_PWM_TIME_LAST:00000000 CAPTURE_PWM_TIME_LAST
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:31     .bss.CAPTURE_PWM_TIME_LAST:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:41     .bss.AdcDate:00000000 AdcDate
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:38     .bss.AdcDate:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:44     .text.BLDCGpioInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:52     .text.BLDCGpioInit:00000000 BLDCGpioInit
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:522    .text.BLDCGpioInit:000003c8 $d
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:533    .text.BLDCGpioInit:000003f0 $t
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:905    .text.BLDCGpioInit:00000708 $d
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:911    .text.BDCGpioInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:918    .text.BDCGpioInit:00000000 BDCGpioInit
-C:\Users\leonardo\AppData\Local\Temp\ccoFTZb8.s:1142   .text.BDCGpioInit:000001b0 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:20     .bss.CAPTURE_PWM_TIME_UP:00000000 CAPTURE_PWM_TIME_UP
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:17     .bss.CAPTURE_PWM_TIME_UP:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:27     .bss.CAPTURE_PWM_TIME_ALL:00000000 CAPTURE_PWM_TIME_ALL
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:24     .bss.CAPTURE_PWM_TIME_ALL:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:34     .bss.CAPTURE_PWM_TIME_LAST:00000000 CAPTURE_PWM_TIME_LAST
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:31     .bss.CAPTURE_PWM_TIME_LAST:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:41     .bss.AdcDate:00000000 AdcDate
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:38     .bss.AdcDate:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:44     .text.BLDCGpioInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:52     .text.BLDCGpioInit:00000000 BLDCGpioInit
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:522    .text.BLDCGpioInit:000003c8 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:533    .text.BLDCGpioInit:000003f0 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:905    .text.BLDCGpioInit:00000708 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:911    .text.BDCGpioInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:918    .text.BDCGpioInit:00000000 BDCGpioInit
+C:\Users\leonardo\AppData\Local\Temp\ccDOVRGz.s:1142   .text.BDCGpioInit:000001b0 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

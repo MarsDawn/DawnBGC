@@ -706,31 +706,31 @@
  550              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_syscfg.c
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:16     .text.syscfg_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:24     .text.syscfg_deinit:00000000 syscfg_deinit
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:50     .text.syscfg_bootmode_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:57     .text.syscfg_bootmode_config:00000000 syscfg_bootmode_config
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:102    .text.syscfg_bootmode_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:107    .text.syscfg_fmc_swap_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:114    .text.syscfg_fmc_swap_config:00000000 syscfg_fmc_swap_config
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:160    .text.syscfg_fmc_swap_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:165    .text.syscfg_exmc_swap_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:172    .text.syscfg_exmc_swap_config:00000000 syscfg_exmc_swap_config
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:218    .text.syscfg_exmc_swap_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:223    .text.syscfg_exti_line_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:230    .text.syscfg_exti_line_config:00000000 syscfg_exti_line_config
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:278    .text.syscfg_exti_line_config:00000044 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:282    .text.syscfg_exti_line_config:00000054 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:369    .text.syscfg_exti_line_config:000000c8 $d
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:377    .text.syscfg_enet_phy_interface_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:384    .text.syscfg_enet_phy_interface_config:00000000 syscfg_enet_phy_interface_config
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:430    .text.syscfg_enet_phy_interface_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:435    .text.syscfg_compensation_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:442    .text.syscfg_compensation_config:00000000 syscfg_compensation_config
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:488    .text.syscfg_compensation_config:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:493    .text.syscfg_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:500    .text.syscfg_flag_get:00000000 syscfg_flag_get
-C:\Users\leonardo\AppData\Local\Temp\cc1WFjW0.s:539    .text.syscfg_flag_get:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:16     .text.syscfg_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:24     .text.syscfg_deinit:00000000 syscfg_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:50     .text.syscfg_bootmode_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:57     .text.syscfg_bootmode_config:00000000 syscfg_bootmode_config
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:102    .text.syscfg_bootmode_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:107    .text.syscfg_fmc_swap_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:114    .text.syscfg_fmc_swap_config:00000000 syscfg_fmc_swap_config
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:160    .text.syscfg_fmc_swap_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:165    .text.syscfg_exmc_swap_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:172    .text.syscfg_exmc_swap_config:00000000 syscfg_exmc_swap_config
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:218    .text.syscfg_exmc_swap_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:223    .text.syscfg_exti_line_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:230    .text.syscfg_exti_line_config:00000000 syscfg_exti_line_config
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:278    .text.syscfg_exti_line_config:00000044 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:282    .text.syscfg_exti_line_config:00000054 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:369    .text.syscfg_exti_line_config:000000c8 $d
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:377    .text.syscfg_enet_phy_interface_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:384    .text.syscfg_enet_phy_interface_config:00000000 syscfg_enet_phy_interface_config
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:430    .text.syscfg_enet_phy_interface_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:435    .text.syscfg_compensation_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:442    .text.syscfg_compensation_config:00000000 syscfg_compensation_config
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:488    .text.syscfg_compensation_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:493    .text.syscfg_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:500    .text.syscfg_flag_get:00000000 syscfg_flag_get
+C:\Users\leonardo\AppData\Local\Temp\ccSdKMkq.s:539    .text.syscfg_flag_get:00000020 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
