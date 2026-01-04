@@ -3501,49 +3501,49 @@
  3055              		.file 20 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_gimbal_math.c
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:21     .text.ACC2Euler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:29     .text.ACC2Euler:00000000 ACC2Euler
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:229    .text.ACC2Euler:0000012c $d
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:238    .text.Euler2Quat:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:245    .text.Euler2Quat:00000000 Euler2Quat
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:507    .text.Euler2DCM:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:514    .text.Euler2DCM:00000000 Euler2DCM
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:775    .text.Quat2Euler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:782    .text.Quat2Euler:00000000 Quat2Euler
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1248   .text.Quat2Euler:000002e0 $d
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1256   .text.QuatNormalize:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1263   .text.QuatNormalize:00000000 QuatNormalize
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1426   .text.CalcJacobianInv:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1433   .text.CalcJacobianInv:00000000 CalcJacobianInv
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1581   .text.CalcJacobianTrans:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1588   .text.CalcJacobianTrans:00000000 CalcJacobianTrans
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1704   .text.MatrixAdd:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1711   .text.MatrixAdd:00000000 MatrixAdd
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1818   .text.MatrixSub:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1825   .text.MatrixSub:00000000 MatrixSub
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1932   .text.MatrixMultiply:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:1939   .text.MatrixMultiply:00000000 MatrixMultiply
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2097   .text.AttitudeUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2104   .text.AttitudeUpdata:00000000 AttitudeUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2427   .text.AttitudeUpdata:00000238 $d
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2435   .text.PidSetKp:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2442   .text.PidSetKp:00000000 PidSetKp
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2477   .text.PidSetKi:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2484   .text.PidSetKi:00000000 PidSetKi
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2519   .text.PidSetIntegral:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2526   .text.PidSetIntegral:00000000 PidSetIntegral
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2561   .text.PidSetIntegralLimit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2568   .text.PidSetIntegralLimit:00000000 PidSetIntegralLimit
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2608   .text.PidSetKd:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2615   .text.PidSetKd:00000000 PidSetKd
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2650   .text.PidSetKdFilterCoef:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2657   .text.PidSetKdFilterCoef:00000000 PidSetKdFilterCoef
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2692   .text.PidSetOldError:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2699   .text.PidSetOldError:00000000 PidSetOldError
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2734   .text.PidSetOutLimit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2741   .text.PidSetOutLimit:00000000 PidSetOutLimit
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2782   .text.PidControl:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2789   .text.PidControl:00000000 PidControl
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:21     .text.ACC2Euler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:29     .text.ACC2Euler:00000000 ACC2Euler
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:229    .text.ACC2Euler:0000012c $d
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:238    .text.Euler2Quat:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:245    .text.Euler2Quat:00000000 Euler2Quat
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:507    .text.Euler2DCM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:514    .text.Euler2DCM:00000000 Euler2DCM
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:775    .text.Quat2Euler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:782    .text.Quat2Euler:00000000 Quat2Euler
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1248   .text.Quat2Euler:000002e0 $d
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1256   .text.QuatNormalize:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1263   .text.QuatNormalize:00000000 QuatNormalize
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1426   .text.CalcJacobianInv:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1433   .text.CalcJacobianInv:00000000 CalcJacobianInv
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1581   .text.CalcJacobianTrans:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1588   .text.CalcJacobianTrans:00000000 CalcJacobianTrans
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1704   .text.MatrixAdd:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1711   .text.MatrixAdd:00000000 MatrixAdd
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1818   .text.MatrixSub:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1825   .text.MatrixSub:00000000 MatrixSub
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1932   .text.MatrixMultiply:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:1939   .text.MatrixMultiply:00000000 MatrixMultiply
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2097   .text.AttitudeUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2104   .text.AttitudeUpdata:00000000 AttitudeUpdata
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2427   .text.AttitudeUpdata:00000238 $d
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2435   .text.PidSetKp:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2442   .text.PidSetKp:00000000 PidSetKp
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2477   .text.PidSetKi:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2484   .text.PidSetKi:00000000 PidSetKi
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2519   .text.PidSetIntegral:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2526   .text.PidSetIntegral:00000000 PidSetIntegral
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2561   .text.PidSetIntegralLimit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2568   .text.PidSetIntegralLimit:00000000 PidSetIntegralLimit
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2608   .text.PidSetKd:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2615   .text.PidSetKd:00000000 PidSetKd
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2650   .text.PidSetKdFilterCoef:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2657   .text.PidSetKdFilterCoef:00000000 PidSetKdFilterCoef
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2692   .text.PidSetOldError:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2699   .text.PidSetOldError:00000000 PidSetOldError
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2734   .text.PidSetOutLimit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2741   .text.PidSetOutLimit:00000000 PidSetOutLimit
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2782   .text.PidControl:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cccHAtHp.s:2789   .text.PidControl:00000000 PidControl
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
@@ -3607,8 +3607,9 @@ C:\Users\leonardo\AppData\Local\Temp\ccCpUZ6U.s:2789   .text.PidControl:00000000
                            .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
                            .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
                            .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bdc.h.23.03eb0a77d8dad854dbfdbe1cd39a5bd7
                            .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
-                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.gpio.h.25.9dbce65fd9496973b249fa462e17a01b
                            .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
 
 UNDEFINED SYMBOLS

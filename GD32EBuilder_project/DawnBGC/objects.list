@@ -44,4 +44,5 @@
 "./DawnBsp/gpio.o"
 "./DawnBLDC/dawn_bldc_math.o"
 "./DawnBLDC/dawn_bldc.o"
+"./DawnBDC/dawn_bdc.o"
 "./CMSIS/system_gd32f4xx.o"

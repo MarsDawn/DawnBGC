@@ -18,6 +18,7 @@ RM := rm -rf
 -include DawnCom/subdir.mk
 -include DawnBsp/subdir.mk
 -include DawnBLDC/subdir.mk
+-include DawnBDC/subdir.mk
 -include CMSIS/subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(ASM_DEPS)),)

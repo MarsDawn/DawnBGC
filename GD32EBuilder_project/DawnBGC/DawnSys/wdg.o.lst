@@ -155,10 +155,10 @@
  117              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 wdg.c
-C:\Users\leonardo\AppData\Local\Temp\ccJ51E3z.s:16     .text.iwdg_init:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccJ51E3z.s:24     .text.iwdg_init:00000000 iwdg_init
-C:\Users\leonardo\AppData\Local\Temp\ccJ51E3z.s:69     .text.iwdg_feed:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccJ51E3z.s:76     .text.iwdg_feed:00000000 iwdg_feed
+C:\Users\leonardo\AppData\Local\Temp\ccdEy7Rn.s:16     .text.iwdg_init:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccdEy7Rn.s:24     .text.iwdg_init:00000000 iwdg_init
+C:\Users\leonardo\AppData\Local\Temp\ccdEy7Rn.s:69     .text.iwdg_feed:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccdEy7Rn.s:76     .text.iwdg_feed:00000000 iwdg_feed
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
@@ -222,8 +222,9 @@ C:\Users\leonardo\AppData\Local\Temp\ccJ51E3z.s:76     .text.iwdg_feed:00000000 
                            .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
                            .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
                            .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bdc.h.23.03eb0a77d8dad854dbfdbe1cd39a5bd7
                            .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
-                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.gpio.h.25.9dbce65fd9496973b249fa462e17a01b
                            .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
 
 UNDEFINED SYMBOLS

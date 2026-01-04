@@ -32,8 +32,12 @@
 #define FAULT_PRE_PRIORITY                       ((uint8_t)0)
 #define FAULT_SUB_PRIORITY                       ((uint8_t)0)
 
+#define TIM0_ARR         ((SYSTERM_CLK / PWM_FREQ) - 1U)
+#define TIM1_ARR         ((SYSTERM_CLK * 0.5f / PWM_FREQ) - 1U)
+
 extern uint32_t AdcDate [5];
 
 void BLDCGpioInit(void);
+void BDCGpioInit(void);
 #endif
 

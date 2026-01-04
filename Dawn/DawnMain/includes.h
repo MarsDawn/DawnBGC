@@ -57,6 +57,7 @@
 #include "dawn_gimbal_system.h"
 #include "dawn_gimbal_math.h"
 
+#include "dawn_bdc.h"
 #include "dawn_bldc.h"
 #include "gpio.h"
 #include "wdg.h"

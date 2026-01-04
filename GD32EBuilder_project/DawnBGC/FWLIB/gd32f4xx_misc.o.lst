@@ -667,27 +667,27 @@
  534              		.file 5 "../../CMSIS/system_gd32f4xx.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_misc.c
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:16     .text.nvic_priority_group_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:24     .text.nvic_priority_group_set:00000000 nvic_priority_group_set
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:62     .text.nvic_priority_group_set:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:67     .text.nvic_irq_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:74     .text.nvic_irq_enable:00000000 nvic_irq_enable
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:248    .text.nvic_irq_enable:000000f4 $d
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:254    .text.nvic_irq_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:261    .text.nvic_irq_disable:00000000 nvic_irq_disable
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:307    .text.nvic_irq_disable:00000030 $d
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:312    .text.nvic_vector_table_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:319    .text.nvic_vector_table_set:00000000 nvic_vector_table_set
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:360    .text.nvic_vector_table_set:00000028 $d
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:365    .text.system_lowpower_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:372    .text.system_lowpower_set:00000000 system_lowpower_set
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:411    .text.system_lowpower_set:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:416    .text.system_lowpower_reset:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:423    .text.system_lowpower_reset:00000000 system_lowpower_reset
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:464    .text.system_lowpower_reset:00000024 $d
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:469    .text.systick_clksource_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:476    .text.systick_clksource_set:00000000 systick_clksource_set
-C:\Users\leonardo\AppData\Local\Temp\ccBkVUkp.s:525    .text.systick_clksource_set:00000034 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:16     .text.nvic_priority_group_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:24     .text.nvic_priority_group_set:00000000 nvic_priority_group_set
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:62     .text.nvic_priority_group_set:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:67     .text.nvic_irq_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:74     .text.nvic_irq_enable:00000000 nvic_irq_enable
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:248    .text.nvic_irq_enable:000000f4 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:254    .text.nvic_irq_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:261    .text.nvic_irq_disable:00000000 nvic_irq_disable
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:307    .text.nvic_irq_disable:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:312    .text.nvic_vector_table_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:319    .text.nvic_vector_table_set:00000000 nvic_vector_table_set
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:360    .text.nvic_vector_table_set:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:365    .text.system_lowpower_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:372    .text.system_lowpower_set:00000000 system_lowpower_set
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:411    .text.system_lowpower_set:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:416    .text.system_lowpower_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:423    .text.system_lowpower_reset:00000000 system_lowpower_reset
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:464    .text.system_lowpower_reset:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:469    .text.systick_clksource_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:476    .text.systick_clksource_set:00000000 systick_clksource_set
+C:\Users\leonardo\AppData\Local\Temp\ccpPSTJv.s:525    .text.systick_clksource_set:00000034 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

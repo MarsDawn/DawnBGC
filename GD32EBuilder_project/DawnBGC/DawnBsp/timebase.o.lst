@@ -462,12 +462,12 @@
  371              		.align	2
  372              	.L15:
  373 0090 00200040 		.word	1073750016
- 374 0094 00000000 		.word	isr_cnt.11230
+ 374 0094 00000000 		.word	isr_cnt.11240
  375 0098 00000000 		.word	TimeOutArray
  376              		.cfi_endproc
  377              	.LFE160:
- 379              		.section	.bss.isr_cnt.11230,"aw",%nobits
- 382              	isr_cnt.11230:
+ 379              		.section	.bss.isr_cnt.11240,"aw",%nobits
+ 382              	isr_cnt.11240:
  383 0000 00       		.space	1
  384              		.text
  385              	.Letext0:
@@ -496,20 +496,20 @@
 DEFINED SYMBOLS
                             *ABS*:00000000 timebase.c
                             *COM*:00000012 TimeOutArray
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:17     .text.TimeBaseInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:25     .text.TimeBaseInit:00000000 TimeBaseInit
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:103    .text.TimeBaseInit:00000070 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:109    .text.TimeBaseStart:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:116    .text.TimeBaseStart:00000000 TimeBaseStart
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:160    .text.TimeBaseStop:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:167    .text.TimeBaseStop:00000000 TimeBaseStop
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:205    .text.TimeBaseTimeOut:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:212    .text.TimeBaseTimeOut:00000000 TimeBaseTimeOut
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:258    .text.TIMER7_TRG_CMT_TIMER13_IRQHandler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:265    .text.TIMER7_TRG_CMT_TIMER13_IRQHandler:00000000 TIMER7_TRG_CMT_TIMER13_IRQHandler
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:373    .text.TIMER7_TRG_CMT_TIMER13_IRQHandler:00000090 $d
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:382    .bss.isr_cnt.11230:00000000 isr_cnt.11230
-C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:383    .bss.isr_cnt.11230:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:17     .text.TimeBaseInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:25     .text.TimeBaseInit:00000000 TimeBaseInit
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:103    .text.TimeBaseInit:00000070 $d
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:109    .text.TimeBaseStart:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:116    .text.TimeBaseStart:00000000 TimeBaseStart
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:160    .text.TimeBaseStop:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:167    .text.TimeBaseStop:00000000 TimeBaseStop
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:205    .text.TimeBaseTimeOut:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:212    .text.TimeBaseTimeOut:00000000 TimeBaseTimeOut
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:258    .text.TIMER7_TRG_CMT_TIMER13_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:265    .text.TIMER7_TRG_CMT_TIMER13_IRQHandler:00000000 TIMER7_TRG_CMT_TIMER13_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:373    .text.TIMER7_TRG_CMT_TIMER13_IRQHandler:00000090 $d
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:382    .bss.isr_cnt.11240:00000000 isr_cnt.11240
+C:\Users\leonardo\AppData\Local\Temp\ccoJ0n5e.s:383    .bss.isr_cnt.11240:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
@@ -573,8 +573,9 @@ C:\Users\leonardo\AppData\Local\Temp\ccjPVEr9.s:383    .bss.isr_cnt.11230:000000
                            .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
                            .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
                            .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bdc.h.23.03eb0a77d8dad854dbfdbe1cd39a5bd7
                            .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
-                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.gpio.h.25.9dbce65fd9496973b249fa462e17a01b
                            .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
 
 UNDEFINED SYMBOLS

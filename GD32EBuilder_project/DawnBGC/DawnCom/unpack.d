@@ -39,10 +39,10 @@ DawnCom/unpack.o: \
  ../../Dawn/DawnMain/dawn_function.h \
  ../../Dawn/DawnGimbal/dawn_gimbal_system.h \
  ../../Dawn/DawnGimbal/dawn_gimbal_math.h \
- ../../Dawn/DawnGimbal/dawn_gimbal_math.h ../../Dawn/DawnBLDC/dawn_bldc.h \
- ../../Dawn/DawnBLDC/dawn_bldc_math.h ../../Dawn/DawnBsp/gpio.h \
- ../../Dawn/DawnSys/wdg.h ../../Dawn/DawnSys/systick.h \
- ../../Dawn/DawnSys/flash.h
+ ../../Dawn/DawnGimbal/dawn_gimbal_math.h ../../Dawn/DawnBDC/dawn_bdc.h \
+ ../../Dawn/DawnBLDC/dawn_bldc.h ../../Dawn/DawnBLDC/dawn_bldc_math.h \
+ ../../Dawn/DawnBsp/gpio.h ../../Dawn/DawnSys/wdg.h \
+ ../../Dawn/DawnSys/systick.h ../../Dawn/DawnSys/flash.h
 
 ../../Dawn/DawnMain/includes.h:
 
@@ -137,6 +137,8 @@ DawnCom/unpack.o: \
 ../../Dawn/DawnGimbal/dawn_gimbal_math.h:
 
 ../../Dawn/DawnGimbal/dawn_gimbal_math.h:
+
+../../Dawn/DawnBDC/dawn_bdc.h:
 
 ../../Dawn/DawnBLDC/dawn_bldc.h:
 

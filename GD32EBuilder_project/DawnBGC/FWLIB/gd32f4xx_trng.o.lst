@@ -610,35 +610,35 @@
  486              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_trng.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_trng.c
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:16     .text.trng_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:24     .text.trng_deinit:00000000 trng_deinit
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:50     .text.trng_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:57     .text.trng_enable:00000000 trng_enable
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:87     .text.trng_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:92     .text.trng_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:99     .text.trng_disable:00000000 trng_disable
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:129    .text.trng_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:134    .text.trng_get_true_random_data:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:141    .text.trng_get_true_random_data:00000000 trng_get_true_random_data
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:168    .text.trng_get_true_random_data:00000010 $d
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:173    .text.trng_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:180    .text.trng_flag_get:00000000 trng_flag_get
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:226    .text.trng_flag_get:00000028 $d
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:231    .text.trng_flag_clear:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:238    .text.trng_flag_clear:00000000 trng_flag_clear
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:279    .text.trng_flag_clear:00000024 $d
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:284    .text.trng_interrupt_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:291    .text.trng_interrupt_enable:00000000 trng_interrupt_enable
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:321    .text.trng_interrupt_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:326    .text.trng_interrupt_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:333    .text.trng_interrupt_disable:00000000 trng_interrupt_disable
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:363    .text.trng_interrupt_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:368    .text.trng_interrupt_flag_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:375    .text.trng_interrupt_flag_get:00000000 trng_interrupt_flag_get
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:421    .text.trng_interrupt_flag_get:00000028 $d
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:426    .text.trng_interrupt_flag_clear:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:433    .text.trng_interrupt_flag_clear:00000000 trng_interrupt_flag_clear
-C:\Users\leonardo\AppData\Local\Temp\ccmUa7q6.s:474    .text.trng_interrupt_flag_clear:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:16     .text.trng_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:24     .text.trng_deinit:00000000 trng_deinit
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:50     .text.trng_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:57     .text.trng_enable:00000000 trng_enable
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:87     .text.trng_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:92     .text.trng_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:99     .text.trng_disable:00000000 trng_disable
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:129    .text.trng_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:134    .text.trng_get_true_random_data:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:141    .text.trng_get_true_random_data:00000000 trng_get_true_random_data
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:168    .text.trng_get_true_random_data:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:173    .text.trng_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:180    .text.trng_flag_get:00000000 trng_flag_get
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:226    .text.trng_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:231    .text.trng_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:238    .text.trng_flag_clear:00000000 trng_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:279    .text.trng_flag_clear:00000024 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:284    .text.trng_interrupt_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:291    .text.trng_interrupt_enable:00000000 trng_interrupt_enable
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:321    .text.trng_interrupt_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:326    .text.trng_interrupt_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:333    .text.trng_interrupt_disable:00000000 trng_interrupt_disable
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:363    .text.trng_interrupt_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:368    .text.trng_interrupt_flag_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:375    .text.trng_interrupt_flag_get:00000000 trng_interrupt_flag_get
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:421    .text.trng_interrupt_flag_get:00000028 $d
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:426    .text.trng_interrupt_flag_clear:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:433    .text.trng_interrupt_flag_clear:00000000 trng_interrupt_flag_clear
+C:\Users\leonardo\AppData\Local\Temp\cciFhr3P.s:474    .text.trng_interrupt_flag_clear:00000024 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

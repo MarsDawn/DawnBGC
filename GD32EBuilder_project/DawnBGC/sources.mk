@@ -20,6 +20,7 @@ S_UPPER_DEPS :=
 # 此处必须描述包含源文件的每个子目录
 SUBDIRS := \
 CMSIS \
+DawnBDC \
 DawnBLDC \
 DawnBsp \
 DawnCom \

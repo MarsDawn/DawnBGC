@@ -52,7 +52,12 @@ void motor_stall_process(void)
 
     
     if (
-        (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 100.f) || (GimbalSystem.ArmTorqueRef.Data.Latge) > (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMax - 100.0f) || (GimbalSystem.ArmTorqueRef.Data.Middle) < (GimbalSystem.ArmRadsPID.Data.Middle.OutLimitMin + 100.0f) || (GimbalSystem.ArmTorqueRef.Data.Middle) > (GimbalSystem.ArmRadsPID.Data.Middle.OutLimitMax - 100.0f) || (GimbalSystem.ArmTorqueRef.Data.Small) < (GimbalSystem.ArmRadsPID.Data.Small.OutLimitMin + 100.0f) || (GimbalSystem.ArmTorqueRef.Data.Small) > (GimbalSystem.ArmRadsPID.Data.Small.OutLimitMax - 100.0f))
+        (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 100.f) 
+        || (GimbalSystem.ArmTorqueRef.Data.Latge) > (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMax - 100.0f) 
+        || (GimbalSystem.ArmTorqueRef.Data.Middle) < (GimbalSystem.ArmRadsPID.Data.Middle.OutLimitMin + 100.0f) 
+        || (GimbalSystem.ArmTorqueRef.Data.Middle) > (GimbalSystem.ArmRadsPID.Data.Middle.OutLimitMax - 100.0f) 
+        || (GimbalSystem.ArmTorqueRef.Data.Small) < (GimbalSystem.ArmRadsPID.Data.Small.OutLimitMin + 100.0f) 
+        || (GimbalSystem.ArmTorqueRef.Data.Small) > (GimbalSystem.ArmRadsPID.Data.Small.OutLimitMax - 100.0f))
     {
         StallTime++;
         if (StallTime > (5.0f * CLOSELOOP_EXECUTE_FREQ))
@@ -62,9 +67,13 @@ void motor_stall_process(void)
 
             StallTimes++;
 
-            ShutOffPWM(&BLDCYaw);
-            ShutOffPWM(&BLDCRoll);
-            ShutOffPWM(&BLDCPitch);
+            // ShutOffPWM(&BLDCYaw);
+            BDC_ShutOffPWM(&BLDCRoll);
+            BDC_ShutOffPWM(&BLDCPitch);
+
+            // ShutOffPWM(&BLDCYaw);
+            // ShutOffPWM(&BLDCRoll);
+            // ShutOffPWM(&BLDCPitch);
         }
     }
     else

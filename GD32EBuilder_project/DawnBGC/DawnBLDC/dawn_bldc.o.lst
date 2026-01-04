@@ -1127,7 +1127,7 @@
  932              	.L57:
  933              		.align	2
  934              	.L56:
- 935 011c 00000000 		.word	StannTimes.11233
+ 935 011c 00000000 		.word	StannTimes.11243
  936 0120 00000000 		.word	BLDCYaw
  937 0124 00000000 		.word	BLDCRoll
  938 0128 00000000 		.word	BLDCPitch
@@ -2543,8 +2543,8 @@
  2079 00b8 00000000 		.word	AdcDate
  2080              		.cfi_endproc
  2081              	.LFE166:
- 2083              		.section	.bss.StannTimes.11233,"aw",%nobits
- 2086              	StannTimes.11233:
+ 2083              		.section	.bss.StannTimes.11243,"aw",%nobits
+ 2086              	StannTimes.11243:
  2087 0000 00       		.space	1
  2088              		.text
  2089              	.Letext0:
@@ -2570,44 +2570,44 @@
  2109              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_bldc.c
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:16     .text.BLDCInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:24     .text.BLDCInit:00000000 BLDCInit
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1664   .text.TurnOnPWM:00000000 TurnOnPWM
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:54     .text.BLDCInit:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:62     .text.BLDCStallState:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:69     .text.BLDCStallState:00000000 BLDCStallState
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:202    .text.ArmQuadCcw:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:209    .text.ArmQuadCcw:00000000 ArmQuadCcw
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:323    .text.ArmQuadCcw:00000098 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:329    .text.ArmQuadCw:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:336    .text.ArmQuadCw:00000000 ArmQuadCw
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:450    .text.ArmQuadCw:00000098 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:457    .text.CleanBLDCAngle:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:464    .text.CleanBLDCAngle:00000000 CleanBLDCAngle
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:571    .text.CleanBLDCAngle:000000a8 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:581    .text.BLDCAngleCal:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:588    .text.BLDCAngleCal:00000000 BLDCAngleCal
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:753    .text.BLDCAngleCal:00000104 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:758    .text.BLDCCali:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:765    .text.BLDCCali:00000000 BLDCCali
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1936   .text.HallDataRead:00000000 HallDataRead
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1827   .text.ShutOffPWM:00000000 ShutOffPWM
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:952    .text.BLDCSvpwm:00000000 BLDCSvpwm
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:935    .text.BLDCCali:0000011c $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:2086   .bss.StannTimes.11233:00000000 StannTimes.11233
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:945    .text.BLDCSvpwm:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1088   .text.BLDCSvpwm:000000c8 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1094   .text.BLDCSvpwm:000000e0 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1576   .text.BLDCSvpwm:00000424 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1579   .text.BLDCSvpwm:00000428 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1644   .text.BLDCSvpwm:0000046c $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1657   .text.TurnOnPWM:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1805   .text.TurnOnPWM:000000d4 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1820   .text.ShutOffPWM:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1923   .text.ShutOffPWM:0000008c $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:1929   .text.HallDataRead:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:2079   .text.HallDataRead:000000b8 $d
-C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:2087   .bss.StannTimes.11233:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:16     .text.BLDCInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:24     .text.BLDCInit:00000000 BLDCInit
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1664   .text.TurnOnPWM:00000000 TurnOnPWM
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:54     .text.BLDCInit:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:62     .text.BLDCStallState:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:69     .text.BLDCStallState:00000000 BLDCStallState
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:202    .text.ArmQuadCcw:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:209    .text.ArmQuadCcw:00000000 ArmQuadCcw
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:323    .text.ArmQuadCcw:00000098 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:329    .text.ArmQuadCw:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:336    .text.ArmQuadCw:00000000 ArmQuadCw
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:450    .text.ArmQuadCw:00000098 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:457    .text.CleanBLDCAngle:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:464    .text.CleanBLDCAngle:00000000 CleanBLDCAngle
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:571    .text.CleanBLDCAngle:000000a8 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:581    .text.BLDCAngleCal:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:588    .text.BLDCAngleCal:00000000 BLDCAngleCal
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:753    .text.BLDCAngleCal:00000104 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:758    .text.BLDCCali:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:765    .text.BLDCCali:00000000 BLDCCali
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1936   .text.HallDataRead:00000000 HallDataRead
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1827   .text.ShutOffPWM:00000000 ShutOffPWM
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:952    .text.BLDCSvpwm:00000000 BLDCSvpwm
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:935    .text.BLDCCali:0000011c $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:2086   .bss.StannTimes.11243:00000000 StannTimes.11243
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:945    .text.BLDCSvpwm:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1088   .text.BLDCSvpwm:000000c8 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1094   .text.BLDCSvpwm:000000e0 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1576   .text.BLDCSvpwm:00000424 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1579   .text.BLDCSvpwm:00000428 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1644   .text.BLDCSvpwm:0000046c $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1657   .text.TurnOnPWM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1805   .text.TurnOnPWM:000000d4 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1820   .text.ShutOffPWM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1923   .text.ShutOffPWM:0000008c $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:1929   .text.HallDataRead:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:2079   .text.HallDataRead:000000b8 $d
+C:\Users\leonardo\AppData\Local\Temp\cct7zj1C.s:2087   .bss.StannTimes.11243:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
@@ -2671,8 +2671,9 @@ C:\Users\leonardo\AppData\Local\Temp\cc8gghTw.s:2087   .bss.StannTimes.11233:000
                            .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
                            .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
                            .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bdc.h.23.03eb0a77d8dad854dbfdbe1cd39a5bd7
                            .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
-                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.gpio.h.25.9dbce65fd9496973b249fa462e17a01b
                            .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
 
 UNDEFINED SYMBOLS

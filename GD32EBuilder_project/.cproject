@@ -51,6 +51,7 @@
 									<listOptionValue builtIn="false" value="&quot;../../Dawn/DawnGimbal&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;../../Dawn/DawnBLDC&quot;"/>
 									<listOptionValue builtIn="false" value="../../Libraries/FWLIB/inc"/>
+									<listOptionValue builtIn="false" value="../../Dawn/DawnBDC"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.gigadevice.mbs.arm.option.CCompiler.symbols.defs.2100407144" name="Define (-D)" superClass="com.gigadevice.mbs.arm.option.CCompiler.symbols.defs" useByScannerDiscovery="true" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="GD32F405"/>

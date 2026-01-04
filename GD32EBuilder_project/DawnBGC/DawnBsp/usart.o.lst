@@ -1640,47 +1640,47 @@
  1332              		.file 24 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 usart.c
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:18     .data.is_debug_usart_dma_trans_completed:00000000 is_debug_usart_dma_trans_completed
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:21     .bss.debug_usart_rx_buf:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:24     .bss.debug_usart_rx_buf:00000000 debug_usart_rx_buf
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:27     .bss.debug_usart_tx_buf:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:30     .bss.debug_usart_tx_buf:00000000 debug_usart_tx_buf
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:33     .bss.debug_usart_rx_buff_head:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:36     .bss.debug_usart_rx_buff_head:00000000 debug_usart_rx_buff_head
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:39     .bss.debug_usart_rx_buff_tail:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:42     .bss.debug_usart_rx_buff_tail:00000000 debug_usart_rx_buff_tail
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:45     .bss.debug_usart_rx_buff_tail_last:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:48     .bss.debug_usart_rx_buff_tail_last:00000000 debug_usart_rx_buff_tail_last
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:51     .bss.debug_usart_rx_dma_cnt:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:54     .bss.debug_usart_rx_dma_cnt:00000000 debug_usart_rx_dma_cnt
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:57     .bss.debug_usart_tx_buff_head:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:60     .bss.debug_usart_tx_buff_head:00000000 debug_usart_tx_buff_head
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:63     .bss.debug_usart_tx_buff_tail:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:66     .bss.debug_usart_tx_buff_tail:00000000 debug_usart_tx_buff_tail
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:69     .text.DebugUsartInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:77     .text.DebugUsartInit:00000000 DebugUsartInit
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:348    .text.DebugUsartInit:000001f4 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:360    .text.debug_usart_trans_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:367    .text.debug_usart_trans_enable:00000000 debug_usart_trans_enable
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:396    .text.debug_usart_trans_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:403    .text.debug_usart_put_byte:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:410    .text.debug_usart_put_byte:00000000 debug_usart_put_byte
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:513    .text.debug_usart_put_byte:0000008c $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:519    .text.debug_usart_get_byte:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:526    .text.debug_usart_get_byte:00000000 debug_usart_get_byte
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:626    .text.debug_usart_get_byte:00000080 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:633    .text.debug_usart_rx_buff_reset:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:640    .text.debug_usart_rx_buff_reset:00000000 debug_usart_rx_buff_reset
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:715    .text.debug_usart_rx_buff_reset:00000064 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:727    .text.DMA0_Channel1_IRQHandler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:734    .text.DMA0_Channel1_IRQHandler:00000000 DMA0_Channel1_IRQHandler
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:903    .text.DMA0_Channel1_IRQHandler:000000f8 $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:915    .text.DMA0_Channel3_IRQHandler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:922    .text.DMA0_Channel3_IRQHandler:00000000 DMA0_Channel3_IRQHandler
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:961    .text.DMA0_Channel3_IRQHandler:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:967    .text.USART2_IRQHandler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:974    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
-C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:1289   .text.USART2_IRQHandler:000001e0 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:18     .data.is_debug_usart_dma_trans_completed:00000000 is_debug_usart_dma_trans_completed
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:21     .bss.debug_usart_rx_buf:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:24     .bss.debug_usart_rx_buf:00000000 debug_usart_rx_buf
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:27     .bss.debug_usart_tx_buf:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:30     .bss.debug_usart_tx_buf:00000000 debug_usart_tx_buf
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:33     .bss.debug_usart_rx_buff_head:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:36     .bss.debug_usart_rx_buff_head:00000000 debug_usart_rx_buff_head
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:39     .bss.debug_usart_rx_buff_tail:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:42     .bss.debug_usart_rx_buff_tail:00000000 debug_usart_rx_buff_tail
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:45     .bss.debug_usart_rx_buff_tail_last:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:48     .bss.debug_usart_rx_buff_tail_last:00000000 debug_usart_rx_buff_tail_last
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:51     .bss.debug_usart_rx_dma_cnt:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:54     .bss.debug_usart_rx_dma_cnt:00000000 debug_usart_rx_dma_cnt
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:57     .bss.debug_usart_tx_buff_head:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:60     .bss.debug_usart_tx_buff_head:00000000 debug_usart_tx_buff_head
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:63     .bss.debug_usart_tx_buff_tail:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:66     .bss.debug_usart_tx_buff_tail:00000000 debug_usart_tx_buff_tail
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:69     .text.DebugUsartInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:77     .text.DebugUsartInit:00000000 DebugUsartInit
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:348    .text.DebugUsartInit:000001f4 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:360    .text.debug_usart_trans_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:367    .text.debug_usart_trans_enable:00000000 debug_usart_trans_enable
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:396    .text.debug_usart_trans_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:403    .text.debug_usart_put_byte:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:410    .text.debug_usart_put_byte:00000000 debug_usart_put_byte
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:513    .text.debug_usart_put_byte:0000008c $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:519    .text.debug_usart_get_byte:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:526    .text.debug_usart_get_byte:00000000 debug_usart_get_byte
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:626    .text.debug_usart_get_byte:00000080 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:633    .text.debug_usart_rx_buff_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:640    .text.debug_usart_rx_buff_reset:00000000 debug_usart_rx_buff_reset
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:715    .text.debug_usart_rx_buff_reset:00000064 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:727    .text.DMA0_Channel1_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:734    .text.DMA0_Channel1_IRQHandler:00000000 DMA0_Channel1_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:903    .text.DMA0_Channel1_IRQHandler:000000f8 $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:915    .text.DMA0_Channel3_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:922    .text.DMA0_Channel3_IRQHandler:00000000 DMA0_Channel3_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:961    .text.DMA0_Channel3_IRQHandler:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:967    .text.USART2_IRQHandler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:974    .text.USART2_IRQHandler:00000000 USART2_IRQHandler
+C:\Users\leonardo\AppData\Local\Temp\ccDAcUMz.s:1289   .text.USART2_IRQHandler:000001e0 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
@@ -1744,8 +1744,9 @@ C:\Users\leonardo\AppData\Local\Temp\cctGybfj.s:1289   .text.USART2_IRQHandler:0
                            .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
                            .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
                            .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bdc.h.23.03eb0a77d8dad854dbfdbe1cd39a5bd7
                            .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
-                           .group:00000000 wm4.gpio.h.25.a0e8138dd0ca622ddf41b90bee6b7046
+                           .group:00000000 wm4.gpio.h.25.9dbce65fd9496973b249fa462e17a01b
                            .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
 
 UNDEFINED SYMBOLS

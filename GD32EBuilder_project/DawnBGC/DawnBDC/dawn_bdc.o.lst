@@ -1,0 +1,939 @@
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 20, 1
+   3              		.eabi_attribute 21, 1
+   4              		.eabi_attribute 23, 3
+   5              		.eabi_attribute 24, 1
+   6              		.eabi_attribute 25, 1
+   7              		.eabi_attribute 26, 1
+   8              		.eabi_attribute 30, 6
+   9              		.eabi_attribute 34, 1
+  10              		.eabi_attribute 18, 4
+  11              		.file	"dawn_bdc.c"
+  12              		.text
+  13              	.Ltext0:
+  14              		.cfi_sections	.debug_frame
+  15              		.section	.text.BDCInit,"ax",%progbits
+  16              		.align	1
+  17              		.global	BDCInit
+  18              		.arch armv7e-m
+  19              		.syntax unified
+  20              		.thumb
+  21              		.thumb_func
+  22              		.fpu softvfp
+  24              	BDCInit:
+  25              	.LFB156:
+  26              		.file 1 "../DawnBDC/dawn_bdc.c"
+   1:../DawnBDC/dawn_bdc.c **** /*
+   2:../DawnBDC/dawn_bdc.c ****  * DawnBGC - Open Source Brushless Gimbal Controller
+   3:../DawnBDC/dawn_bdc.c ****  *
+   4:../DawnBDC/dawn_bdc.c ****  * Copyright (c) 2025 MarsDawn
+   5:../DawnBDC/dawn_bdc.c ****  *
+   6:../DawnBDC/dawn_bdc.c ****  * Project repository:
+   7:../DawnBDC/dawn_bdc.c ****  *     https://github.com/MarsDawn
+   8:../DawnBDC/dawn_bdc.c ****  *
+   9:../DawnBDC/dawn_bdc.c ****  * This file is part of the DawnBGC project.
+  10:../DawnBDC/dawn_bdc.c ****  *
+  11:../DawnBDC/dawn_bdc.c ****  * Redistribution and use in source or binary forms, with or without
+  12:../DawnBDC/dawn_bdc.c ****  * modification, are permitted under the MIT License, provided that
+  13:../DawnBDC/dawn_bdc.c ****  * this copyright notice and this permission notice are retained.
+  14:../DawnBDC/dawn_bdc.c ****  *
+  15:../DawnBDC/dawn_bdc.c ****  * Licensed under the MIT License.
+  16:../DawnBDC/dawn_bdc.c ****  * You may obtain a copy of the License at:
+  17:../DawnBDC/dawn_bdc.c ****  *
+  18:../DawnBDC/dawn_bdc.c ****  *     https://opensource.org/licenses/MIT
+  19:../DawnBDC/dawn_bdc.c ****  *
+  20:../DawnBDC/dawn_bdc.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+  21:../DawnBDC/dawn_bdc.c ****  */
+  22:../DawnBDC/dawn_bdc.c **** #include "includes.h"
+  23:../DawnBDC/dawn_bdc.c **** 
+  24:../DawnBDC/dawn_bdc.c **** 
+  25:../DawnBDC/dawn_bdc.c **** void BDCInit(void)
+  26:../DawnBDC/dawn_bdc.c **** {
+  27              		.loc 1 26 1
+  28              		.cfi_startproc
+  29              		@ args = 0, pretend = 0, frame = 0
+  30              		@ frame_needed = 1, uses_anonymous_args = 0
+  31 0000 80B5     		push	{r7, lr}
+  32              		.cfi_def_cfa_offset 8
+  33              		.cfi_offset 7, -8
+  34              		.cfi_offset 14, -4
+  35 0002 00AF     		add	r7, sp, #0
+  36              		.cfi_def_cfa_register 7
+  27:../DawnBDC/dawn_bdc.c ****     BDCGpioInit();
+  37              		.loc 1 27 5
+  38 0004 FFF7FEFF 		bl	BDCGpioInit
+  28:../DawnBDC/dawn_bdc.c **** 
+  29:../DawnBDC/dawn_bdc.c ****     BDC_TurnOnPWM(&BLDCYaw);
+  39              		.loc 1 29 5
+  40 0008 0548     		ldr	r0, .L2
+  41 000a FFF7FEFF 		bl	BDC_TurnOnPWM
+  30:../DawnBDC/dawn_bdc.c ****     BDC_TurnOnPWM(&BLDCRoll);
+  42              		.loc 1 30 5
+  43 000e 0548     		ldr	r0, .L2+4
+  44 0010 FFF7FEFF 		bl	BDC_TurnOnPWM
+  31:../DawnBDC/dawn_bdc.c ****     BDC_TurnOnPWM(&BLDCPitch);
+  45              		.loc 1 31 5
+  46 0014 0448     		ldr	r0, .L2+8
+  47 0016 FFF7FEFF 		bl	BDC_TurnOnPWM
+  32:../DawnBDC/dawn_bdc.c **** }
+  48              		.loc 1 32 1
+  49 001a 00BF     		nop
+  50 001c 80BD     		pop	{r7, pc}
+  51              	.L3:
+  52 001e 00BF     		.align	2
+  53              	.L2:
+  54 0020 00000000 		.word	BLDCYaw
+  55 0024 00000000 		.word	BLDCRoll
+  56 0028 00000000 		.word	BLDCPitch
+  57              		.cfi_endproc
+  58              	.LFE156:
+  60              		.section	.text.BDC_MapMagToCcr,"ax",%progbits
+  61              		.align	1
+  62              		.syntax unified
+  63              		.thumb
+  64              		.thumb_func
+  65              		.fpu softvfp
+  67              	BDC_MapMagToCcr:
+  68              	.LFB157:
+  33:../DawnBDC/dawn_bdc.c **** 
+  34:../DawnBDC/dawn_bdc.c **** static inline uint16_t BDC_MapMagToCcr(int16_t mag, uint16_t arr)
+  35:../DawnBDC/dawn_bdc.c **** {
+  69              		.loc 1 35 1
+  70              		.cfi_startproc
+  71              		@ args = 0, pretend = 0, frame = 8
+  72              		@ frame_needed = 1, uses_anonymous_args = 0
+  73              		@ link register save eliminated.
+  74 0000 80B4     		push	{r7}
+  75              		.cfi_def_cfa_offset 4
+  76              		.cfi_offset 7, -4
+  77 0002 83B0     		sub	sp, sp, #12
+  78              		.cfi_def_cfa_offset 16
+  79 0004 00AF     		add	r7, sp, #0
+  80              		.cfi_def_cfa_register 7
+  81 0006 0346     		mov	r3, r0
+  82 0008 0A46     		mov	r2, r1
+  83 000a FB80     		strh	r3, [r7, #6]	@ movhi
+  84 000c 1346     		mov	r3, r2	@ movhi
+  85 000e BB80     		strh	r3, [r7, #4]	@ movhi
+  36:../DawnBDC/dawn_bdc.c ****     /* mag 取非负 */
+  37:../DawnBDC/dawn_bdc.c ****     if (mag < 0)
+  86              		.loc 1 37 8
+  87 0010 B7F90630 		ldrsh	r3, [r7, #6]
+  88 0014 002B     		cmp	r3, #0
+  89 0016 03DA     		bge	.L5
+  38:../DawnBDC/dawn_bdc.c ****         mag = (int16_t)(-mag);
+  90              		.loc 1 38 15
+  91 0018 FB88     		ldrh	r3, [r7, #6]
+  92 001a 5B42     		rsbs	r3, r3, #0
+  93 001c 9BB2     		uxth	r3, r3
+  94              		.loc 1 38 13
+  95 001e FB80     		strh	r3, [r7, #6]	@ movhi
+  96              	.L5:
+  39:../DawnBDC/dawn_bdc.c **** 
+  40:../DawnBDC/dawn_bdc.c ****     /* 限幅 */
+  41:../DawnBDC/dawn_bdc.c ****     if (mag > PWM_MAX_LIMIT)
+  42:../DawnBDC/dawn_bdc.c ****         mag = PWM_MAX_LIMIT;
+  43:../DawnBDC/dawn_bdc.c **** 
+  44:../DawnBDC/dawn_bdc.c ****     /* 线性映射：duty = mag/PWM_MAX_LIMIT * arr
+  45:../DawnBDC/dawn_bdc.c ****      * 用 32 位防止溢出
+  46:../DawnBDC/dawn_bdc.c ****      */
+  47:../DawnBDC/dawn_bdc.c ****     return (uint16_t)(((int32_t)mag * (int32_t)arr) / (int32_t)PWM_MAX_LIMIT);
+  97              		.loc 1 47 24
+  98 0020 B7F90630 		ldrsh	r3, [r7, #6]
+  99              		.loc 1 47 39
+ 100 0024 BA88     		ldrh	r2, [r7, #4]
+ 101              		.loc 1 47 37
+ 102 0026 02FB03F3 		mul	r3, r2, r3
+ 103              		.loc 1 47 53
+ 104 002a 064A     		ldr	r2, .L7
+ 105 002c 82FB0312 		smull	r1, r2, r2, r3
+ 106 0030 1A44     		add	r2, r2, r3
+ 107 0032 9213     		asrs	r2, r2, #14
+ 108 0034 DB17     		asrs	r3, r3, #31
+ 109 0036 D31A     		subs	r3, r2, r3
+ 110              		.loc 1 47 12
+ 111 0038 9BB2     		uxth	r3, r3
+  48:../DawnBDC/dawn_bdc.c **** }
+ 112              		.loc 1 48 1
+ 113 003a 1846     		mov	r0, r3
+ 114 003c 0C37     		adds	r7, r7, #12
+ 115              		.cfi_def_cfa_offset 4
+ 116 003e BD46     		mov	sp, r7
+ 117              		.cfi_def_cfa_register 13
+ 118              		@ sp needed
+ 119 0040 80BC     		pop	{r7}
+ 120              		.cfi_restore 7
+ 121              		.cfi_def_cfa_offset 0
+ 122 0042 7047     		bx	lr
+ 123              	.L8:
+ 124              		.align	2
+ 125              	.L7:
+ 126 0044 03000180 		.word	-2147418109
+ 127              		.cfi_endproc
+ 128              	.LFE157:
+ 130              		.section	.text.BDC_ApplySlowDecayDualPwm,"ax",%progbits
+ 131              		.align	1
+ 132              		.syntax unified
+ 133              		.thumb
+ 134              		.thumb_func
+ 135              		.fpu softvfp
+ 137              	BDC_ApplySlowDecayDualPwm:
+ 138              	.LFB158:
+  49:../DawnBDC/dawn_bdc.c **** 
+  50:../DawnBDC/dawn_bdc.c **** /* 设置某个“电机”的双 PWM（慢衰减）
+  51:../DawnBDC/dawn_bdc.c ****  * u：有符号命令，正负代表方向，幅值代表占空比
+  52:../DawnBDC/dawn_bdc.c ****  * arr：该定时器的 ARR
+  53:../DawnBDC/dawn_bdc.c ****  * in1/in2：对应两个 CCR 的写入接口（用宏/寄存器传进来）
+  54:../DawnBDC/dawn_bdc.c ****  */
+  55:../DawnBDC/dawn_bdc.c **** static inline void BDC_ApplySlowDecayDualPwm(int16_t u, uint16_t arr,
+  56:../DawnBDC/dawn_bdc.c ****                                              volatile uint32_t *in1_ccr,
+  57:../DawnBDC/dawn_bdc.c ****                                              volatile uint32_t *in2_ccr)
+  58:../DawnBDC/dawn_bdc.c **** {
+ 139              		.loc 1 58 1
+ 140              		.cfi_startproc
+ 141              		@ args = 0, pretend = 0, frame = 24
+ 142              		@ frame_needed = 1, uses_anonymous_args = 0
+ 143 0000 80B5     		push	{r7, lr}
+ 144              		.cfi_def_cfa_offset 8
+ 145              		.cfi_offset 7, -8
+ 146              		.cfi_offset 14, -4
+ 147 0002 86B0     		sub	sp, sp, #24
+ 148              		.cfi_def_cfa_offset 32
+ 149 0004 00AF     		add	r7, sp, #0
+ 150              		.cfi_def_cfa_register 7
+ 151 0006 BA60     		str	r2, [r7, #8]
+ 152 0008 7B60     		str	r3, [r7, #4]
+ 153 000a 0346     		mov	r3, r0	@ movhi
+ 154 000c FB81     		strh	r3, [r7, #14]	@ movhi
+ 155 000e 0B46     		mov	r3, r1	@ movhi
+ 156 0010 BB81     		strh	r3, [r7, #12]	@ movhi
+  59:../DawnBDC/dawn_bdc.c ****     uint16_t duty = BDC_MapMagToCcr(u, arr);
+ 157              		.loc 1 59 21
+ 158 0012 BA89     		ldrh	r2, [r7, #12]
+ 159 0014 B7F90E30 		ldrsh	r3, [r7, #14]
+ 160 0018 1146     		mov	r1, r2
+ 161 001a 1846     		mov	r0, r3
+ 162 001c FFF7FEFF 		bl	BDC_MapMagToCcr
+ 163 0020 0346     		mov	r3, r0
+ 164 0022 FB82     		strh	r3, [r7, #22]	@ movhi
+  60:../DawnBDC/dawn_bdc.c **** 
+  61:../DawnBDC/dawn_bdc.c ****     /* “100%”输出：PWM1 模式下用 CCR=ARR（几乎恒高） */
+  62:../DawnBDC/dawn_bdc.c ****     uint16_t full = arr;
+ 165              		.loc 1 62 14
+ 166 0024 BB89     		ldrh	r3, [r7, #12]	@ movhi
+ 167 0026 BB82     		strh	r3, [r7, #20]	@ movhi
+  63:../DawnBDC/dawn_bdc.c **** 
+  64:../DawnBDC/dawn_bdc.c ****     if (u >= 0)
+ 168              		.loc 1 64 8
+ 169 0028 B7F90E30 		ldrsh	r3, [r7, #14]
+ 170 002c 002B     		cmp	r3, #0
+ 171 002e 06DB     		blt	.L10
+  65:../DawnBDC/dawn_bdc.c ****     {
+  66:../DawnBDC/dawn_bdc.c ****         /* 正向：IN1=1, IN2=PWM */
+  67:../DawnBDC/dawn_bdc.c ****         *in1_ccr = full;
+ 172              		.loc 1 67 18
+ 173 0030 BA8A     		ldrh	r2, [r7, #20]
+ 174 0032 BB68     		ldr	r3, [r7, #8]
+ 175 0034 1A60     		str	r2, [r3]
+  68:../DawnBDC/dawn_bdc.c ****         *in2_ccr = duty;
+ 176              		.loc 1 68 18
+ 177 0036 FA8A     		ldrh	r2, [r7, #22]
+ 178 0038 7B68     		ldr	r3, [r7, #4]
+ 179 003a 1A60     		str	r2, [r3]
+  69:../DawnBDC/dawn_bdc.c ****     }
+  70:../DawnBDC/dawn_bdc.c ****     else
+  71:../DawnBDC/dawn_bdc.c ****     {
+  72:../DawnBDC/dawn_bdc.c ****         /* 反向：IN1=PWM, IN2=1 */
+  73:../DawnBDC/dawn_bdc.c ****         *in1_ccr = duty;
+  74:../DawnBDC/dawn_bdc.c ****         *in2_ccr = full;
+  75:../DawnBDC/dawn_bdc.c ****     }
+  76:../DawnBDC/dawn_bdc.c **** }
+ 180              		.loc 1 76 1
+ 181 003c 05E0     		b	.L12
+ 182              	.L10:
+  73:../DawnBDC/dawn_bdc.c ****         *in2_ccr = full;
+ 183              		.loc 1 73 18
+ 184 003e FA8A     		ldrh	r2, [r7, #22]
+ 185 0040 BB68     		ldr	r3, [r7, #8]
+ 186 0042 1A60     		str	r2, [r3]
+  74:../DawnBDC/dawn_bdc.c ****     }
+ 187              		.loc 1 74 18
+ 188 0044 BA8A     		ldrh	r2, [r7, #20]
+ 189 0046 7B68     		ldr	r3, [r7, #4]
+ 190 0048 1A60     		str	r2, [r3]
+ 191              	.L12:
+ 192              		.loc 1 76 1
+ 193 004a 00BF     		nop
+ 194 004c 1837     		adds	r7, r7, #24
+ 195              		.cfi_def_cfa_offset 8
+ 196 004e BD46     		mov	sp, r7
+ 197              		.cfi_def_cfa_register 13
+ 198              		@ sp needed
+ 199 0050 80BD     		pop	{r7, pc}
+ 200              		.cfi_endproc
+ 201              	.LFE158:
+ 203              		.global	__aeabi_f2iz
+ 204              		.section	.text.BDCpwm,"ax",%progbits
+ 205              		.align	1
+ 206              		.global	BDCpwm
+ 207              		.syntax unified
+ 208              		.thumb
+ 209              		.thumb_func
+ 210              		.fpu softvfp
+ 212              	BDCpwm:
+ 213              	.LFB159:
+  77:../DawnBDC/dawn_bdc.c **** 
+  78:../DawnBDC/dawn_bdc.c **** /* =========================
+  79:../DawnBDC/dawn_bdc.c ****  * 1) “BDC版的 BLDCSvpwm”：按ID写入两路PWM
+  80:../DawnBDC/dawn_bdc.c ****  * ========================= */
+  81:../DawnBDC/dawn_bdc.c **** void BDCpwm(BLDCStruct *BLDCStruct)
+  82:../DawnBDC/dawn_bdc.c **** {
+ 214              		.loc 1 82 1
+ 215              		.cfi_startproc
+ 216              		@ args = 0, pretend = 0, frame = 40
+ 217              		@ frame_needed = 1, uses_anonymous_args = 0
+ 218 0000 80B5     		push	{r7, lr}
+ 219              		.cfi_def_cfa_offset 8
+ 220              		.cfi_offset 7, -8
+ 221              		.cfi_offset 14, -4
+ 222 0002 8AB0     		sub	sp, sp, #40
+ 223              		.cfi_def_cfa_offset 48
+ 224 0004 00AF     		add	r7, sp, #0
+ 225              		.cfi_def_cfa_register 7
+ 226 0006 7860     		str	r0, [r7, #4]
+  83:../DawnBDC/dawn_bdc.c ****     /* BDC：只需要一个有符号标量命令
+  84:../DawnBDC/dawn_bdc.c ****      * 这里约定使用 VoltStrict.A
+  85:../DawnBDC/dawn_bdc.c ****      */
+  86:../DawnBDC/dawn_bdc.c ****     int16_t u = (int16_t)BLDCStruct->QuadOut;
+ 227              		.loc 1 86 36
+ 228 0008 7B68     		ldr	r3, [r7, #4]
+ 229 000a DB6F     		ldr	r3, [r3, #124]	@ float
+ 230              		.loc 1 86 13
+ 231 000c 1846     		mov	r0, r3
+ 232 000e FFF7FEFF 		bl	__aeabi_f2iz
+ 233              	.LVL0:
+ 234 0012 0346     		mov	r3, r0
+ 235 0014 FB84     		strh	r3, [r7, #38]	@ movhi
+  87:../DawnBDC/dawn_bdc.c **** 
+  88:../DawnBDC/dawn_bdc.c ****     switch (BLDCStruct->BLDCId)
+ 236              		.loc 1 88 23
+ 237 0016 7B68     		ldr	r3, [r7, #4]
+ 238 0018 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 239              		.loc 1 88 5
+ 240 001a 022B     		cmp	r3, #2
+ 241 001c 06D0     		beq	.L14
+ 242 001e 022B     		cmp	r3, #2
+ 243 0020 2BDC     		bgt	.L19
+ 244 0022 002B     		cmp	r3, #0
+ 245 0024 1CD0     		beq	.L16
+ 246 0026 012B     		cmp	r3, #1
+ 247 0028 0DD0     		beq	.L17
+  89:../DawnBDC/dawn_bdc.c ****     {
+  90:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_YAW:
+  91:../DawnBDC/dawn_bdc.c ****     {
+  92:../DawnBDC/dawn_bdc.c ****         /* YAW：TIMER0_CH0 = IN1，TIMER0_CH1 = IN2 */
+  93:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER0);
+  94:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER0);
+  95:../DawnBDC/dawn_bdc.c ****         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
+  96:../DawnBDC/dawn_bdc.c ****     }
+  97:../DawnBDC/dawn_bdc.c ****     break;
+  98:../DawnBDC/dawn_bdc.c **** 
+  99:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_ROLL:
+ 100:../DawnBDC/dawn_bdc.c ****     {
+ 101:../DawnBDC/dawn_bdc.c ****         /* ROLL：TIMER0_CH2 = IN1，TIMER0_CH3 = IN2 */
+ 102:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH2CV(TIMER0);
+ 103:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH3CV(TIMER0);
+ 104:../DawnBDC/dawn_bdc.c ****         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
+ 105:../DawnBDC/dawn_bdc.c ****     }
+ 106:../DawnBDC/dawn_bdc.c ****     break;
+ 107:../DawnBDC/dawn_bdc.c **** 
+ 108:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_PITCH:
+ 109:../DawnBDC/dawn_bdc.c ****     {
+ 110:../DawnBDC/dawn_bdc.c ****         /* PITCH：TIMER1_CH0(PB8) = IN1，TIMER1_CH1(PB9) = IN2 */
+ 111:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER1);
+ 112:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER1);
+ 113:../DawnBDC/dawn_bdc.c ****         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM1_ARR, in1, in2);
+ 114:../DawnBDC/dawn_bdc.c ****     }
+ 115:../DawnBDC/dawn_bdc.c ****     break;
+ 116:../DawnBDC/dawn_bdc.c **** 
+ 117:../DawnBDC/dawn_bdc.c ****     default:
+ 118:../DawnBDC/dawn_bdc.c ****         break;
+ 248              		.loc 1 118 9
+ 249 002a 26E0     		b	.L19
+ 250              	.L14:
+ 251              	.LBB2:
+  93:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER0);
+ 252              		.loc 1 93 28
+ 253 002c 154B     		ldr	r3, .L20
+ 254 002e 3B62     		str	r3, [r7, #32]
+  94:../DawnBDC/dawn_bdc.c ****         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
+ 255              		.loc 1 94 28
+ 256 0030 154B     		ldr	r3, .L20+4
+ 257 0032 FB61     		str	r3, [r7, #28]
+  95:../DawnBDC/dawn_bdc.c ****     }
+ 258              		.loc 1 95 9
+ 259 0034 B7F92600 		ldrsh	r0, [r7, #38]
+ 260 0038 FB69     		ldr	r3, [r7, #28]
+ 261 003a 3A6A     		ldr	r2, [r7, #32]
+ 262 003c 41F28731 		movw	r1, #4999
+ 263 0040 FFF7FEFF 		bl	BDC_ApplySlowDecayDualPwm
+ 264              	.LBE2:
+  97:../DawnBDC/dawn_bdc.c **** 
+ 265              		.loc 1 97 5
+ 266 0044 1AE0     		b	.L18
+ 267              	.L17:
+ 268              	.LBB3:
+ 102:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH3CV(TIMER0);
+ 269              		.loc 1 102 28
+ 270 0046 114B     		ldr	r3, .L20+8
+ 271 0048 BB61     		str	r3, [r7, #24]
+ 103:../DawnBDC/dawn_bdc.c ****         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
+ 272              		.loc 1 103 28
+ 273 004a 114B     		ldr	r3, .L20+12
+ 274 004c 7B61     		str	r3, [r7, #20]
+ 104:../DawnBDC/dawn_bdc.c ****     }
+ 275              		.loc 1 104 9
+ 276 004e B7F92600 		ldrsh	r0, [r7, #38]
+ 277 0052 7B69     		ldr	r3, [r7, #20]
+ 278 0054 BA69     		ldr	r2, [r7, #24]
+ 279 0056 41F28731 		movw	r1, #4999
+ 280 005a FFF7FEFF 		bl	BDC_ApplySlowDecayDualPwm
+ 281              	.LBE3:
+ 106:../DawnBDC/dawn_bdc.c **** 
+ 282              		.loc 1 106 5
+ 283 005e 0DE0     		b	.L18
+ 284              	.L16:
+ 285              	.LBB4:
+ 111:../DawnBDC/dawn_bdc.c ****         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER1);
+ 286              		.loc 1 111 28
+ 287 0060 0C4B     		ldr	r3, .L20+16
+ 288 0062 3B61     		str	r3, [r7, #16]
+ 112:../DawnBDC/dawn_bdc.c ****         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM1_ARR, in1, in2);
+ 289              		.loc 1 112 28
+ 290 0064 0C4B     		ldr	r3, .L20+20
+ 291 0066 FB60     		str	r3, [r7, #12]
+ 113:../DawnBDC/dawn_bdc.c ****     }
+ 292              		.loc 1 113 9
+ 293 0068 B7F92600 		ldrsh	r0, [r7, #38]
+ 294 006c FB68     		ldr	r3, [r7, #12]
+ 295 006e 3A69     		ldr	r2, [r7, #16]
+ 296 0070 40F6C311 		movw	r1, #2499
+ 297 0074 FFF7FEFF 		bl	BDC_ApplySlowDecayDualPwm
+ 298              	.LBE4:
+ 115:../DawnBDC/dawn_bdc.c **** 
+ 299              		.loc 1 115 5
+ 300 0078 00E0     		b	.L18
+ 301              	.L19:
+ 302              		.loc 1 118 9
+ 303 007a 00BF     		nop
+ 304              	.L18:
+ 119:../DawnBDC/dawn_bdc.c ****     }
+ 120:../DawnBDC/dawn_bdc.c **** }
+ 305              		.loc 1 120 1
+ 306 007c 00BF     		nop
+ 307 007e 2837     		adds	r7, r7, #40
+ 308              		.cfi_def_cfa_offset 8
+ 309 0080 BD46     		mov	sp, r7
+ 310              		.cfi_def_cfa_register 13
+ 311              		@ sp needed
+ 312 0082 80BD     		pop	{r7, pc}
+ 313              	.L21:
+ 314              		.align	2
+ 315              	.L20:
+ 316 0084 34000140 		.word	1073807412
+ 317 0088 38000140 		.word	1073807416
+ 318 008c 3C000140 		.word	1073807420
+ 319 0090 40000140 		.word	1073807424
+ 320 0094 34000040 		.word	1073741876
+ 321 0098 38000040 		.word	1073741880
+ 322              		.cfi_endproc
+ 323              	.LFE159:
+ 325              		.section	.text.BDC_TurnOnPWM,"ax",%progbits
+ 326              		.align	1
+ 327              		.global	BDC_TurnOnPWM
+ 328              		.syntax unified
+ 329              		.thumb
+ 330              		.thumb_func
+ 331              		.fpu softvfp
+ 333              	BDC_TurnOnPWM:
+ 334              	.LFB160:
+ 121:../DawnBDC/dawn_bdc.c **** 
+ 122:../DawnBDC/dawn_bdc.c **** /* =========================
+ 123:../DawnBDC/dawn_bdc.c ****  * 2) TurnOnPWM：上电后打开输出（两路都使能），并置为“安全态”
+ 124:../DawnBDC/dawn_bdc.c ****  * ========================= */
+ 125:../DawnBDC/dawn_bdc.c **** void BDC_TurnOnPWM(BLDCStruct *BLDCStruct)
+ 126:../DawnBDC/dawn_bdc.c **** {
+ 335              		.loc 1 126 1
+ 336              		.cfi_startproc
+ 337              		@ args = 0, pretend = 0, frame = 8
+ 338              		@ frame_needed = 1, uses_anonymous_args = 0
+ 339 0000 80B5     		push	{r7, lr}
+ 340              		.cfi_def_cfa_offset 8
+ 341              		.cfi_offset 7, -8
+ 342              		.cfi_offset 14, -4
+ 343 0002 82B0     		sub	sp, sp, #8
+ 344              		.cfi_def_cfa_offset 16
+ 345 0004 00AF     		add	r7, sp, #0
+ 346              		.cfi_def_cfa_register 7
+ 347 0006 7860     		str	r0, [r7, #4]
+ 127:../DawnBDC/dawn_bdc.c ****     switch (BLDCStruct->BLDCId)
+ 348              		.loc 1 127 23
+ 349 0008 7B68     		ldr	r3, [r7, #4]
+ 350 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 351              		.loc 1 127 5
+ 352 000c 022B     		cmp	r3, #2
+ 353 000e 06D0     		beq	.L23
+ 354 0010 022B     		cmp	r3, #2
+ 355 0012 39DC     		bgt	.L28
+ 356 0014 002B     		cmp	r3, #0
+ 357 0016 24D0     		beq	.L25
+ 358 0018 012B     		cmp	r3, #1
+ 359 001a 11D0     		beq	.L26
+ 128:../DawnBDC/dawn_bdc.c ****     {
+ 129:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_YAW:
+ 130:../DawnBDC/dawn_bdc.c ****         /* 上电先置 0（滑行/coast），避免误转 */
+ 131:../DawnBDC/dawn_bdc.c ****         TIMER_CH0CV(TIMER0) = 0; /* IN1 */
+ 132:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER0) = 0; /* IN2 */
+ 133:../DawnBDC/dawn_bdc.c **** 
+ 134:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_ENABLE);
+ 135:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 136:../DawnBDC/dawn_bdc.c ****         break;
+ 137:../DawnBDC/dawn_bdc.c **** 
+ 138:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_ROLL:
+ 139:../DawnBDC/dawn_bdc.c ****         TIMER_CH2CV(TIMER0) = 0; /* IN1 */
+ 140:../DawnBDC/dawn_bdc.c ****         TIMER_CH3CV(TIMER0) = 0; /* IN2 */
+ 141:../DawnBDC/dawn_bdc.c **** 
+ 142:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_ENABLE);
+ 143:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_ENABLE);
+ 144:../DawnBDC/dawn_bdc.c ****         break;
+ 145:../DawnBDC/dawn_bdc.c **** 
+ 146:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_PITCH:
+ 147:../DawnBDC/dawn_bdc.c ****         TIMER_CH0CV(TIMER1) = 0; /* IN1 */
+ 148:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER1) = 0; /* IN2 */
+ 149:../DawnBDC/dawn_bdc.c **** 
+ 150:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_ENABLE);
+ 151:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 152:../DawnBDC/dawn_bdc.c ****         break;
+ 153:../DawnBDC/dawn_bdc.c **** 
+ 154:../DawnBDC/dawn_bdc.c ****     default:
+ 155:../DawnBDC/dawn_bdc.c ****         break;
+ 360              		.loc 1 155 9
+ 361 001c 34E0     		b	.L28
+ 362              	.L23:
+ 131:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER0) = 0; /* IN2 */
+ 363              		.loc 1 131 9
+ 364 001e 1D4B     		ldr	r3, .L29
+ 131:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER0) = 0; /* IN2 */
+ 365              		.loc 1 131 29
+ 366 0020 0022     		movs	r2, #0
+ 367 0022 1A60     		str	r2, [r3]
+ 132:../DawnBDC/dawn_bdc.c **** 
+ 368              		.loc 1 132 9
+ 369 0024 1C4B     		ldr	r3, .L29+4
+ 132:../DawnBDC/dawn_bdc.c **** 
+ 370              		.loc 1 132 29
+ 371 0026 0022     		movs	r2, #0
+ 372 0028 1A60     		str	r2, [r3]
+ 134:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 373              		.loc 1 134 9
+ 374 002a 0122     		movs	r2, #1
+ 375 002c 0021     		movs	r1, #0
+ 376 002e 1B48     		ldr	r0, .L29+8
+ 377 0030 FFF7FEFF 		bl	timer_channel_output_state_config
+ 135:../DawnBDC/dawn_bdc.c ****         break;
+ 378              		.loc 1 135 9
+ 379 0034 0122     		movs	r2, #1
+ 380 0036 0121     		movs	r1, #1
+ 381 0038 1848     		ldr	r0, .L29+8
+ 382 003a FFF7FEFF 		bl	timer_channel_output_state_config
+ 136:../DawnBDC/dawn_bdc.c **** 
+ 383              		.loc 1 136 9
+ 384 003e 24E0     		b	.L27
+ 385              	.L26:
+ 139:../DawnBDC/dawn_bdc.c ****         TIMER_CH3CV(TIMER0) = 0; /* IN2 */
+ 386              		.loc 1 139 9
+ 387 0040 174B     		ldr	r3, .L29+12
+ 139:../DawnBDC/dawn_bdc.c ****         TIMER_CH3CV(TIMER0) = 0; /* IN2 */
+ 388              		.loc 1 139 29
+ 389 0042 0022     		movs	r2, #0
+ 390 0044 1A60     		str	r2, [r3]
+ 140:../DawnBDC/dawn_bdc.c **** 
+ 391              		.loc 1 140 9
+ 392 0046 174B     		ldr	r3, .L29+16
+ 140:../DawnBDC/dawn_bdc.c **** 
+ 393              		.loc 1 140 29
+ 394 0048 0022     		movs	r2, #0
+ 395 004a 1A60     		str	r2, [r3]
+ 142:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_ENABLE);
+ 396              		.loc 1 142 9
+ 397 004c 0122     		movs	r2, #1
+ 398 004e 0221     		movs	r1, #2
+ 399 0050 1248     		ldr	r0, .L29+8
+ 400 0052 FFF7FEFF 		bl	timer_channel_output_state_config
+ 143:../DawnBDC/dawn_bdc.c ****         break;
+ 401              		.loc 1 143 9
+ 402 0056 0122     		movs	r2, #1
+ 403 0058 0321     		movs	r1, #3
+ 404 005a 1048     		ldr	r0, .L29+8
+ 405 005c FFF7FEFF 		bl	timer_channel_output_state_config
+ 144:../DawnBDC/dawn_bdc.c **** 
+ 406              		.loc 1 144 9
+ 407 0060 13E0     		b	.L27
+ 408              	.L25:
+ 147:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER1) = 0; /* IN2 */
+ 409              		.loc 1 147 9
+ 410 0062 114B     		ldr	r3, .L29+20
+ 147:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER1) = 0; /* IN2 */
+ 411              		.loc 1 147 29
+ 412 0064 0022     		movs	r2, #0
+ 413 0066 1A60     		str	r2, [r3]
+ 148:../DawnBDC/dawn_bdc.c **** 
+ 414              		.loc 1 148 9
+ 415 0068 104B     		ldr	r3, .L29+24
+ 148:../DawnBDC/dawn_bdc.c **** 
+ 416              		.loc 1 148 29
+ 417 006a 0022     		movs	r2, #0
+ 418 006c 1A60     		str	r2, [r3]
+ 150:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_ENABLE);
+ 419              		.loc 1 150 9
+ 420 006e 0122     		movs	r2, #1
+ 421 0070 0021     		movs	r1, #0
+ 422 0072 4FF08040 		mov	r0, #1073741824
+ 423 0076 FFF7FEFF 		bl	timer_channel_output_state_config
+ 151:../DawnBDC/dawn_bdc.c ****         break;
+ 424              		.loc 1 151 9
+ 425 007a 0122     		movs	r2, #1
+ 426 007c 0121     		movs	r1, #1
+ 427 007e 4FF08040 		mov	r0, #1073741824
+ 428 0082 FFF7FEFF 		bl	timer_channel_output_state_config
+ 152:../DawnBDC/dawn_bdc.c **** 
+ 429              		.loc 1 152 9
+ 430 0086 00E0     		b	.L27
+ 431              	.L28:
+ 432              		.loc 1 155 9
+ 433 0088 00BF     		nop
+ 434              	.L27:
+ 156:../DawnBDC/dawn_bdc.c ****     }
+ 157:../DawnBDC/dawn_bdc.c **** }
+ 435              		.loc 1 157 1
+ 436 008a 00BF     		nop
+ 437 008c 0837     		adds	r7, r7, #8
+ 438              		.cfi_def_cfa_offset 8
+ 439 008e BD46     		mov	sp, r7
+ 440              		.cfi_def_cfa_register 13
+ 441              		@ sp needed
+ 442 0090 80BD     		pop	{r7, pc}
+ 443              	.L30:
+ 444 0092 00BF     		.align	2
+ 445              	.L29:
+ 446 0094 34000140 		.word	1073807412
+ 447 0098 38000140 		.word	1073807416
+ 448 009c 00000140 		.word	1073807360
+ 449 00a0 3C000140 		.word	1073807420
+ 450 00a4 40000140 		.word	1073807424
+ 451 00a8 34000040 		.word	1073741876
+ 452 00ac 38000040 		.word	1073741880
+ 453              		.cfi_endproc
+ 454              	.LFE160:
+ 456              		.section	.text.BDC_ShutOffPWM,"ax",%progbits
+ 457              		.align	1
+ 458              		.global	BDC_ShutOffPWM
+ 459              		.syntax unified
+ 460              		.thumb
+ 461              		.thumb_func
+ 462              		.fpu softvfp
+ 464              	BDC_ShutOffPWM:
+ 465              	.LFB161:
+ 158:../DawnBDC/dawn_bdc.c **** 
+ 159:../DawnBDC/dawn_bdc.c **** /* =========================
+ 160:../DawnBDC/dawn_bdc.c ****  * 3) ShutOffPWM：关闭输出（两路 disable），并可选置零
+ 161:../DawnBDC/dawn_bdc.c ****  * ========================= */
+ 162:../DawnBDC/dawn_bdc.c **** void BDC_ShutOffPWM(BLDCStruct *BLDCStruct)
+ 163:../DawnBDC/dawn_bdc.c **** {
+ 466              		.loc 1 163 1
+ 467              		.cfi_startproc
+ 468              		@ args = 0, pretend = 0, frame = 8
+ 469              		@ frame_needed = 1, uses_anonymous_args = 0
+ 470 0000 80B5     		push	{r7, lr}
+ 471              		.cfi_def_cfa_offset 8
+ 472              		.cfi_offset 7, -8
+ 473              		.cfi_offset 14, -4
+ 474 0002 82B0     		sub	sp, sp, #8
+ 475              		.cfi_def_cfa_offset 16
+ 476 0004 00AF     		add	r7, sp, #0
+ 477              		.cfi_def_cfa_register 7
+ 478 0006 7860     		str	r0, [r7, #4]
+ 164:../DawnBDC/dawn_bdc.c ****     switch (BLDCStruct->BLDCId)
+ 479              		.loc 1 164 23
+ 480 0008 7B68     		ldr	r3, [r7, #4]
+ 481 000a 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 482              		.loc 1 164 5
+ 483 000c 022B     		cmp	r3, #2
+ 484 000e 06D0     		beq	.L32
+ 485 0010 022B     		cmp	r3, #2
+ 486 0012 39DC     		bgt	.L37
+ 487 0014 002B     		cmp	r3, #0
+ 488 0016 24D0     		beq	.L34
+ 489 0018 012B     		cmp	r3, #1
+ 490 001a 11D0     		beq	.L35
+ 165:../DawnBDC/dawn_bdc.c ****     {
+ 166:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_YAW:
+ 167:../DawnBDC/dawn_bdc.c ****         /* 可选：先置 0 再 disable，避免最后一拍残留 */
+ 168:../DawnBDC/dawn_bdc.c ****         TIMER_CH0CV(TIMER0) = 0;
+ 169:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER0) = 0;
+ 170:../DawnBDC/dawn_bdc.c **** 
+ 171:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 172:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 173:../DawnBDC/dawn_bdc.c ****         break;
+ 174:../DawnBDC/dawn_bdc.c **** 
+ 175:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_ROLL:
+ 176:../DawnBDC/dawn_bdc.c ****         TIMER_CH2CV(TIMER0) = 0;
+ 177:../DawnBDC/dawn_bdc.c ****         TIMER_CH3CV(TIMER0) = 0;
+ 178:../DawnBDC/dawn_bdc.c **** 
+ 179:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 180:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_DISABLE);
+ 181:../DawnBDC/dawn_bdc.c ****         break;
+ 182:../DawnBDC/dawn_bdc.c **** 
+ 183:../DawnBDC/dawn_bdc.c ****     case BLDC_ID_PITCH:
+ 184:../DawnBDC/dawn_bdc.c ****         TIMER_CH0CV(TIMER1) = 0;
+ 185:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER1) = 0;
+ 186:../DawnBDC/dawn_bdc.c **** 
+ 187:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 188:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 189:../DawnBDC/dawn_bdc.c ****         break;
+ 190:../DawnBDC/dawn_bdc.c **** 
+ 191:../DawnBDC/dawn_bdc.c ****     default:
+ 192:../DawnBDC/dawn_bdc.c ****         break;
+ 491              		.loc 1 192 9
+ 492 001c 34E0     		b	.L37
+ 493              	.L32:
+ 168:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER0) = 0;
+ 494              		.loc 1 168 9
+ 495 001e 1D4B     		ldr	r3, .L38
+ 168:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER0) = 0;
+ 496              		.loc 1 168 29
+ 497 0020 0022     		movs	r2, #0
+ 498 0022 1A60     		str	r2, [r3]
+ 169:../DawnBDC/dawn_bdc.c **** 
+ 499              		.loc 1 169 9
+ 500 0024 1C4B     		ldr	r3, .L38+4
+ 169:../DawnBDC/dawn_bdc.c **** 
+ 501              		.loc 1 169 29
+ 502 0026 0022     		movs	r2, #0
+ 503 0028 1A60     		str	r2, [r3]
+ 171:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 504              		.loc 1 171 9
+ 505 002a 0022     		movs	r2, #0
+ 506 002c 0021     		movs	r1, #0
+ 507 002e 1B48     		ldr	r0, .L38+8
+ 508 0030 FFF7FEFF 		bl	timer_channel_output_state_config
+ 172:../DawnBDC/dawn_bdc.c ****         break;
+ 509              		.loc 1 172 9
+ 510 0034 0022     		movs	r2, #0
+ 511 0036 0121     		movs	r1, #1
+ 512 0038 1848     		ldr	r0, .L38+8
+ 513 003a FFF7FEFF 		bl	timer_channel_output_state_config
+ 173:../DawnBDC/dawn_bdc.c **** 
+ 514              		.loc 1 173 9
+ 515 003e 24E0     		b	.L36
+ 516              	.L35:
+ 176:../DawnBDC/dawn_bdc.c ****         TIMER_CH3CV(TIMER0) = 0;
+ 517              		.loc 1 176 9
+ 518 0040 174B     		ldr	r3, .L38+12
+ 176:../DawnBDC/dawn_bdc.c ****         TIMER_CH3CV(TIMER0) = 0;
+ 519              		.loc 1 176 29
+ 520 0042 0022     		movs	r2, #0
+ 521 0044 1A60     		str	r2, [r3]
+ 177:../DawnBDC/dawn_bdc.c **** 
+ 522              		.loc 1 177 9
+ 523 0046 174B     		ldr	r3, .L38+16
+ 177:../DawnBDC/dawn_bdc.c **** 
+ 524              		.loc 1 177 29
+ 525 0048 0022     		movs	r2, #0
+ 526 004a 1A60     		str	r2, [r3]
+ 179:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_DISABLE);
+ 527              		.loc 1 179 9
+ 528 004c 0022     		movs	r2, #0
+ 529 004e 0221     		movs	r1, #2
+ 530 0050 1248     		ldr	r0, .L38+8
+ 531 0052 FFF7FEFF 		bl	timer_channel_output_state_config
+ 180:../DawnBDC/dawn_bdc.c ****         break;
+ 532              		.loc 1 180 9
+ 533 0056 0022     		movs	r2, #0
+ 534 0058 0321     		movs	r1, #3
+ 535 005a 1048     		ldr	r0, .L38+8
+ 536 005c FFF7FEFF 		bl	timer_channel_output_state_config
+ 181:../DawnBDC/dawn_bdc.c **** 
+ 537              		.loc 1 181 9
+ 538 0060 13E0     		b	.L36
+ 539              	.L34:
+ 184:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER1) = 0;
+ 540              		.loc 1 184 9
+ 541 0062 114B     		ldr	r3, .L38+20
+ 184:../DawnBDC/dawn_bdc.c ****         TIMER_CH1CV(TIMER1) = 0;
+ 542              		.loc 1 184 29
+ 543 0064 0022     		movs	r2, #0
+ 544 0066 1A60     		str	r2, [r3]
+ 185:../DawnBDC/dawn_bdc.c **** 
+ 545              		.loc 1 185 9
+ 546 0068 104B     		ldr	r3, .L38+24
+ 185:../DawnBDC/dawn_bdc.c **** 
+ 547              		.loc 1 185 29
+ 548 006a 0022     		movs	r2, #0
+ 549 006c 1A60     		str	r2, [r3]
+ 187:../DawnBDC/dawn_bdc.c ****         timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 550              		.loc 1 187 9
+ 551 006e 0022     		movs	r2, #0
+ 552 0070 0021     		movs	r1, #0
+ 553 0072 4FF08040 		mov	r0, #1073741824
+ 554 0076 FFF7FEFF 		bl	timer_channel_output_state_config
+ 188:../DawnBDC/dawn_bdc.c ****         break;
+ 555              		.loc 1 188 9
+ 556 007a 0022     		movs	r2, #0
+ 557 007c 0121     		movs	r1, #1
+ 558 007e 4FF08040 		mov	r0, #1073741824
+ 559 0082 FFF7FEFF 		bl	timer_channel_output_state_config
+ 189:../DawnBDC/dawn_bdc.c **** 
+ 560              		.loc 1 189 9
+ 561 0086 00E0     		b	.L36
+ 562              	.L37:
+ 563              		.loc 1 192 9
+ 564 0088 00BF     		nop
+ 565              	.L36:
+ 193:../DawnBDC/dawn_bdc.c ****     }
+ 194:../DawnBDC/dawn_bdc.c **** }
+ 566              		.loc 1 194 1
+ 567 008a 00BF     		nop
+ 568 008c 0837     		adds	r7, r7, #8
+ 569              		.cfi_def_cfa_offset 8
+ 570 008e BD46     		mov	sp, r7
+ 571              		.cfi_def_cfa_register 13
+ 572              		@ sp needed
+ 573 0090 80BD     		pop	{r7, pc}
+ 574              	.L39:
+ 575 0092 00BF     		.align	2
+ 576              	.L38:
+ 577 0094 34000140 		.word	1073807412
+ 578 0098 38000140 		.word	1073807416
+ 579 009c 00000140 		.word	1073807360
+ 580 00a0 3C000140 		.word	1073807420
+ 581 00a4 40000140 		.word	1073807424
+ 582 00a8 34000040 		.word	1073741876
+ 583 00ac 38000040 		.word	1073741880
+ 584              		.cfi_endproc
+ 585              	.LFE161:
+ 587              		.text
+ 588              	.Letext0:
+ 589              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 590              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 591              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 592              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 593              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 594              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 595              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 596              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 597              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 598              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 599              		.file 12 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 600              		.file 13 "../../Dawn/DawnLib/dawn_lib.h"
+ 601              		.file 14 "../../Dawn/DawnBsp/timebase.h"
+ 602              		.file 15 "../../Dawn/DawnCom/unpack.h"
+ 603              		.file 16 "../../Dawn/DawnDevice/icm206xx.h"
+ 604              		.file 17 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 605              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 606              		.file 19 "../../Dawn/DawnMain/dawn_function.h"
+ 607              		.file 20 "../../Dawn/DawnBsp/gpio.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 dawn_bdc.c
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:16     .text.BDCInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:24     .text.BDCInit:00000000 BDCInit
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:333    .text.BDC_TurnOnPWM:00000000 BDC_TurnOnPWM
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:54     .text.BDCInit:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:61     .text.BDC_MapMagToCcr:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:67     .text.BDC_MapMagToCcr:00000000 BDC_MapMagToCcr
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:126    .text.BDC_MapMagToCcr:00000044 $d
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:131    .text.BDC_ApplySlowDecayDualPwm:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:137    .text.BDC_ApplySlowDecayDualPwm:00000000 BDC_ApplySlowDecayDualPwm
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:205    .text.BDCpwm:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:212    .text.BDCpwm:00000000 BDCpwm
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:316    .text.BDCpwm:00000084 $d
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:326    .text.BDC_TurnOnPWM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:446    .text.BDC_TurnOnPWM:00000094 $d
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:457    .text.BDC_ShutOffPWM:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:464    .text.BDC_ShutOffPWM:00000000 BDC_ShutOffPWM
+C:\Users\leonardo\AppData\Local\Temp\ccvSjbpa.s:577    .text.BDC_ShutOffPWM:00000094 $d
+                           .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
+                           .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
+                           .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
+                           .group:00000000 wm4._default_types.h.15.247e5cd201eca3442cbf5404108c4935
+                           .group:00000000 wm4._intsup.h.10.cce27fed8484c08a33f522034c30d2b5
+                           .group:00000000 wm4._stdint.h.10.c24fa3af3bc1706662bb5593a907e841
+                           .group:00000000 wm4.stdint.h.23.d53047a68f4a85177f80b422d52785ed
+                           .group:00000000 wm4.stddef.h.39.27677723d43e5b5a7afdf8d798429f1d
+                           .group:00000000 wm4.newlib.h.8.2aecb9f3b2dc9d2e83d06d10f0c6ed3e
+                           .group:00000000 wm4.ieeefp.h.77.d5685ba212d3ed6e914898d045f873e3
+                           .group:00000000 wm4.config.h.220.6cac6a9685cfce5e83c17784171638d9
+                           .group:00000000 wm4._ansi.h.31.de524f58584151836e90d8620a16f8e8
+                           .group:00000000 wm4.lock.h.2.1461d1fff82dffe8bfddc23307f6484f
+                           .group:00000000 wm4._types.h.125.5cf8a495f1f7ef36777ad868a1e32068
+                           .group:00000000 wm4.stddef.h.155.3588ebfdd1e8c7ede80509bb9c3b8009
+                           .group:00000000 wm4._types.h.184.03611d4f6b5bec9997bcf4279eceba07
+                           .group:00000000 wm4.reent.h.17.90c2574d4acdcfce933db5cb09ff35fe
+                           .group:00000000 wm4.cdefs.h.49.2bf373aedffd8b393ccd11dc057e8547
+                           .group:00000000 wm4.string.h.15.dab3980bf35408a4c507182805e2de3a
+                           .group:00000000 wm4.stddef.h.155.ba788add86a0e365f264484f110c3c29
+                           .group:00000000 wm4.stdlib.h.13.4ed386f5c1a80d71e72172885d946ef2
+                           .group:00000000 wm4.alloca.h.8.dfc0c703c47ec3e69746825b17d9e66d
+                           .group:00000000 wm4.stdlib.h.56.d4493cd3736e51e9d56335045f26df45
+                           .group:00000000 wm4.math.h.13.adb102f7bd7860b1f241e149d6914a1e
+                           .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
+                           .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
+                           .group:00000000 wm4.core_cmInstr.h.39.addda81f1f3453ba31dd54fc5b6fcee8
+                           .group:00000000 wm4.core_cmSimd.h.43.c355993beb49ccd10586af5b1cfe5aee
+                           .group:00000000 wm4.core_cm4.h.201.38b66ea2c12d55e26a2374d5521b1bde
+                           .group:00000000 wm4.gd32f4xx.h.268.6244d4312c046a64f69632f7ef07b287
+                           .group:00000000 wm4.gd32f4xx_rcu.h.18.5c1e5e7e0de404504004d8bb7db8129d
+                           .group:00000000 wm4.gd32f4xx_adc.h.13.555e7341a9ddcdbc980571a940325972
+                           .group:00000000 wm4.gd32f4xx_can.h.13.2811f1e7e0dd1a163a8850b48ae09a18
+                           .group:00000000 wm4.gd32f4xx_crc.h.13.e3fa8cb47f74e88ac6e7a18c10f0cae7
+                           .group:00000000 wm4.gd32f4xx_ctc.h.13.979d5c7db9c07247dafcdc888120aeeb
+                           .group:00000000 wm4.gd32f4xx_dac.h.13.6aae99156ce94e45e273c87252f3e1b5
+                           .group:00000000 wm4.gd32f4xx_dbg.h.13.c5f36ebf9ff6bf00cb705dace0230749
+                           .group:00000000 wm4.gd32f4xx_dci.h.13.43c4239de7bb8115ecac688727adc34d
+                           .group:00000000 wm4.gd32f4xx_dma.h.13.dd34986dcd88f37eef0ac885fade6a96
+                           .group:00000000 wm4.gd32f4xx_exti.h.13.f61fefc984e3d5d6bfd619e837d781f0
+                           .group:00000000 wm4.gd32f4xx_fmc.h.12.6ad1d5b3792ad9539d3cdeacd021dc9f
+                           .group:00000000 wm4.gd32f4xx_fwdgt.h.13.cc9a34a06b043d4b817ab3d1a6056177
+                           .group:00000000 wm4.gd32f4xx_gpio.h.13.ac5c85bea0e960885418a329bb1f1322
+                           .group:00000000 wm4.gd32f4xx_syscfg.h.13.b2bd3727e52dfdd22af4632a1311bbb7
+                           .group:00000000 wm4.gd32f4xx_i2c.h.13.eb0f8b31bd16ee5fe82cc39a9dd42f2d
+                           .group:00000000 wm4.gd32f4xx_iref.h.13.7fc1143691d228493f7100d3cc247638
+                           .group:00000000 wm4.gd32f4xx_pmu.h.13.724bacbcb5c124f50a6b00f61a9eb756
+                           .group:00000000 wm4.gd32f4xx_rtc.h.13.fc493d83f9d78f0b7c4919b6d2f31956
+                           .group:00000000 wm4.gd32f4xx_sdio.h.13.81c3455a223eea59b64370eea49a57de
+                           .group:00000000 wm4.gd32f4xx_spi.h.13.03d2444bcb21a0c2481c42cb6d9fce79
+                           .group:00000000 wm4.gd32f4xx_timer.h.13.6cb5bef9444452fac8393c6f9325aaca
+                           .group:00000000 wm4.gd32f4xx_trng.h.13.8e3605226dc73eb8a884d03608e7b6df
+                           .group:00000000 wm4.gd32f4xx_usart.h.13.2986dbbf12f17711a1874d27609e0b55
+                           .group:00000000 wm4.gd32f4xx_wwdgt.h.13.1abc40e3831eb7a2ed947144f7cb9188
+                           .group:00000000 wm4.gd32f4xx_misc.h.13.b10945aa7ed210c08c1585a4b5874d8c
+                           .group:00000000 wm4.arm_math.h.289.5e959424b5305a9624e101328824bdf9
+                           .group:00000000 wm4.arm_math.h.309.e0917c8c6aa37995c408e917008fa910
+                           .group:00000000 wm4.dawn_main.h.25.26e38e321c8b35cbe4de27b260dda59b
+                           .group:00000000 wm4.usart.h.25.fc01861d7892853aa83247b640021348
+                           .group:00000000 wm4.timebase.h.25.148c98407bdc7ce1114915cde093d87a
+                           .group:00000000 wm4.unpack.h.25.91bc4c6c266694549e3c97bc659d6890
+                           .group:00000000 wm4.icm206xx.h.25.1a18715348b9cffd270504658e08606f
+                           .group:00000000 wm4.dawn_gimbal_system.h.30.8227ed645aeaf3d3a6c9940ae39ea25c
+                           .group:00000000 wm4.dawn_bdc.h.23.03eb0a77d8dad854dbfdbe1cd39a5bd7
+                           .group:00000000 wm4.dawn_bldc.h.29.3546f2d9ec9f7c73acb60442fea0569b
+                           .group:00000000 wm4.gpio.h.25.9dbce65fd9496973b249fa462e17a01b
+                           .group:00000000 wm4.flash.h.25.8e339cfaaf976c4d7bfe969ee8266e65
+
+UNDEFINED SYMBOLS
+BDCGpioInit
+BLDCYaw
+BLDCRoll
+BLDCPitch
+__aeabi_f2iz
+timer_channel_output_state_config
