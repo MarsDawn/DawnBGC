@@ -26,7 +26,7 @@ static void BLDCUpdata(void);
 static void IMUUpdata(void);
 static uint8_t CheckBLDCStatus(void);
 static void BDCTorqueUpdata(void);
-static void BLDCTorqueUpdata(void);
+// static void BLDCTorqueUpdata(void);
 static float AngleRadsLimit(float AngleErr, float RadsRef, float MaxACC);
 void GimbalInit(void)
 {
@@ -38,7 +38,7 @@ Matrix3X3Union local_ArmDCM_trans;
 
 void GimbalWork(void)
 {
-    uint8_t i = 0, j = 0;
+    uint8_t i = 0;
 
     BLDCUpdata();
 
@@ -183,7 +183,7 @@ void GimbalWork(void)
         CalcJacobianTrans(&GimbalSystem.ArmAngle, &GimbalSystem.JacbState);
     }
 
-    gimbal_business();
+    // gimbal_business();
 }
 
 static void BLDCUpdata(void)
@@ -233,37 +233,37 @@ static uint8_t CheckBLDCStatus(void)
 }
 static void BDCTorqueUpdata(void)
 {
-    // BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
-    BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middle);
-    BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small);
-
-    // BDCpwm(&BLDCYaw);
-    BDCpwm(&BLDCRoll);
-    BDCpwm(&BLDCPitch);
-}
-static void BLDCTorqueUpdata(void)
-{
-
     BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middle);
     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small);
 
-    if (!BLDCYaw.StateCheck)
-    {
-        BLDCCali(&BLDCYaw);
-    }
-    else if (!BLDCRoll.StateCheck)
-    {
-        BLDCCali(&BLDCYaw);
-        BLDCCali(&BLDCRoll);
-    }
-    else
-    {
-        BLDCCali(&BLDCYaw);
-        BLDCCali(&BLDCRoll);
-        BLDCCali(&BLDCPitch);
-    }
+    BDCpwm(&BLDCYaw);
+    BDCpwm(&BLDCRoll);
+    BDCpwm(&BLDCPitch);
 }
+// static void BLDCTorqueUpdata(void)
+// {
+
+//     BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
+//     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middle);
+//     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small);
+
+//     if (!BLDCYaw.StateCheck)
+//     {
+//         BLDCCali(&BLDCYaw);
+//     }
+//     else if (!BLDCRoll.StateCheck)
+//     {
+//         BLDCCali(&BLDCYaw);
+//         BLDCCali(&BLDCRoll);
+//     }
+//     else
+//     {
+//         BLDCCali(&BLDCYaw);
+//         BLDCCali(&BLDCRoll);
+//         BLDCCali(&BLDCPitch);
+//     }
+// }
 
 static float AngleRadsLimit(float AngleErr, float RadsRef, float MaxACC)
 {

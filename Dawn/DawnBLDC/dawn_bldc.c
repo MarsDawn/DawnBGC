@@ -27,9 +27,9 @@ void BLDCInit(void)
 {
     BLDCGpioInit();
 
-    TurnOnPWM(&BLDCYaw);
-    TurnOnPWM(&BLDCRoll);
-    TurnOnPWM(&BLDCPitch);
+    // TurnOnPWM(&BLDCYaw);
+    // TurnOnPWM(&BLDCRoll);
+    // TurnOnPWM(&BLDCPitch);
 }
 
 
