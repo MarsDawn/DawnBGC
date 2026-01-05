@@ -54,8 +54,8 @@ static inline uint16_t BDC_MapMagToCcr(int16_t mag, uint16_t arr)
 static inline void BDC_ApplySlowDecayDualPwm(int16_t u, uint16_t arr,
                                              volatile uint32_t *in1_ccr,
                                              volatile uint32_t *in2_ccr)
-{
-    uint16_t duty = BDC_MapMagToCcr(u, arr);
+{   // 慢衰减 指令要取
+    uint16_t duty = BDC_MapMagToCcr(u-=PWM_MAX_LIMIT, arr);
 
     /* “100%”输出：PWM1 模式下用 CCR=ARR（几乎恒高） */
     uint16_t full = arr;
@@ -79,45 +79,34 @@ static inline void BDC_ApplySlowDecayDualPwm(int16_t u, uint16_t arr,
  * ========================= */
 void BDCpwm(BLDCStruct *BLDCStruct)
 {
-    /* BDC：只需要一个有符号标量命令
-     * 这里约定使用 VoltStrict.A
-     */
-    static int16_t u = TIM1_ARR; //(int16_t)BLDCStruct->QuadOut;
+    static int16_t u = 0;
 
     switch (BLDCStruct->BLDCId)
     {
     case BLDC_ID_YAW:
     {
-        TIMER_CH0CV(TIMER0) = TIM0_ARR  / 2;
-        TIMER_CH1CV(TIMER0) = 0;
         /* YAW：TIMER0_CH0 = IN1，TIMER0_CH1 = IN2 */
-        // volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER0);
-        // volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER0);
-        // BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
+        volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER0);
+        volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER0);
+        BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
     }
     break;
 
     case BLDC_ID_ROLL:
     {
-        TIMER_CH2CV(TIMER0) = TIM0_ARR / 2;
-        TIMER_CH3CV(TIMER0) = 0;
-
         /* ROLL：TIMER0_CH2 = IN1，TIMER0_CH3 = IN2 */
-        // volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH2CV(TIMER0);
-        // volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH3CV(TIMER0);
-        // BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
+        volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH2CV(TIMER0);
+        volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH3CV(TIMER0);
+        BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
     }
     break;
 
     case BLDC_ID_PITCH:
     {
-        TIMER_CH0CV(TIMER1) = TIM1_ARR / 2;
-        TIMER_CH1CV(TIMER1) = 0;
-
         /* PITCH：TIMER1_CH0(PB8) = IN1，TIMER1_CH1(PB9) = IN2 */
-        // volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER1);
-        // volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER1);
-        // BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM1_ARR, in1, in2);
+        volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER1);
+        volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER1);
+        BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM1_ARR, in1, in2);
     }
     break;
 
