@@ -79,7 +79,8 @@ static inline void BDC_ApplySlowDecayDualPwm(int16_t u, uint16_t arr,
  * ========================= */
 void BDCpwm(BLDCStruct *BLDCStruct)
 {
-    static int16_t u = 0;
+    static int16_t u;
+    u = (int16_t)(BLDCStruct->QuadOut);
 
     switch (BLDCStruct->BLDCId)
     {

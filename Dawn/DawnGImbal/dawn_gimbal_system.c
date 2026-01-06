@@ -210,13 +210,13 @@ static void BLDCUpdata(void)
 }
 static void IMUUpdata(void)
 {
-    GimbalSystem.PlaneRadsRaw.Data.X = -Icm206XXData.FGyroZ;
-    GimbalSystem.PlaneRadsRaw.Data.Y = -Icm206XXData.FGyroY;
-    GimbalSystem.PlaneRadsRaw.Data.Z = -Icm206XXData.FGyroX;
+    GimbalSystem.PlaneRadsRaw.Data.X = Icm206XXData.FGyroX;
+    GimbalSystem.PlaneRadsRaw.Data.Y = Icm206XXData.FGyroZ;
+    GimbalSystem.PlaneRadsRaw.Data.Z = -Icm206XXData.FGyroY;
 
-    GimbalSystem.PlaneACCRaw.Data.X = Icm206XXData.FAccZ;
-    GimbalSystem.PlaneACCRaw.Data.Y = Icm206XXData.FAccY;
-    GimbalSystem.PlaneACCRaw.Data.Z = Icm206XXData.FAccX;
+    GimbalSystem.PlaneACCRaw.Data.X = -Icm206XXData.FAccX;
+    GimbalSystem.PlaneACCRaw.Data.Y = -Icm206XXData.FAccZ;
+    GimbalSystem.PlaneACCRaw.Data.Z = Icm206XXData.FAccY;
 }
 
 static uint8_t CheckBLDCStatus(void)
@@ -233,6 +233,10 @@ static uint8_t CheckBLDCStatus(void)
 }
 static void BDCTorqueUpdata(void)
 {
+    BLDCYaw.StateCheck = TRUE;
+    BLDCRoll.StateCheck = TRUE;
+    BLDCPitch.StateCheck = TRUE;
+
     BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middle);
     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small);
