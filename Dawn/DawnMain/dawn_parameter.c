@@ -198,13 +198,13 @@ GimbalSystemStruct GimbalSystem =
                 .Kp = 3500.0f,
                 .Ki = 100.0f,
                 .Integral = 0.0f,
-                .IntegralMin = -15000.0f,
-                .IntegralMax = 15000.0f,
+                .IntegralMin = -32000.0f,
+                .IntegralMax = 32000.0f,
                 .Kd = 0.0f,
                 .OldError = 0.0f,
                 .FliterCoef = 0.0f,
-                .OutLimitMin = -15000.0f,
-                .OutLimitMax = 15000.0f,
+                .OutLimitMin = -32000.0f,
+                .OutLimitMax = 32000.0f,
             },
             
         .BLDCAnglePID.Data =

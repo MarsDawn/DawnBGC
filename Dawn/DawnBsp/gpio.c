@@ -247,74 +247,37 @@ void BDCGpioInit(void)
     rcu_periph_clock_enable(RCU_TIMER1);
 
     /* ---------- GPIO：PWM 输出 ---------- */
-    /* Motor1: TIM0_CH0 / CH1 -> PA8 / PA9 */
-    /* Motor2: TIM0_CH2 / CH3 -> PA10 / PA11 */
-    gpio_af_set(GPIOA, GPIO_AF_1,
+    /* Motor1: TIM1_CH0 / CH1 -> PB8 / PB9 */
+    /* Motor2: TIM1_CH2 / CH3 -> PB10 / PB11 */
+    gpio_af_set(GPIOB, GPIO_AF_1,
                 GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
-    gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE,
+    gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE,
                   GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
-    gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
+    gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
                             GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
 
-    /* Motor3: TIM1_CH0 / CH1 -> PB8 / PB9（示例） */
-    gpio_af_set(GPIOB, GPIO_AF_1, GPIO_PIN_8 | GPIO_PIN_9);
-    gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8 | GPIO_PIN_9);
-    gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
-                            GPIO_PIN_8 | GPIO_PIN_9);
+    /* Motor3: TIM0_CH0 / CH3 -> PA8 / PA11（示例） */
+    gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_8 | GPIO_PIN_11);
+    gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8 | GPIO_PIN_11);
+    gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
+                            GPIO_PIN_8 | GPIO_PIN_11);
 
-    /* ---------- TIMER0（电机1、2） ---------- */
-    timer_deinit(TIMER0);
+    /* ---------- TIMER1（电机1、2） ---------- */
+    timer_deinit(TIMER1);
     tim.prescaler = 0;
     tim.alignedmode = TIMER_COUNTER_EDGE;
     tim.counterdirection = TIMER_COUNTER_UP;
     tim.period = (uint16_t)TIM0_ARR;
     tim.clockdivision = TIMER_CKDIV_DIV1;
     tim.repetitioncounter = 0;
-    timer_init(TIMER0, &tim);
-    timer_auto_reload_shadow_enable(TIMER0);
+    timer_init(TIMER1, &tim);
+    timer_auto_reload_shadow_enable(TIMER1);
 
     oc.outputstate = TIMER_CCX_ENABLE;
     oc.ocpolarity = TIMER_OC_POLARITY_LOW;
     oc.ocidlestate = TIMER_OC_IDLE_STATE_LOW;
 
-    /* TIM0 CH0~CH3 */
-    timer_channel_output_config(TIMER0, TIMER_CH_0, &oc);
-    timer_channel_output_mode_config(TIMER0, TIMER_CH_0, TIMER_OC_MODE_PWM1);
-    timer_channel_output_shadow_config(TIMER0, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
-    timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_0, 0);
-
-    timer_channel_output_config(TIMER0, TIMER_CH_1, &oc);
-    timer_channel_output_mode_config(TIMER0, TIMER_CH_1, TIMER_OC_MODE_PWM1);
-    timer_channel_output_shadow_config(TIMER0, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
-    timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_1, 0);
-
-    timer_channel_output_config(TIMER0, TIMER_CH_2, &oc);
-    timer_channel_output_mode_config(TIMER0, TIMER_CH_2, TIMER_OC_MODE_PWM1);
-    timer_channel_output_shadow_config(TIMER0, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
-    timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_2, 0);
-
-    timer_channel_output_config(TIMER0, TIMER_CH_3, &oc);
-    timer_channel_output_mode_config(TIMER0, TIMER_CH_3, TIMER_OC_MODE_PWM1);
-    timer_channel_output_shadow_config(TIMER0, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
-    timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_3, 0);
-
-    timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
-    timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
-    timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
-    timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_DISABLE);
-
-    timer_primary_output_config(TIMER0, ENABLE);
-
-    timer_counter_value_config(TIMER0, 0);
-    timer_enable(TIMER0);
-
-    /* ---------- TIMER1（电机3 预留） ---------- */
-    timer_deinit(TIMER1);
-    tim.period = (uint16_t)TIM1_ARR;
-    timer_init(TIMER1, &tim);
-    timer_auto_reload_shadow_enable(TIMER1);
-
-    /* TIM1 CH0~CH1 */
+    /* TIM1 CH0~CH3 */
     timer_channel_output_config(TIMER1, TIMER_CH_0, &oc);
     timer_channel_output_mode_config(TIMER1, TIMER_CH_0, TIMER_OC_MODE_PWM1);
     timer_channel_output_shadow_config(TIMER1, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
@@ -325,9 +288,47 @@ void BDCGpioInit(void)
     timer_channel_output_shadow_config(TIMER1, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_1, 0);
 
+    timer_channel_output_config(TIMER1, TIMER_CH_2, &oc);
+    timer_channel_output_mode_config(TIMER1, TIMER_CH_2, TIMER_OC_MODE_PWM1);
+    timer_channel_output_shadow_config(TIMER1, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
+    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_2, 0);
+
+    timer_channel_output_config(TIMER1, TIMER_CH_3, &oc);
+    timer_channel_output_mode_config(TIMER1, TIMER_CH_3, TIMER_OC_MODE_PWM1);
+    timer_channel_output_shadow_config(TIMER1, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
+    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_3, 0);
+
     timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
     timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
+    timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
+    timer_channel_output_state_config(TIMER1, TIMER_CH_3, TIMER_CCX_DISABLE);
+
 
     timer_counter_value_config(TIMER1, 0);
     timer_enable(TIMER1);
+
+    /* ---------- TIMER0（电机3 预留） ---------- */
+    timer_deinit(TIMER0);
+    tim.period = (uint16_t)TIM1_ARR;
+    timer_init(TIMER0, &tim);
+    timer_auto_reload_shadow_enable(TIMER0);
+
+    /* TIM0 CH0|CH3 */
+    timer_channel_output_config(TIMER0, TIMER_CH_0, &oc);
+    timer_channel_output_mode_config(TIMER0, TIMER_CH_0, TIMER_OC_MODE_PWM1);
+    timer_channel_output_shadow_config(TIMER0, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
+    timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_0, 0);
+
+    timer_channel_output_config(TIMER0, TIMER_CH_3, &oc);
+    timer_channel_output_mode_config(TIMER0, TIMER_CH_3, TIMER_OC_MODE_PWM1);
+    timer_channel_output_shadow_config(TIMER0, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
+    timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_3, 0);
+
+    timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
+    timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_DISABLE);
+
+    timer_primary_output_config(TIMER0, ENABLE);
+
+    timer_counter_value_config(TIMER0, 0);
+    timer_enable(TIMER0);
 }
