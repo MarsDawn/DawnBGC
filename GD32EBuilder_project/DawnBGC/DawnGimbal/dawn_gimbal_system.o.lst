@@ -1231,52 +1231,52 @@
  1006              		.cfi_offset 7, -4
  1007 0002 00AF     		add	r7, sp, #0
  1008              		.cfi_def_cfa_register 7
- 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.X = -Icm206XXData.FGyroZ;
- 1009              		.loc 1 213 53
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.X = Icm206XXData.FGyroX;
+ 1009              		.loc 1 213 52
  1010 0004 134B     		ldr	r3, .L72
- 1011 0006 9B6A     		ldr	r3, [r3, #40]	@ float
- 1012              		.loc 1 213 40
- 1013 0008 83F00043 		eor	r3, r3, #-2147483648
- 1014              		.loc 1 213 38
- 1015 000c 124A     		ldr	r2, .L72+4
- 1016 000e C2F80C31 		str	r3, [r2, #268]	@ float
- 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.Y = -Icm206XXData.FGyroY;
- 1017              		.loc 1 214 53
- 1018 0012 104B     		ldr	r3, .L72
- 1019 0014 5B6A     		ldr	r3, [r3, #36]	@ float
- 1020              		.loc 1 214 40
- 1021 0016 83F00043 		eor	r3, r3, #-2147483648
- 1022              		.loc 1 214 38
- 1023 001a 0F4A     		ldr	r2, .L72+4
- 1024 001c C2F81031 		str	r3, [r2, #272]	@ float
- 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.Z = -Icm206XXData.FGyroX;
- 1025              		.loc 1 215 53
- 1026 0020 0C4B     		ldr	r3, .L72
- 1027 0022 1B6A     		ldr	r3, [r3, #32]	@ float
- 1028              		.loc 1 215 40
- 1029 0024 83F00043 		eor	r3, r3, #-2147483648
- 1030              		.loc 1 215 38
- 1031 0028 0B4A     		ldr	r2, .L72+4
- 1032 002a C2F81431 		str	r3, [r2, #276]	@ float
+ 1011 0006 1B6A     		ldr	r3, [r3, #32]	@ float
+ 1012              		.loc 1 213 38
+ 1013 0008 134A     		ldr	r2, .L72+4
+ 1014 000a C2F80C31 		str	r3, [r2, #268]	@ float
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.Y = Icm206XXData.FGyroZ;
+ 1015              		.loc 1 214 52
+ 1016 000e 114B     		ldr	r3, .L72
+ 1017 0010 9B6A     		ldr	r3, [r3, #40]	@ float
+ 1018              		.loc 1 214 38
+ 1019 0012 114A     		ldr	r2, .L72+4
+ 1020 0014 C2F81031 		str	r3, [r2, #272]	@ float
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneRadsRaw.Data.Z = -Icm206XXData.FGyroY;
+ 1021              		.loc 1 215 53
+ 1022 0018 0E4B     		ldr	r3, .L72
+ 1023 001a 5B6A     		ldr	r3, [r3, #36]	@ float
+ 1024              		.loc 1 215 40
+ 1025 001c 83F00043 		eor	r3, r3, #-2147483648
+ 1026              		.loc 1 215 38
+ 1027 0020 0D4A     		ldr	r2, .L72+4
+ 1028 0022 C2F81431 		str	r3, [r2, #276]	@ float
  216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.X = Icm206XXData.FAccZ;
- 1033              		.loc 1 217 51
- 1034 002e 094B     		ldr	r3, .L72
- 1035 0030 9B69     		ldr	r3, [r3, #24]	@ float
- 1036              		.loc 1 217 37
- 1037 0032 094A     		ldr	r2, .L72+4
- 1038 0034 C2F8E830 		str	r3, [r2, #232]	@ float
- 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.Y = Icm206XXData.FAccY;
- 1039              		.loc 1 218 51
- 1040 0038 064B     		ldr	r3, .L72
- 1041 003a 5B69     		ldr	r3, [r3, #20]	@ float
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.X = -Icm206XXData.FAccX;
+ 1029              		.loc 1 217 52
+ 1030 0026 0B4B     		ldr	r3, .L72
+ 1031 0028 1B69     		ldr	r3, [r3, #16]	@ float
+ 1032              		.loc 1 217 39
+ 1033 002a 83F00043 		eor	r3, r3, #-2147483648
+ 1034              		.loc 1 217 37
+ 1035 002e 0A4A     		ldr	r2, .L72+4
+ 1036 0030 C2F8E830 		str	r3, [r2, #232]	@ float
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.Y = -Icm206XXData.FAccZ;
+ 1037              		.loc 1 218 52
+ 1038 0034 074B     		ldr	r3, .L72
+ 1039 0036 9B69     		ldr	r3, [r3, #24]	@ float
+ 1040              		.loc 1 218 39
+ 1041 0038 83F00043 		eor	r3, r3, #-2147483648
  1042              		.loc 1 218 37
  1043 003c 064A     		ldr	r2, .L72+4
  1044 003e C2F8EC30 		str	r3, [r2, #236]	@ float
- 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.Z = Icm206XXData.FAccX;
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     GimbalSystem.PlaneACCRaw.Data.Z = Icm206XXData.FAccY;
  1045              		.loc 1 219 51
  1046 0042 044B     		ldr	r3, .L72
- 1047 0044 1B69     		ldr	r3, [r3, #16]	@ float
+ 1047 0044 5B69     		ldr	r3, [r3, #20]	@ float
  1048              		.loc 1 219 37
  1049 0046 044A     		ldr	r2, .L72+4
  1050 0048 C2F8F030 		str	r3, [r2, #240]	@ float
@@ -1390,252 +1390,288 @@
  1146              		.cfi_offset 14, -4
  1147 0002 00AF     		add	r7, sp, #0
  1148              		.cfi_def_cfa_register 7
- 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     // BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middle);
- 1149              		.loc 1 237 55
- 1150 0004 114B     		ldr	r3, .L80
- 1151 0006 D3F8E431 		ldr	r3, [r3, #484]	@ float
- 1152              		.loc 1 237 91
- 1153 000a 104A     		ldr	r2, .L80
- 1154 000c D2F83C21 		ldr	r2, [r2, #316]	@ float
- 1155              		.loc 1 237 64
- 1156 0010 1146     		mov	r1, r2
- 1157 0012 1846     		mov	r0, r3
- 1158 0014 FFF7FEFF 		bl	__aeabi_fmul
- 1159              	.LVL31:
- 1160 0018 0346     		mov	r3, r0
- 1161 001a 1A46     		mov	r2, r3
- 1162              		.loc 1 237 22
- 1163 001c 0C4B     		ldr	r3, .L80+4
- 1164 001e DA67     		str	r2, [r3, #124]	@ float
- 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small);
- 1165              		.loc 1 238 56
- 1166 0020 0A4B     		ldr	r3, .L80
- 1167 0022 D3F8EC31 		ldr	r3, [r3, #492]	@ float
- 1168              		.loc 1 238 91
- 1169 0026 094A     		ldr	r2, .L80
- 1170 0028 D2F84421 		ldr	r2, [r2, #324]	@ float
- 1171              		.loc 1 238 64
- 1172 002c 1146     		mov	r1, r2
- 1173 002e 1846     		mov	r0, r3
- 1174 0030 FFF7FEFF 		bl	__aeabi_fmul
- 1175              	.LVL32:
- 1176 0034 0346     		mov	r3, r0
- 1177 0036 1A46     		mov	r2, r3
- 1178              		.loc 1 238 23
- 1179 0038 064B     		ldr	r3, .L80+8
- 1180 003a DA67     		str	r2, [r3, #124]	@ float
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCYaw.StateCheck = TRUE;
+ 1149              		.loc 1 236 24
+ 1150 0004 1E4B     		ldr	r3, .L80
+ 1151 0006 0122     		movs	r2, #1
+ 1152 0008 1A76     		strb	r2, [r3, #24]
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCRoll.StateCheck = TRUE;
+ 1153              		.loc 1 237 25
+ 1154 000a 1E4B     		ldr	r3, .L80+4
+ 1155 000c 0122     		movs	r2, #1
+ 1156 000e 1A76     		strb	r2, [r3, #24]
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCPitch.StateCheck = TRUE;
+ 1157              		.loc 1 238 26
+ 1158 0010 1D4B     		ldr	r3, .L80+8
+ 1159 0012 0122     		movs	r2, #1
+ 1160 0014 1A76     		strb	r2, [r3, #24]
  239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     // BDCpwm(&BLDCYaw);
- 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BDCpwm(&BLDCRoll);
- 1181              		.loc 1 241 5
- 1182 003c 0448     		ldr	r0, .L80+4
- 1183 003e FFF7FEFF 		bl	BDCpwm
- 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BDCpwm(&BLDCPitch);
- 1184              		.loc 1 242 5
- 1185 0042 0448     		ldr	r0, .L80+8
- 1186 0044 FFF7FEFF 		bl	BDCpwm
- 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
- 1187              		.loc 1 243 1
- 1188 0048 00BF     		nop
- 1189 004a 80BD     		pop	{r7, pc}
- 1190              	.L81:
- 1191              		.align	2
- 1192              	.L80:
- 1193 004c 00000000 		.word	GimbalSystem
- 1194 0050 00000000 		.word	BLDCRoll
- 1195 0054 00000000 		.word	BLDCPitch
- 1196              		.cfi_endproc
- 1197              	.LFE161:
- 1199              		.section	.text.AngleRadsLimit,"ax",%progbits
- 1200              		.align	1
- 1201              		.syntax unified
- 1202              		.thumb
- 1203              		.thumb_func
- 1204              		.fpu softvfp
- 1206              	AngleRadsLimit:
- 1207              	.LFB162:
- 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** // static void BLDCTorqueUpdata(void)
- 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** // {
- 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
- 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middl
- 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
+ 1161              		.loc 1 240 54
+ 1162 0016 1D4B     		ldr	r3, .L80+12
+ 1163 0018 D3F8E831 		ldr	r3, [r3, #488]	@ float
+ 1164              		.loc 1 240 89
+ 1165 001c 1B4A     		ldr	r2, .L80+12
+ 1166 001e D2F84021 		ldr	r2, [r2, #320]	@ float
+ 1167              		.loc 1 240 62
+ 1168 0022 1146     		mov	r1, r2
+ 1169 0024 1846     		mov	r0, r3
+ 1170 0026 FFF7FEFF 		bl	__aeabi_fmul
+ 1171              	.LVL31:
+ 1172 002a 0346     		mov	r3, r0
+ 1173 002c 1A46     		mov	r2, r3
+ 1174              		.loc 1 240 21
+ 1175 002e 144B     		ldr	r3, .L80
+ 1176 0030 DA67     		str	r2, [r3, #124]	@ float
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middle);
+ 1177              		.loc 1 241 55
+ 1178 0032 164B     		ldr	r3, .L80+12
+ 1179 0034 D3F8E431 		ldr	r3, [r3, #484]	@ float
+ 1180              		.loc 1 241 91
+ 1181 0038 144A     		ldr	r2, .L80+12
+ 1182 003a D2F83C21 		ldr	r2, [r2, #316]	@ float
+ 1183              		.loc 1 241 64
+ 1184 003e 1146     		mov	r1, r2
+ 1185 0040 1846     		mov	r0, r3
+ 1186 0042 FFF7FEFF 		bl	__aeabi_fmul
+ 1187              	.LVL32:
+ 1188 0046 0346     		mov	r3, r0
+ 1189 0048 1A46     		mov	r2, r3
+ 1190              		.loc 1 241 22
+ 1191 004a 0E4B     		ldr	r3, .L80+4
+ 1192 004c DA67     		str	r2, [r3, #124]	@ float
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small);
+ 1193              		.loc 1 242 56
+ 1194 004e 0F4B     		ldr	r3, .L80+12
+ 1195 0050 D3F8EC31 		ldr	r3, [r3, #492]	@ float
+ 1196              		.loc 1 242 91
+ 1197 0054 0D4A     		ldr	r2, .L80+12
+ 1198 0056 D2F84421 		ldr	r2, [r2, #324]	@ float
+ 1199              		.loc 1 242 64
+ 1200 005a 1146     		mov	r1, r2
+ 1201 005c 1846     		mov	r0, r3
+ 1202 005e FFF7FEFF 		bl	__aeabi_fmul
+ 1203              	.LVL33:
+ 1204 0062 0346     		mov	r3, r0
+ 1205 0064 1A46     		mov	r2, r3
+ 1206              		.loc 1 242 23
+ 1207 0066 084B     		ldr	r3, .L80+8
+ 1208 0068 DA67     		str	r2, [r3, #124]	@ float
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BDCpwm(&BLDCYaw);
+ 1209              		.loc 1 244 5
+ 1210 006a 0548     		ldr	r0, .L80
+ 1211 006c FFF7FEFF 		bl	BDCpwm
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BDCpwm(&BLDCRoll);
+ 1212              		.loc 1 245 5
+ 1213 0070 0448     		ldr	r0, .L80+4
+ 1214 0072 FFF7FEFF 		bl	BDCpwm
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     BDCpwm(&BLDCPitch);
+ 1215              		.loc 1 246 5
+ 1216 0076 0448     		ldr	r0, .L80+8
+ 1217 0078 FFF7FEFF 		bl	BDCpwm
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+ 1218              		.loc 1 247 1
+ 1219 007c 00BF     		nop
+ 1220 007e 80BD     		pop	{r7, pc}
+ 1221              	.L81:
+ 1222              		.align	2
+ 1223              	.L80:
+ 1224 0080 00000000 		.word	BLDCYaw
+ 1225 0084 00000000 		.word	BLDCRoll
+ 1226 0088 00000000 		.word	BLDCPitch
+ 1227 008c 00000000 		.word	GimbalSystem
+ 1228              		.cfi_endproc
+ 1229              	.LFE161:
+ 1231              		.section	.text.AngleRadsLimit,"ax",%progbits
+ 1232              		.align	1
+ 1233              		.syntax unified
+ 1234              		.thumb
+ 1235              		.thumb_func
+ 1236              		.fpu softvfp
+ 1238              	AngleRadsLimit:
+ 1239              	.LFB162:
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** // static void BLDCTorqueUpdata(void)
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** // {
  250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     if (!BLDCYaw.StateCheck)
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     {
- 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCYaw);
- 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     }
- 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     else if (!BLDCRoll.StateCheck)
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     BLDCYaw.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Latge) * (GimbalSystem.ArmDir.Data.Latge);
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     BLDCRoll.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Middle) * (GimbalSystem.ArmDir.Data.Middl
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     BLDCPitch.QuadOut = (GimbalSystem.ArmTorqueRef.Data.Small) * (GimbalSystem.ArmDir.Data.Small
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     if (!BLDCYaw.StateCheck)
  256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     {
  257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCYaw);
- 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCRoll);
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     }
- 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     else
- 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     {
- 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCYaw);
- 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCRoll);
- 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCPitch);
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     }
- 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** // }
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static float AngleRadsLimit(float AngleErr, float RadsRef, float MaxACC)
- 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
- 1208              		.loc 1 269 1
- 1209              		.cfi_startproc
- 1210              		@ args = 0, pretend = 0, frame = 24
- 1211              		@ frame_needed = 1, uses_anonymous_args = 0
- 1212 0000 80B5     		push	{r7, lr}
- 1213              		.cfi_def_cfa_offset 8
- 1214              		.cfi_offset 7, -8
- 1215              		.cfi_offset 14, -4
- 1216 0002 86B0     		sub	sp, sp, #24
- 1217              		.cfi_def_cfa_offset 32
- 1218 0004 00AF     		add	r7, sp, #0
- 1219              		.cfi_def_cfa_register 7
- 1220 0006 F860     		str	r0, [r7, #12]	@ float
- 1221 0008 B960     		str	r1, [r7, #8]	@ float
- 1222 000a 7A60     		str	r2, [r7, #4]	@ float
- 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     float MaxRads = 0.0f;
- 1223              		.loc 1 270 11
- 1224 000c 4FF00003 		mov	r3, #0
- 1225 0010 7B61     		str	r3, [r7, #20]	@ float
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     }
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     else if (!BLDCRoll.StateCheck)
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     {
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCYaw);
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCRoll);
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     }
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     else
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     {
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCYaw);
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCRoll);
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //         BLDCCali(&BLDCPitch);
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** //     }
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** // }
  271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (AngleErr < 0.0f)
- 1226              		.loc 1 272 8
- 1227 0012 4FF00001 		mov	r1, #0
- 1228 0016 F868     		ldr	r0, [r7, #12]	@ float
- 1229 0018 FFF7FEFF 		bl	__aeabi_fcmplt
- 1230              	.LVL33:
- 1231 001c 0346     		mov	r3, r0
- 1232 001e 002B     		cmp	r3, #0
- 1233 0020 03D0     		beq	.L83
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         AngleErr = -AngleErr;
- 1234              		.loc 1 274 18
- 1235 0022 FB68     		ldr	r3, [r7, #12]
- 1236 0024 83F00043 		eor	r3, r3, #-2147483648
- 1237 0028 FB60     		str	r3, [r7, #12]	@ float
- 1238              	.L83:
- 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     MaxRads = sqrtf(2.0f * AngleErr * MaxACC);
- 1239              		.loc 1 276 26
- 1240 002a FB68     		ldr	r3, [r7, #12]	@ float
- 1241 002c 1946     		mov	r1, r3
- 1242 002e 1846     		mov	r0, r3
- 1243 0030 FFF7FEFF 		bl	__aeabi_fadd
- 1244              	.LVL34:
- 1245 0034 0346     		mov	r3, r0
- 1246              		.loc 1 276 15
- 1247 0036 7968     		ldr	r1, [r7, #4]	@ float
- 1248 0038 1846     		mov	r0, r3
- 1249 003a FFF7FEFF 		bl	__aeabi_fmul
- 1250              	.LVL35:
- 1251 003e 0346     		mov	r3, r0
- 1252 0040 1846     		mov	r0, r3
- 1253 0042 FFF7FEFF 		bl	sqrtf
- 1254 0046 7861     		str	r0, [r7, #20]	@ float
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (RadsRef > MaxRads)
- 1255              		.loc 1 278 8
- 1256 0048 7969     		ldr	r1, [r7, #20]	@ float
- 1257 004a B868     		ldr	r0, [r7, #8]	@ float
- 1258 004c FFF7FEFF 		bl	__aeabi_fcmpgt
- 1259              	.LVL36:
- 1260 0050 0346     		mov	r3, r0
- 1261 0052 002B     		cmp	r3, #0
- 1262 0054 02D0     		beq	.L93
- 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         RadsRef = MaxRads;
- 1263              		.loc 1 280 17
- 1264 0056 7B69     		ldr	r3, [r7, #20]	@ float
- 1265 0058 BB60     		str	r3, [r7, #8]	@ float
- 1266 005a 0DE0     		b	.L87
- 1267              	.L93:
- 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else if (RadsRef < -MaxRads)
- 1268              		.loc 1 282 24
- 1269 005c 7B69     		ldr	r3, [r7, #20]
- 1270 005e 83F00043 		eor	r3, r3, #-2147483648
- 1271              		.loc 1 282 13
- 1272 0062 1946     		mov	r1, r3
- 1273 0064 B868     		ldr	r0, [r7, #8]	@ float
- 1274 0066 FFF7FEFF 		bl	__aeabi_fcmplt
- 1275              	.LVL37:
- 1276 006a 0346     		mov	r3, r0
- 1277 006c 002B     		cmp	r3, #0
- 1278 006e 03D0     		beq	.L87
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** static float AngleRadsLimit(float AngleErr, float RadsRef, float MaxACC)
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** {
+ 1240              		.loc 1 273 1
+ 1241              		.cfi_startproc
+ 1242              		@ args = 0, pretend = 0, frame = 24
+ 1243              		@ frame_needed = 1, uses_anonymous_args = 0
+ 1244 0000 80B5     		push	{r7, lr}
+ 1245              		.cfi_def_cfa_offset 8
+ 1246              		.cfi_offset 7, -8
+ 1247              		.cfi_offset 14, -4
+ 1248 0002 86B0     		sub	sp, sp, #24
+ 1249              		.cfi_def_cfa_offset 32
+ 1250 0004 00AF     		add	r7, sp, #0
+ 1251              		.cfi_def_cfa_register 7
+ 1252 0006 F860     		str	r0, [r7, #12]	@ float
+ 1253 0008 B960     		str	r1, [r7, #8]	@ float
+ 1254 000a 7A60     		str	r2, [r7, #4]	@ float
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     float MaxRads = 0.0f;
+ 1255              		.loc 1 274 11
+ 1256 000c 4FF00003 		mov	r3, #0
+ 1257 0010 7B61     		str	r3, [r7, #20]	@ float
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (AngleErr < 0.0f)
+ 1258              		.loc 1 276 8
+ 1259 0012 4FF00001 		mov	r1, #0
+ 1260 0016 F868     		ldr	r0, [r7, #12]	@ float
+ 1261 0018 FFF7FEFF 		bl	__aeabi_fcmplt
+ 1262              	.LVL34:
+ 1263 001c 0346     		mov	r3, r0
+ 1264 001e 002B     		cmp	r3, #0
+ 1265 0020 03D0     		beq	.L83
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         AngleErr = -AngleErr;
+ 1266              		.loc 1 278 18
+ 1267 0022 FB68     		ldr	r3, [r7, #12]
+ 1268 0024 83F00043 		eor	r3, r3, #-2147483648
+ 1269 0028 FB60     		str	r3, [r7, #12]	@ float
+ 1270              	.L83:
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     MaxRads = sqrtf(2.0f * AngleErr * MaxACC);
+ 1271              		.loc 1 280 26
+ 1272 002a FB68     		ldr	r3, [r7, #12]	@ float
+ 1273 002c 1946     		mov	r1, r3
+ 1274 002e 1846     		mov	r0, r3
+ 1275 0030 FFF7FEFF 		bl	__aeabi_fadd
+ 1276              	.LVL35:
+ 1277 0034 0346     		mov	r3, r0
+ 1278              		.loc 1 280 15
+ 1279 0036 7968     		ldr	r1, [r7, #4]	@ float
+ 1280 0038 1846     		mov	r0, r3
+ 1281 003a FFF7FEFF 		bl	__aeabi_fmul
+ 1282              	.LVL36:
+ 1283 003e 0346     		mov	r3, r0
+ 1284 0040 1846     		mov	r0, r3
+ 1285 0042 FFF7FEFF 		bl	sqrtf
+ 1286 0046 7861     		str	r0, [r7, #20]	@ float
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     if (RadsRef > MaxRads)
+ 1287              		.loc 1 282 8
+ 1288 0048 7969     		ldr	r1, [r7, #20]	@ float
+ 1289 004a B868     		ldr	r0, [r7, #8]	@ float
+ 1290 004c FFF7FEFF 		bl	__aeabi_fcmpgt
+ 1291              	.LVL37:
+ 1292 0050 0346     		mov	r3, r0
+ 1293 0052 002B     		cmp	r3, #0
+ 1294 0054 02D0     		beq	.L93
  283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         RadsRef = -MaxRads;
- 1279              		.loc 1 284 17
- 1280 0070 7B69     		ldr	r3, [r7, #20]
- 1281 0072 83F00043 		eor	r3, r3, #-2147483648
- 1282 0076 BB60     		str	r3, [r7, #8]	@ float
- 1283              	.L87:
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         RadsRef = MaxRads;
+ 1295              		.loc 1 284 17
+ 1296 0056 7B69     		ldr	r3, [r7, #20]	@ float
+ 1297 0058 BB60     		str	r3, [r7, #8]	@ float
+ 1298 005a 0DE0     		b	.L87
+ 1299              	.L93:
  285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
- 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     return RadsRef;
- 1284              		.loc 1 287 12
- 1285 0078 BB68     		ldr	r3, [r7, #8]	@ float
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
- 1286              		.loc 1 288 1
- 1287 007a 1846     		mov	r0, r3
- 1288 007c 1837     		adds	r7, r7, #24
- 1289              		.cfi_def_cfa_offset 8
- 1290 007e BD46     		mov	sp, r7
- 1291              		.cfi_def_cfa_register 13
- 1292              		@ sp needed
- 1293 0080 80BD     		pop	{r7, pc}
- 1294              		.cfi_endproc
- 1295              	.LFE162:
- 1297              		.text
- 1298              	.Letext0:
- 1299              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 1300              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 1301              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 1302              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 1303              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 1304              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 1305              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 1306              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 1307              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
- 1308              		.file 11 "../../CMSIS/system_gd32f4xx.h"
- 1309              		.file 12 "../../CMSIS/gd32f4xx.h"
- 1310              		.file 13 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
- 1311              		.file 14 "../../Dawn/DawnLib/dawn_lib.h"
- 1312              		.file 15 "../../Dawn/DawnBsp/timebase.h"
- 1313              		.file 16 "../../Dawn/DawnCom/unpack.h"
- 1314              		.file 17 "../../Dawn/DawnDevice/icm206xx.h"
- 1315              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
- 1316              		.file 19 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
- 1317              		.file 20 "../../Dawn/DawnMain/dawn_function.h"
- 1318              		.file 21 "../../Dawn/DawnBsp/gpio.h"
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     else if (RadsRef < -MaxRads)
+ 1300              		.loc 1 286 24
+ 1301 005c 7B69     		ldr	r3, [r7, #20]
+ 1302 005e 83F00043 		eor	r3, r3, #-2147483648
+ 1303              		.loc 1 286 13
+ 1304 0062 1946     		mov	r1, r3
+ 1305 0064 B868     		ldr	r0, [r7, #8]	@ float
+ 1306 0066 FFF7FEFF 		bl	__aeabi_fcmplt
+ 1307              	.LVL38:
+ 1308 006a 0346     		mov	r3, r0
+ 1309 006c 002B     		cmp	r3, #0
+ 1310 006e 03D0     		beq	.L87
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     {
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****         RadsRef = -MaxRads;
+ 1311              		.loc 1 288 17
+ 1312 0070 7B69     		ldr	r3, [r7, #20]
+ 1313 0072 83F00043 		eor	r3, r3, #-2147483648
+ 1314 0076 BB60     		str	r3, [r7, #8]	@ float
+ 1315              	.L87:
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     }
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** 
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c ****     return RadsRef;
+ 1316              		.loc 1 291 12
+ 1317 0078 BB68     		ldr	r3, [r7, #8]	@ float
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnGImbal\dawn_gimbal_system.c **** }
+ 1318              		.loc 1 292 1
+ 1319 007a 1846     		mov	r0, r3
+ 1320 007c 1837     		adds	r7, r7, #24
+ 1321              		.cfi_def_cfa_offset 8
+ 1322 007e BD46     		mov	sp, r7
+ 1323              		.cfi_def_cfa_register 13
+ 1324              		@ sp needed
+ 1325 0080 80BD     		pop	{r7, pc}
+ 1326              		.cfi_endproc
+ 1327              	.LFE162:
+ 1329              		.text
+ 1330              	.Letext0:
+ 1331              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1332              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1333              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1334              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1335              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1336              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1337              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1338              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 1339              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 1340              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 1341              		.file 12 "../../CMSIS/gd32f4xx.h"
+ 1342              		.file 13 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 1343              		.file 14 "../../Dawn/DawnLib/dawn_lib.h"
+ 1344              		.file 15 "../../Dawn/DawnBsp/timebase.h"
+ 1345              		.file 16 "../../Dawn/DawnCom/unpack.h"
+ 1346              		.file 17 "../../Dawn/DawnDevice/icm206xx.h"
+ 1347              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 1348              		.file 19 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 1349              		.file 20 "../../Dawn/DawnMain/dawn_function.h"
+ 1350              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_gimbal_system.c
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:16     .text.GimbalInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:24     .text.GimbalInit:00000000 GimbalInit
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:16     .text.GimbalInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:24     .text.GimbalInit:00000000 GimbalInit
                             *COM*:00000024 local_ArmDCM_trans
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:52     .text.GimbalWork:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:59     .text.GimbalWork:00000000 GimbalWork
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:792    .text.BLDCUpdata:00000000 BLDCUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:997    .text.IMUUpdata:00000000 IMUUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:134    .text.GimbalWork:0000007c $d
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:138    .text.GimbalWork:0000008c $t
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1075   .text.CheckBLDCStatus:00000000 CheckBLDCStatus
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:465    .text.GimbalWork:000002c0 $d
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:483    .text.GimbalWork:00000300 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1206   .text.AngleRadsLimit:00000000 AngleRadsLimit
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1137   .text.BDCTorqueUpdata:00000000 BDCTorqueUpdata
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:774    .text.GimbalWork:000004f8 $d
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:786    .text.BLDCUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:981    .text.BLDCUpdata:00000134 $d
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:991    .text.IMUUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1063   .text.IMUUpdata:00000054 $d
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1069   .text.CheckBLDCStatus:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1124   .text.CheckBLDCStatus:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1131   .text.BDCTorqueUpdata:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1193   .text.BDCTorqueUpdata:0000004c $d
-C:\Users\leonardo\AppData\Local\Temp\ccGghv0Z.s:1200   .text.AngleRadsLimit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:52     .text.GimbalWork:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:59     .text.GimbalWork:00000000 GimbalWork
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:792    .text.BLDCUpdata:00000000 BLDCUpdata
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:997    .text.IMUUpdata:00000000 IMUUpdata
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:134    .text.GimbalWork:0000007c $d
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:138    .text.GimbalWork:0000008c $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1075   .text.CheckBLDCStatus:00000000 CheckBLDCStatus
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:465    .text.GimbalWork:000002c0 $d
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:483    .text.GimbalWork:00000300 $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1238   .text.AngleRadsLimit:00000000 AngleRadsLimit
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1137   .text.BDCTorqueUpdata:00000000 BDCTorqueUpdata
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:774    .text.GimbalWork:000004f8 $d
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:786    .text.BLDCUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:981    .text.BLDCUpdata:00000134 $d
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:991    .text.IMUUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1063   .text.IMUUpdata:00000054 $d
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1069   .text.CheckBLDCStatus:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1124   .text.CheckBLDCStatus:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1131   .text.BDCTorqueUpdata:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1224   .text.BDCTorqueUpdata:00000080 $d
+C:\Users\leonardo\AppData\Local\Temp\ccXES0OY.s:1232   .text.AngleRadsLimit:00000000 $t
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

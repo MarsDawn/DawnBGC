@@ -26,22 +26,22 @@
 void SysLedInit(void)
 {
     rcu_periph_clock_enable(RCU_GPIOC);
-    gpio_mode_set(GPIOC, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_12);
+    gpio_mode_set(GPIOC, GPIO_MODE_OUTPUT, GPIO_PUPD_NONE, GPIO_PIN_7);
 
-    gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_12);
+    gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_7);
 
-    gpio_bit_set(GPIOC, GPIO_PIN_12);
+    gpio_bit_set(GPIOC, GPIO_PIN_7);
 }
 
 void SysLedCmd(ControlStatus cmd)
 {
     if (cmd == DISABLE)
     {
-        gpio_bit_set(GPIOC, GPIO_PIN_12);
+        gpio_bit_set(GPIOC, GPIO_PIN_7);
     }
     else
     {
-        gpio_bit_reset(GPIOC, GPIO_PIN_12);
+        gpio_bit_reset(GPIOC, GPIO_PIN_7);
     }
 }
 

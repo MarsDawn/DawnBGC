@@ -69,16 +69,15 @@
   20:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
   21:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****  */
   22:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
-  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
-  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** #include "includes.h"
-  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** float CAPTURE_PWM_TIME_UP=0;
-  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** float CAPTURE_PWM_TIME_ALL=0;
-  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** float CAPTURE_PWM_TIME_LAST=0;
-  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** uint32_t AdcDate [5] = {0};
-  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
-  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** void BLDCGpioInit(void)
-  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** {
-  55              		.loc 1 31 1
+  23:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** #include "includes.h"
+  24:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** float CAPTURE_PWM_TIME_UP = 0;
+  25:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** float CAPTURE_PWM_TIME_ALL = 0;
+  26:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** float CAPTURE_PWM_TIME_LAST = 0;
+  27:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** uint32_t AdcDate[5] = {0};
+  28:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  29:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** void BLDCGpioInit(void)
+  30:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** {
+  55              		.loc 1 30 1
   56              		.cfi_startproc
   57              		@ args = 0, pretend = 0, frame = 88
   58              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -92,372 +91,367 @@
   66              		.cfi_def_cfa_offset 136
   67 0004 08AF     		add	r7, sp, #32
   68              		.cfi_def_cfa 7, 104
-  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     dma_single_data_parameter_struct DmaSingleDataParameter;
-  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_parameter_struct TimerInitpara;
-  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_oc_parameter_struct TimerTcintpara;
-  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_break_parameter_struct TimerTreakpara;
-  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOA);
-  69              		.loc 1 37 5
+  31:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     dma_single_data_parameter_struct DmaSingleDataParameter;
+  32:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_parameter_struct TimerInitpara;
+  33:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_oc_parameter_struct TimerTcintpara;
+  34:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_break_parameter_struct TimerTreakpara;
+  35:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  36:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOA);
+  69              		.loc 1 36 5
   70 0006 4FF44060 		mov	r0, #3072
   71 000a FFF7FEFF 		bl	rcu_periph_clock_enable
-  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOB);
-  72              		.loc 1 38 5
+  37:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOB);
+  72              		.loc 1 37 5
   73 000e 40F60140 		movw	r0, #3073
   74 0012 FFF7FEFF 		bl	rcu_periph_clock_enable
-  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOC);
-  75              		.loc 1 39 5
+  38:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOC);
+  75              		.loc 1 38 5
   76 0016 40F60240 		movw	r0, #3074
   77 001a FFF7FEFF 		bl	rcu_periph_clock_enable
-  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOE);
-  78              		.loc 1 40 5
+  39:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOE);
+  78              		.loc 1 39 5
   79 001e 40F60440 		movw	r0, #3076
   80 0022 FFF7FEFF 		bl	rcu_periph_clock_enable
-  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_SYSCFG);
-  81              		.loc 1 41 5
+  40:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_SYSCFG);
+  81              		.loc 1 40 5
   82 0026 41F20E10 		movw	r0, #4366
   83 002a FFF7FEFF 		bl	rcu_periph_clock_enable
-  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_ADC0);
-  84              		.loc 1 42 5
+  41:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_ADC0);
+  84              		.loc 1 41 5
   85 002e 41F20810 		movw	r0, #4360
   86 0032 FFF7FEFF 		bl	rcu_periph_clock_enable
-  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_ADC1);
-  87              		.loc 1 43 5
+  42:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_ADC1);
+  87              		.loc 1 42 5
   88 0036 41F20910 		movw	r0, #4361
   89 003a FFF7FEFF 		bl	rcu_periph_clock_enable
-  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_clock_config(ADC_ADCCK_PCLK2_DIV4);
-  90              		.loc 1 44 5
+  43:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_clock_config(ADC_ADCCK_PCLK2_DIV4);
+  90              		.loc 1 43 5
   91 003e 4FF48030 		mov	r0, #65536
   92 0042 FFF7FEFF 		bl	adc_clock_config
-  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_DMA1);
-  93              		.loc 1 45 5
+  44:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_DMA1);
+  93              		.loc 1 44 5
   94 0046 40F61640 		movw	r0, #3094
   95 004a FFF7FEFF 		bl	rcu_periph_clock_enable
-  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER0);
-  96              		.loc 1 47 5
+  45:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  46:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER0);
+  96              		.loc 1 46 5
   97 004e 4FF48850 		mov	r0, #4352
   98 0052 FFF7FEFF 		bl	rcu_periph_clock_enable
-  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER1);
-  99              		.loc 1 48 5
+  47:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER1);
+  99              		.loc 1 47 5
  100 0056 4FF48050 		mov	r0, #4096
  101 005a FFF7FEFF 		bl	rcu_periph_clock_enable
-  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER7);
- 102              		.loc 1 49 5
+  48:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER7);
+ 102              		.loc 1 48 5
  103 005e 41F20110 		movw	r0, #4353
  104 0062 FFF7FEFF 		bl	rcu_periph_clock_enable
-  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_timer_clock_prescaler_config(RCU_TIMER_PSC_MUL4);
- 105              		.loc 1 50 5
+  49:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_timer_clock_prescaler_config(RCU_TIMER_PSC_MUL4);
+ 105              		.loc 1 49 5
  106 0066 4FF08070 		mov	r0, #16777216
  107 006a FFF7FEFF 		bl	rcu_timer_clock_prescaler_config
-  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
-  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_15);
- 108              		.loc 1 53 5
+  50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_INPUT, GPIO_PUPD_PULLUP, GPIO_PIN_15);
+ 108              		.loc 1 51 5
  109 006e 4FF40043 		mov	r3, #32768
  110 0072 0122     		movs	r2, #1
  111 0074 0021     		movs	r1, #0
  112 0076 D448     		ldr	r0, .L2
  113 0078 FFF7FEFF 		bl	gpio_mode_set
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
-  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_8);          
- 114              		.loc 1 56 5
+  52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_8);
+ 114              		.loc 1 53 5
  115 007c 4FF48072 		mov	r2, #256
  116 0080 0121     		movs	r1, #1
  117 0082 D248     		ldr	r0, .L2+4
  118 0084 FFF7FEFF 		bl	gpio_af_set
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_9);          
- 119              		.loc 1 57 5
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_9);
+ 119              		.loc 1 54 5
  120 0088 4FF40072 		mov	r2, #512
  121 008c 0121     		movs	r1, #1
  122 008e CF48     		ldr	r0, .L2+4
  123 0090 FFF7FEFF 		bl	gpio_af_set
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_10);         
- 124              		.loc 1 58 5
+  55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_10);
+ 124              		.loc 1 55 5
  125 0094 4FF48062 		mov	r2, #1024
  126 0098 0121     		movs	r1, #1
  127 009a CC48     		ldr	r0, .L2+4
  128 009c FFF7FEFF 		bl	gpio_af_set
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8);
- 129              		.loc 1 59 5
+  56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8);
+ 129              		.loc 1 56 5
  130 00a0 4FF48073 		mov	r3, #256
  131 00a4 0022     		movs	r2, #0
  132 00a6 0221     		movs	r1, #2
  133 00a8 C848     		ldr	r0, .L2+4
  134 00aa FFF7FEFF 		bl	gpio_mode_set
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_8);
- 135              		.loc 1 60 5
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_8);
+ 135              		.loc 1 57 5
  136 00ae 4FF48073 		mov	r3, #256
  137 00b2 0322     		movs	r2, #3
  138 00b4 0021     		movs	r1, #0
  139 00b6 C548     		ldr	r0, .L2+4
  140 00b8 FFF7FEFF 		bl	gpio_output_options_set
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_9);
- 141              		.loc 1 61 5
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_9);
+ 141              		.loc 1 58 5
  142 00bc 4FF40073 		mov	r3, #512
  143 00c0 0022     		movs	r2, #0
  144 00c2 0221     		movs	r1, #2
  145 00c4 C148     		ldr	r0, .L2+4
  146 00c6 FFF7FEFF 		bl	gpio_mode_set
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_9);
- 147              		.loc 1 62 5
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_9);
+ 147              		.loc 1 59 5
  148 00ca 4FF40073 		mov	r3, #512
  149 00ce 0322     		movs	r2, #3
  150 00d0 0021     		movs	r1, #0
  151 00d2 BE48     		ldr	r0, .L2+4
  152 00d4 FFF7FEFF 		bl	gpio_output_options_set
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_10);
- 153              		.loc 1 63 5
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_10);
+ 153              		.loc 1 60 5
  154 00d8 4FF48063 		mov	r3, #1024
  155 00dc 0022     		movs	r2, #0
  156 00de 0221     		movs	r1, #2
  157 00e0 BA48     		ldr	r0, .L2+4
  158 00e2 FFF7FEFF 		bl	gpio_mode_set
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_10);
- 159              		.loc 1 64 5
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_10);
+ 159              		.loc 1 61 5
  160 00e6 4FF48063 		mov	r3, #1024
  161 00ea 0322     		movs	r2, #3
  162 00ec 0021     		movs	r1, #0
  163 00ee B748     		ldr	r0, .L2+4
  164 00f0 FFF7FEFF 		bl	gpio_output_options_set
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOB, GPIO_AF_1, GPIO_PIN_8);          
- 165              		.loc 1 66 5
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOB, GPIO_AF_1, GPIO_PIN_8);
+ 165              		.loc 1 63 5
  166 00f4 4FF48072 		mov	r2, #256
  167 00f8 0121     		movs	r1, #1
  168 00fa B348     		ldr	r0, .L2
  169 00fc FFF7FEFF 		bl	gpio_af_set
-  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOB, GPIO_AF_1, GPIO_PIN_9);          
- 170              		.loc 1 67 5
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOB, GPIO_AF_1, GPIO_PIN_9);
+ 170              		.loc 1 64 5
  171 0100 4FF40072 		mov	r2, #512
  172 0104 0121     		movs	r1, #1
  173 0106 B048     		ldr	r0, .L2
  174 0108 FFF7FEFF 		bl	gpio_af_set
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOB, GPIO_AF_1, GPIO_PIN_10);         
- 175              		.loc 1 68 5
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOB, GPIO_AF_1, GPIO_PIN_10);
+ 175              		.loc 1 65 5
  176 010c 4FF48062 		mov	r2, #1024
  177 0110 0121     		movs	r1, #1
  178 0112 AD48     		ldr	r0, .L2
  179 0114 FFF7FEFF 		bl	gpio_af_set
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8);
- 180              		.loc 1 70 5
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8);
+ 180              		.loc 1 67 5
  181 0118 4FF48073 		mov	r3, #256
  182 011c 0022     		movs	r2, #0
  183 011e 0221     		movs	r1, #2
  184 0120 A948     		ldr	r0, .L2
  185 0122 FFF7FEFF 		bl	gpio_mode_set
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_8);
- 186              		.loc 1 71 5
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_8);
+ 186              		.loc 1 68 5
  187 0126 4FF48073 		mov	r3, #256
  188 012a 0322     		movs	r2, #3
  189 012c 0021     		movs	r1, #0
  190 012e A648     		ldr	r0, .L2
  191 0130 FFF7FEFF 		bl	gpio_output_options_set
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_9);
- 192              		.loc 1 72 5
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_9);
+ 192              		.loc 1 69 5
  193 0134 4FF40073 		mov	r3, #512
  194 0138 0022     		movs	r2, #0
  195 013a 0221     		movs	r1, #2
  196 013c A248     		ldr	r0, .L2
  197 013e FFF7FEFF 		bl	gpio_mode_set
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_9);
- 198              		.loc 1 73 5
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_9);
+ 198              		.loc 1 70 5
  199 0142 4FF40073 		mov	r3, #512
  200 0146 0322     		movs	r2, #3
  201 0148 0021     		movs	r1, #0
  202 014a 9F48     		ldr	r0, .L2
  203 014c FFF7FEFF 		bl	gpio_output_options_set
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_10);
- 204              		.loc 1 74 5
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_10);
+ 204              		.loc 1 71 5
  205 0150 4FF48063 		mov	r3, #1024
  206 0154 0022     		movs	r2, #0
  207 0156 0221     		movs	r1, #2
  208 0158 9B48     		ldr	r0, .L2
  209 015a FFF7FEFF 		bl	gpio_mode_set
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_10);
- 210              		.loc 1 75 5
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_10);
+ 210              		.loc 1 72 5
  211 015e 4FF48063 		mov	r3, #1024
  212 0162 0322     		movs	r2, #3
  213 0164 0021     		movs	r1, #0
  214 0166 9848     		ldr	r0, .L2
  215 0168 FFF7FEFF 		bl	gpio_output_options_set
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOC, GPIO_AF_3, GPIO_PIN_6);          
- 216              		.loc 1 77 5
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOC, GPIO_AF_3, GPIO_PIN_6);
+ 216              		.loc 1 74 5
  217 016c 4022     		movs	r2, #64
  218 016e 0321     		movs	r1, #3
  219 0170 9748     		ldr	r0, .L2+8
  220 0172 FFF7FEFF 		bl	gpio_af_set
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOC, GPIO_AF_3, GPIO_PIN_7);          
- 221              		.loc 1 78 5
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOC, GPIO_AF_3, GPIO_PIN_7);
+ 221              		.loc 1 75 5
  222 0176 8022     		movs	r2, #128
  223 0178 0321     		movs	r1, #3
  224 017a 9548     		ldr	r0, .L2+8
  225 017c FFF7FEFF 		bl	gpio_af_set
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOC, GPIO_AF_3, GPIO_PIN_8);          
- 226              		.loc 1 79 5
+  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOC, GPIO_AF_3, GPIO_PIN_8);
+ 226              		.loc 1 76 5
  227 0180 4FF48072 		mov	r2, #256
  228 0184 0321     		movs	r1, #3
  229 0186 9248     		ldr	r0, .L2+8
  230 0188 FFF7FEFF 		bl	gpio_af_set
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOC, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_6);
- 231              		.loc 1 81 5
+  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOC, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_6);
+ 231              		.loc 1 78 5
  232 018c 4023     		movs	r3, #64
  233 018e 0022     		movs	r2, #0
  234 0190 0221     		movs	r1, #2
  235 0192 8F48     		ldr	r0, .L2+8
  236 0194 FFF7FEFF 		bl	gpio_mode_set
-  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_6);
- 237              		.loc 1 82 5
+  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_6);
+ 237              		.loc 1 79 5
  238 0198 4023     		movs	r3, #64
  239 019a 0322     		movs	r2, #3
  240 019c 0021     		movs	r1, #0
  241 019e 8C48     		ldr	r0, .L2+8
  242 01a0 FFF7FEFF 		bl	gpio_output_options_set
-  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOC, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_7);
- 243              		.loc 1 83 5
+  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOC, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_7);
+ 243              		.loc 1 80 5
  244 01a4 8023     		movs	r3, #128
  245 01a6 0022     		movs	r2, #0
  246 01a8 0221     		movs	r1, #2
  247 01aa 8948     		ldr	r0, .L2+8
  248 01ac FFF7FEFF 		bl	gpio_mode_set
-  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_7);
- 249              		.loc 1 84 5
+  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_7);
+ 249              		.loc 1 81 5
  250 01b0 8023     		movs	r3, #128
  251 01b2 0322     		movs	r2, #3
  252 01b4 0021     		movs	r1, #0
  253 01b6 8648     		ldr	r0, .L2+8
  254 01b8 FFF7FEFF 		bl	gpio_output_options_set
-  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOC, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8);
- 255              		.loc 1 85 5
+  82:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOC, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8);
+ 255              		.loc 1 82 5
  256 01bc 4FF48073 		mov	r3, #256
  257 01c0 0022     		movs	r2, #0
  258 01c2 0221     		movs	r1, #2
  259 01c4 8248     		ldr	r0, .L2+8
  260 01c6 FFF7FEFF 		bl	gpio_mode_set
-  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_8);
- 261              		.loc 1 86 5
+  83:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOC, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ, GPIO_PIN_8);
+ 261              		.loc 1 83 5
  262 01ca 4FF48073 		mov	r3, #256
  263 01ce 0322     		movs	r2, #3
  264 01d0 0021     		movs	r1, #0
  265 01d2 7F48     		ldr	r0, .L2+8
  266 01d4 FFF7FEFF 		bl	gpio_output_options_set
-  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****         
-  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
-  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_0);         
- 267              		.loc 1 89 5
+  84:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  85:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_0);
+ 267              		.loc 1 85 5
  268 01d8 0123     		movs	r3, #1
  269 01da 0022     		movs	r2, #0
  270 01dc 0321     		movs	r1, #3
  271 01de 7B48     		ldr	r0, .L2+4
  272 01e0 FFF7FEFF 		bl	gpio_mode_set
-  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_1);         
- 273              		.loc 1 90 5
+  86:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_1);
+ 273              		.loc 1 86 5
  274 01e4 0223     		movs	r3, #2
  275 01e6 0022     		movs	r2, #0
  276 01e8 0321     		movs	r1, #3
  277 01ea 7848     		ldr	r0, .L2+4
  278 01ec FFF7FEFF 		bl	gpio_mode_set
-  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_2);         
- 279              		.loc 1 91 5
+  87:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_2);
+ 279              		.loc 1 87 5
  280 01f0 0423     		movs	r3, #4
  281 01f2 0022     		movs	r2, #0
  282 01f4 0321     		movs	r1, #3
  283 01f6 7548     		ldr	r0, .L2+4
  284 01f8 FFF7FEFF 		bl	gpio_mode_set
-  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_3);         
- 285              		.loc 1 92 5
+  88:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_3);
+ 285              		.loc 1 88 5
  286 01fc 0823     		movs	r3, #8
  287 01fe 0022     		movs	r2, #0
  288 0200 0321     		movs	r1, #3
  289 0202 7248     		ldr	r0, .L2+4
  290 0204 FFF7FEFF 		bl	gpio_mode_set
-  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_4);         
- 291              		.loc 1 93 5
+  89:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_4);
+ 291              		.loc 1 89 5
  292 0208 1023     		movs	r3, #16
  293 020a 0022     		movs	r2, #0
  294 020c 0321     		movs	r1, #3
  295 020e 6F48     		ldr	r0, .L2+4
  296 0210 FFF7FEFF 		bl	gpio_mode_set
-  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_5);         
- 297              		.loc 1 94 5
+  90:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_5);
+ 297              		.loc 1 90 5
  298 0214 2023     		movs	r3, #32
  299 0216 0022     		movs	r2, #0
  300 0218 0321     		movs	r1, #3
  301 021a 6C48     		ldr	r0, .L2+4
  302 021c FFF7FEFF 		bl	gpio_mode_set
-  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
-  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 	
-  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_0);         
- 303              		.loc 1 97 5
+  91:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  92:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_0);
+ 303              		.loc 1 92 5
  304 0220 0123     		movs	r3, #1
  305 0222 0022     		movs	r2, #0
  306 0224 0321     		movs	r1, #3
  307 0226 6848     		ldr	r0, .L2
  308 0228 FFF7FEFF 		bl	gpio_mode_set
-  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_1);         
- 309              		.loc 1 98 5
+  93:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_1);
+ 309              		.loc 1 93 5
  310 022c 0223     		movs	r3, #2
  311 022e 0022     		movs	r2, #0
  312 0230 0321     		movs	r1, #3
  313 0232 6548     		ldr	r0, .L2
  314 0234 FFF7FEFF 		bl	gpio_mode_set
-  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_6);         
- 315              		.loc 1 99 5
+  94:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_ANALOG, GPIO_PUPD_NONE, GPIO_PIN_6);
+ 315              		.loc 1 94 5
  316 0238 4023     		movs	r3, #64
  317 023a 0022     		movs	r2, #0
  318 023c 0321     		movs	r1, #3
  319 023e 6348     		ldr	r0, .L2+4
  320 0240 FFF7FEFF 		bl	gpio_mode_set
- 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****    
- 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     dma_deinit(DMA1,DMA_CH0);
- 321              		.loc 1 102 5
+  95:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+  96:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     dma_deinit(DMA1, DMA_CH0);
+ 321              		.loc 1 96 5
  322 0244 0021     		movs	r1, #0
  323 0246 6348     		ldr	r0, .L2+12
  324 0248 FFF7FEFF 		bl	dma_deinit
- 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.periph_addr = (uint32_t)(&ADC_SYNCDATA);
- 325              		.loc 1 103 40
+  97:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.periph_addr = (uint32_t)(&ADC_SYNCDATA);
+ 325              		.loc 1 97 40
  326 024c 624B     		ldr	r3, .L2+16
  327 024e 7B63     		str	r3, [r7, #52]
- 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
- 328              		.loc 1 104 39
+  98:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
+ 328              		.loc 1 98 39
  329 0250 0123     		movs	r3, #1
  330 0252 BB63     		str	r3, [r7, #56]
- 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.memory0_addr = (uint32_t)(&AdcDate );
- 331              		.loc 1 105 43
+  99:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.memory0_addr = (uint32_t)(&AdcDate);
+ 331              		.loc 1 99 43
  332 0254 614B     		ldr	r3, .L2+20
- 333              		.loc 1 105 41
+ 333              		.loc 1 99 41
  334 0256 FB63     		str	r3, [r7, #60]
- 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
- 335              		.loc 1 106 39
+ 100:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
+ 335              		.loc 1 100 39
  336 0258 0023     		movs	r3, #0
  337 025a 3B64     		str	r3, [r7, #64]
- 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.periph_memory_width = DMA_PERIPH_WIDTH_32BIT;
- 338              		.loc 1 107 48
+ 101:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.periph_memory_width = DMA_PERIPH_WIDTH_32BIT;
+ 338              		.loc 1 101 48
  339 025c 4FF48053 		mov	r3, #4096
  340 0260 7B64     		str	r3, [r7, #68]
- 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.circular_mode = DMA_CIRCULAR_MODE_ENABLE;
- 341              		.loc 1 108 42
+ 102:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.circular_mode = DMA_CIRCULAR_MODE_ENABLE;
+ 341              		.loc 1 102 42
  342 0262 0023     		movs	r3, #0
  343 0264 BB64     		str	r3, [r7, #72]
- 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.direction = DMA_PERIPH_TO_MEMORY;
- 344              		.loc 1 109 38
+ 103:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.direction = DMA_PERIPH_TO_MEMORY;
+ 344              		.loc 1 103 38
  345 0266 0023     		movs	r3, #0
  346 0268 FB64     		str	r3, [r7, #76]
- 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.number = 5;
- 347              		.loc 1 110 35
+ 104:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.number = 5;
+ 347              		.loc 1 104 35
  348 026a 0523     		movs	r3, #5
  349 026c 3B65     		str	r3, [r7, #80]
- 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.priority = DMA_PRIORITY_HIGH;
- 350              		.loc 1 111 37
+ 105:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     DmaSingleDataParameter.priority = DMA_PRIORITY_HIGH;
+ 350              		.loc 1 105 37
  351 026e 4FF40033 		mov	r3, #131072
  352 0272 7B65     		str	r3, [r7, #84]
- 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     dma_single_data_mode_init(DMA1, DMA_CH0, DmaSingleDataParameter);
- 353              		.loc 1 112 5
+ 106:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     dma_single_data_mode_init(DMA1, DMA_CH0, DmaSingleDataParameter);
+ 353              		.loc 1 106 5
  354 0274 6D46     		mov	r5, sp
  355 0276 07F13C04 		add	r4, r7, #60
  356 027a 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
@@ -469,202 +463,200 @@
  362 028c 0021     		movs	r1, #0
  363 028e 5148     		ldr	r0, .L2+12
  364 0290 FFF7FEFF 		bl	dma_single_data_mode_init
- 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     dma_channel_enable(DMA1, DMA_CH0);
- 365              		.loc 1 113 5
+ 107:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     dma_channel_enable(DMA1, DMA_CH0);
+ 365              		.loc 1 107 5
  366 0294 0021     		movs	r1, #0
  367 0296 4F48     		ldr	r0, .L2+12
  368 0298 FFF7FEFF 		bl	dma_channel_enable
- 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_channel_length_config(ADC0, ADC_REGULAR_CHANNEL, 5);
- 369              		.loc 1 116 5
+ 108:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 109:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_channel_length_config(ADC0, ADC_REGULAR_CHANNEL, 5);
+ 369              		.loc 1 109 5
  370 029c 0522     		movs	r2, #5
  371 029e 0021     		movs	r1, #0
  372 02a0 4F48     		ldr	r0, .L2+24
  373 02a2 FFF7FEFF 		bl	adc_channel_length_config
- 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_channel_length_config(ADC1, ADC_REGULAR_CHANNEL, 5);
- 374              		.loc 1 117 5
+ 110:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_channel_length_config(ADC1, ADC_REGULAR_CHANNEL, 5);
+ 374              		.loc 1 110 5
  375 02a6 0522     		movs	r2, #5
  376 02a8 0021     		movs	r1, #0
  377 02aa 4E48     		ldr	r0, .L2+28
  378 02ac FFF7FEFF 		bl	adc_channel_length_config
- 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC0, 0, ADC_CHANNEL_3, ADC_SAMPLETIME_84);
- 379              		.loc 1 118 5
+ 111:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC0, 0, ADC_CHANNEL_3, ADC_SAMPLETIME_84);
+ 379              		.loc 1 111 5
  380 02b0 0423     		movs	r3, #4
  381 02b2 0322     		movs	r2, #3
  382 02b4 0021     		movs	r1, #0
  383 02b6 4A48     		ldr	r0, .L2+24
  384 02b8 FFF7FEFF 		bl	adc_regular_channel_config
- 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC1, 0, ADC_CHANNEL_2, ADC_SAMPLETIME_84);
- 385              		.loc 1 119 5
+ 112:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC1, 0, ADC_CHANNEL_2, ADC_SAMPLETIME_84);
+ 385              		.loc 1 112 5
  386 02bc 0423     		movs	r3, #4
  387 02be 0222     		movs	r2, #2
  388 02c0 0021     		movs	r1, #0
  389 02c2 4848     		ldr	r0, .L2+28
  390 02c4 FFF7FEFF 		bl	adc_regular_channel_config
- 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC0, 1, ADC_CHANNEL_1, ADC_SAMPLETIME_84);
- 391              		.loc 1 120 5
+ 113:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC0, 1, ADC_CHANNEL_1, ADC_SAMPLETIME_84);
+ 391              		.loc 1 113 5
  392 02c8 0423     		movs	r3, #4
  393 02ca 0122     		movs	r2, #1
  394 02cc 0121     		movs	r1, #1
  395 02ce 4448     		ldr	r0, .L2+24
  396 02d0 FFF7FEFF 		bl	adc_regular_channel_config
- 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC1, 1, ADC_CHANNEL_0, ADC_SAMPLETIME_84);
- 397              		.loc 1 121 5
+ 114:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC1, 1, ADC_CHANNEL_0, ADC_SAMPLETIME_84);
+ 397              		.loc 1 114 5
  398 02d4 0423     		movs	r3, #4
  399 02d6 0022     		movs	r2, #0
  400 02d8 0121     		movs	r1, #1
  401 02da 4248     		ldr	r0, .L2+28
  402 02dc FFF7FEFF 		bl	adc_regular_channel_config
- 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC0, 2, ADC_CHANNEL_5, ADC_SAMPLETIME_84);
- 403              		.loc 1 122 5
+ 115:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC0, 2, ADC_CHANNEL_5, ADC_SAMPLETIME_84);
+ 403              		.loc 1 115 5
  404 02e0 0423     		movs	r3, #4
  405 02e2 0522     		movs	r2, #5
  406 02e4 0221     		movs	r1, #2
  407 02e6 3E48     		ldr	r0, .L2+24
  408 02e8 FFF7FEFF 		bl	adc_regular_channel_config
- 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC1, 2, ADC_CHANNEL_4, ADC_SAMPLETIME_84);
- 409              		.loc 1 123 5
+ 116:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC1, 2, ADC_CHANNEL_4, ADC_SAMPLETIME_84);
+ 409              		.loc 1 116 5
  410 02ec 0423     		movs	r3, #4
  411 02ee 0422     		movs	r2, #4
  412 02f0 0221     		movs	r1, #2
  413 02f2 3C48     		ldr	r0, .L2+28
  414 02f4 FFF7FEFF 		bl	adc_regular_channel_config
- 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 	
- 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 	adc_regular_channel_config(ADC0, 3, ADC_CHANNEL_8, ADC_SAMPLETIME_84);
- 415              		.loc 1 125 2
+ 117:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 118:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC0, 3, ADC_CHANNEL_8, ADC_SAMPLETIME_84);
+ 415              		.loc 1 118 5
  416 02f8 0423     		movs	r3, #4
  417 02fa 0822     		movs	r2, #8
  418 02fc 0321     		movs	r1, #3
  419 02fe 3848     		ldr	r0, .L2+24
  420 0300 FFF7FEFF 		bl	adc_regular_channel_config
- 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC1, 3, ADC_CHANNEL_9, ADC_SAMPLETIME_84);
- 421              		.loc 1 126 5
+ 119:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC1, 3, ADC_CHANNEL_9, ADC_SAMPLETIME_84);
+ 421              		.loc 1 119 5
  422 0304 0423     		movs	r3, #4
  423 0306 0922     		movs	r2, #9
  424 0308 0321     		movs	r1, #3
  425 030a 3648     		ldr	r0, .L2+28
  426 030c FFF7FEFF 		bl	adc_regular_channel_config
- 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 	adc_regular_channel_config(ADC0, 4, ADC_CHANNEL_6, ADC_SAMPLETIME_84);
- 427              		.loc 1 127 2
+ 120:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_regular_channel_config(ADC0, 4, ADC_CHANNEL_6, ADC_SAMPLETIME_84);
+ 427              		.loc 1 120 5
  428 0310 0423     		movs	r3, #4
  429 0312 0622     		movs	r2, #6
  430 0314 0421     		movs	r1, #4
  431 0316 3248     		ldr	r0, .L2+24
  432 0318 FFF7FEFF 		bl	adc_regular_channel_config
- 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_data_alignment_config(ADC0, ADC_DATAALIGN_RIGHT);
- 433              		.loc 1 129 5
+ 121:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 122:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_data_alignment_config(ADC0, ADC_DATAALIGN_RIGHT);
+ 433              		.loc 1 122 5
  434 031c 0021     		movs	r1, #0
  435 031e 3048     		ldr	r0, .L2+24
  436 0320 FFF7FEFF 		bl	adc_data_alignment_config
- 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_data_alignment_config(ADC1, ADC_DATAALIGN_RIGHT);
- 437              		.loc 1 130 5
+ 123:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_data_alignment_config(ADC1, ADC_DATAALIGN_RIGHT);
+ 437              		.loc 1 123 5
  438 0324 0021     		movs	r1, #0
  439 0326 2F48     		ldr	r0, .L2+28
  440 0328 FFF7FEFF 		bl	adc_data_alignment_config
- 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_special_function_config(ADC0, ADC_SCAN_MODE, ENABLE);
- 441              		.loc 1 131 5
+ 124:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_special_function_config(ADC0, ADC_SCAN_MODE, ENABLE);
+ 441              		.loc 1 124 5
  442 032c 0122     		movs	r2, #1
  443 032e 0021     		movs	r1, #0
  444 0330 2B48     		ldr	r0, .L2+24
  445 0332 FFF7FEFF 		bl	adc_special_function_config
- 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_special_function_config(ADC1, ADC_SCAN_MODE, ENABLE);
- 446              		.loc 1 132 5
+ 125:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_special_function_config(ADC1, ADC_SCAN_MODE, ENABLE);
+ 446              		.loc 1 125 5
  447 0336 0122     		movs	r2, #1
  448 0338 0021     		movs	r1, #0
  449 033a 2A48     		ldr	r0, .L2+28
  450 033c FFF7FEFF 		bl	adc_special_function_config
- 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_special_function_config(ADC0, ADC_CONTINUOUS_MODE, ENABLE);
- 451              		.loc 1 133 5
+ 126:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_special_function_config(ADC0, ADC_CONTINUOUS_MODE, ENABLE);
+ 451              		.loc 1 126 5
  452 0340 0122     		movs	r2, #1
  453 0342 0421     		movs	r1, #4
  454 0344 2648     		ldr	r0, .L2+24
  455 0346 FFF7FEFF 		bl	adc_special_function_config
- 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_special_function_config(ADC1, ADC_CONTINUOUS_MODE, ENABLE);
- 456              		.loc 1 134 5
+ 127:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_special_function_config(ADC1, ADC_CONTINUOUS_MODE, ENABLE);
+ 456              		.loc 1 127 5
  457 034a 0122     		movs	r2, #1
  458 034c 0421     		movs	r1, #4
  459 034e 2548     		ldr	r0, .L2+28
  460 0350 FFF7FEFF 		bl	adc_special_function_config
- 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_sync_mode_config(ADC_DAUL_REGULAL_PARALLEL);
- 461              		.loc 1 135 5
+ 128:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_sync_mode_config(ADC_DAUL_REGULAL_PARALLEL);
+ 461              		.loc 1 128 5
  462 0354 0620     		movs	r0, #6
  463 0356 FFF7FEFF 		bl	adc_sync_mode_config
- 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_sync_delay_config(ADC_SYNC_DELAY_5CYCLE);
- 464              		.loc 1 136 5
+ 129:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_sync_delay_config(ADC_SYNC_DELAY_5CYCLE);
+ 464              		.loc 1 129 5
  465 035a 0020     		movs	r0, #0
  466 035c FFF7FEFF 		bl	adc_sync_delay_config
- 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_external_trigger_config(ADC0, ADC_REGULAR_CHANNEL, EXTERNAL_TRIGGER_DISABLE);
- 467              		.loc 1 137 5
+ 130:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_external_trigger_config(ADC0, ADC_REGULAR_CHANNEL, EXTERNAL_TRIGGER_DISABLE);
+ 467              		.loc 1 130 5
  468 0360 0022     		movs	r2, #0
  469 0362 0021     		movs	r1, #0
  470 0364 1E48     		ldr	r0, .L2+24
  471 0366 FFF7FEFF 		bl	adc_external_trigger_config
- 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_external_trigger_config(ADC1, ADC_REGULAR_CHANNEL, EXTERNAL_TRIGGER_DISABLE);
- 472              		.loc 1 138 5
+ 131:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_external_trigger_config(ADC1, ADC_REGULAR_CHANNEL, EXTERNAL_TRIGGER_DISABLE);
+ 472              		.loc 1 131 5
  473 036a 0022     		movs	r2, #0
  474 036c 0021     		movs	r1, #0
  475 036e 1D48     		ldr	r0, .L2+28
  476 0370 FFF7FEFF 		bl	adc_external_trigger_config
- 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_enable(ADC0);
- 477              		.loc 1 139 5
+ 132:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_enable(ADC0);
+ 477              		.loc 1 132 5
  478 0374 1A48     		ldr	r0, .L2+24
  479 0376 FFF7FEFF 		bl	adc_enable
- 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_enable(ADC1);
- 480              		.loc 1 140 5
+ 133:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_enable(ADC1);
+ 480              		.loc 1 133 5
  481 037a 1A48     		ldr	r0, .L2+28
  482 037c FFF7FEFF 		bl	adc_enable
- 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_calibration_enable(ADC0);
- 483              		.loc 1 141 5
+ 134:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_calibration_enable(ADC0);
+ 483              		.loc 1 134 5
  484 0380 1748     		ldr	r0, .L2+24
  485 0382 FFF7FEFF 		bl	adc_calibration_enable
- 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_calibration_enable(ADC1);
- 486              		.loc 1 142 5
+ 135:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_calibration_enable(ADC1);
+ 486              		.loc 1 135 5
  487 0386 1748     		ldr	r0, .L2+28
  488 0388 FFF7FEFF 		bl	adc_calibration_enable
- 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_dma_mode_enable(ADC0);
- 489              		.loc 1 144 5
+ 136:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 137:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_dma_mode_enable(ADC0);
+ 489              		.loc 1 137 5
  490 038c 1448     		ldr	r0, .L2+24
  491 038e FFF7FEFF 		bl	adc_dma_mode_enable
- 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_dma_mode_enable(ADC1);
- 492              		.loc 1 145 5
+ 138:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_dma_mode_enable(ADC1);
+ 492              		.loc 1 138 5
  493 0392 1448     		ldr	r0, .L2+28
  494 0394 FFF7FEFF 		bl	adc_dma_mode_enable
- 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_sync_dma_config(ADC_SYNC_DMA_MODE1);    
- 495              		.loc 1 146 5
+ 139:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_sync_dma_config(ADC_SYNC_DMA_MODE1);
+ 495              		.loc 1 139 5
  496 0398 4FF40040 		mov	r0, #32768
  497 039c FFF7FEFF 		bl	adc_sync_dma_config
- 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_sync_dma_request_after_last_enable();
- 498              		.loc 1 147 5
+ 140:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_sync_dma_request_after_last_enable();
+ 498              		.loc 1 140 5
  499 03a0 FFF7FEFF 		bl	adc_sync_dma_request_after_last_enable
- 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_software_trigger_enable(ADC0, ADC_REGULAR_CHANNEL);
- 500              		.loc 1 149 5
+ 141:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 142:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     adc_software_trigger_enable(ADC0, ADC_REGULAR_CHANNEL);
+ 500              		.loc 1 142 5
  501 03a4 0021     		movs	r1, #0
  502 03a6 0E48     		ldr	r0, .L2+24
  503 03a8 FFF7FEFF 		bl	adc_software_trigger_enable
- 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER0);
- 504              		.loc 1 152 5
+ 143:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 144:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER0);
+ 504              		.loc 1 144 5
  505 03ac 0E48     		ldr	r0, .L2+32
  506 03ae FFF7FEFF 		bl	timer_deinit
- 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER1);
- 507              		.loc 1 153 5
+ 145:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER1);
+ 507              		.loc 1 145 5
  508 03b2 4FF08040 		mov	r0, #1073741824
  509 03b6 FFF7FEFF 		bl	timer_deinit
- 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER7);
- 510              		.loc 1 154 5
+ 146:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER7);
+ 510              		.loc 1 146 5
  511 03ba 0C48     		ldr	r0, .L2+36
  512 03bc FFF7FEFF 		bl	timer_deinit
- 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.prescaler = 0;
- 513              		.loc 1 155 29
+ 147:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.prescaler = 0;
+ 513              		.loc 1 147 29
  514 03c0 0023     		movs	r3, #0
  515 03c2 BB84     		strh	r3, [r7, #36]	@ movhi
- 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.alignedmode = TIMER_COUNTER_CENTER_DOWN;
- 516              		.loc 1 156 31
+ 148:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.alignedmode = TIMER_COUNTER_CENTER_DOWN;
+ 516              		.loc 1 148 31
  517 03c4 2023     		movs	r3, #32
  518 03c6 13E0     		b	.L3
  519              	.L4:
@@ -682,455 +674,455 @@
  531 03ec 00040140 		.word	1073808384
  532              	.L3:
  533 03f0 FB84     		strh	r3, [r7, #38]	@ movhi
- 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.counterdirection = TIMER_COUNTER_UP;
- 534              		.loc 1 157 36
+ 149:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.counterdirection = TIMER_COUNTER_UP;
+ 534              		.loc 1 149 36
  535 03f2 0023     		movs	r3, #0
  536 03f4 3B85     		strh	r3, [r7, #40]	@ movhi
- 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.period = HALF_PWM_PERIOD - 1;
- 537              		.loc 1 158 26
+ 150:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.period = HALF_PWM_PERIOD - 1;
+ 537              		.loc 1 150 26
  538 03f6 40F2E143 		movw	r3, #1249
  539 03fa FB62     		str	r3, [r7, #44]
- 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.clockdivision = TIMER_CKDIV_DIV2;       
- 540              		.loc 1 159 33
+ 151:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.clockdivision = TIMER_CKDIV_DIV2;
+ 540              		.loc 1 151 33
  541 03fc 4FF48073 		mov	r3, #256
  542 0400 3B86     		strh	r3, [r7, #48]	@ movhi
- 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.repetitioncounter = 0;
- 543              		.loc 1 160 37
+ 152:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerInitpara.repetitioncounter = 0;
+ 543              		.loc 1 152 37
  544 0402 0023     		movs	r3, #0
  545 0404 87F83230 		strb	r3, [r7, #50]
- 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER0, &TimerInitpara);
- 546              		.loc 1 161 5
+ 153:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER0, &TimerInitpara);
+ 546              		.loc 1 153 5
  547 0408 07F12403 		add	r3, r7, #36
  548 040c 1946     		mov	r1, r3
  549 040e BE48     		ldr	r0, .L5
  550 0410 FFF7FEFF 		bl	timer_init
- 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER1, &TimerInitpara);
- 551              		.loc 1 162 5
+ 154:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER1, &TimerInitpara);
+ 551              		.loc 1 154 5
  552 0414 07F12403 		add	r3, r7, #36
  553 0418 1946     		mov	r1, r3
  554 041a 4FF08040 		mov	r0, #1073741824
  555 041e FFF7FEFF 		bl	timer_init
- 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER7, &TimerInitpara);
- 556              		.loc 1 163 5
+ 155:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER7, &TimerInitpara);
+ 556              		.loc 1 155 5
  557 0422 07F12403 		add	r3, r7, #36
  558 0426 1946     		mov	r1, r3
  559 0428 B848     		ldr	r0, .L5+4
  560 042a FFF7FEFF 		bl	timer_init
- 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.outputstate = TIMER_CCX_ENABLE;
- 561              		.loc 1 165 32
+ 156:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 157:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.outputstate = TIMER_CCX_ENABLE;
+ 561              		.loc 1 157 32
  562 042e 0123     		movs	r3, #1
  563 0430 7B61     		str	r3, [r7, #20]
- 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.ocpolarity = TIMER_OC_POLARITY_HIGH;
- 564              		.loc 1 166 31
+ 158:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.ocpolarity = TIMER_OC_POLARITY_HIGH;
+ 564              		.loc 1 158 31
  565 0432 0023     		movs	r3, #0
  566 0434 7B83     		strh	r3, [r7, #26]	@ movhi
- 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.ocidlestate = TIMER_OC_IDLE_STATE_LOW;
- 567              		.loc 1 167 32
+ 159:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.ocidlestate = TIMER_OC_IDLE_STATE_LOW;
+ 567              		.loc 1 159 32
  568 0436 0023     		movs	r3, #0
  569 0438 FB83     		strh	r3, [r7, #30]	@ movhi
- 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.outputnstate = TIMER_CCX_DISABLE;
- 570              		.loc 1 168 33
+ 160:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.outputnstate = TIMER_CCX_DISABLE;
+ 570              		.loc 1 160 33
  571 043a 0023     		movs	r3, #0
  572 043c 3B83     		strh	r3, [r7, #24]	@ movhi
- 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.ocnpolarity = TIMER_OCN_POLARITY_HIGH;
- 573              		.loc 1 169 32
+ 161:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.ocnpolarity = TIMER_OCN_POLARITY_HIGH;
+ 573              		.loc 1 161 32
  574 043e 0023     		movs	r3, #0
  575 0440 BB83     		strh	r3, [r7, #28]	@ movhi
- 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.ocnidlestate = TIMER_OCN_IDLE_STATE_LOW;
- 576              		.loc 1 170 33
+ 162:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTcintpara.ocnidlestate = TIMER_OCN_IDLE_STATE_LOW;
+ 576              		.loc 1 162 33
  577 0442 0023     		movs	r3, #0
  578 0444 3B84     		strh	r3, [r7, #32]	@ movhi
- 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_0, &TimerTcintpara);
- 579              		.loc 1 172 5
+ 163:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 164:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_0, &TimerTcintpara);
+ 579              		.loc 1 164 5
  580 0446 07F11403 		add	r3, r7, #20
  581 044a 1A46     		mov	r2, r3
  582 044c 0021     		movs	r1, #0
  583 044e AE48     		ldr	r0, .L5
  584 0450 FFF7FEFF 		bl	timer_channel_output_config
- 173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_1, &TimerTcintpara);
- 585              		.loc 1 173 5
+ 165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_1, &TimerTcintpara);
+ 585              		.loc 1 165 5
  586 0454 07F11403 		add	r3, r7, #20
  587 0458 1A46     		mov	r2, r3
  588 045a 0121     		movs	r1, #1
  589 045c AA48     		ldr	r0, .L5
  590 045e FFF7FEFF 		bl	timer_channel_output_config
- 174:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_2, &TimerTcintpara);
- 591              		.loc 1 174 5
+ 166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_2, &TimerTcintpara);
+ 591              		.loc 1 166 5
  592 0462 07F11403 		add	r3, r7, #20
  593 0466 1A46     		mov	r2, r3
  594 0468 0221     		movs	r1, #2
  595 046a A748     		ldr	r0, .L5
  596 046c FFF7FEFF 		bl	timer_channel_output_config
- 175:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_0, &TimerTcintpara);
- 597              		.loc 1 175 5
+ 167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_0, &TimerTcintpara);
+ 597              		.loc 1 167 5
  598 0470 07F11403 		add	r3, r7, #20
  599 0474 1A46     		mov	r2, r3
  600 0476 0021     		movs	r1, #0
  601 0478 4FF08040 		mov	r0, #1073741824
  602 047c FFF7FEFF 		bl	timer_channel_output_config
- 176:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_1, &TimerTcintpara);
- 603              		.loc 1 176 5
+ 168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_1, &TimerTcintpara);
+ 603              		.loc 1 168 5
  604 0480 07F11403 		add	r3, r7, #20
  605 0484 1A46     		mov	r2, r3
  606 0486 0121     		movs	r1, #1
  607 0488 4FF08040 		mov	r0, #1073741824
  608 048c FFF7FEFF 		bl	timer_channel_output_config
- 177:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_2, &TimerTcintpara);
- 609              		.loc 1 177 5
+ 169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_2, &TimerTcintpara);
+ 609              		.loc 1 169 5
  610 0490 07F11403 		add	r3, r7, #20
  611 0494 1A46     		mov	r2, r3
  612 0496 0221     		movs	r1, #2
  613 0498 4FF08040 		mov	r0, #1073741824
  614 049c FFF7FEFF 		bl	timer_channel_output_config
- 178:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER7, TIMER_CH_0, &TimerTcintpara);
- 615              		.loc 1 178 5
+ 170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER7, TIMER_CH_0, &TimerTcintpara);
+ 615              		.loc 1 170 5
  616 04a0 07F11403 		add	r3, r7, #20
  617 04a4 1A46     		mov	r2, r3
  618 04a6 0021     		movs	r1, #0
  619 04a8 9848     		ldr	r0, .L5+4
  620 04aa FFF7FEFF 		bl	timer_channel_output_config
- 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER7, TIMER_CH_1, &TimerTcintpara);
- 621              		.loc 1 179 5
+ 171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER7, TIMER_CH_1, &TimerTcintpara);
+ 621              		.loc 1 171 5
  622 04ae 07F11403 		add	r3, r7, #20
  623 04b2 1A46     		mov	r2, r3
  624 04b4 0121     		movs	r1, #1
  625 04b6 9548     		ldr	r0, .L5+4
  626 04b8 FFF7FEFF 		bl	timer_channel_output_config
- 180:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER7, TIMER_CH_2, &TimerTcintpara);
- 627              		.loc 1 180 5
+ 172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER7, TIMER_CH_2, &TimerTcintpara);
+ 627              		.loc 1 172 5
  628 04bc 07F11403 		add	r3, r7, #20
  629 04c0 1A46     		mov	r2, r3
  630 04c2 0221     		movs	r1, #2
  631 04c4 9148     		ldr	r0, .L5+4
  632 04c6 FFF7FEFF 		bl	timer_channel_output_config
- 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 182:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_0, HALF_PWM_PERIOD * 0.5f);
- 633              		.loc 1 182 5
+ 173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 174:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_0, HALF_PWM_PERIOD * 0.5f);
+ 633              		.loc 1 174 5
  634 04ca 40F27122 		movw	r2, #625
  635 04ce 0021     		movs	r1, #0
  636 04d0 8D48     		ldr	r0, .L5
  637 04d2 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 183:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_0, TIMER_OC_MODE_PWM1);
- 638              		.loc 1 183 5
+ 175:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_0, TIMER_OC_MODE_PWM1);
+ 638              		.loc 1 175 5
  639 04d6 7022     		movs	r2, #112
  640 04d8 0021     		movs	r1, #0
  641 04da 8B48     		ldr	r0, .L5
  642 04dc FFF7FEFF 		bl	timer_channel_output_mode_config
- 184:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
- 643              		.loc 1 184 5
+ 176:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
+ 643              		.loc 1 176 5
  644 04e0 0822     		movs	r2, #8
  645 04e2 0021     		movs	r1, #0
  646 04e4 8848     		ldr	r0, .L5
  647 04e6 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 185:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_1, HALF_PWM_PERIOD * 0.5f);
- 648              		.loc 1 185 5
+ 177:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_1, HALF_PWM_PERIOD * 0.5f);
+ 648              		.loc 1 177 5
  649 04ea 40F27122 		movw	r2, #625
  650 04ee 0121     		movs	r1, #1
  651 04f0 8548     		ldr	r0, .L5
  652 04f2 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 186:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_1, TIMER_OC_MODE_PWM1);
- 653              		.loc 1 186 5
+ 178:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_1, TIMER_OC_MODE_PWM1);
+ 653              		.loc 1 178 5
  654 04f6 7022     		movs	r2, #112
  655 04f8 0121     		movs	r1, #1
  656 04fa 8348     		ldr	r0, .L5
  657 04fc FFF7FEFF 		bl	timer_channel_output_mode_config
- 187:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
- 658              		.loc 1 187 5
+ 179:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
+ 658              		.loc 1 179 5
  659 0500 0822     		movs	r2, #8
  660 0502 0121     		movs	r1, #1
  661 0504 8048     		ldr	r0, .L5
  662 0506 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 188:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_2, HALF_PWM_PERIOD * 0.5f);
- 663              		.loc 1 188 5
+ 180:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_2, HALF_PWM_PERIOD * 0.5f);
+ 663              		.loc 1 180 5
  664 050a 40F27122 		movw	r2, #625
  665 050e 0221     		movs	r1, #2
  666 0510 7D48     		ldr	r0, .L5
  667 0512 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 189:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_2, TIMER_OC_MODE_PWM1);
- 668              		.loc 1 189 5
+ 181:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_2, TIMER_OC_MODE_PWM1);
+ 668              		.loc 1 181 5
  669 0516 7022     		movs	r2, #112
  670 0518 0221     		movs	r1, #2
  671 051a 7B48     		ldr	r0, .L5
  672 051c FFF7FEFF 		bl	timer_channel_output_mode_config
- 190:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
- 673              		.loc 1 190 5
+ 182:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
+ 673              		.loc 1 182 5
  674 0520 0822     		movs	r2, #8
  675 0522 0221     		movs	r1, #2
  676 0524 7848     		ldr	r0, .L5
  677 0526 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 191:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_0, HALF_PWM_PERIOD * 0.5f);
- 678              		.loc 1 191 5
+ 183:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_0, HALF_PWM_PERIOD * 0.5f);
+ 678              		.loc 1 183 5
  679 052a 40F27122 		movw	r2, #625
  680 052e 0021     		movs	r1, #0
  681 0530 4FF08040 		mov	r0, #1073741824
  682 0534 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 192:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_0, TIMER_OC_MODE_PWM1);
- 683              		.loc 1 192 5
+ 184:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_0, TIMER_OC_MODE_PWM1);
+ 683              		.loc 1 184 5
  684 0538 7022     		movs	r2, #112
  685 053a 0021     		movs	r1, #0
  686 053c 4FF08040 		mov	r0, #1073741824
  687 0540 FFF7FEFF 		bl	timer_channel_output_mode_config
- 193:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
- 688              		.loc 1 193 5
+ 185:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
+ 688              		.loc 1 185 5
  689 0544 0822     		movs	r2, #8
  690 0546 0021     		movs	r1, #0
  691 0548 4FF08040 		mov	r0, #1073741824
  692 054c FFF7FEFF 		bl	timer_channel_output_shadow_config
- 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_1, HALF_PWM_PERIOD * 0.5f);
- 693              		.loc 1 194 5
+ 186:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_1, HALF_PWM_PERIOD * 0.5f);
+ 693              		.loc 1 186 5
  694 0550 40F27122 		movw	r2, #625
  695 0554 0121     		movs	r1, #1
  696 0556 4FF08040 		mov	r0, #1073741824
  697 055a FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 195:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_1, TIMER_OC_MODE_PWM1);
- 698              		.loc 1 195 5
+ 187:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_1, TIMER_OC_MODE_PWM1);
+ 698              		.loc 1 187 5
  699 055e 7022     		movs	r2, #112
  700 0560 0121     		movs	r1, #1
  701 0562 4FF08040 		mov	r0, #1073741824
  702 0566 FFF7FEFF 		bl	timer_channel_output_mode_config
- 196:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
- 703              		.loc 1 196 5
+ 188:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
+ 703              		.loc 1 188 5
  704 056a 0822     		movs	r2, #8
  705 056c 0121     		movs	r1, #1
  706 056e 4FF08040 		mov	r0, #1073741824
  707 0572 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 197:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_2, HALF_PWM_PERIOD * 0.5f);
- 708              		.loc 1 197 5
+ 189:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_2, HALF_PWM_PERIOD * 0.5f);
+ 708              		.loc 1 189 5
  709 0576 40F27122 		movw	r2, #625
  710 057a 0221     		movs	r1, #2
  711 057c 4FF08040 		mov	r0, #1073741824
  712 0580 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 198:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_2, TIMER_OC_MODE_PWM1);
- 713              		.loc 1 198 5
+ 190:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_2, TIMER_OC_MODE_PWM1);
+ 713              		.loc 1 190 5
  714 0584 7022     		movs	r2, #112
  715 0586 0221     		movs	r1, #2
  716 0588 4FF08040 		mov	r0, #1073741824
  717 058c FFF7FEFF 		bl	timer_channel_output_mode_config
- 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
- 718              		.loc 1 199 5
+ 191:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
+ 718              		.loc 1 191 5
  719 0590 0822     		movs	r2, #8
  720 0592 0221     		movs	r1, #2
  721 0594 4FF08040 		mov	r0, #1073741824
  722 0598 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 200:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER7, TIMER_CH_0, HALF_PWM_PERIOD * 0.5f);
- 723              		.loc 1 200 5
+ 192:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER7, TIMER_CH_0, HALF_PWM_PERIOD * 0.5f);
+ 723              		.loc 1 192 5
  724 059c 40F27122 		movw	r2, #625
  725 05a0 0021     		movs	r1, #0
  726 05a2 5A48     		ldr	r0, .L5+4
  727 05a4 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 201:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER7, TIMER_CH_0, TIMER_OC_MODE_PWM1);
- 728              		.loc 1 201 5
+ 193:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER7, TIMER_CH_0, TIMER_OC_MODE_PWM1);
+ 728              		.loc 1 193 5
  729 05a8 7022     		movs	r2, #112
  730 05aa 0021     		movs	r1, #0
  731 05ac 5748     		ldr	r0, .L5+4
  732 05ae FFF7FEFF 		bl	timer_channel_output_mode_config
- 202:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER7, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
- 733              		.loc 1 202 5
+ 194:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER7, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
+ 733              		.loc 1 194 5
  734 05b2 0822     		movs	r2, #8
  735 05b4 0021     		movs	r1, #0
  736 05b6 5548     		ldr	r0, .L5+4
  737 05b8 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 203:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER7, TIMER_CH_1, HALF_PWM_PERIOD * 0.5f);
- 738              		.loc 1 203 5
+ 195:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER7, TIMER_CH_1, HALF_PWM_PERIOD * 0.5f);
+ 738              		.loc 1 195 5
  739 05bc 40F27122 		movw	r2, #625
  740 05c0 0121     		movs	r1, #1
  741 05c2 5248     		ldr	r0, .L5+4
  742 05c4 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 204:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER7, TIMER_CH_1, TIMER_OC_MODE_PWM1);
- 743              		.loc 1 204 5
+ 196:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER7, TIMER_CH_1, TIMER_OC_MODE_PWM1);
+ 743              		.loc 1 196 5
  744 05c8 7022     		movs	r2, #112
  745 05ca 0121     		movs	r1, #1
  746 05cc 4F48     		ldr	r0, .L5+4
  747 05ce FFF7FEFF 		bl	timer_channel_output_mode_config
- 205:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER7, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
- 748              		.loc 1 205 5
+ 197:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER7, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
+ 748              		.loc 1 197 5
  749 05d2 0822     		movs	r2, #8
  750 05d4 0121     		movs	r1, #1
  751 05d6 4D48     		ldr	r0, .L5+4
  752 05d8 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 206:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER7, TIMER_CH_2, HALF_PWM_PERIOD * 0.5f);
- 753              		.loc 1 206 5
+ 198:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER7, TIMER_CH_2, HALF_PWM_PERIOD * 0.5f);
+ 753              		.loc 1 198 5
  754 05dc 40F27122 		movw	r2, #625
  755 05e0 0221     		movs	r1, #2
  756 05e2 4A48     		ldr	r0, .L5+4
  757 05e4 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 207:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER7, TIMER_CH_2, TIMER_OC_MODE_PWM1);
- 758              		.loc 1 207 5
+ 199:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER7, TIMER_CH_2, TIMER_OC_MODE_PWM1);
+ 758              		.loc 1 199 5
  759 05e8 7022     		movs	r2, #112
  760 05ea 0221     		movs	r1, #2
  761 05ec 4748     		ldr	r0, .L5+4
  762 05ee FFF7FEFF 		bl	timer_channel_output_mode_config
- 208:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER7, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
- 763              		.loc 1 208 5
+ 200:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER7, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
+ 763              		.loc 1 200 5
  764 05f2 0822     		movs	r2, #8
  765 05f4 0221     		movs	r1, #2
  766 05f6 4548     		ldr	r0, .L5+4
  767 05f8 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 209:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 210:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
- 768              		.loc 1 210 5
+ 201:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 202:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 768              		.loc 1 202 5
  769 05fc 0022     		movs	r2, #0
  770 05fe 0021     		movs	r1, #0
  771 0600 4148     		ldr	r0, .L5
  772 0602 FFF7FEFF 		bl	timer_channel_output_state_config
- 211:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
- 773              		.loc 1 211 5
+ 203:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 773              		.loc 1 203 5
  774 0606 0022     		movs	r2, #0
  775 0608 0121     		movs	r1, #1
  776 060a 3F48     		ldr	r0, .L5
  777 060c FFF7FEFF 		bl	timer_channel_output_state_config
- 212:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
- 778              		.loc 1 212 5
+ 204:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 778              		.loc 1 204 5
  779 0610 0022     		movs	r2, #0
  780 0612 0221     		movs	r1, #2
  781 0614 3C48     		ldr	r0, .L5
  782 0616 FFF7FEFF 		bl	timer_channel_output_state_config
- 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
- 783              		.loc 1 213 5
+ 205:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 783              		.loc 1 205 5
  784 061a 0022     		movs	r2, #0
  785 061c 0021     		movs	r1, #0
  786 061e 4FF08040 		mov	r0, #1073741824
  787 0622 FFF7FEFF 		bl	timer_channel_output_state_config
- 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
- 788              		.loc 1 214 5
+ 206:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 788              		.loc 1 206 5
  789 0626 0022     		movs	r2, #0
  790 0628 0121     		movs	r1, #1
  791 062a 4FF08040 		mov	r0, #1073741824
  792 062e FFF7FEFF 		bl	timer_channel_output_state_config
- 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
- 793              		.loc 1 215 5
+ 207:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 793              		.loc 1 207 5
  794 0632 0022     		movs	r2, #0
  795 0634 0221     		movs	r1, #2
  796 0636 4FF08040 		mov	r0, #1073741824
  797 063a FFF7FEFF 		bl	timer_channel_output_state_config
- 216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER7, TIMER_CH_0, TIMER_CCX_DISABLE);
- 798              		.loc 1 216 5
+ 208:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER7, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 798              		.loc 1 208 5
  799 063e 0022     		movs	r2, #0
  800 0640 0021     		movs	r1, #0
  801 0642 3248     		ldr	r0, .L5+4
  802 0644 FFF7FEFF 		bl	timer_channel_output_state_config
- 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_DISABLE);
- 803              		.loc 1 217 5
+ 209:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER7, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 803              		.loc 1 209 5
  804 0648 0022     		movs	r2, #0
  805 064a 0121     		movs	r1, #1
  806 064c 2F48     		ldr	r0, .L5+4
  807 064e FFF7FEFF 		bl	timer_channel_output_state_config
- 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_DISABLE);
- 808              		.loc 1 218 5
+ 210:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER7, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 808              		.loc 1 210 5
  809 0652 0022     		movs	r2, #0
  810 0654 0221     		movs	r1, #2
  811 0656 2D48     		ldr	r0, .L5+4
  812 0658 FFF7FEFF 		bl	timer_channel_output_state_config
- 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 220:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.runoffstate = TIMER_ROS_STATE_ENABLE;
- 813              		.loc 1 220 32
+ 211:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 212:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.runoffstate = TIMER_ROS_STATE_ENABLE;
+ 813              		.loc 1 212 32
  814 065c 4FF40063 		mov	r3, #2048
  815 0660 3B80     		strh	r3, [r7]	@ movhi
- 221:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.ideloffstate = TIMER_IOS_STATE_ENABLE ;
- 816              		.loc 1 221 33
+ 213:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.ideloffstate = TIMER_IOS_STATE_ENABLE;
+ 816              		.loc 1 213 33
  817 0662 4FF48063 		mov	r3, #1024
  818 0666 7B60     		str	r3, [r7, #4]
- 222:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.deadtime = 0;
- 819              		.loc 1 222 29
+ 214:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.deadtime = 0;
+ 819              		.loc 1 214 29
  820 0668 0023     		movs	r3, #0
  821 066a 3B81     		strh	r3, [r7, #8]	@ movhi
- 223:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.breakpolarity = TIMER_BREAK_POLARITY_LOW;
- 822              		.loc 1 223 34
+ 215:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.breakpolarity = TIMER_BREAK_POLARITY_LOW;
+ 822              		.loc 1 215 34
  823 066c 0023     		movs	r3, #0
  824 066e 7B81     		strh	r3, [r7, #10]	@ movhi
- 224:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.outputautostate = TIMER_OUTAUTO_DISABLE;
- 825              		.loc 1 224 36
+ 216:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.outputautostate = TIMER_OUTAUTO_DISABLE;
+ 825              		.loc 1 216 36
  826 0670 0023     		movs	r3, #0
  827 0672 BB81     		strh	r3, [r7, #12]	@ movhi
- 225:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.protectmode = TIMER_CCHP_PROT_0;
- 828              		.loc 1 225 32
+ 217:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.protectmode = TIMER_CCHP_PROT_0;
+ 828              		.loc 1 217 32
  829 0674 4FF48073 		mov	r3, #256
  830 0678 FB81     		strh	r3, [r7, #14]	@ movhi
- 226:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.breakstate = TIMER_BREAK_DISABLE;
- 831              		.loc 1 226 31
+ 218:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     TimerTreakpara.breakstate = TIMER_BREAK_DISABLE;
+ 831              		.loc 1 218 31
  832 067a 0023     		movs	r3, #0
  833 067c 3B82     		strh	r3, [r7, #16]	@ movhi
- 227:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_break_config(TIMER0, &TimerTreakpara);
- 834              		.loc 1 227 5
+ 219:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_break_config(TIMER0, &TimerTreakpara);
+ 834              		.loc 1 219 5
  835 067e 3B46     		mov	r3, r7
  836 0680 1946     		mov	r1, r3
  837 0682 2148     		ldr	r0, .L5
  838 0684 FFF7FEFF 		bl	timer_break_config
- 228:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 	timer_break_config(TIMER7, &TimerTreakpara);
- 839              		.loc 1 228 2
+ 220:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_break_config(TIMER7, &TimerTreakpara);
+ 839              		.loc 1 220 5
  840 0688 3B46     		mov	r3, r7
  841 068a 1946     		mov	r1, r3
  842 068c 1F48     		ldr	r0, .L5+4
  843 068e FFF7FEFF 		bl	timer_break_config
- 229:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_single_pulse_mode_config(TIMER0, TIMER_SP_MODE_REPETITIVE);
- 844              		.loc 1 229 5
+ 221:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_single_pulse_mode_config(TIMER0, TIMER_SP_MODE_REPETITIVE);
+ 844              		.loc 1 221 5
  845 0692 0121     		movs	r1, #1
  846 0694 1C48     		ldr	r0, .L5
  847 0696 FFF7FEFF 		bl	timer_single_pulse_mode_config
- 230:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER0);
- 848              		.loc 1 230 5
+ 222:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER0);
+ 848              		.loc 1 222 5
  849 069a 1B48     		ldr	r0, .L5
  850 069c FFF7FEFF 		bl	timer_auto_reload_shadow_enable
- 231:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_single_pulse_mode_config(TIMER1, TIMER_SP_MODE_REPETITIVE);
- 851              		.loc 1 231 5
+ 223:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_single_pulse_mode_config(TIMER1, TIMER_SP_MODE_REPETITIVE);
+ 851              		.loc 1 223 5
  852 06a0 0121     		movs	r1, #1
  853 06a2 4FF08040 		mov	r0, #1073741824
  854 06a6 FFF7FEFF 		bl	timer_single_pulse_mode_config
- 232:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER1);
- 855              		.loc 1 232 5
+ 224:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER1);
+ 855              		.loc 1 224 5
  856 06aa 4FF08040 		mov	r0, #1073741824
  857 06ae FFF7FEFF 		bl	timer_auto_reload_shadow_enable
- 233:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_single_pulse_mode_config(TIMER7, TIMER_SP_MODE_REPETITIVE);
- 858              		.loc 1 233 5
+ 225:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_single_pulse_mode_config(TIMER7, TIMER_SP_MODE_REPETITIVE);
+ 858              		.loc 1 225 5
  859 06b2 0121     		movs	r1, #1
  860 06b4 1548     		ldr	r0, .L5+4
  861 06b6 FFF7FEFF 		bl	timer_single_pulse_mode_config
- 234:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER7);
- 862              		.loc 1 234 5
+ 226:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER7);
+ 862              		.loc 1 226 5
  863 06ba 1448     		ldr	r0, .L5+4
  864 06bc FFF7FEFF 		bl	timer_auto_reload_shadow_enable
- 235:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     
- 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_primary_output_config(TIMER0, ENABLE);
- 865              		.loc 1 236 5
+ 227:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 228:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_primary_output_config(TIMER0, ENABLE);
+ 865              		.loc 1 228 5
  866 06c0 0121     		movs	r1, #1
  867 06c2 1148     		ldr	r0, .L5
  868 06c4 FFF7FEFF 		bl	timer_primary_output_config
- 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 	timer_primary_output_config(TIMER7, ENABLE);
- 869              		.loc 1 237 2
+ 229:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_primary_output_config(TIMER7, ENABLE);
+ 869              		.loc 1 229 5
  870 06c8 0121     		movs	r1, #1
  871 06ca 1048     		ldr	r0, .L5+4
  872 06cc FFF7FEFF 		bl	timer_primary_output_config
- 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER0, 0);
- 873              		.loc 1 238 5
+ 230:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER0, 0);
+ 873              		.loc 1 230 5
  874 06d0 0021     		movs	r1, #0
  875 06d2 0D48     		ldr	r0, .L5
  876 06d4 FFF7FEFF 		bl	timer_counter_value_config
- 239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER1, 0);
- 877              		.loc 1 239 5
+ 231:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER1, 0);
+ 877              		.loc 1 231 5
  878 06d8 0021     		movs	r1, #0
  879 06da 4FF08040 		mov	r0, #1073741824
  880 06de FFF7FEFF 		bl	timer_counter_value_config
- 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER7, 0);
- 881              		.loc 1 240 5
+ 232:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER7, 0);
+ 881              		.loc 1 232 5
  882 06e2 0021     		movs	r1, #0
  883 06e4 0948     		ldr	r0, .L5+4
  884 06e6 FFF7FEFF 		bl	timer_counter_value_config
- 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER0);
- 885              		.loc 1 241 5
+ 233:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER0);
+ 885              		.loc 1 233 5
  886 06ea 0748     		ldr	r0, .L5
  887 06ec FFF7FEFF 		bl	timer_enable
- 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER1);
- 888              		.loc 1 242 5
+ 234:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER1);
+ 888              		.loc 1 234 5
  889 06f0 4FF08040 		mov	r0, #1073741824
  890 06f4 FFF7FEFF 		bl	timer_enable
- 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER7);
- 891              		.loc 1 243 5
+ 235:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER7);
+ 891              		.loc 1 235 5
  892 06f8 0448     		ldr	r0, .L5+4
  893 06fa FFF7FEFF 		bl	timer_enable
- 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** }
- 894              		.loc 1 244 1
+ 236:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** }
+ 894              		.loc 1 236 1
  895 06fe 00BF     		nop
  896 0700 5837     		adds	r7, r7, #88
  897              		.cfi_def_cfa_offset 16
@@ -1154,10 +1146,10 @@
  916              		.fpu softvfp
  918              	BDCGpioInit:
  919              	.LFB157:
- 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** void BDCGpioInit(void)
- 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** {
- 920              		.loc 1 247 1
+ 237:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 238:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** void BDCGpioInit(void)
+ 239:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** {
+ 920              		.loc 1 239 1
  921              		.cfi_startproc
  922              		@ args = 0, pretend = 0, frame = 32
  923              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1169,386 +1161,387 @@
  929              		.cfi_def_cfa_offset 40
  930 0004 00AF     		add	r7, sp, #0
  931              		.cfi_def_cfa_register 7
- 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_parameter_struct    tim;
- 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_oc_parameter_struct oc;
- 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* ---------- 时钟 ---------- */
- 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOA);
- 932              		.loc 1 252 5
+ 240:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_parameter_struct tim;
+ 241:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_oc_parameter_struct oc;
+ 242:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 243:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* ---------- 时钟 ---------- */
+ 244:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOA);
+ 932              		.loc 1 244 5
  933 0006 4FF44060 		mov	r0, #3072
  934 000a FFF7FEFF 		bl	rcu_periph_clock_enable
- 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOB);
- 935              		.loc 1 253 5
+ 245:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_GPIOB);
+ 935              		.loc 1 245 5
  936 000e 40F60140 		movw	r0, #3073
  937 0012 FFF7FEFF 		bl	rcu_periph_clock_enable
- 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER0);
- 938              		.loc 1 254 5
+ 246:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER0);
+ 938              		.loc 1 246 5
  939 0016 4FF48850 		mov	r0, #4352
  940 001a FFF7FEFF 		bl	rcu_periph_clock_enable
- 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER1);
- 941              		.loc 1 255 5
+ 247:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     rcu_periph_clock_enable(RCU_TIMER1);
+ 941              		.loc 1 247 5
  942 001e 4FF48050 		mov	r0, #4096
  943 0022 FFF7FEFF 		bl	rcu_periph_clock_enable
- 256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* ---------- GPIO：PWM 输出 ---------- */
- 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* Motor1: TIM0_CH0 / CH1 -> PA8 / PA9 */
- 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* Motor2: TIM0_CH2 / CH3 -> PA10 / PA11 */
- 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOA, GPIO_AF_1,
- 944              		.loc 1 260 5
+ 248:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 249:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* ---------- GPIO：PWM 输出 ---------- */
+ 250:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* Motor1: TIM1_CH0 / CH1 -> PB8 / PB9 */
+ 251:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* Motor2: TIM1_CH2 / CH3 -> PB10 / PB11 */
+ 252:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOB, GPIO_AF_1,
+ 944              		.loc 1 252 5
  945 0026 4FF47062 		mov	r2, #3840
  946 002a 0121     		movs	r1, #1
- 947 002c 8948     		ldr	r0, .L8
+ 947 002c 8E48     		ldr	r0, .L8
  948 002e FFF7FEFF 		bl	gpio_af_set
- 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****                 GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
- 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE,
- 949              		.loc 1 262 5
+ 253:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****                 GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
+ 254:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE,
+ 949              		.loc 1 254 5
  950 0032 4FF47063 		mov	r3, #3840
  951 0036 0022     		movs	r2, #0
  952 0038 0221     		movs	r1, #2
- 953 003a 8648     		ldr	r0, .L8
+ 953 003a 8B48     		ldr	r0, .L8
  954 003c FFF7FEFF 		bl	gpio_mode_set
- 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****                   GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
- 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
- 955              		.loc 1 264 5
+ 255:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****                   GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
+ 256:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
+ 955              		.loc 1 256 5
  956 0040 4FF47063 		mov	r3, #3840
  957 0044 0322     		movs	r2, #3
  958 0046 0021     		movs	r1, #0
- 959 0048 8248     		ldr	r0, .L8
+ 959 0048 8748     		ldr	r0, .L8
  960 004a FFF7FEFF 		bl	gpio_output_options_set
- 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****                             GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
- 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* Motor3: TIM1_CH0 / CH1 -> PB8 / PB9（示例） */
- 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOB, GPIO_AF_1, GPIO_PIN_8 | GPIO_PIN_9);
- 961              		.loc 1 268 5
- 962 004e 4FF44072 		mov	r2, #768
+ 257:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****                             GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
+ 258:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 259:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* Motor3: TIM0_CH0 / CH3 -> PA8 / PA11（示例） */
+ 260:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_8 | GPIO_PIN_11);
+ 961              		.loc 1 260 5
+ 962 004e 4FF41062 		mov	r2, #2304
  963 0052 0121     		movs	r1, #1
- 964 0054 8048     		ldr	r0, .L8+4
+ 964 0054 8548     		ldr	r0, .L8+4
  965 0056 FFF7FEFF 		bl	gpio_af_set
- 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8 | GPIO_PIN_9);
- 966              		.loc 1 269 5
- 967 005a 4FF44073 		mov	r3, #768
+ 261:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8 | GPIO_PIN_11);
+ 966              		.loc 1 261 5
+ 967 005a 4FF41063 		mov	r3, #2304
  968 005e 0022     		movs	r2, #0
  969 0060 0221     		movs	r1, #2
- 970 0062 7D48     		ldr	r0, .L8+4
+ 970 0062 8248     		ldr	r0, .L8+4
  971 0064 FFF7FEFF 		bl	gpio_mode_set
- 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
- 972              		.loc 1 270 5
- 973 0068 4FF44073 		mov	r3, #768
+ 262:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
+ 972              		.loc 1 262 5
+ 973 0068 4FF41063 		mov	r3, #2304
  974 006c 0322     		movs	r2, #3
  975 006e 0021     		movs	r1, #0
- 976 0070 7948     		ldr	r0, .L8+4
+ 976 0070 7E48     		ldr	r0, .L8+4
  977 0072 FFF7FEFF 		bl	gpio_output_options_set
- 271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****                             GPIO_PIN_8 | GPIO_PIN_9);
- 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* ---------- TIMER0（电机1、2） ---------- */
- 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER0);
- 978              		.loc 1 274 5
- 979 0076 7948     		ldr	r0, .L8+8
- 980 0078 FFF7FEFF 		bl	timer_deinit
- 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.prescaler         = 0;
- 981              		.loc 1 275 27
- 982 007c 0023     		movs	r3, #0
- 983 007e 3B82     		strh	r3, [r7, #16]	@ movhi
- 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.alignedmode       = TIMER_COUNTER_EDGE;
- 984              		.loc 1 276 27
- 985 0080 0023     		movs	r3, #0
- 986 0082 7B82     		strh	r3, [r7, #18]	@ movhi
- 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.counterdirection  = TIMER_COUNTER_UP;
- 987              		.loc 1 277 27
- 988 0084 0023     		movs	r3, #0
- 989 0086 BB82     		strh	r3, [r7, #20]	@ movhi
- 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.period            = (uint16_t)TIM0_ARR;
- 990              		.loc 1 278 27
- 991 0088 41F28733 		movw	r3, #4999
- 992 008c BB61     		str	r3, [r7, #24]
- 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.clockdivision     = TIMER_CKDIV_DIV1;
- 993              		.loc 1 279 27
- 994 008e 0023     		movs	r3, #0
- 995 0090 BB83     		strh	r3, [r7, #28]	@ movhi
- 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.repetitioncounter = 0;
- 996              		.loc 1 280 27
- 997 0092 0023     		movs	r3, #0
- 998 0094 BB77     		strb	r3, [r7, #30]
- 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER0, &tim);
- 999              		.loc 1 281 5
- 1000 0096 07F11003 		add	r3, r7, #16
- 1001 009a 1946     		mov	r1, r3
- 1002 009c 6F48     		ldr	r0, .L8+8
- 1003 009e FFF7FEFF 		bl	timer_init
- 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER0);
- 1004              		.loc 1 282 5
- 1005 00a2 6E48     		ldr	r0, .L8+8
- 1006 00a4 FFF7FEFF 		bl	timer_auto_reload_shadow_enable
- 283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     oc.outputstate = TIMER_CCX_ENABLE;
- 1007              		.loc 1 284 20
- 1008 00a8 0123     		movs	r3, #1
- 1009 00aa 3B60     		str	r3, [r7]
- 285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     oc.ocpolarity  = TIMER_OC_POLARITY_LOW;
- 1010              		.loc 1 285 20
- 1011 00ac 0223     		movs	r3, #2
- 1012 00ae FB80     		strh	r3, [r7, #6]	@ movhi
- 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     oc.ocidlestate = TIMER_OC_IDLE_STATE_LOW;
- 1013              		.loc 1 286 20
- 1014 00b0 0023     		movs	r3, #0
- 1015 00b2 7B81     		strh	r3, [r7, #10]	@ movhi
- 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* TIM0 CH0~CH3 */
- 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_0, &oc);
- 1016              		.loc 1 289 5
- 1017 00b4 3B46     		mov	r3, r7
- 1018 00b6 1A46     		mov	r2, r3
- 1019 00b8 0021     		movs	r1, #0
- 1020 00ba 6848     		ldr	r0, .L8+8
- 1021 00bc FFF7FEFF 		bl	timer_channel_output_config
- 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_0, TIMER_OC_MODE_PWM1);
- 1022              		.loc 1 290 5
- 1023 00c0 7022     		movs	r2, #112
- 1024 00c2 0021     		movs	r1, #0
- 1025 00c4 6548     		ldr	r0, .L8+8
- 1026 00c6 FFF7FEFF 		bl	timer_channel_output_mode_config
- 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
- 1027              		.loc 1 291 5
- 1028 00ca 0822     		movs	r2, #8
- 1029 00cc 0021     		movs	r1, #0
- 1030 00ce 6348     		ldr	r0, .L8+8
- 1031 00d0 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_0, 0);
- 1032              		.loc 1 292 5
- 1033 00d4 0022     		movs	r2, #0
- 1034 00d6 0021     		movs	r1, #0
- 1035 00d8 6048     		ldr	r0, .L8+8
- 1036 00da FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_1, &oc);
- 1037              		.loc 1 294 5
- 1038 00de 3B46     		mov	r3, r7
- 1039 00e0 1A46     		mov	r2, r3
- 1040 00e2 0121     		movs	r1, #1
- 1041 00e4 5D48     		ldr	r0, .L8+8
- 1042 00e6 FFF7FEFF 		bl	timer_channel_output_config
- 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_1, TIMER_OC_MODE_PWM1);
- 1043              		.loc 1 295 5
- 1044 00ea 7022     		movs	r2, #112
- 1045 00ec 0121     		movs	r1, #1
- 1046 00ee 5B48     		ldr	r0, .L8+8
- 1047 00f0 FFF7FEFF 		bl	timer_channel_output_mode_config
- 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
- 1048              		.loc 1 296 5
- 1049 00f4 0822     		movs	r2, #8
- 1050 00f6 0121     		movs	r1, #1
- 1051 00f8 5848     		ldr	r0, .L8+8
- 1052 00fa FFF7FEFF 		bl	timer_channel_output_shadow_config
- 297:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_1, 0);
- 1053              		.loc 1 297 5
- 1054 00fe 0022     		movs	r2, #0
- 1055 0100 0121     		movs	r1, #1
- 1056 0102 5648     		ldr	r0, .L8+8
- 1057 0104 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 298:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 299:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_2, &oc);
- 1058              		.loc 1 299 5
- 1059 0108 3B46     		mov	r3, r7
- 1060 010a 1A46     		mov	r2, r3
- 1061 010c 0221     		movs	r1, #2
- 1062 010e 5348     		ldr	r0, .L8+8
- 1063 0110 FFF7FEFF 		bl	timer_channel_output_config
- 300:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_2, TIMER_OC_MODE_PWM1);
- 1064              		.loc 1 300 5
- 1065 0114 7022     		movs	r2, #112
- 1066 0116 0221     		movs	r1, #2
- 1067 0118 5048     		ldr	r0, .L8+8
- 1068 011a FFF7FEFF 		bl	timer_channel_output_mode_config
- 301:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
- 1069              		.loc 1 301 5
- 1070 011e 0822     		movs	r2, #8
- 1071 0120 0221     		movs	r1, #2
- 1072 0122 4E48     		ldr	r0, .L8+8
- 1073 0124 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 302:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_2, 0);
- 1074              		.loc 1 302 5
- 1075 0128 0022     		movs	r2, #0
- 1076 012a 0221     		movs	r1, #2
- 1077 012c 4B48     		ldr	r0, .L8+8
- 1078 012e FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 303:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_3, &oc);
- 1079              		.loc 1 304 5
- 1080 0132 3B46     		mov	r3, r7
- 1081 0134 1A46     		mov	r2, r3
- 1082 0136 0321     		movs	r1, #3
- 1083 0138 4848     		ldr	r0, .L8+8
- 1084 013a FFF7FEFF 		bl	timer_channel_output_config
- 305:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_3, TIMER_OC_MODE_PWM1);
- 1085              		.loc 1 305 5
- 1086 013e 7022     		movs	r2, #112
- 1087 0140 0321     		movs	r1, #3
- 1088 0142 4648     		ldr	r0, .L8+8
- 1089 0144 FFF7FEFF 		bl	timer_channel_output_mode_config
- 306:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
- 1090              		.loc 1 306 5
- 1091 0148 0822     		movs	r2, #8
- 1092 014a 0321     		movs	r1, #3
- 1093 014c 4348     		ldr	r0, .L8+8
- 1094 014e FFF7FEFF 		bl	timer_channel_output_shadow_config
- 307:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_3, 0);
- 1095              		.loc 1 307 5
- 1096 0152 0022     		movs	r2, #0
- 1097 0154 0321     		movs	r1, #3
- 1098 0156 4148     		ldr	r0, .L8+8
- 1099 0158 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 308:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 309:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
- 1100              		.loc 1 309 5
- 1101 015c 0022     		movs	r2, #0
- 1102 015e 0021     		movs	r1, #0
- 1103 0160 3E48     		ldr	r0, .L8+8
- 1104 0162 FFF7FEFF 		bl	timer_channel_output_state_config
- 310:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_1, TIMER_CCX_DISABLE);
- 1105              		.loc 1 310 5
- 1106 0166 0022     		movs	r2, #0
- 1107 0168 0121     		movs	r1, #1
- 1108 016a 3C48     		ldr	r0, .L8+8
- 1109 016c FFF7FEFF 		bl	timer_channel_output_state_config
- 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_2, TIMER_CCX_DISABLE);
- 1110              		.loc 1 311 5
- 1111 0170 0022     		movs	r2, #0
- 1112 0172 0221     		movs	r1, #2
- 1113 0174 3948     		ldr	r0, .L8+8
- 1114 0176 FFF7FEFF 		bl	timer_channel_output_state_config
- 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_DISABLE);
- 1115              		.loc 1 312 5
- 1116 017a 0022     		movs	r2, #0
- 1117 017c 0321     		movs	r1, #3
- 1118 017e 3748     		ldr	r0, .L8+8
- 1119 0180 FFF7FEFF 		bl	timer_channel_output_state_config
- 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_primary_output_config(TIMER0, ENABLE);
- 1120              		.loc 1 314 5
- 1121 0184 0121     		movs	r1, #1
- 1122 0186 3548     		ldr	r0, .L8+8
- 1123 0188 FFF7FEFF 		bl	timer_primary_output_config
+ 263:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****                             GPIO_PIN_8 | GPIO_PIN_11);
+ 264:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 265:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* ---------- TIMER1（电机1、2） ---------- */
+ 266:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER1);
+ 978              		.loc 1 266 5
+ 979 0076 4FF08040 		mov	r0, #1073741824
+ 980 007a FFF7FEFF 		bl	timer_deinit
+ 267:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.prescaler = 0;
+ 981              		.loc 1 267 19
+ 982 007e 0023     		movs	r3, #0
+ 983 0080 3B82     		strh	r3, [r7, #16]	@ movhi
+ 268:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.alignedmode = TIMER_COUNTER_EDGE;
+ 984              		.loc 1 268 21
+ 985 0082 0023     		movs	r3, #0
+ 986 0084 7B82     		strh	r3, [r7, #18]	@ movhi
+ 269:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.counterdirection = TIMER_COUNTER_UP;
+ 987              		.loc 1 269 26
+ 988 0086 0023     		movs	r3, #0
+ 989 0088 BB82     		strh	r3, [r7, #20]	@ movhi
+ 270:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.period = (uint16_t)TIM0_ARR;
+ 990              		.loc 1 270 16
+ 991 008a 41F28733 		movw	r3, #4999
+ 992 008e BB61     		str	r3, [r7, #24]
+ 271:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.clockdivision = TIMER_CKDIV_DIV1;
+ 993              		.loc 1 271 23
+ 994 0090 0023     		movs	r3, #0
+ 995 0092 BB83     		strh	r3, [r7, #28]	@ movhi
+ 272:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.repetitioncounter = 0;
+ 996              		.loc 1 272 27
+ 997 0094 0023     		movs	r3, #0
+ 998 0096 BB77     		strb	r3, [r7, #30]
+ 273:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER1, &tim);
+ 999              		.loc 1 273 5
+ 1000 0098 07F11003 		add	r3, r7, #16
+ 1001 009c 1946     		mov	r1, r3
+ 1002 009e 4FF08040 		mov	r0, #1073741824
+ 1003 00a2 FFF7FEFF 		bl	timer_init
+ 274:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER1);
+ 1004              		.loc 1 274 5
+ 1005 00a6 4FF08040 		mov	r0, #1073741824
+ 1006 00aa FFF7FEFF 		bl	timer_auto_reload_shadow_enable
+ 275:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 276:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     oc.outputstate = TIMER_CCX_ENABLE;
+ 1007              		.loc 1 276 20
+ 1008 00ae 0123     		movs	r3, #1
+ 1009 00b0 3B60     		str	r3, [r7]
+ 277:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     oc.ocpolarity = TIMER_OC_POLARITY_LOW;
+ 1010              		.loc 1 277 19
+ 1011 00b2 0223     		movs	r3, #2
+ 1012 00b4 FB80     		strh	r3, [r7, #6]	@ movhi
+ 278:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     oc.ocidlestate = TIMER_OC_IDLE_STATE_LOW;
+ 1013              		.loc 1 278 20
+ 1014 00b6 0023     		movs	r3, #0
+ 1015 00b8 7B81     		strh	r3, [r7, #10]	@ movhi
+ 279:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 280:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* TIM1 CH0~CH3 */
+ 281:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_0, &oc);
+ 1016              		.loc 1 281 5
+ 1017 00ba 3B46     		mov	r3, r7
+ 1018 00bc 1A46     		mov	r2, r3
+ 1019 00be 0021     		movs	r1, #0
+ 1020 00c0 4FF08040 		mov	r0, #1073741824
+ 1021 00c4 FFF7FEFF 		bl	timer_channel_output_config
+ 282:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_0, TIMER_OC_MODE_PWM1);
+ 1022              		.loc 1 282 5
+ 1023 00c8 7022     		movs	r2, #112
+ 1024 00ca 0021     		movs	r1, #0
+ 1025 00cc 4FF08040 		mov	r0, #1073741824
+ 1026 00d0 FFF7FEFF 		bl	timer_channel_output_mode_config
+ 283:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
+ 1027              		.loc 1 283 5
+ 1028 00d4 0822     		movs	r2, #8
+ 1029 00d6 0021     		movs	r1, #0
+ 1030 00d8 4FF08040 		mov	r0, #1073741824
+ 1031 00dc FFF7FEFF 		bl	timer_channel_output_shadow_config
+ 284:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_0, 0);
+ 1032              		.loc 1 284 5
+ 1033 00e0 0022     		movs	r2, #0
+ 1034 00e2 0021     		movs	r1, #0
+ 1035 00e4 4FF08040 		mov	r0, #1073741824
+ 1036 00e8 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
+ 285:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 286:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_1, &oc);
+ 1037              		.loc 1 286 5
+ 1038 00ec 3B46     		mov	r3, r7
+ 1039 00ee 1A46     		mov	r2, r3
+ 1040 00f0 0121     		movs	r1, #1
+ 1041 00f2 4FF08040 		mov	r0, #1073741824
+ 1042 00f6 FFF7FEFF 		bl	timer_channel_output_config
+ 287:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_1, TIMER_OC_MODE_PWM1);
+ 1043              		.loc 1 287 5
+ 1044 00fa 7022     		movs	r2, #112
+ 1045 00fc 0121     		movs	r1, #1
+ 1046 00fe 4FF08040 		mov	r0, #1073741824
+ 1047 0102 FFF7FEFF 		bl	timer_channel_output_mode_config
+ 288:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
+ 1048              		.loc 1 288 5
+ 1049 0106 0822     		movs	r2, #8
+ 1050 0108 0121     		movs	r1, #1
+ 1051 010a 4FF08040 		mov	r0, #1073741824
+ 1052 010e FFF7FEFF 		bl	timer_channel_output_shadow_config
+ 289:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_1, 0);
+ 1053              		.loc 1 289 5
+ 1054 0112 0022     		movs	r2, #0
+ 1055 0114 0121     		movs	r1, #1
+ 1056 0116 4FF08040 		mov	r0, #1073741824
+ 1057 011a FFF7FEFF 		bl	timer_channel_output_pulse_value_config
+ 290:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 291:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_2, &oc);
+ 1058              		.loc 1 291 5
+ 1059 011e 3B46     		mov	r3, r7
+ 1060 0120 1A46     		mov	r2, r3
+ 1061 0122 0221     		movs	r1, #2
+ 1062 0124 4FF08040 		mov	r0, #1073741824
+ 1063 0128 FFF7FEFF 		bl	timer_channel_output_config
+ 292:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_2, TIMER_OC_MODE_PWM1);
+ 1064              		.loc 1 292 5
+ 1065 012c 7022     		movs	r2, #112
+ 1066 012e 0221     		movs	r1, #2
+ 1067 0130 4FF08040 		mov	r0, #1073741824
+ 1068 0134 FFF7FEFF 		bl	timer_channel_output_mode_config
+ 293:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
+ 1069              		.loc 1 293 5
+ 1070 0138 0822     		movs	r2, #8
+ 1071 013a 0221     		movs	r1, #2
+ 1072 013c 4FF08040 		mov	r0, #1073741824
+ 1073 0140 FFF7FEFF 		bl	timer_channel_output_shadow_config
+ 294:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_2, 0);
+ 1074              		.loc 1 294 5
+ 1075 0144 0022     		movs	r2, #0
+ 1076 0146 0221     		movs	r1, #2
+ 1077 0148 4FF08040 		mov	r0, #1073741824
+ 1078 014c FFF7FEFF 		bl	timer_channel_output_pulse_value_config
+ 295:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 296:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_3, &oc);
+ 1079              		.loc 1 296 5
+ 1080 0150 3B46     		mov	r3, r7
+ 1081 0152 1A46     		mov	r2, r3
+ 1082 0154 0321     		movs	r1, #3
+ 1083 0156 4FF08040 		mov	r0, #1073741824
+ 1084 015a FFF7FEFF 		bl	timer_channel_output_config
+ 297:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_3, TIMER_OC_MODE_PWM1);
+ 1085              		.loc 1 297 5
+ 1086 015e 7022     		movs	r2, #112
+ 1087 0160 0321     		movs	r1, #3
+ 1088 0162 4FF08040 		mov	r0, #1073741824
+ 1089 0166 FFF7FEFF 		bl	timer_channel_output_mode_config
+ 298:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
+ 1090              		.loc 1 298 5
+ 1091 016a 0822     		movs	r2, #8
+ 1092 016c 0321     		movs	r1, #3
+ 1093 016e 4FF08040 		mov	r0, #1073741824
+ 1094 0172 FFF7FEFF 		bl	timer_channel_output_shadow_config
+ 299:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_3, 0);
+ 1095              		.loc 1 299 5
+ 1096 0176 0022     		movs	r2, #0
+ 1097 0178 0321     		movs	r1, #3
+ 1098 017a 4FF08040 		mov	r0, #1073741824
+ 1099 017e FFF7FEFF 		bl	timer_channel_output_pulse_value_config
+ 300:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 301:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 1100              		.loc 1 301 5
+ 1101 0182 0022     		movs	r2, #0
+ 1102 0184 0021     		movs	r1, #0
+ 1103 0186 4FF08040 		mov	r0, #1073741824
+ 1104 018a FFF7FEFF 		bl	timer_channel_output_state_config
+ 302:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
+ 1105              		.loc 1 302 5
+ 1106 018e 0022     		movs	r2, #0
+ 1107 0190 0121     		movs	r1, #1
+ 1108 0192 4FF08040 		mov	r0, #1073741824
+ 1109 0196 FFF7FEFF 		bl	timer_channel_output_state_config
+ 303:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
+ 1110              		.loc 1 303 5
+ 1111 019a 0022     		movs	r2, #0
+ 1112 019c 0221     		movs	r1, #2
+ 1113 019e 4FF08040 		mov	r0, #1073741824
+ 1114 01a2 FFF7FEFF 		bl	timer_channel_output_state_config
+ 304:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_3, TIMER_CCX_DISABLE);
+ 1115              		.loc 1 304 5
+ 1116 01a6 0022     		movs	r2, #0
+ 1117 01a8 0321     		movs	r1, #3
+ 1118 01aa 4FF08040 		mov	r0, #1073741824
+ 1119 01ae FFF7FEFF 		bl	timer_channel_output_state_config
+ 305:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 306:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 307:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER1, 0);
+ 1120              		.loc 1 307 5
+ 1121 01b2 0021     		movs	r1, #0
+ 1122 01b4 4FF08040 		mov	r0, #1073741824
+ 1123 01b8 FFF7FEFF 		bl	timer_counter_value_config
+ 308:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER1);
+ 1124              		.loc 1 308 5
+ 1125 01bc 4FF08040 		mov	r0, #1073741824
+ 1126 01c0 FFF7FEFF 		bl	timer_enable
+ 309:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 310:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* ---------- TIMER0（电机3 预留） ---------- */
+ 311:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER0);
+ 1127              		.loc 1 311 5
+ 1128 01c4 2A48     		ldr	r0, .L8+8
+ 1129 01c6 FFF7FEFF 		bl	timer_deinit
+ 312:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.period = (uint16_t)TIM1_ARR;
+ 1130              		.loc 1 312 16
+ 1131 01ca 40F6C313 		movw	r3, #2499
+ 1132 01ce BB61     		str	r3, [r7, #24]
+ 313:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER0, &tim);
+ 1133              		.loc 1 313 5
+ 1134 01d0 07F11003 		add	r3, r7, #16
+ 1135 01d4 1946     		mov	r1, r3
+ 1136 01d6 2648     		ldr	r0, .L8+8
+ 1137 01d8 FFF7FEFF 		bl	timer_init
+ 314:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER0);
+ 1138              		.loc 1 314 5
+ 1139 01dc 2448     		ldr	r0, .L8+8
+ 1140 01de FFF7FEFF 		bl	timer_auto_reload_shadow_enable
  315:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 316:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER0, 0);
- 1124              		.loc 1 316 5
- 1125 018c 0021     		movs	r1, #0
- 1126 018e 3348     		ldr	r0, .L8+8
- 1127 0190 FFF7FEFF 		bl	timer_counter_value_config
- 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER0);
- 1128              		.loc 1 317 5
- 1129 0194 3148     		ldr	r0, .L8+8
- 1130 0196 FFF7FEFF 		bl	timer_enable
- 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* ---------- TIMER1（电机3 预留） ---------- */
- 320:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_deinit(TIMER1);
- 1131              		.loc 1 320 5
- 1132 019a 4FF08040 		mov	r0, #1073741824
- 1133 019e FFF7FEFF 		bl	timer_deinit
- 321:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     tim.period = (uint16_t)TIM1_ARR;
- 1134              		.loc 1 321 16
- 1135 01a2 40F6C313 		movw	r3, #2499
- 1136 01a6 BB61     		str	r3, [r7, #24]
- 322:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_init(TIMER1, &tim);
- 1137              		.loc 1 322 5
- 1138 01a8 07F11003 		add	r3, r7, #16
- 1139 01ac 1946     		mov	r1, r3
- 1140 01ae 4FF08040 		mov	r0, #1073741824
- 1141 01b2 FFF7FEFF 		bl	timer_init
- 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_auto_reload_shadow_enable(TIMER1);
- 1142              		.loc 1 323 5
- 1143 01b6 4FF08040 		mov	r0, #1073741824
- 1144 01ba FFF7FEFF 		bl	timer_auto_reload_shadow_enable
- 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* TIM1 CH0~CH1 */
- 326:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_0, &oc);
- 1145              		.loc 1 326 5
- 1146 01be 3B46     		mov	r3, r7
- 1147 01c0 1A46     		mov	r2, r3
- 1148 01c2 0021     		movs	r1, #0
- 1149 01c4 4FF08040 		mov	r0, #1073741824
- 1150 01c8 FFF7FEFF 		bl	timer_channel_output_config
- 327:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_0, TIMER_OC_MODE_PWM1);
- 1151              		.loc 1 327 5
- 1152 01cc 7022     		movs	r2, #112
- 1153 01ce 0021     		movs	r1, #0
- 1154 01d0 4FF08040 		mov	r0, #1073741824
- 1155 01d4 FFF7FEFF 		bl	timer_channel_output_mode_config
- 328:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
- 1156              		.loc 1 328 5
- 1157 01d8 0822     		movs	r2, #8
- 1158 01da 0021     		movs	r1, #0
- 1159 01dc 4FF08040 		mov	r0, #1073741824
- 1160 01e0 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 329:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_0, 0);
- 1161              		.loc 1 329 5
- 1162 01e4 0022     		movs	r2, #0
- 1163 01e6 0021     		movs	r1, #0
- 1164 01e8 4FF08040 		mov	r0, #1073741824
- 1165 01ec FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 330:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 331:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER1, TIMER_CH_1, &oc);
- 1166              		.loc 1 331 5
- 1167 01f0 3B46     		mov	r3, r7
- 1168 01f2 1A46     		mov	r2, r3
- 1169 01f4 0121     		movs	r1, #1
- 1170 01f6 4FF08040 		mov	r0, #1073741824
- 1171 01fa FFF7FEFF 		bl	timer_channel_output_config
- 332:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER1, TIMER_CH_1, TIMER_OC_MODE_PWM1);
- 1172              		.loc 1 332 5
- 1173 01fe 7022     		movs	r2, #112
- 1174 0200 0121     		movs	r1, #1
- 1175 0202 4FF08040 		mov	r0, #1073741824
- 1176 0206 FFF7FEFF 		bl	timer_channel_output_mode_config
- 333:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER1, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
- 1177              		.loc 1 333 5
- 1178 020a 0822     		movs	r2, #8
- 1179 020c 0121     		movs	r1, #1
- 1180 020e 4FF08040 		mov	r0, #1073741824
- 1181 0212 FFF7FEFF 		bl	timer_channel_output_shadow_config
- 334:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_1, 0);
- 1182              		.loc 1 334 5
- 1183 0216 0022     		movs	r2, #0
- 1184 0218 0121     		movs	r1, #1
- 1185 021a 4FF08040 		mov	r0, #1073741824
- 1186 021e FFF7FEFF 		bl	timer_channel_output_pulse_value_config
- 335:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 336:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
- 1187              		.loc 1 336 5
- 1188 0222 0022     		movs	r2, #0
- 1189 0224 0021     		movs	r1, #0
- 1190 0226 4FF08040 		mov	r0, #1073741824
- 1191 022a FFF7FEFF 		bl	timer_channel_output_state_config
- 337:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
- 1192              		.loc 1 337 5
- 1193 022e 0022     		movs	r2, #0
- 1194 0230 0121     		movs	r1, #1
- 1195 0232 4FF08040 		mov	r0, #1073741824
- 1196 0236 FFF7FEFF 		bl	timer_channel_output_state_config
- 338:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
- 339:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER1, 0);
- 1197              		.loc 1 339 5
- 1198 023a 0021     		movs	r1, #0
- 1199 023c 4FF08040 		mov	r0, #1073741824
- 1200 0240 FFF7FEFF 		bl	timer_counter_value_config
- 340:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER1);
- 1201              		.loc 1 340 5
- 1202 0244 4FF08040 		mov	r0, #1073741824
- 1203 0248 FFF7FEFF 		bl	timer_enable
- 341:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** }...
- 1204              		.loc 1 341 1
- 1205 024c 00BF     		nop
- 1206 024e 2037     		adds	r7, r7, #32
+ 316:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     /* TIM0 CH0|CH3 */
+ 317:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_0, &oc);
+ 1141              		.loc 1 317 5
+ 1142 01e2 3B46     		mov	r3, r7
+ 1143 01e4 1A46     		mov	r2, r3
+ 1144 01e6 0021     		movs	r1, #0
+ 1145 01e8 2148     		ldr	r0, .L8+8
+ 1146 01ea FFF7FEFF 		bl	timer_channel_output_config
+ 318:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_0, TIMER_OC_MODE_PWM1);
+ 1147              		.loc 1 318 5
+ 1148 01ee 7022     		movs	r2, #112
+ 1149 01f0 0021     		movs	r1, #0
+ 1150 01f2 1F48     		ldr	r0, .L8+8
+ 1151 01f4 FFF7FEFF 		bl	timer_channel_output_mode_config
+ 319:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
+ 1152              		.loc 1 319 5
+ 1153 01f8 0822     		movs	r2, #8
+ 1154 01fa 0021     		movs	r1, #0
+ 1155 01fc 1C48     		ldr	r0, .L8+8
+ 1156 01fe FFF7FEFF 		bl	timer_channel_output_shadow_config
+ 320:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_0, 0);
+ 1157              		.loc 1 320 5
+ 1158 0202 0022     		movs	r2, #0
+ 1159 0204 0021     		movs	r1, #0
+ 1160 0206 1A48     		ldr	r0, .L8+8
+ 1161 0208 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
+ 321:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 322:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_config(TIMER0, TIMER_CH_3, &oc);
+ 1162              		.loc 1 322 5
+ 1163 020c 3B46     		mov	r3, r7
+ 1164 020e 1A46     		mov	r2, r3
+ 1165 0210 0321     		movs	r1, #3
+ 1166 0212 1748     		ldr	r0, .L8+8
+ 1167 0214 FFF7FEFF 		bl	timer_channel_output_config
+ 323:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_mode_config(TIMER0, TIMER_CH_3, TIMER_OC_MODE_PWM1);
+ 1168              		.loc 1 323 5
+ 1169 0218 7022     		movs	r2, #112
+ 1170 021a 0321     		movs	r1, #3
+ 1171 021c 1448     		ldr	r0, .L8+8
+ 1172 021e FFF7FEFF 		bl	timer_channel_output_mode_config
+ 324:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_shadow_config(TIMER0, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
+ 1173              		.loc 1 324 5
+ 1174 0222 0822     		movs	r2, #8
+ 1175 0224 0321     		movs	r1, #3
+ 1176 0226 1248     		ldr	r0, .L8+8
+ 1177 0228 FFF7FEFF 		bl	timer_channel_output_shadow_config
+ 325:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_3, 0);
+ 1178              		.loc 1 325 5
+ 1179 022c 0022     		movs	r2, #0
+ 1180 022e 0321     		movs	r1, #3
+ 1181 0230 0F48     		ldr	r0, .L8+8
+ 1182 0232 FFF7FEFF 		bl	timer_channel_output_pulse_value_config
+ 326:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 327:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
+ 1183              		.loc 1 327 5
+ 1184 0236 0022     		movs	r2, #0
+ 1185 0238 0021     		movs	r1, #0
+ 1186 023a 0D48     		ldr	r0, .L8+8
+ 1187 023c FFF7FEFF 		bl	timer_channel_output_state_config
+ 328:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_DISABLE);
+ 1188              		.loc 1 328 5
+ 1189 0240 0022     		movs	r2, #0
+ 1190 0242 0321     		movs	r1, #3
+ 1191 0244 0A48     		ldr	r0, .L8+8
+ 1192 0246 FFF7FEFF 		bl	timer_channel_output_state_config
+ 329:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 330:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_primary_output_config(TIMER0, ENABLE);
+ 1193              		.loc 1 330 5
+ 1194 024a 0121     		movs	r1, #1
+ 1195 024c 0848     		ldr	r0, .L8+8
+ 1196 024e FFF7FEFF 		bl	timer_primary_output_config
+ 331:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** 
+ 332:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_counter_value_config(TIMER0, 0);
+ 1197              		.loc 1 332 5
+ 1198 0252 0021     		movs	r1, #0
+ 1199 0254 0648     		ldr	r0, .L8+8
+ 1200 0256 FFF7FEFF 		bl	timer_counter_value_config
+ 333:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c ****     timer_enable(TIMER0);
+ 1201              		.loc 1 333 5
+ 1202 025a 0548     		ldr	r0, .L8+8
+ 1203 025c FFF7FEFF 		bl	timer_enable
+ 334:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnBsp\gpio.c **** }...
+ 1204              		.loc 1 334 1
+ 1205 0260 00BF     		nop
+ 1206 0262 2037     		adds	r7, r7, #32
  1207              		.cfi_def_cfa_offset 8
- 1208 0250 BD46     		mov	sp, r7
+ 1208 0264 BD46     		mov	sp, r7
  1209              		.cfi_def_cfa_register 13
  1210              		@ sp needed
- 1211 0252 80BD     		pop	{r7, pc}
+ 1211 0266 80BD     		pop	{r7, pc}
  1212              	.L9:
  1213              		.align	2
  1214              	.L8:
- 1215 0254 00000240 		.word	1073872896
- 1216 0258 00040240 		.word	1073873920
- 1217 025c 00000140 		.word	1073807360
+ 1215 0268 00040240 		.word	1073873920
+ 1216 026c 00000240 		.word	1073872896
+ 1217 0270 00000140 		.word	1073807360
  1218              		.cfi_endproc
  1219              	.LFE157:
  1221              		.text
@@ -1578,22 +1571,22 @@
  1245              		.file 24 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:20     .bss.CAPTURE_PWM_TIME_UP:00000000 CAPTURE_PWM_TIME_UP
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:17     .bss.CAPTURE_PWM_TIME_UP:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:27     .bss.CAPTURE_PWM_TIME_ALL:00000000 CAPTURE_PWM_TIME_ALL
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:24     .bss.CAPTURE_PWM_TIME_ALL:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:34     .bss.CAPTURE_PWM_TIME_LAST:00000000 CAPTURE_PWM_TIME_LAST
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:31     .bss.CAPTURE_PWM_TIME_LAST:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:41     .bss.AdcDate:00000000 AdcDate
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:38     .bss.AdcDate:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:44     .text.BLDCGpioInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:52     .text.BLDCGpioInit:00000000 BLDCGpioInit
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:522    .text.BLDCGpioInit:000003c8 $d
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:533    .text.BLDCGpioInit:000003f0 $t
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:905    .text.BLDCGpioInit:00000708 $d
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:911    .text.BDCGpioInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:918    .text.BDCGpioInit:00000000 BDCGpioInit
-C:\Users\leonardo\AppData\Local\Temp\ccMriqsQ.s:1215   .text.BDCGpioInit:00000254 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:20     .bss.CAPTURE_PWM_TIME_UP:00000000 CAPTURE_PWM_TIME_UP
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:17     .bss.CAPTURE_PWM_TIME_UP:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:27     .bss.CAPTURE_PWM_TIME_ALL:00000000 CAPTURE_PWM_TIME_ALL
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:24     .bss.CAPTURE_PWM_TIME_ALL:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:34     .bss.CAPTURE_PWM_TIME_LAST:00000000 CAPTURE_PWM_TIME_LAST
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:31     .bss.CAPTURE_PWM_TIME_LAST:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:41     .bss.AdcDate:00000000 AdcDate
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:38     .bss.AdcDate:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:44     .text.BLDCGpioInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:52     .text.BLDCGpioInit:00000000 BLDCGpioInit
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:522    .text.BLDCGpioInit:000003c8 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:533    .text.BLDCGpioInit:000003f0 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:905    .text.BLDCGpioInit:00000708 $d
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:911    .text.BDCGpioInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:918    .text.BDCGpioInit:00000000 BDCGpioInit
+C:\Users\leonardo\AppData\Local\Temp\ccPKdsme.s:1215   .text.BDCGpioInit:00000268 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

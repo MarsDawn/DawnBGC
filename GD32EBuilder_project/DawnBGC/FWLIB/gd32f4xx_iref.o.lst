@@ -442,26 +442,26 @@
  355              		.file 6 "../../Libraries/FWLIB/inc/gd32f4xx_rcu.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_iref.c
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:16     .text.iref_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:24     .text.iref_deinit:00000000 iref_deinit
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:50     .text.iref_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:57     .text.iref_enable:00000000 iref_enable
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:87     .text.iref_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:92     .text.iref_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:99     .text.iref_disable:00000000 iref_disable
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:129    .text.iref_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:134    .text.iref_mode_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:141    .text.iref_mode_set:00000000 iref_mode_set
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:183    .text.iref_mode_set:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:188    .text.iref_precision_trim_value_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:195    .text.iref_precision_trim_value_set:00000000 iref_precision_trim_value_set
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:237    .text.iref_precision_trim_value_set:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:242    .text.iref_sink_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:249    .text.iref_sink_set:00000000 iref_sink_set
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:291    .text.iref_sink_set:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:296    .text.iref_step_data_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:303    .text.iref_step_data_config:00000000 iref_step_data_config
-C:\Users\leonardo\AppData\Local\Temp\ccIWzxca.s:345    .text.iref_step_data_config:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:16     .text.iref_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:24     .text.iref_deinit:00000000 iref_deinit
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:50     .text.iref_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:57     .text.iref_enable:00000000 iref_enable
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:87     .text.iref_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:92     .text.iref_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:99     .text.iref_disable:00000000 iref_disable
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:129    .text.iref_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:134    .text.iref_mode_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:141    .text.iref_mode_set:00000000 iref_mode_set
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:183    .text.iref_mode_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:188    .text.iref_precision_trim_value_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:195    .text.iref_precision_trim_value_set:00000000 iref_precision_trim_value_set
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:237    .text.iref_precision_trim_value_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:242    .text.iref_sink_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:249    .text.iref_sink_set:00000000 iref_sink_set
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:291    .text.iref_sink_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:296    .text.iref_step_data_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:303    .text.iref_step_data_config:00000000 iref_step_data_config
+C:\Users\leonardo\AppData\Local\Temp\cctdOZ5L.s:345    .text.iref_step_data_config:0000002c $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

@@ -80,8 +80,8 @@
   50:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** //#define __SYSTEM_CLOCK_168M_PLL_8M_HXTAL        (uint32_t)(168000000)
   51:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** //#define __SYSTEM_CLOCK_168M_PLL_25M_HXTAL       (uint32_t)(168000000)
   52:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** //#define __SYSTEM_CLOCK_200M_PLL_IRC16M          (uint32_t)(200000000)
-  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** //#define __SYSTEM_CLOCK_200M_PLL_8M_HXTAL        (uint32_t)(200000000)
-  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #define __SYSTEM_CLOCK_200M_PLL_25M_HXTAL       (uint32_t)(200000000)
+  53:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #define __SYSTEM_CLOCK_200M_PLL_8M_HXTAL        (uint32_t)(200000000)
+  54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** // #define __SYSTEM_CLOCK_200M_PLL_25M_HXTAL       (uint32_t)(200000000)
   55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
   56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #define SEL_IRC16M      0x00U
   57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #define SEL_HXTAL       0x01U
@@ -300,10 +300,10 @@
  165:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     system_clock_200m_irc16m();
  166:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #elif defined (__SYSTEM_CLOCK_200M_PLL_8M_HXTAL)
  167:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     system_clock_200m_8m_hxtal();
+ 141              		.loc 1 167 5
+ 142 0004 FFF7FEFF 		bl	system_clock_200m_8m_hxtal
  168:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #elif defined (__SYSTEM_CLOCK_200M_PLL_25M_HXTAL)
  169:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     system_clock_200m_25m_hxtal();
- 141              		.loc 1 169 5
- 142 0004 FFF7FEFF 		bl	system_clock_200m_25m_hxtal
  170:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #endif /* __SYSTEM_CLOCK_IRC16M */   
  171:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** }
  143              		.loc 1 171 1
@@ -311,13 +311,13 @@
  145 000a 80BD     		pop	{r7, pc}
  146              		.cfi_endproc
  147              	.LFE124:
- 149              		.section	.text.system_clock_200m_25m_hxtal,"ax",%progbits
+ 149              		.section	.text.system_clock_200m_8m_hxtal,"ax",%progbits
  150              		.align	1
  151              		.syntax unified
  152              		.thumb
  153              		.thumb_func
  154              		.fpu softvfp
- 156              	system_clock_200m_25m_hxtal:
+ 156              	system_clock_200m_8m_hxtal:
  157              	.LFB125:
  172:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
  173:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #ifdef __SYSTEM_CLOCK_IRC16M
@@ -887,75 +887,7 @@
  737:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** */
  738:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** static void system_clock_200m_8m_hxtal(void)
  739:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** {
- 740:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     uint32_t timeout = 0U;
- 741:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     uint32_t stab_flag = 0U;
- 742:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
- 743:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* enable HXTAL */
- 744:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
- 745:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 746:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
- 747:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     do{
- 748:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         timeout++;
- 749:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 750:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 751:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 752:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* if fail */
- 753:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
- 754:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         while(1){
- 755:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         }
- 756:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
- 757:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****          
- 758:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_APB1EN |= RCU_APB1EN_PMUEN;
- 759:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_LDOVS;
- 760:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 761:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* HXTAL is stable */
- 762:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* AHB = SYSCLK */
- 763:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 764:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* APB2 = AHB/2 */
- 765:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV2;
- 766:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* APB1 = AHB/4 */
- 767:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV4;
- 768:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 769:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* Configure the main PLL, PLL_M = 8, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
- 770:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_PLL = (8U | (400U << 6U) | (((2U >> 1U) - 1U) << 16U) |
- 771:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****                    (RCU_PLLSRC_HXTAL) | (9U << 24U));
- 772:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 773:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* enable PLL */
- 774:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CTL |= RCU_CTL_PLLEN;
- 775:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 776:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until PLL is stable */
- 777:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 778:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
- 779:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
- 780:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* Enable the high-drive to extend the clock frequency to 200 Mhz */
- 781:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_HDEN;
- 782:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (PMU_CS & PMU_CS_HDRF)){
- 783:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
- 784:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
- 785:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* select the high-drive mode */
- 786:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_HDS;
- 787:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (PMU_CS & PMU_CS_HDSRF)){
- 788:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     } 
- 789:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
- 790:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* select PLL as system clock */
- 791:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
- 792:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLLP;
- 793:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 794:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until PLL is selected as system clock */
- 795:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLLP)){
- 796:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
- 797:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** }
- 798:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 799:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #elif defined (__SYSTEM_CLOCK_200M_PLL_25M_HXTAL)
- 800:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** /*!
- 801:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     \brief      configure the system clock to 200M by PLL which selects HXTAL(25M) as its clock sou
- 802:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     \param[in]  none
- 803:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     \param[out] none
- 804:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     \retval     none
- 805:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** */
- 806:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** static void system_clock_200m_25m_hxtal(void)
- 807:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** {
- 158              		.loc 1 807 1
+ 158              		.loc 1 739 1
  159              		.cfi_startproc
  160              		@ args = 0, pretend = 0, frame = 8
  161              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -967,217 +899,217 @@
  167              		.cfi_def_cfa_offset 16
  168 0004 00AF     		add	r7, sp, #0
  169              		.cfi_def_cfa_register 7
- 808:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     uint32_t timeout = 0U;
- 170              		.loc 1 808 14
+ 740:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     uint32_t timeout = 0U;
+ 170              		.loc 1 740 14
  171 0006 0023     		movs	r3, #0
  172 0008 7B60     		str	r3, [r7, #4]
- 809:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     uint32_t stab_flag = 0U;
- 173              		.loc 1 809 14
+ 741:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     uint32_t stab_flag = 0U;
+ 173              		.loc 1 741 14
  174 000a 0023     		movs	r3, #0
  175 000c 3B60     		str	r3, [r7]
- 810:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
- 811:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* enable HXTAL */
- 812:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
- 176              		.loc 1 812 13
+ 742:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
+ 743:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* enable HXTAL */
+ 744:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 176              		.loc 1 744 13
  177 000e 3D4B     		ldr	r3, .L16
  178 0010 1B68     		ldr	r3, [r3]
  179 0012 3C4A     		ldr	r2, .L16
  180 0014 43F48033 		orr	r3, r3, #65536
  181 0018 1360     		str	r3, [r2]
  182              	.L9:
- 813:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 814:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
- 815:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     do{
- 816:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         timeout++;
- 183              		.loc 1 816 16 discriminator 2
+ 745:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 746:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 747:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     do{
+ 748:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         timeout++;
+ 183              		.loc 1 748 16 discriminator 2
  184 001a 7B68     		ldr	r3, [r7, #4]
  185 001c 0133     		adds	r3, r3, #1
  186 001e 7B60     		str	r3, [r7, #4]
- 817:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
- 187              		.loc 1 817 22 discriminator 2
+ 749:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 187              		.loc 1 749 22 discriminator 2
  188 0020 384B     		ldr	r3, .L16
  189 0022 1B68     		ldr	r3, [r3]
- 190              		.loc 1 817 19 discriminator 2
+ 190              		.loc 1 749 19 discriminator 2
  191 0024 03F40033 		and	r3, r3, #131072
  192 0028 3B60     		str	r3, [r7]
- 818:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
- 193              		.loc 1 818 5 discriminator 2
+ 750:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 193              		.loc 1 750 5 discriminator 2
  194 002a 3B68     		ldr	r3, [r7]
  195 002c 002B     		cmp	r3, #0
  196 002e 03D1     		bne	.L8
- 197              		.loc 1 818 30 discriminator 1
+ 197              		.loc 1 750 30 discriminator 1
  198 0030 7B68     		ldr	r3, [r7, #4]
  199 0032 B3F5004F 		cmp	r3, #32768
  200 0036 F0D1     		bne	.L9
  201              	.L8:
- 819:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 820:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* if fail */
- 821:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
- 202              		.loc 1 821 15
+ 751:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 752:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* if fail */
+ 753:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 202              		.loc 1 753 15
  203 0038 324B     		ldr	r3, .L16
  204 003a 1B68     		ldr	r3, [r3]
- 205              		.loc 1 821 23
+ 205              		.loc 1 753 23
  206 003c 03F40033 		and	r3, r3, #131072
- 207              		.loc 1 821 7
+ 207              		.loc 1 753 7
  208 0040 002B     		cmp	r3, #0
  209 0042 00D1     		bne	.L10
  210              	.L11:
- 822:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         while(1){
- 211              		.loc 1 822 14 discriminator 1
+ 754:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         while(1){
+ 211              		.loc 1 754 14 discriminator 1
  212 0044 FEE7     		b	.L11
  213              	.L10:
- 823:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         }
- 824:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
- 825:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****          
- 826:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_APB1EN |= RCU_APB1EN_PMUEN;
- 214              		.loc 1 826 16
+ 755:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         }
+ 756:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
+ 757:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****          
+ 758:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_APB1EN |= RCU_APB1EN_PMUEN;
+ 214              		.loc 1 758 16
  215 0046 304B     		ldr	r3, .L16+4
  216 0048 1B68     		ldr	r3, [r3]
  217 004a 2F4A     		ldr	r2, .L16+4
  218 004c 43F08053 		orr	r3, r3, #268435456
  219 0050 1360     		str	r3, [r2]
- 827:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_LDOVS;
- 220              		.loc 1 827 13
+ 759:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_LDOVS;
+ 220              		.loc 1 759 13
  221 0052 2E4B     		ldr	r3, .L16+8
  222 0054 1B68     		ldr	r3, [r3]
  223 0056 2D4A     		ldr	r2, .L16+8
  224 0058 43F44043 		orr	r3, r3, #49152
  225 005c 1360     		str	r3, [r2]
- 828:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 829:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* HXTAL is stable */
- 830:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* AHB = SYSCLK */
- 831:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
- 226              		.loc 1 831 14
+ 760:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 761:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* HXTAL is stable */
+ 762:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* AHB = SYSCLK */
+ 763:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 226              		.loc 1 763 14
  227 005e 2C4B     		ldr	r3, .L16+12
  228 0060 2B4A     		ldr	r2, .L16+12
  229 0062 1B68     		ldr	r3, [r3]
  230 0064 1360     		str	r3, [r2]
- 832:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* APB2 = AHB/2 */
- 833:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV2;
- 231              		.loc 1 833 14
+ 764:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* APB2 = AHB/2 */
+ 765:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV2;
+ 231              		.loc 1 765 14
  232 0066 2A4B     		ldr	r3, .L16+12
  233 0068 1B68     		ldr	r3, [r3]
  234 006a 294A     		ldr	r2, .L16+12
  235 006c 43F40043 		orr	r3, r3, #32768
  236 0070 1360     		str	r3, [r2]
- 834:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* APB1 = AHB/4 */
- 835:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV4;
- 237              		.loc 1 835 14
+ 766:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* APB1 = AHB/4 */
+ 767:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV4;
+ 237              		.loc 1 767 14
  238 0072 274B     		ldr	r3, .L16+12
  239 0074 1B68     		ldr	r3, [r3]
  240 0076 264A     		ldr	r2, .L16+12
  241 0078 43F4A053 		orr	r3, r3, #5120
  242 007c 1360     		str	r3, [r2]
- 836:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 837:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* Configure the main PLL, PLL_M = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
- 838:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_PLL = (25U | (400U << 6U) | (((2U >> 1U) - 1U) << 16U) |
- 243              		.loc 1 838 5
+ 768:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 769:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* Configure the main PLL, PLL_M = 8, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
+ 770:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_PLL = (8U | (400U << 6U) | (((2U >> 1U) - 1U) << 16U) |
+ 243              		.loc 1 770 5
  244 007e 254B     		ldr	r3, .L16+16
- 245              		.loc 1 838 13
+ 245              		.loc 1 770 13
  246 0080 254A     		ldr	r2, .L16+20
  247 0082 1A60     		str	r2, [r3]
- 839:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****                    (RCU_PLLSRC_HXTAL) | (9U << 24U));
- 840:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 841:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* enable PLL */
- 842:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CTL |= RCU_CTL_PLLEN;
- 248              		.loc 1 842 13
+ 771:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****                    (RCU_PLLSRC_HXTAL) | (9U << 24U));
+ 772:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 773:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* enable PLL */
+ 774:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 248              		.loc 1 774 13
  249 0084 1F4B     		ldr	r3, .L16
  250 0086 1B68     		ldr	r3, [r3]
  251 0088 1E4A     		ldr	r2, .L16
  252 008a 43F08073 		orr	r3, r3, #16777216
  253 008e 1360     		str	r3, [r2]
- 843:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 844:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until PLL is stable */
- 845:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
- 254              		.loc 1 845 10
+ 775:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 776:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until PLL is stable */
+ 777:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 254              		.loc 1 777 10
  255 0090 00BF     		nop
  256              	.L12:
- 257              		.loc 1 845 18 discriminator 1
+ 257              		.loc 1 777 18 discriminator 1
  258 0092 1C4B     		ldr	r3, .L16
  259 0094 1B68     		ldr	r3, [r3]
- 260              		.loc 1 845 26 discriminator 1
+ 260              		.loc 1 777 26 discriminator 1
  261 0096 03F00073 		and	r3, r3, #33554432
- 262              		.loc 1 845 10 discriminator 1
+ 262              		.loc 1 777 10 discriminator 1
  263 009a 002B     		cmp	r3, #0
  264 009c F9D0     		beq	.L12
- 846:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
- 847:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
- 848:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* Enable the high-drive to extend the clock frequency to 200 Mhz */
- 849:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_HDEN;
- 265              		.loc 1 849 13
+ 778:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
+ 779:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
+ 780:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* Enable the high-drive to extend the clock frequency to 200 Mhz */
+ 781:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_HDEN;
+ 265              		.loc 1 781 13
  266 009e 1B4B     		ldr	r3, .L16+8
  267 00a0 1B68     		ldr	r3, [r3]
  268 00a2 1A4A     		ldr	r2, .L16+8
  269 00a4 43F48033 		orr	r3, r3, #65536
  270 00a8 1360     		str	r3, [r2]
- 850:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (PMU_CS & PMU_CS_HDRF)){
- 271              		.loc 1 850 10
+ 782:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (PMU_CS & PMU_CS_HDRF)){
+ 271              		.loc 1 782 10
  272 00aa 00BF     		nop
  273              	.L13:
- 274              		.loc 1 850 18 discriminator 1
+ 274              		.loc 1 782 18 discriminator 1
  275 00ac 1B4B     		ldr	r3, .L16+24
  276 00ae 1B68     		ldr	r3, [r3]
- 277              		.loc 1 850 25 discriminator 1
+ 277              		.loc 1 782 25 discriminator 1
  278 00b0 03F48033 		and	r3, r3, #65536
- 279              		.loc 1 850 10 discriminator 1
+ 279              		.loc 1 782 10 discriminator 1
  280 00b4 002B     		cmp	r3, #0
  281 00b6 F9D0     		beq	.L13
- 851:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
- 852:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
- 853:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* select the high-drive mode */
- 854:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_HDS;
- 282              		.loc 1 854 13
+ 783:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
+ 784:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
+ 785:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* select the high-drive mode */
+ 786:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_HDS;
+ 282              		.loc 1 786 13
  283 00b8 144B     		ldr	r3, .L16+8
  284 00ba 1B68     		ldr	r3, [r3]
  285 00bc 134A     		ldr	r2, .L16+8
  286 00be 43F40033 		orr	r3, r3, #131072
  287 00c2 1360     		str	r3, [r2]
- 855:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (PMU_CS & PMU_CS_HDSRF)){
- 288              		.loc 1 855 10
+ 787:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (PMU_CS & PMU_CS_HDSRF)){
+ 288              		.loc 1 787 10
  289 00c4 00BF     		nop
  290              	.L14:
- 291              		.loc 1 855 18 discriminator 1
+ 291              		.loc 1 787 18 discriminator 1
  292 00c6 154B     		ldr	r3, .L16+24
  293 00c8 1B68     		ldr	r3, [r3]
- 294              		.loc 1 855 25 discriminator 1
+ 294              		.loc 1 787 25 discriminator 1
  295 00ca 03F40033 		and	r3, r3, #131072
- 296              		.loc 1 855 10 discriminator 1
+ 296              		.loc 1 787 10 discriminator 1
  297 00ce 002B     		cmp	r3, #0
  298 00d0 F9D0     		beq	.L14
- 856:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     } 
- 857:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
- 858:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* select PLL as system clock */
- 859:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
- 299              		.loc 1 859 14
+ 788:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     } 
+ 789:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
+ 790:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* select PLL as system clock */
+ 791:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 299              		.loc 1 791 14
  300 00d2 0F4B     		ldr	r3, .L16+12
  301 00d4 1B68     		ldr	r3, [r3]
  302 00d6 0E4A     		ldr	r2, .L16+12
  303 00d8 23F00303 		bic	r3, r3, #3
  304 00dc 1360     		str	r3, [r2]
- 860:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLLP;
- 305              		.loc 1 860 14
+ 792:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLLP;
+ 305              		.loc 1 792 14
  306 00de 0C4B     		ldr	r3, .L16+12
  307 00e0 1B68     		ldr	r3, [r3]
  308 00e2 0B4A     		ldr	r2, .L16+12
  309 00e4 43F00203 		orr	r3, r3, #2
  310 00e8 1360     		str	r3, [r2]
- 861:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
- 862:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until PLL is selected as system clock */
- 863:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLLP)){
- 311              		.loc 1 863 10
+ 793:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 794:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until PLL is selected as system clock */
+ 795:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLLP)){
+ 311              		.loc 1 795 10
  312 00ea 00BF     		nop
  313              	.L15:
- 314              		.loc 1 863 18 discriminator 1
+ 314              		.loc 1 795 18 discriminator 1
  315 00ec 084B     		ldr	r3, .L16+12
  316 00ee 1B68     		ldr	r3, [r3]
- 317              		.loc 1 863 27 discriminator 1
+ 317              		.loc 1 795 27 discriminator 1
  318 00f0 03F00803 		and	r3, r3, #8
- 319              		.loc 1 863 10 discriminator 1
+ 319              		.loc 1 795 10 discriminator 1
  320 00f4 002B     		cmp	r3, #0
  321 00f6 F9D0     		beq	.L15
- 864:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
- 865:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** }
- 322              		.loc 1 865 1
+ 796:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
+ 797:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** }
+ 322              		.loc 1 797 1
  323 00f8 00BF     		nop
  324 00fa 00BF     		nop
  325 00fc 0C37     		adds	r7, r7, #12
@@ -1197,7 +1129,7 @@
  339 010c 00700040 		.word	1073770496
  340 0110 08380240 		.word	1073887240
  341 0114 04380240 		.word	1073887236
- 342 0118 19644009 		.word	155214873
+ 342 0118 08644009 		.word	155214856
  343 011c 04700040 		.word	1073770500
  344              		.cfi_endproc
  345              	.LFE125:
@@ -1218,6 +1150,74 @@
  358              		.fpu softvfp
  360              	SystemCoreClockUpdate:
  361              	.LFB126:
+ 798:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 799:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #elif defined (__SYSTEM_CLOCK_200M_PLL_25M_HXTAL)
+ 800:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** /*!
+ 801:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     \brief      configure the system clock to 200M by PLL which selects HXTAL(25M) as its clock sou
+ 802:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     \param[in]  none
+ 803:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     \param[out] none
+ 804:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     \retval     none
+ 805:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** */
+ 806:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** static void system_clock_200m_25m_hxtal(void)
+ 807:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** {
+ 808:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     uint32_t timeout = 0U;
+ 809:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     uint32_t stab_flag = 0U;
+ 810:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
+ 811:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* enable HXTAL */
+ 812:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CTL |= RCU_CTL_HXTALEN;
+ 813:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 814:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until HXTAL is stable or the startup time is longer than HXTAL_STARTUP_TIMEOUT */
+ 815:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     do{
+ 816:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         timeout++;
+ 817:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         stab_flag = (RCU_CTL & RCU_CTL_HXTALSTB);
+ 818:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }while((0U == stab_flag) && (HXTAL_STARTUP_TIMEOUT != timeout));
+ 819:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 820:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* if fail */
+ 821:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     if(0U == (RCU_CTL & RCU_CTL_HXTALSTB)){
+ 822:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         while(1){
+ 823:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****         }
+ 824:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
+ 825:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****          
+ 826:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_APB1EN |= RCU_APB1EN_PMUEN;
+ 827:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_LDOVS;
+ 828:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 829:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* HXTAL is stable */
+ 830:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* AHB = SYSCLK */
+ 831:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_AHB_CKSYS_DIV1;
+ 832:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* APB2 = AHB/2 */
+ 833:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_APB2_CKAHB_DIV2;
+ 834:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* APB1 = AHB/4 */
+ 835:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_APB1_CKAHB_DIV4;
+ 836:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 837:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* Configure the main PLL, PLL_M = 25, PLL_N = 400, PLL_P = 2, PLL_Q = 9 */ 
+ 838:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_PLL = (25U | (400U << 6U) | (((2U >> 1U) - 1U) << 16U) |
+ 839:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****                    (RCU_PLLSRC_HXTAL) | (9U << 24U));
+ 840:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 841:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* enable PLL */
+ 842:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CTL |= RCU_CTL_PLLEN;
+ 843:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 844:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until PLL is stable */
+ 845:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (RCU_CTL & RCU_CTL_PLLSTB)){
+ 846:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
+ 847:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
+ 848:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* Enable the high-drive to extend the clock frequency to 200 Mhz */
+ 849:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_HDEN;
+ 850:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (PMU_CS & PMU_CS_HDRF)){
+ 851:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
+ 852:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
+ 853:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* select the high-drive mode */
+ 854:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     PMU_CTL |= PMU_CTL_HDS;
+ 855:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (PMU_CS & PMU_CS_HDSRF)){
+ 856:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     } 
+ 857:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     
+ 858:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* select PLL as system clock */
+ 859:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 &= ~RCU_CFG0_SCS;
+ 860:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     RCU_CFG0 |= RCU_CKSYSSRC_PLLP;
+ 861:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
+ 862:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     /* wait until PLL is selected as system clock */
+ 863:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     while(0U == (RCU_CFG0 & RCU_SCSS_PLLP)){
+ 864:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c ****     }
+ 865:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** }
  866:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** 
  867:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** #endif /* __SYSTEM_CLOCK_IRC16M */
  868:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS\system_gd32f4xx.c **** /*!
@@ -1441,20 +1441,20 @@
  532              		.file 5 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS/system_gd32f4xx.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 system_gd32f4xx.c
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:20     .data.SystemCoreClock:00000000 SystemCoreClock
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:17     .data.SystemCoreClock:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:23     .text.SystemInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:31     .text.SystemInit:00000000 SystemInit
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:129    .text.system_clock_config:00000000 system_clock_config
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:114    .text.SystemInit:0000006c $d
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:123    .text.system_clock_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:156    .text.system_clock_200m_25m_hxtal:00000000 system_clock_200m_25m_hxtal
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:150    .text.system_clock_200m_25m_hxtal:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:337    .text.system_clock_200m_25m_hxtal:00000104 $d
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:348    .rodata:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:353    .text.SystemCoreClockUpdate:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:360    .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-C:\Users\leonardo\AppData\Local\Temp\ccAgiZ4b.s:518    .text.SystemCoreClockUpdate:000000d8 $d
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:20     .data.SystemCoreClock:00000000 SystemCoreClock
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:17     .data.SystemCoreClock:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:23     .text.SystemInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:31     .text.SystemInit:00000000 SystemInit
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:129    .text.system_clock_config:00000000 system_clock_config
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:114    .text.SystemInit:0000006c $d
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:123    .text.system_clock_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:156    .text.system_clock_200m_8m_hxtal:00000000 system_clock_200m_8m_hxtal
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:150    .text.system_clock_200m_8m_hxtal:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:337    .text.system_clock_200m_8m_hxtal:00000104 $d
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:348    .rodata:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:353    .text.SystemCoreClockUpdate:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:360    .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:518    .text.SystemCoreClockUpdate:000000d8 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

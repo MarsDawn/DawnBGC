@@ -943,16 +943,16 @@
  739              		.file 20 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 flash.c
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:16     .text.flash_sector_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:23     .text.flash_sector_get:00000000 flash_sector_get
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:444    .text.flash_sector_get:00000260 $d
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:471    .text.flash_sector_get:000002c4 $t
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:491    .text.flash_erase:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:498    .text.flash_erase:00000000 flash_erase
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:571    .text.flash_write_words:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:578    .text.flash_write_words:00000000 flash_write_words
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:649    .text.flash_read_words:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccHvnitg.s:656    .text.flash_read_words:00000000 flash_read_words
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:16     .text.flash_sector_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:23     .text.flash_sector_get:00000000 flash_sector_get
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:444    .text.flash_sector_get:00000260 $d
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:471    .text.flash_sector_get:000002c4 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:491    .text.flash_erase:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:498    .text.flash_erase:00000000 flash_erase
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:571    .text.flash_write_words:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:578    .text.flash_write_words:00000000 flash_write_words
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:649    .text.flash_read_words:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccbZbjWZ.s:656    .text.flash_read_words:00000000 flash_read_words
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

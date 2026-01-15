@@ -388,18 +388,18 @@
  315              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_function.c
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:20     .data.customer_operation:00000000 customer_operation
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:17     .data.customer_operation:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:32     .text.gimbal_business:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:40     .text.gimbal_business:00000000 gimbal_business
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:85     .text.motor_stall_process:00000000 motor_stall_process
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:68     .text.gimbal_business:00000014 $d
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:78     .text.motor_stall_process:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:273    .text.motor_stall_process:0000012c $d
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:287    .bss.StallTime.11229:00000000 StallTime.11229
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:292    .bss.StallTimes.11230:00000000 StallTimes.11230
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:284    .bss.StallTime.11229:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccInqGgZ.s:293    .bss.StallTimes.11230:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:20     .data.customer_operation:00000000 customer_operation
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:17     .data.customer_operation:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:32     .text.gimbal_business:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:40     .text.gimbal_business:00000000 gimbal_business
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:85     .text.motor_stall_process:00000000 motor_stall_process
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:68     .text.gimbal_business:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:78     .text.motor_stall_process:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:273    .text.motor_stall_process:0000012c $d
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:287    .bss.StallTime.11229:00000000 StallTime.11229
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:292    .bss.StallTimes.11230:00000000 StallTimes.11230
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:284    .bss.StallTime.11229:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:293    .bss.StallTimes.11230:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
