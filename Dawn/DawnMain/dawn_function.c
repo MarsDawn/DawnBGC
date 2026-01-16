@@ -53,23 +53,17 @@ void motor_stall_process(void)
     
     if (
         (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 100.f) 
-        || (GimbalSystem.ArmTorqueRef.Data.Latge) > (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMax - 100.0f) 
-        || (GimbalSystem.ArmTorqueRef.Data.Middle) < (GimbalSystem.ArmRadsPID.Data.Middle.OutLimitMin + 100.0f) 
-        || (GimbalSystem.ArmTorqueRef.Data.Middle) > (GimbalSystem.ArmRadsPID.Data.Middle.OutLimitMax - 100.0f) 
-        || (GimbalSystem.ArmTorqueRef.Data.Small) < (GimbalSystem.ArmRadsPID.Data.Small.OutLimitMin + 100.0f) 
-        || (GimbalSystem.ArmTorqueRef.Data.Small) > (GimbalSystem.ArmRadsPID.Data.Small.OutLimitMax - 100.0f))
+        || (GimbalSystem.ArmTorqueRef.Data.Latge) > (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMax - 100.0f) )
     {
         StallTime++;
-        if (StallTime > (5.0f * CLOSELOOP_EXECUTE_FREQ))
+        if (StallTime > (0.2f * CLOSELOOP_EXECUTE_FREQ))
         {
             
             StallTime = 0;
 
-            StallTimes++;
-
-            // ShutOffPWM(&BLDCYaw);
-            BDC_ShutOffPWM(&BLDCRoll);
-            BDC_ShutOffPWM(&BLDCPitch);
+            GimbalSystem.GeoEulerTraget.Pitch = GimbalSystem.GeoEulerQuat.Pitch;
+            // BDC_ShutOffPWM(&BLDCRoll);
+            // BDC_ShutOffPWM(&BLDCPitch);
 
             // ShutOffPWM(&BLDCYaw);
             // ShutOffPWM(&BLDCRoll);

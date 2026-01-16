@@ -183,7 +183,7 @@ void GimbalWork(void)
         CalcJacobianTrans(&GimbalSystem.ArmAngle, &GimbalSystem.JacbState);
     }
 
-    // gimbal_business();
+    gimbal_business();
 }
 
 static void BLDCUpdata(void)
