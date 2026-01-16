@@ -86,25 +86,25 @@ void BDCpwm(BLDCStruct *BLDCStruct)
     {
     case BLDC_ID_YAW:
     {
-        /* PITCH：TIMER0_CH0(PA8) = IN1，TIMER0_CH3(PA11) = IN2 */
-        volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER0);
-        volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH3CV(TIMER0);
-        BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
-    }
-    break;
-
-    case BLDC_ID_ROLL:
-    {
-        /* ROLL：TIMER1_CH2 = IN1，TIMER1_CH3 = IN2 */
+        /* YAW：TIMER1_CH2 = IN1，TIMER1_CH3 = IN2 */
         volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH2CV(TIMER1);
         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH3CV(TIMER1);
         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM1_ARR, in1, in2);
     }
     break;
 
+    case BLDC_ID_ROLL:
+    {
+        /* ROLL：TIMER0_CH0(PA8) = IN1，TIMER0_CH3(PA11) = IN2 */
+        volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER0);
+        volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH3CV(TIMER0);
+        BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM0_ARR, in1, in2);
+    }
+    break;
+
     case BLDC_ID_PITCH:
     {
-        /* YAW：TIMER1_CH0 = IN1，TIMER1_CH1 = IN2 */
+        /* PIRCH：TIMER1_CH0 = IN1，TIMER1_CH1 = IN2 */
         volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER1);
         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER1);
         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM1_ARR, in1, in2);

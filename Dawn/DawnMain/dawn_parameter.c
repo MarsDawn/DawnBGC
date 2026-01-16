@@ -72,7 +72,7 @@ GimbalSystemStruct GimbalSystem =
             {
                 
                 .Latge = 1.0f,
-                .Middle = 1.0f,
+                .Middle = -1.0f,
                 .Small = -1.0f,
             },
 

@@ -247,8 +247,7 @@ void BDCGpioInit(void)
     rcu_periph_clock_enable(RCU_TIMER1);
 
     /* ---------- GPIO：PWM 输出 ---------- */
-    /* Motor1: TIM1_CH0 / CH1 -> PB8 / PB9 */
-    /* Motor2: TIM1_CH2 / CH3 -> PB10 / PB11 */
+    /* TIMER1: CH0/CH1/CH2/CH3 -> PB8 / PB9 / PB10 / PB11 */
     gpio_af_set(GPIOB, GPIO_AF_1,
                 GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
     gpio_mode_set(GPIOB, GPIO_MODE_AF, GPIO_PUPD_NONE,
@@ -256,79 +255,90 @@ void BDCGpioInit(void)
     gpio_output_options_set(GPIOB, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
                             GPIO_PIN_8 | GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11);
 
-    /* Motor3: TIM0_CH0 / CH3 -> PA8 / PA11（示例） */
+    /* TIMER0: CH0 / CH3 -> PA8 / PA11 */
     gpio_af_set(GPIOA, GPIO_AF_1, GPIO_PIN_8 | GPIO_PIN_11);
     gpio_mode_set(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO_PIN_8 | GPIO_PIN_11);
     gpio_output_options_set(GPIOA, GPIO_OTYPE_PP, GPIO_OSPEED_200MHZ,
                             GPIO_PIN_8 | GPIO_PIN_11);
 
-    /* ---------- TIMER1（电机1、2） ---------- */
-    timer_deinit(TIMER1);
+    /* ---------- TIMER0（只用 CH0、CH3） ---------- */
+    timer_deinit(TIMER0);
     tim.prescaler = 0;
     tim.alignedmode = TIMER_COUNTER_EDGE;
     tim.counterdirection = TIMER_COUNTER_UP;
-    tim.period = (uint16_t)TIM1_ARR;
+    tim.period = (uint16_t)TIM0_ARR;
     tim.clockdivision = TIMER_CKDIV_DIV1;
     tim.repetitioncounter = 0;
-    timer_init(TIMER1, &tim);
-    timer_auto_reload_shadow_enable(TIMER1);
-
-    oc.outputstate = TIMER_CCX_ENABLE;
-    oc.ocpolarity = TIMER_OC_POLARITY_LOW;
-    oc.ocidlestate = TIMER_OC_IDLE_STATE_LOW;
-
-    /* TIM1 CH0~CH3 */
-    timer_channel_output_config(TIMER1, TIMER_CH_0, &oc);
-    timer_channel_output_mode_config(TIMER1, TIMER_CH_0, TIMER_OC_MODE_PWM1);
-    timer_channel_output_shadow_config(TIMER1, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
-    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_0, 0);
-
-    timer_channel_output_config(TIMER1, TIMER_CH_1, &oc);
-    timer_channel_output_mode_config(TIMER1, TIMER_CH_1, TIMER_OC_MODE_PWM1);
-    timer_channel_output_shadow_config(TIMER1, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
-    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_1, 0);
-
-    timer_channel_output_config(TIMER1, TIMER_CH_2, &oc);
-    timer_channel_output_mode_config(TIMER1, TIMER_CH_2, TIMER_OC_MODE_PWM1);
-    timer_channel_output_shadow_config(TIMER1, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
-    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_2, 0);
-
-    timer_channel_output_config(TIMER1, TIMER_CH_3, &oc);
-    timer_channel_output_mode_config(TIMER1, TIMER_CH_3, TIMER_OC_MODE_PWM1);
-    timer_channel_output_shadow_config(TIMER1, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
-    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_3, 0);
-
-    timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
-    timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
-    timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
-    timer_channel_output_state_config(TIMER1, TIMER_CH_3, TIMER_CCX_DISABLE);
-
-
-    timer_counter_value_config(TIMER1, 0);
-    timer_enable(TIMER1);
-
-    /* ---------- TIMER0（电机3 预留） ---------- */
-    timer_deinit(TIMER0);
-    tim.period = (uint16_t)TIM0_ARR;
     timer_init(TIMER0, &tim);
     timer_auto_reload_shadow_enable(TIMER0);
 
-    /* TIM0 CH0|CH3 */
+    oc.outputstate = TIMER_CCX_ENABLE;
+    oc.ocpolarity  = TIMER_OC_POLARITY_LOW;
+    oc.ocidlestate = TIMER_OC_IDLE_STATE_LOW;
+
+    /* TIMER0 CH0 */
     timer_channel_output_config(TIMER0, TIMER_CH_0, &oc);
     timer_channel_output_mode_config(TIMER0, TIMER_CH_0, TIMER_OC_MODE_PWM1);
     timer_channel_output_shadow_config(TIMER0, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_0, 0);
 
+    /* TIMER0 CH3 */
     timer_channel_output_config(TIMER0, TIMER_CH_3, &oc);
     timer_channel_output_mode_config(TIMER0, TIMER_CH_3, TIMER_OC_MODE_PWM1);
     timer_channel_output_shadow_config(TIMER0, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
     timer_channel_output_pulse_value_config(TIMER0, TIMER_CH_3, 0);
 
+    /* 说明：你原来的策略是初始化时先关闭通道输出，这里保持一致
+       如果你希望初始化后立刻有PWM输出，把 DISABLE 改成 ENABLE */
     timer_channel_output_state_config(TIMER0, TIMER_CH_0, TIMER_CCX_DISABLE);
     timer_channel_output_state_config(TIMER0, TIMER_CH_3, TIMER_CCX_DISABLE);
 
+    /* TIMER0 若为高级定时器，需要主输出使能（你原代码里就开了） */
     timer_primary_output_config(TIMER0, ENABLE);
 
     timer_counter_value_config(TIMER0, 0);
     timer_enable(TIMER0);
+
+    /* ---------- TIMER1（用 CH0~CH3） ---------- */
+    timer_deinit(TIMER1);
+    tim.period = (uint16_t)TIM1_ARR;
+    timer_init(TIMER1, &tim);
+    timer_auto_reload_shadow_enable(TIMER1);
+
+    /* TIMER1 CH0 */
+    timer_channel_output_config(TIMER1, TIMER_CH_0, &oc);
+    timer_channel_output_mode_config(TIMER1, TIMER_CH_0, TIMER_OC_MODE_PWM1);
+    timer_channel_output_shadow_config(TIMER1, TIMER_CH_0, TIMER_OC_SHADOW_ENABLE);
+    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_0, 0);
+
+    /* TIMER1 CH1 */
+    timer_channel_output_config(TIMER1, TIMER_CH_1, &oc);
+    timer_channel_output_mode_config(TIMER1, TIMER_CH_1, TIMER_OC_MODE_PWM1);
+    timer_channel_output_shadow_config(TIMER1, TIMER_CH_1, TIMER_OC_SHADOW_ENABLE);
+    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_1, 0);
+
+    /* TIMER1 CH2 */
+    timer_channel_output_config(TIMER1, TIMER_CH_2, &oc);
+    timer_channel_output_mode_config(TIMER1, TIMER_CH_2, TIMER_OC_MODE_PWM1);
+    timer_channel_output_shadow_config(TIMER1, TIMER_CH_2, TIMER_OC_SHADOW_ENABLE);
+    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_2, 0);
+
+    /* TIMER1 CH3 */
+    timer_channel_output_config(TIMER1, TIMER_CH_3, &oc);
+    timer_channel_output_mode_config(TIMER1, TIMER_CH_3, TIMER_OC_MODE_PWM1);
+    timer_channel_output_shadow_config(TIMER1, TIMER_CH_3, TIMER_OC_SHADOW_ENABLE);
+    timer_channel_output_pulse_value_config(TIMER1, TIMER_CH_3, 0);
+
+    /* 同样保持你原来的“初始化先关闭输出”策略 */
+    timer_channel_output_state_config(TIMER1, TIMER_CH_0, TIMER_CCX_DISABLE);
+    timer_channel_output_state_config(TIMER1, TIMER_CH_1, TIMER_CCX_DISABLE);
+    timer_channel_output_state_config(TIMER1, TIMER_CH_2, TIMER_CCX_DISABLE);
+    timer_channel_output_state_config(TIMER1, TIMER_CH_3, TIMER_CCX_DISABLE);
+
+    /* 注意：如果 TIMER1 也是高级定时器且需要 MOE，这里也应开启主输出。
+       你原代码没开，是否需要取决于芯片定时器类型。若你发现 TIMER1 无输出，可尝试打开： */
+    /* timer_primary_output_config(TIMER1, ENABLE); */
+
+    timer_counter_value_config(TIMER1, 0);
+    timer_enable(TIMER1);
 }
