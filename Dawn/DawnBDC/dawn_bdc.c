@@ -95,7 +95,7 @@ void BDCpwm(BLDCStruct *BLDCStruct)
 
     case BLDC_ID_ROLL:
     {
-        /* ROLL：TIMER1_CH2 = IN1，TIMER0_CH3 = IN2 */
+        /* ROLL：TIMER1_CH2 = IN1，TIMER1_CH3 = IN2 */
         volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH2CV(TIMER1);
         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH3CV(TIMER1);
         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM1_ARR, in1, in2);
@@ -104,7 +104,7 @@ void BDCpwm(BLDCStruct *BLDCStruct)
 
     case BLDC_ID_PITCH:
     {
-        /* YAW：TIMER1_CH0 = IN1，TIMER0_CH1 = IN2 */
+        /* YAW：TIMER1_CH0 = IN1，TIMER1_CH1 = IN2 */
         volatile uint32_t *in1 = (volatile uint32_t *)&TIMER_CH0CV(TIMER1);
         volatile uint32_t *in2 = (volatile uint32_t *)&TIMER_CH1CV(TIMER1);
         BDC_ApplySlowDecayDualPwm(u, (uint16_t)TIM1_ARR, in1, in2);
