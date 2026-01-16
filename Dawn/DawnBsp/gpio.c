@@ -267,7 +267,7 @@ void BDCGpioInit(void)
     tim.prescaler = 0;
     tim.alignedmode = TIMER_COUNTER_EDGE;
     tim.counterdirection = TIMER_COUNTER_UP;
-    tim.period = (uint16_t)TIM0_ARR;
+    tim.period = (uint16_t)TIM1_ARR;
     tim.clockdivision = TIMER_CKDIV_DIV1;
     tim.repetitioncounter = 0;
     timer_init(TIMER1, &tim);
@@ -309,7 +309,7 @@ void BDCGpioInit(void)
 
     /* ---------- TIMER0（电机3 预留） ---------- */
     timer_deinit(TIMER0);
-    tim.period = (uint16_t)TIM1_ARR;
+    tim.period = (uint16_t)TIM0_ARR;
     timer_init(TIMER0, &tim);
     timer_auto_reload_shadow_enable(TIMER0);
 
