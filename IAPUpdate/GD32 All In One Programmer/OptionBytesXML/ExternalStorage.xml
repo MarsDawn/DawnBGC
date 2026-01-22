@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<StorageInfo Num="2">
+    <!-- The first record is the default -->
+    <Storage Model="GD xxx">
+	    <EFUSE_MCU_INIT_DATA_0 Field="INITDATA_0[31:0]" Value="0x03000011"/>
+		<EFUSE_MCU_INIT_DATA_1 Field="INITDATA_1[31:0]" Value="0x0310EDEB"/>
+	</Storage>
+	<Storage Model="Default">
+	    <EFUSE_MCU_INIT_DATA_0 Field="INITDATA_0[31:0]" Value="0x00000000"/>
+		<EFUSE_MCU_INIT_DATA_1 Field="INITDATA_1[31:0]" Value="0x00000000"/>
+	</Storage>
+</StorageInfo>

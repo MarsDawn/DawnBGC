@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OPBytesBlocks>
+	<OPBytesBlock baseAddress="0x40022020" length="100" RegType="OptionBytes"/>
+</OPBytesBlocks>
+<OPBytes baseAddress="0x40022020" length="100" RegType="OptionBytes">
+	<OPByte>
+		<name>FMC_OBCTL</name>
+		<displayName>FMC_OBCTL</displayName>
+		<addressOffset>0x0</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0xXXXXXXXX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>NRST_MDSEL[1:0]</name>
+				<brief>NRST pin mode selection</brief>
+				<description>NRST pin mode selection.&#x000A;00: Reserved&#x000A;01: A low level on the NRST pin can reset system, internal reset can not drive NRST pin.&#x000A;10: NRST pin function as normal GPIO, and only internal RESET.&#x000A;11: NRST pin configure as input/output mode.</description>
+				<bitOffset>27</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+			<field>
+				<name>nBOOT0</name>
+				<brief>BOOT0 option bit</brief>
+				<description>BOOT0 option bit&#x000A;0: BOOT0 is 1&#x000A;1: BOOT0 is 0</description>
+				<bitOffset>26</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nBOOT1</name>
+				<brief>BOOT1 option bit</brief>
+				<description>BOOT1 option bit&#x000A;0: BOOT1 is 1&#x000A;1: BOOT1 is 0 &#x000A;Together with the BOOT0 pin, this bit selects boot mode</description>
+				<bitOffset>25</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SWBT0</name>
+				<brief>Software BOOT0</brief>
+				<description>Software BOOT0 &#x000A;0: BOOT0 taken from PA14/BOOT0 pin&#x000A;1: BOOT0 taken from the option bit nBOOT0</description>
+				<bitOffset>24</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+                <name>MLT_BND_SEC_EN</name>
+                <brief>Multiple-bonding security enable</brief>
+                <description>Multiple-bonding security enable&#x000A;0: Disable&#x000A;1: Enable &#x000A;When this bit is set, a automatic I/O configuration mechanism is enabled,which can prevent conflicts on I/Os connected (bonded) onto the same pin. If one of the I/Os connected to the same pin is set as active by configuring the SYSCFG_CFG3 register,and this bit is set ( multiple-bonding security enabled ), then the mechanism will automatically force the other I/Os in digital input mode, regardless of their software configuration.And when this bit is reset ( multiple-bonding security disabled ),the setting of SYSCFG_CFG3 register will be ignored, and GPIOs' mode linked to a given pin can be set according to GPIOs configuration.</description>
+                <bitOffset>23</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+				<name>SRAM_PARITY_CHECK</name>
+				<brief>SRAM parity check disable</brief>
+				<description>SRAM parity check disable&#x000A;0: SRAM parity check enable&#x000A;1: SRAM parity check disable</description>
+				<bitOffset>22</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nWWDG_HW</name>
+				<brief>Window watchdog configuration bit</brief>
+				<description>Window watchdog configuration bit&#x000A;0: Hardware window watchdog&#x000A;1: Software window watchdog</description>
+				<bitOffset>19</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nFWDG_HW</name>
+				<brief>Free watchdog configuration bit</brief>
+				<description>Free watchdog configuration bit&#x000A;0: Hardware free watchdog&#x000A;1: Software free watchdog</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nRST_DPSLP</name>
+				<brief>Option byte deepsleep reset value</brief>
+				<description>Option byte deepsleep reset value&#x000A;0: Generates a reset if entering deepsleep mode&#x000A;1: No reset if entering deepsleep mode</description>
+				<bitOffset>13</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>BOR_TH[1:0]</name>
+				<brief>BOR threshold at falling VDD supply</brief>
+				<description>BOR threshold at falling VDD supply&#x000A;VDD brownout crossings this threshold activates the reset signal.&#x000A;00: BOR level 1(falling threshold is 2.1 V / rising threshold is 2.0 V)&#x000A;01: BOR level 2(falling threshold is 2.3 V / rising threshold is 2.2 V)&#x000A;10: BOR level 3(falling threshold is 2.6 V / rising threshold is 2.5 V)&#x000A;11: BOR level 4(falling threshold is 2.9 V / rising threshold is 2.8 V)</description>
+				<bitOffset>9</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+			<field>
+				<name>BORST_EN</name>
+				<brief>Brownout reset enable</brief>
+				<description>Brownout reset enable&#x000A;0: Brown out reset disable, power-on reset defined by POR/PDR levels&#x000A;1: Brown out reset enable, values of BOR_TH taken into account</description>
+				<bitOffset>8</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SPC[7:0]</name>
+				<brief>Security protection level option byte status bits</brief>
+				<description>Security protection level option byte status bits&#x000A;0xA5: No protection&#x000A;0xCC: Protection level high, chip read protection enabled&#x000A;Any value except 0xA5 or 0xCC: Protection level low, memory read protection enabled</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FMC_DCRP_SADDR0</name>
+		<displayName>FMC_DCRP_SADDR0</displayName>
+		<addressOffset>0x4</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x000000XX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DCRP0_SADDR[5:0]</name>
+				<brief>DCRP area 0 start address</brief>
+				<description>DCRP area 0 start address&#x000A;DCRP0_SADDR contains the offset of the first subpage of the DCRP area 0.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FMC_DCRP_EADDR0</name>
+		<displayName>FMC_DCRP_EADDR0</displayName>
+		<addressOffset>0x8</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0xX00000XX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DCRP_EREN</name>
+				<brief>DCRP area erase enable configuration bit</brief>
+				<description>DCRP area erase enable configuration bit.&#x000A;0: DCRP is not erased when SPC value in FMC_OBCTL register is decreased from value 1 to value 0.&#x000A;1: DCRP is erased when SPC value in FMC_OBCTL register is decreased from value 1 to value 0.</description>
+				<bitOffset>31</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>DCRP0_EADDR[5:0]</name>
+				<brief>DCRP area 0 end address offset</brief>
+				<description>DCRP area 0 end address offset&#x000A;DCRP0_EADDR contains the offset of the last subpage of the DCRP area 0.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FMC_WP0</name>
+		<displayName>FMC_WP0</displayName>
+		<addressOffset>0xC</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00XX00XX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WP0_EADDR[5:0]</name>
+				<brief>Write protection area 0 end address offset</brief>
+				<description>Write protection area 0 end address offset&#x000A;WP0_EADDR contains the last page of Write protect area 0.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+			<field>
+				<name>WP0_SADDR[5:0]</name>
+				<brief>Write protection area 0 end address offset</brief>
+				<description>Write protection area 0 end address offset&#x000A;WP0_SADDR contains the first page of Write protect area 0.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FMC_WP1</name>
+		<displayName>FMC_WP1</displayName>
+		<addressOffset>0x10</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00XX00XX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WP1_EADDR[5:0]</name>
+				<brief>Write protection area 1 end address offset</brief>
+				<description>Write protection area 1 end address offset&#x000A;WP1_EADDR contains the last page of Write protect area 1</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+			<field>
+				<name>WP1_SADDR[5:0]</name>
+				<brief>Write protection area 1 start address offset</brief>
+				<description>Write protection area 1 start address offset&#x000A;WP1_SADDR contains the first page of Write protect area 1</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FMC_DCRP_SADDR1</name>
+		<displayName>FMC_DCRP_SADDR1</displayName>
+		<addressOffset>0x14</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x000000XX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DCRP1_SADDR[5:0]</name>
+				<brief>DCRP area 1 start address offset</brief>
+				<description>DCRP area 1 start address offset&#x000A;DCRP1_SADDR contains the offset of the first subpage of the DCRP area 1</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FMC_DCRP_EADDR1</name>
+		<displayName>FMC_DCRP_EADDR1</displayName>
+		<addressOffset>0x18</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x000000XX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DCRP1_EADDR[5:0]</name>
+				<brief>DCRP area 1 end address offset</brief>
+				<description>DCRP area 1 end address offset&#x000A;DCRP1_EADDR contains the offset of the last subpage of the DCRP area 1.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FMC_DFWP</name>
+		<displayName>FMC_DFWP</displayName>
+		<addressOffset>0x1C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x000000XX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WP_DF[3:0]</name>
+				<brief>Data flash write protection</brief>
+				<description>Data flash write protection&#x000A;0001: Data flash page0 write protect enable&#x000A;0010: Data flash page1 write protect enable&#x000A;0100: Data flash page2 write protect enable&#x000A;1000: Data flash page3 write protect enable</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>4</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FMC_SCR</name>
+		<displayName>FMC_SCR</displayName>
+		<addressOffset>0x60</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x000X00XX</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>BOOTLK</name>
+				<brief>This bit is set to force boot from user Flash area</brief>
+				<description>This bit is set to force boot from user Flash area.&#x000A;0: Support flash, ram and system boot&#x000A;1: Only boot from main flash</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SCR_PAGE_CNT[6:0]</name>
+				<brief>Configure the number of pages in secure user area</brief>
+				<description>Configure the number of pages in secure user area.&#x000A;Secure user area starts at memory 0x0800 0000.The memory size is SCR_PAGE_CNT * page size.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>7</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+</OPBytes>
+<OTPBytesBlocks>
+    <OTPBlocks baseAddress="0x1FFF7000" length="512"/>
+</OTPBytesBlocks>
+<OTPBytes baseAddress="0x1FFF7000" length="512">
+    <OTPBlocks>
+        <name>OTP</name>
+		<displayName>OTP</displayName>
+        <minProgrammeWidth>0x40</minProgrammeWidth>
+		<maxProgrammeWidth>0x40</maxProgrammeWidth>
+		<lockBaseAddress>0x0</lockBaseAddress>
+		<BlockCnt>0x01</BlockCnt>
+		<baseAddress>0x1FFF7000</baseAddress>
+		<endAddress>0x1FFF71FF</endAddress>
+        <fields>
+		   <field>
+                <name>OTP_Block</name>
+				<displayName>OTP_Block</displayName>
+                <baseAddress>0x1FFF7000</baseAddress>
+		        <endAddress>0x1FFF71FF</endAddress>	
+				<ifHasLockArea>0x0</ifHasLockArea>
+				<size>0x200</size>
+				<lockOffset>0x00</lockOffset>
+				<lockbitWidth>0</lockbitWidth>
+				<LockVal>0</LockVal>
+            </field>
+        </fields>
+    </OTPBlocks>
+</OTPBytes>
+

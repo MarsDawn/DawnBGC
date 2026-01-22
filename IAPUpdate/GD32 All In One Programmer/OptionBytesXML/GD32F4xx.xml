@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OPBytesBlocks>
+    <OPBytesBlock baseAddress="0x1FFFC000" length="16" RegType="OptionBytes"/>
+	<OPBytesBlock baseAddress="0x1FFEC000" length="16" RegType="OptionBytes"/>
+</OPBytesBlocks>
+<OPBytes baseAddress="0x1FFFC000" length="16" RegType="OptionBytes">
+    <OPByte>
+        <name>USER</name>
+        <displayName>USER</displayName>
+        <addressOffset>0x0</addressOffset>
+        <size>0x8</size>
+        <access>read-write</access>
+        <reset>0xEF</reset>		
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+                <name>nRST_STDBY</name>
+                <brief>Generate a reset instead of entering standby mode</brief>
+                <description>nRST_STDBY&#x000A;0: generate a reset instead of entering standby mode&#x000A;1: no reset when entering standby mode</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>nRST_DPSLP</name>
+                <brief>Generate a reset instead of entering Deep-sleep mode</brief>
+                <description>nRST_DPSLP&#x000A;0: generate a reset instead of entering Deep-sleep mode&#x000A;1: no reset when entering Deep-sleep mode</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>nWDG_HW</name>
+                <brief>Hardware free watchdog</brief>
+                <description>nWDG_HW&#x000A;0: hardware free watchdog&#x000A;1: software free watchdog</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>BB</name>
+                <brief>Boot configuration</brief>
+                <description>BB&#x000A;0: boot from bank0, when configured boot from main memory (default value)&#x000A;1: boot from bank1 or bank0 if bank1 is void, when configured boot from main memory</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>BOR_TH</name>
+                <brief>BOR_TH (Brown out reset threshold)</brief>
+                <description>BOR_TH&#x000A;00: BOR threshold value 3&#x000A;01: BOR threshold value 2&#x000A;10: BOR threshold value 1&#x000A;11: NO BOR function</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>2</bitWidth>
+            </field>
+        </fields>
+    </OPByte>
+    <OPByte>
+        <name>SPC</name>
+        <displayName>SPC</displayName>
+        <addressOffset>0x1</addressOffset>
+        <size>0x8</size>
+        <access>read-write</access>
+		<reset>0xAA</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+                <name>SPC</name>
+                <brief>Option byte security protection code</brief>
+                <description>Option byte security protection code&#x000A;0xAA: No protection&#x000A;any value except 0xAA or 0xCC: Protection level low&#x000A;0xCC: Protection level high</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+            </field>
+        </fields>
+    </OPByte>
+    <OPByte>
+        <name>WP0[7:0]</name>
+        <displayName>WP0[7:0]</displayName>
+        <addressOffset>0x8</addressOffset>
+        <size>0x8</size>
+        <access>read-write</access>
+		<reset>0xFF</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+                <name>WP0[7]</name>
+                <brief>0x08060000~0x0807FFFF</brief>
+                <description>Sector Erase/Program Protection bit 7(0x08060000~0x0807FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[6]</name>
+                <brief>0x08040000~0x0805FFFF</brief>
+                <description>Sector Erase/Program Protection bit 6(0x08040000~0x0805FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[5]</name>
+                <brief>0x08020000~0x0803FFFF</brief>
+                <description>Sector Erase/Program Protection bit 5(0x08020000~0x0803FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[4]</name>
+                <brief>0x08010000~0x0801FFFF</brief>
+                <description>Sector Erase/Program Protection bit 4(0x08010000~0x0801FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[3]</name>
+                <brief>0x0800C000~0x0800FFFF</brief>
+                <description>Sector Erase/Program Protection bit 3(0x0800C000~0x0800FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[2]</name>
+                <brief>0x08008000~0x0800BFFF</brief>
+                <description>Sector Erase/Program Protection bit 2(0x08008000~0x0800BFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[1]</name>
+                <brief>0x08004000~0x08007FFF</brief>
+                <description>Sector Erase/Program Protection bit 1(0x08004000~0x08007FFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[0]</name>
+                <brief>0x08000000~0x08003FFF</brief>
+                <description>Sector Erase/Program Protection bit 0(0x08000000~0x08003FFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+
+        </fields>
+    </OPByte>
+    <OPByte>
+        <name>WP0</name>
+        <displayName>WP0</displayName>
+        <addressOffset>0x9</addressOffset>
+        <size>0x8</size>
+        <access>read-write</access>
+		<reset>0x3F</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+                <name>DRP</name>
+                <brief>DBUS read protection bit</brief>
+                <description>DRP (DBUS read protection bit)&#x000A;0: The WP0 bits used as erase/program protection of each sector (Default value)&#x000A;1: The WP0 bits used as erase/program protection and D-bus read protection of each sector</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>DBS</name>
+                <brief>Double banks or single bank selection when flash size is 1M bytes</brief>
+                <description>DBS (Double banks or single bank selection when flash size is 1M bytes)&#x000A;0: Single bank when flash size is 1M bytes&#x000A;1: Double banks when flash size is 1M bytes</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[11]</name>
+                <brief>0x080E0000~0x080FFFFF</brief>
+                <description>Sector Erase/Program Protection bit 11(0x080E0000~0x080FFFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[10]</name>
+                <brief>0x080C0000~0x080DFFFF</brief>
+                <description>Sector Erase/Program Protection bit 10(0x080C0000~0x080DFFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[9]</name>
+                <brief>0x080A0000~0x080BFFFF</brief>
+                <description>Sector Erase/Program Protection bit 9(0x080A0000~0x080BFFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP0[8]</name>
+                <brief>0x08080000~0x0809FFFF</brief>
+                <description>Sector Erase/Program Protection bit 8(0x08080000~0x0809FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+        </fields>
+    </OPByte>  
+</OPBytes>
+<OPBytes baseAddress="0x1FFEC000" length="16" RegType="OptionBytes">
+    <OPByte>
+        <name>WP1[7:0]</name>
+        <displayName>WP1[7:0]</displayName>
+        <addressOffset>0x08</addressOffset>
+        <size>0x8</size>
+        <access>read-write</access>
+		<reset>0xFF</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+                <name>WP1[7]</name>
+                <brief>0x08160000~0x0817FFFF</brief>
+                <description>Sector Erase/Program Protection bit 7 for Bank1(0x08160000~0x0817FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[6]</name>
+                <brief>0x08140000~0x0815FFFF</brief>
+                <description>Sector Erase/Program Protection bit 6 for Bank1(0x08140000~0x0815FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[5]</name>
+                <brief>0x08120000~0x0813FFFF</brief>
+                <description>Sector Erase/Program Protection bit 5 for Bank1(0x08120000~0x0813FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[4]</name>
+                <brief>0x08110000~0x0811FFFF</brief>
+                <description>Sector Erase/Program Protection bit 4 for Bank1(0x08110000~0x0811FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[3]</name>
+                <brief>0x0810C000~0x0810FFFF</brief>
+                <description>Sector Erase/Program Protection bit 3 for Bank1(0x0810C000~0x0810FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[2]</name>
+                <brief>0x08108000~0x0810BFFF</brief>
+                <description>Sector Erase/Program Protection bit 2 for Bank1(0x08108000~0x0810BFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[1]</name>
+                <brief>0x08104000~0x08107FFF</brief>
+                <description>Sector Erase/Program Protection bit 1 for Bank1(0x08104000~0x08107FFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[0]</name>
+                <brief>0x08100000~0x08103FFF</brief>
+                <description>Sector Erase/Program Protection bit 0 for Bank1(0x08100000~0x08103FFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+        </fields>
+    </OPByte>
+    <OPByte>
+        <name>WP1</name>
+        <displayName>WP1</displayName>
+        <addressOffset>0x09</addressOffset>
+        <size>0x8</size>
+        <access>read-write</access>
+		<reset>0xFF</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+                <name>WP1[11]</name>
+                <brief>0x081E0000~</brief>
+                <description>Sector Erase/Program Protection bit 11 for Bank1(Bit 11 controls the protection of the rest flash memory)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[10]</name>
+                <brief>0x081C0000~0x081DFFFF</brief>
+                <description>Sector Erase/Program Protection bit 10 for Bank1(0x081C0000~0x081DFFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[9]</name>
+                <brief>0x081A0000~0x081BFFFF</brief>
+                <description>Sector Erase/Program Protection bit 9 for Bank1(0x081A0000~0x081BFFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>WP1[8]</name>
+                <brief>0x08180000~0x0819FFFF</brief>
+                <description>Sector Erase/Program Protection bit 8 for Bank1(0x08180000~0x0819FFFF)&#x000A;0: Erase/program protection when DRP is 0. No effect when DRP is 1&#x000A;1: No effect when DRP is 0. Erase/program protection and D-bus read protection when DRP is 1</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+        </fields>
+    </OPByte>
+</OPBytes>
+<OTPBytesBlocks>
+    <OTPBlocks baseAddress="0x1FFF7800" length="512"/>
+</OTPBytesBlocks>
+<OTPBytes baseAddress="0x1FFF7800" length="512">
+    <OTPBlocks>
+        <name>OTP</name>
+		<displayName>OTP</displayName>
+        <minProgrammeWidth>0x08</minProgrammeWidth>
+		<maxProgrammeWidth>0x20</maxProgrammeWidth>
+		<lockBaseAddress>0x1FFF7A00</lockBaseAddress>
+		<BlockCnt>0x10</BlockCnt>
+		<baseAddress>0x1FFF7800</baseAddress>
+		<endAddress>0x1FFF79FF</endAddress>
+        <fields>
+		   <field>
+                <name>OTP_Lock0</name>
+				<displayName>OTP_Lock0</displayName>
+                <baseAddress>0x1FFF7800</baseAddress>
+		        <endAddress>0x1FFF781F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x00</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock1</name>
+				<displayName>OTP_Lock1</displayName>
+                <baseAddress>0x1FFF7820</baseAddress>
+		        <endAddress>0x1FFF783F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x01</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+		    <field>
+                <name>OTP_Lock2</name>
+				<displayName>OTP_Lock2</displayName>
+                <baseAddress>0x1FFF7840</baseAddress>
+		        <endAddress>0x1FFF785F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x02</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock3</name>
+				<displayName>OTP_Lock3</displayName>
+                <baseAddress>0x1FFF7860</baseAddress>
+		        <endAddress>0x1FFF787F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x03</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock4</name>
+				<displayName>OTP_Lock4</displayName>
+                <baseAddress>0x1FFF7880</baseAddress>
+		        <endAddress>0x1FFF789F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x04</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock5</name>
+				<displayName>OTP_Lock5</displayName>
+                <baseAddress>0x1FFF78A0</baseAddress>
+		        <endAddress>0x1FFF78BF</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x05</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock6</name>
+				<displayName>OTP_Lock6</displayName>
+                <baseAddress>0x1FFF78C0</baseAddress>
+		        <endAddress>0x1FFF78DF</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x06</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock7</name>
+				<displayName>OTP_Lock7</displayName>
+                <baseAddress>0x1FFF78E0</baseAddress>
+		        <endAddress>0x1FFF78FF</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x07</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock8</name>
+				<displayName>OTP_Lock8</displayName>
+                <baseAddress>0x1FFF7900</baseAddress>
+		        <endAddress>0x1FFF791F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x08</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock9</name>
+				<displayName>OTP_Lock9</displayName>
+                <baseAddress>0x1FFF7920</baseAddress>
+		        <endAddress>0x1FFF793F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x09</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock10</name>
+				<displayName>OTP_Lock10</displayName>
+                <baseAddress>0x1FFF7940</baseAddress>
+		        <endAddress>0x1FFF795F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x0A</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock11</name>
+				<displayName>OTP_Lock11</displayName>
+                <baseAddress>0x1FFF7960</baseAddress>
+		        <endAddress>0x1FFF797F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x0B</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock12</name>
+				<displayName>OTP_Lock12</displayName>
+                <baseAddress>0x1FFF7980</baseAddress>
+		        <endAddress>0x1FFF799F</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x0C</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock13</name>
+				<displayName>OTP_Lock13</displayName>
+                <baseAddress>0x1FFF79A0</baseAddress>
+		        <endAddress>0x1FFF79BF</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x0D</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock14</name>
+				<displayName>OTP_Lock14</displayName>
+                <baseAddress>0x1FFF79C0</baseAddress>
+		        <endAddress>0x1FFF79DF</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x0E</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+			<field>
+                <name>OTP_Lock15</name>
+				<displayName>OTP_Lock15</displayName>
+                <baseAddress>0x1FFF79E0</baseAddress>
+		        <endAddress>0x1FFF79FF</endAddress>	
+				<ifHasLockArea>0x1</ifHasLockArea>
+				<size>0x20</size>
+				<lockOffset>0x0F</lockOffset>
+				<lockbitWidth>8</lockbitWidth>
+				<LockVal>0x00</LockVal>
+            </field>
+        </fields>
+    </OTPBlocks>
+</OTPBytes>

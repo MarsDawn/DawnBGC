@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OPBytesBlocks>
+    <OPBytesBlock baseAddress="0x40022040" length="16" RegType="OptionBytes"/>
+	<OPBytesBlock baseAddress="0x40022808" length="140" RegType="Efuse"/>
+</OPBytesBlocks>
+<OPBytes baseAddress="0x40022040" length="16" RegType="OptionBytes">
+	<OPByte>
+		<name>FMC_OBR</name>
+		<displayName>FMC_OBR</displayName>
+		<addressOffset>0x00</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0xFFFFFFFF</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>SRAM1_RST</name>
+				<brief>SRAM1 reset enable bit.</brief>
+				<description>0: No effect&#x000A;1: Clear SRAM1 data automatically. Effective after system reset</description>
+				<bitOffset>12</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>NRST_STOP</name>
+				<brief>Vcore domain Stop entry reset option status bit.</brief>
+				<description>0: A reset is generated when entering Stop mode on Vcore domain&#x000A;1: No reset generated when entering Stop mode on Vcore domain</description>
+				<bitOffset>11</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>NRST_STDBY</name>
+				<brief>Vcore domain Standby entry reset option status bit.</brief>
+				<description>0: A reset is generated when entering Standby mode on Vcore domain&#x000A;1: No reset generated when entering Standby mode on Vcore domain</description>
+				<bitOffset>10</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>NWDG_HW</name>
+				<brief>IWDG option byte.</brief>
+				<description>0: IWDG is hardware watchdog&#x000A;1: IWDG is software watchdog</description>
+				<bitOffset>9</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SPC[7:0]</name>
+				<brief>Option byte security protection value. Effective after system reset.</brief>
+				<description>0xAA: No protection&#x000A;Any value except 0xAA: Protection level low</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+    </OPByte>		
+	<OPByte>
+		<name>FMC_OBUSER</name>
+		<displayName>FMC_OBUSER</displayName>
+		<addressOffset>0x04</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0xFFFFFFFF</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USER[31:0]</name>
+				<brief>Option byte USER value.</brief>
+				<description>USER is subject to this bit field configuration</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>		
+	<OPByte>
+		<name>FMC_OBWRP0</name>
+		<displayName>FMC_OBWRP0</displayName>
+		<addressOffset>0x08</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0xFFFFFFFF</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WRP0_EPAGE[9:0]</name>
+				<brief>End page of write protection area 0.</brief>
+				<description>End page of write protection area 0</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>10</bitWidth>
+			</field>
+			<field>
+				<name>WRP0_SPAGE[9:0]</name>
+				<brief>Start page of write protection area 0.</brief>
+				<description>Start page of write protection area 0</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>10</bitWidth>
+			</field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_OBWRP1</name>
+		<displayName>FMC_OBWRP1</displayName>
+		<addressOffset>0x0C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0xFFFFFFFF</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WRP1_EPAGE[9:0]</name>
+				<brief>End page of write protection area 1.</brief>
+				<description>End page of write protection area 1</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>10</bitWidth>
+			</field>
+			<field>
+				<name>WRP1_SPAGE[9:0]</name>
+				<brief>Start page of write protection area 1.</brief>
+				<description>Start page of write protection area 1</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>10</bitWidth>
+			</field>
+		</fields>
+    </OPByte>			
+</OPBytes>
+<OPBytes baseAddress="0x40022808" length="140" RegType="Efuse">
+    <OPByte>
+		<name>EFUSE_CTL0</name>
+		<displayName>EFUSE_CTL0</displayName>
+		<addressOffset>0x00</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>SWBOOT0</name>
+				<brief>Efuse BOOT0 bit enable.</brief>
+				<description>0: Select boot0_pad as BOOT0 output&#x000A;1: Select Efuse_boot0 as BOOT0 output</description>
+				<bitOffset>5</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>EFBOOT0</name>
+				<brief>Efuse BOOT0.</brief>
+				<description>0: Efuse_boot0 = 0&#x000A;1: Efuse_boot0 = 1</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SWBOOT1</name>
+				<brief>Efuse BOOT1 bit enable.</brief>
+				<description>0: Select boot1_pad as BOOT1 output&#x000A;1: Select Efuse_boot1 as BOOT1 output</description>
+				<bitOffset>3</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>EFBOOT1</name>
+				<brief>Efuse BOOT1.</brief>
+				<description>0: Efuse_boot1 = 0&#x000A;1: Efuse_boot1 = 1</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>EFBOOTLK</name>
+				<brief>EFUSE_CTL0 register bits[5:2] lock bit.</brief>
+				<description>0: Unlock EFUSE_CTL register bits[5:2], these bits can be modify&#x000A;1: Lock EFUSE_CTL register bits[5:2],these bits can not be modify</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>EFSB</name>
+				<brief>SRAM1 reset enable bit.</brief>
+				<description>This bit needs to work with the bits[5:1] to decide how to startup&#x000A;0: Startup from Flash&#x000A;1: Startup from secure boot</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_CTL1</name>
+		<displayName>EFUSE_CTL1</displayName>
+		<addressOffset>0x04</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>VFCERT</name>
+				<brief>Verify firmware certificate.</brief>
+				<description>0: Disable firmware certificate verification&#x000A;1: Enable firmware certificate verification</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>VFIMG</name>
+				<brief>Verify firmware image.</brief>
+				<description>0: Disable firmware image verification&#x000A;1: Enable firmware image verification</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>OBLK</name>
+				<brief>Option bytes lock bit.</brief>
+				<description>0: Unlock option bytes&#x000A;1: Lock option bytes</description>
+				<bitOffset>3</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>ROTLK</name>
+				<brief>EFUSE_ROTPK_KEY register lock bit.</brief>
+				<description>0: Unlock EFUSE_ROTPK_KEY register, these bytes can be modified&#x000A;1: Lock EFUSE_ROTPK_KEY register, these bytes can not be modified</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>NDBG</name>
+				<brief>Debugging permission setting.</brief>
+				<description>0: Unlimited debugging&#x000A;1: Can not debug</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_FPCTL</name>
+		<displayName>EFUSE_FPCTL</displayName>
+		<addressOffset>0x08</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>FP[2]</name>
+				<brief>Efuse flash protection value.</brief>
+				<description>0~32K write protection</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>FP[0]</name>
+				<brief>Efuse flash protection value.</brief>
+				<description>Read protection level 1</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USERCTL</name>
+		<displayName>EFUSE_USERCTL</displayName>
+		<addressOffset>0x0C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000006</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>UDLK</name>
+				<brief>EFUSE_USER_DATA register lock bit.</brief>
+				<description>0: Unlock EFUSE_USER_DATA register, and register can be modified&#x000A;1: Lock EFUSE_USER_DATA register, and register can not be modified</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>AESEN</name>
+				<brief>Lock EFUSE_AES_KEY register and enable AES decrypt function.</brief>
+				<description>0: Disable AES decrypt and unlock EFUSE_AES_KEY register and AES key can be modified&#x000A;1: Enable AES decrypt and lock EFUSE_AES_KEY register and AES key can not be modified</description>
+				<bitOffset>5</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>EFOPLK </name>
+				<brief>EFUSE_FPCTL and EFUSE_USERCTL register lock bit.</brief>
+				<description>0: Unlock EFUSE_FPCTL and EFUSE_USERCTL register, these bytes can be modified&#x000A;1: Lock EFUSE_FPCTL and EFUSE_USERCTL register, these bytes can not be modified</description>
+				<bitOffset>3</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>LOGUART </name>
+				<brief>Secure Boot Log UART selection.</brief>
+				<description>0: UART2 (PA6/PA7)&#x000A;1: UART1 (PA4/PA5)</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SBCLK </name>
+				<brief>Secure boot clock source selection.</brief>
+				<description>0: IRC16M&#x000A;1: External HXTAL</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_RES0</name>
+		<displayName>EFUSE_RES0</displayName>
+		<addressOffset>0x10</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RES0[31:0]</name>
+				<brief>Efuse reserved bytes.</brief>
+				<description>Efuse reserved bytes</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_RES1</name>
+		<displayName>EFUSE_RES1</displayName>
+		<addressOffset>0x14</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RES1[31:0]</name>
+				<brief>Efuse reserved bytes.</brief>
+				<description>Efuse reserved bytes</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_RES2</name>
+		<displayName>EFUSE_RES2</displayName>
+		<addressOffset>0x18</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RES2[31:0]</name>
+				<brief>Efuse reserved bytes.</brief>
+				<description>Efuse reserved bytes</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_AESKEY0</name>
+		<displayName>EFUSE_AESKEY0</displayName>
+		<addressOffset>0x1C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>AESKEY0[31:0]</name>
+				<brief>Efuse AES key value.</brief>
+				<description>Efuse AES key value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_AESKEY1</name>
+		<displayName>EFUSE_AESKEY1</displayName>
+		<addressOffset>0x20</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>AESKEY1[31:0]</name>
+				<brief>Efuse AES key value.</brief>
+				<description>Efuse AES key value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_AESKEY2</name>
+		<displayName>EFUSE_AESKEY2</displayName>
+		<addressOffset>0x24</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>AESKEY2[31:0]</name>
+				<brief>Efuse AES key value.</brief>
+				<description>Efuse AES key value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_AESKEY3</name>
+		<displayName>EFUSE_AESKEY3</displayName>
+		<addressOffset>0x28</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>AESKEY3[31:0]</name>
+				<brief>Efuse AES key value.</brief>
+				<description>Efuse AES key value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_ROTPKKEY0</name>
+		<displayName>EFUSE_ROTPKKEY0</displayName>
+		<addressOffset>0x2C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RKEY0[31:0]</name>
+				<brief>Efuse RoTPK or its HASH value.</brief>
+				<description>Efuse RoTPK or its HASH value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_ROTPKKEY1</name>
+		<displayName>EFUSE_ROTPKKEY1</displayName>
+		<addressOffset>0x30</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RKEY1[31:0]</name>
+				<brief>Efuse RoTPK or its HASH value.</brief>
+				<description>Efuse RoTPK or its HASH value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_ROTPKKEY2</name>
+		<displayName>EFUSE_ROTPKKEY2</displayName>
+		<addressOffset>0x34</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RKEY2[31:0]</name>
+				<brief>Efuse RoTPK or its HASH value.</brief>
+				<description>Efuse RoTPK or its HASH value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_ROTPKKEY3</name>
+		<displayName>EFUSE_ROTPKKEY3</displayName>
+		<addressOffset>0x38</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RKEY3[31:0]</name>
+				<brief>Efuse RoTPK or its HASH value.</brief>
+				<description>Efuse RoTPK or its HASH value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_ROTPKKEY4</name>
+		<displayName>EFUSE_ROTPKKEY4</displayName>
+		<addressOffset>0x3C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RKEY4[31:0]</name>
+				<brief>Efuse RoTPK or its HASH value.</brief>
+				<description>Efuse RoTPK or its HASH value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_ROTPKKEY5</name>
+		<displayName>EFUSE_ROTPKKEY5</displayName>
+		<addressOffset>0x40</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RKEY5[31:0]</name>
+				<brief>Efuse RoTPK or its HASH value.</brief>
+				<description>Efuse RoTPK or its HASH value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_ROTPKKEY6</name>
+		<displayName>EFUSE_ROTPKKEY6</displayName>
+		<addressOffset>0x44</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RKEY6[31:0]</name>
+				<brief>Efuse RoTPK or its HASH value.</brief>
+				<description>Efuse RoTPK or its HASH value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_ROTPKKEY7</name>
+		<displayName>EFUSE_ROTPKKEY7</displayName>
+		<addressOffset>0x48</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>RKEY7[31:0]</name>
+				<brief>Efuse RoTPK or its HASH value.</brief>
+				<description>Efuse RoTPK or its HASH value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_PUID0</name>
+		<displayName>EFUSE_PUID0</displayName>
+		<addressOffset>0x4C</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>UID0[31:0]</name>
+				<brief>Efuse MCU UID value.</brief>
+				<description>Efuse MCU UID value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_PUID1</name>
+		<displayName>EFUSE_PUID1</displayName>
+		<addressOffset>0x50</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>UID1[31:0]</name>
+				<brief>Efuse MCU UID value.</brief>
+				<description>Efuse MCU UID value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_PUID2</name>
+		<displayName>EFUSE_PUID2</displayName>
+		<addressOffset>0x54</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>UID2[31:0]</name>
+				<brief>Efuse MCU UID value.</brief>
+				<description>Efuse MCU UID value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>	
+    <OPByte>
+		<name>EFUSE_PUID3</name>
+		<displayName>EFUSE_PUID3</displayName>
+		<addressOffset>0x58</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>UID3[31:0]</name>
+				<brief>Efuse MCU UID value.</brief>
+				<description>Efuse MCU UID value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_HUKKEY0</name>
+		<displayName>EFUSE_HUKKEY0</displayName>
+		<addressOffset>0x5C</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>HKEY0[31:0]</name>
+				<brief>Efuse HUK key value.</brief>
+				<description>Efuse HUK key value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_HUKKEY1</name>
+		<displayName>EFUSE_HUKKEY1</displayName>
+		<addressOffset>0x60</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>HKEY1[31:0]</name>
+				<brief>Efuse HUK key value.</brief>
+				<description>Efuse HUK key value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_HUKKEY2</name>
+		<displayName>EFUSE_HUKKEY2</displayName>
+		<addressOffset>0x64</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>HKEY2[31:0]</name>
+				<brief>Efuse HUK key value.</brief>
+				<description>Efuse HUK key value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_HUKKEY3</name>
+		<displayName>EFUSE_HUKKEY3</displayName>
+		<addressOffset>0x68</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>HKEY3[31:0]</name>
+				<brief>Efuse HUK key value.</brief>
+				<description>Efuse HUK key value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USER_DATA0</name>
+		<displayName>EFUSE_USER_DATA0</displayName>
+		<addressOffset>0x6C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USERDATA0[31:0]</name>
+				<brief>Efuse USER_DATA value.</brief>
+				<description>Efuse USER_DATA value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USER_DATA1</name>
+		<displayName>EFUSE_USER_DATA1</displayName>
+		<addressOffset>0x70</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USERDATA1[31:0]</name>
+				<brief>Efuse USER_DATA value.</brief>
+				<description>Efuse USER_DATA value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USER_DATA2</name>
+		<displayName>EFUSE_USER_DATA2</displayName>
+		<addressOffset>0x74</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USERDATA2[31:0]</name>
+				<brief>Efuse USER_DATA value.</brief>
+				<description>Efuse USER_DATA value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USER_DATA3</name>
+		<displayName>EFUSE_USER_DATA3</displayName>
+		<addressOffset>0x78</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USERDATA3[31:0]</name>
+				<brief>Efuse USER_DATA value.</brief>
+				<description>Efuse USER_DATA value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USER_DATA4</name>
+		<displayName>EFUSE_USER_DATA4</displayName>
+		<addressOffset>0x7C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USERDATA4[31:0]</name>
+				<brief>Efuse USER_DATA value.</brief>
+				<description>Efuse USER_DATA value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USER_DATA5</name>
+		<displayName>EFUSE_USER_DATA5</displayName>
+		<addressOffset>0x80</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USERDATA5[31:0]</name>
+				<brief>Efuse USER_DATA value.</brief>
+				<description>Efuse USER_DATA value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USER_DATA6</name>
+		<displayName>EFUSE_USER_DATA6</displayName>
+		<addressOffset>0x84</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USERDATA6[31:0]</name>
+				<brief>Efuse USER_DATA value.</brief>
+				<description>Efuse USER_DATA value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>EFUSE_USER_DATA7</name>
+		<displayName>EFUSE_USER_DATA7</displayName>
+		<addressOffset>0x88</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>USERDATA7[31:0]</name>
+				<brief>Efuse USER_DATA value.</brief>
+				<description>Efuse USER_DATA value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>32</bitWidth>
+			</field>
+		</fields>
+    </OPByte>	
+</OPBytes>

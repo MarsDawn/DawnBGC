@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OPBytesBlocks>
+	<OPBytesBlock baseAddress="0x1FFFF800" length="32" RegType="OptionBytes"/>
+</OPBytesBlocks>
+<OPBytes baseAddress="0x1FFFF800" length="32" RegType="OptionBytes">
+	<OPByte>
+		<name>SPC</name>
+		<displayName>SPC</displayName>
+		<addressOffset>0x0</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>0xA5</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>SPC</name>
+				<brief>Option bytes security protection value</brief>
+				<description>Option bytes security protection value&#x000A;0xA5 : No security protection&#x000A;Any value except 0xA5 or 0xCC : Protection level low&#x000A;0xCC : Protection level high</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>SPC_N</name>
+		<displayName>SPC_N</displayName>
+		<addressOffset>0x1</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>0x5A</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>SPC_N</name>
+				<brief>SPC complement value</brief>
+				<description>SPC complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>USER</name>
+		<displayName>USER</displayName>
+		<addressOffset>0x2</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>VDSEL[1:0]</name>
+				<brief>VDSEL[1:0] (LVD0 voltage level select)</brief>
+				<description>VDSEL[1:0]&#x000A;00: 3.84 V is selected&#x000A;01: 2.82 V is selected&#x000A;10: 2.51 V is selected&#x000A;Settings other than above are prohibited when the voltage&#x000A;detection 0 circuit is used.</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+			<field>
+				<name>FWDGSPD_STDBY</name>
+				<brief>FWDGSPD_STDBY</brief>
+				<description>FWDGSPD_STDBY&#x000A;0: Suspend the free watchdog in standby mode&#x000A;1: Run the free watchdog in standby mode</description>
+				<bitOffset>5</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>FWDGSPD_DPSLP</name>
+				<brief>FWDGSPD_DPSLP</brief>
+				<description>FWDGSPD_DPSLP&#x000A;0: Suspend the free watchdog in deepsleep mode&#x000A;1: Run the free watchdog in deepsleep mode</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>LVDAS</name>
+				<brief>LVDAS</brief>
+				<description>LVDAS&#x000A;0: Voltage monitoring 0 reset is enabled after a reset&#x000A;1: Voltage monitoring 0 reset is disabled after a reset</description>
+				<bitOffset>3</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nRST_STDBY</name>
+				<brief>nRST_STDBY</brief>
+				<description>nRST_STDBY&#x000A;0: Generate a reset instead of entering standby mode&#x000A;1: No reset when entering standby mode</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nRST_DPSLP</name>
+				<brief>nRST_DPSLP</brief>
+				<description>nRST_DPSLP&#x000A;0: Generate a reset instead of entering deep-sleep mode&#x000A;1: No reset when entering deep-sleep mode</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nFWDG_HW</name>
+				<brief>nFWDG_HW</brief>
+				<description>nFWDG_HW&#x000A;0: Hardware free watchdog&#x000A;1: Software free watchdog</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>USER_N</name>
+		<displayName>USER_N</displayName>
+		<addressOffset>0x3</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>USER_N</name>
+				<brief>USER complement value</brief>
+				<description>USER complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>DATA[7:0]</name>
+		<displayName>DATA[7:0]</displayName>
+		<addressOffset>0x4</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DATA[7:0]</name>
+				<brief>User defined data bit 7 to 0</brief>
+				<description>User defined data bit 7 to 0</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>DATA_N[7:0]</name>
+		<displayName>DATA_N[7:0]</displayName>
+		<addressOffset>0x5</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>DATA_N[7:0]</name>
+				<brief>DATA complement value bit 7 to 0</brief>
+				<description>DATA complement value bit 7 to 0</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>DATA[15:8]</name>
+		<displayName>DATA[15:8]</displayName>
+		<addressOffset>0x6</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DATA[15:8]</name>
+				<brief>User defined data bit 15 to 8</brief>
+				<description>User defined data bit 15 to 8</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>DATA_N[15:8]</name>
+		<displayName>DATA_N[15:8]</displayName>
+		<addressOffset>0x7</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>DATA_N[15:8]</name>
+				<brief>DATA complement value bit 15 to 8</brief>
+				<description>DATA complement value bit 15 to 8</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WP[7:0]</name>
+		<displayName>WP[7:0]</displayName>
+		<addressOffset>0x8</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WP[7]</name>
+				<brief>0x800E000~0x800FFFF</brief>
+				<description>Page erase / program protection bit 7(0x800E000~0x800FFFF)&#x000A;0: Protection active&#x000A;1: Unprotected</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[6]</name>
+				<brief>0x800C000~0x800DFFF</brief>
+				<description>Page erase / program protection bit 6(0x800C000~0x800DFFF)&#x000A;0: Protection active&#x000A;1: Unprotected</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[5]</name>
+				<brief>0x800A000~0x800BFFF</brief>
+				<description>Page erase / program protection bit 5(0x800A000~0x800BFFF)&#x000A;0: Protection active&#x000A;1: Unprotected</description>
+				<bitOffset>5</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[4]</name>
+				<brief>0x8008000~0x8009FFF</brief>
+				<description>Page erase / program protection bit 4(0x8008000~0x8009FFF)&#x000A;0: Protection active&#x000A;1: Unprotected</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[3]</name>
+				<brief>0x8006000~0x8007FFF</brief>
+				<description>Page erase / program protection bit 3(0x8006000~0x8007FFF)&#x000A;0: Protection active&#x000A;1: Unprotected</description>
+				<bitOffset>3</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[2]</name>
+				<brief>0x8004000~0x8005FFF</brief>
+				<description>Page erase / program protection bit 2(0x8004000~0x8005FFF)&#x000A;0: Protection active&#x000A;1: Unprotected</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[1]</name>
+				<brief>0x8002000~0x8003FFF</brief>
+				<description>Page erase / program protection bit 1(0x8002000~0x8003FFF)&#x000A;0: Protection active&#x000A;1: Unprotected</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[0]</name>
+				<brief>0x8000000~0x8001FFF</brief>
+				<description>Page erase / program protection bit 0(0x8000000~0x8001FFF)&#x000A;0: Protection active&#x000A;1: Unprotected</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WP_N[7:0]</name>
+		<displayName>WP_N[7:0]</displayName>
+		<addressOffset>0x9</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>WP_N[7:0]</name>
+				<brief>WP complement value bit 7 to 0</brief>
+				<description>WP complement value bit 7 to 0</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WP[15:8]</name>
+		<displayName>WP[15:8]</displayName>
+		<addressOffset>0xA</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WP[15]</name>
+				<brief>0x801E000~0x801FFFF</brief>
+				<description>Page erase / program protection bit 15(0x801E000~0x801FFFF)</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[14]</name>
+				<brief>0x801C000~0x801DFFF</brief>
+				<description>Page erase / program protection bit 14(0x801C000~0x801DFFF)</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[13]</name>
+				<brief>0x801A000~0x801BFFF</brief>
+				<description>Page erase / program protection bit 13(0x801A000~0x801BFFF)</description>
+				<bitOffset>5</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[12]</name>
+				<brief>0x8018000~0x8019FFF</brief>
+				<description>Page erase / program protection bit 12(0x8018000~0x8019FFF)</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[11]</name>
+				<brief>0x8016000~0x8017FFF</brief>
+				<description>Page erase / program protection bit 11(0x8016000~0x8017FFF)</description>
+				<bitOffset>3</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[10]</name>
+				<brief>0x8014000~0x8015FFF</brief>
+				<description>Page erase / program protection bit 10(0x8014000~0x8015FFF)</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[9]</name>
+				<brief>0x8012000~0x8013FFF</brief>
+				<description>Page erase / program protection bit 9(0x8012000~0x8013FFF)</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[8]</name>
+				<brief>0x8010000~0x8011FFF</brief>
+				<description>Page erase / program protection bit 8(0x8010000~0x8011FFF)</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WP_N[15:8]</name>
+		<displayName>WP_N[15:8]</displayName>
+		<addressOffset>0xB</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>WP_N[15:8]</name>
+				<brief>WP complement value bit 15 to 8</brief>
+				<description>WP complement value bit 15 to 8</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WP[23:16]</name>
+		<displayName>WP[23:16]</displayName>
+		<addressOffset>0xC</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WP[23]</name>
+				<brief>0x802E000~0x803FFFF</brief>
+				<description>Page erase / program protection bit 23(0x802C000~0x803FFFF)</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[22]</name>
+				<brief>0x802C000~0x802DFFF</brief>
+				<description>Page erase / program protection bit 22(0x802C000~0x802DFFF)</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[21]</name>
+				<brief>0x802A000~0x802BFFF</brief>
+				<description>Page erase / program protection bit 21(0x802A000~0x802BFFF)</description>
+				<bitOffset>5</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[20]</name>
+				<brief>0x8028000~0x8029FFF</brief>
+				<description>Page erase / program protection bit 20(0x8028000~0x8029FFF)</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[19]</name>
+				<brief>0x8026000~0x8027FFF</brief>
+				<description>Page erase / program protection bit 19(0x8026000~0x8027FFF)</description>
+				<bitOffset>3</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[18]</name>
+				<brief>0x8024000~0x8025FFF</brief>
+				<description>Page erase / program protection bit 18(0x8024000~0x8025FFF)</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[17]</name>
+				<brief>0x8022000~0x8023FFF</brief>
+				<description>Page erase / program protection bit 17(0x8022000~0x8023FFF)</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[16]</name>
+				<brief>0x8020000~0x8021FFF</brief>
+				<description>Page erase / program protection bit 16(0x8020000~0x8021FFF)</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WP_N[23:16]</name>
+		<displayName>WP_N[23:16]</displayName>
+		<addressOffset>0xD</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>WP_N[23:16]</name>
+				<brief>WP complement value bit 23 to 16</brief>
+				<description>WP complement value bit 23 to 16</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WP[31:24]</name>
+		<displayName>WP[31:24]</displayName>
+		<addressOffset>0xE</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WP[31]</name>
+				<brief>0x880E000~0x880FFFF</brief>
+				<description>Page erase / program protection bit 31(0x880E000~0x880FFFF)</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[30]</name>
+				<brief>0x880C000~0x880DFFF</brief>
+				<description>Page erase / program protection bit 30(0x880C000~0x880DFFF)</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[29]</name>
+				<brief>0x880A000~0x880BFFF</brief>
+				<description>Page erase / program protection bit 29(0x880A000~0x880BFFF)</description>
+				<bitOffset>5</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[28]</name>
+				<brief>0x8808000~0x8809FFF</brief>
+				<description>Page erase / program protection bit 28(0x8808000~0x8809FFF)</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[27]</name>
+				<brief>0x8806000~0x8807FFF</brief>
+				<description>Page erase / program protection bit 27(0x8806000~0x8807FFF)</description>
+				<bitOffset>3</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[26]</name>
+				<brief>0x8804000~0x8805FFF</brief>
+				<description>Page erase / program protection bit 26(0x8804000~0x8805FFF)</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[25]</name>
+				<brief>0x8802000~0x8803FFF</brief>
+				<description>Page erase / program protection bit 25(0x8802000~0x8803FFF)</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WP[24]</name>
+				<brief>0x8800000~0x8801FFF</brief>
+				<description>Page erase / program protection bit 24(0x8800000~0x8801FFF)</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WP_N[31:24]</name>
+		<displayName>WP_N[31:24]</displayName>
+		<addressOffset>0xF</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>WP_N[31:24]</name>
+				<brief>WP complement value bit 31 to 24</brief>
+				<description>WP complement value bit 31 to 24</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>USER_1</name>
+		<displayName>USER_1</displayName>
+		<addressOffset>0x10</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>nRST_MODE</name>
+				<brief>nRST_MODE</brief>
+				<description>nRST_MODE&#x000A;00: Reserved&#x000A;01: Reset input only&#x000A;10: GPIO PN5 mode&#x000A;11: Reset input / output</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+			<field>
+				<name>SWDMOD</name>
+				<brief>SWDMOD</brief>
+				<description>SWDMOD&#x000A;0: SWD off&#x000A;1: SWD normal work mode</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SRAMECCEN</name>
+				<brief>SRAMECCEN</brief>
+				<description>SRAMECCEN&#x000A;0: Disable SRAM ECC &#x000A;1: Enable SRAM ECC</description>
+				<bitOffset>1</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nWWDG_HW</name>
+				<brief>nWWDG_HW</brief>
+				<description>nWWDG_HW&#x000A;0: Hardware window watchdog&#x000A;1: Software window watchdog</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>USER_1_N</name>
+		<displayName>USER_1_N</displayName>
+		<addressOffset>0x11</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>USER_1_N</name>
+				<brief>USER_1 complement value</brief>
+				<description>USER_1 complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WWDGT_0</name>
+		<displayName>WWDGT_0</displayName>
+		<addressOffset>0x12</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WWDGT_WDGTEN</name>
+				<brief>WWDGT_WDGTEN</brief>
+				<description>WWDGT_WDGTEN:&#x000A;0: Disable WWDG to generate a reset&#x000A;1: Enable WWDG to generate a reset</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WWDGT_EWIE</name>
+				<brief>WWDGT_EWIE</brief>
+				<description>WWDGT_EWIE&#x000A;0: Disable early wakeup interrupt&#x000A;1: Enable early wakeup interrupt</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>WWDGT_WEPS</name>
+				<brief>WWDGT window end position</brief>
+				<description>WWDGT_WEPS:&#x000A;WWDGT window end position&#x000A;00: 75%&#x000A;01: 50%&#x000A;10: 25%&#x000A;11: 0% (No window end position setting)</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+			<field>
+				<name>WWDGT_WSPS</name>
+				<brief>WWDGT window start position</brief>
+				<description>WWDGT_WSPS:&#x000A;WWDGT window start position&#x000A;00: 25%&#x000A;01: 50%&#x000A;10: 75%&#x000A;11: 100% (No window start position setting)</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+			<field>
+				<name>WWDGT_PSC</name>
+				<brief>WWDGT prescaler</brief>
+				<description>WWDGT_PSC:&#x000A;WWDGT prescaler</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WWDGT_0_N</name>
+		<displayName>WWDGT_0_N</displayName>
+		<addressOffset>0x13</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>WWDGT_0_N</name>
+				<brief>WWDGT_0 complement value</brief>
+				<description>WWDGT_0 complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WWDGT_1</name>
+		<displayName>WWDGT_1</displayName>
+		<addressOffset>0x14</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WWDG_CNT [13:6]</name>
+				<brief>The value of the watchdog timer counter bit 13 to 6 in Hardware start mode</brief>
+				<description>WWDG_CNT [13:6]&#x000A;The value of the watchdog timer counter bit 13 to 6 in Hardware start mode</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WWDGT_1_N</name>
+		<displayName>WWDGT_1_N</displayName>
+		<addressOffset>0x15</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>WWDGT_1_N</name>
+				<brief>WWDGT_1 complement value</brief>
+				<description>WWDGT_1 complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WWDGT_2</name>
+		<displayName>WWDGT_2</displayName>
+		<addressOffset>0x16</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>WWDG_CNT [5:0]</name>
+				<brief>The value of the watchdog timer counter bit 5 to 0 in Hardware start mode</brief>
+				<description>WWDG_CNT [5:0]&#x000A;The value of the watchdog timer counter bit 5 to 0 in Hardware start mode</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>6</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>WWDGT_2_N</name>
+		<displayName>WWDGT_2_N</displayName>
+		<addressOffset>0x17</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>WWDGT_2_N</name>
+				<brief>WWDGT_2 complement value</brief>
+				<description>WWDGT_2 complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FWDGT_0</name>
+		<displayName>FWDGT_0</displayName>
+		<addressOffset>0x18</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>FWDGT_RLD [7:0]</name>
+				<brief>The value of the free watchdog timer counter reload value bit 7 to 0 in hardware start mode.</brief>
+				<description>FWDGT_WDGTEN:&#x000A;The value of the free watchdog timer counter reload value bit 7 to 0 in hardware start mode.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FWDGT_0_N</name>
+		<displayName>FWDGT_0_N</displayName>
+		<addressOffset>0x19</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>FWDGT_0_N</name>
+				<brief>FWDGT_0 complement value</brief>
+				<description>FWDGT_0 complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FWDGT_1</name>
+		<displayName>FWDGT_1</displayName>
+		<addressOffset>0x1A</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>FWDGT_WDGTEN</name>
+				<brief>FWDGT_WDGTEN</brief>
+				<description>FWDGT_WDGTEN:&#x000A;0: Disable FWDG to generate a reset&#x000A;1: Enable FWDG to generate a reset</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>FWDGT_PSC [2:0]</name>
+				<brief>Free watchdog timer prescaler selection.</brief>
+				<description>FWDGT_PSC [2:0]&#x000A;Free watchdog timer prescaler selection.</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>3</bitWidth>
+			</field>
+			<field>
+				<name>FWDGT_WND [3:0]</name>
+				<brief>FWDGT_WND [3:0]</brief>
+				<description>FWDGT_WND [3:0]&#x000A;The value of the free watchdog counter window value bit 3 to 0 in hardware start mode.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>4</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FWDGT_1_N</name>
+		<displayName>FWDGT_1_N</displayName>
+		<addressOffset>0x1B</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>FWDGT_1_N</name>
+				<brief>FWDGT_1 complement value</brief>
+				<description>FWDGT_1 complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FWDGT_2</name>
+		<displayName>FWDGT_2</displayName>
+		<addressOffset>0x1C</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>FWDGT_WND [11:4]</name>
+				<brief>FWDGT_WND [11:4]</brief>
+				<description>FWDGT_WND [11:4]&#x000A;The value of the free watchdog counter window value bit 11 to 4 in hardware start mode.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FWDGT_2_N</name>
+		<displayName>FWDGT_2_N</displayName>
+		<addressOffset>0x1D</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>FWDGT_2_N</name>
+				<brief>FWDGT_2 complement value</brief>
+				<description>FWDGT_2 complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FWDGT_3</name>
+		<displayName>FWDGT_3</displayName>
+		<addressOffset>0x1E</addressOffset>
+		<size>0x8</size>
+		<access>read-write</access>
+		<reset>FFFF</reset>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>FWDGT_RLD [11:8]</name>
+				<brief>FWDGT_RLD [11:8]</brief>
+				<description>FWDGT_RLD [11:8]&#x000A;The value of the free watchdog timer counter reload value bit 11 to 8 in hardware start mode.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>4</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+	<OPByte>
+		<name>FWDGT_3_N</name>
+		<displayName>FWDGT_3_N</displayName>
+		<addressOffset>0x1F</addressOffset>
+		<size>0x8</size>
+		<access>read</access>
+		<reset>FFFF</reset>
+		<complement>0</complement>
+		<fields>
+			<field>
+				<name>FWDGT_3_N</name>
+				<brief>FWDGT_3 complement value</brief>
+				<description>FWDGT_3 complement value</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+		</fields>
+	</OPByte>
+</OPBytes>
+<OTPBytesBlocks>
+    <OTPBlocks baseAddress="0x1FFF7000" length="512"/>
+</OTPBytesBlocks>
+<OTPBytes baseAddress="0x1FFF7000" length="512">
+    <OTPBlocks>
+        <name>OTP</name>
+		<displayName>OTP</displayName>
+        <minProgrammeWidth>0x20</minProgrammeWidth>
+		<maxProgrammeWidth>0x40</maxProgrammeWidth>
+		<eccsupport>128</eccsupport>
+		<lockBaseAddress>0x0</lockBaseAddress>
+		<BlockCnt>0x01</BlockCnt>
+		<baseAddress>0x1FFF7000</baseAddress>
+		<endAddress>0x1FFF71FF</endAddress>
+        <fields>
+		   <field>
+                <name>OTP_Block</name>
+				<displayName>OTP_Block</displayName>
+                <baseAddress>0x1FFF7000</baseAddress>
+		        <endAddress>0x1FFF71FF</endAddress>	
+				<ifHasLockArea>0x0</ifHasLockArea>
+				<size>0x200</size>
+				<lockOffset>0x00</lockOffset>
+				<lockbitWidth>0</lockbitWidth>
+				<LockVal>0</LockVal>
+            </field>
+        </fields>
+    </OTPBlocks>
+</OTPBytes>

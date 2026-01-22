@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MCUGroup series = "GD32H77x">
+	<Flash McuPartNo = "GD32H77xXWXX" baseAddress="0x08000000" RRAMSize="2048" Size = "7680">
+	    <pageGroup pageNumber = "1952">
+            <Page startIndex= "0" endIndex = "31" startAddress = "0x08000000" endAddress = "0x081FFFFF" pageSize = "65536" bank = "" type="RRAM"/>
+			<Page startIndex= "32" endIndex = "799" startAddress = "0x08200000" endAddress = "0x084FFFFF" pageSize = "4096" bank = "" type="DFlash"/>
+			<Page startIndex= "800" endIndex = "1311" startAddress = "0x08500000" endAddress = "0x086FFFFF" pageSize = "4096" bank = "1" type="Flash"/>
+			<Page startIndex= "1312" endIndex = "1823" startAddress = "0x08700000" endAddress = "0x088FFFFF" pageSize = "4096" bank = "0" type="Flash"/>
+			<Page startIndex= "1824" endIndex = "1951" startAddress = "0x08900000" endAddress = "0x0897FFFF" pageSize = "4096" bank = "" type="DFlash"/>
+        </pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32H77xXPXX" baseAddress="0x08000000" RRAMSize="2048" Size = "3584">
+	    <pageGroup pageNumber = "928">
+            <Page startIndex= "0" endIndex = "31" startAddress = "0x08000000" endAddress = "0x081FFFFF" pageSize = "65536" bank = "" type="RRAM"/>
+			<Page startIndex= "32" endIndex = "287" startAddress = "0x08200000" endAddress = "0x082FFFFF" pageSize = "4096" bank = "" type="DFlash"/>
+			<Page startIndex= "288" endIndex = "799" startAddress = "0x08300000" endAddress = "0x084FFFFF" pageSize = "4096" bank = "0" type="Flash"/>
+			<Page startIndex= "800" endIndex = "927" startAddress = "0x08500000" endAddress = "0x087FFFFF" pageSize = "4096" bank = "" type="DFlash"/>
+        </pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32H77xXNXX" baseAddress="0x08000000" RRAMSize="1024" Size = "3584">
+	    <pageGroup pageNumber = "912">
+            <Page startIndex= "0" endIndex = "15" startAddress = "0x08000000" endAddress = "0x080FFFFF" pageSize = "65536" bank = "" type="RRAM"/>
+			<Page startIndex= "32" endIndex = "287" startAddress = "0x08200000" endAddress = "0x082FFFFF" pageSize = "4096" bank = "" type="DFlash"/>
+			<Page startIndex= "288" endIndex = "543" startAddress = "0x08300000" endAddress = "0x083FFFFF" pageSize = "4096" bank = "1" type="Flash"/>
+			<Page startIndex= "544" endIndex = "799" startAddress = "0x08400000" endAddress = "0x084FFFFF" pageSize = "4096" bank = "0" type="Flash"/>
+			<Page startIndex= "800" endIndex = "927" startAddress = "0x08500000" endAddress = "0x087FFFFF" pageSize = "4096" bank = "" type="DFlash"/>
+        </pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32H77xXIXX" baseAddress="0x08000000" RRAMSize="1664" Size = "0">
+	    <pageGroup pageNumber = "26">
+            <Page startIndex= "0" endIndex = "25" startAddress = "0x08000000" endAddress = "0x0819FFFF" pageSize = "65536" bank = "0" type="RRAM"/>
+        </pageGroup>
+    </Flash>
+</MCUGroup>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MCUGroup series = "GD32A490">
+    <Flash McuPartNo = "GD32A490XKXX" baseAddress="0x08000000" Size = "3072">
+	    <pageGroup pageNumber = "28">
+		    <Page startIndex= "0" endIndex = "3" startAddress = "0x08000000" endAddress = "0x0800FFFF" pageSize = "16384" bank = "0"/>
+		    <Page startIndex= "4" endIndex = "4" startAddress = "0x08010000" endAddress = "0x0801FFFF" pageSize = "65536" bank = "0"/>
+		    <Page startIndex= "5" endIndex = "11" startAddress = "0x08020000" endAddress = "0x080FFFFF" pageSize = "131072" bank = "0"/>
+		    <Page startIndex= "12" endIndex = "15" startAddress = "0x08100000" endAddress = "0x0810FFFF" pageSize = "16384" bank = "1"/>
+		    <Page startIndex= "16" endIndex = "16" startAddress = "0x08110000" endAddress = "0x0811FFFF" pageSize = "65536" bank = "1"/>
+		    <Page startIndex= "17" endIndex = "23" startAddress = "0x08120000" endAddress = "0x081FFFFF" pageSize = "131072" bank = "1"/>
+		    <Page startIndex= "24" endIndex = "27" startAddress = "0x08200000" endAddress = "0x082FFFFF" pageSize = "262144" bank = "1"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32A490XIXX" baseAddress="0x08000000" Size = "2048">
+	    <pageGroup pageNumber = "24">
+		    <Page startIndex= "0" endIndex = "3" startAddress = "0x08000000" endAddress = "0x0800FFFF" pageSize = "16384" bank = "0"/>
+		    <Page startIndex= "4" endIndex = "4" startAddress = "0x08010000" endAddress = "0x0801FFFF" pageSize = "65536" bank = "0"/>
+		    <Page startIndex= "5" endIndex = "11" startAddress = "0x08020000" endAddress = "0x080FFFFF" pageSize = "131072" bank = "0"/>
+		    <Page startIndex= "12" endIndex = "15" startAddress = "0x08100000" endAddress = "0x0810FFFF" pageSize = "16384" bank = "1"/>
+		    <Page startIndex= "16" endIndex = "16" startAddress = "0x08110000" endAddress = "0x0811FFFF" pageSize = "65536" bank = "1"/>
+		    <Page startIndex= "17" endIndex = "23" startAddress = "0x08120000" endAddress = "0x081FFFFF" pageSize = "131072" bank = "1"/>
+		</pageGroup>
+    </Flash>
+</MCUGroup>
+
+

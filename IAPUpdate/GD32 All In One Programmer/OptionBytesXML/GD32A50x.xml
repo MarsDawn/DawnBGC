@@ -1,0 +1,2982 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OPBytesBlocks>
+    <OPBytesBlock baseAddress="0x1FFFF800" length="24" RegType="OptionBytes"/>
+    <OPBytesBlock baseAddress="0x40022068" length="4" RegType="OptionBytes"/>
+</OPBytesBlocks>
+<Architectures>
+    <Architecture type="0x0">
+		<FlashSize Size="384"/>
+	</Architecture>
+	<Architecture type="0x1">
+		<FlashSize Size="256"/>
+	</Architecture>
+	<Architecture type="0x2">
+		<FlashSize Size="128"/>
+	</Architecture>
+	<Architecture type="0x3">
+		<FlashSize Size="64"/>
+	</Architecture>
+</Architectures>
+<OPBytesArchitecture type = "0">
+	<OPBytes baseAddress="0x1FFFF800" length="24" RegType="OptionBytes">
+		<OPByte>
+			<name>OB_SPC</name>
+			<displayName>OB_SPC</displayName>
+			<addressOffset>0x0</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_SPC</name>
+					<brief>Option byte security protection value</brief>
+					<description>Option byte security protection value&#x000A;0xA5 : no security protection&#x000A;any value except 0xA5 or 0xCC : protection level low&#x000A;0xCC : protection level high</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_SPC_N</name>
+			<displayName>OB_SPC_N</displayName>
+			<addressOffset>0x1</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_SPC_N</name>
+					<brief>OB_SPC complement value</brief>
+					<description>OB_SPC complement value</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_USER</name>
+			<displayName>OB_USER</displayName>
+			<addressOffset>0x2</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>BOR_TH</name>
+					<brief>BOR_TH (Brown out reset threshold)</brief>
+					<description>BOR_TH&#x000A;0: No BOR&#x000A;1: Have BOR, brownout threshold level (2.6V)</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OTA</name>
+					<brief>OTA</brief>
+					<description>OTA</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>BB</name>
+					<brief>Boot configuration</brief>
+					<description>BB&#x000A;0: boot from bootloader, when configured boot from main memory&#x000A;1: No effect</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nRST_STDBY</name>
+					<brief>Generate a reset instead of entering standby mode</brief>
+					<description>nRST_STDBY&#x000A;0: generate a reset instead of entering standby mode&#x000A;1: no reset when entering standby mode</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nRST_DPSLP</name>
+					<brief>Generate a reset instead of entering Deep-sleep mode</brief>
+					<description>nRST_DPSLP&#x000A;0: generate a reset instead of entering Deep-sleep mode&#x000A;1: no reset when entering Deep-sleep mode</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nWDG_HW</name>
+					<brief>Hardware free watchdog</brief>
+					<description>nWDG_HW&#x000A;0: hardware free watchdog&#x000A;1: software free watchdog</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_USER_N</name>
+			<displayName>OB_USER_N</displayName>
+			<addressOffset>0x3</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_USER_N</name>
+					<brief>OB_USER complement value</brief>
+					<description>OB_USER complement value</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA[7:0]</name>
+			<displayName>OB_DATA[7:0]</displayName>
+			<addressOffset>0x4</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DATA[7:0]</name>
+					<brief>user defined data bit 7 to 0</brief>
+					<description>user defined data bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA_N[7:0]</name>
+			<displayName>OB_DATA_N[7:0]</displayName>
+			<addressOffset>0x5</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DATA_N[7:0]</name>
+					<brief>OB_DATA complement value bit 7 to 0</brief>
+					<description>OB_DATA complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA[15:8]</name>
+			<displayName>OB_DATA[15:8]</displayName>
+			<addressOffset>0x6</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DATA[15:8]</name>
+					<brief>user defined data bit 15 to 8</brief>
+					<description>user defined data bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA_N[15:8]</name>
+			<displayName>OB_DATA_N[15:8]</displayName>
+			<addressOffset>0x7</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DATA_N[15:8]</name>
+					<brief>OB_DATA complement value bit 15 to 8</brief>
+					<description>OB_DATA complement value bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[7:0]</name>
+			<displayName>OB_BK0WP[7:0]</displayName>
+			<addressOffset>0x8</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[7]</name>
+					<brief>0x0800E000~0x0800FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 7(0x0800E000~0x0800FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[6]</name>
+					<brief>0x0800C000~0x0800DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 6(0x0800C000~0x0800DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[5]</name>
+					<brief>0x0800A000~0x0800BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 5(0x0800A000~0x0800BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[4]</name>
+					<brief>0x08008000~0x08009FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 4(0x08008000~0x08009FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[3]</name>
+					<brief>0x08006000~0x08007FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 3(0x08006000~0x08007FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[2]</name>
+					<brief>0x08004000~0x08005FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 2(0x08004000~0x08005FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[1]</name>
+					<brief>0x08002000~0x08003FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 1(0x08002000~0x08003FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[0]</name>
+					<brief>0x08000000~0x08001FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 0(0x08000000~0x08001FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[7:0]</name>
+			<displayName>OB_BK0WP_N[7:0]</displayName>
+			<addressOffset>0x9</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[7:0]</name>
+					<brief>OB_BK0WP complement value bit 7 to 0</brief>
+					<description>OB_BK0WP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[15:8]</name>
+			<displayName>OB_BK0WP[15:8]</displayName>
+			<addressOffset>0xA</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[15]</name>
+					<brief>0x0801E000~0x0801FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 15(0x0801E000~0x0801FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[14]</name>
+					<brief>0x0801C000~0x0801DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 14(0x0801C000~0x0801DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[13]</name>
+					<brief>0x0801A000~0x0801BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 13(0x0801A000~0x0801BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[12]</name>
+					<brief>0x08018000~0x08019FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 12(0x08018000~0x08019FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[11]</name>
+					<brief>0x08016000~0x08017FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 11(0x08016000~0x08017FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[10]</name>
+					<brief>0x08014000~0x08015FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 10(0x08014000~0x08015FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[9]</name>
+					<brief>0x08012000~0x08013FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 9(0x08012000~0x08013FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[8]</name>
+					<brief>0x08010000~0x08011FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 8(0x08010000~0x08011FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[15:8]</name>
+			<displayName>OB_BK0WP_N[15:8]</displayName>
+			<addressOffset>0xB</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[15:8]</name>
+					<brief>OB_BK0WP complement value bit 15 to 8</brief>
+					<description>OB_BK0WP complement value bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[23:16]</name>
+			<displayName>OB_BK0WP[23:16]</displayName>
+			<addressOffset>0xC</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[23]</name>
+					<brief>0x0802E000~0x0802FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 23(0x0802E000~0x0802FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[22]</name>
+					<brief>0x0802C000~0x0802DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 22(0x0802C000~0x0802DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[21]</name>
+					<brief>0x0802A000~0x0802BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 21(0x0802A000~0x0802BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[20]</name>
+					<brief>0x08028000~0x08029FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 20(0x08028000~0x08029FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[19]</name>
+					<brief>0x08026000~0x08027FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 19(0x08026000~0x08027FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[18]</name>
+					<brief>0x08025000~0x08026FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 18(0x08025000~0x08026FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[17]</name>
+					<brief>0x08023000~0x08024FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 17(0x08023000~0x08024FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[16]</name>
+					<brief>0x08020000~0x08021FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 16(0x08020000~0x08021FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[23:16]</name>
+			<displayName>OB_BK0WP_N[23:16]</displayName>
+			<addressOffset>0xB</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[23:16]</name>
+					<brief>OB_BK0WP complement value bit 23 to 16</brief>
+					<description>OB_BK0WP complement value bit 23 to 16</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[31:24]</name>
+			<displayName>OB_BK0WP[31:24]</displayName>
+			<addressOffset>0xE</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[31]</name>
+					<brief>0x0803E000~0x0803FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 31(0x0803E000~0x0803FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[30]</name>
+					<brief>0x0803C000~0x0803DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 30(0x0803C000~0x0803DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[29]</name>
+					<brief>0x0803A000~0x0803BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 29(0x0803A000~0x0803BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[28]</name>
+					<brief>0x08038000~0x08039FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 28(0x08038000~0x08039FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[27]</name>
+					<brief>0x08036000~0x08037FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 27(0x08036000~0x08037FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[26]</name>
+					<brief>0x08034000~0x08035FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 26(0x08034000~0x08035FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[25]</name>
+					<brief>0x08032000~0x08033FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 25(0x08032000~0x08033FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[24]</name>
+					<brief>0x08030000~0x08031FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 24(0x08030000~0x08031FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[31:24]</name>
+			<displayName>OB_BK0WP_N[31:24]</displayName>
+			<addressOffset>0xF</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[31:24]</name>
+					<brief>OB_BK0WP complement value bit 31 to 24</brief>
+					<description>OB_BK0WP complement value bit 31 to 24</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK1WP[7:0]</name>
+			<displayName>OB_BK1WP[7:0]</displayName>
+			<addressOffset>0x10</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK1WP[7]</name>
+					<brief>0x0805C000~0x0805FFFF</brief>
+					<description>Page Erase/Program Protection of bank1 bit 7(0x0805C000~0x0805FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK1WP[6]</name>
+					<brief>0x08058000~0x0805BFFF</brief>
+					<description>Page Erase/Program Protection of bank1 bit 6(0x08058000~0x0805BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK1WP[5]</name>
+					<brief>0x08054000~0x08057FFF</brief>
+					<description>Page Erase/Program Protection of bank1 bit 5(0x08054000~0x08057FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK1WP[4]</name>
+					<brief>0x08050000~0x08053FFF</brief>
+					<description>Page Erase/Program Protection of bank1 bit 4(0x08050000~0x08053FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK1WP[3]</name>
+					<brief>0x0804C000~0x0804FFFF</brief>
+					<description>Page Erase/Program Protection of bank1 bit 3(0x0804C000~0x0804FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK1WP[2]</name>
+					<brief>0x08048000~0x0804BFFF</brief>
+					<description>Page Erase/Program Protection of bank1 bit 2(0x08048000~0x0804BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK1WP[1]</name>
+					<brief>0x08044000~0x08047FFF</brief>
+					<description>Page Erase/Program Protection of bank1 bit 1(0x08044000~0x08047FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK1WP[0]</name>
+					<brief>0x08040000~0x08043FFF</brief>
+					<description>Page Erase/Program Protection of bank1 bit 0(0x08040000~0x08043FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK1WP_N[7:0]</name>
+			<displayName>OB_BK1WP_N[7:0]</displayName>
+			<addressOffset>0x11</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK1WP_N[7:0]</name>
+					<brief>OB_BK1WP complement value bit 7 to 0</brief>
+					<description>OB_BK1WP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DFWP[7:0]</name>
+			<displayName>OB_DFWP[7:0]</displayName>
+			<addressOffset>0x12</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DFWP[7]</name>
+					<brief>0x0880E000~0x0880FFFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 7(0x0880E000~0x0880FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[6]</name>
+					<brief>0x0880C000~0x0880DFFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 6(0x0880C000~0x0880DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[5]</name>
+					<brief>0x0880A000~0x0880BFFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 5(0x0880A000~0x0880BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[4]</name>
+					<brief>0x08808000~0x08809FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 4(0x08808000~0x08809FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[3]</name>
+					<brief>0x08806000~0x08807FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 3(0x08806000~0x08807FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[2]</name>
+					<brief>0x08804000~0x08805FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 2(0x08804000~0x08805FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[1]</name>
+					<brief>0x08802000~0x08803FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 1(0x08802000~0x08803FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[0]</name>
+					<brief>0x08800000~0x08801FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 0(0x08800000~0x08801FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DFWP_N[7:0]</name>
+			<displayName>OB_DFWP_N[7:0]</displayName>
+			<addressOffset>0x13</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DFWP_N[7:0]</name>
+					<brief>OB_DFWP complement value bit 7 to 0</brief>
+					<description>OB_DFWP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_EPWP[7:0]</name>
+			<displayName>OB_EPWP[7:0]</displayName>
+			<addressOffset>0x14</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_EPWP[7]</name>
+					<brief>0x08C00E00~0x08C00FFF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 7(0x08C00E00~0x08C00FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[6]</name>
+					<brief>0x08C00C00~0x08C00DFF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 6(0x08C00C00~0x08C00DFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[5]</name>
+					<brief>0x08C00A00~0x08C00BFF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 5(0x08C00A00~0x08C00BFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[4]</name>
+					<brief>0x08C00800~0x08C009FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 4(0x08C00800~0x08C009FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[3]</name>
+					<brief>0x08C00600~0x08C007FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 3(0x08C00600~0x08C007FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[2]</name>
+					<brief>0x08C00400~0x08C005FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 2(0x08C00400~0x08C005FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[1]</name>
+					<brief>0x08C00200~0x08C003FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 1(0x08C00200~0x08C003FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[0]</name>
+					<brief>0x08C00000~0x08C001FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 0(0x08C00000~0x08C001FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_EPWP_N[7:0]</name>
+			<displayName>OB_EPWP_N[7:0]</displayName>
+			<addressOffset>0x15</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_EPWP_N[7:0]</name>
+					<brief>OB_EPWP complement value bit 7 to 0</brief>
+					<description>OB_EPWP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+	</OPBytes>
+	<OPBytes baseAddress="0x40022068" length="4" RegType="OptionBytes">
+		<OPByte>
+			<name>FMC_OB1CS</name>
+			<displayName>FMC_OB1CS</displayName>
+			<addressOffset>0x0</addressOffset>
+			<size>0x20</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>LKVAL[15:0]</name>
+					<brief>Option bytes 1 Lock Value</brief>
+					<description>Option bytes 1 Lock Value&#x000A;0x33CC : Lock Option bytes 1, the Option bytes 1 cannot be modified any more&#x000A;other value : Do not lock Option bytes 1</description>
+					<bitOffset>16</bitOffset>
+					<bitWidth>16</bitWidth>
+				</field>
+				<field>
+					<name>EPLOAD</name>
+					<brief>Load EPLOAD of option byte 1 after reset</brief>
+					<description>Load EPLOAD of option byte 1 after reset. This bit can be write by software when OB1LK is 0</description>
+					<bitOffset>15</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				 <field>
+					<name>EPSIZE[3:0]</name>
+					<brief>Load EPSIZE of option byte 1 after reset</brief>
+					<description>Load EPSIZE of option byte 1 after reset. These bits can be write by software when OB1LK is 0</description>
+					<bitOffset>8</bitOffset>
+					<bitWidth>4</bitWidth>
+				</field>
+				<field>
+					<name>EFALC[3:0]</name>
+					<brief>Load EFALC of option byte 1 after reset</brief>
+					<description>Load EFALC of option byte 1 after reset. These bits can be write by software when OB1LK is 0</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>4</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+	</OPBytes>
+</OPBytesArchitecture>
+<OPBytesArchitecture type = "1">
+	<OPBytes baseAddress="0x1FFFF800" length="24" RegType="OptionBytes">
+		<OPByte>
+			<name>OB_SPC</name>
+			<displayName>OB_SPC</displayName>
+			<addressOffset>0x0</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_SPC</name>
+					<brief>Option byte security protection value</brief>
+					<description>Option byte security protection value&#x000A;0xA5 : no security protection&#x000A;any value except 0xA5 or 0xCC : protection level low&#x000A;0xCC : protection level high</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_SPC_N</name>
+			<displayName>OB_SPC_N</displayName>
+			<addressOffset>0x1</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_SPC_N</name>
+					<brief>OB_SPC complement value</brief>
+					<description>OB_SPC complement value</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_USER</name>
+			<displayName>OB_USER</displayName>
+			<addressOffset>0x2</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>BOR_TH</name>
+					<brief>BOR_TH (Brown out reset threshold)</brief>
+					<description>BOR_TH&#x000A;0: No BOR&#x000A;1: Have BOR, brownout threshold level (2.6V)</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OTA</name>
+					<brief>OTA</brief>
+					<description>OTA</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>BB</name>
+					<brief>Boot configuration</brief>
+					<description>BB&#x000A;0: boot from bootloader, when configured boot from main memory&#x000A;1: No effect</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nRST_STDBY</name>
+					<brief>Generate a reset instead of entering standby mode</brief>
+					<description>nRST_STDBY&#x000A;0: generate a reset instead of entering standby mode&#x000A;1: no reset when entering standby mode</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nRST_DPSLP</name>
+					<brief>Generate a reset instead of entering Deep-sleep mode</brief>
+					<description>nRST_DPSLP&#x000A;0: generate a reset instead of entering Deep-sleep mode&#x000A;1: no reset when entering Deep-sleep mode</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nWDG_HW</name>
+					<brief>Hardware free watchdog</brief>
+					<description>nWDG_HW&#x000A;0: hardware free watchdog&#x000A;1: software free watchdog</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_USER_N</name>
+			<displayName>OB_USER_N</displayName>
+			<addressOffset>0x3</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_USER_N</name>
+					<brief>OB_USER complement value</brief>
+					<description>OB_USER complement value</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA[7:0]</name>
+			<displayName>OB_DATA[7:0]</displayName>
+			<addressOffset>0x4</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DATA[7:0]</name>
+					<brief>user defined data bit 7 to 0</brief>
+					<description>user defined data bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA_N[7:0]</name>
+			<displayName>OB_DATA_N[7:0]</displayName>
+			<addressOffset>0x5</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DATA_N[7:0]</name>
+					<brief>OB_DATA complement value bit 7 to 0</brief>
+					<description>OB_DATA complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA[15:8]</name>
+			<displayName>OB_DATA[15:8]</displayName>
+			<addressOffset>0x6</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DATA[15:8]</name>
+					<brief>user defined data bit 15 to 8</brief>
+					<description>user defined data bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA_N[15:8]</name>
+			<displayName>OB_DATA_N[15:8]</displayName>
+			<addressOffset>0x7</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DATA_N[15:8]</name>
+					<brief>OB_DATA complement value bit 15 to 8</brief>
+					<description>OB_DATA complement value bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[7:0]</name>
+			<displayName>OB_BK0WP[7:0]</displayName>
+			<addressOffset>0x8</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[7]</name>
+					<brief>0x0800E000~0x0800FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 7(0x0800E000~0x0800FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[6]</name>
+					<brief>0x0800C000~0x0800DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 6(0x0800C000~0x0800DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[5]</name>
+					<brief>0x0800A000~0x0800BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 5(0x0800A000~0x0800BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[4]</name>
+					<brief>0x08008000~0x08009FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 4(0x08008000~0x08009FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[3]</name>
+					<brief>0x08006000~0x08007FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 3(0x08006000~0x08007FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[2]</name>
+					<brief>0x08004000~0x08005FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 2(0x08004000~0x08005FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[1]</name>
+					<brief>0x08002000~0x08003FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 1(0x08002000~0x08003FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[0]</name>
+					<brief>0x08000000~0x08001FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 0(0x08000000~0x08001FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[7:0]</name>
+			<displayName>OB_BK0WP_N[7:0]</displayName>
+			<addressOffset>0x9</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[7:0]</name>
+					<brief>OB_BK0WP complement value bit 7 to 0</brief>
+					<description>OB_BK0WP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[15:8]</name>
+			<displayName>OB_BK0WP[15:8]</displayName>
+			<addressOffset>0xA</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[15]</name>
+					<brief>0x0801E000~0x0801FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 15(0x0801E000~0x0801FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[14]</name>
+					<brief>0x0801C000~0x0801DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 14(0x0801C000~0x0801DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[13]</name>
+					<brief>0x0801A000~0x0801BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 13(0x0801A000~0x0801BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[12]</name>
+					<brief>0x08018000~0x08019FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 12(0x08018000~0x08019FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[11]</name>
+					<brief>0x08016000~0x08017FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 11(0x08016000~0x08017FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[10]</name>
+					<brief>0x08014000~0x08015FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 10(0x08014000~0x08015FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[9]</name>
+					<brief>0x08012000~0x08013FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 9(0x08012000~0x08013FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[8]</name>
+					<brief>0x08010000~0x08011FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 8(0x08010000~0x08011FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[15:8]</name>
+			<displayName>OB_BK0WP_N[15:8]</displayName>
+			<addressOffset>0xB</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[15:8]</name>
+					<brief>OB_BK0WP complement value bit 15 to 8</brief>
+					<description>OB_BK0WP complement value bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[23:16]</name>
+			<displayName>OB_BK0WP[23:16]</displayName>
+			<addressOffset>0xC</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[23]</name>
+					<brief>0x0802E000~0x0802FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 23(0x0802E000~0x0802FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[22]</name>
+					<brief>0x0802C000~0x0802DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 22(0x0802C000~0x0802DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[21]</name>
+					<brief>0x0802A000~0x0802BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 21(0x0802A000~0x0802BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[20]</name>
+					<brief>0x08028000~0x08029FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 20(0x08028000~0x08029FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[19]</name>
+					<brief>0x08026000~0x08027FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 19(0x08026000~0x08027FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[18]</name>
+					<brief>0x08025000~0x08026FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 18(0x08025000~0x08026FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[17]</name>
+					<brief>0x08023000~0x08024FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 17(0x08023000~0x08024FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[16]</name>
+					<brief>0x08020000~0x08021FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 16(0x08020000~0x08021FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[23:16]</name>
+			<displayName>OB_BK0WP_N[23:16]</displayName>
+			<addressOffset>0xB</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[23:16]</name>
+					<brief>OB_BK0WP complement value bit 23 to 16</brief>
+					<description>OB_BK0WP complement value bit 23 to 16</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[31:24]</name>
+			<displayName>OB_BK0WP[31:24]</displayName>
+			<addressOffset>0xE</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[31]</name>
+					<brief>0x0803E000~0x0803FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 31(0x0803E000~0x0803FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[30]</name>
+					<brief>0x0803C000~0x0803DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 30(0x0803C000~0x0803DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[29]</name>
+					<brief>0x0803A000~0x0803BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 29(0x0803A000~0x0803BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[28]</name>
+					<brief>0x08038000~0x08039FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 28(0x08038000~0x08039FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[27]</name>
+					<brief>0x08036000~0x08037FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 27(0x08036000~0x08037FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[26]</name>
+					<brief>0x08034000~0x08035FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 26(0x08034000~0x08035FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[25]</name>
+					<brief>0x08032000~0x08033FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 25(0x08032000~0x08033FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[24]</name>
+					<brief>0x08030000~0x08031FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 24(0x08030000~0x08031FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[31:24]</name>
+			<displayName>OB_BK0WP_N[31:24]</displayName>
+			<addressOffset>0xF</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[31:24]</name>
+					<brief>OB_BK0WP complement value bit 31 to 24</brief>
+					<description>OB_BK0WP complement value bit 31 to 24</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DFWP[7:0]</name>
+			<displayName>OB_DFWP[7:0]</displayName>
+			<addressOffset>0x12</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DFWP[7]</name>
+					<brief>0x0880E000~0x0880FFFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 7(0x0880E000~0x0880FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[6]</name>
+					<brief>0x0880C000~0x0880DFFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 6(0x0880C000~0x0880DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[5]</name>
+					<brief>0x0880A000~0x0880BFFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 5(0x0880A000~0x0880BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[4]</name>
+					<brief>0x08808000~0x08809FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 4(0x08808000~0x08809FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[3]</name>
+					<brief>0x08806000~0x08807FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 3(0x08806000~0x08807FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[2]</name>
+					<brief>0x08804000~0x08805FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 2(0x08804000~0x08805FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[1]</name>
+					<brief>0x08802000~0x08803FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 1(0x08802000~0x08803FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[0]</name>
+					<brief>0x08800000~0x08801FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 0(0x08800000~0x08801FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DFWP_N[7:0]</name>
+			<displayName>OB_DFWP_N[7:0]</displayName>
+			<addressOffset>0x13</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DFWP_N[7:0]</name>
+					<brief>OB_DFWP complement value bit 7 to 0</brief>
+					<description>OB_DFWP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_EPWP[7:0]</name>
+			<displayName>OB_EPWP[7:0]</displayName>
+			<addressOffset>0x14</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_EPWP[7]</name>
+					<brief>0x08C00E00~0x08C00FFF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 7(0x08C00E00~0x08C00FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[6]</name>
+					<brief>0x08C00C00~0x08C00DFF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 6(0x08C00C00~0x08C00DFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[5]</name>
+					<brief>0x08C00A00~0x08C00BFF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 5(0x08C00A00~0x08C00BFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[4]</name>
+					<brief>0x08C00800~0x08C009FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 4(0x08C00800~0x08C009FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[3]</name>
+					<brief>0x08C00600~0x08C007FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 3(0x08C00600~0x08C007FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[2]</name>
+					<brief>0x08C00400~0x08C005FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 2(0x08C00400~0x08C005FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[1]</name>
+					<brief>0x08C00200~0x08C003FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 1(0x08C00200~0x08C003FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[0]</name>
+					<brief>0x08C00000~0x08C001FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 0(0x08C00000~0x08C001FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_EPWP_N[7:0]</name>
+			<displayName>OB_EPWP_N[7:0]</displayName>
+			<addressOffset>0x15</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_EPWP_N[7:0]</name>
+					<brief>OB_EPWP complement value bit 7 to 0</brief>
+					<description>OB_EPWP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+	</OPBytes>
+	<OPBytes baseAddress="0x40022068" length="4" RegType="OptionBytes">
+		<OPByte>
+			<name>FMC_OB1CS</name>
+			<displayName>FMC_OB1CS</displayName>
+			<addressOffset>0x0</addressOffset>
+			<size>0x20</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>LKVAL[15:0]</name>
+					<brief>Option bytes 1 Lock Value</brief>
+					<description>Option bytes 1 Lock Value&#x000A;0x33CC : Lock Option bytes 1, the Option bytes 1 cannot be modified any more&#x000A;other value : Do not lock Option bytes 1</description>
+					<bitOffset>16</bitOffset>
+					<bitWidth>16</bitWidth>
+				</field>
+				<field>
+					<name>EPLOAD</name>
+					<brief>Load EPLOAD of option byte 1 after reset</brief>
+					<description>Load EPLOAD of option byte 1 after reset. This bit can be write by software when OB1LK is 0</description>
+					<bitOffset>15</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				 <field>
+					<name>EPSIZE[3:0]</name>
+					<brief>Load EPSIZE of option byte 1 after reset</brief>
+					<description>Load EPSIZE of option byte 1 after reset. These bits can be write by software when OB1LK is 0</description>
+					<bitOffset>8</bitOffset>
+					<bitWidth>4</bitWidth>
+				</field>
+				<field>
+					<name>EFALC[3:0]</name>
+					<brief>Load EFALC of option byte 1 after reset</brief>
+					<description>Load EFALC of option byte 1 after reset. These bits can be write by software when OB1LK is 0</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>4</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+	</OPBytes>
+</OPBytesArchitecture>
+<OPBytesArchitecture type = "2">
+	<OPBytes baseAddress="0x1FFFF800" length="24" RegType="OptionBytes">
+		<OPByte>
+			<name>OB_SPC</name>
+			<displayName>OB_SPC</displayName>
+			<addressOffset>0x0</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_SPC</name>
+					<brief>Option byte security protection value</brief>
+					<description>Option byte security protection value&#x000A;0xA5 : no security protection&#x000A;any value except 0xA5 or 0xCC : protection level low&#x000A;0xCC : protection level high</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_SPC_N</name>
+			<displayName>OB_SPC_N</displayName>
+			<addressOffset>0x1</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_SPC_N</name>
+					<brief>OB_SPC complement value</brief>
+					<description>OB_SPC complement value</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_USER</name>
+			<displayName>OB_USER</displayName>
+			<addressOffset>0x2</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>BOR_TH</name>
+					<brief>BOR_TH (Brown out reset threshold)</brief>
+					<description>BOR_TH&#x000A;0: No BOR&#x000A;1: Have BOR, brownout threshold level (2.6V)</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OTA</name>
+					<brief>OTA</brief>
+					<description>OTA</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>BB</name>
+					<brief>Boot configuration</brief>
+					<description>BB&#x000A;0: boot from bootloader, when configured boot from main memory&#x000A;1: No effect</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nRST_STDBY</name>
+					<brief>Generate a reset instead of entering standby mode</brief>
+					<description>nRST_STDBY&#x000A;0: generate a reset instead of entering standby mode&#x000A;1: no reset when entering standby mode</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nRST_DPSLP</name>
+					<brief>Generate a reset instead of entering Deep-sleep mode</brief>
+					<description>nRST_DPSLP&#x000A;0: generate a reset instead of entering Deep-sleep mode&#x000A;1: no reset when entering Deep-sleep mode</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nWDG_HW</name>
+					<brief>Hardware free watchdog</brief>
+					<description>nWDG_HW&#x000A;0: hardware free watchdog&#x000A;1: software free watchdog</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_USER_N</name>
+			<displayName>OB_USER_N</displayName>
+			<addressOffset>0x3</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>x2
+			<fields>
+				<field>
+					<name>OB_USER_N</name>
+					<brief>OB_USER complement value</brief>
+					<description>OB_USER complement value</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA[7:0]</name>
+			<displayName>OB_DATA[7:0]</displayName>
+			<addressOffset>0x4</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DATA[7:0]</name>
+					<brief>user defined data bit 7 to 0</brief>
+					<description>user defined data bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA_N[7:0]</name>
+			<displayName>OB_DATA_N[7:0]</displayName>
+			<addressOffset>0x5</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DATA_N[7:0]</name>
+					<brief>OB_DATA complement value bit 7 to 0</brief>
+					<description>OB_DATA complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA[15:8]</name>
+			<displayName>OB_DATA[15:8]</displayName>
+			<addressOffset>0x6</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DATA[15:8]</name>
+					<brief>user defined data bit 15 to 8</brief>
+					<description>user defined data bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA_N[15:8]</name>
+			<displayName>OB_DATA_N[15:8]</displayName>
+			<addressOffset>0x7</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DATA_N[15:8]</name>
+					<brief>OB_DATA complement value bit 15 to 8</brief>
+					<description>OB_DATA complement value bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[7:0]</name>
+			<displayName>OB_BK0WP[7:0]</displayName>
+			<addressOffset>0x8</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[7]</name>
+					<brief>0x08007000~0x08007FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 7(0x08007000~0x08007FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[6]</name>
+					<brief>0x08006000~0x08006FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 6(0x08006000~0x08006FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[5]</name>
+					<brief>0x08005000~0x08005FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 5(0x08005000~0x08005FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[4]</name>
+					<brief>0x08040000~0x08004FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 4(0x08040000~0x08004FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[3]</name>
+					<brief>0x08003000~0x08003FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 3(0x08003000~0x08003FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[2]</name>
+					<brief>0x08002000~0x08002FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 2(0x08002000~0x08002FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[1]</name>
+					<brief>0x08001000~0x08001FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 1(0x08001000~0x08001FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[0]</name>
+					<brief>0x08000000~0x08000FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 0(0x08000000~0x08000FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[7:0]</name>
+			<displayName>OB_BK0WP_N[7:0]</displayName>
+			<addressOffset>0x9</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[7:0]</name>
+					<brief>OB_BK0WP complement value bit 7 to 0</brief>
+					<description>OB_BK0WP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[15:8]</name>
+			<displayName>OB_BK0WP[15:8]</displayName>
+			<addressOffset>0xA</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[15]</name>
+					<brief>0x0800F000~0x0800FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 15(0x0800F000~0x0800FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[14]</name>
+					<brief>0x0800E000~0x0800EFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 14(0x0800E000~0x0800EFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[13]</name>
+					<brief>0x0800D000~0x0800DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 13(0x0800D000~0x0800DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[12]</name>
+					<brief>0x0800C000~0x0800CFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 12(0x0800C000~0x0800CFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[11]</name>
+					<brief>0x0800B000~0x0800BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 11(0x0800B000~0x0800BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[10]</name>
+					<brief>0x0800A000~0x0800AFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 10(0x0800A000~0x0800AFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[9]</name>
+					<brief>0x08009000~0x08009FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 9(0x08009000~0x08009FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[8]</name>
+					<brief>0x08008000~0x08008FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 8(0x08008000~0x08008FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[15:8]</name>
+			<displayName>OB_BK0WP_N[15:8]</displayName>
+			<addressOffset>0xB</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[15:8]</name>
+					<brief>OB_BK0WP complement value bit 15 to 8</brief>
+					<description>OB_BK0WP complement value bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[23:16]</name>
+			<displayName>OB_BK0WP[23:16]</displayName>
+			<addressOffset>0xC</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[23]</name>
+					<brief>0x08017000~0x08017FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 23(0x08017000~0x08017FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[22]</name>
+					<brief>0x08016000~0x08016FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 22(0x08016000~0x08016FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[21]</name>
+					<brief>0x08015000~0x08015FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 21(0x08015000~0x08015FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[20]</name>
+					<brief>0x08014000~0x08014FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 20(0x08014000~0x08014FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[19]</name>
+					<brief>0x08013000~0x08013FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 19(0x08013000~0x08013FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[18]</name>
+					<brief>0x08012000~0x08012FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 18(0x08012000~0x08012FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[17]</name>
+					<brief>0x08011000~0x08011FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 17(0x08011000~0x08011FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[16]</name>
+					<brief>0x08010000~0x08010FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 16(0x08010000~0x08010FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[23:16]</name>
+			<displayName>OB_BK0WP_N[23:16]</displayName>
+			<addressOffset>0xB</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[23:16]</name>
+					<brief>OB_BK0WP complement value bit 23 to 16</brief>
+					<description>OB_BK0WP complement value bit 23 to 16</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[31:24]</name>
+			<displayName>OB_BK0WP[31:24]</displayName>
+			<addressOffset>0xE</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[31]</name>
+					<brief>0x0801F000~0x0801FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 31(0x0801F000~0x0801FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[30]</name>
+					<brief>0x0801E000~0x0801EFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 30(0x0801E000~0x0801EFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[29]</name>
+					<brief>0x0801D000~0x0801DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 29(0x0801D000~0x0801DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[28]</name>
+					<brief>0x0801C000~0x0801CFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 28(0x0801C000~0x0801CFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[27]</name>
+					<brief>0x0801B000~0x0801BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 27(0x0801B000~0x0801BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[26]</name>
+					<brief>0x0801A000~0x0801AFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 26(0x0801A000~0x0801AFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[25]</name>
+					<brief>0x08019000~0x08019FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 25(0x08019000~0x08019FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[24]</name>
+					<brief>0x08018000~0x08018FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 24(0x08018000~0x08018FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[31:24]</name>
+			<displayName>OB_BK0WP_N[31:24]</displayName>
+			<addressOffset>0xF</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[31:24]</name>
+					<brief>OB_BK0WP complement value bit 31 to 24</brief>
+					<description>OB_BK0WP complement value bit 31 to 24</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DFWP[7:0]</name>
+			<displayName>OB_DFWP[7:0]</displayName>
+			<addressOffset>0x12</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DFWP[7]</name>
+					<brief>0x08807000~0x08807FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 7(0x08807000~0x08807FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[6]</name>
+					<brief>0x08806000~0x08806FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 6(0x08806000~0x08806FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[5]</name>
+					<brief>0x08805000~0x08805FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 5(0x08805000~0x08805FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[4]</name>
+					<brief>0x08804000~0x08804FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 4(0x08804000~0x08804FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[3]</name>
+					<brief>0x08803000~0x08803FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 3(0x08803000~0x08803FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[2]</name>
+					<brief>0x08802000~0x08802FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 2(0x08802000~0x08802FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[1]</name>
+					<brief>0x08801000~0x08801FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 1(0x08801000~0x08801FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[0]</name>
+					<brief>0x08800000~0x08800FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 0(0x08800000~0x08800FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DFWP_N[7:0]</name>
+			<displayName>OB_DFWP_N[7:0]</displayName>
+			<addressOffset>0x13</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DFWP_N[7:0]</name>
+					<brief>OB_DFWP complement value bit 7 to 0</brief>
+					<description>OB_DFWP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_EPWP[7:0]</name>
+			<displayName>OB_EPWP[7:0]</displayName>
+			<addressOffset>0x14</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_EPWP[7]</name>
+					<brief>0x08C00700~0x08C007FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 7(0x08C00700~0x08C007FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[6]</name>
+					<brief>0x08C00600~0x08C006FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 6(0x08C00600~0x08C006FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[5]</name>
+					<brief>0x08C00500~0x08C005FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 5(0x08C00500~0x08C005FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[4]</name>
+					<brief>0x08C00400~0x08C004FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 4(0x08C00400~0x08C004FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[3]</name>
+					<brief>0x08C00300~0x08C003FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 3(0x08C00300~0x08C003FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[2]</name>
+					<brief>0x08C00200~0x08C002FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 2(0x08C00200~0x08C002FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[1]</name>
+					<brief>0x08C00100~0x08C001FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 1(0x08C00100~0x08C001FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[0]</name>
+					<brief>0x08C00000~0x08C000FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 0(0x08C00000~0x08C000FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_EPWP_N[7:0]</name>
+			<displayName>OB_EPWP_N[7:0]</displayName>
+			<addressOffset>0x15</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_EPWP_N[7:0]</name>
+					<brief>OB_EPWP complement value bit 7 to 0</brief>
+					<description>OB_EPWP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+	</OPBytes>
+	<OPBytes baseAddress="0x40022068" length="4" RegType="OptionBytes">
+		<OPByte>
+			<name>FMC_OB1CS</name>
+			<displayName>FMC_OB1CS</displayName>
+			<addressOffset>0x0</addressOffset>
+			<size>0x20</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>LKVAL[15:0]</name>
+					<brief>Option bytes 1 Lock Value</brief>
+					<description>Option bytes 1 Lock Value&#x000A;0x33CC : Lock Option bytes 1, the Option bytes 1 cannot be modified any more&#x000A;other value : Do not lock Option bytes 1</description>
+					<bitOffset>16</bitOffset>
+					<bitWidth>16</bitWidth>
+				</field>
+				<field>
+					<name>EPLOAD</name>
+					<brief>Load EPLOAD of option byte 1 after reset</brief>
+					<description>Load EPLOAD of option byte 1 after reset. This bit can be write by software when OB1LK is 0</description>
+					<bitOffset>15</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				 <field>
+					<name>EPSIZE[3:0]</name>
+					<brief>Load EPSIZE of option byte 1 after reset</brief>
+					<description>Load EPSIZE of option byte 1 after reset. These bits can be write by software when OB1LK is 0</description>
+					<bitOffset>8</bitOffset>
+					<bitWidth>4</bitWidth>
+				</field>
+				<field>
+					<name>EFALC[3:0]</name>
+					<brief>Load EFALC of option byte 1 after reset</brief>
+					<description>Load EFALC of option byte 1 after reset. These bits can be write by software when OB1LK is 0</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>4</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+	</OPBytes>
+</OPBytesArchitecture>
+<OPBytesArchitecture type = "3">
+	<OPBytes baseAddress="0x1FFFF800" length="24" RegType="OptionBytes">
+		<OPByte>
+			<name>OB_SPC</name>
+			<displayName>OB_SPC</displayName>
+			<addressOffset>0x0</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_SPC</name>
+					<brief>Option byte security protection value</brief>
+					<description>Option byte security protection value&#x000A;0xA5 : no security protection&#x000A;any value except 0xA5 or 0xCC : protection level low&#x000A;0xCC : protection level high</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_SPC_N</name>
+			<displayName>OB_SPC_N</displayName>
+			<addressOffset>0x1</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_SPC_N</name>
+					<brief>OB_SPC complement value</brief>
+					<description>OB_SPC complement value</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_USER</name>
+			<displayName>OB_USER</displayName>
+			<addressOffset>0x2</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>BOR_TH</name>
+					<brief>BOR_TH (Brown out reset threshold)</brief>
+					<description>BOR_TH&#x000A;0: No BOR&#x000A;1: Have BOR, brownout threshold level (2.6V)</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OTA</name>
+					<brief>OTA</brief>
+					<description>OTA</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>BB</name>
+					<brief>Boot configuration</brief>
+					<description>BB&#x000A;0: boot from bootloader, when configured boot from main memory&#x000A;1: No effect</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nRST_STDBY</name>
+					<brief>Generate a reset instead of entering standby mode</brief>
+					<description>nRST_STDBY&#x000A;0: generate a reset instead of entering standby mode&#x000A;1: no reset when entering standby mode</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nRST_DPSLP</name>
+					<brief>Generate a reset instead of entering Deep-sleep mode</brief>
+					<description>nRST_DPSLP&#x000A;0: generate a reset instead of entering Deep-sleep mode&#x000A;1: no reset when entering Deep-sleep mode</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>nWDG_HW</name>
+					<brief>Hardware free watchdog</brief>
+					<description>nWDG_HW&#x000A;0: hardware free watchdog&#x000A;1: software free watchdog</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_USER_N</name>
+			<displayName>OB_USER_N</displayName>
+			<addressOffset>0x3</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_USER_N</name>
+					<brief>OB_USER complement value</brief>
+					<description>OB_USER complement value</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA[7:0]</name>
+			<displayName>OB_DATA[7:0]</displayName>
+			<addressOffset>0x4</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DATA[7:0]</name>
+					<brief>user defined data bit 7 to 0</brief>
+					<description>user defined data bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA_N[7:0]</name>
+			<displayName>OB_DATA_N[7:0]</displayName>
+			<addressOffset>0x5</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DATA_N[7:0]</name>
+					<brief>OB_DATA complement value bit 7 to 0</brief>
+					<description>OB_DATA complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA[15:8]</name>
+			<displayName>OB_DATA[15:8]</displayName>
+			<addressOffset>0x6</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DATA[15:8]</name>
+					<brief>user defined data bit 15 to 8</brief>
+					<description>user defined data bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DATA_N[15:8]</name>
+			<displayName>OB_DATA_N[15:8]</displayName>
+			<addressOffset>0x7</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DATA_N[15:8]</name>
+					<brief>OB_DATA complement value bit 15 to 8</brief>
+					<description>OB_DATA complement value bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[7:0]</name>
+			<displayName>OB_BK0WP[7:0]</displayName>
+			<addressOffset>0x8</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[7]</name>
+					<brief>0x08003800~0x08003FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 7(0x08003800~0x08003FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[6]</name>
+					<brief>0x08003000~0x080037FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 6(0x08003000~0x080037FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[5]</name>
+					<brief>0x08002800~0x08002FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 5(0x08002800~0x08002FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[4]</name>
+					<brief>0x08002000~0x080027FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 4(0x08002000~0x080027FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[3]</name>
+					<brief>0x08001800~0x08001FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 3(0x08001800~0x08001FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[2]</name>
+					<brief>0x08001000~0x080017FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 2(0x08001000~0x080017FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[1]</name>
+					<brief>0x08000800~0x08000FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 1(0x08000800~0x08000FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[0]</name>
+					<brief>0x08000000~0x080007FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 0(0x08000000~0x080007FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[7:0]</name>
+			<displayName>OB_BK0WP_N[7:0]</displayName>
+			<addressOffset>0x9</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[7:0]</name>
+					<brief>OB_BK0WP complement value bit 7 to 0</brief>
+					<description>OB_BK0WP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[15:8]</name>
+			<displayName>OB_BK0WP[15:8]</displayName>
+			<addressOffset>0xA</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[15]</name>
+					<brief>0x08007800~0x08007FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 15(0x08007800~0x08007FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[14]</name>
+					<brief>0x08007000~0x080077FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 14(0x08007000~0x080077FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[13]</name>
+					<brief>0x08006800~0x08006FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 13(0x08006800~0x08006FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[12]</name>
+					<brief>0x08006000~0x080067FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 12(0x08006000~0x080067FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[11]</name>
+					<brief>0x08005800~0x08005FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 11(0x08005800~0x08005FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[10]</name>
+					<brief>0x08005000~0x080057FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 10(0x08005000~0x080057FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[9]</name>
+					<brief>0x08004800~0x08004FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 9(0x08004800~0x08004FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[8]</name>
+					<brief>0x08004000~0x080047FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 8(0x08004000~0x080047FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[15:8]</name>
+			<displayName>OB_BK0WP_N[15:8]</displayName>
+			<addressOffset>0xB</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[15:8]</name>
+					<brief>OB_BK0WP complement value bit 15 to 8</brief>
+					<description>OB_BK0WP complement value bit 15 to 8</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[23:16]</name>
+			<displayName>OB_BK0WP[23:16]</displayName>
+			<addressOffset>0xC</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[23]</name>
+					<brief>0x0800B800~0x0800BFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 23(0x0800B800~0x0800BFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[22]</name>
+					<brief>0x0800B000~0x0800B7FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 22(0x0800B000~0x0800B7FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[21]</name>
+					<brief>0x0800A800~0x0800AFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 21(0x0800A800~0x0800AFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[20]</name>
+					<brief>0x0800A000~0x0800A7FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 20(0x0800A000~0x0800A7FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[19]</name>
+					<brief>0x08009800~0x08009FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 19(0x08009800~0x08009FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[18]</name>
+					<brief>0x08009000~0x080097FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 18(0x08009000~0x080097FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[17]</name>
+					<brief>0x08008800~0x08008FFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 17(0x08008800~0x08008FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[16]</name>
+					<brief>0x08008000~0x080087FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 16(0x08008000~0x080087FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[23:16]</name>
+			<displayName>OB_BK0WP_N[23:16]</displayName>
+			<addressOffset>0xB</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[23:16]</name>
+					<brief>OB_BK0WP complement value bit 23 to 16</brief>
+					<description>OB_BK0WP complement value bit 23 to 16</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP[31:24]</name>
+			<displayName>OB_BK0WP[31:24]</displayName>
+			<addressOffset>0xE</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP[31]</name>
+					<brief>0x0800F800~0x0800FFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 31(0x0800F800~0x0800FFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[30]</name>
+					<brief>0x0800F000~0x0800F7FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 30(0x0800F000~0x0800F7FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[29]</name>
+					<brief>0x0800E800~0x0800EFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 29(0x0800E800~0x0800EFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[28]</name>
+					<brief>0x0800E000~0x0800E7FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 28(0x0800E000~0x0800E7FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[27]</name>
+					<brief>0x0800D800~0x0800DFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 27(0x0800D800~0x0800DFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[26]</name>
+					<brief>0x0800D000~0x0800D7FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 26(0x0800D000~0x0800D7FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[25]</name>
+					<brief>0x0800C800~0x0800CFFF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 25(0x0800C800~0x0800CFFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_BK0WP[24]</name>
+					<brief>0x0800C000~0x0800C7FF</brief>
+					<description>Page Erase/Program Protection of bank0 bit 24(0x0800C000~0x0800C7FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_BK0WP_N[31:24]</name>
+			<displayName>OB_BK0WP_N[31:24]</displayName>
+			<addressOffset>0xF</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_BK0WP_N[31:24]</name>
+					<brief>OB_BK0WP complement value bit 31 to 24</brief>
+					<description>OB_BK0WP complement value bit 31 to 24</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DFWP[7:0]</name>
+			<displayName>OB_DFWP[7:0]</displayName>
+			<addressOffset>0x12</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_DFWP[7]</name>
+					<brief>0x08803800~0x08803FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 7(0x08803800~0x08803FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[6]</name>
+					<brief>0x08803000~0x088037FF</brief>
+					<description>Page Erase/Program Protection of data flash bit 6(0x08803000~0x088037FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[5]</name>
+					<brief>0x08802800~0x08802FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 5(0x08802800~0x08802FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[4]</name>
+					<brief>0x08802000~0x088027FF</brief>
+					<description>Page Erase/Program Protection of data flash bit 4(0x08802000~0x088027FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[3]</name>
+					<brief>0x08801800~0x08801FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 3(0x08801800~0x08801FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[2]</name>
+					<brief>0x08801000~0x088017FF</brief>
+					<description>Page Erase/Program Protection of data flash bit 2(0x08801000~0x088017FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[1]</name>
+					<brief>0x08800800~0x08800FFF</brief>
+					<description>Page Erase/Program Protection of data flash bit 1(0x08800800~0x08800FFF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_DFWP[0]</name>
+					<brief>0x08800000~0x088007FF</brief>
+					<description>Page Erase/Program Protection of data flash bit 0(0x08800000~0x088007FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_DFWP_N[7:0]</name>
+			<displayName>OB_DFWP_N[7:0]</displayName>
+			<addressOffset>0x13</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_DFWP_N[7:0]</name>
+					<brief>OB_DFWP complement value bit 7 to 0</brief>
+					<description>OB_DFWP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_EPWP[7:0]</name>
+			<displayName>OB_EPWP[7:0]</displayName>
+			<addressOffset>0x14</addressOffset>
+			<size>0x8</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>OB_EPWP[7]</name>
+					<brief>0x08C00380~0x08C003FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 7(0x08C00380~0x08C003FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>7</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[6]</name>
+					<brief>0x08C00300~0x08C0037F</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 6(0x08C00300~0x08C0037F)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>6</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[5]</name>
+					<brief>0x08C00280~0x08C002FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 5(0x08C00280~0x08C002FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>5</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[4]</name>
+					<brief>0x08C00200~0x08C0027F</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 4(0x08C00200~0x08C0027F)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[3]</name>
+					<brief>0x08C00180~0x08C001FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 3(0x08C00180~0x08C001FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>3</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[2]</name>
+					<brief>0x08C00100~0x08C0017F</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 2(0x08C00100~0x08C0017F)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>2</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[1]</name>
+					<brief>0x08C00080~0x08C000FF</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 1(0x08C00080~0x08C000FF)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>1</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				<field>
+					<name>OB_EPWP[0]</name>
+					<brief>0x08C00000~0x08C0007F</brief>
+					<description>Page Erase/Program Protection of EEPROM backup bit 0(0x08C00000~0x08C0007F)&#x000A;0: protection active&#x000A;1: unprotected</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+		<OPByte>
+			<name>OB_EPWP_N[7:0]</name>
+			<displayName>OB_EPWP_N[7:0]</displayName>
+			<addressOffset>0x15</addressOffset>
+			<size>0x8</size>
+			<access>read</access>
+			<complement>0</complement>
+			<fields>
+				<field>
+					<name>OB_EPWP_N[7:0]</name>
+					<brief>OB_EPWP complement value bit 7 to 0</brief>
+					<description>OB_EPWP complement value bit 7 to 0</description>
+					<bitOffset>0</bitOffset>
+					<bitWidth>8</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+	</OPBytes>
+	<OPBytes baseAddress="0x40022068" length="4" RegType="OptionBytes">
+		<OPByte>
+			<name>FMC_OB1CS</name>
+			<displayName>FMC_OB1CS</displayName>
+			<addressOffset>0x0</addressOffset>
+			<size>0x20</size>
+			<access>read-write</access>
+			<complement>FFFF</complement>
+			<fields>
+				<field>
+					<name>LKVAL[15:0]</name>
+					<brief>Option bytes 1 Lock Value</brief>
+					<description>Option bytes 1 Lock Value&#x000A;0x33CC : Lock Option bytes 1, the Option bytes 1 cannot be modified any more&#x000A;other value : Do not lock Option bytes 1</description>
+					<bitOffset>16</bitOffset>
+					<bitWidth>16</bitWidth>
+				</field>
+				<field>
+					<name>EPLOAD</name>
+					<brief>Load EPLOAD of option byte 1 after reset</brief>
+					<description>Load EPLOAD of option byte 1 after reset. This bit can be write by software when OB1LK is 0</description>
+					<bitOffset>15</bitOffset>
+					<bitWidth>1</bitWidth>
+				</field>
+				 <field>
+					<name>EPSIZE[3:0]</name>
+					<brief>Load EPSIZE of option byte 1 after reset</brief>
+					<description>Load EPSIZE of option byte 1 after reset. These bits can be write by software when OB1LK is 0</description>
+					<bitOffset>8</bitOffset>
+					<bitWidth>4</bitWidth>
+				</field>
+				<field>
+					<name>EFALC[3:0]</name>
+					<brief>Load EFALC of option byte 1 after reset</brief>
+					<description>Load EFALC of option byte 1 after reset. These bits can be write by software when OB1LK is 0</description>
+					<bitOffset>4</bitOffset>
+					<bitWidth>4</bitWidth>
+				</field>
+			</fields>
+		</OPByte>
+	</OPBytes>
+</OPBytesArchitecture>
+<OTPBytesBlocks>
+    <OTPBlocks baseAddress="0x1FFF7000" length="1024"/>
+</OTPBytesBlocks>
+<OTPBytes baseAddress="0x1FFF7000" length="1024">
+    <OTPBlocks>
+        <name>OTP</name>
+		<displayName>OTP</displayName>
+        <minProgrammeWidth>0x40</minProgrammeWidth>
+		<maxProgrammeWidth>0x40</maxProgrammeWidth>
+		<lockBaseAddress>0x0</lockBaseAddress>
+		<BlockCnt>0x01</BlockCnt>
+		<baseAddress>0x1FFF7000</baseAddress>
+		<endAddress>0x1FFF73FF</endAddress>
+        <fields>
+		   <field>
+                <name>OTP_Block</name>
+				<displayName>OTP_Block</displayName>
+                <baseAddress>0x1FFF7000</baseAddress>
+		        <endAddress>0x1FFF73FF</endAddress>	
+				<ifHasLockArea>0x0</ifHasLockArea>
+				<size>0x400</size>
+				<lockOffset>0x00</lockOffset>
+				<lockbitWidth>0</lockbitWidth>
+				<LockVal>0</LockVal>
+            </field>
+        </fields>
+    </OTPBlocks>
+</OTPBytes>

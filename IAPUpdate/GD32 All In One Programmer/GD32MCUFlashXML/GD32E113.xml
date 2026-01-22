@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MCUGroup series = "GD32E113">
+	<Flash McuPartNo = "GD32E103X8XX" baseAddress="0x08000000" Size = "64">
+	    <pageGroup pageNumber = "64">
+            <Page startIndex= "0" endIndex = "63" startAddress = "0x08000000" endAddress = "0x0800FFFF" pageSize = "1024" bank = "0"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32E103XBXX" baseAddress="0x08000000" Size = "128">
+	    <pageGroup pageNumber = "128">
+            <Page startIndex= "0" endIndex = "127" startAddress = "0x08000000" endAddress = "0x0801FFFF" pageSize = "1024" bank = "0"/>
+		</pageGroup>
+    </Flash>
+    <OTP baseAddress="0x1FFF7000" size="512">
+        <DataArea baseAddress="0x1FFF7000" size="512" BlockCnt="1" BlockSize="512">
+            <Block baseAddress="0x1FFF7000" endAddress="0x1FFF71FF"/>
+        </DataArea>
+    </OTP>
+</MCUGroup>

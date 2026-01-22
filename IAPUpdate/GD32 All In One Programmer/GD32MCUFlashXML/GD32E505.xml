@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MCUGroup series = "GD32E505">
+	<Flash McuPartNo = "GD32E505XBXX" baseAddress="0x08000000" Size = "128">
+	    <pageGroup pageNumber = "16">
+            <Page startIndex= "0" endIndex = "15" startAddress = "0x08000000" endAddress = "0x0801FFFF" pageSize = "8192" bank = "0"/>
+		</pageGroup>
+    </Flash>
+    <Flash McuPartNo = "GD32E505XCXX" baseAddress="0x08000000" Size = "256">
+	    <pageGroup pageNumber = "32">
+            <Page startIndex= "0" endIndex = "31" startAddress = "0x08000000" endAddress = "0x0803FFFF" pageSize = "8192" bank = "0"/>
+        </pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32E505XEXX" baseAddress="0x08000000" Size = "512">
+	    <pageGroup pageNumber = "64">
+            <Page startIndex= "0" endIndex = "63" startAddress = "0x08000000" endAddress = "0x0807FFFF" pageSize = "8192" bank = "0"/>
+		</pageGroup>
+    </Flash>
+</MCUGroup>

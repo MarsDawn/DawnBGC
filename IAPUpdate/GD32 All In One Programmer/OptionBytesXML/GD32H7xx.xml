@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OPBytesBlocks>
+    <OPBytesBlock baseAddress="0x5200201C" length="60" RegType="OptionBytes"/>
+	<OPBytesBlock baseAddress="0x52002068" length="24" RegType="OptionBytes"/>
+	<OPBytesBlock baseAddress="0x40022814" length="48" RegType="Efuse"/>
+</OPBytesBlocks>
+<OPBytes baseAddress="0x5200201C" length="60" RegType="OptionBytes">
+	<OPByte>
+		<name>FMC_OBSTAT0_EFT</name>
+		<displayName>FMC_OBSTAT0_EFT</displayName>
+		<addressOffset>0x00</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x000000AA</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>IOSPDOPEN</name>
+				<brief>Allowed enable status bit for I/O speed optimization at low-voltage</brief>
+				<description>Allowed enable status bit for I/O speed optimization at low-voltage.&#x000A;0: Chip operating voltage greater than 2.5V, so I/O speed optimization is not allowed&#x000A;1: Chip operating voltage is less than 2.5V, so I/O speed optimization is allowed</description>
+				<bitOffset>29</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>DTCM1ECCEN</name>
+				<brief>DTCM1 ECC function enable status bit</brief>
+				<description>DTCM1 ECC function enable status bit&#x000A;0: Disable CPU DTCM1 ECC function&#x000A;1: Enable CPU DTCM1 ECC function</description>
+				<bitOffset>24</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>DTCM0ECCEN</name>
+				<brief>DTCM0 ECC function enable status bit</brief>
+				<description>DTCM0 ECC function enable status bit&#x000A;0: Disable CPU DTCM0 ECC function&#x000A;1: Enable CPU DTCM0 ECC function</description>
+				<bitOffset>23</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>ITCMECCEN</name>
+				<brief>ITCM ECC function enable status bit</brief>
+				<description>ITCM ECC function enable status bit&#x000A;0: Disable CPU ITCM ECC function&#x000A;1: Enable CPU ITCM ECC function</description>
+				<bitOffset>22</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SCR_EFT</name>
+				<brief>Secure mode status bit</brief>
+				<description>Secure mode status bit&#x000A;0: Disable secure mode.&#x000A;1: Enable secure mode.</description>
+				<bitOffset>21</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>FWDGSPD_STDBY</name>
+				<brief>FWDGT suspend option in standby mode status bit</brief>
+				<description>FWDGT suspend option in standby mode status bit&#x000A;0: FWDGT is suspend in system standby mode&#x000A;1: FWDGT is running in system standby mode.</description>
+				<bitOffset>18</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>FWDGSPD_DPSLP</name>
+				<brief>FWDGT suspend option in deepsleep mode status bit</brief>
+				<description>FWDGT suspend option in deepsleep mode status bit&#x000A;0: FWDGT is suspend in system deepsleep mode&#x000A;1: FWDGT is running in system deepsleep mode.</description>
+				<bitOffset>17</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SPC[7:0]</name>
+				<brief>Security protection level option byte status bits</brief>
+				<description>Security protection level option byte status bits&#x000A;0xAA: No protection&#x000A;0xCC: Protection level high&#x000A;Any value except 0xAA or 0xCC: Protection level low.</description>
+				<bitOffset>8</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+			<field>
+				<name>nRST_STDBY</name>
+				<brief>Option byte standby reset status bit</brief>
+				<description>Option byte standby reset status bit&#x000A;0: Generates a reset instead of entering standby mode&#x000A;1: No reset when entering standby mode.</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nRST_DPSLP</name>
+				<brief>Option byte deepsleep reset status bit</brief>
+				<description>Option byte deepsleep reset status bit&#x000A;0: Generates a reset instead of entering Deep-sleep mode&#x000A;1: No reset when entering Deep-sleep mode</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nWDG_HW</name>
+				<brief>Watchdog status bit</brief>
+				<description>Watchdog status bit&#x000A;0: Hardware free watchdog&#x000A;1: Software free watchdog</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>BOR_TH[1:0]</name>
+				<brief>BOR threshold status bits</brief>
+				<description>BOR threshold status bits&#x000A;00: No BOR function&#x000A;01: BOR threshold value 1&#x000A;10: BOR threshold value 2&#x000A;11: BOR threshold value 3</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+		</fields>
+    </OPByte>		
+	<OPByte>
+		<name>FMC_OBSTAT0_MDF</name>
+		<displayName>FMC_OBSTAT0_MDF</displayName>
+		<addressOffset>0x04</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x000000AA</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>IOSPDOPEN</name>
+				<brief>Allowed enable configuration bit for I/O speed optimization at low-voltage</brief>
+				<description>Allowed enable configuration bit for I/O speed optimization at low-voltage.&#x000A;0: Chip operating voltage greater than 2.5V, so I/O speed optimization is not allowed&#x000A;1: Chip operating voltage is less than 2.5V, so I/O speed optimization is allowed</description>
+				<bitOffset>29</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>DTCM1ECCEN</name>
+				<brief>DTCM1 ECC function enable configuration bit</brief>
+				<description>DTCM1 ECC function enable configuration bit&#x000A;0: Disabled CPU DTCM1 ECC function&#x000A;1: Enabled CPU DTCM1 ECC function</description>
+				<bitOffset>24</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>DTCM0ECCEN</name>
+				<brief>DTCM0 ECC function enable configuration bit</brief>
+				<description>DTCM0 ECC function enable configuration bit&#x000A;0: Disabled CPU DTCM0 ECC function&#x000A;1: enabled CPU DTCM0 ECC function</description>
+				<bitOffset>23</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>ITCMECCEN</name>
+				<brief>ITCM ECC function enable configuration bit</brief>
+				<description>ITCM ECC function enable configuration bit&#x000A;0: disabled CPU ITCM ECC function&#x000A;1: enabled CPU ITCM ECC function</description>
+				<bitOffset>22</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SCR_MDF</name>
+				<brief>Secure mode configuration bit</brief>
+				<description>Secure mode configuration bit&#x000A;0: Disable secure mode.&#x000A;1: Enable secure mode.</description>
+				<bitOffset>21</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>FWDGSPD_STDBY</name>
+				<brief>FWDGT suspend option in standby mode configuration bit</brief>
+				<description>FWDGT suspend option in standby mode configuration bit&#x000A;0: FWDGT is suspend in system standby mode&#x000A;1: FWDGT is running in system standby mode.</description>
+				<bitOffset>18</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>FWDGSPD_DPSLP</name>
+				<brief>FWDGT suspend option in deepsleep mode configuration bit</brief>
+				<description>FWDGT suspend option in deepsleep mode configuration bit&#x000A;0: FWDGT is suspend in system deepsleep mode&#x000A;1: FWDGT is running in system deepsleep mode.</description>
+				<bitOffset>17</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SPC[7:0]</name>
+				<brief>Security protection level option configuration bits</brief>
+				<description>Security protection level option configuration bits&#x000A;0xAA: No protection&#x000A;0xCC: Protection level high&#x000A;Any value except 0xAA or 0xCC: Protection level low.</description>
+				<bitOffset>8</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+			<field>
+				<name>nRST_STDBY</name>
+				<brief>Option byte standby reset configuration bit</brief>
+				<description>Option byte standby reset configuration bit&#x000A;0: Generates a reset instead of entering standby mode&#x000A;1: No reset when entering standby mode</description>
+				<bitOffset>7</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nRST_DPSLP</name>
+				<brief>Option byte deepsleep reset configuration bit</brief>
+				<description>Option byte deepsleep reset configuration bit&#x000A;0: Generates a reset instead of entering deep-sleep mode&#x000A;1: No reset when entering deep-sleep mode</description>
+				<bitOffset>6</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>nWDG_HW</name>
+				<brief>Watchdog configuration bit</brief>
+				<description>Watchdog configuration bit&#x000A;0: Hardware free watchdog&#x000A;1: Software free watchdog</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>BOR_TH[1:0]</name>
+				<brief>BOR threshold configuration bits</brief>
+				<description>BOR threshold configuration bits&#x000A;00: No BOR function&#x000A;01: BOR threshold value 1&#x000A;10: BOR threshold value 2&#x000A;11: BOR threshold value 3</description>
+				<bitOffset>2</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_DCRPADDR_EFT</name>
+		<displayName>FMC_DCRPADDR_EFT</displayName>
+		<addressOffset>0x0C</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0xFFFFFFFF</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DCRP_EREN</name>
+				<brief>DCRP area erase enable status bit</brief>
+				<description>DCRP area erase enable status bit.&#x000A;0: DCRP is not erased.&#x000A;1: DCRP is erased when a SPC level low to no protection demotion or a protection-removed mass erase occur.</description>
+				<bitOffset>31</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>DCRP_AREA_END[10:0]</name>
+				<brief>DCRP area end address status bits</brief>
+				<description>DCRP area end address status bits&#x000A;These bits contain the last 4K-byte block of the DCRP area.&#x000A;End absolute address = ( DCRP_AREA_END[10:0] + 1 ) * 4096 - 1 + 0x0800_0000.&#x000A;If DCRP_AREA_END[10:0] = DCRP_AREA_START[10:0], DCRP protects the whole main flash block.&#x000A;If DCRP_AREA_END[10:0] &lt; DCRP_AREA_START[10:0], protection is invalid.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>11</bitWidth>
+			</field>
+			<field>
+				<name>DCRP_AREA_START[10:0]</name>
+				<brief>DCRP area start address status bits</brief>
+				<description>DCRP area start address status bits&#x000A;These bits contain the first 4K-byte block of the DCRP area.&#x000A;Start absolute address = DCRP_AREA_START[10:0] * 4096 + 0x0800_0000.&#x000A;If DCRP_AREA_END[10:0] = DCRP_AREA_START[10:0], DCRP protects the whole main flash block.&#x000A;If DCRP_AREA_END[10:0] &lt; DCRP_AREA_START[10:0], protection is invalid.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>11</bitWidth>
+			</field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_DCRPADDR_MDF</name>
+		<displayName>FMC_DCRPADDR_MDF</displayName>
+		<addressOffset>0x10</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0xFFFFFFFF</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DCRP_EREN</name>
+				<brief>DCRP area erase enable configuration bit</brief>
+				<description>DCRP area erase enable configuration bit.&#x000A;0: DCRP is not erased.&#x000A;1: DCRP is erased when a SPC level low to no protection demotion or a protection-removed mass erase.</description>
+				<bitOffset>31</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>DCRP_AREA_END[10:0]</name>
+				<brief>DCRP area end address configuration bits</brief>
+				<description>DCRP area end address configuration bits&#x000A;These bits contain the last 4K-byte block of the DCRP area.&#x000A;End absolute address = ( DCRP_AREA_END[10:0] + 1 ) * 4096 - 1 + 0x0800_0000&#x000A;If DCRP_AREA_END[10:0] = DCRP_AREA_START[10:0], DCRP protects the whole main flash block.&#x000A;If DCRP_AREA_END[10:0] &lt; DCRP_AREA_START[10:0], protection is invalid.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>11</bitWidth>
+			</field>
+			<field>
+				<name>DCRP_AREA_START[10:0]</name>
+				<brief>DCRP area start address configuration bits</brief>
+				<description>DCRP area start address configuration bits&#x000A;These bits contain the first 4K-byte block of the DCRP area.&#x000A;Start absolute address = DCRP_AREA_START[10:0] * 4096 + 0x0800_0000.&#x000A;If DCRP_AREA_END[10:0] = DCRP_AREA_START[10:0], DCRP protects the whole main flash block.&#x000A;If DCRP_AREA_END[10:0] &lt; DCRP_AREA_START[10:0], protection is invalid.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>11</bitWidth>
+			</field>
+		</fields>
+    </OPByte>		
+	<OPByte>
+		<name>FMC_SCRADDR_EFT</name>
+		<displayName>FMC_SCRADDR_EFT</displayName>
+		<addressOffset>0x14</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x03FF0000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>SCR_EREN</name>
+				<brief>Secure user area erase enable option status bit</brief>
+				<description>Secure user area erase enable option status bit.&#x000A;0: No action&#x000A;1: The secure user area is erased when a SPC level low to no protection demotion or a protection-removed mass erase.</description>
+				<bitOffset>31</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SCR_AREA_END[10:0]</name>
+				<brief>Secure user area end address status bits</brief>
+				<description>Secure user area end address status bits&#x000A;These bits contain the last 4K-byte block of the secure user area.&#x000A;End absolute address = (SCR_AREA_END[10:0] + 1 ) * 4096 - 1 + 0x0800_0000&#x000A;If SCR_AREA_END[10:0] = SCR_AREA_START[10:0], whole main flash block is secure user area.&#x000A;If SCR_AREA_END[10:0] &lt; SCR_AREA_START[10:0], protection is invalid.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>11</bitWidth>
+			</field>
+			<field>
+				<name>SCR_AREA_START[10:0]</name>
+				<brief>Secure user area start address status bits</brief>
+				<description>Secure user area start address status bits&#x000A;These bits contain the first 4K-byte block of the secure user area.&#x000A;Start absolute address = SCR_AREA_START[10:0] * 4096 + 0x0800_0000.&#x000A;If SCR_AREA_END[10:0] = SCR_AREA_START[10:0], whole main flash block is secure user area.&#x000A;If SCR_AREA_END[10:0] &lt; SCR_AREA_START[10:0], protection is invalid.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>11</bitWidth>
+			</field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_SCRADDR_MDF</name>
+		<displayName>FMC_SCRADDR_MDF</displayName>
+		<addressOffset>0x18</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x03FF0000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>SCR_EREN</name>
+				<brief>Secure user area erase enable option configuration bit</brief>
+				<description>Secure user area erase enable option configuration bit.&#x000A;0: No action&#x000A;1: The secure user area is erased when a SPC level low to no protection demotion or a protection-removed mass erase.</description>
+				<bitOffset>31</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SCR_AREA_END[10:0]</name>
+				<brief>Secure user area end address configuration bits</brief>
+				<description>Secure user area end address configuration bits&#x000A;These bits contain the last 4K-byte block of the secure user area.&#x000A;End absolute address = (SCR_AREA_END[10:0] + 1 ) * 4096 - 1 + 0x0800_0000&#x000A;If SCR_AREA_END[10:0] = SCR_AREA_START[10:0], whole main flash block is secure user.&#x000A;If SCR_AREA_END[10:0] &lt; SCR_AREA_START[10:0], protection is invalid.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>11</bitWidth>
+			</field>
+			<field>
+				<name>SCR_AREA_START[10:0]</name>
+				<brief>Secure user area start address configuration bits</brief>
+				<description>Secure user area start address configuration bits&#x000A;These bits contain the first 4K-byte block of the secure user area.&#x000A;Start absolute address = SCR_AREA_START[10:0] * 4096 + 0x0800_0000.&#x000A;If SCR_AREA_END[10:0] = SCR_AREA_START[10:0], whole main flash block is secure user.&#x000A;If SCR_AREA_END[10:0] &lt; SCR_AREA_START[10:0], protection is invalid.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>11</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>FMC_WP_EFT</name>
+		<displayName>FMC_WP_EFT</displayName>
+		<addressOffset>0x1C</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>WP[21]</name>
+                <brief>0x8380000~0x83BFFFF</brief>
+                <description>each bit reflects the corresponding 64 sectors to erase/program protection status.&#x000A;0: corresponding 64 sectors are erase/program protected.&#x000A;1: corresponding 64 sectors are not erase/program protected</description>
+                <bitOffset>21</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[20]</name>
+                <brief>0x8300000~0x837FFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>20</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[19]</name>
+                <brief>0x8280000~0x82FFFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>19</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[18]</name>
+                <brief>0x8200000~0x827FFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[17]</name>
+                <brief>0x8180000~0x81FFFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>17</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[16]</name>
+                <brief>0x8100000~0x817FFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[15]</name>
+                <brief>0x80F0000~0x80FFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>15</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[14]</name>
+                <brief>0x80E0000~0x80EFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>14</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[13]</name>
+                <brief>0x80D0000~0x80DFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[12]</name>
+                <brief>0x80C0000~0x80CFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>12</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[11]</name>
+                <brief>0x80B0000~0x80BFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>11</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[10]</name>
+                <brief>0x80A0000~0x80AFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>10</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[9]</name>
+                <brief>0x8090000~0x809FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>9</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[8]</name>
+                <brief>0x8080000~0x808FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[7]</name>
+                <brief>0x8070000~0x807FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[6]</name>
+                <brief>0x8060000~0x806FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[5]</name>
+                <brief>0x8050000~0x805FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[4]</name>
+                <brief>0x8040000~0x804FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[3]</name>
+                <brief>0x8030000~0x803FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[2]</name>
+                <brief>0x8020000~0x802FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[1]</name>
+                <brief>0x8010000~0x801FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[0]</name>
+                <brief>0x8000000~0x800FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>FMC_WP_MDF</name>
+		<displayName>FMC_WP_MDF</displayName>
+		<addressOffset>0x20</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>WP[21]</name>
+                <brief>0x8380000~0x83BFFFF</brief>
+                <description>each bit reflects the corresponding 64 sectors to erase/program protection status.&#x000A;0: corresponding 64 sectors are erase/program protected.&#x000A;1: corresponding 64 sectors are not erase/program protected</description>
+                <bitOffset>21</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[20]</name>
+                <brief>0x8300000~0x837FFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>20</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[19]</name>
+                <brief>0x8280000~0x82FFFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>19</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[18]</name>
+                <brief>0x8200000~0x827FFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[17]</name>
+                <brief>0x8180000~0x81FFFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>17</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[16]</name>
+                <brief>0x8100000~0x817FFFF</brief>
+                <description>each bit reflects the corresponding 128 sectors to erase/program protection status.&#x000A;0: corresponding 128 sectors are erase/program protected.&#x000A;1: corresponding 128 sectors are not erase/program protected</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[15]</name>
+                <brief>0x80F0000~0x80FFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>15</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[14]</name>
+                <brief>0x80E0000~0x80EFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>14</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[13]</name>
+                <brief>0x80D0000~0x80DFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[12]</name>
+                <brief>0x80C0000~0x80CFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>12</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[11]</name>
+                <brief>0x80B0000~0x80BFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>11</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[10]</name>
+                <brief>0x80A0000~0x80AFFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>10</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[9]</name>
+                <brief>0x8090000~0x809FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>9</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[8]</name>
+                <brief>0x8080000~0x808FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[7]</name>
+                <brief>0x8070000~0x807FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[6]</name>
+                <brief>0x8060000~0x806FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[5]</name>
+                <brief>0x8050000~0x805FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>5</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[4]</name>
+                <brief>0x8040000~0x804FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[3]</name>
+                <brief>0x8030000~0x803FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[2]</name>
+                <brief>0x8020000~0x802FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[1]</name>
+                <brief>0x8010000~0x801FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>WP[0]</name>
+                <brief>0x8000000~0x800FFFF</brief>
+                <description>each bit reflects the corresponding 16 sectors to erase/program protection status.&#x000A;0: corresponding 16 sectors are erase/program protected.&#x000A;1: corresponding 16 sectors are not erase/program protected</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>FMC_BTADDR_EFT</name>
+		<displayName>FMC_BTADDR_EFT</displayName>
+		<addressOffset>0x24</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>BOOT_ADDR1[15:0]</name>
+				<brief>Boot address 1 status bits</brief>
+				<description>Boot address 1 status bits&#x000A;MSB of the boot address if BOOT pin is high.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>16</bitWidth>
+			</field>
+			<field>
+				<name>BOOT_ADDR0[15:0]</name>
+				<brief>Boot address 0 status bits</brief>
+				<description>Boot address 0 status bits&#x000A;MSB of the boot address if BOOT pin is low.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>16</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>FMC_BTADDR_MDF</name>
+		<displayName>FMC_BTADDR_MDF</displayName>
+		<addressOffset>0x28</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>BOOT_ADDR1[15:0]</name>
+				<brief>Boot address 1 configuration bits</brief>
+				<description>Boot address 1 configuration bits.&#x000A;Configure the MSB of boot address if the BOOT pin is high.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>16</bitWidth>
+			</field>
+			<field>
+				<name>BOOT_ADDR0[15:0]</name>
+				<brief>Boot address 0 configuration bits</brief>
+				<description>Boot address 0 configuration bits.&#x000A;Configure the MSB of the boot address if the BOOT pin is low.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>16</bitWidth>
+			</field>
+		</fields>
+    </OPByte>
+    <OPByte>
+		<name>FMC_OBSTAT1_EFT</name>
+		<displayName>FMC_OBSTAT1_EFT</displayName>
+		<addressOffset>0x34</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DATA[15:0]</name>
+				<brief>User defined option byte data status value</brief>
+				<description>User defined option byte data status value</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>16</bitWidth>
+			</field>
+			<field>
+				<name>DTCM_SZ_SHRRAM[3:0]</name>
+				<brief>DTCM size of shared RAM status bits</brief>
+				<description>DTCM size of shared RAM status bits.&#x000A;DTCM + ITCM can not be more than 512Kbyte &#x000A;0000: 0-byte DTCM&#x000A;0111: 64-Kbyte DTCM&#x000A;1000: 128-Kbyte DTCM&#x000A;1001: 256-Kbyte DTCM&#x000A;1010: 512-Kbyte DTCM</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>4</bitWidth>
+			</field>
+			<field>
+				<name>ITCM_SZ_SHRRAM[3:0]</name>
+				<brief>ITCM size of shared RAM status bits</brief>
+				<description>ITCM size of shared RAM status bits.&#x000A;DTCM + ITCM can not be more than 512Kbyte&#x000A;0000: 0-byte ITCM&#x000A;0111: 64-Kbyte ITCM&#x000A;1000: 128-Kbyte ITCM&#x000A;1001: 256-Kbyte ITCM&#x000A;1010: 512-Kbyte ITCM</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>4</bitWidth>
+			</field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_OBSTAT1_MDF</name>
+		<displayName>FMC_OBSTAT1_MDF</displayName>
+		<addressOffset>0x38</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+				<name>DATA[15:0]</name>
+				<brief>User defined option byte data configuration value</brief>
+				<description>User defined option byte data configuration value</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>16</bitWidth>
+			</field>
+			<field>
+				<name>DTCM_SZ_SHRRAM[3:0]</name>
+				<brief>DTCM size of shared RAM configuration bits</brief>
+				<description>DTCM size of shared RAM configuration bits.&#x000A;DTCM + ITCM can not be more than 512Kbyte&#x000A;0000: 0-byte DTCM&#x000A;0111: 64-Kbyte DTCM&#x000A;1000: 128-Kbyte DTCM&#x000A;1001: 256-Kbyte DTCM&#x000A;1010: 512-Kbyte DTCM</description>
+				<bitOffset>4</bitOffset>
+				<bitWidth>4</bitWidth>
+			</field>
+			<field>
+				<name>ITCM_SZ_SHRRAM[3:0]</name>
+				<brief>ITCM size of shared RAM configuration bits</brief>
+				<description>ITCM size of shared RAM configuration bits.&#x000A;DTCM + ITCM can not be more than 512Kbyte&#x000A;0000: 0-byte ITCM&#x000A;0111: 64-Kbyte ITCM&#x000A;1000: 128-Kbyte ITCM&#x000A;1001: 256-Kbyte ITCM&#x000A;1010: 512-Kbyte ITCM</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>4</bitWidth>
+			</field>
+		</fields>
+    </OPByte>	
+</OPBytes>
+<OPBytes baseAddress="0x52002068" length="24" RegType="OptionBytes">
+	<OPByte>
+		<name>FMC_AESIV0_EFT</name>
+		<displayName>FMC_AESIV0_EFT</displayName>
+		<addressOffset>0x00</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESIV0_ETF[31:0]</name>
+                <brief>AES initialization vector configuration value.</brief>
+                <description>AES initialization vector configuration value.</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_AESIV1_EFT</name>
+		<displayName>FMC_AESIV1_EFT</displayName>
+		<addressOffset>0x04</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESIV1_ETF[31:0]</name>
+                <brief>AES initialization vector configuration value.</brief>
+                <description>AES initialization vector configuration value.</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_AESIV2_EFT</name>
+		<displayName>FMC_AESIV2_EFT</displayName>
+		<addressOffset>0x08</addressOffset>
+		<size>0x20</size>
+		<access>read</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESIV2_ETF[31:0]</name>
+                <brief>AES initialization vector configuration value.</brief>
+                <description>AES initialization vector configuration value.</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_AESIV0_MDF</name>
+		<displayName>FMC_AESIV0_MDF</displayName>
+		<addressOffset>0x0C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESIV0_MDF[31:0]</name>
+                <brief>AES initialization vector configuration value.</brief>
+                <description>AES initialization vector configuration value.</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_AESIV1_MDF</name>
+		<displayName>FMC_AESIV1_MDF</displayName>
+		<addressOffset>0x10</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESIV1_MDF[31:0]</name>
+                <brief>AES initialization vector configuration value.</brief>
+                <description>AES initialization vector configuration value.</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>	
+	<OPByte>
+		<name>FMC_AESIV2_MDF</name>
+		<displayName>FMC_AESIV2_MDF</displayName>
+		<addressOffset>0x14</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<reset>0x00000000</reset>	
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESIV2_MDF[31:0]</name>
+                <brief>AES initialization vector configuration value.</brief>
+                <description>AES initialization vector configuration value.</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>	
+</OPBytes>
+<OPBytes baseAddress="0x40022814" length="48" RegType="Efuse">
+	<OPByte>
+		<name>EFUSE_USER_CTL</name>
+		<displayName>EFUSE_USER_CTL</displayName>
+		<addressOffset>0x0</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>SCR_AREA_END[7:0]</name>
+                <brief>Secure-access area end address bits</brief>
+                <description>Secure-access area end address bits</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>8</bitWidth>
+            </field>
+			<field>
+                <name>SCR_AREA_START[7:0]</name>
+                <brief>Secure-access area start address bits</brief>
+                <description>Secure-access area start address bits</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+            </field>
+			<field>
+                <name>SCR_EFUSE</name>
+                <brief>Secure access mode enable</brief>
+                <description>0: Disable secure access mode&#x000A;1: Enable secure access mode</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>SPC_H</name>
+                <brief>Configure security protection to level high</brief>
+                <description>If SPC_H and SPC_L in efuse macro are both 1, SPC is level high</description>
+                <bitOffset>12</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>SPC_L</name>
+                <brief>Configure security protection to level low</brief>
+                <description>If SPC_L in efuse macro is 1, SPC level low to no protection demotion is forbidden. If SPC_H and SPC_L in efuse macro are both set, SPC is level high.</description>
+                <bitOffset>11</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>JTAGNSW</name>
+                <brief>SW or JTAG debugger select</brief>
+                <description>0: SW&#x000A;1: JTAG</description>
+                <bitOffset>10</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>NDBG[1:0]</name>
+                <brief>Debugging permission setting</brief>
+                <description>00: Normal JTAG&#x000A;01: Secure JTAG&#x000A;10: No debug&#x000A;11: No debug</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>2</bitWidth>
+            </field>
+			<field>
+                <name>UDLK</name>
+                <brief>EFUSE_USER_DATAx register lock bit</brief>
+				<description>0: Unlock EFUSE_USER_DATAx register, the register can be modified&#x000A;1: Lock EFUSE_USER_DATAx register, the register can not be modified</description>
+                <bitOffset>4</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>AESEN</name>
+                <brief>Lock EFUSE_AES_KEYx register and enable AES decrypt function</brief>
+				<description>0: Disable AES decrypt and AES key can be written&#x000A;1: Enable AES decrypt and AES key can’t be written</description>
+                <bitOffset>3</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>UCLK</name>
+                <brief>Low 16 bits of EFUSE_USER_CTL register lock bit</brief>
+				<description>0: Unlock the low 16 bits of EFUSE_USER_CTL register, the bits can be modified&#x000A;1: Lock the low 16 bits of EFUSE_USER_CTL register, the bits can not be modified</description>
+                <bitOffset>2</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>SCRLK</name>
+                <brief>Secure access area address lock bit</brief>
+				<description>0: Unlock the high 16 bits in EFUSE_USER_CTL register, the bits can be modified&#x000A;1: Lock the high 16 bits in EFUSE_USER_CTL register, the bits can not be modified</description>
+                <bitOffset>1</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>DPLK</name>
+                <brief>EFUSE_DPx register lock bit</brief>
+				<description>0: Unlock EFUSE_DPx register, the register can be written or read&#x000A;1: Lock EFUSE_DPx register, the register can not be written</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_MCU_RSV</name>
+		<displayName>EFUSE_MCU_RSV</displayName>
+		<addressOffset>0x04</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>DCRP_AREA_END[7:0]</name>
+                <brief>DCRP area end address bits</brief>
+                <description>DCRP area end address bits</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>8</bitWidth>
+            </field>
+			<field>
+                <name>DCRP_AREA_START[7:0]</name>
+                <brief>DCRP area start address bits</brief>
+                <description>DCRP area start address bits</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>8</bitWidth>
+            </field>
+			<field>
+                <name>MCU_RSV[5:0]</name>
+                <brief>MCU reserved data</brief>
+				<description>MCU reserved data</description>
+                <bitOffset>10</bitOffset>
+                <bitWidth>6</bitWidth>
+            </field>
+			<field>
+                <name>DCRPLK</name>
+                <brief>DCRP area address lock bit</brief>
+                <description>0: Unlock the high 16 bits in EFUSE_MCU_RSV register, the bits can be modified&#x000A;1: Lock the high 16 bits in EFUSE_MCU_RSV register, the bits can not be modified</description>
+                <bitOffset>9</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>MCURSVLK</name>
+                <brief>Low 16 bits of EFUSE_MCU_RSV register lock bit</brief>
+                <description>0: Unlock the low 16 bits of EFUSE_MCU_RSV register, the bits can be modified&#x000A;1: Lock the low 16 bits of EFUSE_MCU_RSV register, the bits can not be modified</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>VFIMG</name>
+                <brief>Firmware image verification enable bit</brief>
+                <description>0: Disable firmware image verification&#x000A;1: Enable firmware image verification</description>
+                <bitOffset>7</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>DISLFI</name>
+                <brief>Licensed firmware install ( LFI ) disable</brief>
+                <description>0: Enable licensed firmware install&#x000A;1: Disable licensed firmware install</description>
+                <bitOffset>6</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+                <name>AESNCAU</name>
+                <brief>AES key for cau configuration bit</brief>
+                <description>0: The AES key can be used for CAU&#x000A;1: The AES key cannot be used for CAU</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_DP0</name>
+		<displayName>EFUSE_DP0</displayName>
+		<addressOffset>0x08</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>DP0[31:0]</name>
+                <brief>Efuse debug password value</brief>
+                <description>Efuse debug password value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_DP1</name>
+		<displayName>EFUSE_DP1</displayName>
+		<addressOffset>0x0C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>DP1[31:0]</name>
+                <brief>Efuse debug password value</brief>
+                <description>Efuse debug password value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+	<name>EFUSE_AES_KEY0</name>
+		<displayName>EFUSE_AES_KEY0</displayName>
+		<addressOffset>0x10</addressOffset>
+		<size>0x20</size>
+		<access>write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESKEY0[31:0]</name>
+                <brief>Efuse AESKEY0 value.</brief>
+                <description>Efuse AESKEY0 value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_AES_KEY1</name>
+		<displayName>EFUSE_AES_KEY1</displayName>
+		<addressOffset>0x14</addressOffset>
+		<size>0x20</size>
+		<access>write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESKEY1[31:0]</name>
+                <brief>Efuse AESKEY1 value.</brief>
+                <description>Efuse AESKEY1 value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_AES_KEY2</name>
+		<displayName>EFUSE_AES_KEY2</displayName>
+		<addressOffset>0x18</addressOffset>
+		<size>0x20</size>
+		<access>write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESKEY2[31:0]</name>
+                <brief>Efuse AESKEY2 value.</brief>
+                <description>Efuse AESKEY2 value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>EFUSE_AES_KEY3</name>
+		<displayName>EFUSE_AES_KEY3</displayName>
+		<addressOffset>0x1C</addressOffset>
+		<size>0x20</size>
+		<access>write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>AESKEY3[31:0]</name>
+                <brief>Efuse AESKEY3 value.</brief>
+                <description>Efuse AESKEY3 value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>USERDATA0</name>
+		<displayName>USERDATA0</displayName>
+		<addressOffset>0x20</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>USERDATA0[31:0]</name>
+                <brief>Efuse USER_DATA0 value</brief>
+                <description>Efuse USER_DATA0 value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>USERDATA1</name>
+		<displayName>USERDATA1</displayName>
+		<addressOffset>0x24</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>USERDATA1[31:0]</name>
+                <brief>Efuse USER_DATA1 value</brief>
+                <description>Efuse USER_DATA1 value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>USERDATA2</name>
+		<displayName>USERDATA2</displayName>
+		<addressOffset>0x28</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>USERDATA2[31:0]</name>
+                <brief>Efuse USER_DATA2 value</brief>
+                <description>Efuse USER_DATA2 value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+	<OPByte>
+		<name>USERDATA3</name>
+		<displayName>USERDATA3</displayName>
+		<addressOffset>0x2C</addressOffset>
+		<size>0x20</size>
+		<access>read-write</access>
+		<complement>FFFF</complement>
+		<fields>
+			<field>
+                <name>USERDATA3[31:0]</name>
+                <brief>Efuse USER_DATA3 value</brief>
+                <description>Efuse USER_DATA3 value</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>32</bitWidth>
+            </field>
+		</fields>
+    </OPByte>
+</OPBytes>

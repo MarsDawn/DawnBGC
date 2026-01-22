@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MCUGroup series = "GD32A7xx">
+	<Flash McuPartNo = "GD32A7X1XXXXXX" baseAddress="0x08000000" Size = "1024">
+	    <pageGroup pageNumber = "512">
+            <Page startIndex= "0" endIndex = "255" startAddress = "0x08000000" endAddress = "0x0807FFFF" pageSize = "2048" bank = "0"/>
+			<Page startIndex= "256" endIndex = "511" startAddress = "0x08080000" endAddress = "0x080FFFFF" pageSize = "2048" bank = "1"/>
+			<Page startIndex= "2048" endIndex = "2079" startAddress = "0x08800000" endAddress = "0x0880FFFF" pageSize = "2048" bank = "2"/>
+        </pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32A7X2XXXXXX" baseAddress="0x08000000" Size = "2048">
+	    <pageGroup pageNumber = "1024">
+            <Page startIndex= "0" endIndex = "511" startAddress = "0x08000000" endAddress = "0x080FFFFF" pageSize = "2048" bank = "0"/>
+			<Page startIndex= "512" endIndex = "1023" startAddress = "0x08100000" endAddress = "0x081FFFFF" pageSize = "2048" bank = "1"/>
+			<Page startIndex= "2048" endIndex = "2111" startAddress = "0x08800000" endAddress = "0x0881FFFF" pageSize = "2048" bank = "2"/>
+        </pageGroup>
+	</Flash>
+</MCUGroup>

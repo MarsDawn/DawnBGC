@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MCUGroup series = "GD32F105">
+	<Flash McuPartNo = "GD32F105X8XX" baseAddress="0x08000000" Size = "64">
+	    <pageGroup pageNumber = "64">
+            <Page startIndex= "0" endIndex = "63" startAddress = "0x08000000" endAddress = "0x0800FFFF" pageSize = "1024" bank = "0"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32F105XBXX" baseAddress="0x08000000" Size = "128">
+	    <pageGroup pageNumber = "128">
+            <Page startIndex= "0" endIndex = "127" startAddress = "0x08000000" endAddress = "0x0801FFFF" pageSize = "1024" bank = "0"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32F105XCXX" baseAddress="0x08000000" Size = "256">
+	    <pageGroup pageNumber = "128">
+            <Page startIndex= "0" endIndex = "127" startAddress = "0x08000000" endAddress = "0x0803FFFF" pageSize = "2048" bank = "0"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32F105XDXX" baseAddress="0x08000000" Size = "384">
+	    <pageGroup pageNumber = "192">
+            <Page startIndex= "0" endIndex = "191" startAddress = "0x08000000" endAddress = "0x0805FFFF" pageSize = "2048" bank = "0"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32F105XEXX" baseAddress="0x08000000" Size = "512">
+	    <pageGroup pageNumber = "256">
+            <Page startIndex= "0" endIndex = "255" startAddress = "0x08000000" endAddress = "0x0807FFFF" pageSize = "2048" bank = "0"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32F105XFXX" baseAddress="0x08000000" Size = "768">
+	    <pageGroup pageNumber = "320">
+            <Page startIndex= "0" endIndex = "255" startAddress = "0x08000000" endAddress = "0x0807FFFF" pageSize = "2048" bank = "0"/>
+			<Page startIndex= "256" endIndex = "319" startAddress = "0x08080000" endAddress = "0x080BFFFF" pageSize = "4096" bank = "1"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32F105XGXX" baseAddress="0x08000000" Size = "1024">
+	    <pageGroup pageNumber = "384">
+            <Page startIndex= "0" endIndex = "255" startAddress = "0x08000000" endAddress = "0x0807FFFF" pageSize = "2048" bank = "0"/>
+			<Page startIndex= "256" endIndex = "383" startAddress = "0x08080000" endAddress = "0x080FFFFF" pageSize = "4096" bank = "1"/>
+		</pageGroup>
+    </Flash>
+</MCUGroup>

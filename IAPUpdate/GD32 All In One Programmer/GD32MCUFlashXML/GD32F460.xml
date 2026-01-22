@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MCUGroup series = "GD32F460">
+	<Flash McuPartNo = "GD32F460XGXX" baseAddress="0x08000000" Size = "1024">
+	     <Architectures>
+            <Architecture type="0x0">
+		        <DBS baseAddress="0x1FFFC000" byteOffset = "0x9" bitOffset="0x6" bitWidth="0x01" value="0x0"/>
+	        </Architecture>
+	        <Architecture type="0x1">
+		        <DBS baseAddress="0x1FFFC000" byteOffset = "0x9" bitOffset="0x6" bitWidth="0x01" value="0x1"/>
+	        </Architecture>
+        </Architectures>
+	    <pageGroup pageNumber = "12" type = "0">
+		    <Page startIndex= "0" endIndex = "3" startAddress = "0x08000000" endAddress = "0x0800FFFF" pageSize = "16384" bank = "0"/>
+		    <Page startIndex= "4" endIndex = "4" startAddress = "0x08010000" endAddress = "0x0801FFFF" pageSize = "65536" bank = "0"/>
+		    <Page startIndex= "5" endIndex = "11" startAddress = "0x08020000" endAddress = "0x080FFFFF" pageSize = "131072" bank = "0"/>
+		</pageGroup>
+	    <pageGroup pageNumber = "16" type = "1">
+		    <Page startIndex= "0" endIndex = "3" startAddress = "0x08000000" endAddress = "0x0800FFFF" pageSize = "16384" bank = "0"/>
+		    <Page startIndex= "4" endIndex = "4" startAddress = "0x08010000" endAddress = "0x0801FFFF" pageSize = "65536" bank = "0"/>
+		    <Page startIndex= "5" endIndex = "7" startAddress = "0x08020000" endAddress = "0x0807FFFF" pageSize = "131072" bank = "0"/>
+			<Page startIndex= "12" endIndex = "15" startAddress = "0x08080000" endAddress = "0x0808FFFF" pageSize = "16384" bank = "1"/>
+			<Page startIndex= "16" endIndex = "16" startAddress = "0x08090000" endAddress = "0x0809FFFF" pageSize = "65536" bank = "1"/>
+		    <Page startIndex= "17" endIndex = "19" startAddress = "0x080A0000" endAddress = "0x080FFFFF" pageSize = "131072" bank = "1"/>
+		</pageGroup>
+    </Flash>
+	<Flash McuPartNo = "GD32F460XIXX" baseAddress="0x08000000" Size = "2048">
+	    <pageGroup pageNumber = "24">
+		    <Page startIndex= "0" endIndex = "3" startAddress = "0x08000000" endAddress = "0x0800FFFF" pageSize = "16384" bank = "0"/>
+		    <Page startIndex= "4" endIndex = "4" startAddress = "0x08010000" endAddress = "0x0801FFFF" pageSize = "65536" bank = "0"/>
+		    <Page startIndex= "5" endIndex = "11" startAddress = "0x08020000" endAddress = "0x080FFFFF" pageSize = "131072" bank = "0"/>
+		    <Page startIndex= "12" endIndex = "15" startAddress = "0x08100000" endAddress = "0x0810FFFF" pageSize = "16384" bank = "1"/>
+		    <Page startIndex= "16" endIndex = "16" startAddress = "0x08110000" endAddress = "0x0811FFFF" pageSize = "65536" bank = "1"/>
+		    <Page startIndex= "17" endIndex = "23" startAddress = "0x08120000" endAddress = "0x081FFFFF" pageSize = "131072" bank = "1"/>
+		</pageGroup>
+    </Flash>
+</MCUGroup>
+
+

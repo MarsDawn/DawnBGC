@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OPBytesBlocks>
+    <OPBytesBlock baseAddress="0x40022020" length="88" RegType="OptionBytes"/>
+</OPBytesBlocks>
+<OPBytes baseAddress="0x40022020" length="88" RegType="OptionBytes">
+	 <OPByte>
+        <name>FMC_OBCTL</name>
+        <displayName>FMC_OBCTL</displayName>
+		<addressOffset>0x0</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0xFXXXXXXX</reset>
+        <complement>FFFF</complement>
+        <fields>
+			<field>
+				<name>NRST_MDSEL[1:0]</name>
+				<brief>NRST pin mode selection</brief>
+				<description>NRST pin mode selection.&#x000A;01: A low level on the NRST pin can reset system, internal reset cannot drive NRST pin.&#x000A;10: NRST pin function as normal GPIO, and only internal RESET.&#x000A;11: NRST pin configure as input/output mode.</description>
+				<bitOffset>28</bitOffset>
+				<bitWidth>2</bitWidth>
+			</field>
+            <field>
+                <name>nBOOT0</name>
+                <brief>BOOT0 option bit</brief>
+                <description>BOOT0 option bit&#x000A;0: BOOT0 is 1&#x000A;1: BOOT0 is 0</description>
+                <bitOffset>27</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>nSWBT0</name>
+                <brief>Software BOOT0 disable</brief>
+                <description>Software BOOT0 disable&#x000A;0: BOOT0 depends on the option bit nBOOT0&#x000A;1: BOOT0 depends on PB8/BOOT0 pin</description>
+                <bitOffset>26</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>TCMSRAM_ERS</name>
+                <brief>TCM SRAM erase if system reset</brief>
+                <description>TCM SRAM erase if system reset&#x000A;0: TCM SRAM erased if a system reset occurs&#x000A;1: TCM SRAM is not erased if a system reset occurs</description>
+                <bitOffset>25</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>SRAM_ECCEN</name>
+                <brief>SRAM and TCM SRAM ECC disable</brief>
+                <description>SRAM and TCM SRAM ECC disable&#x000A;0: SRAM and TCM SRAM ECC enable&#x000A;1: SRAM and TCM SRAM ECC disable</description>
+                <bitOffset>24</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>nBOOT1</name>
+                <brief>Boot1 configuration bit</brief>
+                <description>Boot1 configuration bit&#x000A;0: BOOT1 is 1 &#x000A;1: BOOT1 is 0&#x000A;Together with the BOOT0 pin, this bit selects boot mode</description>
+                <bitOffset>23</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            	<field>
+				<name>DBS</name>
+				<brief>Double banks or single bank selection</brief>
+				<description>Double banks or single bank selection.&#x000A;0: Single bank mode with 128 bits width&#x000A;1: Dual bank mode with 64 bits width&#x000A;This bit can only be written when DCRP0/1 is disabled.</description>
+				<bitOffset>22</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+            <field>
+                <name>BB</name>
+                <brief>Option byte boot bank value</brief>
+                <description>Option byte boot bank value&#x000A;0: Boot from bank0, when configured boot from main memory&#x000A;1: Boot from bank1 or bank0 if bank1 is void, (or Bootloader continues executing if bank1 and bank0 are both void, and the chip is not under security protection level high,) when configured boot from main memory.</description>
+                <bitOffset>20</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>FWDGSPD_STDBY</name>
+                <brief>FWDGT suspend option in standby mode configuration bit</brief>
+                <description>FWDGT suspend option in standby mode configuration bit&#x000A;0: FWDGT is suspend in system standby mode&#x000A;1: FWDGT is running in system standby mode</description>
+                <bitOffset>18</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>FWDGSPD_DPSLP</name>
+                <brief>FWDGT suspend option in deepsleep mode configuration bit</brief>
+                <description>FWDGT suspend option in deepsleep mode configuration bit&#x000A;0: FWDGT is suspend in system deepsleep mode&#x000A;1: FWDGT is running in system deepsleep mode.</description>
+                <bitOffset>17</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>nFWDG_HW</name>
+                <brief>Free watchdog configuration bit</brief>
+                <description>Free watchdog configuration bit&#x000A;0: Hardware free watchdog&#x000A;1: Software free watchdog</description>
+                <bitOffset>16</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+			<field>
+				<name>FMC_SWP</name>
+				<brief>FMC memory mapping swap</brief>
+				<description>FMC memory mapping swap&#x000A;This bit controls the address mapping swap between bank0 and bank1 of the main Flash.&#x000A;0: Flash bank0 is mapped at 0x0804 0000 and Flash bank1 is mapped at 0x0800 0000&#x000A;1: Flash bank0 is mapped at 0x0800 0000 and Flash bank1 is mapped at 0x0804 0000</description>
+				<bitOffset>15</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+            <field>
+                <name>nRST_STDBY</name>
+                <brief>Option byte standby reset value</brief>
+                <description>Option byte standby reset value&#x000A;0: Generates a reset if entering standby mode&#x000A;1: No reset if entering standby mode</description>
+                <bitOffset>13</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>nRST_DPSLP</name>
+                <brief>Option byte deepsleep reset value</brief>
+                <description>Option byte deepsleep reset value&#x000A;0: Generates a reset if entering Deep-sleep mode&#x000A;1: No reset if entering Deep-sleep mode</description>
+                <bitOffset>12</bitOffset>
+                <bitWidth>1</bitWidth>
+            </field>
+            <field>
+                <name>BOR_TH[1:0]</name>
+                <brief>BOR threshold status bits</brief>
+                <description>BOR threshold status bits.&#x000A;00: BOR value 0. Reset value threshold is around 1.7 V&#x000A;01: BOR value 1. Reset value threshold is around 2.0 V&#x000A;10: BOR value 2. Reset value threshold is around 2.2 V&#x000A;11: BOR value 3. Reset value threshold is around 2.5 V</description>
+                <bitOffset>8</bitOffset>
+                <bitWidth>2</bitWidth>
+            </field>
+            <field>
+                <name>SPC[7:0]</name>
+                <brief>Security protection level option byte status bits</brief>
+                <description>Security protection level option byte status bits&#x000A;0xAA: No protection &#x000A;0xCC: Protection level high &#x000A;Any value except 0xAA or 0xCC: Protection level low.</description>
+                <bitOffset>0</bitOffset>
+                <bitWidth>8</bitWidth>
+            </field>
+        </fields>
+    </OPByte>
+	<OPByte>
+        <name>FMC_DCRP_SADDR0</name>
+        <displayName>FMC_DCRP_SADDR0</displayName>
+		<addressOffset>0x4</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0xFFFFXXXX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+				<name>DCRP0_SADDR[14:0]</name>
+				<brief>DCRP area start address offset configuration bits for bank0</brief>
+				<description>DCRP area start address offset configuration bits for bank0&#x000A;DBS=1:&#x000A;DCRP0_SADDR contains the start address of the bank0 DCRP area.&#x000A;DBS=0:&#x000A;DCRP0_SADDR contains the start address of the first DCRP area for all memory.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>15</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+	 <OPByte>
+        <name>FMC_DCRP_EADDR0</name>
+        <displayName>FMC_DCRP_EADDR0</displayName>
+		<addressOffset>0x8</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0xX000XXXX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+				<name>DCRP_EREN</name>
+				<brief>DCRP area erase enable configuration bit</brief>
+				<description>DCRP area erase enable configuration bit.&#x000A;0: DCRP is not erased when SPC value is decreased from low to no protection.&#x000A;1: DCRP is erased when SPC value is decreased from low to no protection.</description>
+				<bitOffset>31</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>DCRP0_EADDR[14:0]</name>
+				<brief>DCRP area end address offset configuration bits for bank0</brief>
+				<description>DCRP area end address offset configuration bits for bank0&#x000A;DBS=1:&#x000A;DCRP0_EADDR contains the end address of the bank0 DCRP area.&#x000A;DBS=0:&#x000A;DCRP0_EADDR contains the end address of the first DCRP area for all memory.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>15</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+    <OPByte>
+        <name>FMC_BK0WP0</name>
+        <displayName>FMC_BK0WP0</displayName>
+		<addressOffset>0xC</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0x00XX00XX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            	<field>
+				<name>BK0WP0_EADDR[7:0]</name>
+				<brief>WP first area end offset</brief>
+				<description>WP first area end offset&#x000A;DBS=1:&#x000A;BK0WP0_EADDR[7:0] contains the last page of the WP first area in bank0.&#x000A;DBS=0:&#x000A;BK0WP0_EADDR[7:0] contains the last page of the WP first area for all memory.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+			<field>
+				<name>BK0WP0_SADDR[7:0]</name>
+				<brief>WP first area start offset</brief>
+				<description>WP first area start offset&#x000A;DBS=1:&#x000A;BK0WP0_SADDR[7:0] contains the first page of the WP first area for bank0.&#x000A;DBS=0:&#x000A;BK0WP0_SADDR[7:0] contains the first page of the WP first area for all memory.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+	<OPByte>
+        <name>FMC_BK0WP1</name>
+        <displayName>FMC_BK0WP1</displayName>
+		<addressOffset>0x10</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0x00XX00XX</reset>
+        <complement>FFFF</complement>
+        <fields>
+           <field>
+				<name>BK0WP1_EADDR[7:0]</name>
+				<brief>WP second area end offset</brief>
+				<description>WP second area end offset&#x000A;DBS=1:&#x000A;BK0WP1_EADDR[7:0] contains the last page of the WP second area for bank0.&#x000A;DBS=0:&#x000A;BK0WP1_EADDR[7:0] contains the last page of the WP second area for all memory.</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+			<field>
+				<name>BK0WP1_SADDR[7:0]</name>
+				<brief>WP second area start offset</brief>
+				<description>WP second area start offset&#x000A;DBS=1:&#x000A;BK0WP1_SADDR[7:0] contains the first page of the WP second area for bank0.&#x000A;DBS=0:&#x000A;BK0WP1_SADDR[7:0] contains the first page of the WP second area for all memory</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+	<OPByte>
+        <name>FMC_DCRP_SADDR1</name>
+        <displayName>FMC_DCRP_SADDR1</displayName>
+		<addressOffset>0x24</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0xFFFFXXXX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+				<name>DCRP1_SADDR[14:0]</name>
+				<brief>DCRP area start address offset configuration bits for bank1</brief>
+				<description>DCRP area start address offset configuration bits for bank1&#x000A;DBS=1:&#x000A;DCRP1_SADDR contains the start address of the bank1 DCRP area.&#x000A;DBS=0:&#x000A;DCRP1_SADDR contains the start address of the second DCRP area for all memory.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>15</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+	<OPByte>
+        <name>FMC_DCRP_EADDR1</name>
+        <displayName>FMC_DCRP_EADDR1</displayName>
+		<addressOffset>0x28</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0x0000XXXX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+				<name>DCRP1_EADDR[14:0]</name>
+				<brief>DCRP area end address offset configuration bits for bank1</brief>
+				<description>DCRP area end address offset configuration bits for bank1&#x000A;DBS=1:&#x000A;DCRP1_EADDR contains the end address of the bank1 DCRP area.&#x000A;DBS=0:&#x000A;DCRP1_EADDR contains the end address of the second DCRP area for all memory.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>15</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+	<OPByte>
+        <name>FMC_BK1WP0</name>
+        <displayName>FMC_BK1WP0</displayName>
+		<addressOffset>0x2C</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0x00XX00XX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+				<name>BK1WP0_EADDR[7:0]</name>
+				<brief>WP third area end offset</brief>
+				<description>WP third area end offset&#x000A;DBS=1&#x000A;BK1WP0_EADDR[7:0] contains the last page of the WP first area for bank1.&#x000A;DBS=0&#x000A;BK1WP0_EADDR[7:0] contains the last page of the WP third area for all memory</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+			<field>
+				<name>BK1WP0_SADDR[7:0]</name>
+				<brief>WP third area start offset</brief>
+				<description>WP third area start offset&#x000A;DBS=1&#x000A;BK1WP0_SADDR[7:0] contains the first page of the WP first area for bank1.&#x000A;DBS=0&#x000A;BK1WP0_SADDR[7:0] contains the first page of the WP third area for all memory.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+	<OPByte>
+        <name>FMC_BK1WP1</name>
+        <displayName>FMC_BK1WP1</displayName>
+		<addressOffset>0x30</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0x00XX00XX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            	<field>
+				<name>BK1WP1_EADDR[7:0]</name>
+				<brief>WP fourth area end offset</brief>
+				<description>WP fourth area end offset&#x000A;DBS=1:&#x000A;BK1WP1_EADDR[7:0] contains the last page of the WP second area for bank1.&#x000A;DBS=0:&#x000A;BK1WP1_EADDR[7:0] contains the last page of the WP fourth area for all memory</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+			<field>
+				<name>BK1WP1_SADDR[7:0]</name>
+				<brief>WP fourth area start offset</brief>
+				<description>WP fourth area start offset&#x000A;DBS=1:&#x000A;BK1WP1_SADDR[7:0] contains the first page of the WP second area for bank1.&#x000A;DBS=0:&#x000A;BK1WP1_SADDR[7:0] contains the first page of the WP fourth area for all memory.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>8</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+	<OPByte>
+        <name>FMC_BK0SCR</name>
+        <displayName>FMC_BK0SCR</displayName>
+		<addressOffset>0x50</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0xFFFXFFXX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+				<name>BOOTLK</name>
+				<brief>This bit is set to force boot from user flash area</brief>
+				<description>This bit is set to force boot from user flash area.&#x000A;0: Support flash, RAM and system boot&#x000A;1: Only boot from main flash</description>
+				<bitOffset>16</bitOffset>
+				<bitWidth>1</bitWidth>
+			</field>
+			<field>
+				<name>SCR_PAGE_CNT0[8:0]</name>
+				<brief>Configure the number of pages in the bank0 secure user area</brief>
+				<description>Configure the number of pages in the bank0 secure user area.&#x000A;Secure user area starts at bank0 base address.The memory size is SCR_PAGE_CNT0 * page size.&#x000A;This field can be changed when SPC level is no protection only.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>9</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+	<OPByte>
+        <name>FMC_BK1SCR</name>
+        <displayName>FMC_BK1SCR</displayName>
+		<addressOffset>0x54</addressOffset>
+        <size>0x20</size>
+        <access>read-write</access>
+        <reset>0xFFFFFFXX</reset>
+        <complement>FFFF</complement>
+        <fields>
+            <field>
+				<name>SCR_PAGE_CNT1[8:0]</name>
+				<brief>Configure the number of pages in the bank1 secure user area</brief>
+				<description>Configure the number of pages in the bank1 secure user area.&#x000A;Secure user area starts at at bank1 base address.The memory size is SCR_PAGE_CNT1 * page size.&#x000A;This field can be changed when SPC level is no protection only. When DBS = 0, this field is useless.</description>
+				<bitOffset>0</bitOffset>
+				<bitWidth>9</bitWidth>
+			</field>
+        </fields>
+    </OPByte>
+</OPBytes>
+<OTPBytesBlocks>
+    <OTPBlocks baseAddress="0x1FFF7000" length="2048"/>
+</OTPBytesBlocks>
+<OTPBytes baseAddress="0x1FFF7000" length="2048">
+    <OTPBlocks>
+        <name>OTP</name>
+		<displayName>OTP</displayName>
+        <minProgrammeWidth>0x40</minProgrammeWidth>
+		<maxProgrammeWidth>0x40</maxProgrammeWidth>
+		<lockBaseAddress>0x0</lockBaseAddress>
+		<BlockCnt>0x01</BlockCnt>
+		<baseAddress>0x1FFF7000</baseAddress>
+		<endAddress>0x1FFF77FF</endAddress>
+        <fields>
+		   <field>
+                <name>OTP_Block</name>
+				<displayName>OTP_Block</displayName>
+                <baseAddress>0x1FFF7000</baseAddress>
+		        <endAddress>0x1FFF77FF</endAddress>	
+				<ifHasLockArea>0x0</ifHasLockArea>
+				<size>0x800</size>
+				<lockOffset>0x00</lockOffset>
+				<lockbitWidth>0</lockbitWidth>
+				<LockVal>0</LockVal>
+            </field>
+        </fields>
+    </OTPBlocks>
+</OTPBytes>
