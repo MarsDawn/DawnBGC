@@ -337,7 +337,7 @@ void BDCGpioInit(void)
 
     /* 注意：如果 TIMER1 也是高级定时器且需要 MOE，这里也应开启主输出。
        你原代码没开，是否需要取决于芯片定时器类型。若你发现 TIMER1 无输出，可尝试打开： */
-    /* timer_primary_output_config(TIMER1, ENABLE); */
+    timer_primary_output_config(TIMER1, ENABLE);
 
     timer_counter_value_config(TIMER1, 0);
     timer_enable(TIMER1);
