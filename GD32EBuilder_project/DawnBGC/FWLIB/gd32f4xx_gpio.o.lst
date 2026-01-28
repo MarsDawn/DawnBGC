@@ -1567,37 +1567,37 @@
  1203              		.file 8 "../../Libraries/FWLIB/inc/gd32f4xx_gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_gpio.c
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:16     .text.gpio_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:24     .text.gpio_deinit:00000000 gpio_deinit
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:203    .text.gpio_deinit:0000013c $d
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:216    .text.gpio_mode_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:223    .text.gpio_mode_set:00000000 gpio_mode_set
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:345    .text.gpio_output_options_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:352    .text.gpio_output_options_set:00000000 gpio_output_options_set
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:474    .text.gpio_bit_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:481    .text.gpio_bit_set:00000000 gpio_bit_set
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:519    .text.gpio_bit_reset:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:526    .text.gpio_bit_reset:00000000 gpio_bit_reset
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:564    .text.gpio_bit_write:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:571    .text.gpio_bit_write:00000000 gpio_bit_write
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:626    .text.gpio_port_write:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:633    .text.gpio_port_write:00000000 gpio_port_write
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:673    .text.gpio_input_bit_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:680    .text.gpio_input_bit_get:00000000 gpio_input_bit_get
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:728    .text.gpio_input_port_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:735    .text.gpio_input_port_get:00000000 gpio_input_port_get
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:771    .text.gpio_output_bit_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:778    .text.gpio_output_bit_get:00000000 gpio_output_bit_get
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:826    .text.gpio_output_port_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:833    .text.gpio_output_port_get:00000000 gpio_output_port_get
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:869    .text.gpio_af_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:876    .text.gpio_af_set:00000000 gpio_af_set
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:1028   .text.gpio_pin_lock:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:1035   .text.gpio_pin_lock:00000000 gpio_pin_lock
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:1107   .text.gpio_bit_toggle:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:1114   .text.gpio_bit_toggle:00000000 gpio_bit_toggle
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:1152   .text.gpio_port_toggle:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccmM5NF7.s:1159   .text.gpio_port_toggle:00000000 gpio_port_toggle
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:16     .text.gpio_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:24     .text.gpio_deinit:00000000 gpio_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:203    .text.gpio_deinit:0000013c $d
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:216    .text.gpio_mode_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:223    .text.gpio_mode_set:00000000 gpio_mode_set
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:345    .text.gpio_output_options_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:352    .text.gpio_output_options_set:00000000 gpio_output_options_set
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:474    .text.gpio_bit_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:481    .text.gpio_bit_set:00000000 gpio_bit_set
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:519    .text.gpio_bit_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:526    .text.gpio_bit_reset:00000000 gpio_bit_reset
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:564    .text.gpio_bit_write:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:571    .text.gpio_bit_write:00000000 gpio_bit_write
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:626    .text.gpio_port_write:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:633    .text.gpio_port_write:00000000 gpio_port_write
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:673    .text.gpio_input_bit_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:680    .text.gpio_input_bit_get:00000000 gpio_input_bit_get
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:728    .text.gpio_input_port_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:735    .text.gpio_input_port_get:00000000 gpio_input_port_get
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:771    .text.gpio_output_bit_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:778    .text.gpio_output_bit_get:00000000 gpio_output_bit_get
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:826    .text.gpio_output_port_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:833    .text.gpio_output_port_get:00000000 gpio_output_port_get
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:869    .text.gpio_af_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:876    .text.gpio_af_set:00000000 gpio_af_set
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:1028   .text.gpio_pin_lock:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:1035   .text.gpio_pin_lock:00000000 gpio_pin_lock
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:1107   .text.gpio_bit_toggle:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:1114   .text.gpio_bit_toggle:00000000 gpio_bit_toggle
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:1152   .text.gpio_port_toggle:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccNe94Mi.s:1159   .text.gpio_port_toggle:00000000 gpio_port_toggle
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

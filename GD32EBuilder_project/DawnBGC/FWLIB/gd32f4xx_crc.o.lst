@@ -469,27 +469,27 @@
  380              		.file 5 "../../CMSIS/system_gd32f4xx.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_crc.c
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:16     .text.crc_deinit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:24     .text.crc_deinit:00000000 crc_deinit
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:64     .text.crc_deinit:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:71     .text.crc_data_register_reset:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:78     .text.crc_data_register_reset:00000000 crc_data_register_reset
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:108    .text.crc_data_register_reset:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:113    .text.crc_data_register_read:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:120    .text.crc_data_register_read:00000000 crc_data_register_read
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:155    .text.crc_data_register_read:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:160    .text.crc_free_data_register_read:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:167    .text.crc_free_data_register_read:00000000 crc_free_data_register_read
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:202    .text.crc_free_data_register_read:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:207    .text.crc_free_data_register_write:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:214    .text.crc_free_data_register_write:00000000 crc_free_data_register_write
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:250    .text.crc_free_data_register_write:0000001c $d
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:255    .text.crc_single_data_calculate:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:262    .text.crc_single_data_calculate:00000000 crc_single_data_calculate
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:299    .text.crc_single_data_calculate:0000001c $d
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:304    .text.crc_block_data_calculate:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:311    .text.crc_block_data_calculate:00000000 crc_block_data_calculate
-C:\Users\leonardo\AppData\Local\Temp\ccWzjnOx.s:371    .text.crc_block_data_calculate:0000003c $d
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:16     .text.crc_deinit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:24     .text.crc_deinit:00000000 crc_deinit
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:64     .text.crc_deinit:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:71     .text.crc_data_register_reset:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:78     .text.crc_data_register_reset:00000000 crc_data_register_reset
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:108    .text.crc_data_register_reset:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:113    .text.crc_data_register_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:120    .text.crc_data_register_read:00000000 crc_data_register_read
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:155    .text.crc_data_register_read:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:160    .text.crc_free_data_register_read:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:167    .text.crc_free_data_register_read:00000000 crc_free_data_register_read
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:202    .text.crc_free_data_register_read:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:207    .text.crc_free_data_register_write:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:214    .text.crc_free_data_register_write:00000000 crc_free_data_register_write
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:250    .text.crc_free_data_register_write:0000001c $d
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:255    .text.crc_single_data_calculate:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:262    .text.crc_single_data_calculate:00000000 crc_single_data_calculate
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:299    .text.crc_single_data_calculate:0000001c $d
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:304    .text.crc_block_data_calculate:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:311    .text.crc_block_data_calculate:00000000 crc_block_data_calculate
+C:\Users\leonardo\AppData\Local\Temp\ccRNS5RJ.s:371    .text.crc_block_data_calculate:0000003c $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

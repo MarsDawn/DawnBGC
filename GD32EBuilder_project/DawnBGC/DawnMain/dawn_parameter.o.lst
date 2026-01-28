@@ -76,7 +76,7 @@
   56      00000000 
   56      00000000 
   56      00000000 
-  57 013c 0000803F 		.word	1065353216
+  57 013c 000080BF 		.word	-1082130432
   58 0140 0000803F 		.word	1065353216
   59 0144 000080BF 		.word	-1082130432
   60 0148 00000000 		.space	24
@@ -153,10 +153,10 @@
  115 031c 00803B45 		.word	1161527296
  116 0320 0000C842 		.word	1120403456
  117 0324 00000000 		.word	0
- 118 0328 0050C3C6 		.word	-960278528
- 119 032c 00606A46 		.word	1181376512
- 120 0330 0050C3C6 		.word	-960278528
- 121 0334 00606A46 		.word	1181376512
+ 118 0328 00E0ABC6 		.word	-961814528
+ 119 032c 00803B46 		.word	1178304512
+ 120 0330 00E0ABC6 		.word	-961814528
+ 121 0334 00803B46 		.word	1178304512
  122 0338 00000000 		.word	0
  123 033c 00000000 		.word	0
  124 0340 00000000 		.word	0
@@ -173,10 +173,10 @@
  135 036c 00C05A45 		.word	1163575296
  136 0370 0000C842 		.word	1120403456
  137 0374 00000000 		.word	0
- 138 0378 0000FAC6 		.word	-956694528
- 139 037c 0000FA46 		.word	1190789120
- 140 0380 0000FAC6 		.word	-956694528
- 141 0384 0000FA46 		.word	1190789120
+ 138 0378 00803BC6 		.word	-969179136
+ 139 037c 00803B46 		.word	1178304512
+ 140 0380 00803BC6 		.word	-969179136
+ 141 0384 00803B46 		.word	1178304512
  142 0388 00000000 		.word	0
  143 038c 00000000 		.word	0
  144 0390 00000000 		.word	0
@@ -235,8 +235,8 @@
  197              		.file 21 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_parameter.c"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_parameter.c
-C:\Users\leonardo\AppData\Local\Temp\ccA3ZwS9.s:20     .data.GimbalSystem:00000000 GimbalSystem
-C:\Users\leonardo\AppData\Local\Temp\ccA3ZwS9.s:17     .data.GimbalSystem:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccYU3KVs.s:20     .data.GimbalSystem:00000000 GimbalSystem
+C:\Users\leonardo\AppData\Local\Temp\ccYU3KVs.s:17     .data.GimbalSystem:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

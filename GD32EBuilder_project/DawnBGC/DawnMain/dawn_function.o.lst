@@ -147,13 +147,13 @@
   54:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     if (
   55:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         (GimbalSystem.ArmTorqueRef.Data.Latge) < (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMin + 
   99              		.loc 1 55 40
- 100 0004 494B     		ldr	r3, .L15
+ 100 0004 224B     		ldr	r3, .L15
  101 0006 D3F8E841 		ldr	r4, [r3, #488]	@ float
  102              		.loc 1 55 85
- 103 000a 484B     		ldr	r3, .L15
+ 103 000a 214B     		ldr	r3, .L15
  104 000c D3F85833 		ldr	r3, [r3, #856]	@ float
  105              		.loc 1 55 98
- 106 0010 4749     		ldr	r1, .L15+4
+ 106 0010 2049     		ldr	r1, .L15+4
  107 0012 1846     		mov	r0, r3
  108 0014 FFF7FEFF 		bl	__aeabi_fadd
  109              	.LVL0:
@@ -166,16 +166,16 @@
  115              	.LVL1:
  116 0022 0346     		mov	r3, r0
  117 0024 002B     		cmp	r3, #0
- 118 0026 59D1     		bne	.L7
+ 118 0026 11D1     		bne	.L7
   56:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         || (GimbalSystem.ArmTorqueRef.Data.Latge) > (GimbalSystem.ArmRadsPID.Data.Latge.OutLimitMax
  119              		.loc 1 56 43
- 120 0028 404B     		ldr	r3, .L15
+ 120 0028 194B     		ldr	r3, .L15
  121 002a D3F8E841 		ldr	r4, [r3, #488]	@ float
  122              		.loc 1 56 88
- 123 002e 3F4B     		ldr	r3, .L15
+ 123 002e 184B     		ldr	r3, .L15
  124 0030 D3F85C33 		ldr	r3, [r3, #860]	@ float
  125              		.loc 1 56 101
- 126 0034 3E49     		ldr	r1, .L15+4
+ 126 0034 1749     		ldr	r1, .L15+4
  127 0036 1846     		mov	r0, r3
  128 0038 FFF7FEFF 		bl	__aeabi_fsub
  129              	.LVL2:
@@ -187,219 +187,123 @@
  135              	.LVL3:
  136 0046 0346     		mov	r3, r0
  137 0048 002B     		cmp	r3, #0
- 138 004a 47D1     		bne	.L7
-  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         || (GimbalSystem.ArmTorqueRef.Data.Middle) < (GimbalSystem.ArmRadsPID.Data.Middle.OutLimitM
- 139              		.loc 1 57 43
- 140 004c 374B     		ldr	r3, .L15
- 141 004e D3F8E441 		ldr	r4, [r3, #484]	@ float
- 142              		.loc 1 57 90
- 143 0052 364B     		ldr	r3, .L15
- 144 0054 D3F83033 		ldr	r3, [r3, #816]	@ float
- 145              		.loc 1 57 103
- 146 0058 3549     		ldr	r1, .L15+4
- 147 005a 1846     		mov	r0, r3
- 148 005c FFF7FEFF 		bl	__aeabi_fadd
- 149              	.LVL4:
- 150 0060 0346     		mov	r3, r0
- 151              		.loc 1 57 9
- 152 0062 1946     		mov	r1, r3
- 153 0064 2046     		mov	r0, r4
- 154 0066 FFF7FEFF 		bl	__aeabi_fcmplt
- 155              	.LVL5:
- 156 006a 0346     		mov	r3, r0
- 157 006c 002B     		cmp	r3, #0
- 158 006e 35D1     		bne	.L7
-  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         || (GimbalSystem.ArmTorqueRef.Data.Middle) > (GimbalSystem.ArmRadsPID.Data.Middle.OutLimitM
- 159              		.loc 1 58 43
- 160 0070 2E4B     		ldr	r3, .L15
- 161 0072 D3F8E441 		ldr	r4, [r3, #484]	@ float
- 162              		.loc 1 58 90
- 163 0076 2D4B     		ldr	r3, .L15
- 164 0078 D3F83433 		ldr	r3, [r3, #820]	@ float
- 165              		.loc 1 58 103
- 166 007c 2C49     		ldr	r1, .L15+4
- 167 007e 1846     		mov	r0, r3
- 168 0080 FFF7FEFF 		bl	__aeabi_fsub
- 169              	.LVL6:
- 170 0084 0346     		mov	r3, r0
- 171              		.loc 1 58 9
- 172 0086 1946     		mov	r1, r3
- 173 0088 2046     		mov	r0, r4
- 174 008a FFF7FEFF 		bl	__aeabi_fcmpgt
- 175              	.LVL7:
- 176 008e 0346     		mov	r3, r0
- 177 0090 002B     		cmp	r3, #0
- 178 0092 23D1     		bne	.L7
-  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         || (GimbalSystem.ArmTorqueRef.Data.Small) < (GimbalSystem.ArmRadsPID.Data.Small.OutLimitMin
- 179              		.loc 1 59 43
- 180 0094 254B     		ldr	r3, .L15
- 181 0096 D3F8EC41 		ldr	r4, [r3, #492]	@ float
- 182              		.loc 1 59 88
- 183 009a 244B     		ldr	r3, .L15
- 184 009c D3F88033 		ldr	r3, [r3, #896]	@ float
- 185              		.loc 1 59 101
- 186 00a0 2349     		ldr	r1, .L15+4
- 187 00a2 1846     		mov	r0, r3
- 188 00a4 FFF7FEFF 		bl	__aeabi_fadd
- 189              	.LVL8:
- 190 00a8 0346     		mov	r3, r0
- 191              		.loc 1 59 9
- 192 00aa 1946     		mov	r1, r3
- 193 00ac 2046     		mov	r0, r4
- 194 00ae FFF7FEFF 		bl	__aeabi_fcmplt
- 195              	.LVL9:
- 196 00b2 0346     		mov	r3, r0
- 197 00b4 002B     		cmp	r3, #0
- 198 00b6 11D1     		bne	.L7
-  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         || (GimbalSystem.ArmTorqueRef.Data.Small) > (GimbalSystem.ArmRadsPID.Data.Small.OutLimitMax
- 199              		.loc 1 60 43
- 200 00b8 1C4B     		ldr	r3, .L15
- 201 00ba D3F8EC41 		ldr	r4, [r3, #492]	@ float
- 202              		.loc 1 60 88
- 203 00be 1B4B     		ldr	r3, .L15
- 204 00c0 D3F88433 		ldr	r3, [r3, #900]	@ float
- 205              		.loc 1 60 101
- 206 00c4 1A49     		ldr	r1, .L15+4
- 207 00c6 1846     		mov	r0, r3
- 208 00c8 FFF7FEFF 		bl	__aeabi_fsub
- 209              	.LVL10:
- 210 00cc 0346     		mov	r3, r0
- 211              		.loc 1 60 9
- 212 00ce 1946     		mov	r1, r3
- 213 00d0 2046     		mov	r0, r4
- 214 00d2 FFF7FEFF 		bl	__aeabi_fcmpgt
- 215              	.LVL11:
- 216 00d6 0346     		mov	r3, r0
- 217 00d8 002B     		cmp	r3, #0
- 218 00da 21D0     		beq	.L14
- 219              	.L7:
-  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     {
-  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         StallTime++;
- 220              		.loc 1 62 18
- 221 00dc 154B     		ldr	r3, .L15+8
- 222 00de 1B68     		ldr	r3, [r3]
- 223 00e0 0133     		adds	r3, r3, #1
- 224 00e2 144A     		ldr	r2, .L15+8
- 225 00e4 1360     		str	r3, [r2]
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         if (StallTime > (5.0f * CLOSELOOP_EXECUTE_FREQ))
- 226              		.loc 1 63 23
- 227 00e6 134B     		ldr	r3, .L15+8
- 228 00e8 1B68     		ldr	r3, [r3]
- 229 00ea 1846     		mov	r0, r3
- 230 00ec FFF7FEFF 		bl	__aeabi_ui2f
- 231              	.LVL12:
- 232 00f0 0346     		mov	r3, r0
- 233              		.loc 1 63 12
- 234 00f2 1149     		ldr	r1, .L15+12
- 235 00f4 1846     		mov	r0, r3
- 236 00f6 FFF7FEFF 		bl	__aeabi_fcmpgt
- 237              	.LVL13:
- 238 00fa 0346     		mov	r3, r0
- 239 00fc 002B     		cmp	r3, #0
- 240 00fe 13D0     		beq	.L12
-  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         {
-  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             
-  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             StallTime = 0;
- 241              		.loc 1 66 23
- 242 0100 0C4B     		ldr	r3, .L15+8
- 243 0102 0022     		movs	r2, #0
- 244 0104 1A60     		str	r2, [r3]
+ 138 004a 1BD0     		beq	.L14
+ 139              	.L7:
+  57:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     {
+  58:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         StallTime++;
+ 140              		.loc 1 58 18
+ 141 004c 124B     		ldr	r3, .L15+8
+ 142 004e 1B68     		ldr	r3, [r3]
+ 143 0050 0133     		adds	r3, r3, #1
+ 144 0052 114A     		ldr	r2, .L15+8
+ 145 0054 1360     		str	r3, [r2]
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         if (StallTime > (0.2f * CLOSELOOP_EXECUTE_FREQ))
+ 146              		.loc 1 59 23
+ 147 0056 104B     		ldr	r3, .L15+8
+ 148 0058 1B68     		ldr	r3, [r3]
+ 149 005a 1846     		mov	r0, r3
+ 150 005c FFF7FEFF 		bl	__aeabi_ui2f
+ 151              	.LVL4:
+ 152 0060 0346     		mov	r3, r0
+ 153              		.loc 1 59 12
+ 154 0062 0E49     		ldr	r1, .L15+12
+ 155 0064 1846     		mov	r0, r3
+ 156 0066 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 157              	.LVL5:
+ 158 006a 0346     		mov	r3, r0
+ 159 006c 002B     		cmp	r3, #0
+ 160 006e 0DD0     		beq	.L12
+  60:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         {
+  61:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             
+  62:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             StallTime = 0;
+ 161              		.loc 1 62 23
+ 162 0070 094B     		ldr	r3, .L15+8
+ 163 0072 0022     		movs	r2, #0
+ 164 0074 1A60     		str	r2, [r3]
+  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
+  64:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             GimbalSystem.GeoEulerTraget.Pitch = GimbalSystem.GeoEulerQuat.Pitch;
+ 165              		.loc 1 64 74
+ 166 0076 064B     		ldr	r3, .L15
+ 167 0078 D3F88430 		ldr	r3, [r3, #132]	@ float
+ 168              		.loc 1 64 47
+ 169 007c 044A     		ldr	r2, .L15
+ 170 007e C2F89430 		str	r3, [r2, #148]	@ float
+  59:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         {
+ 171              		.loc 1 59 12
+ 172 0082 03E0     		b	.L12
+ 173              	.L14:
+  65:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // BDC_ShutOffPWM(&BLDCRoll);
+  66:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // BDC_ShutOffPWM(&BLDCPitch);
   67:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
-  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             StallTimes++;
- 245              		.loc 1 68 23
- 246 0106 0D4B     		ldr	r3, .L15+16
- 247 0108 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 248 010a 0133     		adds	r3, r3, #1
- 249 010c DAB2     		uxtb	r2, r3
- 250 010e 0B4B     		ldr	r3, .L15+16
- 251 0110 1A70     		strb	r2, [r3]
-  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
-  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // ShutOffPWM(&BLDCYaw);
-  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             BDC_ShutOffPWM(&BLDCRoll);
- 252              		.loc 1 71 13
- 253 0112 0B48     		ldr	r0, .L15+20
- 254 0114 FFF7FEFF 		bl	BDC_ShutOffPWM
-  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             BDC_ShutOffPWM(&BLDCPitch);
- 255              		.loc 1 72 13
- 256 0118 0A48     		ldr	r0, .L15+24
- 257 011a FFF7FEFF 		bl	BDC_ShutOffPWM
-  63:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         {
- 258              		.loc 1 63 12
- 259 011e 03E0     		b	.L12
- 260              	.L14:
-  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** 
-  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // ShutOffPWM(&BLDCYaw);
-  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // ShutOffPWM(&BLDCRoll);
-  76:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // ShutOffPWM(&BLDCPitch);
-  77:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         }
-  78:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     }
-  79:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     else
-  80:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         StallTime = 0;
- 261              		.loc 1 80 19
- 262 0120 044B     		ldr	r3, .L15+8
- 263 0122 0022     		movs	r2, #0
- 264 0124 1A60     		str	r2, [r3]
-  81:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** }
- 265              		.loc 1 81 1
- 266 0126 00BF     		nop
- 267              	.L12:
- 268 0128 00BF     		nop
- 269 012a 98BD     		pop	{r3, r4, r7, pc}
- 270              	.L16:
- 271              		.align	2
- 272              	.L15:
- 273 012c 00000000 		.word	GimbalSystem
- 274 0130 0000C842 		.word	1120403456
- 275 0134 00000000 		.word	StallTime.11229
- 276 0138 00409C46 		.word	1184645120
- 277 013c 00000000 		.word	StallTimes.11230
- 278 0140 00000000 		.word	BLDCRoll
- 279 0144 00000000 		.word	BLDCPitch
- 280              		.cfi_endproc
- 281              	.LFE157:
- 283              		.section	.bss.StallTime.11229,"aw",%nobits
- 284              		.align	2
- 287              	StallTime.11229:
- 288 0000 00000000 		.space	4
- 289              		.section	.bss.StallTimes.11230,"aw",%nobits
- 292              	StallTimes.11230:
- 293 0000 00       		.space	1
- 294              		.text
- 295              	.Letext0:
- 296              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 297              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 298              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 299              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 300              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 301              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 302              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 303              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
- 304              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
- 305              		.file 11 "../../CMSIS/system_gd32f4xx.h"
- 306              		.file 12 "../../CMSIS/gd32f4xx.h"
- 307              		.file 13 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
- 308              		.file 14 "../../Dawn/DawnLib/dawn_lib.h"
- 309              		.file 15 "../../Dawn/DawnBsp/timebase.h"
- 310              		.file 16 "../../Dawn/DawnCom/unpack.h"
- 311              		.file 17 "../../Dawn/DawnDevice/icm206xx.h"
- 312              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
- 313              		.file 19 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
- 314              		.file 20 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_function.h"
- 315              		.file 21 "../../Dawn/DawnBsp/gpio.h"
+  68:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // ShutOffPWM(&BLDCYaw);
+  69:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // ShutOffPWM(&BLDCRoll);
+  70:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****             // ShutOffPWM(&BLDCPitch);
+  71:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         }
+  72:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     }
+  73:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****     else
+  74:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c ****         StallTime = 0;
+ 174              		.loc 1 74 19
+ 175 0084 044B     		ldr	r3, .L15+8
+ 176 0086 0022     		movs	r2, #0
+ 177 0088 1A60     		str	r2, [r3]
+  75:C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain\dawn_function.c **** }
+ 178              		.loc 1 75 1
+ 179 008a 00BF     		nop
+ 180              	.L12:
+ 181 008c 00BF     		nop
+ 182 008e 98BD     		pop	{r3, r4, r7, pc}
+ 183              	.L16:
+ 184              		.align	2
+ 185              	.L15:
+ 186 0090 00000000 		.word	GimbalSystem
+ 187 0094 0000C842 		.word	1120403456
+ 188 0098 00000000 		.word	StallTime.11229
+ 189 009c 00004844 		.word	1145569280
+ 190              		.cfi_endproc
+ 191              	.LFE157:
+ 193              		.section	.bss.StallTime.11229,"aw",%nobits
+ 194              		.align	2
+ 197              	StallTime.11229:
+ 198 0000 00000000 		.space	4
+ 199              		.section	.bss.StallTimes.11230,"aw",%nobits
+ 202              	StallTimes.11230:
+ 203 0000 00       		.space	1
+ 204              		.text
+ 205              	.Letext0:
+ 206              		.file 2 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 207              		.file 3 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 208              		.file 4 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 209              		.file 5 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 210              		.file 6 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 211              		.file 7 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 212              		.file 8 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 213              		.file 9 "c:\\users\\leonardo\\desktop\\gd32embeddedbuilder_v1.5.6_rel\\tools\\gnu tools arm embedd
+ 214              		.file 10 "../../CMSIS/DSP/Include/core_cm4.h"
+ 215              		.file 11 "../../CMSIS/system_gd32f4xx.h"
+ 216              		.file 12 "../../CMSIS/gd32f4xx.h"
+ 217              		.file 13 "../../Dawn/DawnBLDC/dawn_bldc_math.h"
+ 218              		.file 14 "../../Dawn/DawnLib/dawn_lib.h"
+ 219              		.file 15 "../../Dawn/DawnBsp/timebase.h"
+ 220              		.file 16 "../../Dawn/DawnCom/unpack.h"
+ 221              		.file 17 "../../Dawn/DawnDevice/icm206xx.h"
+ 222              		.file 18 "../../Dawn/DawnGimbal/dawn_gimbal_math.h"
+ 223              		.file 19 "../../Dawn/DawnGimbal/dawn_gimbal_system.h"
+ 224              		.file 20 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/Dawn/DawnMain/dawn_function.h"
+ 225              		.file 21 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_function.c
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:20     .data.customer_operation:00000000 customer_operation
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:17     .data.customer_operation:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:32     .text.gimbal_business:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:40     .text.gimbal_business:00000000 gimbal_business
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:85     .text.motor_stall_process:00000000 motor_stall_process
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:68     .text.gimbal_business:00000014 $d
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:78     .text.motor_stall_process:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:273    .text.motor_stall_process:0000012c $d
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:287    .bss.StallTime.11229:00000000 StallTime.11229
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:292    .bss.StallTimes.11230:00000000 StallTimes.11230
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:284    .bss.StallTime.11229:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\ccGuRS0G.s:293    .bss.StallTimes.11230:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:20     .data.customer_operation:00000000 customer_operation
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:17     .data.customer_operation:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:32     .text.gimbal_business:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:40     .text.gimbal_business:00000000 gimbal_business
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:85     .text.motor_stall_process:00000000 motor_stall_process
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:68     .text.gimbal_business:00000014 $d
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:78     .text.motor_stall_process:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:186    .text.motor_stall_process:00000090 $d
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:197    .bss.StallTime.11229:00000000 StallTime.11229
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:194    .bss.StallTime.11229:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:202    .bss.StallTimes.11230:00000000 StallTimes.11230
+C:\Users\leonardo\AppData\Local\Temp\ccg4uPRb.s:203    .bss.StallTimes.11230:00000000 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0
@@ -475,6 +379,3 @@ __aeabi_fcmplt
 __aeabi_fsub
 __aeabi_fcmpgt
 __aeabi_ui2f
-BDC_ShutOffPWM
-BLDCRoll
-BLDCPitch

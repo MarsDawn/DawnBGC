@@ -556,30 +556,30 @@
  443              		.file 7 "../../Libraries/FWLIB/inc/gd32f4xx_dbg.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_dbg.c
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:16     .text.dbg_id_get:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:24     .text.dbg_id_get:00000000 dbg_id_get
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:52     .text.dbg_id_get:00000010 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:57     .text.dbg_low_power_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:64     .text.dbg_low_power_enable:00000000 dbg_low_power_enable
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:100    .text.dbg_low_power_enable:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:105    .text.dbg_low_power_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:112    .text.dbg_low_power_disable:00000000 dbg_low_power_disable
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:151    .text.dbg_low_power_disable:00000020 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:156    .text.dbg_periph_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:163    .text.dbg_periph_enable:00000000 dbg_periph_enable
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:219    .text.dbg_periph_enable:0000003c $d
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:225    .text.dbg_periph_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:232    .text.dbg_periph_disable:00000000 dbg_periph_disable
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:293    .text.dbg_periph_disable:00000040 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:299    .text.dbg_trace_pin_enable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:306    .text.dbg_trace_pin_enable:00000000 dbg_trace_pin_enable
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:336    .text.dbg_trace_pin_enable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:341    .text.dbg_trace_pin_disable:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:348    .text.dbg_trace_pin_disable:00000000 dbg_trace_pin_disable
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:378    .text.dbg_trace_pin_disable:00000018 $d
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:383    .text.dbg_trace_pin_mode_set:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:390    .text.dbg_trace_pin_mode_set:00000000 dbg_trace_pin_mode_set
-C:\Users\leonardo\AppData\Local\Temp\ccUsEMOu.s:432    .text.dbg_trace_pin_mode_set:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:16     .text.dbg_id_get:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:24     .text.dbg_id_get:00000000 dbg_id_get
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:52     .text.dbg_id_get:00000010 $d
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:57     .text.dbg_low_power_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:64     .text.dbg_low_power_enable:00000000 dbg_low_power_enable
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:100    .text.dbg_low_power_enable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:105    .text.dbg_low_power_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:112    .text.dbg_low_power_disable:00000000 dbg_low_power_disable
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:151    .text.dbg_low_power_disable:00000020 $d
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:156    .text.dbg_periph_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:163    .text.dbg_periph_enable:00000000 dbg_periph_enable
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:219    .text.dbg_periph_enable:0000003c $d
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:225    .text.dbg_periph_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:232    .text.dbg_periph_disable:00000000 dbg_periph_disable
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:293    .text.dbg_periph_disable:00000040 $d
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:299    .text.dbg_trace_pin_enable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:306    .text.dbg_trace_pin_enable:00000000 dbg_trace_pin_enable
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:336    .text.dbg_trace_pin_enable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:341    .text.dbg_trace_pin_disable:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:348    .text.dbg_trace_pin_disable:00000000 dbg_trace_pin_disable
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:378    .text.dbg_trace_pin_disable:00000018 $d
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:383    .text.dbg_trace_pin_mode_set:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:390    .text.dbg_trace_pin_mode_set:00000000 dbg_trace_pin_mode_set
+C:\Users\leonardo\AppData\Local\Temp\ccttN5HJ.s:432    .text.dbg_trace_pin_mode_set:0000002c $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

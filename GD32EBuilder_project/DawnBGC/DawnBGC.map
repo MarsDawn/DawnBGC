@@ -4767,20 +4767,8 @@ Discarded input sections
  .bss           0x00000000        0x0 ./DawnMain/dawn_function.o
  .data.customer_operation
                 0x00000000       0x24 ./DawnMain/dawn_function.o
- .text.gimbal_business
-                0x00000000       0x18 ./DawnMain/dawn_function.o
- .text.motor_stall_process
-                0x00000000      0x148 ./DawnMain/dawn_function.o
- .bss.StallTime.11229
-                0x00000000        0x4 ./DawnMain/dawn_function.o
  .bss.StallTimes.11230
                 0x00000000        0x1 ./DawnMain/dawn_function.o
- .debug_info    0x00000000     0x17ab ./DawnMain/dawn_function.o
- .debug_abbrev  0x00000000      0x280 ./DawnMain/dawn_function.o
- .debug_aranges
-                0x00000000       0x28 ./DawnMain/dawn_function.o
- .debug_ranges  0x00000000       0x18 ./DawnMain/dawn_function.o
- .debug_macro   0x00000000      0x384 ./DawnMain/dawn_function.o
  .debug_macro   0x00000000      0xa9c ./DawnMain/dawn_function.o
  .debug_macro   0x00000000       0x22 ./DawnMain/dawn_function.o
  .debug_macro   0x00000000       0x8e ./DawnMain/dawn_function.o
@@ -4848,12 +4836,6 @@ Discarded input sections
  .debug_macro   0x00000000       0x5e ./DawnMain/dawn_function.o
  .debug_macro   0x00000000       0x34 ./DawnMain/dawn_function.o
  .debug_macro   0x00000000       0xb2 ./DawnMain/dawn_function.o
- .debug_line    0x00000000      0x8dd ./DawnMain/dawn_function.o
- .debug_str     0x00000000    0x2df5c ./DawnMain/dawn_function.o
- .comment       0x00000000       0x67 ./DawnMain/dawn_function.o
- .debug_frame   0x00000000       0x50 ./DawnMain/dawn_function.o
- .ARM.attributes
-                0x00000000       0x2e ./DawnMain/dawn_function.o
  .group         0x00000000        0xc ./DawnGimbal/dawn_gimbal_system.o
  .group         0x00000000        0xc ./DawnGimbal/dawn_gimbal_system.o
  .group         0x00000000        0xc ./DawnGimbal/dawn_gimbal_system.o
@@ -6926,7 +6908,7 @@ LOAD c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools ar
                 0x08020188                __Vectors_End = .
                 0x08020188                __Vectors_Size = (__Vectors_End - __gVectors)
 
-.text           0x08020188     0x8080
+.text           0x08020188     0x8164
                 0x08020188                . = ALIGN (0x4)
  *(.text)
  .text          0x08020188      0x378 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
@@ -7032,12 +7014,11 @@ LOAD c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools ar
                 0x0802106c                TIMER7_BRK_TIMER11_IRQHandler
                 0x0802106c                TIMER6_IRQHandler
                 0x0802106c                DMA1_Channel4_IRQHandler
+                0x0802106c                DMA0_Channel3_IRQHandler
                 0x0802106c                I2C0_ER_IRQHandler
                 0x0802106c                TIMER0_UP_TIMER9_IRQHandler
-                0x0802106c                DMA1_Channel7_IRQHandler
                 0x0802106c                CAN1_RX1_IRQHandler
                 0x0802106c                DMA0_Channel2_IRQHandler
-                0x0802106c                USART0_IRQHandler
                 0x0802106c                TIMER1_IRQHandler
                 0x0802106c                I2C1_EV_IRQHandler
                 0x0802106c                DMA1_Channel6_IRQHandler
@@ -7055,16 +7036,17 @@ LOAD c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools ar
                 0x0802106c                SPI2_IRQHandler
                 0x0802106c                CAN1_TX_IRQHandler
                 0x0802106c                RCU_CTC_IRQHandler
-                0x0802106c                DMA1_Channel5_IRQHandler
                 0x0802106c                EXTI4_IRQHandler
                 0x0802106c                CAN0_RX1_IRQHandler
                 0x0802106c                DMA0_Channel5_IRQHandler
                 0x0802106c                DMA1_Channel3_IRQHandler
                 0x0802106c                EXTI5_9_IRQHandler
+                0x0802106c                DMA0_Channel1_IRQHandler
                 0x0802106c                TIMER0_Channel_IRQHandler
                 0x0802106c                EXTI1_IRQHandler
                 0x0802106c                USBHS_EP1_In_IRQHandler
                 0x0802106c                SPI0_IRQHandler
+                0x0802106c                USART2_IRQHandler
                 0x0802106c                CAN0_EWMC_IRQHandler
                 0x0802106c                CAN0_RX0_IRQHandler
                 0x0802106c                I2C2_ER_IRQHandler
@@ -7326,398 +7308,406 @@ LOAD c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools ar
                 0x08023784                SysLedCmd
  .text.main     0x080237b4       0x94 ./DawnMain/dawn_main.o
                 0x080237b4                main
+ .text.gimbal_business
+                0x08023848       0x18 ./DawnMain/dawn_function.o
+                0x08023848                gimbal_business
+ .text.motor_stall_process
+                0x08023860       0xa0 ./DawnMain/dawn_function.o
+                0x08023860                motor_stall_process
  .text.GimbalInit
-                0x08023848        0xc ./DawnGimbal/dawn_gimbal_system.o
-                0x08023848                GimbalInit
+                0x08023900        0xc ./DawnGimbal/dawn_gimbal_system.o
+                0x08023900                GimbalInit
  .text.GimbalWork
-                0x08023854      0x514 ./DawnGimbal/dawn_gimbal_system.o
-                0x08023854                GimbalWork
+                0x0802390c      0x518 ./DawnGimbal/dawn_gimbal_system.o
+                0x0802390c                GimbalWork
  .text.BLDCUpdata
-                0x08023d68      0x14c ./DawnGimbal/dawn_gimbal_system.o
+                0x08023e24      0x14c ./DawnGimbal/dawn_gimbal_system.o
  .text.IMUUpdata
-                0x08023eb4       0x5c ./DawnGimbal/dawn_gimbal_system.o
+                0x08023f70       0x5c ./DawnGimbal/dawn_gimbal_system.o
  .text.CheckBLDCStatus
-                0x08023f10       0x38 ./DawnGimbal/dawn_gimbal_system.o
+                0x08023fcc       0x38 ./DawnGimbal/dawn_gimbal_system.o
  .text.BDCTorqueUpdata
-                0x08023f48       0x90 ./DawnGimbal/dawn_gimbal_system.o
+                0x08024004       0x90 ./DawnGimbal/dawn_gimbal_system.o
  .text.AngleRadsLimit
-                0x08023fd8       0x82 ./DawnGimbal/dawn_gimbal_system.o
- *fill*         0x0802405a        0x2 
+                0x08024094       0x82 ./DawnGimbal/dawn_gimbal_system.o
+ *fill*         0x08024116        0x2 
  .text.ACC2Euler
-                0x0802405c      0x13c ./DawnGimbal/dawn_gimbal_math.o
-                0x0802405c                ACC2Euler
+                0x08024118      0x13c ./DawnGimbal/dawn_gimbal_math.o
+                0x08024118                ACC2Euler
  .text.Euler2Quat
-                0x08024198      0x1a2 ./DawnGimbal/dawn_gimbal_math.o
-                0x08024198                Euler2Quat
+                0x08024254      0x1a2 ./DawnGimbal/dawn_gimbal_math.o
+                0x08024254                Euler2Quat
  .text.Euler2DCM
-                0x0802433a      0x19e ./DawnGimbal/dawn_gimbal_math.o
-                0x0802433a                Euler2DCM
+                0x080243f6      0x19e ./DawnGimbal/dawn_gimbal_math.o
+                0x080243f6                Euler2DCM
  .text.Quat2Euler
-                0x080244d8      0x2f0 ./DawnGimbal/dawn_gimbal_math.o
-                0x080244d8                Quat2Euler
+                0x08024594      0x2f0 ./DawnGimbal/dawn_gimbal_math.o
+                0x08024594                Quat2Euler
  .text.QuatNormalize
-                0x080247c8       0xea ./DawnGimbal/dawn_gimbal_math.o
-                0x080247c8                QuatNormalize
+                0x08024884       0xea ./DawnGimbal/dawn_gimbal_math.o
+                0x08024884                QuatNormalize
  .text.CalcJacobianInv
-                0x080248b2       0xea ./DawnGimbal/dawn_gimbal_math.o
-                0x080248b2                CalcJacobianInv
+                0x0802496e       0xea ./DawnGimbal/dawn_gimbal_math.o
+                0x0802496e                CalcJacobianInv
  .text.CalcJacobianTrans
-                0x0802499c       0xb4 ./DawnGimbal/dawn_gimbal_math.o
-                0x0802499c                CalcJacobianTrans
+                0x08024a58       0xb4 ./DawnGimbal/dawn_gimbal_math.o
+                0x08024a58                CalcJacobianTrans
  .text.MatrixAdd
-                0x08024a50       0x84 ./DawnGimbal/dawn_gimbal_math.o
-                0x08024a50                MatrixAdd
+                0x08024b0c       0x84 ./DawnGimbal/dawn_gimbal_math.o
+                0x08024b0c                MatrixAdd
  .text.MatrixSub
-                0x08024ad4       0x84 ./DawnGimbal/dawn_gimbal_math.o
-                0x08024ad4                MatrixSub
+                0x08024b90       0x84 ./DawnGimbal/dawn_gimbal_math.o
+                0x08024b90                MatrixSub
  .text.MatrixMultiply
-                0x08024b58       0xdc ./DawnGimbal/dawn_gimbal_math.o
-                0x08024b58                MatrixMultiply
+                0x08024c14       0xdc ./DawnGimbal/dawn_gimbal_math.o
+                0x08024c14                MatrixMultiply
  .text.AttitudeUpdata
-                0x08024c34      0x248 ./DawnGimbal/dawn_gimbal_math.o
-                0x08024c34                AttitudeUpdata
+                0x08024cf0      0x248 ./DawnGimbal/dawn_gimbal_math.o
+                0x08024cf0                AttitudeUpdata
  .text.PidControl
-                0x08024e7c      0x170 ./DawnGimbal/dawn_gimbal_math.o
-                0x08024e7c                PidControl
+                0x08024f38      0x170 ./DawnGimbal/dawn_gimbal_math.o
+                0x08024f38                PidControl
  .text.SPI0ReadWriteBytes
-                0x08024fec       0x7c ./DawnDevice/icm206xx.o
+                0x080250a8       0x7c ./DawnDevice/icm206xx.o
  .text.Icm206XXWriteByte
-                0x08025068       0x3c ./DawnDevice/icm206xx.o
+                0x08025124       0x3c ./DawnDevice/icm206xx.o
  .text.Icm206XXReadByte
-                0x080250a4       0x44 ./DawnDevice/icm206xx.o
+                0x08025160       0x44 ./DawnDevice/icm206xx.o
  .text.Icm206XXInit
-                0x080250e8      0x310 ./DawnDevice/icm206xx.o
-                0x080250e8                Icm206XXInit
+                0x080251a4      0x310 ./DawnDevice/icm206xx.o
+                0x080251a4                Icm206XXInit
  .text.TIMER7_UP_TIMER12_IRQHandler
-                0x080253f8       0xac ./DawnDevice/icm206xx.o
-                0x080253f8                TIMER7_UP_TIMER12_IRQHandler
+                0x080254b4       0xac ./DawnDevice/icm206xx.o
+                0x080254b4                TIMER7_UP_TIMER12_IRQHandler
  .text.DMA1_Channel2_IRQHandler
-                0x080254a4      0x324 ./DawnDevice/icm206xx.o
-                0x080254a4                DMA1_Channel2_IRQHandler
+                0x08025560      0x324 ./DawnDevice/icm206xx.o
+                0x08025560                DMA1_Channel2_IRQHandler
  .text.EXTI0_IRQHandler
-                0x080257c8       0x12 ./DawnDevice/icm206xx.o
-                0x080257c8                EXTI0_IRQHandler
- *fill*         0x080257da        0x2 
+                0x08025884       0x12 ./DawnDevice/icm206xx.o
+                0x08025884                EXTI0_IRQHandler
+ *fill*         0x08025896        0x2 
  .text.NVIC_SystemReset
-                0x080257dc       0x30 ./DawnCom/unpack.o
+                0x08025898       0x30 ./DawnCom/unpack.o
  .text.FrameUnpack
-                0x0802580c      0x118 ./DawnCom/unpack.o
-                0x0802580c                FrameUnpack
+                0x080258c8      0x118 ./DawnCom/unpack.o
+                0x080258c8                FrameUnpack
  .text.DebugUsartInit
-                0x08025924      0x214 ./DawnBsp/usart.o
-                0x08025924                DebugUsartInit
+                0x080259e0      0x214 ./DawnBsp/usart.o
+                0x080259e0                DebugUsartInit
  .text.debug_usart_trans_enable
-                0x08025b38       0x24 ./DawnBsp/usart.o
-                0x08025b38                debug_usart_trans_enable
+                0x08025bf4       0x24 ./DawnBsp/usart.o
+                0x08025bf4                debug_usart_trans_enable
  .text.debug_usart_get_byte
-                0x08025b5c       0x8c ./DawnBsp/usart.o
-                0x08025b5c                debug_usart_get_byte
- .text.DMA0_Channel1_IRQHandler
-                0x08025be8      0x118 ./DawnBsp/usart.o
-                0x08025be8                DMA0_Channel1_IRQHandler
- .text.DMA0_Channel3_IRQHandler
-                0x08025d00       0x34 ./DawnBsp/usart.o
-                0x08025d00                DMA0_Channel3_IRQHandler
- .text.USART2_IRQHandler
-                0x08025d34      0x220 ./DawnBsp/usart.o
-                0x08025d34                USART2_IRQHandler
+                0x08025c18       0x8c ./DawnBsp/usart.o
+                0x08025c18                debug_usart_get_byte
+ .text.DMA1_Channel5_IRQHandler
+                0x08025ca4      0x118 ./DawnBsp/usart.o
+                0x08025ca4                DMA1_Channel5_IRQHandler
+ .text.DMA1_Channel7_IRQHandler
+                0x08025dbc       0x34 ./DawnBsp/usart.o
+                0x08025dbc                DMA1_Channel7_IRQHandler
+ .text.USART0_IRQHandler
+                0x08025df0      0x220 ./DawnBsp/usart.o
+                0x08025df0                USART0_IRQHandler
  .text.TimeBaseInit
-                0x08025f54       0x78 ./DawnBsp/timebase.o
-                0x08025f54                TimeBaseInit
+                0x08026010       0x78 ./DawnBsp/timebase.o
+                0x08026010                TimeBaseInit
  .text.TimeBaseStart
-                0x08025fcc       0x28 ./DawnBsp/timebase.o
-                0x08025fcc                TimeBaseStart
+                0x08026088       0x28 ./DawnBsp/timebase.o
+                0x08026088                TimeBaseStart
  .text.TimeBaseTimeOut
-                0x08025ff4       0x24 ./DawnBsp/timebase.o
-                0x08025ff4                TimeBaseTimeOut
+                0x080260b0       0x24 ./DawnBsp/timebase.o
+                0x080260b0                TimeBaseTimeOut
  .text.TIMER7_TRG_CMT_TIMER13_IRQHandler
-                0x08026018       0x9c ./DawnBsp/timebase.o
-                0x08026018                TIMER7_TRG_CMT_TIMER13_IRQHandler
+                0x080260d4       0x9c ./DawnBsp/timebase.o
+                0x080260d4                TIMER7_TRG_CMT_TIMER13_IRQHandler
  .text.BDCGpioInit
-                0x080260b4      0x274 ./DawnBsp/gpio.o
-                0x080260b4                BDCGpioInit
- .text.BDCInit  0x08026328       0x2c ./DawnBDC/dawn_bdc.o
-                0x08026328                BDCInit
+                0x08026170      0x280 ./DawnBsp/gpio.o
+                0x08026170                BDCGpioInit
+ .text.BDCInit  0x080263f0       0x2c ./DawnBDC/dawn_bdc.o
+                0x080263f0                BDCInit
  .text.BDC_MapMagToCcr
-                0x08026354       0x48 ./DawnBDC/dawn_bdc.o
+                0x0802641c       0x48 ./DawnBDC/dawn_bdc.o
  .text.BDC_ApplySlowDecayDualPwm
-                0x0802639c       0x52 ./DawnBDC/dawn_bdc.o
- *fill*         0x080263ee        0x2 
- .text.BDCpwm   0x080263f0       0x9c ./DawnBDC/dawn_bdc.o
-                0x080263f0                BDCpwm
+                0x08026464       0x5e ./DawnBDC/dawn_bdc.o
+ *fill*         0x080264c2        0x2 
+ .text.BDCpwm   0x080264c4       0xac ./DawnBDC/dawn_bdc.o
+                0x080264c4                BDCpwm
  .text.BDC_TurnOnPWM
-                0x0802648c       0xb0 ./DawnBDC/dawn_bdc.o
-                0x0802648c                BDC_TurnOnPWM
+                0x08026570       0xb0 ./DawnBDC/dawn_bdc.o
+                0x08026570                BDC_TurnOnPWM
  .text.SystemInit
-                0x0802653c       0x80 ./CMSIS/system_gd32f4xx.o
-                0x0802653c                SystemInit
+                0x08026620       0x80 ./CMSIS/system_gd32f4xx.o
+                0x08026620                SystemInit
  .text.system_clock_config
-                0x080265bc        0xc ./CMSIS/system_gd32f4xx.o
+                0x080266a0        0xc ./CMSIS/system_gd32f4xx.o
  .text.system_clock_200m_8m_hxtal
-                0x080265c8      0x120 ./CMSIS/system_gd32f4xx.o
+                0x080266ac      0x120 ./CMSIS/system_gd32f4xx.o
  .text.AttitudeCali
-                0x080266e8      0x448 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
-                0x080266e8                AttitudeCali
+                0x080267cc      0x448 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+                0x080267cc                AttitudeCali
  .text.__libc_init_array
-                0x08026b30       0x48 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
-                0x08026b30                __libc_init_array
- .text.memcpy   0x08026b78       0x1c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
-                0x08026b78                memcpy
- .text.memset   0x08026b94       0x10 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
-                0x08026b94                memset
- .text.cosf     0x08026ba4       0x78 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_cos.o)
-                0x08026ba4                cosf
- .text.sinf     0x08026c1c       0x7c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_sin.o)
-                0x08026c1c                sinf
- .text.asinf    0x08026c98       0xa4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_asin.o)
-                0x08026c98                asinf
- .text.atan2f   0x08026d3c        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_atan2.o)
-                0x08026d3c                atan2f
- .text.sqrtf    0x08026d40       0xa4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_sqrt.o)
-                0x08026d40                sqrtf
+                0x08026c14       0x48 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
+                0x08026c14                __libc_init_array
+ .text.memcpy   0x08026c5c       0x1c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+                0x08026c5c                memcpy
+ .text.memset   0x08026c78       0x10 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x08026c78                memset
+ .text.cosf     0x08026c88       0x78 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_cos.o)
+                0x08026c88                cosf
+ .text.sinf     0x08026d00       0x7c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_sin.o)
+                0x08026d00                sinf
+ .text.asinf    0x08026d7c       0xa4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_asin.o)
+                0x08026d7c                asinf
+ .text.atan2f   0x08026e20        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_atan2.o)
+                0x08026e20                atan2f
+ .text.sqrtf    0x08026e24       0xa4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_sqrt.o)
+                0x08026e24                sqrtf
  .text.__ieee754_asinf
-                0x08026de4      0x298 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_asin.o)
-                0x08026de4                __ieee754_asinf
+                0x08026ec8      0x298 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_asin.o)
+                0x08026ec8                __ieee754_asinf
  .text.__ieee754_atan2f
-                0x0802707c      0x110 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
-                0x0802707c                __ieee754_atan2f
+                0x08027160      0x110 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
+                0x08027160                __ieee754_atan2f
  .text.__ieee754_rem_pio2f
-                0x0802718c      0x2e8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
-                0x0802718c                __ieee754_rem_pio2f
+                0x08027270      0x2e8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
+                0x08027270                __ieee754_rem_pio2f
  .text.__ieee754_sqrtf
-                0x08027474       0xa4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_sqrt.o)
-                0x08027474                __ieee754_sqrtf
+                0x08027558       0xa4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_sqrt.o)
+                0x08027558                __ieee754_sqrtf
  .text.__kernel_cosf
-                0x08027518      0x18c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_cos.o)
-                0x08027518                __kernel_cosf
+                0x080275fc      0x18c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_cos.o)
+                0x080275fc                __kernel_cosf
  .text.__kernel_rem_pio2f
-                0x080276a4      0x6e0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
-                0x080276a4                __kernel_rem_pio2f
+                0x08027788      0x6e0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
+                0x08027788                __kernel_rem_pio2f
  .text.__kernel_sinf
-                0x08027d84       0xec c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_sin.o)
-                0x08027d84                __kernel_sinf
- .text.matherr  0x08027e70        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_matherr.o)
-                0x08027e70                matherr
- .text.nan      0x08027e74        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_nan.o)
-                0x08027e74                nan
- .text.atanf    0x08027e80      0x230 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
-                0x08027e80                atanf
- .text.fabsf    0x080280b0        0x8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_fabs.o)
-                0x080280b0                fabsf
- .text.floorf   0x080280b8       0x80 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_floor.o)
-                0x080280b8                floorf
- .text.scalbnf  0x08028138       0xac c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_scalbn.o)
-                0x08028138                scalbnf
- .text.__errno  0x080281e4        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-errno.o)
-                0x080281e4                __errno
+                0x08027e68       0xec c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_sin.o)
+                0x08027e68                __kernel_sinf
+ .text.matherr  0x08027f54        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_matherr.o)
+                0x08027f54                matherr
+ .text.nan      0x08027f58        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_nan.o)
+                0x08027f58                nan
+ .text.atanf    0x08027f64      0x230 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
+                0x08027f64                atanf
+ .text.fabsf    0x08028194        0x8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_fabs.o)
+                0x08028194                fabsf
+ .text.floorf   0x0802819c       0x80 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_floor.o)
+                0x0802819c                floorf
+ .text.scalbnf  0x0802821c       0xac c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_scalbn.o)
+                0x0802821c                scalbnf
+ .text.__errno  0x080282c8        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-errno.o)
+                0x080282c8                __errno
  *(.glue_7)
- .glue_7        0x080281f0        0x0 linker stubs
+ .glue_7        0x080282d4        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x080281f0        0x0 linker stubs
+ .glue_7t       0x080282d4        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x080281f0        0x0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
+ .eh_frame      0x080282d4        0x0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
  *(.init)
- .init          0x080281f0        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crti.o
-                0x080281f0                _init
- .init          0x080281f4        0x8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtn.o
+ .init          0x080282d4        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crti.o
+                0x080282d4                _init
+ .init          0x080282d8        0x8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtn.o
  *(.fini)
- .fini          0x080281fc        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crti.o
-                0x080281fc                _fini
- .fini          0x08028200        0x8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtn.o
-                0x08028208                . = ALIGN (0x4)
-                0x08028208                _etext = .
+ .fini          0x080282e0        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crti.o
+                0x080282e0                _fini
+ .fini          0x080282e4        0x8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtn.o
+                0x080282ec                . = ALIGN (0x4)
+                0x080282ec                _etext = .
 
-.vfp11_veneer   0x08028208        0x0
- .vfp11_veneer  0x08028208        0x0 linker stubs
+.vfp11_veneer   0x080282ec        0x0
+ .vfp11_veneer  0x080282ec        0x0 linker stubs
 
-.v4_bx          0x08028208        0x0
- .v4_bx         0x08028208        0x0 linker stubs
+.v4_bx          0x080282ec        0x0
+ .v4_bx         0x080282ec        0x0 linker stubs
 
-.iplt           0x08028208        0x0
- .iplt          0x08028208        0x0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
+.iplt           0x080282ec        0x0
+ .iplt          0x080282ec        0x0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
 
-.rodata         0x08028208      0x434
-                0x08028208                . = ALIGN (0x4)
+.rodata         0x080282ec      0x434
+                0x080282ec                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x08028208       0x18 ./FWLIB/gd32f4xx_rcu.o
+ .rodata        0x080282ec       0x18 ./FWLIB/gd32f4xx_rcu.o
  *(.rodata*)
  .rodata.asinf.str1.4
-                0x08028220        0x9 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_asin.o)
- *fill*         0x08028229        0x3 
+                0x08028304        0x9 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_asin.o)
+ *fill*         0x0802830d        0x3 
  .rodata.sqrtf.str1.4
-                0x0802822c        0x6 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_sqrt.o)
- *fill*         0x08028232        0x2 
+                0x08028310        0x6 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_sqrt.o)
+ *fill*         0x08028316        0x2 
  .rodata.CSWTCH.8
-                0x08028234        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
+                0x08028318        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
  .rodata.CSWTCH.9
-                0x08028240        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
+                0x08028324        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
  .rodata.npio2_hw
-                0x0802824c       0x80 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
+                0x08028330       0x80 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
  .rodata.two_over_pi
-                0x080282cc      0x318 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
- .rodata.PIo2   0x080285e4       0x2c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
+                0x080283b0      0x318 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
+ .rodata.PIo2   0x080286c8       0x2c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
  .rodata.init_jk
-                0x08028610        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
+                0x080286f4        0xc c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
  .rodata.atanhi
-                0x0802861c       0x10 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
+                0x08028700       0x10 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
  .rodata.atanlo
-                0x0802862c       0x10 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
-                0x0802863c                . = ALIGN (0x4)
+                0x08028710       0x10 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
+                0x08028720                . = ALIGN (0x4)
 
-.rel.dyn        0x0802863c        0x0
- .rel.iplt      0x0802863c        0x0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
+.rel.dyn        0x08028720        0x0
+ .rel.iplt      0x08028720        0x0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0802863c        0x0
-                0x0802863c                __exidx_start = .
+.ARM            0x08028720        0x0
+                0x08028720                __exidx_start = .
  *(.ARM.exidx*)
-                0x0802863c                __exidx_end = .
+                0x08028720                __exidx_end = .
 
 .ARM.attributes
-                0x0802863c       0x2a
+                0x08028720       0x2a
  *(.ARM.attributes)
  .ARM.attributes
-                0x0802863c       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crti.o
+                0x08028720       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crti.o
  .ARM.attributes
-                0x0802865a       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
+                0x0802873e       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
  .ARM.attributes
-                0x08028688       0x21 ./gcc_startup/startup_gd32f405_425.o
+                0x0802876c       0x21 ./gcc_startup/startup_gd32f405_425.o
  .ARM.attributes
-                0x080286a9       0x2e ./FWLIB/gd32f4xx_usart.o
+                0x0802878d       0x2e ./FWLIB/gd32f4xx_usart.o
  .ARM.attributes
-                0x080286d7       0x2e ./FWLIB/gd32f4xx_timer.o
+                0x080287bb       0x2e ./FWLIB/gd32f4xx_timer.o
  .ARM.attributes
-                0x08028705       0x2e ./FWLIB/gd32f4xx_syscfg.o
+                0x080287e9       0x2e ./FWLIB/gd32f4xx_syscfg.o
  .ARM.attributes
-                0x08028733       0x2e ./FWLIB/gd32f4xx_spi.o
+                0x08028817       0x2e ./FWLIB/gd32f4xx_spi.o
  .ARM.attributes
-                0x08028761       0x2e ./FWLIB/gd32f4xx_rcu.o
+                0x08028845       0x2e ./FWLIB/gd32f4xx_rcu.o
  .ARM.attributes
-                0x0802878f       0x2e ./FWLIB/gd32f4xx_misc.o
+                0x08028873       0x2e ./FWLIB/gd32f4xx_misc.o
  .ARM.attributes
-                0x080287bd       0x2e ./FWLIB/gd32f4xx_gpio.o
+                0x080288a1       0x2e ./FWLIB/gd32f4xx_gpio.o
  .ARM.attributes
-                0x080287eb       0x2e ./FWLIB/gd32f4xx_exti.o
+                0x080288cf       0x2e ./FWLIB/gd32f4xx_exti.o
  .ARM.attributes
-                0x08028819       0x2e ./FWLIB/gd32f4xx_dma.o
+                0x080288fd       0x2e ./FWLIB/gd32f4xx_dma.o
  .ARM.attributes
-                0x08028847       0x2e ./DawnSys/systick.o
+                0x0802892b       0x2e ./DawnSys/systick.o
  .ARM.attributes
-                0x08028875       0x2e ./DawnMain/gd32f4xx_it.o
+                0x08028959       0x2e ./DawnMain/gd32f4xx_it.o
  .ARM.attributes
-                0x080288a3       0x33 ./DawnMain/dawn_parameter.o
+                0x08028987       0x33 ./DawnMain/dawn_parameter.o
  .ARM.attributes
-                0x080288d6       0x2e ./DawnMain/dawn_main.o
+                0x080289ba       0x2e ./DawnMain/dawn_main.o
  .ARM.attributes
-                0x08028904       0x2e ./DawnGimbal/dawn_gimbal_system.o
+                0x080289e8       0x2e ./DawnMain/dawn_function.o
  .ARM.attributes
-                0x08028932       0x2e ./DawnGimbal/dawn_gimbal_math.o
+                0x08028a16       0x2e ./DawnGimbal/dawn_gimbal_system.o
  .ARM.attributes
-                0x08028960       0x2e ./DawnDevice/icm206xx.o
+                0x08028a44       0x2e ./DawnGimbal/dawn_gimbal_math.o
  .ARM.attributes
-                0x0802898e       0x2e ./DawnCom/unpack.o
+                0x08028a72       0x2e ./DawnDevice/icm206xx.o
  .ARM.attributes
-                0x080289bc       0x2e ./DawnBsp/usart.o
+                0x08028aa0       0x2e ./DawnCom/unpack.o
  .ARM.attributes
-                0x080289ea       0x2e ./DawnBsp/timebase.o
+                0x08028ace       0x2e ./DawnBsp/usart.o
  .ARM.attributes
-                0x08028a18       0x2e ./DawnBsp/gpio.o
+                0x08028afc       0x2e ./DawnBsp/timebase.o
  .ARM.attributes
-                0x08028a46       0x2e ./DawnBDC/dawn_bdc.o
+                0x08028b2a       0x2e ./DawnBsp/gpio.o
  .ARM.attributes
-                0x08028a74       0x2e ./CMSIS/system_gd32f4xx.o
+                0x08028b58       0x2e ./DawnBDC/dawn_bdc.o
  .ARM.attributes
-                0x08028aa2       0x2e C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+                0x08028b86       0x2e ./CMSIS/system_gd32f4xx.o
  .ARM.attributes
-                0x08028ad0       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
+                0x08028bb4       0x2e C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
  .ARM.attributes
-                0x08028aee       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
+                0x08028be2       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x08028b0c       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+                0x08028c00       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
  .ARM.attributes
-                0x08028b2a       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubsf3.o)
+                0x08028c1e       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
  .ARM.attributes
-                0x08028b48       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivsf3.o)
+                0x08028c3c       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubsf3.o)
  .ARM.attributes
-                0x08028b66       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
+                0x08028c5a       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivsf3.o)
  .ARM.attributes
-                0x08028b84       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixsfsi.o)
+                0x08028c78       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
  .ARM.attributes
-                0x08028ba2       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-impure.o)
+                0x08028c96       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixsfsi.o)
  .ARM.attributes
-                0x08028bd0       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
+                0x08028cb4       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-impure.o)
  .ARM.attributes
-                0x08028bfe       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+                0x08028ce2       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x08028c2c       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
+                0x08028d10       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
  .ARM.attributes
-                0x08028c5a       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtn.o
+                0x08028d3e       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
  .ARM.attributes
-                0x08028c78       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_cos.o)
+                0x08028d6c       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtn.o
  .ARM.attributes
-                0x08028ca6       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_sin.o)
+                0x08028d8a       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_cos.o)
  .ARM.attributes
-                0x08028cd4       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_asin.o)
+                0x08028db8       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_sin.o)
  .ARM.attributes
-                0x08028d02       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_atan2.o)
+                0x08028de6       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_asin.o)
  .ARM.attributes
-                0x08028d30       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_sqrt.o)
+                0x08028e14       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_atan2.o)
  .ARM.attributes
-                0x08028d5e       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_asin.o)
+                0x08028e42       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_sqrt.o)
  .ARM.attributes
-                0x08028d8c       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
+                0x08028e70       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_asin.o)
  .ARM.attributes
-                0x08028dba       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
+                0x08028e9e       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
  .ARM.attributes
-                0x08028de8       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_sqrt.o)
+                0x08028ecc       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
  .ARM.attributes
-                0x08028e16       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_cos.o)
+                0x08028efa       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_sqrt.o)
  .ARM.attributes
-                0x08028e44       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
+                0x08028f28       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_cos.o)
  .ARM.attributes
-                0x08028e72       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_sin.o)
+                0x08028f56       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
  .ARM.attributes
-                0x08028ea0       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_lib_ver.o)
+                0x08028f84       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_sin.o)
  .ARM.attributes
-                0x08028ece       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_matherr.o)
+                0x08028fb2       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_lib_ver.o)
  .ARM.attributes
-                0x08028efc       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_nan.o)
+                0x08028fe0       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_matherr.o)
  .ARM.attributes
-                0x08028f2a       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
+                0x0802900e       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_nan.o)
  .ARM.attributes
-                0x08028f58       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_fabs.o)
+                0x0802903c       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
  .ARM.attributes
-                0x08028f86       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_floor.o)
+                0x0802906a       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_fabs.o)
  .ARM.attributes
-                0x08028fb4       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_scalbn.o)
+                0x08029098       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_floor.o)
  .ARM.attributes
-                0x08028fe2       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unordsf2.o)
+                0x080290c6       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_scalbn.o)
  .ARM.attributes
-                0x08029000       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-errno.o)
+                0x080290f4       0x1e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unordsf2.o)
+ .ARM.attributes
+                0x08029112       0x2e c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-errno.o)
 
-.preinit_array  0x0802863c        0x0
-                0x0802863c                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08028720        0x0
+                0x08028720                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0802863c                PROVIDE (__preinit_array_end = .)
+                0x08028720                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0802863c        0x4
-                0x0802863c                PROVIDE (__init_array_start = .)
+.init_array     0x08028720        0x4
+                0x08028720                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0802863c        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
-                0x08028640                PROVIDE (__init_array_end = .)
+ .init_array    0x08028720        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
+                0x08028724                PROVIDE (__init_array_end = .)
 
-.fini_array     0x08028640        0x4
+.fini_array     0x08028724        0x4
                 [!provide]                PROVIDE (__fini_array_start = .)
  *(.fini_array*)
- .fini_array    0x08028640        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
+ .fini_array    0x08028724        0x4 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
  *(SORT_BY_NAME(.fini_array.*))
                 [!provide]                PROVIDE (__fini_array_end = .)
-                0x08028644                _sidata = LOADADDR (.data)
+                0x08028728                _sidata = LOADADDR (.data)
 
-.data           0x20000000      0x690 load address 0x08028644
+.data           0x20000000      0x690 load address 0x08028728
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                _sdata = .
  *(.data)
@@ -7752,11 +7742,11 @@ LOAD c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools ar
  *fill*         0x2000068d        0x3 
                 0x20000690                _edata = .
 
-.igot.plt       0x20000690        0x0 load address 0x08028cd4
+.igot.plt       0x20000690        0x0 load address 0x08028db8
  .igot.plt      0x20000690        0x0 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp/crtbegin.o
                 0x20000690                . = ALIGN (0x4)
 
-.bss            0x20000690      0x8a8 load address 0x08028cd4
+.bss            0x20000690      0x8ac load address 0x08028db8
                 0x20000690                . = ALIGN (0x4)
                 0x20000690                _sbss = .
                 0x20000690                __bss_start__ = _sbss
@@ -7770,68 +7760,72 @@ LOAD c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools ar
  .bss.fac_us    0x200006ac        0x1 ./DawnSys/systick.o
  *fill*         0x200006ad        0x1 
  .bss.fac_ms    0x200006ae        0x2 ./DawnSys/systick.o
+ .bss.StallTime.11229
+                0x200006b0        0x4 ./DawnMain/dawn_function.o
  .bss.Icm206XXRegData
-                0x200006b0        0x1 ./DawnDevice/icm206xx.o
+                0x200006b4        0x1 ./DawnDevice/icm206xx.o
  .bss.Icm206XXRxBufIndex
-                0x200006b1        0x1 ./DawnDevice/icm206xx.o
- *fill*         0x200006b2        0x2 
+                0x200006b5        0x1 ./DawnDevice/icm206xx.o
+ *fill*         0x200006b6        0x2 
  .bss.Icm206XXRxBuf
-                0x200006b4        0xf ./DawnDevice/icm206xx.o
- *fill*         0x200006c3        0x1 
+                0x200006b8        0xf ./DawnDevice/icm206xx.o
+ *fill*         0x200006c7        0x1 
  .bss.GyroXSum.11259
-                0x200006c4        0x4 ./DawnDevice/icm206xx.o
- .bss.GyroYSum.11260
                 0x200006c8        0x4 ./DawnDevice/icm206xx.o
- .bss.GyroZSum.11261
+ .bss.GyroYSum.11260
                 0x200006cc        0x4 ./DawnDevice/icm206xx.o
+ .bss.GyroZSum.11261
+                0x200006d0        0x4 ./DawnDevice/icm206xx.o
  .bss.DebugUsartFrame
-                0x200006d0      0x108 ./DawnCom/unpack.o
-                0x200006d0                DebugUsartFrame
+                0x200006d4      0x108 ./DawnCom/unpack.o
+                0x200006d4                DebugUsartFrame
  .bss.pbuf.11232
-                0x200007d8      0x100 ./DawnCom/unpack.o
+                0x200007dc      0x100 ./DawnCom/unpack.o
  .bss.debug_usart_rx_buf
-                0x200008d8      0x200 ./DawnBsp/usart.o
+                0x200008dc      0x200 ./DawnBsp/usart.o
  .bss.debug_usart_tx_buf
-                0x20000ad8      0x400 ./DawnBsp/usart.o
+                0x20000adc      0x400 ./DawnBsp/usart.o
  .bss.debug_usart_rx_buff_head
-                0x20000ed8        0x2 ./DawnBsp/usart.o
- .bss.debug_usart_rx_buff_tail
-                0x20000eda        0x2 ./DawnBsp/usart.o
- .bss.debug_usart_rx_buff_tail_last
                 0x20000edc        0x2 ./DawnBsp/usart.o
- .bss.debug_usart_rx_dma_cnt
+ .bss.debug_usart_rx_buff_tail
                 0x20000ede        0x2 ./DawnBsp/usart.o
- .bss.debug_usart_tx_buff_head
+ .bss.debug_usart_rx_buff_tail_last
                 0x20000ee0        0x2 ./DawnBsp/usart.o
- .bss.debug_usart_tx_buff_tail
+ .bss.debug_usart_rx_dma_cnt
                 0x20000ee2        0x2 ./DawnBsp/usart.o
+ .bss.debug_usart_tx_buff_head
+                0x20000ee4        0x2 ./DawnBsp/usart.o
+ .bss.debug_usart_tx_buff_tail
+                0x20000ee6        0x2 ./DawnBsp/usart.o
  .bss.isr_cnt.11240
-                0x20000ee4        0x1 ./DawnBsp/timebase.o
+                0x20000ee8        0x1 ./DawnBsp/timebase.o
+ *fill*         0x20000ee9        0x1 
+ .bss.u.11240   0x20000eea        0x2 ./DawnBDC/dawn_bdc.o
  *(COMMON)
- *fill*         0x20000ee5        0x3 
- COMMON         0x20000ee8       0x3c ./DawnDevice/icm206xx.o
-                0x20000ee8                Icm206XXData
- COMMON         0x20000f24       0x12 ./DawnBsp/timebase.o
-                0x20000f24                TimeOutArray
-                0x20000f38                . = ALIGN (0x4)
- *fill*         0x20000f36        0x2 
-                0x20000f38                _ebss = .
-                0x20000f38                __bss_end__ = _ebss
+ COMMON         0x20000eec       0x3c ./DawnDevice/icm206xx.o
+                0x20000eec                Icm206XXData
+ COMMON         0x20000f28       0x12 ./DawnBsp/timebase.o
+                0x20000f28                TimeOutArray
+                0x20000f3c                . = ALIGN (0x4)
+ *fill*         0x20000f3a        0x2 
+                0x20000f3c                _ebss = .
+                0x20000f3c                __bss_end__ = _ebss
 
-.heap_stack     0x20000f38      0xc00 load address 0x08028cd4
-                0x20000f38                . = ALIGN (0x8)
+.heap_stack     0x20000f3c      0xc04 load address 0x08028db8
+                0x20000f40                . = ALIGN (0x8)
+ *fill*         0x20000f3c        0x4 
                 [!provide]                PROVIDE (end = _ebss)
                 [!provide]                PROVIDE (_end = _ebss)
-                0x20001338                . = (. + __heap_size)
- *fill*         0x20000f38      0x400 
+                0x20001340                . = (. + __heap_size)
+ *fill*         0x20000f40      0x400 
                 [!provide]                PROVIDE (_heap_end = .)
-                0x20001b38                . = (. + __stack_size)
- *fill*         0x20001338      0x800 
-                0x20001b38                PROVIDE (_sp = .)
-                0x20001b38                . = ALIGN (0x8)
-                0x08028cd4                _sitcmram = LOADADDR (.tcmram)
+                0x20001b40                . = (. + __stack_size)
+ *fill*         0x20001340      0x800 
+                0x20001b40                PROVIDE (_sp = .)
+                0x20001b40                . = ALIGN (0x8)
+                0x08028db8                _sitcmram = LOADADDR (.tcmram)
 
-.tcmram         0x10000000        0x0 load address 0x08028cd4
+.tcmram         0x10000000        0x0 load address 0x08028db8
                 0x10000000                . = ALIGN (0x4)
                 0x10000000                .stcmram = .
  *(.tcmram)
@@ -7846,7 +7840,7 @@ LOAD c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools ar
 END GROUP
 OUTPUT(DawnBGC.elf elf32-littlearm)
 
-.debug_line     0x00000000     0xf058
+.debug_line     0x00000000     0xf904
  .debug_line    0x00000000       0x80 ./gcc_startup/startup_gd32f405_425.o
  .debug_line    0x00000080      0xd0a ./FWLIB/gd32f4xx_usart.o
  .debug_line    0x00000d8a     0x1350 ./FWLIB/gd32f4xx_timer.o
@@ -7861,18 +7855,19 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .debug_line    0x00006e72      0x691 ./DawnMain/gd32f4xx_it.o
  .debug_line    0x00007503      0x84b ./DawnMain/dawn_parameter.o
  .debug_line    0x00007d4e      0x8db ./DawnMain/dawn_main.o
- .debug_line    0x00008629      0xc12 ./DawnGimbal/dawn_gimbal_system.o
- .debug_line    0x0000923b     0x100a ./DawnGimbal/dawn_gimbal_math.o
- .debug_line    0x0000a245      0xb95 ./DawnDevice/icm206xx.o
- .debug_line    0x0000adda      0x947 ./DawnCom/unpack.o
- .debug_line    0x0000b721      0xb38 ./DawnBsp/usart.o
- .debug_line    0x0000c259      0x921 ./DawnBsp/timebase.o
- .debug_line    0x0000cb7a      0x9ba ./DawnBsp/gpio.o
- .debug_line    0x0000d534      0x96d ./DawnBDC/dawn_bdc.o
- .debug_line    0x0000dea1      0x764 ./CMSIS/system_gd32f4xx.o
- .debug_line    0x0000e605      0xa53 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_line    0x00008629      0x8ad ./DawnMain/dawn_function.o
+ .debug_line    0x00008ed6      0xc10 ./DawnGimbal/dawn_gimbal_system.o
+ .debug_line    0x00009ae6     0x100a ./DawnGimbal/dawn_gimbal_math.o
+ .debug_line    0x0000aaf0      0xb95 ./DawnDevice/icm206xx.o
+ .debug_line    0x0000b685      0x947 ./DawnCom/unpack.o
+ .debug_line    0x0000bfcc      0xb38 ./DawnBsp/usart.o
+ .debug_line    0x0000cb04      0x921 ./DawnBsp/timebase.o
+ .debug_line    0x0000d425      0x9b7 ./DawnBsp/gpio.o
+ .debug_line    0x0000dddc      0x971 ./DawnBDC/dawn_bdc.o
+ .debug_line    0x0000e74d      0x764 ./CMSIS/system_gd32f4xx.o
+ .debug_line    0x0000eeb1      0xa53 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
 
-.debug_info     0x00000000    0x1ab35
+.debug_info     0x00000000    0x1c2de
  .debug_info    0x00000000       0x22 ./gcc_startup/startup_gd32f405_425.o
  .debug_info    0x00000022      0xf02 ./FWLIB/gd32f4xx_usart.o
  .debug_info    0x00000f24     0x1463 ./FWLIB/gd32f4xx_timer.o
@@ -7887,18 +7882,19 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .debug_info    0x00007abe      0x160 ./DawnMain/gd32f4xx_it.o
  .debug_info    0x00007c1e     0x1756 ./DawnMain/dawn_parameter.o
  .debug_info    0x00009374     0x19fa ./DawnMain/dawn_main.o
- .debug_info    0x0000ad6e     0x1852 ./DawnGimbal/dawn_gimbal_system.o
- .debug_info    0x0000c5c0     0x1f75 ./DawnGimbal/dawn_gimbal_math.o
- .debug_info    0x0000e535     0x204f ./DawnDevice/icm206xx.o
- .debug_info    0x00010584     0x19d8 ./DawnCom/unpack.o
- .debug_info    0x00011f5c     0x1f55 ./DawnBsp/usart.o
- .debug_info    0x00013eb1     0x1ca9 ./DawnBsp/timebase.o
- .debug_info    0x00015b5a     0x1c19 ./DawnBsp/gpio.o
- .debug_info    0x00017773     0x18f1 ./DawnBDC/dawn_bdc.o
- .debug_info    0x00019064      0x232 ./CMSIS/system_gd32f4xx.o
- .debug_info    0x00019296     0x189f C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_info    0x0000ad6e     0x17a6 ./DawnMain/dawn_function.o
+ .debug_info    0x0000c514     0x1852 ./DawnGimbal/dawn_gimbal_system.o
+ .debug_info    0x0000dd66     0x1f75 ./DawnGimbal/dawn_gimbal_math.o
+ .debug_info    0x0000fcdb     0x204f ./DawnDevice/icm206xx.o
+ .debug_info    0x00011d2a     0x19d8 ./DawnCom/unpack.o
+ .debug_info    0x00013702     0x1f55 ./DawnBsp/usart.o
+ .debug_info    0x00015657     0x1ca9 ./DawnBsp/timebase.o
+ .debug_info    0x00017300     0x1c19 ./DawnBsp/gpio.o
+ .debug_info    0x00018f19     0x18f4 ./DawnBDC/dawn_bdc.o
+ .debug_info    0x0001a80d      0x232 ./CMSIS/system_gd32f4xx.o
+ .debug_info    0x0001aa3f     0x189f C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
 
-.debug_abbrev   0x00000000     0x324b
+.debug_abbrev   0x00000000     0x34dc
  .debug_abbrev  0x00000000       0x12 ./gcc_startup/startup_gd32f405_425.o
  .debug_abbrev  0x00000012      0x1bc ./FWLIB/gd32f4xx_usart.o
  .debug_abbrev  0x000001ce      0x1bf ./FWLIB/gd32f4xx_timer.o
@@ -7913,18 +7909,19 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .debug_abbrev  0x000010cc       0x83 ./DawnMain/gd32f4xx_it.o
  .debug_abbrev  0x0000114f      0x235 ./DawnMain/dawn_parameter.o
  .debug_abbrev  0x00001384      0x2f6 ./DawnMain/dawn_main.o
- .debug_abbrev  0x0000167a      0x326 ./DawnGimbal/dawn_gimbal_system.o
- .debug_abbrev  0x000019a0      0x311 ./DawnGimbal/dawn_gimbal_math.o
- .debug_abbrev  0x00001cb1      0x38d ./DawnDevice/icm206xx.o
- .debug_abbrev  0x0000203e      0x2c2 ./DawnCom/unpack.o
- .debug_abbrev  0x00002300      0x30c ./DawnBsp/usart.o
- .debug_abbrev  0x0000260c      0x2fa ./DawnBsp/timebase.o
- .debug_abbrev  0x00002906      0x2ad ./DawnBsp/gpio.o
- .debug_abbrev  0x00002bb3      0x2db ./DawnBDC/dawn_bdc.o
- .debug_abbrev  0x00002e8e      0x135 ./CMSIS/system_gd32f4xx.o
- .debug_abbrev  0x00002fc3      0x288 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_abbrev  0x0000167a      0x291 ./DawnMain/dawn_function.o
+ .debug_abbrev  0x0000190b      0x326 ./DawnGimbal/dawn_gimbal_system.o
+ .debug_abbrev  0x00001c31      0x311 ./DawnGimbal/dawn_gimbal_math.o
+ .debug_abbrev  0x00001f42      0x38d ./DawnDevice/icm206xx.o
+ .debug_abbrev  0x000022cf      0x2c2 ./DawnCom/unpack.o
+ .debug_abbrev  0x00002591      0x30c ./DawnBsp/usart.o
+ .debug_abbrev  0x0000289d      0x2fa ./DawnBsp/timebase.o
+ .debug_abbrev  0x00002b97      0x2ad ./DawnBsp/gpio.o
+ .debug_abbrev  0x00002e44      0x2db ./DawnBDC/dawn_bdc.o
+ .debug_abbrev  0x0000311f      0x135 ./CMSIS/system_gd32f4xx.o
+ .debug_abbrev  0x00003254      0x288 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
 
-.debug_aranges  0x00000000      0xd78
+.debug_aranges  0x00000000      0xda0
  .debug_aranges
                 0x00000000       0x28 ./gcc_startup/startup_gd32f405_425.o
  .debug_aranges
@@ -7954,27 +7951,29 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .debug_aranges
                 0x00000a60       0x30 ./DawnMain/dawn_main.o
  .debug_aranges
-                0x00000a90       0x50 ./DawnGimbal/dawn_gimbal_system.o
+                0x00000a90       0x28 ./DawnMain/dawn_function.o
  .debug_aranges
-                0x00000ae0       0xb8 ./DawnGimbal/dawn_gimbal_math.o
+                0x00000ab8       0x50 ./DawnGimbal/dawn_gimbal_system.o
  .debug_aranges
-                0x00000b98       0x50 ./DawnDevice/icm206xx.o
+                0x00000b08       0xb8 ./DawnGimbal/dawn_gimbal_math.o
  .debug_aranges
-                0x00000be8       0x28 ./DawnCom/unpack.o
+                0x00000bc0       0x50 ./DawnDevice/icm206xx.o
  .debug_aranges
-                0x00000c10       0x58 ./DawnBsp/usart.o
+                0x00000c10       0x28 ./DawnCom/unpack.o
  .debug_aranges
-                0x00000c68       0x40 ./DawnBsp/timebase.o
+                0x00000c38       0x58 ./DawnBsp/usart.o
  .debug_aranges
-                0x00000ca8       0x28 ./DawnBsp/gpio.o
+                0x00000c90       0x40 ./DawnBsp/timebase.o
  .debug_aranges
-                0x00000cd0       0x48 ./DawnBDC/dawn_bdc.o
+                0x00000cd0       0x28 ./DawnBsp/gpio.o
  .debug_aranges
-                0x00000d18       0x38 ./CMSIS/system_gd32f4xx.o
+                0x00000cf8       0x48 ./DawnBDC/dawn_bdc.o
  .debug_aranges
-                0x00000d50       0x28 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+                0x00000d40       0x38 ./CMSIS/system_gd32f4xx.o
+ .debug_aranges
+                0x00000d78       0x28 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
 
-.debug_str      0x00000000    0x32f22
+.debug_str      0x00000000    0x32f9d
  .debug_str     0x00000000       0x7f ./gcc_startup/startup_gd32f405_425.o
  .debug_str     0x0000007f    0x29429 ./FWLIB/gd32f4xx_usart.o
                               0x29617 (size before relaxing)
@@ -8002,28 +8001,30 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
                               0x2df2e (size before relaxing)
  .debug_str     0x000319f5       0x85 ./DawnMain/dawn_main.o
                               0x2e22d (size before relaxing)
- .debug_str     0x00031a7a       0xcf ./DawnGimbal/dawn_gimbal_system.o
+ .debug_str     0x00031a7a       0x7b ./DawnMain/dawn_function.o
+                              0x2df5c (size before relaxing)
+ .debug_str     0x00031af5       0xcf ./DawnGimbal/dawn_gimbal_system.o
                               0x2dfc1 (size before relaxing)
- .debug_str     0x00031b49      0x1d9 ./DawnGimbal/dawn_gimbal_math.o
+ .debug_str     0x00031bc4      0x1d9 ./DawnGimbal/dawn_gimbal_math.o
                               0x2e0e5 (size before relaxing)
- .debug_str     0x00031d22      0x9dc ./DawnDevice/icm206xx.o
+ .debug_str     0x00031d9d      0x9dc ./DawnDevice/icm206xx.o
                               0x2ee80 (size before relaxing)
- .debug_str     0x000326fe       0x87 ./DawnCom/unpack.o
+ .debug_str     0x00032779       0x87 ./DawnCom/unpack.o
                               0x2dfb6 (size before relaxing)
- .debug_str     0x00032785      0x296 ./DawnBsp/usart.o
+ .debug_str     0x00032800      0x296 ./DawnBsp/usart.o
                               0x2eb71 (size before relaxing)
- .debug_str     0x00032a1b       0xb1 ./DawnBsp/timebase.o
+ .debug_str     0x00032a96       0xb1 ./DawnBsp/timebase.o
                               0x2e7be (size before relaxing)
- .debug_str     0x00032acc       0xdd ./DawnBsp/gpio.o
+ .debug_str     0x00032b47       0xdd ./DawnBsp/gpio.o
                               0x2e478 (size before relaxing)
- .debug_str     0x00032ba9       0x86 ./DawnBDC/dawn_bdc.o
+ .debug_str     0x00032c24       0x86 ./DawnBDC/dawn_bdc.o
                               0x2df57 (size before relaxing)
- .debug_str     0x00032c2f      0x19a ./CMSIS/system_gd32f4xx.o
+ .debug_str     0x00032caa      0x19a ./CMSIS/system_gd32f4xx.o
                               0x28cb3 (size before relaxing)
- .debug_str     0x00032dc9      0x159 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_str     0x00032e44      0x159 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
                               0x2df6c (size before relaxing)
 
-.debug_ranges   0x00000000      0xbf8
+.debug_ranges   0x00000000      0xc10
  .debug_ranges  0x00000000       0x20 ./gcc_startup/startup_gd32f405_425.o
  .debug_ranges  0x00000020      0x1b8 ./FWLIB/gd32f4xx_usart.o
  .debug_ranges  0x000001d8      0x228 ./FWLIB/gd32f4xx_timer.o
@@ -8037,18 +8038,19 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .debug_ranges  0x00000920       0x20 ./DawnSys/systick.o
  .debug_ranges  0x00000940       0x50 ./DawnMain/gd32f4xx_it.o
  .debug_ranges  0x00000990       0x20 ./DawnMain/dawn_main.o
- .debug_ranges  0x000009b0       0x40 ./DawnGimbal/dawn_gimbal_system.o
- .debug_ranges  0x000009f0       0xa8 ./DawnGimbal/dawn_gimbal_math.o
- .debug_ranges  0x00000a98       0x40 ./DawnDevice/icm206xx.o
- .debug_ranges  0x00000ad8       0x18 ./DawnCom/unpack.o
- .debug_ranges  0x00000af0       0x48 ./DawnBsp/usart.o
- .debug_ranges  0x00000b38       0x30 ./DawnBsp/timebase.o
- .debug_ranges  0x00000b68       0x18 ./DawnBsp/gpio.o
- .debug_ranges  0x00000b80       0x38 ./DawnBDC/dawn_bdc.o
- .debug_ranges  0x00000bb8       0x28 ./CMSIS/system_gd32f4xx.o
- .debug_ranges  0x00000be0       0x18 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_ranges  0x000009b0       0x18 ./DawnMain/dawn_function.o
+ .debug_ranges  0x000009c8       0x40 ./DawnGimbal/dawn_gimbal_system.o
+ .debug_ranges  0x00000a08       0xa8 ./DawnGimbal/dawn_gimbal_math.o
+ .debug_ranges  0x00000ab0       0x40 ./DawnDevice/icm206xx.o
+ .debug_ranges  0x00000af0       0x18 ./DawnCom/unpack.o
+ .debug_ranges  0x00000b08       0x48 ./DawnBsp/usart.o
+ .debug_ranges  0x00000b50       0x30 ./DawnBsp/timebase.o
+ .debug_ranges  0x00000b80       0x18 ./DawnBsp/gpio.o
+ .debug_ranges  0x00000b98       0x38 ./DawnBDC/dawn_bdc.o
+ .debug_ranges  0x00000bd0       0x28 ./CMSIS/system_gd32f4xx.o
+ .debug_ranges  0x00000bf8       0x18 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
 
-.debug_macro    0x00000000     0x6a9f
+.debug_macro    0x00000000     0x6e23
  .debug_macro   0x00000000      0x1b2 ./FWLIB/gd32f4xx_usart.o
  .debug_macro   0x000001b2       0x64 ./FWLIB/gd32f4xx_usart.o
  .debug_macro   0x00000216      0x48d ./FWLIB/gd32f4xx_usart.o
@@ -8072,25 +8074,26 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .debug_macro   0x00003dc2      0x1b2 ./DawnMain/gd32f4xx_it.o
  .debug_macro   0x00003f74      0x384 ./DawnMain/dawn_parameter.o
  .debug_macro   0x000042f8      0x384 ./DawnMain/dawn_main.o
- .debug_macro   0x0000467c      0x384 ./DawnGimbal/dawn_gimbal_system.o
- .debug_macro   0x00004a00      0x384 ./DawnGimbal/dawn_gimbal_math.o
- .debug_macro   0x00004d84      0x42c ./DawnDevice/icm206xx.o
- .debug_macro   0x000051b0      0x384 ./DawnCom/unpack.o
- .debug_macro   0x00005534      0x388 ./DawnBsp/usart.o
- .debug_macro   0x000058bc      0x384 ./DawnBsp/timebase.o
- .debug_macro   0x00005c40      0x384 ./DawnBsp/gpio.o
- .debug_macro   0x00005fc4      0x384 ./DawnBDC/dawn_bdc.o
- .debug_macro   0x00006348      0x1d8 ./CMSIS/system_gd32f4xx.o
- .debug_macro   0x00006520      0x37b C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x0000689b       0x10 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x000068ab       0x28 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x000068d3       0x40 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x00006913       0x16 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x00006929       0x22 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x0000694b       0x1c C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x00006967       0x5e C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x000069c5       0x28 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_macro   0x000069ed       0xb2 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x0000467c      0x384 ./DawnMain/dawn_function.o
+ .debug_macro   0x00004a00      0x384 ./DawnGimbal/dawn_gimbal_system.o
+ .debug_macro   0x00004d84      0x384 ./DawnGimbal/dawn_gimbal_math.o
+ .debug_macro   0x00005108      0x42c ./DawnDevice/icm206xx.o
+ .debug_macro   0x00005534      0x384 ./DawnCom/unpack.o
+ .debug_macro   0x000058b8      0x388 ./DawnBsp/usart.o
+ .debug_macro   0x00005c40      0x384 ./DawnBsp/timebase.o
+ .debug_macro   0x00005fc4      0x384 ./DawnBsp/gpio.o
+ .debug_macro   0x00006348      0x384 ./DawnBDC/dawn_bdc.o
+ .debug_macro   0x000066cc      0x1d8 ./CMSIS/system_gd32f4xx.o
+ .debug_macro   0x000068a4      0x37b C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006c1f       0x10 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006c2f       0x28 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006c57       0x40 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006c97       0x16 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006cad       0x22 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006ccf       0x1c C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006ceb       0x5e C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006d49       0x28 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_macro   0x00006d71       0xb2 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
 
 .comment        0x00000000       0x66
  .comment       0x00000000       0x66 ./FWLIB/gd32f4xx_usart.o
@@ -8107,6 +8110,7 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .comment       0x00000066       0x67 ./DawnMain/gd32f4xx_it.o
  .comment       0x00000066       0x67 ./DawnMain/dawn_parameter.o
  .comment       0x00000066       0x67 ./DawnMain/dawn_main.o
+ .comment       0x00000066       0x67 ./DawnMain/dawn_function.o
  .comment       0x00000066       0x67 ./DawnGimbal/dawn_gimbal_system.o
  .comment       0x00000066       0x67 ./DawnGimbal/dawn_gimbal_math.o
  .comment       0x00000066       0x67 ./DawnDevice/icm206xx.o
@@ -8118,7 +8122,7 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .comment       0x00000066       0x67 ./CMSIS/system_gd32f4xx.o
  .comment       0x00000066       0x67 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
 
-.debug_frame    0x00000000     0x3f4c
+.debug_frame    0x00000000     0x3f9c
  .debug_frame   0x00000000      0x880 ./FWLIB/gd32f4xx_usart.o
  .debug_frame   0x00000880      0xab4 ./FWLIB/gd32f4xx_timer.o
  .debug_frame   0x00001334      0x140 ./FWLIB/gd32f4xx_syscfg.o
@@ -8131,43 +8135,44 @@ OUTPUT(DawnBGC.elf elf32-littlearm)
  .debug_frame   0x00002c04       0x88 ./DawnSys/systick.o
  .debug_frame   0x00002c8c      0x134 ./DawnMain/gd32f4xx_it.o
  .debug_frame   0x00002dc0       0x74 ./DawnMain/dawn_main.o
- .debug_frame   0x00002e34      0x110 ./DawnGimbal/dawn_gimbal_system.o
- .debug_frame   0x00002f44      0x350 ./DawnGimbal/dawn_gimbal_math.o
- .debug_frame   0x00003294      0x118 ./DawnDevice/icm206xx.o
- .debug_frame   0x000033ac       0x54 ./DawnCom/unpack.o
- .debug_frame   0x00003400      0x12c ./DawnBsp/usart.o
- .debug_frame   0x0000352c       0xd8 ./DawnBsp/timebase.o
- .debug_frame   0x00003604       0x68 ./DawnBsp/gpio.o
- .debug_frame   0x0000366c       0xf4 ./DawnBDC/dawn_bdc.o
- .debug_frame   0x00003760       0xac ./CMSIS/system_gd32f4xx.o
- .debug_frame   0x0000380c       0x68 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
- .debug_frame   0x00003874       0xac c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
- .debug_frame   0x00003920       0x50 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
- .debug_frame   0x00003970       0x24 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
- .debug_frame   0x00003994       0x4c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubsf3.o)
- .debug_frame   0x000039e0       0x38 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivsf3.o)
- .debug_frame   0x00003a18       0xc8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
- .debug_frame   0x00003ae0       0x24 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixsfsi.o)
- .debug_frame   0x00003b04       0x2c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
- .debug_frame   0x00003b30       0x28 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00003b58       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
- .debug_frame   0x00003b78       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_cos.o)
- .debug_frame   0x00003bac       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_sin.o)
- .debug_frame   0x00003be0       0x3c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_asin.o)
- .debug_frame   0x00003c1c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_atan2.o)
- .debug_frame   0x00003c3c       0x3c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_sqrt.o)
- .debug_frame   0x00003c78       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_asin.o)
- .debug_frame   0x00003cac       0x3c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
- .debug_frame   0x00003ce8       0x4c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
- .debug_frame   0x00003d34       0x30 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_sqrt.o)
- .debug_frame   0x00003d64       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_cos.o)
- .debug_frame   0x00003d98       0x50 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
- .debug_frame   0x00003de8       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_sin.o)
- .debug_frame   0x00003e1c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_matherr.o)
- .debug_frame   0x00003e3c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_nan.o)
- .debug_frame   0x00003e5c       0x30 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
- .debug_frame   0x00003e8c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_fabs.o)
- .debug_frame   0x00003eac       0x30 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_floor.o)
- .debug_frame   0x00003edc       0x2c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_scalbn.o)
- .debug_frame   0x00003f08       0x24 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unordsf2.o)
- .debug_frame   0x00003f2c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-errno.o)
+ .debug_frame   0x00002e34       0x50 ./DawnMain/dawn_function.o
+ .debug_frame   0x00002e84      0x110 ./DawnGimbal/dawn_gimbal_system.o
+ .debug_frame   0x00002f94      0x350 ./DawnGimbal/dawn_gimbal_math.o
+ .debug_frame   0x000032e4      0x118 ./DawnDevice/icm206xx.o
+ .debug_frame   0x000033fc       0x54 ./DawnCom/unpack.o
+ .debug_frame   0x00003450      0x12c ./DawnBsp/usart.o
+ .debug_frame   0x0000357c       0xd8 ./DawnBsp/timebase.o
+ .debug_frame   0x00003654       0x68 ./DawnBsp/gpio.o
+ .debug_frame   0x000036bc       0xf4 ./DawnBDC/dawn_bdc.o
+ .debug_frame   0x000037b0       0xac ./CMSIS/system_gd32f4xx.o
+ .debug_frame   0x0000385c       0x68 C:/Users/leonardo/Desktop/Code/Github/DawnBGC/GD32EBuilder_project\dawn_lib\libDawnBGC.a(dawn_lib.o)
+ .debug_frame   0x000038c4       0xac c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubdf3.o)
+ .debug_frame   0x00003970       0x50 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivdf3.o)
+ .debug_frame   0x000039c0       0x24 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_truncdfsf2.o)
+ .debug_frame   0x000039e4       0x4c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x00003a30       0x38 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x00003a68       0xc8 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_cmpsf2.o)
+ .debug_frame   0x00003b30       0x24 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_fixsfsi.o)
+ .debug_frame   0x00003b54       0x2c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00003b80       0x28 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00003ba8       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00003bc8       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_cos.o)
+ .debug_frame   0x00003bfc       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_sin.o)
+ .debug_frame   0x00003c30       0x3c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_asin.o)
+ .debug_frame   0x00003c6c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_atan2.o)
+ .debug_frame   0x00003c8c       0x3c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-wf_sqrt.o)
+ .debug_frame   0x00003cc8       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_asin.o)
+ .debug_frame   0x00003cfc       0x3c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_atan2.o)
+ .debug_frame   0x00003d38       0x4c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_rem_pio2.o)
+ .debug_frame   0x00003d84       0x30 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-ef_sqrt.o)
+ .debug_frame   0x00003db4       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_cos.o)
+ .debug_frame   0x00003de8       0x50 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_rem_pio2.o)
+ .debug_frame   0x00003e38       0x34 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-kf_sin.o)
+ .debug_frame   0x00003e6c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_matherr.o)
+ .debug_frame   0x00003e8c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-s_nan.o)
+ .debug_frame   0x00003eac       0x30 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_atan.o)
+ .debug_frame   0x00003edc       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_fabs.o)
+ .debug_frame   0x00003efc       0x30 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_floor.o)
+ .debug_frame   0x00003f2c       0x2c c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libm.a(lib_a-sf_scalbn.o)
+ .debug_frame   0x00003f58       0x24 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v7e-m/nofp\libgcc.a(_arm_unordsf2.o)
+ .debug_frame   0x00003f7c       0x20 c:/users/leonardo/desktop/gd32embeddedbuilder_v1.5.6_rel/tools/gnu tools arm embedded/xpack-arm-none-eabi-gcc/9.2.1-1.1/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp\libc.a(lib_a-errno.o)

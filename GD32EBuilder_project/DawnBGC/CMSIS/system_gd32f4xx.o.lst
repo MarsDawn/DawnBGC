@@ -1441,20 +1441,20 @@
  532              		.file 5 "C:/Users/leonardo/Desktop/Code/Github/DawnBGC/CMSIS/system_gd32f4xx.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 system_gd32f4xx.c
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:20     .data.SystemCoreClock:00000000 SystemCoreClock
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:17     .data.SystemCoreClock:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:23     .text.SystemInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:31     .text.SystemInit:00000000 SystemInit
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:129    .text.system_clock_config:00000000 system_clock_config
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:114    .text.SystemInit:0000006c $d
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:123    .text.system_clock_config:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:156    .text.system_clock_200m_8m_hxtal:00000000 system_clock_200m_8m_hxtal
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:150    .text.system_clock_200m_8m_hxtal:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:337    .text.system_clock_200m_8m_hxtal:00000104 $d
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:348    .rodata:00000000 $d
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:353    .text.SystemCoreClockUpdate:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:360    .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
-C:\Users\leonardo\AppData\Local\Temp\cchCHTaa.s:518    .text.SystemCoreClockUpdate:000000d8 $d
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:20     .data.SystemCoreClock:00000000 SystemCoreClock
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:17     .data.SystemCoreClock:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:23     .text.SystemInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:31     .text.SystemInit:00000000 SystemInit
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:129    .text.system_clock_config:00000000 system_clock_config
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:114    .text.SystemInit:0000006c $d
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:123    .text.system_clock_config:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:156    .text.system_clock_200m_8m_hxtal:00000000 system_clock_200m_8m_hxtal
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:150    .text.system_clock_200m_8m_hxtal:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:337    .text.system_clock_200m_8m_hxtal:00000104 $d
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:348    .rodata:00000000 $d
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:353    .text.SystemCoreClockUpdate:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:360    .text.SystemCoreClockUpdate:00000000 SystemCoreClockUpdate
+C:\Users\leonardo\AppData\Local\Temp\ccQd2EyC.s:518    .text.SystemCoreClockUpdate:000000d8 $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2

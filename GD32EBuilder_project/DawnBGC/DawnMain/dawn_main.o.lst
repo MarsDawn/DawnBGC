@@ -856,15 +856,15 @@
  263              		.file 23 "../../Dawn/DawnBsp/gpio.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 dawn_main.c
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:16     .text.SysLedInit:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:24     .text.SysLedInit:00000000 SysLedInit
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:62     .text.SysLedInit:00000030 $d
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:67     .text.SysLedCmd:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:74     .text.SysLedCmd:00000000 SysLedCmd
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:117    .text.SysLedCmd:0000002c $d
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:122    .text.main:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:129    .text.main:00000000 main
-C:\Users\leonardo\AppData\Local\Temp\ccaAjjeQ.s:236    .text.main:0000008c $d
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:16     .text.SysLedInit:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:24     .text.SysLedInit:00000000 SysLedInit
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:62     .text.SysLedInit:00000030 $d
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:67     .text.SysLedCmd:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:74     .text.SysLedCmd:00000000 SysLedCmd
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:117    .text.SysLedCmd:0000002c $d
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:122    .text.main:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:129    .text.main:00000000 main
+C:\Users\leonardo\AppData\Local\Temp\ccA0iS7r.s:236    .text.main:0000008c $d
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4._newlib_version.h.4.9ba035841e762c3308916a0ce96032e7
                            .group:00000000 wm4.features.h.33.5bd1eea2d80518b50f7af0b5ce6750e0

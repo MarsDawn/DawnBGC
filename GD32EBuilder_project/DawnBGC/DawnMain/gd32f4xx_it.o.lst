@@ -340,24 +340,24 @@
  286              		.file 5 "../../CMSIS/system_gd32f4xx.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 gd32f4xx_it.c
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:16     .text.NMI_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:24     .text.NMI_Handler:00000000 NMI_Handler
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:50     .text.HardFault_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:57     .text.HardFault_Handler:00000000 HardFault_Handler
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:76     .text.MemManage_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:83     .text.MemManage_Handler:00000000 MemManage_Handler
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:102    .text.BusFault_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:109    .text.BusFault_Handler:00000000 BusFault_Handler
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:128    .text.UsageFault_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:135    .text.UsageFault_Handler:00000000 UsageFault_Handler
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:154    .text.SVC_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:161    .text.SVC_Handler:00000000 SVC_Handler
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:186    .text.DebugMon_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:193    .text.DebugMon_Handler:00000000 DebugMon_Handler
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:218    .text.PendSV_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:225    .text.PendSV_Handler:00000000 PendSV_Handler
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:250    .text.SysTick_Handler:00000000 $t
-C:\Users\leonardo\AppData\Local\Temp\ccYvuu2d.s:257    .text.SysTick_Handler:00000000 SysTick_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:16     .text.NMI_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:24     .text.NMI_Handler:00000000 NMI_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:50     .text.HardFault_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:57     .text.HardFault_Handler:00000000 HardFault_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:76     .text.MemManage_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:83     .text.MemManage_Handler:00000000 MemManage_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:102    .text.BusFault_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:109    .text.BusFault_Handler:00000000 BusFault_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:128    .text.UsageFault_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:135    .text.UsageFault_Handler:00000000 UsageFault_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:154    .text.SVC_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:161    .text.SVC_Handler:00000000 SVC_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:186    .text.DebugMon_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:193    .text.DebugMon_Handler:00000000 DebugMon_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:218    .text.PendSV_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:225    .text.PendSV_Handler:00000000 PendSV_Handler
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:250    .text.SysTick_Handler:00000000 $t
+C:\Users\leonardo\AppData\Local\Temp\ccezOl1u.s:257    .text.SysTick_Handler:00000000 SysTick_Handler
                            .group:00000000 wm4.0.a684136774235169b6efdc382df56ab0
                            .group:00000000 wm4.gd32f4xx.h.13.7e2e481b0ab689b59679fcf9de8ad53f
                            .group:00000000 wm4.core_cm4.h.43.9593ac0dcec24a3a6f1d638d754e90b2
