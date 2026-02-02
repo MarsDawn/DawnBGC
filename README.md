@@ -1,98 +1,32 @@
-# DawnBGC
+# GUC-Lite
 
-**Open-Source BGC (Brushless Gimbal Controller) Project**
-
-## How to build in your PC ⇩⇩⇩
-[![Video Title](https://img.youtube.com/vi/LDTULsnp9VM/0.jpg)](https://youtu.be/LDTULsnp9VM?si=x8lHK7bw_7ZQBUXz)
-
-## Background
-
-Many years ago, open-source ecosystems for UAV flight control systems had already become mature and highly active. From attitude estimation and state estimation to control and navigation, related technologies have been continuously reused and evolved within the community. However, the **BGC (Brushless Gimbal Controller)**, which is highly coupled with flight controllers and equally critical, still lacks a **complete, engineering-oriented, and sustainably evolving open-source implementation**.
-
-Most existing mainstream BGC solutions are dominated by commercial companies or closed organizations. Their core designs, control architectures, and engineering experiences are rarely fully disclosed. This situation, to some extent, limits the expansion of gimbal technology beyond UAV applications and raises the barrier for researchers and developers to perform secondary development and system integration.
-
-The **DawnBGC project** aims to fill this gap in the open-source ecosystem by providing a learnable, reusable, and extensible reference implementation for gimbal stabilization systems.
-
----
+**GUC(Gimbal USB Camera)**
 
 ## Goals
+GUC-Lite is an ultra-lightweight gimbal project based on a USB camera, offering exceptional flexibility and serving as a peripheral component suitable for low-power devices. It features the following characteristics:
 
-The core goal of DawnBGC is to build an **engineering-oriented open-source BGC system**, and to gradually support its deployment across a wide range of application scenarios, including but not limited to:
-
-- 🚁 UAV and aerial imaging systems  
-- 🚗 Advanced driver assistance and vehicle perception platforms  
-- 🤖 Industrial robots and mobile platforms  
-- 🧍 Wearable stabilization devices  
-- 📷 Consumer imaging and stabilization systems  
-- 🔭 Telescope stabilization systems  
-
-The project focuses not only on control algorithms, but also covers **low-level drivers, system architecture, upgrade mechanisms, and engineering implementation details**, aiming to form a relatively complete open-source solution.
+- 📱 Low power consumption compatible even with mobile terminals
+- 📷 Universal UVC (USB Video Class) protocol
+- 👌 Fewer wiring harnesses
+- 🔧 Modular design that enables DIY implementation
 
 ---
 
-## Overview
+## Files
 
-DawnBGC currently includes the following major components:
-
-- Core control architecture for gimbal stabilization systems  
-- **IAP (In-Application Programming) online firmware upgrade mechanism**  
-- Embedded implementation based on **32-bit GD32F405 microcontrollers**  
-- Modular and extensible design for easy porting and secondary development  
-- Free IDE **GD32 Embedded Builder** [(Download)](https://www.gd32mcu.com/download/agree/box_id/15/document_id/552/path_type/1)
-### Supported Features
-
-- ✔ Linear Hall sensor motors  
-- ✔ Torque motor drive and control framework  
-- ✔ Basic hardware calibration and parameter configuration workflow  
-- ✔ IAP online firmware upgrade support  
-
-### Planned Features (Roadmap)
-
-- ⏳ Magnetic encoder support  
-- ⏳ Sensorless control solutions  
-- ⏳ More comprehensive communication and debugging interfaces  
-- ⏳ Hardware Abstraction Layer (HAL) and multi-platform adaptation  
-
----
-
-## Status & Contribution
-
-Currently, **the DawnBGC project is independently developed and maintained by @MarsDawn**.  
-The project is under active development, and both code structure and functionality will continue to evolve based on practical feedback and real-world usage.
-
-Contributions are welcome in the following areas:
-
-- BGC control algorithms and control structure optimization  
-- Motor drive and sensor support extensions  
-- Hardware platform porting and system abstraction  
-- Documentation, examples, and testing workflow improvements  
-- Bug fixes and engineering robustness enhancements  
-
-> The value of an open-source community comes from continuous practice and collective contribution.
-
----
-
-## Hardware
-
-Gimbal stabilization systems are **highly sensitive to hardware design and calibration procedures**.  
-
-Although this is an amateur project, I made attempts to collaborate with numerous hardware manufacturers at an early stage and encountered many thorny issues. So far, only this company has persisted until the project's completion. We sincerely express our gratitude to the hardware suppliers that provided support and reference platforms for the DawnBGC project.
-
-If you would like to quickly verify functionality or conduct demonstration tests, you may obtain validated reference hardware through the following link:
-
-- 👉[**GUC-PRO(USBCamera)**](https://shop471460667.taobao.com/?spm=pc_detail.30350276.shop_block.dshopinfo.357366d4Ofp51t) or [**MarsMotor@outlook.com**](mailto:MarsMotor@outlook.com?subject=Purchase%20Order&body=**Buyer%20Details**%0D%0A%0D%0A-%20Name/Company%3A%20%5BInsert%20Name%2FCompany%5D%0D%0A-%20Address%3A%20%5BInsert%20Full%20Address%5D%0D%0A-%20Product%20Type%3A%20%5BInsert%20Product%20Name%2FModel%5D%0D%0A-%20Quantity%3A%20%5BInsert%20Quantity%5D%0D%0A-%20Additional%20Requirements%3A%20%5BInsert%20Special%20Requests%5D%0D%0A%0D%0ABest%20regards%2C%0D%0A%5BInsert%20Your%20Name%5D)
----
+- Hardware<br>Hardware BOM list and wiring instructions
+- IAPUpdate<br>Firmware update GUI and bin files
 
 ## ⚠ Safety Notice
 
 **Important Notice:**
 
-This project involves **torque motors, power drivers, and high-speed rotating components**.  
+This project involves **torque motors, power drivers, high temperature soldering and high-speed rotating components**.  
 Improper operation during design, debugging, or usage may result in:
 
 - Personal injury  
 - Equipment damage  
-- Property loss  
+- Property loss 
 
 **The DawnBGC project and its author assume no responsibility for any direct or indirect damage caused by the use of this project’s code or related designs.**
 
